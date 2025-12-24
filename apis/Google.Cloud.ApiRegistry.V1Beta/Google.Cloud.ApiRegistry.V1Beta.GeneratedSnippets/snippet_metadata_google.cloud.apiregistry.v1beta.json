@@ -1,0 +1,1226 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.ApiRegistry.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.apiregistry.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_sync",
+      "title": "GetMcpServerRequestObject",
+      "description": "Snippet for GetMcpServer",
+      "file": "CloudApiRegistryClient.GetMcpServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.GetMcpServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpServer",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_async",
+      "title": "GetMcpServerRequestObjectAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "CloudApiRegistryClient.GetMcpServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.GetMcpServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_sync_flattened",
+      "title": "GetMcpServer",
+      "description": "Snippet for GetMcpServer",
+      "file": "CloudApiRegistryClient.GetMcpServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpServer",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_async_flattened",
+      "title": "GetMcpServerAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "CloudApiRegistryClient.GetMcpServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_sync_flattened_resourceNames",
+      "title": "GetMcpServerResourceNames",
+      "description": "Snippet for GetMcpServer",
+      "file": "CloudApiRegistryClient.GetMcpServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpServer",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpServer_async_flattened_resourceNames",
+      "title": "GetMcpServerResourceNamesAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "CloudApiRegistryClient.GetMcpServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpServer",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_sync",
+      "title": "ListMcpServersRequestObject",
+      "description": "Snippet for ListMcpServers",
+      "file": "CloudApiRegistryClient.ListMcpServersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.ListMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_async",
+      "title": "ListMcpServersRequestObjectAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "CloudApiRegistryClient.ListMcpServersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.ListMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_sync_flattened",
+      "title": "ListMcpServers",
+      "description": "Snippet for ListMcpServers",
+      "file": "CloudApiRegistryClient.ListMcpServersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_async_flattened",
+      "title": "ListMcpServersAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "CloudApiRegistryClient.ListMcpServersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_sync_flattened_resourceNames",
+      "title": "ListMcpServersResourceNames",
+      "description": "Snippet for ListMcpServers",
+      "file": "CloudApiRegistryClient.ListMcpServersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpServers_async_flattened_resourceNames",
+      "title": "ListMcpServersResourceNamesAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "CloudApiRegistryClient.ListMcpServersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpServersResponse, Google.Cloud.ApiRegistry.V1Beta.McpServer>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpServers",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_sync",
+      "title": "GetMcpToolRequestObject",
+      "description": "Snippet for GetMcpTool",
+      "file": "CloudApiRegistryClient.GetMcpToolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpTool",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.GetMcpToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpTool",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_async",
+      "title": "GetMcpToolRequestObjectAsync",
+      "description": "Snippet for GetMcpToolAsync",
+      "file": "CloudApiRegistryClient.GetMcpToolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpToolAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.GetMcpToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_sync_flattened",
+      "title": "GetMcpTool",
+      "description": "Snippet for GetMcpTool",
+      "file": "CloudApiRegistryClient.GetMcpToolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpTool",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpTool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpTool",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_async_flattened",
+      "title": "GetMcpToolAsync",
+      "description": "Snippet for GetMcpToolAsync",
+      "file": "CloudApiRegistryClient.GetMcpToolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpToolAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_sync_flattened_resourceNames",
+      "title": "GetMcpToolResourceNames",
+      "description": "Snippet for GetMcpTool",
+      "file": "CloudApiRegistryClient.GetMcpToolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpTool",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiRegistry.V1Beta.McpTool",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_GetMcpTool_async_flattened_resourceNames",
+      "title": "GetMcpToolResourceNamesAsync",
+      "description": "Snippet for GetMcpToolAsync",
+      "file": "CloudApiRegistryClient.GetMcpToolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpToolAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.GetMcpToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpTool",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.GetMcpTool",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_sync",
+      "title": "ListMcpToolsRequestObject",
+      "description": "Snippet for ListMcpTools",
+      "file": "CloudApiRegistryClient.ListMcpToolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpTools",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpTools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_async",
+      "title": "ListMcpToolsRequestObjectAsync",
+      "description": "Snippet for ListMcpToolsAsync",
+      "file": "CloudApiRegistryClient.ListMcpToolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpToolsAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_sync_flattened",
+      "title": "ListMcpTools",
+      "description": "Snippet for ListMcpTools",
+      "file": "CloudApiRegistryClient.ListMcpToolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpTools",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpTools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_async_flattened",
+      "title": "ListMcpToolsAsync",
+      "description": "Snippet for ListMcpToolsAsync",
+      "file": "CloudApiRegistryClient.ListMcpToolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpToolsAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_sync_flattened_resourceNames",
+      "title": "ListMcpToolsResourceNames",
+      "description": "Snippet for ListMcpTools",
+      "file": "CloudApiRegistryClient.ListMcpToolsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpTools",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpTools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpServerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudapiregistry_v1beta_generated_CloudApiRegistry_ListMcpTools_async_flattened_resourceNames",
+      "title": "ListMcpToolsResourceNamesAsync",
+      "description": "Snippet for ListMcpToolsAsync",
+      "file": "CloudApiRegistryClient.ListMcpToolsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpToolsAsync",
+        "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient.ListMcpToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiRegistry.V1Beta.McpServerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiRegistry.V1Beta.ListMcpToolsResponse, Google.Cloud.ApiRegistry.V1Beta.McpTool>",
+        "client": {
+          "shortName": "CloudApiRegistryClient",
+          "fullName": "Google.Cloud.ApiRegistry.V1Beta.CloudApiRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpTools",
+          "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry.ListMcpTools",
+          "service": {
+            "shortName": "CloudApiRegistry",
+            "fullName": "google.cloud.apiregistry.v1beta.CloudApiRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
