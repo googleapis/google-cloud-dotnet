@@ -320,15 +320,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 cmd.Parameters.Add("badjuju", SpannerDbType.String, IdGenerator.FromGuid());
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
                 Logger.DefaultLogger.Debug($"BadColumnName: Caught error code: {e.ErrorCode}");
-                if (_fixture.RunningOnEmulator)
-                {
-                    // Emulator vs Prod give different exceptions for this case with Multiplex Sessions
-                    Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-                }
-                else
-                {
-                    Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-                }
+                Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
 
                 Assert.False(e.IsTransientSpannerFault());
             }
@@ -358,15 +350,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
                 Logger.DefaultLogger.Debug($"BadTableName: Caught error code: {e.ErrorCode}");
 
-                if (_fixture.RunningOnEmulator)
-                {
-                    // Emulator vs Prod give different exceptions for this case with Multiplex Sessions
-                    Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-                }
-                else
-                {
-                    Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-                }
+                Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
 
                 Assert.False(e.IsTransientSpannerFault());
             }
