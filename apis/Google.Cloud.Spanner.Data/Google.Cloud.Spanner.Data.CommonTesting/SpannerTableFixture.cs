@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,11 +29,13 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public SpannerTableFixture(string tableName)
         {
             TableName = tableName;
+ 
             if (Database.Fresh)
             {
                 Logger.DefaultLogger.Debug($"Creating table {TableName}");
                 CreateTable();
             }
+
             RetryHelpers.ResetStats();
             Logger.DefaultLogger.Debug($"Populating table {TableName}");
             PopulateTable(Database.Fresh);
