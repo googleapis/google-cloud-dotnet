@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta64, released 2025-12-29
+
+### New features
+
+- Add Lustre support to the Vertex Training Custom Job API
+
+### Documentation improvements
+
+- A comment for field `timeout` in message `.google.cloud.aiplatform.v1beta1.Scheduling` is changed
+- A comment for field `restart_job_on_worker_restart` in message `.google.cloud.aiplatform.v1beta1.Scheduling` is changed
+
 ## Version 1.0.0-beta63, released 2025-12-09
 
 ### Bug fixes
