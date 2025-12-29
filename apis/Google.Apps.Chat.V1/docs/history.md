@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta20, released 2025-12-29
+
+### New features
+
+- Add app authorization support to space APIs
+- Add accessory widget support for private messages
+- Addition of GMAIL_MESSAGE value for RichLinkType enum in the RichLinkMetadata proto
+
+### Documentation improvements
+
+- Improve documentation of attachment.proto, event_payload.proto and space.proto
+
 ## Version 1.0.0-beta19, released 2025-11-03
 
 ### New features
