@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2025-12-29
+
+### New features
+
+- Add LookerGoldenQuery to Context
+- Add LookerGoldenQuery to Context
+
+### Documentation improvements
+
+- Specify the data sources supported only by the QueryData API
+
 ## Version 1.0.0-beta05, released 2025-12-12
 
 ### New features
