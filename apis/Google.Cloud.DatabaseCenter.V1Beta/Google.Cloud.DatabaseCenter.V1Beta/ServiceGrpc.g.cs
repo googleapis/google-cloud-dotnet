@@ -67,6 +67,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest> __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> __Method_QueryProducts = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse>(
@@ -75,6 +79,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         "QueryProducts",
         __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsRequest,
         __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> __Method_QueryDatabaseResourceGroups = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryDatabaseResourceGroups",
+        __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsRequest,
+        __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -95,6 +107,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> QueryProducts(global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// QueryDatabaseResourceGroups returns paginated results of database groups.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> QueryDatabaseResourceGroups(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -180,6 +204,54 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryProducts, null, options, request);
       }
+      /// <summary>
+      /// QueryDatabaseResourceGroups returns paginated results of database groups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse QueryDatabaseResourceGroups(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryDatabaseResourceGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryDatabaseResourceGroups returns paginated results of database groups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse QueryDatabaseResourceGroups(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryDatabaseResourceGroups, null, options, request);
+      }
+      /// <summary>
+      /// QueryDatabaseResourceGroups returns paginated results of database groups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> QueryDatabaseResourceGroupsAsync(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryDatabaseResourceGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryDatabaseResourceGroups returns paginated results of database groups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> QueryDatabaseResourceGroupsAsync(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryDatabaseResourceGroups, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatabaseCenterClient NewInstance(ClientBaseConfiguration configuration)
@@ -194,7 +266,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public static grpc::ServerServiceDefinition BindService(DatabaseCenterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_QueryProducts, serviceImpl.QueryProducts).Build();
+          .AddMethod(__Method_QueryProducts, serviceImpl.QueryProducts)
+          .AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl.QueryDatabaseResourceGroups).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -205,6 +278,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DatabaseCenterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_QueryProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse>(serviceImpl.QueryProducts));
+      serviceBinder.AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse>(serviceImpl.QueryDatabaseResourceGroups));
     }
 
   }

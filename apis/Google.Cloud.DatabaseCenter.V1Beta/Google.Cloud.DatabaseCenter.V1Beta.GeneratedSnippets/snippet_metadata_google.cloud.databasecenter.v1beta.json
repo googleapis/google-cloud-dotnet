@@ -106,6 +106,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryDatabaseResourceGroups_sync",
+      "title": "QueryDatabaseResourceGroupsRequestObject",
+      "description": "Snippet for QueryDatabaseResourceGroups",
+      "file": "DatabaseCenterClient.QueryDatabaseResourceGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryDatabaseResourceGroups",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryDatabaseResourceGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceGroup>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryDatabaseResourceGroups",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryDatabaseResourceGroups",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryDatabaseResourceGroups_async",
+      "title": "QueryDatabaseResourceGroupsRequestObjectAsync",
+      "description": "Snippet for QueryDatabaseResourceGroupsAsync",
+      "file": "DatabaseCenterClient.QueryDatabaseResourceGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryDatabaseResourceGroupsAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryDatabaseResourceGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceGroup>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryDatabaseResourceGroups",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryDatabaseResourceGroups",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 87,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 85,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

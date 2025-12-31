@@ -114,5 +114,115 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for QueryDatabaseResourceGroups</summary>
+        public void QueryDatabaseResourceGroupsRequestObject()
+        {
+            // Snippet: QueryDatabaseResourceGroups(QueryDatabaseResourceGroupsRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = DatabaseCenterClient.Create();
+            // Initialize request argument(s)
+            QueryDatabaseResourceGroupsRequest request = new QueryDatabaseResourceGroupsRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalTypeGroups =
+                {
+                    new SignalTypeGroup(),
+                },
+                SignalFilters = { new SignalFilter(), },
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> response = databaseCenterClient.QueryDatabaseResourceGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseResourceGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryDatabaseResourceGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryDatabaseResourceGroupsAsync</summary>
+        public async Task QueryDatabaseResourceGroupsRequestObjectAsync()
+        {
+            // Snippet: QueryDatabaseResourceGroupsAsync(QueryDatabaseResourceGroupsRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = await DatabaseCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryDatabaseResourceGroupsRequest request = new QueryDatabaseResourceGroupsRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalTypeGroups =
+                {
+                    new SignalTypeGroup(),
+                },
+                SignalFilters = { new SignalFilter(), },
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> response = databaseCenterClient.QueryDatabaseResourceGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatabaseResourceGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryDatabaseResourceGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
