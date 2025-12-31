@@ -46,6 +46,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             QueryProductsSettings = existing.QueryProductsSettings;
+            QueryDatabaseResourceGroupsSettings = existing.QueryDatabaseResourceGroupsSettings;
             OnCopy(existing);
         }
 
@@ -62,6 +63,19 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryProductsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseCenterClient.QueryDatabaseResourceGroups</c> and
+        /// <c>DatabaseCenterClient.QueryDatabaseResourceGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryDatabaseResourceGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseCenterSettings"/> object.</returns>
@@ -223,6 +237,24 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<QueryProductsResponse, Product> QueryProductsAsync(QueryProductsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// QueryDatabaseResourceGroups returns paginated results of database groups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseResourceGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> QueryDatabaseResourceGroups(QueryDatabaseResourceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// QueryDatabaseResourceGroups returns paginated results of database groups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> QueryDatabaseResourceGroupsAsync(QueryDatabaseResourceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>DatabaseCenter client wrapper implementation, for convenient use.</summary>
@@ -232,6 +264,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     public sealed partial class DatabaseCenterClientImpl : DatabaseCenterClient
     {
         private readonly gaxgrpc::ApiCall<QueryProductsRequest, QueryProductsResponse> _callQueryProducts;
+
+        private readonly gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> _callQueryDatabaseResourceGroups;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseCenter service, with the specified gRPC client and settings.
@@ -251,6 +285,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             _callQueryProducts = clientHelper.BuildApiCall<QueryProductsRequest, QueryProductsResponse>("QueryProducts", grpcClient.QueryProductsAsync, grpcClient.QueryProducts, effectiveSettings.QueryProductsSettings);
             Modify_ApiCall(ref _callQueryProducts);
             Modify_QueryProductsApiCall(ref _callQueryProducts);
+            _callQueryDatabaseResourceGroups = clientHelper.BuildApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse>("QueryDatabaseResourceGroups", grpcClient.QueryDatabaseResourceGroupsAsync, grpcClient.QueryDatabaseResourceGroups, effectiveSettings.QueryDatabaseResourceGroupsSettings);
+            Modify_ApiCall(ref _callQueryDatabaseResourceGroups);
+            Modify_QueryDatabaseResourceGroupsApiCall(ref _callQueryDatabaseResourceGroups);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -258,12 +295,16 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         partial void Modify_QueryProductsApiCall(ref gaxgrpc::ApiCall<QueryProductsRequest, QueryProductsResponse> call);
 
+        partial void Modify_QueryDatabaseResourceGroupsApiCall(ref gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> call);
+
         partial void OnConstruction(DatabaseCenter.DatabaseCenterClient grpcClient, DatabaseCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseCenter client</summary>
         public override DatabaseCenter.DatabaseCenterClient GrpcClient { get; }
 
         partial void Modify_QueryProductsRequest(ref QueryProductsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryDatabaseResourceGroupsRequest(ref QueryDatabaseResourceGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// QueryProducts provides a list of all possible products which can be used to
@@ -290,9 +331,37 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             Modify_QueryProductsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryProductsRequest, QueryProductsResponse, Product>(_callQueryProducts, request, callSettings);
         }
+
+        /// <summary>
+        /// QueryDatabaseResourceGroups returns paginated results of database groups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseResourceGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> QueryDatabaseResourceGroups(QueryDatabaseResourceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryDatabaseResourceGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup>(_callQueryDatabaseResourceGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// QueryDatabaseResourceGroups returns paginated results of database groups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> QueryDatabaseResourceGroupsAsync(QueryDatabaseResourceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryDatabaseResourceGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup>(_callQueryDatabaseResourceGroups, request, callSettings);
+        }
     }
 
     public partial class QueryProductsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryDatabaseResourceGroupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -300,6 +369,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Product> GetEnumerator() => Products.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryDatabaseResourceGroupsResponse : gaxgrpc::IPageResponse<DatabaseResourceGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatabaseResourceGroup> GetEnumerator() => ResourceGroups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

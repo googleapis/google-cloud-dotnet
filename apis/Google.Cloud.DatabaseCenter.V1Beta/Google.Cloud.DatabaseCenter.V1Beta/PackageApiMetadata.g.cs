@@ -30,8 +30,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return MachineConfigReflection.Descriptor;
+            yield return MaintenanceReflection.Descriptor;
+            yield return MetricDataReflection.Descriptor;
+            yield return OperationErrorTypeReflection.Descriptor;
             yield return ProductReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return SignalsReflection.Descriptor;
+            yield return SuspensionReasonReflection.Descriptor;
         }
     }
 }

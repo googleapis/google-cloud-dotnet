@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "DatabaseCenterClient",
           "rpcs": {
+            "QueryDatabaseResourceGroups": {
+              "methods": [
+                "QueryDatabaseResourceGroups",
+                "QueryDatabaseResourceGroupsAsync"
+              ]
+            },
             "QueryProducts": {
               "methods": [
                 "QueryProducts",
