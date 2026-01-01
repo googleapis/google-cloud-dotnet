@@ -13,8 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using System;
 using Xunit;
+using static Google.Api.Gax.Grpc.ClientHelper;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using IsolationLevel = System.Data.IsolationLevel;
 using SpannerIsolationLevel = Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel;
@@ -317,5 +319,41 @@ public class SpannerTransactionCreationOptionsTests
         var spannerTxnOptions = SpannerTransactionCreationOptions.PartitionedDml.WithIsolationLevel(clientIsolationLevel);
 
         Assert.Throws<NotSupportedException>(() => spannerTxnOptions.GetTransactionOptions());
+    }
+
+    [Fact]
+    public void WithPreviousTransactionId_ReadWrite()
+    {
+        var options1 = SpannerTransactionCreationOptions.ReadWrite;
+        var optionsWithPrevTxnId = options1.WithPreviousTransactionId(ByteString.CopyFromUtf8("testId"));
+
+        Assert.NotEqual(options1, optionsWithPrevTxnId);
+    }
+
+    [Fact]
+    public void WithPreviousTransactionId_PartitionedDml()
+    {
+        var options1 = SpannerTransactionCreationOptions.PartitionedDml;
+        var optionsWithPrevTxnId = options1.WithPreviousTransactionId(ByteString.CopyFromUtf8("testId"));
+
+        Assert.NotEqual(options1, optionsWithPrevTxnId);
+    }
+
+    [Fact]
+    public void WithPreviousTransactionId_ReadOnly()
+    {
+        var options1 = SpannerTransactionCreationOptions.ReadOnly;
+
+        Assert.Throws<InvalidOperationException>(() => options1.WithPreviousTransactionId(ByteString.CopyFromUtf8("testId")));
+    }
+
+    [Fact]
+    public void PreviousTransactionId_ToTransactionOptions()
+    {
+        ByteString prevTxnId = ByteString.CopyFromUtf8("testId");
+        var optionsWithPrevTxnId = SpannerTransactionCreationOptions.ReadWrite.WithPreviousTransactionId(prevTxnId);
+        TransactionOptions spannerBackendOptions = optionsWithPrevTxnId.GetTransactionOptions();
+
+        Assert.Equal(prevTxnId, spannerBackendOptions.ReadWrite.MultiplexedSessionPreviousTransactionId);
     }
 }
