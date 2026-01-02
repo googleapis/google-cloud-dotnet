@@ -515,7 +515,7 @@
       "type": "grpc",
       "productName": "Cloud API Registry",
       "productUrl": "https://docs.cloud.google.com/api-registry/docs/overview",
-      "description": "",
+      "description": "Recommended Google client library to access the Cloud API Registry API (v1beta). Cloud API Registry lets you discover, govern, use, and monitor Model Context Protocol (MCP) servers and tools provided by Google, or by your organization through Apigee API hub.",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Location": "2.4.0"
