@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.LongRunning;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -512,6 +513,21 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task whose result is a lower bound for the number of rows affected.</returns>
         public Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken = default) =>
             CreateExecutableCommand().ExecutePartitionedUpdateAsync(cancellationToken);
+
+        /// <summary>
+        /// Executes this command as DDL, but does not wait for the execution of the DDL statements to finish. The
+        /// method returns the name of the long-running operation that was started. The cancellation token can only be
+        /// used to cancel the request to start the execution of the DDL statements. It cannot be used to cancel the
+        /// long-running operation once it has been started.
+        /// The command must contain one or more DDL statements;
+        /// <see cref="SpannerConnection.CreateDdlCommand(string, string[])"/> for details.
+        /// </summary>
+        /// <returns>
+        /// The name of the long-running operation that was started for the DDL statement(s).
+        /// Note: The ID is empty for DropDatabase commands.
+        /// </returns>
+        public Task<string> StartDdlAsync(CancellationToken cancellationToken = default) =>
+            CreateExecutableCommand().StartDdlAsync(cancellationToken);
 
         /// <summary>
         /// Creates an executable command that captures all the necessary information from this command.
