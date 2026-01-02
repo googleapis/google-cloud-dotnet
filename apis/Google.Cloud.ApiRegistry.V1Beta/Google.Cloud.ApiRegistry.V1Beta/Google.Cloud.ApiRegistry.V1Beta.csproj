@@ -4,7 +4,7 @@
     <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description></Description>
+    <Description>Recommended Google client library to access the Cloud API Registry API (v1beta). Cloud API Registry lets you discover, govern, use, and monitor Model Context Protocol (MCP) servers and tools provided by Google, or by your organization through Apigee API hub.</Description>
     <PackageTags>Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
