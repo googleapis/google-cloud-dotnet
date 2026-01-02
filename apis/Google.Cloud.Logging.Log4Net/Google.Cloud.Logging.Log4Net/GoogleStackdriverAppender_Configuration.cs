@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 
 namespace Google.Cloud.Logging.Log4Net
 {
@@ -225,6 +226,18 @@ namespace Google.Cloud.Logging.Log4Net
         {
             get => _maxMemoryCount;
             set => _maxMemoryCount = ThrowIfActivated(value, nameof(MaxMemoryCount));
+        }
+
+        private string _credentialType = JsonCredentialParameters.ServiceAccountCredentialType;
+        /// <summary>
+        /// The type of credential to load when either <see cref="CredentialFile"/> or <see cref="CredentialJson"/> is specified.
+        /// Valid strings can be found in the <see cref="JsonCredentialParameters"/> class.
+        /// Defaults to <see cref="JsonCredentialParameters.ServiceAccountCredentialType"/>. Must not be null.
+        /// </summary>
+        public string CredentialType
+        {
+            get => _credentialType;
+            set => _credentialType = ThrowIfActivated(value, nameof(CredentialType));
         }
 
         private string _credentialFile;
