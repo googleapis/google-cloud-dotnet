@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-01-05
+
+### New features
+
+- A new field `Instance.simulate_maintenance_event` is added to message `.google.cloud.memorystore.v1.`
+- A new field `satisfies_pzs` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `satisfies_pzi` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `kms_key` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `encryption_info` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `maintenance_version` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `effective_maintenance_version` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `available_maintenance_versions` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `allow_fewer_zones_deployment` is added to message `.google.cloud.memorystore.v1.Instance`
+- A new field `total_backup_size_bytes` is added to message `.google.cloud.memorystore.v1.BackupCollection`
+- A new field `total_backup_count` is added to message `.google.cloud.memorystore.v1.BackupCollection`
+- A new field `last_backup_time` is added to message `.google.cloud.memorystore.v1.BackupCollection`
+- A new field `encryption_info` is added to message `.google.cloud.memorystore.v1.Backup`
+- A new message `EncryptionInfo` is added
+
+### Documentation improvements
+
+- A comment for field `discovery_endpoints` in message `.google.cloud.memorystore.v1.Instance` is changed
+
 ## Version 1.0.0-beta04, released 2025-11-05
 
 ### New features
