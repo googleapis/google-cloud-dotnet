@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.9.0, released 2026-01-05
+
+### New features
+
+- Exposing total CPU related fields in AutoscalingConfig
+
+### Documentation improvements
+
+- Update high_priority_cpu_utilization_percent in AutoscalingConfig to be Optional and clarify its behavior when not specified
+
 ## Version 5.8.0, released 2025-12-03
 
 ### New features
