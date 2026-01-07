@@ -46,6 +46,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             QueryProductsSettings = existing.QueryProductsSettings;
+            AggregateFleetSettings = existing.AggregateFleetSettings;
             QueryDatabaseResourceGroupsSettings = existing.QueryDatabaseResourceGroupsSettings;
             OnCopy(existing);
         }
@@ -63,6 +64,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryProductsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseCenterClient.AggregateFleet</c> and <c>DatabaseCenterClient.AggregateFleetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregateFleetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -239,6 +252,26 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// AggregateFleet provides statistics about the fleet grouped by various
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AggregateFleetRow"/> resources.</returns>
+        public virtual gax::PagedEnumerable<AggregateFleetResponse, AggregateFleetRow> AggregateFleet(AggregateFleetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// AggregateFleet provides statistics about the fleet grouped by various
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AggregateFleetRow"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<AggregateFleetResponse, AggregateFleetRow> AggregateFleetAsync(AggregateFleetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// QueryDatabaseResourceGroups returns paginated results of database groups.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -265,6 +298,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
         private readonly gaxgrpc::ApiCall<QueryProductsRequest, QueryProductsResponse> _callQueryProducts;
 
+        private readonly gaxgrpc::ApiCall<AggregateFleetRequest, AggregateFleetResponse> _callAggregateFleet;
+
         private readonly gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> _callQueryDatabaseResourceGroups;
 
         /// <summary>
@@ -285,6 +320,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             _callQueryProducts = clientHelper.BuildApiCall<QueryProductsRequest, QueryProductsResponse>("QueryProducts", grpcClient.QueryProductsAsync, grpcClient.QueryProducts, effectiveSettings.QueryProductsSettings);
             Modify_ApiCall(ref _callQueryProducts);
             Modify_QueryProductsApiCall(ref _callQueryProducts);
+            _callAggregateFleet = clientHelper.BuildApiCall<AggregateFleetRequest, AggregateFleetResponse>("AggregateFleet", grpcClient.AggregateFleetAsync, grpcClient.AggregateFleet, effectiveSettings.AggregateFleetSettings);
+            Modify_ApiCall(ref _callAggregateFleet);
+            Modify_AggregateFleetApiCall(ref _callAggregateFleet);
             _callQueryDatabaseResourceGroups = clientHelper.BuildApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse>("QueryDatabaseResourceGroups", grpcClient.QueryDatabaseResourceGroupsAsync, grpcClient.QueryDatabaseResourceGroups, effectiveSettings.QueryDatabaseResourceGroupsSettings);
             Modify_ApiCall(ref _callQueryDatabaseResourceGroups);
             Modify_QueryDatabaseResourceGroupsApiCall(ref _callQueryDatabaseResourceGroups);
@@ -295,6 +333,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         partial void Modify_QueryProductsApiCall(ref gaxgrpc::ApiCall<QueryProductsRequest, QueryProductsResponse> call);
 
+        partial void Modify_AggregateFleetApiCall(ref gaxgrpc::ApiCall<AggregateFleetRequest, AggregateFleetResponse> call);
+
         partial void Modify_QueryDatabaseResourceGroupsApiCall(ref gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> call);
 
         partial void OnConstruction(DatabaseCenter.DatabaseCenterClient grpcClient, DatabaseCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -303,6 +343,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         public override DatabaseCenter.DatabaseCenterClient GrpcClient { get; }
 
         partial void Modify_QueryProductsRequest(ref QueryProductsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AggregateFleetRequest(ref AggregateFleetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryDatabaseResourceGroupsRequest(ref QueryDatabaseResourceGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -330,6 +372,32 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         {
             Modify_QueryProductsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryProductsRequest, QueryProductsResponse, Product>(_callQueryProducts, request, callSettings);
+        }
+
+        /// <summary>
+        /// AggregateFleet provides statistics about the fleet grouped by various
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AggregateFleetRow"/> resources.</returns>
+        public override gax::PagedEnumerable<AggregateFleetResponse, AggregateFleetRow> AggregateFleet(AggregateFleetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateFleetRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregateFleetRequest, AggregateFleetResponse, AggregateFleetRow>(_callAggregateFleet, request, callSettings);
+        }
+
+        /// <summary>
+        /// AggregateFleet provides statistics about the fleet grouped by various
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AggregateFleetRow"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<AggregateFleetResponse, AggregateFleetRow> AggregateFleetAsync(AggregateFleetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateFleetRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregateFleetRequest, AggregateFleetResponse, AggregateFleetRow>(_callAggregateFleet, request, callSettings);
         }
 
         /// <summary>
@@ -361,6 +429,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
     }
 
+    public partial class AggregateFleetRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class QueryDatabaseResourceGroupsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -369,6 +441,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Product> GetEnumerator() => Products.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class AggregateFleetResponse : gaxgrpc::IPageResponse<AggregateFleetRow>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AggregateFleetRow> GetEnumerator() => Rows.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "DatabaseCenterClient",
           "rpcs": {
+            "AggregateFleet": {
+              "methods": [
+                "AggregateFleet",
+                "AggregateFleetAsync"
+              ]
+            },
             "QueryDatabaseResourceGroups": {
               "methods": [
                 "QueryDatabaseResourceGroups",
