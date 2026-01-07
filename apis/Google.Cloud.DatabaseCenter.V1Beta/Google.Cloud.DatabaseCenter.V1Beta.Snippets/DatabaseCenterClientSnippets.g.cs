@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.DatabaseCenter.V1Beta;
+    using Google.Type;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -106,6 +107,110 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregateFleet</summary>
+        public void AggregateFleetRequestObject()
+        {
+            // Snippet: AggregateFleet(AggregateFleetRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = DatabaseCenterClient.Create();
+            // Initialize request argument(s)
+            AggregateFleetRequest request = new AggregateFleetRequest
+            {
+                Parent = "",
+                Filter = "",
+                GroupBy = "",
+                OrderBy = "",
+                BaselineDate = new Date(),
+            };
+            // Make the request
+            PagedEnumerable<AggregateFleetResponse, AggregateFleetRow> response = databaseCenterClient.AggregateFleet(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AggregateFleetRow item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AggregateFleetResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AggregateFleetRow item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AggregateFleetRow> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AggregateFleetRow item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregateFleetAsync</summary>
+        public async Task AggregateFleetRequestObjectAsync()
+        {
+            // Snippet: AggregateFleetAsync(AggregateFleetRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = await DatabaseCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregateFleetRequest request = new AggregateFleetRequest
+            {
+                Parent = "",
+                Filter = "",
+                GroupBy = "",
+                OrderBy = "",
+                BaselineDate = new Date(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<AggregateFleetResponse, AggregateFleetRow> response = databaseCenterClient.AggregateFleetAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AggregateFleetRow item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AggregateFleetResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AggregateFleetRow item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AggregateFleetRow> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AggregateFleetRow item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

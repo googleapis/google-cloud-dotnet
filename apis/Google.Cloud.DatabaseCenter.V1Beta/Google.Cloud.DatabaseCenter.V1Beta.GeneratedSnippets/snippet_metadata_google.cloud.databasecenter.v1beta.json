@@ -108,6 +108,103 @@
       ]
     },
     {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateFleet_sync",
+      "title": "AggregateFleetRequestObject",
+      "description": "Snippet for AggregateFleet",
+      "file": "DatabaseCenterClient.AggregateFleetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFleet",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateFleet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse, Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRow>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateFleet",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateFleet",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateFleet_async",
+      "title": "AggregateFleetRequestObjectAsync",
+      "description": "Snippet for AggregateFleetAsync",
+      "file": "DatabaseCenterClient.AggregateFleetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFleetAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateFleetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse, Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRow>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateFleet",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateFleet",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryDatabaseResourceGroups_sync",
       "title": "QueryDatabaseResourceGroupsRequestObject",
       "description": "Snippet for QueryDatabaseResourceGroups",

@@ -68,6 +68,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest> __Marshaller_google_cloud_databasecenter_v1beta_AggregateFleetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse> __Marshaller_google_cloud_databasecenter_v1beta_AggregateFleetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse.Parser));
@@ -79,6 +83,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         "QueryProducts",
         __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsRequest,
         __Marshaller_google_cloud_databasecenter_v1beta_QueryProductsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse> __Method_AggregateFleet = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AggregateFleet",
+        __Marshaller_google_cloud_databasecenter_v1beta_AggregateFleetRequest,
+        __Marshaller_google_cloud_databasecenter_v1beta_AggregateFleetResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> __Method_QueryDatabaseResourceGroups = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse>(
@@ -107,6 +119,19 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> QueryProducts(global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// AggregateFleet provides statistics about the fleet grouped by various
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse> AggregateFleet(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -205,6 +230,58 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_QueryProducts, null, options, request);
       }
       /// <summary>
+      /// AggregateFleet provides statistics about the fleet grouped by various
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse AggregateFleet(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AggregateFleet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// AggregateFleet provides statistics about the fleet grouped by various
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse AggregateFleet(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AggregateFleet, null, options, request);
+      }
+      /// <summary>
+      /// AggregateFleet provides statistics about the fleet grouped by various
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse> AggregateFleetAsync(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AggregateFleetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// AggregateFleet provides statistics about the fleet grouped by various
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse> AggregateFleetAsync(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AggregateFleet, null, options, request);
+      }
+      /// <summary>
       /// QueryDatabaseResourceGroups returns paginated results of database groups.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -267,6 +344,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_QueryProducts, serviceImpl.QueryProducts)
+          .AddMethod(__Method_AggregateFleet, serviceImpl.AggregateFleet)
           .AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl.QueryDatabaseResourceGroups).Build();
     }
 
@@ -278,6 +356,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DatabaseCenterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_QueryProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse>(serviceImpl.QueryProducts));
+      serviceBinder.AddMethod(__Method_AggregateFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse>(serviceImpl.AggregateFleet));
       serviceBinder.AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse>(serviceImpl.QueryDatabaseResourceGroups));
     }
 
