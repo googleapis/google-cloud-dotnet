@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-01-08
+
+### Bug fixes
+
+- Reference Microsoft.Bcl.AsyncInterfaces from package Google.Cloud.VertexAI.Extensions
+
 ## Version 1.0.0-beta03, released 2026-01-05
 
 ### New features
