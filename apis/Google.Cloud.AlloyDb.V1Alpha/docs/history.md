@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha15, released 2026-01-08
+
+### New features
+
+- Add POSTGRES_18 to DatabaseVersion
+
 ## Version 1.0.0-alpha14, released 2025-11-03
 
 ### New features
