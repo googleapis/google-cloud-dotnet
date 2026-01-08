@@ -3137,7 +3137,7 @@
     },
     {
       "id": "Google.Cloud.GkeRecommender.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "GKE Recommender",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/inference-quickstart",
