@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta65, released 2026-01-08
+
+### New features
+
+- Add streaming function call argument API changes
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.aiplatform.v1beta1.FunctionCall` is changed
+- A comment for field `args` in message `.google.cloud.aiplatform.v1beta1.FunctionCall` is changed
+
 ## Version 1.0.0-beta64, released 2026-01-05
 
 ### New features
