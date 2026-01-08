@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-01-08
+
+### New features
+
+- Adding Method AggregateFleet of Database Center API v1beta
+
 ## Version 1.0.0-beta02, released 2026-01-05
 
 ### New features
