@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.10.0, released 2026-01-08
+
+### New features
+
+- Add a ClientContext field to Spanner requests
+- Add Secure Parameters to the ClientContext
+
 ## Version 5.9.0, released 2026-01-05
 
 ### New features
