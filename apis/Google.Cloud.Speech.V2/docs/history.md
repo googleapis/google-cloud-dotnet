@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.7.0, released 2026-01-08
+
+### New features
+
+- Add custom prompt config in the request and return prompt in the response
+- Update min_speaker_count and max_speaker_count to be optional
+
+### Documentation improvements
+
+- Clarify that min_speaker_count and max_speaker_count in SpeakerDiarizationConfig are not currently used
+- Update guidance on how to enable speaker diarization; to enable, set the diarization_config field to an empty SpeakerDiarizationConfig message
+
 ## Version 1.6.0, released 2025-11-06
 
 ### New features
