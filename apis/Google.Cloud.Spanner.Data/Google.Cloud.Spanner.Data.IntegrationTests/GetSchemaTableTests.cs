@@ -76,7 +76,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
                 { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
                 { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
-                
+                { "UuidValue", typeof(Guid), SpannerDbType.Uuid },
+
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
@@ -94,6 +95,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
                 { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
                 { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
+                { "UuidArrayValue", typeof(List<Guid>), SpannerDbType.ArrayOf(SpannerDbType.Uuid) },
             };
 
         internal static async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(string columnName, System.Type type, SpannerDbType spannerDbType, string connectionString, string selectQuery)

@@ -106,6 +106,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Interval { get; } = new SpannerDbType(TypeCode.Interval);
 
+        /// <summary>
+        /// Representation of Spanner UUID type.
+        /// </summary>
+        public static SpannerDbType Uuid { get; } = new SpannerDbType(TypeCode.Uuid);
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -123,7 +128,8 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Numeric }, Numeric },
                 { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric },
                 { new V1.Type { Code = TypeCode.Int64, TypeAnnotation = TypeAnnotationCode.PgOid }, PgOid },
-                { new V1.Type { Code = TypeCode.Interval }, Interval }
+                { new V1.Type { Code = TypeCode.Interval }, Interval },
+                { new V1.Type { Code = TypeCode.Uuid }, Uuid }
             };
 
         internal static SpannerDbType FromType(V1.Type type) =>
@@ -215,6 +221,8 @@ namespace Google.Cloud.Spanner.Data
                         return DbType.Binary;
                     case TypeCode.Json:
                         return DbType.String;
+                    case TypeCode.Uuid:
+                        return DbType.Guid;
                     default:
                         return DbType.Object;
                 }
@@ -261,6 +269,8 @@ namespace Google.Cloud.Spanner.Data
                     return typeof(string);
                 case TypeCode.Interval:
                     return typeof(Interval);
+                case TypeCode.Uuid:
+                    return typeof(Guid);
                 default:
                     // If we don't recognize it, we use the protobuf Value well-known type.
                     // But since, as of June 2024, we support protobuf, we need to handle Value
@@ -291,6 +301,7 @@ namespace Google.Cloud.Spanner.Data
             DbType.VarNumeric => Numeric,
             DbType.Object => Unspecified,
             DbType.String => String,
+            DbType.Guid => Uuid,
             _ => throw new ArgumentOutOfRangeException(nameof(DbType), dbType, null),
         };
 
@@ -419,6 +430,10 @@ namespace Google.Cloud.Spanner.Data
             if (type == typeof(Interval))
             {
                 return Interval;
+            }
+            if (type == typeof(Guid))
+            {
+                return Uuid;
             }
             return Unspecified;
         }

@@ -110,6 +110,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null },
                 { "ProtobufPersonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))), null },
                 { "ProtobufValueWrapperArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))), null },
+                { "UuidValue", SpannerDbType.Uuid, null },
+                { "UuidArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Uuid), null },
             };
 
             if (_fixture.RunningOnEmulator || !isDml)
@@ -209,6 +211,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             ValueWrapper testValueWrapper = new ValueWrapper { OneValue = Value.ForString("Hello") };
             ValueWrapper[] vwArray = { testValueWrapper, null, new ValueWrapper() };
 
+            var testUuid = Guid.NewGuid();
+            Guid?[] testUuidArray = { Guid.NewGuid(), null, Guid.NewGuid() };
+
             var parameters = new SpannerParameterCollection
             {
                 { "BoolValue", SpannerDbType.Bool, true },
@@ -241,7 +246,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufPersonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))), pArray },
                 { "ProtobufValueWrapperArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))), vwArray },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), pvArray },
+                { "UuidValue", SpannerDbType.Uuid, testUuid },
+                { "UuidArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Uuid), testUuidArray },
             };
+
 
             if (_fixture.RunningOnEmulator || !isDml)
             {
@@ -286,6 +294,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(pArray, reader.GetFieldValue<Person[]>(reader.GetOrdinal("ProtobufPersonArrayValue")));
                 Assert.Equal(vwArray, reader.GetFieldValue<ValueWrapper[]>(reader.GetOrdinal("ProtobufValueWrapperArrayValue")));
                 Assert.Equal(pvArray, reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.Equal(testUuid, reader.GetFieldValue<Guid>(reader.GetOrdinal("UuidValue")));
+                Assert.Equal(testUuidArray, reader.GetFieldValue<Guid?[]>(reader.GetOrdinal("UuidArrayValue")));
                 if (_fixture.RunningOnEmulator || !isDml)
                 {
                     // b/348711708

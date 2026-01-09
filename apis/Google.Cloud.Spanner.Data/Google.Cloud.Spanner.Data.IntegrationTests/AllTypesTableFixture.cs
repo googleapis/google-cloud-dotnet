@@ -52,6 +52,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufRectangleValue,
                  ProtobufPersonValue,
                  ProtobufValueWrapperValue,
+                 UuidValue,
                  BoolArrayValue,
                  Int64ArrayValue,
                  Float32ArrayValue,
@@ -67,6 +68,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufDurationArrayValue,
                  ProtobufRectangleArrayValue,
                  ProtobufPersonArrayValue,
+                 UuidArrayValue,
                  ProtobufValueWrapperArrayValue) VALUES(
                  @K,
                  @BoolValue,
@@ -84,6 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleValue,
                  @ProtobufPersonValue,
                  @ProtobufValueWrapperValue,
+                 @UuidValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  @Float32ArrayValue,
@@ -99,6 +102,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufDurationArrayValue,
                  @ProtobufRectangleArrayValue,
                  @ProtobufPersonArrayValue,
+                 @UuidArrayValue,
                  @ProtobufValueWrapperArrayValue
                )";
 
@@ -120,6 +124,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleValue              {Rectangle.Descriptor.FullName},
                             ProtobufPersonValue                 {Person.Descriptor.FullName},
                             ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
+                            UuidValue                           UUID,
                             BoolArrayValue                      ARRAY<BOOL>,
                             Int64ArrayValue                     ARRAY<INT64>,
                             Float32ArrayValue                   ARRAY<FLOAT32>,
@@ -135,7 +140,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufDurationArrayValue          ARRAY<{Duration.Descriptor.FullName}>,
                             ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
-                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
+                            UuidArrayValue                      ARRAY<UUID>,
+                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>,
                           ) PRIMARY KEY(K)");
 
         private string MaybeEmptyOnProduction(string text, bool skip) => skip && !RunningOnEmulator ? "" : text;
