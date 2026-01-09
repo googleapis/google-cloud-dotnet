@@ -279,6 +279,15 @@ namespace Google.Cloud.Datastore.V1
             }
         }
 
+        /// <inheritdoc />
+        public override async ValueTask DisposeAsync()
+        {
+            if (_active)
+            {
+                await RollbackAsync().ConfigureAwait(false);
+            }
+        }
+
         private void CheckActive()
         {
             if (!_active)

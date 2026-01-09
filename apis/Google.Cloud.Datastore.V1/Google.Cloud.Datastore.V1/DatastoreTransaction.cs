@@ -50,7 +50,7 @@ namespace Google.Cloud.Datastore.V1
     /// methods in this class; instead, all methods either delegate to another or throw <see cref="NotImplementedException"/>.
     /// </para>
     /// </summary>
-    public abstract class DatastoreTransaction : IDisposable
+    public abstract class DatastoreTransaction : IDisposable, IAsyncDisposable
     {
         /// <summary>
         /// The ID of the transaction, used implicitly in operations performed with this object.
@@ -658,6 +658,16 @@ namespace Google.Cloud.Datastore.V1
         public virtual void Dispose()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// If the transaction has already been committed, this operation is a no-op.
+        /// Otherwise, it rolls back the transaction.
+        /// </summary>
+        public virtual ValueTask DisposeAsync()
+        {
+            Dispose();
+            return default;
         }
     }
 }
