@@ -674,8 +674,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -697,8 +697,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -720,8 +720,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -736,8 +736,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -759,8 +759,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -782,8 +782,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The messages in the request will be published on this
-        /// topic. Format is `projects/{project}/topics/{topic}`.
+        /// Required. The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// Required. The messages to publish.
@@ -824,7 +824,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -839,7 +839,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -854,7 +854,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -881,7 +881,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -896,7 +896,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. The name of the topic to get.
+        /// Required. The name of the topic to get.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -926,7 +926,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// Required. Identifier. The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -960,7 +960,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// Required. Identifier. The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -994,7 +994,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// Required. Identifier. The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// Required. Identifier. The name of the project in which to list topics.
+        /// Required. The name of the project in which to list topics.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -1437,7 +1437,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1491,7 +1491,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1529,7 +1529,7 @@ namespace Google.Cloud.PubSub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        /// Required. Identifier. Name of the topic to delete.
+        /// Required. Name of the topic to delete.
         /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
