@@ -17,89 +17,73 @@ using Google.Cloud.Iam.V1;
 using Google.Cloud.ResourceManager.V3;
 using Grpc.Core;
 
-namespace Google.Cloud.Tools.Snippets
+namespace Google.Cloud.Tools.Snippets;
+
+public class OccForIamSnippets
 {
-    public class OccForIamSnippets
+    private readonly SnippetFixture _fixture;
+
+    public CallSettingsSnippets(SnippetFixture fixture)
     {
-        public async Task<int> OccForIam()
+        _fixture = fixture;
+    }
+
+    [Fact]
+    public void OccForIam()
+    {
+        string projectId = _ficxture.ProjectId;
+        string role = "roles/cloudkms.cryptoKeyEncrypterDecrypter";
+        string member = "user:betterbrent@google.com";
+
+        // Sample: OccForIam
+        ProjectsClient client = await ProjectsClient.CreateAsync();
+        ProjectName resourceName = ProjectName.FromProject(projectId);
+
+        try
         {
-            string projectId = "your-project-id";
-            string role = "roles/cloudkms.cryptoKeyEncrypterDecrypter";
-            string member = "user:betterbrent@google.com";
-            int maxRetries = 5;
+            // READ: Get the current policy (includes Etag)
+            Console.WriteLine($"Reading policy for {resourceName}...");
+            Policy policy = await client.GetIamPolicyAsync(resourceName);
 
-            // Sample: OccForIam
-            // Required using directives:
-            // using Google.Api.Gax.ResourceNames;
-            // using Google.Cloud.Iam.V1;
-            // using Google.Cloud.ResourceManager.V3;
-            // using Grpc.Core;
+            // MODIFY: Apply changes to the local Policy object
+            Binding binding = policy.Bindings.FirstOrDefault(b => b.Role == role);
 
-            // Setup Client
-            ProjectsClient client = await ProjectsClient.CreateAsync();
-            ProjectName resourceName = ProjectName.FromProject(projectId);
-
-            int retries = 0;
-
-            // --- START OCC LOOP ---
-            while (retries < maxRetries)
+            if (binding != null)
             {
-                try
+                if (!binding.Members.Contains(member))
                 {
-                    // READ: Get the current policy (includes Etag)
-                    Console.WriteLine($"Attempt {retries + 1}: Reading policy for {resourceName}...");
-                    Policy policy = await client.GetIamPolicyAsync(resourceName);
-
-                    // MODIFY: Apply changes to the local Policy object
-                    Binding binding = policy.Bindings.FirstOrDefault(b => b.Role == role);
-
-                    if (binding != null)
-                    {
-                        if (!binding.Members.Contains(member))
-                        {
-                            binding.Members.Add(member);
-                        }
-                    }
-                    else
-                    {
-                        policy.Bindings.Add(new Binding
-                        {
-                            Role = role,
-                            Members = { member }
-                        });
-                    }
-
-                    // WRITE: Attempt to set the modified policy
-                    // The 'policy' object contains the original 'Etag' from Step 1.
-                    Console.WriteLine($"Attempt {retries + 1}: Writing modified policy...");
-                    Policy updatedPolicy = await client.SetIamPolicyAsync(resourceName, policy);
-
-                    // SUCCESS
-                    Console.WriteLine("Successfully updated IAM policy.");
-                    return 0;
-                }
-                catch (RpcException ex) when (
-                    ex.StatusCode == StatusCode.Aborted ||
-                    ex.StatusCode == StatusCode.FailedPrecondition)
-                {
-                    // RETRY LOGIC
-                    retries++;
-                    Console.WriteLine($"Concurrency conflict (Etag mismatch). Retrying... ({retries}/{maxRetries})");
-
-                    if (retries >= maxRetries)
-                    {
-                        Console.WriteLine("Failed to update policy after max retries.");
-                        throw;
-                    }
-
-                    // Simple backoff
-                    await Task.Delay(100 * retries);
+                    binding.Members.Add(member);
                 }
             }
-            // --- END OCC LOOP ---
+            else
+            {
+                policy.Bindings.Add(new Binding
+                {
+                    Role = role,
+                    Members = { member }
+                });
+            }
 
-            return 1; // non-zero, failed
-            // End sample
+            // WRITE: Attempt to set the modified policy
+            // The 'policy' object contains the original 'Etag' from Step 1.
+            Console.WriteLine("Writing modified policy...");
+            Policy updatedPolicy = await client.SetIamPolicyAsync(resourceName, policy);
+
+            // SUCCESS
+            Console.WriteLine("Successfully updated IAM policy.");
         }
+        catch (RpcException ex) when (
+            ex.StatusCode == StatusCode.Aborted ||
+            ex.StatusCode == StatusCode.FailedPrecondition)
+        {
+            // A concurrency conflict can manifest as either Aborted or FailedPrecondition,
+            // depending on the specifics of the API and the race condition.
+            // To ensure the retry mechanism is robust, we catch both.
+            Console.WriteLine($"Concurrency conflict (Etag mismatch).");
+
+            // Handle the etag mismatch. For example, retry the change or prompt the user to
+            // submit their changes again.
+        }
+        // End sample
     }
 }

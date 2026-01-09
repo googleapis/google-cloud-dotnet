@@ -10,9 +10,9 @@ By providing a `FieldMask`, you explicitly declare the subset of fields in the r
 
 ## Constructing and Applying the FieldMask
 
-The `FieldMask` object is part of the Google Protobuf library and contains a collection of strings representing the fields to be modified.
+The `FieldMask` object is part of the `Google.Protobuf` library and contains a collection of strings representing the fields paths to be modified.
 
-**Crucial Point:** The strings in the `FieldMask.Paths` collection **must** correspond to the **snake\_case** field names defined in the Protocol Buffer (protobuf) schema, not the C\# property names (which are PascalCase).
+**Crucial Point:** The strings in the `FieldMask.Paths` collection **must** correspond to the **original** field names defined in the Protocol Buffer (protobuf) schema, not the C\# property names (which are PascalCase).
 
 # Examples
 

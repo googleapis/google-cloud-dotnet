@@ -16,60 +16,53 @@ using Google.Cloud.SecretManager.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
-namespace Google.Cloud.Tools.Snippets
+namespace Google.Cloud.Tools.Snippets;
+
+public class UpdateMaskSnippets
 {
-    public class UpdateMaskSnippets
+    private readonly SnippetFixture _fixture;
+
+    public CallSettingsSnippets(SnippetFixture fixture)
     {
-        public async Task UpdateMasks()
+        _fixture = fixture;
+    }
+
+    [Fact]
+    public void UpdateMasks()
+    {
+        string projectId = _fixture.ProjectId;;
+        string secretId = "test-secret";
+
+        // Sample: UpdateMasks
+        SecretManagerServiceClient client = await SecretManagerServiceClient.CreateAsync();
+
+        // Prepare the resource with NEW values
+        Secret secret = new Secret
         {
-            string projectId = "your-project-id";
-            string secretId = "test-secret";
+            // Set the full resource name
+            SecretName = SecretName.FromProjectSecret(projectId, secretId),
+            // Populate the fields we intend to change
+            Labels = { { "env", "production" } }
+        };
 
-            // Sample: UpdateMasks
-            // Required using directives:
-            // using Google.Cloud.SecretManager.V1;
-            // using Google.Protobuf.WellKnownTypes;
-            // using Grpc.Core;
+        // Create the FieldMask
+        FieldMask updateMask = new FieldMask
+        {
+            // Add the original protobuf field name.
+            // In this example, the C# property is 'Labels', but the protobuf field name is 'labels'.
+            Paths = { "labels" }
+        };
 
-            // Setup Client
-            SecretManagerServiceClient client = await SecretManagerServiceClient.CreateAsync();
+        // Prepare the Request object
+        UpdateSecretRequest request = new UpdateSecretRequest
+        {
+            Secret = secret,
+            UpdateMask = updateMask
+        };
 
-            // Prepare the resource with NEW values
-            Secret secret = new Secret
-            {
-                // Set the full resource name
-                SecretName = SecretName.FromProjectSecret(projectId, secretId),
-
-                // Populate ONLY the fields we intend to change
-                Labels = { { "env", "production" } }
-            };
-
-            // Create the FieldMask
-            FieldMask updateMask = new FieldMask();
-
-            // Add the Protobuf field name in snake_case
-            // Note: The C# property is 'Labels', but the proto field name is 'labels'.
-            updateMask.Paths.Add("labels");
-
-            // Prepare the Request object
-            UpdateSecretRequest request = new UpdateSecretRequest
-            {
-                Secret = secret,
-                UpdateMask = updateMask
-            };
-
-            // Call the API
-            try
-            {
-                Secret updatedSecret = await client.UpdateSecretAsync(request);
-                Console.WriteLine($"Secret labels updated successfully. New Etag: {updatedSecret.Etag}");
-            }
-            catch (RpcException ex)
-            {
-                Console.WriteLine($"Update failed: {ex.Status.Detail}");
-            }
-
-            // End sample
-        }
+        // Call the API
+        Secret updatedSecret = await client.UpdateSecretAsync(request);
+        Console.WriteLine($"Secret labels updated successfully. New Etag: {updatedSecret.Etag}");
+        // End sample
     }
 }
