@@ -10579,6 +10579,325 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_sync",
+      "title": "ListResourceBackupConfigsRequestObject",
+      "description": "Snippet for ListResourceBackupConfigs",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigs",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListResourceBackupConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_async",
+      "title": "ListResourceBackupConfigsRequestObjectAsync",
+      "description": "Snippet for ListResourceBackupConfigsAsync",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListResourceBackupConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_sync_flattened",
+      "title": "ListResourceBackupConfigs",
+      "description": "Snippet for ListResourceBackupConfigs",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigs",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_async_flattened",
+      "title": "ListResourceBackupConfigsAsync",
+      "description": "Snippet for ListResourceBackupConfigsAsync",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_sync_flattened_resourceNames",
+      "title": "ListResourceBackupConfigsResourceNames",
+      "description": "Snippet for ListResourceBackupConfigs",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigs",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_async_flattened_resourceNames",
+      "title": "ListResourceBackupConfigsResourceNamesAsync",
+      "description": "Snippet for ListResourceBackupConfigsAsync",
+      "file": "BackupDrProtectionSummaryClient.ListResourceBackupConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceBackupConfigsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient.ListResourceBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListResourceBackupConfigsResponse, Google.Cloud.BackupDR.V1.ResourceBackupConfig>",
+        "client": {
+          "shortName": "BackupDrProtectionSummaryClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDrProtectionSummaryClient"
+        },
+        "method": {
+          "shortName": "ListResourceBackupConfigs",
+          "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary.ListResourceBackupConfigs",
+          "service": {
+            "shortName": "BackupDrProtectionSummary",
+            "fullName": "google.cloud.backupdr.v1.BackupDrProtectionSummary"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
