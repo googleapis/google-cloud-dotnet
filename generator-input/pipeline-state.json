@@ -4348,7 +4348,10 @@
         {
             "id": "docs-google-apis",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED"
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "sourcePaths": [
+                "docs/fake-source-path.txt"
+            ]
         },
         {
             "id": "docs-grpc",
