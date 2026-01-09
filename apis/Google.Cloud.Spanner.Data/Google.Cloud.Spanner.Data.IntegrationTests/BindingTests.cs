@@ -61,6 +61,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Float32,
             SpannerDbType.Json,
             SpannerDbType.Interval,
+            SpannerDbType.Uuid,
             SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.FromClrType(typeof(Person)),
@@ -76,6 +77,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             SpannerDbType.ArrayOf(SpannerDbType.Interval),
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
@@ -393,5 +395,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private void MaybeSkipIfOnProduction(SpannerDbType spannerDbType) =>
             Skip.If(!_fixture.RunningOnEmulator && BindProductionUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),
                 $"Production does not support {spannerDbType}.");
+
+        [Fact]
+        public Task BindUuid() => TestBindNonNull(
+            SpannerDbType.Uuid,
+            Guid.NewGuid(),
+            r => r.GetGuid(0));
+
+        [Fact]
+        public Task BindUuidArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new Guid?[] { Guid.NewGuid(), null, Guid.NewGuid() });
+
+        [Fact]
+        public Task BindUuidEmptyArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new Guid[] { });
     }
 }

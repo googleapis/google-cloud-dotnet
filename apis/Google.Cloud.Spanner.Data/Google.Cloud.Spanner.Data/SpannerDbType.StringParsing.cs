@@ -51,9 +51,10 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Json:
                 case TypeCode.Numeric:
                 case TypeCode.Interval:
+                case TypeCode.Uuid:
                     if (!string.IsNullOrEmpty(remainder))
                     {
-                        //unexepected inner remainder on simple type
+                        // Unexpected inner remainder on simple type.
                         return false;
                     }
                     // If there's no size, we can use cached values.

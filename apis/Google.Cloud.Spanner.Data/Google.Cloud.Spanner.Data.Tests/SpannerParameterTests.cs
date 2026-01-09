@@ -45,6 +45,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
+            yield return new object[] { SpannerDbType.Uuid, DbType.Guid, true };
             // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb,
             // SpannerDbType.PgOid, SpannerDbType protobuf or SpannerDbType.Interval.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
@@ -98,6 +99,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "test", SpannerDbType.String, DbType.String, typeof(string) };
 
             yield return new object[] { Interval.Parse("P1Y2M3D"), SpannerDbType.Interval, DbType.Object, typeof(Interval) };
+
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, DbType.Guid, typeof(Guid) };
 
             // Tests for protobuf
             // Note that the default CLR type here is always Value, because in general, we only know the the name of the protobuf type and from there
@@ -208,6 +211,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Json };
             yield return new object[] { SpannerDbType.PgJsonb };
             yield return new object[] { SpannerDbType.Interval };
+            yield return new object[] { SpannerDbType.Uuid };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.String) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bool) };
@@ -222,6 +226,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Json) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgJsonb) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Interval) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Uuid) };
         }
 
         [Theory]

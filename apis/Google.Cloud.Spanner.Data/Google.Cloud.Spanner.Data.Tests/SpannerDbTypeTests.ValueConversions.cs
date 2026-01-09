@@ -61,13 +61,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
             { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
             { "PgOidField", SpannerDbType.PgOid, 3L },
-            { "IntervalField", SpannerDbType.Interval, Interval.Parse("P1Y2M3D") }
+            { "IntervalField", SpannerDbType.Interval, Interval.Parse("P1Y2M3D") },
+            { "Uuid", SpannerDbType.Uuid, new Guid("8f8c4746-17b1-4d9f-a634-58e11942095f")},
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\", \"P1Y2M3D\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\", \"P1Y2M3D\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -139,6 +140,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return Interval.Parse("P1Y");
             yield return Interval.Parse("P1Y2M3DT4H5M6.5S");
             yield return Interval.Parse("PT0.9S");
+        }
+
+        private static IEnumerable<Guid> GetGuidsForArray()
+        {
+            yield return Guid.Empty;
+            yield return Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f");
         }
 
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
@@ -331,6 +338,17 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Interval tests
             yield return new object[] { "P0Y", SpannerDbType.Interval, Quote("P0Y") };
             yield return new object[] { Interval.Parse("P1Y2M3DT4H5M6S"), SpannerDbType.Interval, Quote("P1Y2M3DT4H5M6S") };
+            // UUID tests
+            yield return new object[] { "8f8c4746-17b1-4d9f-a634-58e11942095f", SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f")};
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f") };
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, Quote("8f8c474617b14d9fa63458e11942095f"), TestType.ValueToClr };
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, Quote("{8f8c4746-17b1-4d9f-a634-58e11942095f}"), TestType.ValueToClr };
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, Quote("(8f8c4746-17b1-4d9f-a634-58e11942095f)"), TestType.ValueToClr };
+            yield return new object[] { Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f"), SpannerDbType.Uuid, Quote("8F8C4746-17B1-4D9F-A634-58E11942095F"), TestType.ValueToClr };
+            yield return new object[] { "{8f8c4746-17b1-4d9f-a634-58e11942095f}", SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f"), TestType.ClrToValue};
+            yield return new object[] { "(8f8c4746-17b1-4d9f-a634-58e11942095f)", SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f"), TestType.ClrToValue};
+            yield return new object[] { "8F8C4746-17B1-4D9F-A634-58E11942095F", SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f"), TestType.ClrToValue};
+            yield return new object[] { "8f8c474617b14d9fa63458e11942095f", SpannerDbType.Uuid, Quote("8f8c4746-17b1-4d9f-a634-58e11942095f"), TestType.ClrToValue };
 
             // Note the difference in C# conversions from special floats and doubles.
             yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
@@ -419,6 +437,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<Interval>(GetIntervalsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Interval),
                 "[ \"P1Y\", \"P1Y2M3DT4H5M6.5S\", \"PT0.9S\" ]"
+            };
+            yield return new object[]
+            {
+                new List<Guid>(GetGuidsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+                "[ \"00000000-0000-0000-0000-000000000000\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -683,6 +706,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "1Y2M", SpannerDbType.Interval };
             yield return new object[] { "P1H", SpannerDbType.Interval };
             yield return new object[] { TimeSpan.FromDays(3), SpannerDbType.Interval };
+
+            // Spanner type = UUID tests.
+            yield return new object[] { "invalid", SpannerDbType.Uuid };
+            yield return new object[] { "", SpannerDbType.Uuid };
+            yield return new object[] { "0", SpannerDbType.Uuid };
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
