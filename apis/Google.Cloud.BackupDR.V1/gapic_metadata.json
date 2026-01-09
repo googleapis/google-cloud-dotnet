@@ -235,6 +235,21 @@
           }
         }
       }
+    },
+    "BackupDrProtectionSummary": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BackupDrProtectionSummaryClient",
+          "rpcs": {
+            "ListResourceBackupConfigs": {
+              "methods": [
+                "ListResourceBackupConfigs",
+                "ListResourceBackupConfigsAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
