@@ -4347,8 +4347,10 @@
         },
         {
             "id": "docs-google-apis",
+            "currentVersion": "1.73.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-01-09T16:53:10.231712554Z",
             "sourcePaths": [
                 "docs/fake-source-path.txt"
             ]
