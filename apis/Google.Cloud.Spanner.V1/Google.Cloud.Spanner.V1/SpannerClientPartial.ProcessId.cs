@@ -21,46 +21,44 @@ namespace Google.Cloud.Spanner.V1;
 public partial class SpannerClientImpl
 {
     /// <summary>
-    /// The process ID.
+    /// The process ID. Can be set only once and before any Spanner request has been executed.
     /// </summary>
     /// <exception cref="InvalidOperationException">The process ID has already been set.</exception>
     internal static ulong ProcessId
     {
-        set => ProcessIdSource.Set(value);
-    }
-
-    private static class ProcessIdSource
-    {
-        private static string s_value;
-        internal static string Value
+        set
         {
-            get
-            {
-                // If not set, attempt to set it with a new random value.
-                // (It's okay if multiple threads generate a value; only the first one wins).
-                if (s_value == null)
-                {
-                    Interlocked.CompareExchange(ref s_value, GenerateId(), null);
-                }
-                return s_value;
-            }
-        }
-
-        internal static void Set(ulong id)
-        {
-            // Atomically set the value. If it was already set (i.e. returns non-null), throw.
-            if (Interlocked.CompareExchange(ref s_value, id.ToString(), null) != null)
+            if (!ProcessIdSource.TrySetProcessId(value))
             {
                 throw new InvalidOperationException("The Process ID was already set and cannot be overwritten now.");
             }
         }
+    }
 
-        private static string GenerateId()
+    private static class ProcessIdSource
+    {
+        private static string s_explicitvalue;
+        private static readonly Lazy<string> ProcessIdCache = new Lazy<string>(ProcessIdUncached, LazyThreadSafetyMode.ExecutionAndPublication);
+
+        internal static string Value => ProcessIdCache.Value;
+
+        internal static bool TrySetProcessId(ulong id) =>
+            Interlocked.CompareExchange(ref s_explicitvalue, id.ToString(), null) == null;
+
+        private static string ProcessIdUncached()
         {
-            var random = new Random();
-            var buffer = new byte[sizeof(ulong)];
-            random.NextBytes(buffer);
-            return BitConverter.ToUInt64(buffer, 0).ToString();
+            // ProcessId had not been explicitly set, we need to generate one.
+            // And it's perfectly fine that we left it set to zero,
+            // that's enough to make it fail if someone tries to change it,
+            // and we won't use that value anymore.
+            if (TrySetProcessId(0))
+            {
+                var random = new Random();
+                var buffer = new byte[sizeof(ulong)];
+                random.NextBytes(buffer);
+                return BitConverter.ToUInt64(buffer, 0).ToString();
+            }
+            return s_explicitvalue;
         }
     }
 }
