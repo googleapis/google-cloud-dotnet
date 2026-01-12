@@ -64,6 +64,12 @@
                 "ExportRevisionStatefileAsync"
               ]
             },
+            "GetAutoMigrationConfig": {
+              "methods": [
+                "GetAutoMigrationConfig",
+                "GetAutoMigrationConfigAsync"
+              ]
+            },
             "GetDeployment": {
               "methods": [
                 "GetDeployment",
@@ -164,6 +170,12 @@
               "methods": [
                 "UnlockDeployment",
                 "UnlockDeploymentAsync"
+              ]
+            },
+            "UpdateAutoMigrationConfig": {
+              "methods": [
+                "UpdateAutoMigrationConfig",
+                "UpdateAutoMigrationConfigAsync"
               ]
             },
             "UpdateDeployment": {
