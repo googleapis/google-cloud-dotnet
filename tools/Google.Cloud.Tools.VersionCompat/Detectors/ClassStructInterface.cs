@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
-using Google.Cloud.Tools.VersionCompat.Utils;
 using Mono.Cecil;
 using System;
 using System.Collections.Generic;
