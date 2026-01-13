@@ -24,7 +24,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcvv = Google.Cloud.VisionAI.V1;
 
@@ -346,14 +345,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAssetsResponse, gcvv::Asset> response = warehouseClient.ListAssetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Asset item) =>
+            await foreach (gcvv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAssetsResponse page) =>
+            await foreach (gcvv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -362,7 +361,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -436,14 +435,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAssetsResponse, gcvv::Asset> response = warehouseClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Asset item) =>
+            await foreach (gcvv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAssetsResponse page) =>
+            await foreach (gcvv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -452,7 +451,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -526,14 +525,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAssetsResponse, gcvv::Asset> response = warehouseClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Asset item) =>
+            await foreach (gcvv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAssetsResponse page) =>
+            await foreach (gcvv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -542,7 +541,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1106,14 +1105,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewIndexedAssetsResponse, gcvv::IndexedAsset> response = warehouseClient.ViewIndexedAssetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexedAsset item) =>
+            await foreach (gcvv::IndexedAsset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewIndexedAssetsResponse page) =>
+            await foreach (gcvv::ViewIndexedAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1122,7 +1121,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1196,14 +1195,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewIndexedAssetsResponse, gcvv::IndexedAsset> response = warehouseClient.ViewIndexedAssetsAsync(index);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexedAsset item) =>
+            await foreach (gcvv::IndexedAsset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewIndexedAssetsResponse page) =>
+            await foreach (gcvv::ViewIndexedAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1212,7 +1211,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1286,14 +1285,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewIndexedAssetsResponse, gcvv::IndexedAsset> response = warehouseClient.ViewIndexedAssetsAsync(index);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexedAsset item) =>
+            await foreach (gcvv::IndexedAsset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewIndexedAssetsResponse page) =>
+            await foreach (gcvv::ViewIndexedAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1302,7 +1301,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1792,14 +1791,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexesResponse, gcvv::Index> response = warehouseClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Index item) =>
+            await foreach (gcvv::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexesResponse page) =>
+            await foreach (gcvv::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1808,7 +1807,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1882,14 +1881,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexesResponse, gcvv::Index> response = warehouseClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Index item) =>
+            await foreach (gcvv::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexesResponse page) =>
+            await foreach (gcvv::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1898,7 +1897,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1972,14 +1971,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexesResponse, gcvv::Index> response = warehouseClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Index item) =>
+            await foreach (gcvv::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexesResponse page) =>
+            await foreach (gcvv::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1988,7 +1987,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2532,14 +2531,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListCorporaResponse, gcvv::Corpus> response = warehouseClient.ListCorporaAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Corpus item) =>
+            await foreach (gcvv::Corpus item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListCorporaResponse page) =>
+            await foreach (gcvv::ListCorporaResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2548,7 +2547,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2622,14 +2621,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListCorporaResponse, gcvv::Corpus> response = warehouseClient.ListCorporaAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Corpus item) =>
+            await foreach (gcvv::Corpus item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListCorporaResponse page) =>
+            await foreach (gcvv::ListCorporaResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2638,7 +2637,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3201,14 +3200,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListDataSchemasResponse, gcvv::DataSchema> response = warehouseClient.ListDataSchemasAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::DataSchema item) =>
+            await foreach (gcvv::DataSchema item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListDataSchemasResponse page) =>
+            await foreach (gcvv::ListDataSchemasResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3217,7 +3216,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3291,14 +3290,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListDataSchemasResponse, gcvv::DataSchema> response = warehouseClient.ListDataSchemasAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::DataSchema item) =>
+            await foreach (gcvv::DataSchema item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListDataSchemasResponse page) =>
+            await foreach (gcvv::ListDataSchemasResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3307,7 +3306,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3381,14 +3380,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListDataSchemasResponse, gcvv::DataSchema> response = warehouseClient.ListDataSchemasAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::DataSchema item) =>
+            await foreach (gcvv::DataSchema item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListDataSchemasResponse page) =>
+            await foreach (gcvv::ListDataSchemasResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3397,7 +3396,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3665,14 +3664,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAnnotationsResponse, gcvv::Annotation> response = warehouseClient.ListAnnotationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Annotation item) =>
+            await foreach (gcvv::Annotation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAnnotationsResponse page) =>
+            await foreach (gcvv::ListAnnotationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3681,7 +3680,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3755,14 +3754,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAnnotationsResponse, gcvv::Annotation> response = warehouseClient.ListAnnotationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Annotation item) =>
+            await foreach (gcvv::Annotation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAnnotationsResponse page) =>
+            await foreach (gcvv::ListAnnotationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3771,7 +3770,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3845,14 +3844,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListAnnotationsResponse, gcvv::Annotation> response = warehouseClient.ListAnnotationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Annotation item) =>
+            await foreach (gcvv::Annotation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListAnnotationsResponse page) =>
+            await foreach (gcvv::ListAnnotationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3861,7 +3860,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4621,14 +4620,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchConfigsResponse, gcvv::SearchConfig> response = warehouseClient.ListSearchConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchConfig item) =>
+            await foreach (gcvv::SearchConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchConfigsResponse page) =>
+            await foreach (gcvv::ListSearchConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4637,7 +4636,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4711,14 +4710,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchConfigsResponse, gcvv::SearchConfig> response = warehouseClient.ListSearchConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchConfig item) =>
+            await foreach (gcvv::SearchConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchConfigsResponse page) =>
+            await foreach (gcvv::ListSearchConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4727,7 +4726,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4801,14 +4800,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchConfigsResponse, gcvv::SearchConfig> response = warehouseClient.ListSearchConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchConfig item) =>
+            await foreach (gcvv::SearchConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchConfigsResponse page) =>
+            await foreach (gcvv::ListSearchConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4817,7 +4816,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5234,14 +5233,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchHypernymsResponse, gcvv::SearchHypernym> response = warehouseClient.ListSearchHypernymsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchHypernym item) =>
+            await foreach (gcvv::SearchHypernym item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchHypernymsResponse page) =>
+            await foreach (gcvv::ListSearchHypernymsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5250,7 +5249,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5324,14 +5323,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchHypernymsResponse, gcvv::SearchHypernym> response = warehouseClient.ListSearchHypernymsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchHypernym item) =>
+            await foreach (gcvv::SearchHypernym item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchHypernymsResponse page) =>
+            await foreach (gcvv::ListSearchHypernymsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5340,7 +5339,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5414,14 +5413,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListSearchHypernymsResponse, gcvv::SearchHypernym> response = warehouseClient.ListSearchHypernymsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchHypernym item) =>
+            await foreach (gcvv::SearchHypernym item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListSearchHypernymsResponse page) =>
+            await foreach (gcvv::ListSearchHypernymsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5430,7 +5429,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5534,14 +5533,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::SearchAssetsResponse, gcvv::SearchResultItem> response = warehouseClient.SearchAssetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchResultItem item) =>
+            await foreach (gcvv::SearchResultItem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::SearchAssetsResponse page) =>
+            await foreach (gcvv::SearchAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5550,7 +5549,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5648,14 +5647,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::SearchIndexEndpointResponse, gcvv::SearchResultItem> response = warehouseClient.SearchIndexEndpointAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::SearchResultItem item) =>
+            await foreach (gcvv::SearchResultItem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::SearchIndexEndpointResponse page) =>
+            await foreach (gcvv::SearchIndexEndpointResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5664,7 +5663,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6028,14 +6027,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexEndpointsResponse, gcvv::IndexEndpoint> response = warehouseClient.ListIndexEndpointsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexEndpoint item) =>
+            await foreach (gcvv::IndexEndpoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexEndpointsResponse page) =>
+            await foreach (gcvv::ListIndexEndpointsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6044,7 +6043,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6118,14 +6117,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexEndpointsResponse, gcvv::IndexEndpoint> response = warehouseClient.ListIndexEndpointsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexEndpoint item) =>
+            await foreach (gcvv::IndexEndpoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexEndpointsResponse page) =>
+            await foreach (gcvv::ListIndexEndpointsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6134,7 +6133,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6208,14 +6207,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListIndexEndpointsResponse, gcvv::IndexEndpoint> response = warehouseClient.ListIndexEndpointsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::IndexEndpoint item) =>
+            await foreach (gcvv::IndexEndpoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListIndexEndpointsResponse page) =>
+            await foreach (gcvv::ListIndexEndpointsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6224,7 +6223,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7276,14 +7275,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListCollectionsResponse, gcvv::Collection> response = warehouseClient.ListCollectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Collection item) =>
+            await foreach (gcvv::Collection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListCollectionsResponse page) =>
+            await foreach (gcvv::ListCollectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7292,7 +7291,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7366,14 +7365,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListCollectionsResponse, gcvv::Collection> response = warehouseClient.ListCollectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Collection item) =>
+            await foreach (gcvv::Collection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListCollectionsResponse page) =>
+            await foreach (gcvv::ListCollectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7382,7 +7381,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7456,14 +7455,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ListCollectionsResponse, gcvv::Collection> response = warehouseClient.ListCollectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::Collection item) =>
+            await foreach (gcvv::Collection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ListCollectionsResponse page) =>
+            await foreach (gcvv::ListCollectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7472,7 +7471,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7672,14 +7671,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewCollectionItemsResponse, gcvv::CollectionItem> response = warehouseClient.ViewCollectionItemsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::CollectionItem item) =>
+            await foreach (gcvv::CollectionItem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewCollectionItemsResponse page) =>
+            await foreach (gcvv::ViewCollectionItemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7688,7 +7687,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7762,14 +7761,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewCollectionItemsResponse, gcvv::CollectionItem> response = warehouseClient.ViewCollectionItemsAsync(collection);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::CollectionItem item) =>
+            await foreach (gcvv::CollectionItem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewCollectionItemsResponse page) =>
+            await foreach (gcvv::ViewCollectionItemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7778,7 +7777,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7852,14 +7851,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcvv::ViewCollectionItemsResponse, gcvv::CollectionItem> response = warehouseClient.ViewCollectionItemsAsync(collection);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcvv::CollectionItem item) =>
+            await foreach (gcvv::CollectionItem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcvv::ViewCollectionItemsResponse page) =>
+            await foreach (gcvv::ViewCollectionItemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7868,7 +7867,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

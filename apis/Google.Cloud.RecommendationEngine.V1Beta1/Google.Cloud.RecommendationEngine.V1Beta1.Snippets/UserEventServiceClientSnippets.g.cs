@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.RecommendationEngine.V1Beta1;
     using Google.LongRunning;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -290,14 +289,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> response = userEventServiceClient.ListUserEventsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserEvent item) =>
+            await foreach (UserEvent item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserEventsResponse page) =>
+            await foreach (ListUserEventsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -306,7 +305,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -382,14 +381,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> response = userEventServiceClient.ListUserEventsAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserEvent item) =>
+            await foreach (UserEvent item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserEventsResponse page) =>
+            await foreach (ListUserEventsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -398,7 +397,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -474,14 +473,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> response = userEventServiceClient.ListUserEventsAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserEvent item) =>
+            await foreach (UserEvent item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserEventsResponse page) =>
+            await foreach (ListUserEventsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -490,7 +489,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

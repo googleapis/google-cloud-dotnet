@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Grafeas.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -181,14 +180,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrencesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOccurrencesResponse page) =>
+            await foreach (ListOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -197,7 +196,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -273,14 +272,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrencesAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOccurrencesResponse page) =>
+            await foreach (ListOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -289,7 +288,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -365,14 +364,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrencesAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOccurrencesResponse page) =>
+            await foreach (ListOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -381,7 +380,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1011,14 +1010,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Note item) =>
+            await foreach (Note item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNotesResponse page) =>
+            await foreach (ListNotesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1027,7 +1026,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1103,14 +1102,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotesAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Note item) =>
+            await foreach (Note item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNotesResponse page) =>
+            await foreach (ListNotesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1119,7 +1118,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1195,14 +1194,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotesAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Note item) =>
+            await foreach (Note item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNotesResponse page) =>
+            await foreach (ListNotesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1211,7 +1210,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1671,14 +1670,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> response = grafeasClient.ListNoteOccurrencesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNoteOccurrencesResponse page) =>
+            await foreach (ListNoteOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1687,7 +1686,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1763,14 +1762,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> response = grafeasClient.ListNoteOccurrencesAsync(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNoteOccurrencesResponse page) =>
+            await foreach (ListNoteOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1779,7 +1778,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1855,14 +1854,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> response = grafeasClient.ListNoteOccurrencesAsync(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Occurrence item) =>
+            await foreach (Occurrence item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNoteOccurrencesResponse page) =>
+            await foreach (ListNoteOccurrencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1871,7 +1870,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Dlp.V2;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -714,14 +713,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -730,7 +729,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -804,14 +803,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -820,7 +819,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -894,14 +893,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -910,7 +909,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -984,14 +983,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1000,7 +999,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1074,14 +1073,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1090,7 +1089,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1164,14 +1163,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> response = dlpServiceClient.ListInspectTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InspectTemplate item) =>
+            await foreach (InspectTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInspectTemplatesResponse page) =>
+            await foreach (ListInspectTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1180,7 +1179,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1721,14 +1720,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1737,7 +1736,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1811,14 +1810,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1827,7 +1826,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1901,14 +1900,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1917,7 +1916,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1991,14 +1990,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2007,7 +2006,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2081,14 +2080,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2097,7 +2096,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2171,14 +2170,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> response = dlpServiceClient.ListDeidentifyTemplatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DeidentifyTemplate item) =>
+            await foreach (DeidentifyTemplate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDeidentifyTemplatesResponse page) =>
+            await foreach (ListDeidentifyTemplatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2187,7 +2186,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2763,14 +2762,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((JobTrigger item) =>
+            await foreach (JobTrigger item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            await foreach (ListJobTriggersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2779,7 +2778,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2853,14 +2852,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((JobTrigger item) =>
+            await foreach (JobTrigger item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            await foreach (ListJobTriggersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2869,7 +2868,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2943,14 +2942,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((JobTrigger item) =>
+            await foreach (JobTrigger item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            await foreach (ListJobTriggersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2959,7 +2958,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3033,14 +3032,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((JobTrigger item) =>
+            await foreach (JobTrigger item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            await foreach (ListJobTriggersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3049,7 +3048,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3532,14 +3531,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DiscoveryConfig item) =>
+            await foreach (DiscoveryConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            await foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3548,7 +3547,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3622,14 +3621,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DiscoveryConfig item) =>
+            await foreach (DiscoveryConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            await foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3638,7 +3637,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3712,14 +3711,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DiscoveryConfig item) =>
+            await foreach (DiscoveryConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            await foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3728,7 +3727,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4116,14 +4115,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DlpJob item) =>
+            await foreach (DlpJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDlpJobsResponse page) =>
+            await foreach (ListDlpJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4132,7 +4131,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4206,14 +4205,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DlpJob item) =>
+            await foreach (DlpJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDlpJobsResponse page) =>
+            await foreach (ListDlpJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4222,7 +4221,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4296,14 +4295,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DlpJob item) =>
+            await foreach (DlpJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDlpJobsResponse page) =>
+            await foreach (ListDlpJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4312,7 +4311,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4386,14 +4385,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DlpJob item) =>
+            await foreach (DlpJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDlpJobsResponse page) =>
+            await foreach (ListDlpJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4402,7 +4401,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5063,14 +5062,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5079,7 +5078,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5153,14 +5152,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5169,7 +5168,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5243,14 +5242,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5259,7 +5258,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5333,14 +5332,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5349,7 +5348,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5423,14 +5422,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5439,7 +5438,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5513,14 +5512,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response = dlpServiceClient.ListStoredInfoTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoredInfoType item) =>
+            await foreach (StoredInfoType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            await foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5529,7 +5528,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5700,14 +5699,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProjectDataProfile item) =>
+            await foreach (ProjectDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            await foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5716,7 +5715,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5790,14 +5789,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProjectDataProfile item) =>
+            await foreach (ProjectDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            await foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5806,7 +5805,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5880,14 +5879,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProjectDataProfile item) =>
+            await foreach (ProjectDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            await foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5896,7 +5895,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5970,14 +5969,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProjectDataProfile item) =>
+            await foreach (ProjectDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            await foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5986,7 +5985,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6070,14 +6069,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TableDataProfile item) =>
+            await foreach (TableDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            await foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6086,7 +6085,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6160,14 +6159,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TableDataProfile item) =>
+            await foreach (TableDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            await foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6176,7 +6175,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6250,14 +6249,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TableDataProfile item) =>
+            await foreach (TableDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            await foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6266,7 +6265,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6340,14 +6339,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TableDataProfile item) =>
+            await foreach (TableDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            await foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6356,7 +6355,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6440,14 +6439,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ColumnDataProfile item) =>
+            await foreach (ColumnDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            await foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6456,7 +6455,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6530,14 +6529,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ColumnDataProfile item) =>
+            await foreach (ColumnDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            await foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6546,7 +6545,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6620,14 +6619,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ColumnDataProfile item) =>
+            await foreach (ColumnDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            await foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6636,7 +6635,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6710,14 +6709,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ColumnDataProfile item) =>
+            await foreach (ColumnDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            await foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6726,7 +6725,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6897,14 +6896,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FileStoreDataProfile item) =>
+            await foreach (FileStoreDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            await foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6913,7 +6912,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6987,14 +6986,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FileStoreDataProfile item) =>
+            await foreach (FileStoreDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            await foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7003,7 +7002,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7077,14 +7076,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FileStoreDataProfile item) =>
+            await foreach (FileStoreDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            await foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7093,7 +7092,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7167,14 +7166,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFileStoreDataProfilesResponse, FileStoreDataProfile> response = dlpServiceClient.ListFileStoreDataProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FileStoreDataProfile item) =>
+            await foreach (FileStoreDataProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFileStoreDataProfilesResponse page) =>
+            await foreach (ListFileStoreDataProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7183,7 +7182,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8031,14 +8030,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8047,7 +8046,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8121,14 +8120,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8137,7 +8136,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8211,14 +8210,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8227,7 +8226,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8301,14 +8300,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8317,7 +8316,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8399,14 +8398,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchConnectionsResponse page) =>
+            await foreach (SearchConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8415,7 +8414,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8489,14 +8488,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchConnectionsResponse page) =>
+            await foreach (SearchConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8505,7 +8504,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8579,14 +8578,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchConnectionsResponse page) =>
+            await foreach (SearchConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8595,7 +8594,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8669,14 +8668,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchConnectionsResponse page) =>
+            await foreach (SearchConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8685,7 +8684,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

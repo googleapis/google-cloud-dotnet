@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcfv = Google.Cloud.Functions.V2Beta;
 
@@ -186,14 +185,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfv::Function item) =>
+            await foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
+            await foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -202,7 +201,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -276,14 +275,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfv::Function item) =>
+            await foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
+            await foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -292,7 +291,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -366,14 +365,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfv::Function item) =>
+            await foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
+            await foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -382,7 +381,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

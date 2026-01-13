@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -501,14 +500,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentsResponse page) =>
+            await foreach (ListOSPolicyAssignmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -517,7 +516,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -591,14 +590,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentsResponse page) =>
+            await foreach (ListOSPolicyAssignmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -607,7 +606,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -681,14 +680,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentsResponse page) =>
+            await foreach (ListOSPolicyAssignmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -697,7 +696,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -777,14 +776,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentRevisionsResponse page) =>
+            await foreach (ListOSPolicyAssignmentRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -793,7 +792,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -867,14 +866,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentRevisionsResponse page) =>
+            await foreach (ListOSPolicyAssignmentRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -883,7 +882,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -957,14 +956,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> response = osConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignment item) =>
+            await foreach (OSPolicyAssignment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentRevisionsResponse page) =>
+            await foreach (ListOSPolicyAssignmentRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -973,7 +972,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1325,14 +1324,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            await foreach (OSPolicyAssignmentReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            await foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1341,7 +1340,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1415,14 +1414,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            await foreach (OSPolicyAssignmentReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            await foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1431,7 +1430,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1505,14 +1504,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> response = osConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OSPolicyAssignmentReport item) =>
+            await foreach (OSPolicyAssignmentReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOSPolicyAssignmentReportsResponse page) =>
+            await foreach (ListOSPolicyAssignmentReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1521,7 +1520,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1694,14 +1693,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInventoriesResponse, Inventory> response = osConfigZonalServiceClient.ListInventoriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Inventory item) =>
+            await foreach (Inventory item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInventoriesResponse page) =>
+            await foreach (ListInventoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1710,7 +1709,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1784,14 +1783,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInventoriesResponse, Inventory> response = osConfigZonalServiceClient.ListInventoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Inventory item) =>
+            await foreach (Inventory item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInventoriesResponse page) =>
+            await foreach (ListInventoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1800,7 +1799,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1874,14 +1873,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInventoriesResponse, Inventory> response = osConfigZonalServiceClient.ListInventoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Inventory item) =>
+            await foreach (Inventory item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInventoriesResponse page) =>
+            await foreach (ListInventoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1890,7 +1889,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2059,14 +2058,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> response = osConfigZonalServiceClient.ListVulnerabilityReportsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VulnerabilityReport item) =>
+            await foreach (VulnerabilityReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVulnerabilityReportsResponse page) =>
+            await foreach (ListVulnerabilityReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2075,7 +2074,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2149,14 +2148,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> response = osConfigZonalServiceClient.ListVulnerabilityReportsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VulnerabilityReport item) =>
+            await foreach (VulnerabilityReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVulnerabilityReportsResponse page) =>
+            await foreach (ListVulnerabilityReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2165,7 +2164,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2239,14 +2238,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> response = osConfigZonalServiceClient.ListVulnerabilityReportsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VulnerabilityReport item) =>
+            await foreach (VulnerabilityReport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVulnerabilityReportsResponse page) =>
+            await foreach (ListVulnerabilityReportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2255,7 +2254,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

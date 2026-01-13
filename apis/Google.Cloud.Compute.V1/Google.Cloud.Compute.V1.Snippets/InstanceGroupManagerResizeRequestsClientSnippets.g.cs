@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Compute.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -587,14 +586,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> response = instanceGroupManagerResizeRequestsClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceGroupManagerResizeRequest item) =>
+            await foreach (InstanceGroupManagerResizeRequest item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerResizeRequestsListResponse page) =>
+            await foreach (InstanceGroupManagerResizeRequestsListResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -603,7 +602,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -681,14 +680,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> response = instanceGroupManagerResizeRequestsClient.ListAsync(project, zone, instanceGroupManager);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceGroupManagerResizeRequest item) =>
+            await foreach (InstanceGroupManagerResizeRequest item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerResizeRequestsListResponse page) =>
+            await foreach (InstanceGroupManagerResizeRequestsListResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -697,7 +696,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -24,7 +24,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using gctv = Google.Cloud.Tasks.V2;
 
@@ -96,14 +95,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Queue item) =>
+            await foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
+            await foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -112,7 +111,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -186,14 +185,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Queue item) =>
+            await foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
+            await foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -202,7 +201,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -276,14 +275,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Queue item) =>
+            await foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
+            await foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -292,7 +291,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1243,14 +1242,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Task item) =>
+            await foreach (gctv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
+            await foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1259,7 +1258,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1333,14 +1332,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Task item) =>
+            await foreach (gctv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
+            await foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1349,7 +1348,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1423,14 +1422,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gctv::Task item) =>
+            await foreach (gctv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
+            await foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1439,7 +1438,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

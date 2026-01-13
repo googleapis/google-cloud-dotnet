@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.VMMigration.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedVmMigrationClientSnippets
@@ -44,14 +43,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImportsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ImageImport item) =>
+            await foreach (ImageImport item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListImageImportsResponse page) =>
+            await foreach (ListImageImportsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -60,7 +59,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

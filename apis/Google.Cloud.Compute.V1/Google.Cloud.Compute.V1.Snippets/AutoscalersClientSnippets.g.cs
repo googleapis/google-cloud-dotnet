@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -102,14 +101,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<AutoscalerAggregatedList, KeyValuePair<string, AutoscalersScopedList>> response = autoscalersClient.AggregatedListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, AutoscalersScopedList> item) =>
+            await foreach (KeyValuePair<string, AutoscalersScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((AutoscalerAggregatedList page) =>
+            await foreach (AutoscalerAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -118,7 +117,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -192,14 +191,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<AutoscalerAggregatedList, KeyValuePair<string, AutoscalersScopedList>> response = autoscalersClient.AggregatedListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, AutoscalersScopedList> item) =>
+            await foreach (KeyValuePair<string, AutoscalersScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((AutoscalerAggregatedList page) =>
+            await foreach (AutoscalerAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -208,7 +207,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -632,14 +631,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<AutoscalerList, Autoscaler> response = autoscalersClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Autoscaler item) =>
+            await foreach (Autoscaler item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((AutoscalerList page) =>
+            await foreach (AutoscalerList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -648,7 +647,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -724,14 +723,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<AutoscalerList, Autoscaler> response = autoscalersClient.ListAsync(project, zone);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Autoscaler item) =>
+            await foreach (Autoscaler item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((AutoscalerList page) =>
+            await foreach (AutoscalerList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -740,7 +739,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

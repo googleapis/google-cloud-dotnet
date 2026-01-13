@@ -20,7 +20,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.WebSecurityScanner.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -172,14 +171,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListScanConfigsResponse, ScanConfig> response = webSecurityScannerClient.ListScanConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ScanConfig item) =>
+            await foreach (ScanConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListScanConfigsResponse page) =>
+            await foreach (ListScanConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -188,7 +187,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -351,14 +350,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListScanRunsResponse, ScanRun> response = webSecurityScannerClient.ListScanRunsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ScanRun item) =>
+            await foreach (ScanRun item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListScanRunsResponse page) =>
+            await foreach (ListScanRunsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -367,7 +366,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -468,14 +467,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCrawledUrlsResponse, CrawledUrl> response = webSecurityScannerClient.ListCrawledUrlsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CrawledUrl item) =>
+            await foreach (CrawledUrl item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCrawledUrlsResponse page) =>
+            await foreach (ListCrawledUrlsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -484,7 +483,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -593,14 +592,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFindingsResponse, Finding> response = webSecurityScannerClient.ListFindingsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Finding item) =>
+            await foreach (Finding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFindingsResponse page) =>
+            await foreach (ListFindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -609,7 +608,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

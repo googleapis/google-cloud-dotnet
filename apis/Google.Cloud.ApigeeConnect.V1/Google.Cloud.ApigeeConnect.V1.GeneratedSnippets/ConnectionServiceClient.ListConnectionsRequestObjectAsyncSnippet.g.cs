@@ -20,7 +20,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.ApigeeConnect.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedConnectionServiceClientSnippets
@@ -46,14 +45,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = connectionServiceClient.ListConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -62,7 +61,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

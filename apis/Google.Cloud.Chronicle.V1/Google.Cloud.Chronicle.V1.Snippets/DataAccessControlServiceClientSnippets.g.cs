@@ -20,7 +20,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Chronicle.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -277,14 +276,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessLabelsResponse, DataAccessLabel> response = dataAccessControlServiceClient.ListDataAccessLabelsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessLabel item) =>
+            await foreach (DataAccessLabel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessLabelsResponse page) =>
+            await foreach (ListDataAccessLabelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -293,7 +292,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -367,14 +366,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessLabelsResponse, DataAccessLabel> response = dataAccessControlServiceClient.ListDataAccessLabelsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessLabel item) =>
+            await foreach (DataAccessLabel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessLabelsResponse page) =>
+            await foreach (ListDataAccessLabelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -383,7 +382,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -457,14 +456,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessLabelsResponse, DataAccessLabel> response = dataAccessControlServiceClient.ListDataAccessLabelsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessLabel item) =>
+            await foreach (DataAccessLabel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessLabelsResponse page) =>
+            await foreach (ListDataAccessLabelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -473,7 +472,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -892,14 +891,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessScopesResponse, DataAccessScope> response = dataAccessControlServiceClient.ListDataAccessScopesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessScope item) =>
+            await foreach (DataAccessScope item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessScopesResponse page) =>
+            await foreach (ListDataAccessScopesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -908,7 +907,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -982,14 +981,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessScopesResponse, DataAccessScope> response = dataAccessControlServiceClient.ListDataAccessScopesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessScope item) =>
+            await foreach (DataAccessScope item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessScopesResponse page) =>
+            await foreach (ListDataAccessScopesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -998,7 +997,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1072,14 +1071,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataAccessScopesResponse, DataAccessScope> response = dataAccessControlServiceClient.ListDataAccessScopesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataAccessScope item) =>
+            await foreach (DataAccessScope item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataAccessScopesResponse page) =>
+            await foreach (ListDataAccessScopesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1088,7 +1087,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcav = Google.Cloud.ApiHub.V1;
 
@@ -280,14 +279,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = apiHubClient.ListApisAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Api item) =>
+            await foreach (gcav::Api item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
+            await foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -296,7 +295,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -370,14 +369,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = apiHubClient.ListApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Api item) =>
+            await foreach (gcav::Api item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
+            await foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -386,7 +385,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -460,14 +459,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = apiHubClient.ListApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Api item) =>
+            await foreach (gcav::Api item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
+            await foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -476,7 +475,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -897,14 +896,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = apiHubClient.ListVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Version item) =>
+            await foreach (gcav::Version item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
+            await foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -913,7 +912,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -987,14 +986,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = apiHubClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Version item) =>
+            await foreach (gcav::Version item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
+            await foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1003,7 +1002,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1077,14 +1076,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = apiHubClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Version item) =>
+            await foreach (gcav::Version item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
+            await foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1093,7 +1092,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1601,14 +1600,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListSpecsResponse, gcav::Spec> response = apiHubClient.ListSpecsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Spec item) =>
+            await foreach (gcav::Spec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListSpecsResponse page) =>
+            await foreach (gcav::ListSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1617,7 +1616,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1691,14 +1690,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListSpecsResponse, gcav::Spec> response = apiHubClient.ListSpecsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Spec item) =>
+            await foreach (gcav::Spec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListSpecsResponse page) =>
+            await foreach (gcav::ListSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1707,7 +1706,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1781,14 +1780,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListSpecsResponse, gcav::Spec> response = apiHubClient.ListSpecsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Spec item) =>
+            await foreach (gcav::Spec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListSpecsResponse page) =>
+            await foreach (gcav::ListSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1797,7 +1796,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2216,14 +2215,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApiOperationsResponse, gcav::ApiOperation> response = apiHubClient.ListApiOperationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ApiOperation item) =>
+            await foreach (gcav::ApiOperation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApiOperationsResponse page) =>
+            await foreach (gcav::ListApiOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2232,7 +2231,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2306,14 +2305,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApiOperationsResponse, gcav::ApiOperation> response = apiHubClient.ListApiOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ApiOperation item) =>
+            await foreach (gcav::ApiOperation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApiOperationsResponse page) =>
+            await foreach (gcav::ListApiOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2322,7 +2321,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2396,14 +2395,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListApiOperationsResponse, gcav::ApiOperation> response = apiHubClient.ListApiOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ApiOperation item) =>
+            await foreach (gcav::ApiOperation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListApiOperationsResponse page) =>
+            await foreach (gcav::ListApiOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2412,7 +2411,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2918,14 +2917,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListDeploymentsResponse, gcav::Deployment> response = apiHubClient.ListDeploymentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Deployment item) =>
+            await foreach (gcav::Deployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListDeploymentsResponse page) =>
+            await foreach (gcav::ListDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2934,7 +2933,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3008,14 +3007,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListDeploymentsResponse, gcav::Deployment> response = apiHubClient.ListDeploymentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Deployment item) =>
+            await foreach (gcav::Deployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListDeploymentsResponse page) =>
+            await foreach (gcav::ListDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3024,7 +3023,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3098,14 +3097,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListDeploymentsResponse, gcav::Deployment> response = apiHubClient.ListDeploymentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Deployment item) =>
+            await foreach (gcav::Deployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListDeploymentsResponse page) =>
+            await foreach (gcav::ListDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3114,7 +3113,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3684,14 +3683,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListAttributesResponse, gcav::Attribute> response = apiHubClient.ListAttributesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Attribute item) =>
+            await foreach (gcav::Attribute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListAttributesResponse page) =>
+            await foreach (gcav::ListAttributesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3700,7 +3699,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3774,14 +3773,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListAttributesResponse, gcav::Attribute> response = apiHubClient.ListAttributesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Attribute item) =>
+            await foreach (gcav::Attribute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListAttributesResponse page) =>
+            await foreach (gcav::ListAttributesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3790,7 +3789,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3864,14 +3863,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListAttributesResponse, gcav::Attribute> response = apiHubClient.ListAttributesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::Attribute item) =>
+            await foreach (gcav::Attribute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListAttributesResponse page) =>
+            await foreach (gcav::ListAttributesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3880,7 +3879,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3964,14 +3963,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::SearchResourcesResponse, gcav::SearchResult> response = apiHubClient.SearchResourcesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::SearchResult item) =>
+            await foreach (gcav::SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::SearchResourcesResponse page) =>
+            await foreach (gcav::SearchResourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3980,7 +3979,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4056,14 +4055,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::SearchResourcesResponse, gcav::SearchResult> response = apiHubClient.SearchResourcesAsync(location, query);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::SearchResult item) =>
+            await foreach (gcav::SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::SearchResourcesResponse page) =>
+            await foreach (gcav::SearchResourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4072,7 +4071,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4148,14 +4147,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::SearchResourcesResponse, gcav::SearchResult> response = apiHubClient.SearchResourcesAsync(location, query);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::SearchResult item) =>
+            await foreach (gcav::SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::SearchResourcesResponse page) =>
+            await foreach (gcav::SearchResourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4164,7 +4163,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4581,14 +4580,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListExternalApisResponse, gcav::ExternalApi> response = apiHubClient.ListExternalApisAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ExternalApi item) =>
+            await foreach (gcav::ExternalApi item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListExternalApisResponse page) =>
+            await foreach (gcav::ListExternalApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4597,7 +4596,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4671,14 +4670,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListExternalApisResponse, gcav::ExternalApi> response = apiHubClient.ListExternalApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ExternalApi item) =>
+            await foreach (gcav::ExternalApi item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListExternalApisResponse page) =>
+            await foreach (gcav::ListExternalApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4687,7 +4686,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4761,14 +4760,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcav::ListExternalApisResponse, gcav::ExternalApi> response = apiHubClient.ListExternalApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcav::ExternalApi item) =>
+            await foreach (gcav::ExternalApi item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcav::ListExternalApisResponse page) =>
+            await foreach (gcav::ListExternalApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4777,7 +4776,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

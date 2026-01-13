@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -378,14 +377,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureGroupsResponse, FeatureGroup> response = featureRegistryServiceClient.ListFeatureGroupsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureGroup item) =>
+            await foreach (FeatureGroup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureGroupsResponse page) =>
+            await foreach (ListFeatureGroupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -394,7 +393,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -468,14 +467,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureGroupsResponse, FeatureGroup> response = featureRegistryServiceClient.ListFeatureGroupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureGroup item) =>
+            await foreach (FeatureGroup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureGroupsResponse page) =>
+            await foreach (ListFeatureGroupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -484,7 +483,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -558,14 +557,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureGroupsResponse, FeatureGroup> response = featureRegistryServiceClient.ListFeatureGroupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureGroup item) =>
+            await foreach (FeatureGroup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureGroupsResponse page) =>
+            await foreach (ListFeatureGroupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -574,7 +573,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1600,14 +1599,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featureRegistryServiceClient.ListFeaturesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Feature item) =>
+            await foreach (Feature item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            await foreach (ListFeaturesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1616,7 +1615,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1690,14 +1689,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featureRegistryServiceClient.ListFeaturesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Feature item) =>
+            await foreach (Feature item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            await foreach (ListFeaturesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1706,7 +1705,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1780,14 +1779,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featureRegistryServiceClient.ListFeaturesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Feature item) =>
+            await foreach (Feature item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            await foreach (ListFeaturesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1796,7 +1795,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1870,14 +1869,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featureRegistryServiceClient.ListFeaturesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Feature item) =>
+            await foreach (Feature item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            await foreach (ListFeaturesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1886,7 +1885,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2563,14 +2562,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitor item) =>
+            await foreach (FeatureMonitor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            await foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2579,7 +2578,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2653,14 +2652,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitor item) =>
+            await foreach (FeatureMonitor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            await foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2669,7 +2668,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2743,14 +2742,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitor item) =>
+            await foreach (FeatureMonitor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            await foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2759,7 +2758,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3340,14 +3339,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitorJob item) =>
+            await foreach (FeatureMonitorJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            await foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3356,7 +3355,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3430,14 +3429,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitorJob item) =>
+            await foreach (FeatureMonitorJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            await foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3446,7 +3445,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3520,14 +3519,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((FeatureMonitorJob item) =>
+            await foreach (FeatureMonitorJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            await foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3536,7 +3535,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

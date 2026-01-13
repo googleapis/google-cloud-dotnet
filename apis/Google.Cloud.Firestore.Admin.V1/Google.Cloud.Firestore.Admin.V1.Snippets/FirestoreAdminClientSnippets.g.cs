@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcfav = Google.Cloud.Firestore.Admin.V1;
 
@@ -284,14 +283,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Index item) =>
+            await foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListIndexesResponse page) =>
+            await foreach (gcfav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -300,7 +299,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -374,14 +373,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Index item) =>
+            await foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListIndexesResponse page) =>
+            await foreach (gcfav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -390,7 +389,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -464,14 +463,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Index item) =>
+            await foreach (gcfav::Index item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListIndexesResponse page) =>
+            await foreach (gcfav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -480,7 +479,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -949,14 +948,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Field item) =>
+            await foreach (gcfav::Field item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListFieldsResponse page) =>
+            await foreach (gcfav::ListFieldsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -965,7 +964,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1039,14 +1038,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Field item) =>
+            await foreach (gcfav::Field item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListFieldsResponse page) =>
+            await foreach (gcfav::ListFieldsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1055,7 +1054,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1129,14 +1128,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcfav::ListFieldsResponse, gcfav::Field> response = firestoreAdminClient.ListFieldsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcfav::Field item) =>
+            await foreach (gcfav::Field item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcfav::ListFieldsResponse page) =>
+            await foreach (gcfav::ListFieldsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1145,7 +1144,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

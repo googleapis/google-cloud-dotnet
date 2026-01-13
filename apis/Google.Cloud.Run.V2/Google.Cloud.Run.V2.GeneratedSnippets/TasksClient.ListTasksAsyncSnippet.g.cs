@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     // [START run_v2_generated_Tasks_ListTasks_async_flattened]
     using Google.Api.Gax;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcrv = Google.Cloud.Run.V2;
 
@@ -45,14 +44,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcrv::Task item) =>
+            await foreach (gcrv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcrv::ListTasksResponse page) =>
+            await foreach (gcrv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -61,7 +60,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

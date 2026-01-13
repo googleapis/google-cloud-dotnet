@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> response = vmwareEngineClient.ListPrivateCloudsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateCloud item) =>
+            await foreach (PrivateCloud item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateCloudsResponse page) =>
+            await foreach (ListPrivateCloudsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> response = vmwareEngineClient.ListPrivateCloudsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateCloud item) =>
+            await foreach (PrivateCloud item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateCloudsResponse page) =>
+            await foreach (ListPrivateCloudsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> response = vmwareEngineClient.ListPrivateCloudsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateCloud item) =>
+            await foreach (PrivateCloud item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateCloudsResponse page) =>
+            await foreach (ListPrivateCloudsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1165,14 +1164,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListClustersResponse, Cluster> response = vmwareEngineClient.ListClustersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Cluster item) =>
+            await foreach (Cluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListClustersResponse page) =>
+            await foreach (ListClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1181,7 +1180,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1255,14 +1254,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListClustersResponse, Cluster> response = vmwareEngineClient.ListClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Cluster item) =>
+            await foreach (Cluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListClustersResponse page) =>
+            await foreach (ListClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1271,7 +1270,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1345,14 +1344,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListClustersResponse, Cluster> response = vmwareEngineClient.ListClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Cluster item) =>
+            await foreach (Cluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListClustersResponse page) =>
+            await foreach (ListClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1361,7 +1360,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2044,14 +2043,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Node item) =>
+            await foreach (Node item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            await foreach (ListNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2060,7 +2059,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2134,14 +2133,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Node item) =>
+            await foreach (Node item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            await foreach (ListNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2150,7 +2149,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2224,14 +2223,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Node item) =>
+            await foreach (Node item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            await foreach (ListNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2240,7 +2239,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2411,14 +2410,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            await foreach (ListExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2427,7 +2426,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2501,14 +2500,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            await foreach (ListExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2517,7 +2516,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2591,14 +2590,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            await foreach (ListExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2607,7 +2606,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2687,14 +2686,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            await foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2703,7 +2702,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2777,14 +2776,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(networkPolicy);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            await foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2793,7 +2792,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2867,14 +2866,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(networkPolicy);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAddress item) =>
+            await foreach (ExternalAddress item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            await foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2883,7 +2882,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3562,14 +3561,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSubnetsResponse, Subnet> response = vmwareEngineClient.ListSubnetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Subnet item) =>
+            await foreach (Subnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSubnetsResponse page) =>
+            await foreach (ListSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3578,7 +3577,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3652,14 +3651,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSubnetsResponse, Subnet> response = vmwareEngineClient.ListSubnetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Subnet item) =>
+            await foreach (Subnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSubnetsResponse page) =>
+            await foreach (ListSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3668,7 +3667,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3742,14 +3741,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSubnetsResponse, Subnet> response = vmwareEngineClient.ListSubnetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Subnet item) =>
+            await foreach (Subnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSubnetsResponse page) =>
+            await foreach (ListSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3758,7 +3757,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4057,14 +4056,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAccessRule item) =>
+            await foreach (ExternalAccessRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            await foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4073,7 +4072,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4147,14 +4146,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAccessRule item) =>
+            await foreach (ExternalAccessRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            await foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4163,7 +4162,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4237,14 +4236,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExternalAccessRule item) =>
+            await foreach (ExternalAccessRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            await foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4253,7 +4252,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4936,14 +4935,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LoggingServer item) =>
+            await foreach (LoggingServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            await foreach (ListLoggingServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4952,7 +4951,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5026,14 +5025,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LoggingServer item) =>
+            await foreach (LoggingServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            await foreach (ListLoggingServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5042,7 +5041,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5116,14 +5115,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LoggingServer item) =>
+            await foreach (LoggingServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            await foreach (ListLoggingServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5132,7 +5131,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5813,14 +5812,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> response = vmwareEngineClient.ListNodeTypesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NodeType item) =>
+            await foreach (NodeType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodeTypesResponse page) =>
+            await foreach (ListNodeTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5829,7 +5828,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5903,14 +5902,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> response = vmwareEngineClient.ListNodeTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NodeType item) =>
+            await foreach (NodeType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodeTypesResponse page) =>
+            await foreach (ListNodeTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5919,7 +5918,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5993,14 +5992,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> response = vmwareEngineClient.ListNodeTypesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NodeType item) =>
+            await foreach (NodeType item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNodeTypesResponse page) =>
+            await foreach (ListNodeTypesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6009,7 +6008,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7032,14 +7031,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPeering item) =>
+            await foreach (NetworkPeering item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            await foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7048,7 +7047,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7122,14 +7121,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPeering item) =>
+            await foreach (NetworkPeering item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            await foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7138,7 +7137,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7212,14 +7211,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPeering item) =>
+            await foreach (NetworkPeering item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            await foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7228,7 +7227,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7822,14 +7821,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            await foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7838,7 +7837,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7912,14 +7911,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            await foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7928,7 +7927,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8002,14 +8001,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            await foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8018,7 +8017,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8295,14 +8294,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> response = vmwareEngineClient.ListHcxActivationKeysAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((HcxActivationKey item) =>
+            await foreach (HcxActivationKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListHcxActivationKeysResponse page) =>
+            await foreach (ListHcxActivationKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8311,7 +8310,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8385,14 +8384,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> response = vmwareEngineClient.ListHcxActivationKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((HcxActivationKey item) =>
+            await foreach (HcxActivationKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListHcxActivationKeysResponse page) =>
+            await foreach (ListHcxActivationKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8401,7 +8400,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8475,14 +8474,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> response = vmwareEngineClient.ListHcxActivationKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((HcxActivationKey item) =>
+            await foreach (HcxActivationKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListHcxActivationKeysResponse page) =>
+            await foreach (ListHcxActivationKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8491,7 +8490,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8749,14 +8748,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> response = vmwareEngineClient.ListNetworkPoliciesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPolicy item) =>
+            await foreach (NetworkPolicy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPoliciesResponse page) =>
+            await foreach (ListNetworkPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8765,7 +8764,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8839,14 +8838,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> response = vmwareEngineClient.ListNetworkPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPolicy item) =>
+            await foreach (NetworkPolicy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPoliciesResponse page) =>
+            await foreach (ListNetworkPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8855,7 +8854,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8929,14 +8928,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> response = vmwareEngineClient.ListNetworkPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NetworkPolicy item) =>
+            await foreach (NetworkPolicy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNetworkPoliciesResponse page) =>
+            await foreach (ListNetworkPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8945,7 +8944,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9541,14 +9540,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            await foreach (ManagementDnsZoneBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            await foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9557,7 +9556,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9631,14 +9630,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            await foreach (ManagementDnsZoneBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            await foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9647,7 +9646,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9721,14 +9720,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            await foreach (ManagementDnsZoneBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            await foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9737,7 +9736,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11206,14 +11205,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> response = vmwareEngineClient.ListVmwareEngineNetworksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VmwareEngineNetwork item) =>
+            await foreach (VmwareEngineNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVmwareEngineNetworksResponse page) =>
+            await foreach (ListVmwareEngineNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11222,7 +11221,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11296,14 +11295,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> response = vmwareEngineClient.ListVmwareEngineNetworksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VmwareEngineNetwork item) =>
+            await foreach (VmwareEngineNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVmwareEngineNetworksResponse page) =>
+            await foreach (ListVmwareEngineNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11312,7 +11311,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11386,14 +11385,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> response = vmwareEngineClient.ListVmwareEngineNetworksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VmwareEngineNetwork item) =>
+            await foreach (VmwareEngineNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVmwareEngineNetworksResponse page) =>
+            await foreach (ListVmwareEngineNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11402,7 +11401,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11770,14 +11769,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11786,7 +11785,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11860,14 +11859,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11876,7 +11875,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11950,14 +11949,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11966,7 +11965,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -12361,14 +12360,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            await foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -12377,7 +12376,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -12451,14 +12450,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            await foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -12467,7 +12466,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -12541,14 +12540,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PeeringRoute item) =>
+            await foreach (PeeringRoute item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            await foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -12557,7 +12556,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

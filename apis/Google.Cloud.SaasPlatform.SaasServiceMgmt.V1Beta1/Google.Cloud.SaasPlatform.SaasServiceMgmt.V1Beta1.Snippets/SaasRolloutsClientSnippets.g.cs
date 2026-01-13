@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -94,14 +93,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutsResponse, Rollout> response = saasRolloutsClient.ListRolloutsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Rollout item) =>
+            await foreach (Rollout item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutsResponse page) =>
+            await foreach (ListRolloutsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -110,7 +109,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -184,14 +183,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutsResponse, Rollout> response = saasRolloutsClient.ListRolloutsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Rollout item) =>
+            await foreach (Rollout item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutsResponse page) =>
+            await foreach (ListRolloutsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -200,7 +199,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -274,14 +273,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutsResponse, Rollout> response = saasRolloutsClient.ListRolloutsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Rollout item) =>
+            await foreach (Rollout item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutsResponse page) =>
+            await foreach (ListRolloutsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -290,7 +289,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -725,14 +724,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutKindsResponse, RolloutKind> response = saasRolloutsClient.ListRolloutKindsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((RolloutKind item) =>
+            await foreach (RolloutKind item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutKindsResponse page) =>
+            await foreach (ListRolloutKindsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -741,7 +740,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -815,14 +814,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutKindsResponse, RolloutKind> response = saasRolloutsClient.ListRolloutKindsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((RolloutKind item) =>
+            await foreach (RolloutKind item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutKindsResponse page) =>
+            await foreach (ListRolloutKindsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -831,7 +830,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -905,14 +904,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRolloutKindsResponse, RolloutKind> response = saasRolloutsClient.ListRolloutKindsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((RolloutKind item) =>
+            await foreach (RolloutKind item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRolloutKindsResponse page) =>
+            await foreach (ListRolloutKindsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -921,7 +920,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

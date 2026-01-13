@@ -20,7 +20,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Maintenance.Api.V1Beta;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -93,14 +92,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SummarizeMaintenancesResponse, MaintenanceSummary> response = maintenanceClient.SummarizeMaintenancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MaintenanceSummary item) =>
+            await foreach (MaintenanceSummary item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SummarizeMaintenancesResponse page) =>
+            await foreach (SummarizeMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -109,7 +108,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -183,14 +182,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SummarizeMaintenancesResponse, MaintenanceSummary> response = maintenanceClient.SummarizeMaintenancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MaintenanceSummary item) =>
+            await foreach (MaintenanceSummary item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SummarizeMaintenancesResponse page) =>
+            await foreach (SummarizeMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -199,7 +198,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -273,14 +272,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SummarizeMaintenancesResponse, MaintenanceSummary> response = maintenanceClient.SummarizeMaintenancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MaintenanceSummary item) =>
+            await foreach (MaintenanceSummary item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SummarizeMaintenancesResponse page) =>
+            await foreach (SummarizeMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -289,7 +288,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -373,14 +372,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListResourceMaintenancesResponse, ResourceMaintenance> response = maintenanceClient.ListResourceMaintenancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ResourceMaintenance item) =>
+            await foreach (ResourceMaintenance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListResourceMaintenancesResponse page) =>
+            await foreach (ListResourceMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -389,7 +388,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -463,14 +462,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListResourceMaintenancesResponse, ResourceMaintenance> response = maintenanceClient.ListResourceMaintenancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ResourceMaintenance item) =>
+            await foreach (ResourceMaintenance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListResourceMaintenancesResponse page) =>
+            await foreach (ListResourceMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -479,7 +478,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -553,14 +552,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListResourceMaintenancesResponse, ResourceMaintenance> response = maintenanceClient.ListResourceMaintenancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ResourceMaintenance item) =>
+            await foreach (ResourceMaintenance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListResourceMaintenancesResponse page) =>
+            await foreach (ListResourceMaintenancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -569,7 +568,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

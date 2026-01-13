@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     // [START dialogflow_v3_generated_Versions_ListVersions_async_flattened_resourceNames]
     using Google.Api.Gax;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcdcv = Google.Cloud.Dialogflow.Cx.V3;
 
@@ -45,14 +44,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdcv::ListVersionsResponse, gcdcv::Version> response = versionsClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdcv::Version item) =>
+            await foreach (gcdcv::Version item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdcv::ListVersionsResponse page) =>
+            await foreach (gcdcv::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -61,7 +60,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
