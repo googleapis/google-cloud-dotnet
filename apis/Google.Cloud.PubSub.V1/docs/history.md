@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.31.0, released 2026-01-13
+
+### New features
+
+- Add AIInference MessageTransform type
+
+### Documentation improvements
+
+- A comment for field `topic` in message `.google.pubsub.v1.Subscription` is updated
+- A comment for field `analytics_hub_subscription_info` in message `.google.pubsub.v1.Subscription` is updated
+- A comment for field `subscription` in message `.google.pubsub.v1.CreateSnapshotRequest` is updated
+- Add tags documentation links to Pub/Sub resource tags fields
+- Add the IDENTIFIER field behavior annotation to fields of Cloud Pub/Sub methods that represent a specific identity and need to be sourced with additional care
+
 ## Version 3.30.0, released 2025-11-06
 
 ### New features
