@@ -666,8 +666,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         public virtual ValueTask DisposeAsync()
         {
-            Dispose();
-            return default;
+            throw new NotImplementedException();
         }
     }
 }
