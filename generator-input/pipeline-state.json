@@ -4406,7 +4406,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-05T14:47:56.632068305Z",
-            "lastGeneratedCommit": "80509f2e7c23556d0068eb01471bc9ddd7b93bb5",
+            "lastGeneratedCommit": "fbda01ec757aaac65160c04f4385dd4eaad90ae1",
             "lastReleasedCommit": "80509f2e7c23556d0068eb01471bc9ddd7b93bb5",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1beta"

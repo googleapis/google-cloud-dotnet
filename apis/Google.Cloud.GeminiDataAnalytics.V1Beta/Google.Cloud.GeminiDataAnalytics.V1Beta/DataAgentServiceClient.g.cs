@@ -55,10 +55,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             GetDataAgentSettings = existing.GetDataAgentSettings;
             CreateDataAgentSettings = existing.CreateDataAgentSettings;
             CreateDataAgentOperationsSettings = existing.CreateDataAgentOperationsSettings.Clone();
+            CreateDataAgentSyncSettings = existing.CreateDataAgentSyncSettings;
             UpdateDataAgentSettings = existing.UpdateDataAgentSettings;
             UpdateDataAgentOperationsSettings = existing.UpdateDataAgentOperationsSettings.Clone();
+            UpdateDataAgentSyncSettings = existing.UpdateDataAgentSyncSettings;
             DeleteDataAgentSettings = existing.DeleteDataAgentSettings;
             DeleteDataAgentOperationsSettings = existing.DeleteDataAgentOperationsSettings.Clone();
+            DeleteDataAgentSyncSettings = existing.DeleteDataAgentSyncSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             LocationsSettings = existing.LocationsSettings;
@@ -160,6 +163,25 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataAgentServiceClient.CreateDataAgentSync</c> and <c>DataAgentServiceClient.CreateDataAgentSyncAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDataAgentSyncSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataAgentServiceClient.UpdateDataAgent</c> and <c>DataAgentServiceClient.UpdateDataAgentAsync</c>.
         /// </summary>
         /// <remarks>
@@ -196,6 +218,25 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataAgentServiceClient.UpdateDataAgentSync</c> and <c>DataAgentServiceClient.UpdateDataAgentSyncAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDataAgentSyncSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataAgentServiceClient.DeleteDataAgent</c> and <c>DataAgentServiceClient.DeleteDataAgentAsync</c>.
         /// </summary>
         /// <remarks>
@@ -229,6 +270,25 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataAgentServiceClient.DeleteDataAgentSync</c> and <c>DataAgentServiceClient.DeleteDataAgentSyncAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDataAgentSyncSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1014,6 +1074,167 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             CreateDataAgentAsync(parent, dataAgent, dataAgentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataAgent CreateDataAgentSync(CreateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(CreateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(CreateDataAgentRequest request, st::CancellationToken cancellationToken) =>
+            CreateDataAgentSyncAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataAgent CreateDataAgentSync(string parent, DataAgent dataAgent, string dataAgentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataAgentSync(new CreateDataAgentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DataAgentId = dataAgentId ?? "",
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(string parent, DataAgent dataAgent, string dataAgentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataAgentSyncAsync(new CreateDataAgentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DataAgentId = dataAgentId ?? "",
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(string parent, DataAgent dataAgent, string dataAgentId, st::CancellationToken cancellationToken) =>
+            CreateDataAgentSyncAsync(parent, dataAgent, dataAgentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataAgent CreateDataAgentSync(gagr::LocationName parent, DataAgent dataAgent, string dataAgentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataAgentSync(new CreateDataAgentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DataAgentId = dataAgentId ?? "",
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(gagr::LocationName parent, DataAgent dataAgent, string dataAgentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDataAgentSyncAsync(new CreateDataAgentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DataAgentId = dataAgentId ?? "",
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="dataAgent">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="dataAgentId">
+        /// Optional. Id of the requesting object. Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> CreateDataAgentSyncAsync(gagr::LocationName parent, DataAgent dataAgent, string dataAgentId, st::CancellationToken cancellationToken) =>
+            CreateDataAgentSyncAsync(parent, dataAgent, dataAgentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the parameters of a single DataAgent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1133,6 +1354,101 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<DataAgent, OperationMetadata>> UpdateDataAgentAsync(DataAgent dataAgent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateDataAgentAsync(dataAgent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataAgent UpdateDataAgentSync(UpdateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> UpdateDataAgentSyncAsync(UpdateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> UpdateDataAgentSyncAsync(UpdateDataAgentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDataAgentSyncAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="dataAgent">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DataAgent resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields with non-default values
+        /// present in the request will be overwritten. If a wildcard mask is provided,
+        /// all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataAgent UpdateDataAgentSync(DataAgent dataAgent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDataAgentSync(new UpdateDataAgentRequest
+            {
+                UpdateMask = updateMask,
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="dataAgent">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DataAgent resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields with non-default values
+        /// present in the request will be overwritten. If a wildcard mask is provided,
+        /// all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> UpdateDataAgentSyncAsync(DataAgent dataAgent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDataAgentSyncAsync(new UpdateDataAgentRequest
+            {
+                UpdateMask = updateMask,
+                DataAgent = gax::GaxPreconditions.CheckNotNull(dataAgent, nameof(dataAgent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="dataAgent">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DataAgent resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields with non-default values
+        /// present in the request will be overwritten. If a wildcard mask is provided,
+        /// all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataAgent> UpdateDataAgentSyncAsync(DataAgent dataAgent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDataAgentSyncAsync(dataAgent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single DataAgent.
@@ -1264,6 +1580,111 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAgentAsync(DataAgentName name, st::CancellationToken cancellationToken) =>
             DeleteDataAgentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDataAgentSync(DeleteDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(DeleteDataAgentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(DeleteDataAgentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDataAgentSyncAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDataAgentSync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataAgentSync(new DeleteDataAgentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataAgentSyncAsync(new DeleteDataAgentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDataAgentSyncAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDataAgentSync(DataAgentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataAgentSync(new DeleteDataAgentRequest
+            {
+                DataAgentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(DataAgentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDataAgentSyncAsync(new DeleteDataAgentRequest
+            {
+                DataAgentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDataAgentSyncAsync(DataAgentName name, st::CancellationToken cancellationToken) =>
+            DeleteDataAgentSyncAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the IAM policy for DataAgent
@@ -1502,9 +1923,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         private readonly gaxgrpc::ApiCall<CreateDataAgentRequest, lro::Operation> _callCreateDataAgent;
 
+        private readonly gaxgrpc::ApiCall<CreateDataAgentRequest, DataAgent> _callCreateDataAgentSync;
+
         private readonly gaxgrpc::ApiCall<UpdateDataAgentRequest, lro::Operation> _callUpdateDataAgent;
 
+        private readonly gaxgrpc::ApiCall<UpdateDataAgentRequest, DataAgent> _callUpdateDataAgentSync;
+
         private readonly gaxgrpc::ApiCall<DeleteDataAgentRequest, lro::Operation> _callDeleteDataAgent;
+
+        private readonly gaxgrpc::ApiCall<DeleteDataAgentRequest, wkt::Empty> _callDeleteDataAgentSync;
 
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
@@ -1541,12 +1968,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             _callCreateDataAgent = clientHelper.BuildApiCall<CreateDataAgentRequest, lro::Operation>("CreateDataAgent", grpcClient.CreateDataAgentAsync, grpcClient.CreateDataAgent, effectiveSettings.CreateDataAgentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataAgent);
             Modify_CreateDataAgentApiCall(ref _callCreateDataAgent);
+            _callCreateDataAgentSync = clientHelper.BuildApiCall<CreateDataAgentRequest, DataAgent>("CreateDataAgentSync", grpcClient.CreateDataAgentSyncAsync, grpcClient.CreateDataAgentSync, effectiveSettings.CreateDataAgentSyncSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDataAgentSync);
+            Modify_CreateDataAgentSyncApiCall(ref _callCreateDataAgentSync);
             _callUpdateDataAgent = clientHelper.BuildApiCall<UpdateDataAgentRequest, lro::Operation>("UpdateDataAgent", grpcClient.UpdateDataAgentAsync, grpcClient.UpdateDataAgent, effectiveSettings.UpdateDataAgentSettings).WithGoogleRequestParam("data_agent.name", request => request.DataAgent?.Name);
             Modify_ApiCall(ref _callUpdateDataAgent);
             Modify_UpdateDataAgentApiCall(ref _callUpdateDataAgent);
+            _callUpdateDataAgentSync = clientHelper.BuildApiCall<UpdateDataAgentRequest, DataAgent>("UpdateDataAgentSync", grpcClient.UpdateDataAgentSyncAsync, grpcClient.UpdateDataAgentSync, effectiveSettings.UpdateDataAgentSyncSettings).WithGoogleRequestParam("data_agent.name", request => request.DataAgent?.Name);
+            Modify_ApiCall(ref _callUpdateDataAgentSync);
+            Modify_UpdateDataAgentSyncApiCall(ref _callUpdateDataAgentSync);
             _callDeleteDataAgent = clientHelper.BuildApiCall<DeleteDataAgentRequest, lro::Operation>("DeleteDataAgent", grpcClient.DeleteDataAgentAsync, grpcClient.DeleteDataAgent, effectiveSettings.DeleteDataAgentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDataAgent);
             Modify_DeleteDataAgentApiCall(ref _callDeleteDataAgent);
+            _callDeleteDataAgentSync = clientHelper.BuildApiCall<DeleteDataAgentRequest, wkt::Empty>("DeleteDataAgentSync", grpcClient.DeleteDataAgentSyncAsync, grpcClient.DeleteDataAgentSync, effectiveSettings.DeleteDataAgentSyncSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDataAgentSync);
+            Modify_DeleteDataAgentSyncApiCall(ref _callDeleteDataAgentSync);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
@@ -1566,9 +2002,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         partial void Modify_CreateDataAgentApiCall(ref gaxgrpc::ApiCall<CreateDataAgentRequest, lro::Operation> call);
 
+        partial void Modify_CreateDataAgentSyncApiCall(ref gaxgrpc::ApiCall<CreateDataAgentRequest, DataAgent> call);
+
         partial void Modify_UpdateDataAgentApiCall(ref gaxgrpc::ApiCall<UpdateDataAgentRequest, lro::Operation> call);
 
+        partial void Modify_UpdateDataAgentSyncApiCall(ref gaxgrpc::ApiCall<UpdateDataAgentRequest, DataAgent> call);
+
         partial void Modify_DeleteDataAgentApiCall(ref gaxgrpc::ApiCall<DeleteDataAgentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDataAgentSyncApiCall(ref gaxgrpc::ApiCall<DeleteDataAgentRequest, wkt::Empty> call);
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
@@ -1699,6 +2141,30 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             return new lro::Operation<DataAgent, OperationMetadata>(await _callCreateDataAgent.Async(request, callSettings).ConfigureAwait(false), CreateDataAgentOperationsClient);
         }
 
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataAgent CreateDataAgentSync(CreateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDataAgentRequest(ref request, ref callSettings);
+            return _callCreateDataAgentSync.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new DataAgent in a given project and location synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataAgent> CreateDataAgentSyncAsync(CreateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDataAgentRequest(ref request, ref callSettings);
+            return _callCreateDataAgentSync.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>UpdateDataAgent</c>.</summary>
         public override lro::OperationsClient UpdateDataAgentOperationsClient { get; }
 
@@ -1726,6 +2192,30 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             return new lro::Operation<DataAgent, OperationMetadata>(await _callUpdateDataAgent.Async(request, callSettings).ConfigureAwait(false), UpdateDataAgentOperationsClient);
         }
 
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataAgent UpdateDataAgentSync(UpdateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDataAgentRequest(ref request, ref callSettings);
+            return _callUpdateDataAgentSync.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataAgent> UpdateDataAgentSyncAsync(UpdateDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDataAgentRequest(ref request, ref callSettings);
+            return _callUpdateDataAgentSync.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteDataAgent</c>.</summary>
         public override lro::OperationsClient DeleteDataAgentOperationsClient { get; }
 
@@ -1751,6 +2241,30 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         {
             Modify_DeleteDataAgentRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDataAgent.Async(request, callSettings).ConfigureAwait(false), DeleteDataAgentOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteDataAgentSync(DeleteDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDataAgentRequest(ref request, ref callSettings);
+            _callDeleteDataAgentSync.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single DataAgent synchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteDataAgentSyncAsync(DeleteDataAgentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDataAgentRequest(ref request, ref callSettings);
+            return _callDeleteDataAgentSync.Async(request, callSettings);
         }
 
         /// <summary>

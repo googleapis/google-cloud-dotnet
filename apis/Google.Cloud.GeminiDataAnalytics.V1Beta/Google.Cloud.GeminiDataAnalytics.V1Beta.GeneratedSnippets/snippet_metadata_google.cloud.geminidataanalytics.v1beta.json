@@ -1255,6 +1255,325 @@
       ]
     },
     {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_sync",
+      "title": "CreateDataAgentSyncRequestObject",
+      "description": "Snippet for CreateDataAgentSync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_async",
+      "title": "CreateDataAgentSyncRequestObjectAsync",
+      "description": "Snippet for CreateDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_sync_flattened",
+      "title": "CreateDataAgentSync",
+      "description": "Snippet for CreateDataAgentSync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSync",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_async_flattened",
+      "title": "CreateDataAgentSyncAsync",
+      "description": "Snippet for CreateDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_sync_flattened_resourceNames",
+      "title": "CreateDataAgentSyncResourceNames",
+      "description": "Snippet for CreateDataAgentSync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_CreateDataAgentSync_async_flattened_resourceNames",
+      "title": "CreateDataAgentSyncResourceNamesAsync",
+      "description": "Snippet for CreateDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.CreateDataAgentSyncResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.CreateDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.CreateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_UpdateDataAgent_sync",
       "title": "UpdateDataAgentRequestObject",
       "description": "Snippet for UpdateDataAgent",
@@ -1450,6 +1769,206 @@
         {
           "start": 37,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_UpdateDataAgentSync_sync",
+      "title": "UpdateDataAgentSyncRequestObject",
+      "description": "Snippet for UpdateDataAgentSync",
+      "file": "DataAgentServiceClient.UpdateDataAgentSyncRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.UpdateDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.UpdateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_UpdateDataAgentSync_async",
+      "title": "UpdateDataAgentSyncRequestObjectAsync",
+      "description": "Snippet for UpdateDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.UpdateDataAgentSyncRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.UpdateDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.UpdateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_UpdateDataAgentSync_sync_flattened",
+      "title": "UpdateDataAgentSync",
+      "description": "Snippet for UpdateDataAgentSync",
+      "file": "DataAgentServiceClient.UpdateDataAgentSyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.UpdateDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.UpdateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_UpdateDataAgentSync_async_flattened",
+      "title": "UpdateDataAgentSyncAsync",
+      "description": "Snippet for UpdateDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.UpdateDataAgentSyncAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.UpdateDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent",
+            "name": "dataAgent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.UpdateDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -1737,6 +2256,290 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_sync",
+      "title": "DeleteDataAgentSyncRequestObject",
+      "description": "Snippet for DeleteDataAgentSync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_async",
+      "title": "DeleteDataAgentSyncRequestObjectAsync",
+      "description": "Snippet for DeleteDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_sync_flattened",
+      "title": "DeleteDataAgentSync",
+      "description": "Snippet for DeleteDataAgentSync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSync",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_async_flattened",
+      "title": "DeleteDataAgentSyncAsync",
+      "description": "Snippet for DeleteDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_sync_flattened_resourceNames",
+      "title": "DeleteDataAgentSyncResourceNames",
+      "description": "Snippet for DeleteDataAgentSync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSync",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataAgentService_DeleteDataAgentSync_async_flattened_resourceNames",
+      "title": "DeleteDataAgentSyncResourceNamesAsync",
+      "description": "Snippet for DeleteDataAgentSyncAsync",
+      "file": "DataAgentServiceClient.DeleteDataAgentSyncResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAgentSyncAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient.DeleteDataAgentSyncAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAgentSync",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService.DeleteDataAgentSync",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
