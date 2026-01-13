@@ -514,6 +514,22 @@ namespace Google.Cloud.Spanner.Data
             CreateExecutableCommand().ExecutePartitionedUpdateAsync(cancellationToken);
 
         /// <summary>
+        /// Executes this command as DDL, but does not wait for the execution of the DDL statements to finish. The
+        /// method returns the name of the long-running operation that was started. The cancellation token can only be
+        /// used to cancel the request to start the execution of the DDL statements. It cannot be used to cancel the
+        /// long-running operation once it has been started.
+        /// The command must contain one or more DDL statements;
+        /// <see cref="SpannerConnection.CreateDdlCommand(string, string[])"/> for details.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>
+        /// The name of the long-running operation that was started for the DDL statement(s).
+        /// Note: The ID is empty for DropDatabase commands.
+        /// </returns>
+        public Task<string> StartDdlAsync(CancellationToken cancellationToken = default) =>
+            CreateExecutableCommand().StartDdlAsync(cancellationToken);
+
+        /// <summary>
         /// Creates an executable command that captures all the necessary information from this command.
         /// </summary>
         private ExecutableCommand CreateExecutableCommand() => new ExecutableCommand(this);

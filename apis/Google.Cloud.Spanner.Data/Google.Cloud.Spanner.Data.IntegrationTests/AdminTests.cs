@@ -12,7 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.LongRunning;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -250,6 +255,65 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync();
+            }
+        }
+
+        [Fact]
+        public async Task StartDdlReturnsOperationName()
+        {
+            string dbName = GenerateDatabaseName();
+            var builder = new SpannerConnectionStringBuilder(_fixture.Database.NoDbConnectionString);
+            var connectionOptions = new SpannerClientCreationOptions(builder);
+            var adminClientBuilder = connectionOptions.CreateDatabaseAdminClientBuilder();
+            var adminClient = await adminClientBuilder.BuildAsync();
+            var channel = adminClientBuilder.LastCreatedChannel;
+
+            try
+            {
+                using (var connection = new SpannerConnection(builder))
+                {
+                    var createDbCommand = connection.CreateDdlCommand($"CREATE DATABASE {dbName}");
+                    var operationName = await createDbCommand.StartDdlAsync();
+                    Assert.False(string.IsNullOrEmpty(operationName));
+
+                    await HandleLro<Database, CreateDatabaseMetadata>(
+                        adminClient.CreateDatabaseOperationsClient, operationName);
+                }
+
+                using (var connection = new SpannerConnection(builder.WithDatabase(dbName)))
+                {
+                    var createTableCommand = connection.CreateDdlCommand(
+                        "CREATE TABLE Singers (SingerId INT64 PRIMARY KEY, Name STRING(1024))");
+                    var operationName = await createTableCommand.StartDdlAsync();
+                    Assert.False(string.IsNullOrEmpty(operationName));
+
+                    await HandleLro<Empty, UpdateDatabaseDdlMetadata>(
+                        adminClient.UpdateDatabaseDdlOperationsClient, operationName);
+                }
+
+                using (var connection = new SpannerConnection(builder))
+                {
+                    var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                    var operationName = await dropCommand.StartDdlAsync();
+                    // DropDatabase does not return a long-running operation.
+                    Assert.Null(operationName);
+                }
+            }
+            finally
+            {
+                channel?.Shutdown();
+            }
+
+            async Task HandleLro<TResponse, TMetadata>(OperationsClient client, string operationName)
+                where TResponse : class, IMessage<TResponse>, new()
+                where TMetadata : class, IMessage<TMetadata>, new()
+            {
+                var rawOperation = await client.GetOperationAsync(operationName);
+                var operation = new Operation<TResponse, TMetadata>(rawOperation, client);
+                var completedOperation = await operation.PollUntilCompletedAsync();
+
+                Assert.True(completedOperation.IsCompleted);
+                Assert.Null(completedOperation.Exception);
             }
         }
     }
