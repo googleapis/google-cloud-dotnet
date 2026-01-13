@@ -4234,5 +4234,220 @@ namespace GoogleCSharpSnippets
             ResourceDrift response = await configClient.GetResourceDriftAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetAutoMigrationConfig</summary>
+        public void GetAutoMigrationConfigRequestObject()
+        {
+            // Snippet: GetAutoMigrationConfig(GetAutoMigrationConfigRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetAutoMigrationConfigRequest request = new GetAutoMigrationConfigRequest
+            {
+                AutoMigrationConfigName = AutoMigrationConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            AutoMigrationConfig response = configClient.GetAutoMigrationConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoMigrationConfigAsync</summary>
+        public async Task GetAutoMigrationConfigRequestObjectAsync()
+        {
+            // Snippet: GetAutoMigrationConfigAsync(GetAutoMigrationConfigRequest, CallSettings)
+            // Additional: GetAutoMigrationConfigAsync(GetAutoMigrationConfigRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutoMigrationConfigRequest request = new GetAutoMigrationConfigRequest
+            {
+                AutoMigrationConfigName = AutoMigrationConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            AutoMigrationConfig response = await configClient.GetAutoMigrationConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoMigrationConfig</summary>
+        public void GetAutoMigrationConfig()
+        {
+            // Snippet: GetAutoMigrationConfig(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoMigrationConfig";
+            // Make the request
+            AutoMigrationConfig response = configClient.GetAutoMigrationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoMigrationConfigAsync</summary>
+        public async Task GetAutoMigrationConfigAsync()
+        {
+            // Snippet: GetAutoMigrationConfigAsync(string, CallSettings)
+            // Additional: GetAutoMigrationConfigAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoMigrationConfig";
+            // Make the request
+            AutoMigrationConfig response = await configClient.GetAutoMigrationConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoMigrationConfig</summary>
+        public void GetAutoMigrationConfigResourceNames()
+        {
+            // Snippet: GetAutoMigrationConfig(AutoMigrationConfigName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            AutoMigrationConfigName name = AutoMigrationConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            AutoMigrationConfig response = configClient.GetAutoMigrationConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoMigrationConfigAsync</summary>
+        public async Task GetAutoMigrationConfigResourceNamesAsync()
+        {
+            // Snippet: GetAutoMigrationConfigAsync(AutoMigrationConfigName, CallSettings)
+            // Additional: GetAutoMigrationConfigAsync(AutoMigrationConfigName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoMigrationConfigName name = AutoMigrationConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            AutoMigrationConfig response = await configClient.GetAutoMigrationConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoMigrationConfig</summary>
+        public void UpdateAutoMigrationConfigRequestObject()
+        {
+            // Snippet: UpdateAutoMigrationConfig(UpdateAutoMigrationConfigRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            UpdateAutoMigrationConfigRequest request = new UpdateAutoMigrationConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                AutoMigrationConfig = new AutoMigrationConfig(),
+            };
+            // Make the request
+            Operation<AutoMigrationConfig, OperationMetadata> response = configClient.UpdateAutoMigrationConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoMigrationConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoMigrationConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoMigrationConfig, OperationMetadata> retrievedResponse = configClient.PollOnceUpdateAutoMigrationConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoMigrationConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoMigrationConfigAsync</summary>
+        public async Task UpdateAutoMigrationConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateAutoMigrationConfigAsync(UpdateAutoMigrationConfigRequest, CallSettings)
+            // Additional: UpdateAutoMigrationConfigAsync(UpdateAutoMigrationConfigRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAutoMigrationConfigRequest request = new UpdateAutoMigrationConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                AutoMigrationConfig = new AutoMigrationConfig(),
+            };
+            // Make the request
+            Operation<AutoMigrationConfig, OperationMetadata> response = await configClient.UpdateAutoMigrationConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoMigrationConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoMigrationConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoMigrationConfig, OperationMetadata> retrievedResponse = await configClient.PollOnceUpdateAutoMigrationConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoMigrationConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoMigrationConfig</summary>
+        public void UpdateAutoMigrationConfig()
+        {
+            // Snippet: UpdateAutoMigrationConfig(AutoMigrationConfig, FieldMask, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            AutoMigrationConfig autoMigrationConfig = new AutoMigrationConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoMigrationConfig, OperationMetadata> response = configClient.UpdateAutoMigrationConfig(autoMigrationConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoMigrationConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoMigrationConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoMigrationConfig, OperationMetadata> retrievedResponse = configClient.PollOnceUpdateAutoMigrationConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoMigrationConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoMigrationConfigAsync</summary>
+        public async Task UpdateAutoMigrationConfigAsync()
+        {
+            // Snippet: UpdateAutoMigrationConfigAsync(AutoMigrationConfig, FieldMask, CallSettings)
+            // Additional: UpdateAutoMigrationConfigAsync(AutoMigrationConfig, FieldMask, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoMigrationConfig autoMigrationConfig = new AutoMigrationConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoMigrationConfig, OperationMetadata> response = await configClient.UpdateAutoMigrationConfigAsync(autoMigrationConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoMigrationConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoMigrationConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoMigrationConfig, OperationMetadata> retrievedResponse = await configClient.PollOnceUpdateAutoMigrationConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoMigrationConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

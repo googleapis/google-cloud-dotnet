@@ -1888,6 +1888,244 @@ namespace Google.Cloud.Config.V1
         public static bool operator !=(ResourceDriftName a, ResourceDriftName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AutoMigrationConfig</c> resource.</summary>
+    public sealed partial class AutoMigrationConfigName : gax::IResourceName, sys::IEquatable<AutoMigrationConfigName>
+    {
+        /// <summary>The possible contents of <see cref="AutoMigrationConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+            /// </summary>
+            ProjectLocation = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}/autoMigrationConfig");
+
+        /// <summary>Creates a <see cref="AutoMigrationConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AutoMigrationConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AutoMigrationConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AutoMigrationConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AutoMigrationConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="AutoMigrationConfigName"/> constructed from the provided ids.
+        /// </returns>
+        public static AutoMigrationConfigName FromProjectLocation(string projectId, string locationId) =>
+            new AutoMigrationConfigName(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AutoMigrationConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AutoMigrationConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId) => FormatProjectLocation(projectId, locationId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AutoMigrationConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AutoMigrationConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/autoMigrationConfig</c>.
+        /// </returns>
+        public static string FormatProjectLocation(string projectId, string locationId) =>
+            s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AutoMigrationConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/autoMigrationConfig</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="autoMigrationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AutoMigrationConfigName"/> if successful.</returns>
+        public static AutoMigrationConfigName Parse(string autoMigrationConfigName) => Parse(autoMigrationConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AutoMigrationConfigName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/autoMigrationConfig</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="autoMigrationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AutoMigrationConfigName"/> if successful.</returns>
+        public static AutoMigrationConfigName Parse(string autoMigrationConfigName, bool allowUnparsed) =>
+            TryParse(autoMigrationConfigName, allowUnparsed, out AutoMigrationConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AutoMigrationConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/autoMigrationConfig</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="autoMigrationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AutoMigrationConfigName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string autoMigrationConfigName, out AutoMigrationConfigName result) =>
+            TryParse(autoMigrationConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AutoMigrationConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/autoMigrationConfig</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="autoMigrationConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AutoMigrationConfigName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string autoMigrationConfigName, bool allowUnparsed, out AutoMigrationConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(autoMigrationConfigName, nameof(autoMigrationConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocation.TryParseName(autoMigrationConfigName, out resourceName))
+            {
+                result = FromProjectLocation(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(autoMigrationConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AutoMigrationConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AutoMigrationConfigName"/> class from the component parts of
+        /// pattern <c>projects/{project}/locations/{location}/autoMigrationConfig</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        public AutoMigrationConfigName(string projectId, string locationId) : this(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocation: return s_projectLocation.Expand(ProjectId, LocationId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AutoMigrationConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(AutoMigrationConfigName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AutoMigrationConfigName a, AutoMigrationConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AutoMigrationConfigName a, AutoMigrationConfigName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ServiceAccount</c> resource.</summary>
     public sealed partial class ServiceAccountName : gax::IResourceName, sys::IEquatable<ServiceAccountName>
     {
@@ -2830,6 +3068,30 @@ namespace Google.Cloud.Config.V1
         public gccv::ResourceDriftName ResourceDriftName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ResourceDriftName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAutoMigrationConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::AutoMigrationConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AutoMigrationConfigName AutoMigrationConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AutoMigrationConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AutoMigrationConfig
+    {
+        /// <summary>
+        /// <see cref="gccv::AutoMigrationConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AutoMigrationConfigName AutoMigrationConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AutoMigrationConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

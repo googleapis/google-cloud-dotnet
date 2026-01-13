@@ -84,6 +84,9 @@ namespace Google.Cloud.Config.V1
             GetResourceChangeSettings = existing.GetResourceChangeSettings;
             ListResourceDriftsSettings = existing.ListResourceDriftsSettings;
             GetResourceDriftSettings = existing.GetResourceDriftSettings;
+            GetAutoMigrationConfigSettings = existing.GetAutoMigrationConfigSettings;
+            UpdateAutoMigrationConfigSettings = existing.UpdateAutoMigrationConfigSettings;
+            UpdateAutoMigrationConfigOperationsSettings = existing.UpdateAutoMigrationConfigOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -702,6 +705,60 @@ namespace Google.Cloud.Config.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetResourceDriftSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetAutoMigrationConfig</c> and <c>ConfigClient.GetAutoMigrationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutoMigrationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.UpdateAutoMigrationConfig</c> and <c>ConfigClient.UpdateAutoMigrationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAutoMigrationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.UpdateAutoMigrationConfig</c> and
+        /// <c>ConfigClient.UpdateAutoMigrationConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAutoMigrationConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -4288,6 +4345,230 @@ namespace Google.Cloud.Config.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(ResourceDriftName name, st::CancellationToken cancellationToken) =>
             GetResourceDriftAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoMigrationConfig GetAutoMigrationConfig(GetAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(GetAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(GetAutoMigrationConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetAutoMigrationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoMigrationConfig GetAutoMigrationConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoMigrationConfig(new GetAutoMigrationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoMigrationConfigAsync(new GetAutoMigrationConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutoMigrationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoMigrationConfig GetAutoMigrationConfig(AutoMigrationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoMigrationConfig(new GetAutoMigrationConfigRequest
+            {
+                AutoMigrationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(AutoMigrationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoMigrationConfigAsync(new GetAutoMigrationConfigRequest
+            {
+                AutoMigrationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutoMigrationConfig.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(AutoMigrationConfigName name, st::CancellationToken cancellationToken) =>
+            GetAutoMigrationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoMigrationConfig, OperationMetadata> UpdateAutoMigrationConfig(UpdateAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(UpdateAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(UpdateAutoMigrationConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAutoMigrationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAutoMigrationConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateAutoMigrationConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAutoMigrationConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutoMigrationConfig, OperationMetadata> PollOnceUpdateAutoMigrationConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoMigrationConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutoMigrationConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAutoMigrationConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> PollOnceUpdateAutoMigrationConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoMigrationConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutoMigrationConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="autoMigrationConfig">
+        /// Required. The AutoMigrationConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoMigrationConfig, OperationMetadata> UpdateAutoMigrationConfig(AutoMigrationConfig autoMigrationConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoMigrationConfig(new UpdateAutoMigrationConfigRequest
+            {
+                UpdateMask = updateMask,
+                AutoMigrationConfig = gax::GaxPreconditions.CheckNotNull(autoMigrationConfig, nameof(autoMigrationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="autoMigrationConfig">
+        /// Required. The AutoMigrationConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(AutoMigrationConfig autoMigrationConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoMigrationConfigAsync(new UpdateAutoMigrationConfigRequest
+            {
+                UpdateMask = updateMask,
+                AutoMigrationConfig = gax::GaxPreconditions.CheckNotNull(autoMigrationConfig, nameof(autoMigrationConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="autoMigrationConfig">
+        /// Required. The AutoMigrationConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(AutoMigrationConfig autoMigrationConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAutoMigrationConfigAsync(autoMigrationConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Config client wrapper implementation, for convenient use.</summary>
@@ -4351,6 +4632,10 @@ namespace Google.Cloud.Config.V1
 
         private readonly gaxgrpc::ApiCall<GetResourceDriftRequest, ResourceDrift> _callGetResourceDrift;
 
+        private readonly gaxgrpc::ApiCall<GetAutoMigrationConfigRequest, AutoMigrationConfig> _callGetAutoMigrationConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateAutoMigrationConfigRequest, lro::Operation> _callUpdateAutoMigrationConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the Config service, with the specified gRPC client and settings.
         /// </summary>
@@ -4373,6 +4658,7 @@ namespace Google.Cloud.Config.V1
             UnlockDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UnlockDeploymentOperationsSettings, logger);
             CreatePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePreviewOperationsSettings, logger);
             DeletePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePreviewOperationsSettings, logger);
+            UpdateAutoMigrationConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAutoMigrationConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListDeployments = clientHelper.BuildApiCall<ListDeploymentsRequest, ListDeploymentsResponse>("ListDeployments", grpcClient.ListDeploymentsAsync, grpcClient.ListDeployments, effectiveSettings.ListDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4456,6 +4742,12 @@ namespace Google.Cloud.Config.V1
             _callGetResourceDrift = clientHelper.BuildApiCall<GetResourceDriftRequest, ResourceDrift>("GetResourceDrift", grpcClient.GetResourceDriftAsync, grpcClient.GetResourceDrift, effectiveSettings.GetResourceDriftSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetResourceDrift);
             Modify_GetResourceDriftApiCall(ref _callGetResourceDrift);
+            _callGetAutoMigrationConfig = clientHelper.BuildApiCall<GetAutoMigrationConfigRequest, AutoMigrationConfig>("GetAutoMigrationConfig", grpcClient.GetAutoMigrationConfigAsync, grpcClient.GetAutoMigrationConfig, effectiveSettings.GetAutoMigrationConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutoMigrationConfig);
+            Modify_GetAutoMigrationConfigApiCall(ref _callGetAutoMigrationConfig);
+            _callUpdateAutoMigrationConfig = clientHelper.BuildApiCall<UpdateAutoMigrationConfigRequest, lro::Operation>("UpdateAutoMigrationConfig", grpcClient.UpdateAutoMigrationConfigAsync, grpcClient.UpdateAutoMigrationConfig, effectiveSettings.UpdateAutoMigrationConfigSettings).WithGoogleRequestParam("auto_migration_config.name", request => request.AutoMigrationConfig?.Name);
+            Modify_ApiCall(ref _callUpdateAutoMigrationConfig);
+            Modify_UpdateAutoMigrationConfigApiCall(ref _callUpdateAutoMigrationConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4514,6 +4806,10 @@ namespace Google.Cloud.Config.V1
         partial void Modify_ListResourceDriftsApiCall(ref gaxgrpc::ApiCall<ListResourceDriftsRequest, ListResourceDriftsResponse> call);
 
         partial void Modify_GetResourceDriftApiCall(ref gaxgrpc::ApiCall<GetResourceDriftRequest, ResourceDrift> call);
+
+        partial void Modify_GetAutoMigrationConfigApiCall(ref gaxgrpc::ApiCall<GetAutoMigrationConfigRequest, AutoMigrationConfig> call);
+
+        partial void Modify_UpdateAutoMigrationConfigApiCall(ref gaxgrpc::ApiCall<UpdateAutoMigrationConfigRequest, lro::Operation> call);
 
         partial void OnConstruction(Config.ConfigClient grpcClient, ConfigSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4579,6 +4875,10 @@ namespace Google.Cloud.Config.V1
         partial void Modify_ListResourceDriftsRequest(ref ListResourceDriftsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetResourceDriftRequest(ref GetResourceDriftRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutoMigrationConfigRequest(ref GetAutoMigrationConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAutoMigrationConfigRequest(ref UpdateAutoMigrationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -5259,6 +5559,57 @@ namespace Google.Cloud.Config.V1
         {
             Modify_GetResourceDriftRequest(ref request, ref callSettings);
             return _callGetResourceDrift.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutoMigrationConfig GetAutoMigrationConfig(GetAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoMigrationConfigRequest(ref request, ref callSettings);
+            return _callGetAutoMigrationConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutoMigrationConfig> GetAutoMigrationConfigAsync(GetAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoMigrationConfigRequest(ref request, ref callSettings);
+            return _callGetAutoMigrationConfig.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAutoMigrationConfig</c>.</summary>
+        public override lro::OperationsClient UpdateAutoMigrationConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutoMigrationConfig, OperationMetadata> UpdateAutoMigrationConfig(UpdateAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutoMigrationConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoMigrationConfig, OperationMetadata>(_callUpdateAutoMigrationConfig.Sync(request, callSettings), UpdateAutoMigrationConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the AutoMigrationConfig for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(UpdateAutoMigrationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutoMigrationConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoMigrationConfig, OperationMetadata>(await _callUpdateAutoMigrationConfig.Async(request, callSettings).ConfigureAwait(false), UpdateAutoMigrationConfigOperationsClient);
         }
     }
 
