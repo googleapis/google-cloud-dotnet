@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dataplex.V1;
 
@@ -607,14 +606,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Lake item) =>
+            await foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
+            await foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -623,7 +622,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -697,14 +696,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Lake item) =>
+            await foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
+            await foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -713,7 +712,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -787,14 +786,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Lake item) =>
+            await foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
+            await foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -803,7 +802,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -970,14 +969,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -986,7 +985,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1060,14 +1059,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1076,7 +1075,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1150,14 +1149,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1166,7 +1165,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1760,14 +1759,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Zone item) =>
+            await foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
+            await foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1776,7 +1775,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1850,14 +1849,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Zone item) =>
+            await foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
+            await foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1866,7 +1865,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1940,14 +1939,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Zone item) =>
+            await foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
+            await foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1956,7 +1955,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2123,14 +2122,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2139,7 +2138,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2213,14 +2212,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2229,7 +2228,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2303,14 +2302,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2319,7 +2318,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2913,14 +2912,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Asset item) =>
+            await foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
+            await foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2929,7 +2928,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3003,14 +3002,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Asset item) =>
+            await foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
+            await foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3019,7 +3018,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3093,14 +3092,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Asset item) =>
+            await foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
+            await foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3109,7 +3108,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3276,14 +3275,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3292,7 +3291,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3366,14 +3365,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3382,7 +3381,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3456,14 +3455,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Action item) =>
+            await foreach (gcdv::Action item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
+            await foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3472,7 +3471,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4066,14 +4065,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Task item) =>
+            await foreach (gcdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
+            await foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4082,7 +4081,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4156,14 +4155,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Task item) =>
+            await foreach (gcdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
+            await foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4172,7 +4171,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4246,14 +4245,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Task item) =>
+            await foreach (gcdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
+            await foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4262,7 +4261,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4429,14 +4428,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Job item) =>
+            await foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
+            await foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4445,7 +4444,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4519,14 +4518,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Job item) =>
+            await foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
+            await foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4535,7 +4534,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4609,14 +4608,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Job item) =>
+            await foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
+            await foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4625,7 +4624,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5484,14 +5483,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5500,7 +5499,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5574,14 +5573,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5590,7 +5589,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5664,14 +5663,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5680,7 +5679,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5849,14 +5848,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Session item) =>
+            await foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
+            await foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5865,7 +5864,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5939,14 +5938,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Session item) =>
+            await foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
+            await foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5955,7 +5954,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6029,14 +6028,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Session item) =>
+            await foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
+            await foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6045,7 +6044,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -102,14 +101,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<UrlMapsAggregatedList, KeyValuePair<string, UrlMapsScopedList>> response = urlMapsClient.AggregatedListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, UrlMapsScopedList> item) =>
+            await foreach (KeyValuePair<string, UrlMapsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((UrlMapsAggregatedList page) =>
+            await foreach (UrlMapsAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -118,7 +117,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -192,14 +191,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<UrlMapsAggregatedList, KeyValuePair<string, UrlMapsScopedList>> response = urlMapsClient.AggregatedListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, UrlMapsScopedList> item) =>
+            await foreach (KeyValuePair<string, UrlMapsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((UrlMapsAggregatedList page) =>
+            await foreach (UrlMapsAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -208,7 +207,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -752,14 +751,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<UrlMapList, UrlMap> response = urlMapsClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UrlMap item) =>
+            await foreach (UrlMap item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((UrlMapList page) =>
+            await foreach (UrlMapList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -768,7 +767,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -842,14 +841,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<UrlMapList, UrlMap> response = urlMapsClient.ListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UrlMap item) =>
+            await foreach (UrlMap item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((UrlMapList page) =>
+            await foreach (UrlMapList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -858,7 +857,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

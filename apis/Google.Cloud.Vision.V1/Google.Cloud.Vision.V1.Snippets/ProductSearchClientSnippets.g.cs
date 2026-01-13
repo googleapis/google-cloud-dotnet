@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -190,14 +189,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProductSet item) =>
+            await foreach (ProductSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
+            await foreach (ListProductSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -206,7 +205,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -280,14 +279,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProductSet item) =>
+            await foreach (ProductSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
+            await foreach (ListProductSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -296,7 +295,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -370,14 +369,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response = productSearchClient.ListProductSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProductSet item) =>
+            await foreach (ProductSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
+            await foreach (ListProductSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -386,7 +385,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -803,14 +802,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProductsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            await foreach (ListProductsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -819,7 +818,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -893,14 +892,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProductsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            await foreach (ListProductsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -909,7 +908,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -983,14 +982,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsResponse, Product> response = productSearchClient.ListProductsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            await foreach (ListProductsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -999,7 +998,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1503,14 +1502,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImagesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReferenceImage item) =>
+            await foreach (ReferenceImage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReferenceImagesResponse page) =>
+            await foreach (ListReferenceImagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1519,7 +1518,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1593,14 +1592,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReferenceImage item) =>
+            await foreach (ReferenceImage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReferenceImagesResponse page) =>
+            await foreach (ListReferenceImagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1609,7 +1608,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1683,14 +1682,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> response = productSearchClient.ListReferenceImagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReferenceImage item) =>
+            await foreach (ReferenceImage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReferenceImagesResponse page) =>
+            await foreach (ListReferenceImagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1699,7 +1698,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2052,14 +2051,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSetAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsInProductSetResponse page) =>
+            await foreach (ListProductsInProductSetResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2068,7 +2067,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2142,14 +2141,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSetAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsInProductSetResponse page) =>
+            await foreach (ListProductsInProductSetResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2158,7 +2157,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2232,14 +2231,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> response = productSearchClient.ListProductsInProductSetAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await foreach (Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductsInProductSetResponse page) =>
+            await foreach (ListProductsInProductSetResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2248,7 +2247,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

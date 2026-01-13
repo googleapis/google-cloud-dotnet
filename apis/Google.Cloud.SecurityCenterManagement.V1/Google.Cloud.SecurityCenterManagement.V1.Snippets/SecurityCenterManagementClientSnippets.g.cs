@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.SecurityCenterManagement.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -90,14 +89,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            await foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -106,7 +105,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -180,14 +179,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            await foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -196,7 +195,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -270,14 +269,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            await foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -286,7 +285,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -360,14 +359,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            await foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -376,7 +375,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -450,14 +449,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            await foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -466,7 +465,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -633,14 +632,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListSecurityHealthAnalyticsCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -649,7 +648,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -723,14 +722,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -739,7 +738,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -813,14 +812,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -829,7 +828,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -903,14 +902,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -919,7 +918,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -993,14 +992,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1009,7 +1008,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1089,14 +1088,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1105,7 +1104,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1179,14 +1178,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1195,7 +1194,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1269,14 +1268,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1285,7 +1284,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1359,14 +1358,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1375,7 +1374,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1449,14 +1448,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterManagementClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            await foreach (SecurityHealthAnalyticsCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            await foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1465,7 +1464,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2008,14 +2007,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEffectiveEventThreatDetectionCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            await foreach (EffectiveEventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2024,7 +2023,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2098,14 +2097,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            await foreach (EffectiveEventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2114,7 +2113,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2188,14 +2187,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            await foreach (EffectiveEventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2204,7 +2203,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2278,14 +2277,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            await foreach (EffectiveEventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2294,7 +2293,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2368,14 +2367,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEffectiveEventThreatDetectionCustomModulesResponse, EffectiveEventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEffectiveEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveEventThreatDetectionCustomModule item) =>
+            await foreach (EffectiveEventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEffectiveEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEffectiveEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2384,7 +2383,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2551,14 +2550,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEventThreatDetectionCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2567,7 +2566,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2641,14 +2640,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2657,7 +2656,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2731,14 +2730,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2747,7 +2746,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2821,14 +2820,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2837,7 +2836,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2911,14 +2910,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2927,7 +2926,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3007,14 +3006,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListDescendantEventThreatDetectionCustomModulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3023,7 +3022,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3097,14 +3096,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3113,7 +3112,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3187,14 +3186,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3203,7 +3202,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3277,14 +3276,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3293,7 +3292,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3367,14 +3366,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDescendantEventThreatDetectionCustomModulesResponse, EventThreatDetectionCustomModule> response = securityCenterManagementClient.ListDescendantEventThreatDetectionCustomModulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EventThreatDetectionCustomModule item) =>
+            await foreach (EventThreatDetectionCustomModule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDescendantEventThreatDetectionCustomModulesResponse page) =>
+            await foreach (ListDescendantEventThreatDetectionCustomModulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3383,7 +3382,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3986,14 +3985,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityCenterService item) =>
+            await foreach (SecurityCenterService item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            await foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4002,7 +4001,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4076,14 +4075,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityCenterService item) =>
+            await foreach (SecurityCenterService item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            await foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4092,7 +4091,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4166,14 +4165,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityCenterService item) =>
+            await foreach (SecurityCenterService item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            await foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4182,7 +4181,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4256,14 +4255,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityCenterService item) =>
+            await foreach (SecurityCenterService item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            await foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4272,7 +4271,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4346,14 +4345,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSecurityCenterServicesResponse, SecurityCenterService> response = securityCenterManagementClient.ListSecurityCenterServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SecurityCenterService item) =>
+            await foreach (SecurityCenterService item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSecurityCenterServicesResponse page) =>
+            await foreach (ListSecurityCenterServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4362,7 +4361,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

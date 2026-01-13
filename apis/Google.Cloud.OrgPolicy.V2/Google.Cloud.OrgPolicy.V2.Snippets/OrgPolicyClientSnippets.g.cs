@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.OrgPolicy.V2;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -90,14 +89,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConstraintsResponse, Constraint> response = orgPolicyClient.ListConstraintsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Constraint item) =>
+            await foreach (Constraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConstraintsResponse page) =>
+            await foreach (ListConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -106,7 +105,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -180,14 +179,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConstraintsResponse, Constraint> response = orgPolicyClient.ListConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Constraint item) =>
+            await foreach (Constraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConstraintsResponse page) =>
+            await foreach (ListConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -196,7 +195,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -270,14 +269,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConstraintsResponse, Constraint> response = orgPolicyClient.ListConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Constraint item) =>
+            await foreach (Constraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConstraintsResponse page) =>
+            await foreach (ListConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -286,7 +285,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -360,14 +359,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConstraintsResponse, Constraint> response = orgPolicyClient.ListConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Constraint item) =>
+            await foreach (Constraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConstraintsResponse page) =>
+            await foreach (ListConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -376,7 +375,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -450,14 +449,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConstraintsResponse, Constraint> response = orgPolicyClient.ListConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Constraint item) =>
+            await foreach (Constraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConstraintsResponse page) =>
+            await foreach (ListConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -466,7 +465,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -546,14 +545,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPoliciesResponse, Policy> response = orgPolicyClient.ListPoliciesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Policy item) =>
+            await foreach (Policy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPoliciesResponse page) =>
+            await foreach (ListPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -562,7 +561,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -636,14 +635,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPoliciesResponse, Policy> response = orgPolicyClient.ListPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Policy item) =>
+            await foreach (Policy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPoliciesResponse page) =>
+            await foreach (ListPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -652,7 +651,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -726,14 +725,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPoliciesResponse, Policy> response = orgPolicyClient.ListPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Policy item) =>
+            await foreach (Policy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPoliciesResponse page) =>
+            await foreach (ListPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -742,7 +741,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -816,14 +815,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPoliciesResponse, Policy> response = orgPolicyClient.ListPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Policy item) =>
+            await foreach (Policy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPoliciesResponse page) =>
+            await foreach (ListPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -832,7 +831,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -906,14 +905,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPoliciesResponse, Policy> response = orgPolicyClient.ListPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Policy item) =>
+            await foreach (Policy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPoliciesResponse page) =>
+            await foreach (ListPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -922,7 +921,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1718,14 +1717,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> response = orgPolicyClient.ListCustomConstraintsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CustomConstraint item) =>
+            await foreach (CustomConstraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCustomConstraintsResponse page) =>
+            await foreach (ListCustomConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1734,7 +1733,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1808,14 +1807,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> response = orgPolicyClient.ListCustomConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CustomConstraint item) =>
+            await foreach (CustomConstraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCustomConstraintsResponse page) =>
+            await foreach (ListCustomConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1824,7 +1823,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1898,14 +1897,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> response = orgPolicyClient.ListCustomConstraintsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CustomConstraint item) =>
+            await foreach (CustomConstraint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCustomConstraintsResponse page) =>
+            await foreach (ListCustomConstraintsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1914,7 +1913,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificatesResponse, Certificate> response = certificateManagerClient.ListCertificatesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Certificate item) =>
+            await foreach (Certificate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificatesResponse page) =>
+            await foreach (ListCertificatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificatesResponse, Certificate> response = certificateManagerClient.ListCertificatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Certificate item) =>
+            await foreach (Certificate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificatesResponse page) =>
+            await foreach (ListCertificatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificatesResponse, Certificate> response = certificateManagerClient.ListCertificatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Certificate item) =>
+            await foreach (Certificate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificatesResponse page) =>
+            await foreach (ListCertificatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -968,14 +967,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> response = certificateManagerClient.ListCertificateMapsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMap item) =>
+            await foreach (CertificateMap item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapsResponse page) =>
+            await foreach (ListCertificateMapsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -984,7 +983,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1058,14 +1057,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> response = certificateManagerClient.ListCertificateMapsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMap item) =>
+            await foreach (CertificateMap item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapsResponse page) =>
+            await foreach (ListCertificateMapsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1074,7 +1073,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1148,14 +1147,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapsResponse, CertificateMap> response = certificateManagerClient.ListCertificateMapsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMap item) =>
+            await foreach (CertificateMap item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapsResponse page) =>
+            await foreach (ListCertificateMapsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1164,7 +1163,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1841,14 +1840,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> response = certificateManagerClient.ListCertificateMapEntriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMapEntry item) =>
+            await foreach (CertificateMapEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapEntriesResponse page) =>
+            await foreach (ListCertificateMapEntriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1857,7 +1856,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1931,14 +1930,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> response = certificateManagerClient.ListCertificateMapEntriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMapEntry item) =>
+            await foreach (CertificateMapEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapEntriesResponse page) =>
+            await foreach (ListCertificateMapEntriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1947,7 +1946,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2021,14 +2020,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateMapEntriesResponse, CertificateMapEntry> response = certificateManagerClient.ListCertificateMapEntriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateMapEntry item) =>
+            await foreach (CertificateMapEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateMapEntriesResponse page) =>
+            await foreach (ListCertificateMapEntriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2037,7 +2036,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2714,14 +2713,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> response = certificateManagerClient.ListDnsAuthorizationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DnsAuthorization item) =>
+            await foreach (DnsAuthorization item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDnsAuthorizationsResponse page) =>
+            await foreach (ListDnsAuthorizationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2730,7 +2729,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2804,14 +2803,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> response = certificateManagerClient.ListDnsAuthorizationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DnsAuthorization item) =>
+            await foreach (DnsAuthorization item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDnsAuthorizationsResponse page) =>
+            await foreach (ListDnsAuthorizationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2820,7 +2819,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2894,14 +2893,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDnsAuthorizationsResponse, DnsAuthorization> response = certificateManagerClient.ListDnsAuthorizationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DnsAuthorization item) =>
+            await foreach (DnsAuthorization item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDnsAuthorizationsResponse page) =>
+            await foreach (ListDnsAuthorizationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2910,7 +2909,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3587,14 +3586,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            await foreach (CertificateIssuanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            await foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3603,7 +3602,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3677,14 +3676,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            await foreach (CertificateIssuanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            await foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3693,7 +3692,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3767,14 +3766,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCertificateIssuanceConfigsResponse, CertificateIssuanceConfig> response = certificateManagerClient.ListCertificateIssuanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CertificateIssuanceConfig item) =>
+            await foreach (CertificateIssuanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCertificateIssuanceConfigsResponse page) =>
+            await foreach (ListCertificateIssuanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3783,7 +3782,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4332,14 +4331,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TrustConfig item) =>
+            await foreach (TrustConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            await foreach (ListTrustConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4348,7 +4347,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4422,14 +4421,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TrustConfig item) =>
+            await foreach (TrustConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            await foreach (ListTrustConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4438,7 +4437,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4512,14 +4511,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TrustConfig item) =>
+            await foreach (TrustConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            await foreach (ListTrustConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4528,7 +4527,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

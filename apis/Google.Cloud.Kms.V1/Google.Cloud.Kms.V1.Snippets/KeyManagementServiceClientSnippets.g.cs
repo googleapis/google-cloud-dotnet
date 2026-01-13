@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> response = keyManagementServiceClient.ListKeyRingsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyRing item) =>
+            await foreach (KeyRing item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListKeyRingsResponse page) =>
+            await foreach (ListKeyRingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> response = keyManagementServiceClient.ListKeyRingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyRing item) =>
+            await foreach (KeyRing item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListKeyRingsResponse page) =>
+            await foreach (ListKeyRingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> response = keyManagementServiceClient.ListKeyRingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyRing item) =>
+            await foreach (KeyRing item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListKeyRingsResponse page) =>
+            await foreach (ListKeyRingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -377,14 +376,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> response = keyManagementServiceClient.ListCryptoKeysAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKey item) =>
+            await foreach (CryptoKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeysResponse page) =>
+            await foreach (ListCryptoKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -393,7 +392,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -467,14 +466,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> response = keyManagementServiceClient.ListCryptoKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKey item) =>
+            await foreach (CryptoKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeysResponse page) =>
+            await foreach (ListCryptoKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -483,7 +482,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -557,14 +556,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> response = keyManagementServiceClient.ListCryptoKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKey item) =>
+            await foreach (CryptoKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeysResponse page) =>
+            await foreach (ListCryptoKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -573,7 +572,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -659,14 +658,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKeyVersion item) =>
+            await foreach (CryptoKeyVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeyVersionsResponse page) =>
+            await foreach (ListCryptoKeyVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -675,7 +674,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -749,14 +748,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKeyVersion item) =>
+            await foreach (CryptoKeyVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeyVersionsResponse page) =>
+            await foreach (ListCryptoKeyVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -765,7 +764,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -839,14 +838,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> response = keyManagementServiceClient.ListCryptoKeyVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CryptoKeyVersion item) =>
+            await foreach (CryptoKeyVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCryptoKeyVersionsResponse page) =>
+            await foreach (ListCryptoKeyVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -855,7 +854,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -939,14 +938,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> response = keyManagementServiceClient.ListImportJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ImportJob item) =>
+            await foreach (ImportJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListImportJobsResponse page) =>
+            await foreach (ListImportJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -955,7 +954,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1029,14 +1028,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> response = keyManagementServiceClient.ListImportJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ImportJob item) =>
+            await foreach (ImportJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListImportJobsResponse page) =>
+            await foreach (ListImportJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1045,7 +1044,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1119,14 +1118,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> response = keyManagementServiceClient.ListImportJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ImportJob item) =>
+            await foreach (ImportJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListImportJobsResponse page) =>
+            await foreach (ListImportJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1135,7 +1134,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

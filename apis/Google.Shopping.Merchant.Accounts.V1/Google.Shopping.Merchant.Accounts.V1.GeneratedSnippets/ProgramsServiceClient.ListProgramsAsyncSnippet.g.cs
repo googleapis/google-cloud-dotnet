@@ -20,7 +20,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Shopping.Merchant.Accounts.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedProgramsServiceClientSnippets
@@ -43,14 +42,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListProgramsResponse, Program> response = programsServiceClient.ListProgramsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Program item) =>
+            await foreach (Program item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProgramsResponse page) =>
+            await foreach (ListProgramsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -59,7 +58,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

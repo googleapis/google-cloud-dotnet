@@ -19,7 +19,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.GkeRecommender.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -82,14 +81,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchModelsResponse, string> response = gkeInferenceQuickstartClient.FetchModelsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchModelsResponse page) =>
+            await foreach (FetchModelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -98,7 +97,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -172,14 +171,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchModelServersResponse, string> response = gkeInferenceQuickstartClient.FetchModelServersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchModelServersResponse page) =>
+            await foreach (FetchModelServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -188,7 +187,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -270,14 +269,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchModelServerVersionsResponse, string> response = gkeInferenceQuickstartClient.FetchModelServerVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchModelServerVersionsResponse page) =>
+            await foreach (FetchModelServerVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -286,7 +285,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -372,14 +371,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchProfilesResponse, Profile> response = gkeInferenceQuickstartClient.FetchProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Profile item) =>
+            await foreach (Profile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchProfilesResponse page) =>
+            await foreach (FetchProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -388,7 +387,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

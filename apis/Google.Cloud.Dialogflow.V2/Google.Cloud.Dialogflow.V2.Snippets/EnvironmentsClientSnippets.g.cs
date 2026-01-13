@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dialogflow.V2;
 
@@ -91,14 +90,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -107,7 +106,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -181,14 +180,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -197,7 +196,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -271,14 +270,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::Environment item) =>
+            await foreach (gcdv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
+            await foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -287,7 +286,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -507,14 +506,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcdv::EnvironmentHistory, gcdv::EnvironmentHistory.Types.Entry> response = environmentsClient.GetEnvironmentHistoryAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::EnvironmentHistory.Types.Entry item) =>
+            await foreach (gcdv::EnvironmentHistory.Types.Entry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::EnvironmentHistory page) =>
+            await foreach (gcdv::EnvironmentHistory page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -523,7 +522,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

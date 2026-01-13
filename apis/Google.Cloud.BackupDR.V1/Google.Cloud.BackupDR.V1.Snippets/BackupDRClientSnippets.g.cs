@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementServer item) =>
+            await foreach (ManagementServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementServersResponse page) =>
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementServer item) =>
+            await foreach (ManagementServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementServersResponse page) =>
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagementServer item) =>
+            await foreach (ManagementServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListManagementServersResponse page) =>
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1045,14 +1044,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1061,7 +1060,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1135,14 +1134,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1151,7 +1150,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1225,14 +1224,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1241,7 +1240,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1325,14 +1324,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchUsableBackupVaultsResponse page) =>
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1341,7 +1340,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1415,14 +1414,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchUsableBackupVaultsResponse page) =>
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1431,7 +1430,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1505,14 +1504,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupVault item) =>
+            await foreach (BackupVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchUsableBackupVaultsResponse page) =>
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1521,7 +1520,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2025,14 +2024,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSource item) =>
+            await foreach (DataSource item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourcesResponse page) =>
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2041,7 +2040,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2115,14 +2114,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSource item) =>
+            await foreach (DataSource item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourcesResponse page) =>
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2131,7 +2130,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2205,14 +2204,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSource item) =>
+            await foreach (DataSource item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourcesResponse page) =>
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2221,7 +2220,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2526,14 +2525,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2542,7 +2541,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2616,14 +2615,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2632,7 +2631,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2706,14 +2705,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2722,7 +2721,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2810,14 +2809,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2826,7 +2825,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2902,14 +2901,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2918,7 +2917,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2994,14 +2993,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3010,7 +3009,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4103,14 +4102,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlan item) =>
+            await foreach (BackupPlan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlansResponse page) =>
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4119,7 +4118,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4193,14 +4192,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlan item) =>
+            await foreach (BackupPlan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlansResponse page) =>
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4209,7 +4208,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4283,14 +4282,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlan item) =>
+            await foreach (BackupPlan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlansResponse page) =>
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4299,7 +4298,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4651,14 +4650,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanRevision item) =>
+            await foreach (BackupPlanRevision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanRevisionsResponse page) =>
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4667,7 +4666,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4741,14 +4740,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanRevision item) =>
+            await foreach (BackupPlanRevision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanRevisionsResponse page) =>
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4757,7 +4756,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4831,14 +4830,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanRevision item) =>
+            await foreach (BackupPlanRevision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanRevisionsResponse page) =>
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4847,7 +4846,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5343,14 +5342,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanAssociationsResponse page) =>
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5359,7 +5358,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5433,14 +5432,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanAssociationsResponse page) =>
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5449,7 +5448,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5523,14 +5522,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupPlanAssociationsResponse page) =>
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5539,7 +5538,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5625,14 +5624,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupPlanAssociationsForResourceTypeResponse page) =>
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5641,7 +5640,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5717,14 +5716,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupPlanAssociationsForResourceTypeResponse page) =>
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5733,7 +5732,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5809,14 +5808,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((BackupPlanAssociation item) =>
+            await foreach (BackupPlanAssociation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchBackupPlanAssociationsForResourceTypeResponse page) =>
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5825,7 +5824,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6372,14 +6371,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6388,7 +6387,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6462,14 +6461,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6478,7 +6477,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6552,14 +6551,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6568,7 +6567,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6654,14 +6653,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchDataSourceReferencesForResourceTypeResponse page) =>
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6670,7 +6669,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6746,14 +6745,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchDataSourceReferencesForResourceTypeResponse page) =>
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6762,7 +6761,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6838,14 +6837,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(parent, resourceType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataSourceReference item) =>
+            await foreach (DataSourceReference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchDataSourceReferencesForResourceTypeResponse page) =>
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6854,7 +6853,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

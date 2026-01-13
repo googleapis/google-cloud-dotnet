@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Geo.Type;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gmfdv = Google.Maps.FleetEngine.Delivery.V1;
 
@@ -767,14 +766,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListTasksResponse, gmfdv::Task> response = deliveryServiceClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::Task item) =>
+            await foreach (gmfdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListTasksResponse page) =>
+            await foreach (gmfdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -783,7 +782,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -857,14 +856,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListTasksResponse, gmfdv::Task> response = deliveryServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::Task item) =>
+            await foreach (gmfdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListTasksResponse page) =>
+            await foreach (gmfdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -873,7 +872,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -947,14 +946,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListTasksResponse, gmfdv::Task> response = deliveryServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::Task item) =>
+            await foreach (gmfdv::Task item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListTasksResponse page) =>
+            await foreach (gmfdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -963,7 +962,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1138,14 +1137,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListDeliveryVehiclesResponse, gmfdv::DeliveryVehicle> response = deliveryServiceClient.ListDeliveryVehiclesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::DeliveryVehicle item) =>
+            await foreach (gmfdv::DeliveryVehicle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListDeliveryVehiclesResponse page) =>
+            await foreach (gmfdv::ListDeliveryVehiclesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1154,7 +1153,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1228,14 +1227,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListDeliveryVehiclesResponse, gmfdv::DeliveryVehicle> response = deliveryServiceClient.ListDeliveryVehiclesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::DeliveryVehicle item) =>
+            await foreach (gmfdv::DeliveryVehicle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListDeliveryVehiclesResponse page) =>
+            await foreach (gmfdv::ListDeliveryVehiclesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1244,7 +1243,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1318,14 +1317,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gmfdv::ListDeliveryVehiclesResponse, gmfdv::DeliveryVehicle> response = deliveryServiceClient.ListDeliveryVehiclesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gmfdv::DeliveryVehicle item) =>
+            await foreach (gmfdv::DeliveryVehicle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gmfdv::ListDeliveryVehiclesResponse page) =>
+            await foreach (gmfdv::ListDeliveryVehiclesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1334,7 +1333,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

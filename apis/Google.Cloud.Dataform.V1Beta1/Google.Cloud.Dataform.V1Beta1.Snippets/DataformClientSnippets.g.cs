@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await foreach (Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await foreach (Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await foreach (Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -802,14 +801,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DirectoryEntry item) =>
+            await foreach (DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((QueryRepositoryDirectoryContentsResponse page) =>
+            await foreach (QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -818,7 +817,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -898,14 +897,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> response = dataformClient.FetchRepositoryHistoryAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CommitLogEntry item) =>
+            await foreach (CommitLogEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchRepositoryHistoryResponse page) =>
+            await foreach (FetchRepositoryHistoryResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -914,7 +913,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1064,14 +1063,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Workspace item) =>
+            await foreach (Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkspacesResponse page) =>
+            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1080,7 +1079,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1154,14 +1153,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Workspace item) =>
+            await foreach (Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkspacesResponse page) =>
+            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1170,7 +1169,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1244,14 +1243,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Workspace item) =>
+            await foreach (Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkspacesResponse page) =>
+            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1260,7 +1259,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1899,14 +1898,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DirectoryEntry item) =>
+            await foreach (DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((QueryDirectoryContentsResponse page) =>
+            await foreach (QueryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1915,7 +1914,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1997,14 +1996,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SearchResult item) =>
+            await foreach (SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchFilesResponse page) =>
+            await foreach (SearchFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2013,7 +2012,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2346,14 +2345,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReleaseConfig item) =>
+            await foreach (ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2362,7 +2361,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2436,14 +2435,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReleaseConfig item) =>
+            await foreach (ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2452,7 +2451,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2526,14 +2525,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ReleaseConfig item) =>
+            await foreach (ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2542,7 +2541,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2963,14 +2962,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CompilationResult item) =>
+            await foreach (CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCompilationResultsResponse page) =>
+            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2979,7 +2978,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3053,14 +3052,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CompilationResult item) =>
+            await foreach (CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCompilationResultsResponse page) =>
+            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3069,7 +3068,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3143,14 +3142,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CompilationResult item) =>
+            await foreach (CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCompilationResultsResponse page) =>
+            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3159,7 +3158,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3421,14 +3420,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<QueryCompilationResultActionsResponse, CompilationResultAction> response = dataformClient.QueryCompilationResultActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CompilationResultAction item) =>
+            await foreach (CompilationResultAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((QueryCompilationResultActionsResponse page) =>
+            await foreach (QueryCompilationResultActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3437,7 +3436,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3517,14 +3516,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowConfig item) =>
+            await foreach (WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3533,7 +3532,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3607,14 +3606,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowConfig item) =>
+            await foreach (WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3623,7 +3622,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3697,14 +3696,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowConfig item) =>
+            await foreach (WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3713,7 +3712,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4134,14 +4133,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowInvocation item) =>
+            await foreach (WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowInvocationsResponse page) =>
+            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4150,7 +4149,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4224,14 +4223,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowInvocation item) =>
+            await foreach (WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowInvocationsResponse page) =>
+            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4240,7 +4239,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4314,14 +4313,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowInvocation item) =>
+            await foreach (WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListWorkflowInvocationsResponse page) =>
+            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4330,7 +4329,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4710,14 +4709,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<QueryWorkflowInvocationActionsResponse, WorkflowInvocationAction> response = dataformClient.QueryWorkflowInvocationActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((WorkflowInvocationAction item) =>
+            await foreach (WorkflowInvocationAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((QueryWorkflowInvocationActionsResponse page) =>
+            await foreach (QueryWorkflowInvocationActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4726,7 +4725,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

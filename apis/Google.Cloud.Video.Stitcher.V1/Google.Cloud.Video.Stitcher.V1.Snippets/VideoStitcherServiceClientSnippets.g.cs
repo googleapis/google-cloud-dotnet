@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -290,14 +289,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> response = videoStitcherServiceClient.ListCdnKeysAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CdnKey item) =>
+            await foreach (CdnKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCdnKeysResponse page) =>
+            await foreach (ListCdnKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -306,7 +305,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -380,14 +379,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> response = videoStitcherServiceClient.ListCdnKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CdnKey item) =>
+            await foreach (CdnKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCdnKeysResponse page) =>
+            await foreach (ListCdnKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -396,7 +395,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -470,14 +469,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCdnKeysResponse, CdnKey> response = videoStitcherServiceClient.ListCdnKeysAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CdnKey item) =>
+            await foreach (CdnKey item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCdnKeysResponse page) =>
+            await foreach (ListCdnKeysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -486,7 +485,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1144,14 +1143,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> response = videoStitcherServiceClient.ListVodStitchDetailsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodStitchDetail item) =>
+            await foreach (VodStitchDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodStitchDetailsResponse page) =>
+            await foreach (ListVodStitchDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1160,7 +1159,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1234,14 +1233,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> response = videoStitcherServiceClient.ListVodStitchDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodStitchDetail item) =>
+            await foreach (VodStitchDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodStitchDetailsResponse page) =>
+            await foreach (ListVodStitchDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1250,7 +1249,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1324,14 +1323,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodStitchDetailsResponse, VodStitchDetail> response = videoStitcherServiceClient.ListVodStitchDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodStitchDetail item) =>
+            await foreach (VodStitchDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodStitchDetailsResponse page) =>
+            await foreach (ListVodStitchDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1340,7 +1339,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1507,14 +1506,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> response = videoStitcherServiceClient.ListVodAdTagDetailsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodAdTagDetail item) =>
+            await foreach (VodAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodAdTagDetailsResponse page) =>
+            await foreach (ListVodAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1523,7 +1522,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1597,14 +1596,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> response = videoStitcherServiceClient.ListVodAdTagDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodAdTagDetail item) =>
+            await foreach (VodAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodAdTagDetailsResponse page) =>
+            await foreach (ListVodAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1613,7 +1612,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1687,14 +1686,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodAdTagDetailsResponse, VodAdTagDetail> response = videoStitcherServiceClient.ListVodAdTagDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodAdTagDetail item) =>
+            await foreach (VodAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodAdTagDetailsResponse page) =>
+            await foreach (ListVodAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1703,7 +1702,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1870,14 +1869,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> response = videoStitcherServiceClient.ListLiveAdTagDetailsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveAdTagDetail item) =>
+            await foreach (LiveAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveAdTagDetailsResponse page) =>
+            await foreach (ListLiveAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1886,7 +1885,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1960,14 +1959,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> response = videoStitcherServiceClient.ListLiveAdTagDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveAdTagDetail item) =>
+            await foreach (LiveAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveAdTagDetailsResponse page) =>
+            await foreach (ListLiveAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1976,7 +1975,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2050,14 +2049,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveAdTagDetailsResponse, LiveAdTagDetail> response = videoStitcherServiceClient.ListLiveAdTagDetailsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveAdTagDetail item) =>
+            await foreach (LiveAdTagDetail item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveAdTagDetailsResponse page) =>
+            await foreach (ListLiveAdTagDetailsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2066,7 +2065,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2434,14 +2433,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSlatesResponse, Slate> response = videoStitcherServiceClient.ListSlatesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Slate item) =>
+            await foreach (Slate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSlatesResponse page) =>
+            await foreach (ListSlatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2450,7 +2449,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2524,14 +2523,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSlatesResponse, Slate> response = videoStitcherServiceClient.ListSlatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Slate item) =>
+            await foreach (Slate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSlatesResponse page) =>
+            await foreach (ListSlatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2540,7 +2539,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2614,14 +2613,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSlatesResponse, Slate> response = videoStitcherServiceClient.ListSlatesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Slate item) =>
+            await foreach (Slate item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSlatesResponse page) =>
+            await foreach (ListSlatesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2630,7 +2629,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3489,14 +3488,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveConfig item) =>
+            await foreach (LiveConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            await foreach (ListLiveConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3505,7 +3504,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3579,14 +3578,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveConfig item) =>
+            await foreach (LiveConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            await foreach (ListLiveConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3595,7 +3594,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3669,14 +3668,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LiveConfig item) =>
+            await foreach (LiveConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            await foreach (ListLiveConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3685,7 +3684,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4364,14 +4363,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodConfig item) =>
+            await foreach (VodConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            await foreach (ListVodConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4380,7 +4379,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4454,14 +4453,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodConfig item) =>
+            await foreach (VodConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            await foreach (ListVodConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4470,7 +4469,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4544,14 +4543,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListVodConfigsResponse, VodConfig> response = videoStitcherServiceClient.ListVodConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VodConfig item) =>
+            await foreach (VodConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVodConfigsResponse page) =>
+            await foreach (ListVodConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4560,7 +4559,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

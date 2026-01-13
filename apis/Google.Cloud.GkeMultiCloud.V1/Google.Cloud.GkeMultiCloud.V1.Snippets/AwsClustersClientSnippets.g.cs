@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -627,16 +626,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsCluster item) =>
+            await foreach (AwsCluster item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+            await foreach (ListAwsClustersResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -648,7 +647,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -741,16 +740,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsCluster item) =>
+            await foreach (AwsCluster item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+            await foreach (ListAwsClustersResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -762,7 +761,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -855,16 +854,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsCluster item) =>
+            await foreach (AwsCluster item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+            await foreach (ListAwsClustersResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -876,7 +875,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2011,16 +2010,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsNodePool item) =>
+            await foreach (AwsNodePool item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+            await foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -2032,7 +2031,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2125,16 +2124,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsNodePool item) =>
+            await foreach (AwsNodePool item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+            await foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -2146,7 +2145,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2239,16 +2238,16 @@ namespace GoogleCSharpSnippets
 
             // Iterate over all response items, lazily performing RPCs as required
 #pragma warning disable CS0612
-            await response.ForEachAsync((AwsNodePool item) =>
+            await foreach (AwsNodePool item in response)
 #pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
 #pragma warning disable CS0612
-            await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+            await foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
 #pragma warning restore CS0612
             {
                 // Do something with each page of items
@@ -2260,7 +2259,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -25,7 +25,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -94,14 +93,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceConfig item) =>
+            await foreach (InstanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigsResponse page) =>
+            await foreach (ListInstanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -110,7 +109,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -184,14 +183,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceConfig item) =>
+            await foreach (InstanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigsResponse page) =>
+            await foreach (ListInstanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -200,7 +199,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -274,14 +273,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response = instanceAdminClient.ListInstanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceConfig item) =>
+            await foreach (InstanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigsResponse page) =>
+            await foreach (ListInstanceConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -290,7 +289,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -877,14 +876,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            await foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -893,7 +892,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -967,14 +966,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            await foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -983,7 +982,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1057,14 +1056,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, Operation> response = instanceAdminClient.ListInstanceConfigOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstanceConfigOperationsResponse page) =>
+            await foreach (ListInstanceConfigOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1073,7 +1072,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1157,14 +1156,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await foreach (Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await foreach (ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1173,7 +1172,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1247,14 +1246,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await foreach (Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await foreach (ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1263,7 +1262,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1337,14 +1336,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await foreach (Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await foreach (ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1353,7 +1352,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1435,14 +1434,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstancePartition item) =>
+            await foreach (InstancePartition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            await foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1451,7 +1450,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1525,14 +1524,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstancePartition item) =>
+            await foreach (InstancePartition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            await foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1541,7 +1540,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1615,14 +1614,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstancePartition item) =>
+            await foreach (InstancePartition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            await foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1631,7 +1630,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2990,14 +2989,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            await foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3006,7 +3005,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3080,14 +3079,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            await foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3096,7 +3095,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3170,14 +3169,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Operation item) =>
+            await foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            await foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3186,7 +3185,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

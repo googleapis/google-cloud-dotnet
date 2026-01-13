@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -102,14 +101,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolAggregatedList, KeyValuePair<string, StoragePoolsScopedList>> response = storagePoolsClient.AggregatedListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, StoragePoolsScopedList> item) =>
+            await foreach (KeyValuePair<string, StoragePoolsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolAggregatedList page) =>
+            await foreach (StoragePoolAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -118,7 +117,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -192,14 +191,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolAggregatedList, KeyValuePair<string, StoragePoolsScopedList>> response = storagePoolsClient.AggregatedListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, StoragePoolsScopedList> item) =>
+            await foreach (KeyValuePair<string, StoragePoolsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolAggregatedList page) =>
+            await foreach (StoragePoolAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -208,7 +207,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -702,14 +701,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolList, StoragePool> response = storagePoolsClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoragePool item) =>
+            await foreach (StoragePool item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolList page) =>
+            await foreach (StoragePoolList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -718,7 +717,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -794,14 +793,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolList, StoragePool> response = storagePoolsClient.ListAsync(project, zone);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoragePool item) =>
+            await foreach (StoragePool item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolList page) =>
+            await foreach (StoragePoolList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -810,7 +809,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -900,14 +899,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolListDisks, StoragePoolDisk> response = storagePoolsClient.ListDisksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoragePoolDisk item) =>
+            await foreach (StoragePoolDisk item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolListDisks page) =>
+            await foreach (StoragePoolListDisks page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -916,7 +915,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -994,14 +993,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<StoragePoolListDisks, StoragePoolDisk> response = storagePoolsClient.ListDisksAsync(project, zone, storagePool);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((StoragePoolDisk item) =>
+            await foreach (StoragePoolDisk item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((StoragePoolListDisks page) =>
+            await foreach (StoragePoolListDisks page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1010,7 +1009,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

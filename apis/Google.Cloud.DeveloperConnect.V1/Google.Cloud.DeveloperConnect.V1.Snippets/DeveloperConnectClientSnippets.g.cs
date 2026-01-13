@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = developerConnectClient.ListConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = developerConnectClient.ListConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionsResponse, Connection> response = developerConnectClient.ListConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Connection item) =>
+            await foreach (Connection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionsResponse page) =>
+            await foreach (ListConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1372,14 +1371,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> response = developerConnectClient.ListGitRepositoryLinksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GitRepositoryLink item) =>
+            await foreach (GitRepositoryLink item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGitRepositoryLinksResponse page) =>
+            await foreach (ListGitRepositoryLinksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1388,7 +1387,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1462,14 +1461,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> response = developerConnectClient.ListGitRepositoryLinksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GitRepositoryLink item) =>
+            await foreach (GitRepositoryLink item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGitRepositoryLinksResponse page) =>
+            await foreach (ListGitRepositoryLinksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1478,7 +1477,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1552,14 +1551,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGitRepositoryLinksResponse, GitRepositoryLink> response = developerConnectClient.ListGitRepositoryLinksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GitRepositoryLink item) =>
+            await foreach (GitRepositoryLink item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGitRepositoryLinksResponse page) =>
+            await foreach (ListGitRepositoryLinksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1568,7 +1567,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1909,14 +1908,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> response = developerConnectClient.FetchLinkableGitRepositoriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LinkableGitRepository item) =>
+            await foreach (LinkableGitRepository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchLinkableGitRepositoriesResponse page) =>
+            await foreach (FetchLinkableGitRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1925,7 +1924,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1999,14 +1998,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> response = developerConnectClient.FetchLinkableGitRepositoriesAsync(connection);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LinkableGitRepository item) =>
+            await foreach (LinkableGitRepository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchLinkableGitRepositoriesResponse page) =>
+            await foreach (FetchLinkableGitRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2015,7 +2014,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2089,14 +2088,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchLinkableGitRepositoriesResponse, LinkableGitRepository> response = developerConnectClient.FetchLinkableGitRepositoriesAsync(connection);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((LinkableGitRepository item) =>
+            await foreach (LinkableGitRepository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchLinkableGitRepositoriesResponse page) =>
+            await foreach (FetchLinkableGitRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2105,7 +2104,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2274,14 +2273,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchGitRefsResponse, string> response = developerConnectClient.FetchGitRefsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchGitRefsResponse page) =>
+            await foreach (FetchGitRefsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2290,7 +2289,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2366,14 +2365,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchGitRefsResponse, string> response = developerConnectClient.FetchGitRefsAsync(gitRepositoryLink, refType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchGitRefsResponse page) =>
+            await foreach (FetchGitRefsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2382,7 +2381,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2458,14 +2457,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchGitRefsResponse, string> response = developerConnectClient.FetchGitRefsAsync(gitRepositoryLink, refType);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchGitRefsResponse page) =>
+            await foreach (FetchGitRefsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2474,7 +2473,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2558,14 +2557,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccountConnector item) =>
+            await foreach (AccountConnector item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            await foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2574,7 +2573,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2648,14 +2647,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccountConnector item) =>
+            await foreach (AccountConnector item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            await foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2664,7 +2663,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2738,14 +2737,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccountConnector item) =>
+            await foreach (AccountConnector item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            await foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2754,7 +2753,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3536,14 +3535,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((User item) =>
+            await foreach (User item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            await foreach (ListUsersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3552,7 +3551,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3626,14 +3625,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((User item) =>
+            await foreach (User item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            await foreach (ListUsersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3642,7 +3641,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3716,14 +3715,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((User item) =>
+            await foreach (User item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            await foreach (ListUsersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3732,7 +3731,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

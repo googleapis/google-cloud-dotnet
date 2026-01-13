@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -102,14 +101,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ReservationAggregatedList, KeyValuePair<string, ReservationsScopedList>> response = reservationsClient.AggregatedListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, ReservationsScopedList> item) =>
+            await foreach (KeyValuePair<string, ReservationsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ReservationAggregatedList page) =>
+            await foreach (ReservationAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -118,7 +117,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -192,14 +191,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ReservationAggregatedList, KeyValuePair<string, ReservationsScopedList>> response = reservationsClient.AggregatedListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, ReservationsScopedList> item) =>
+            await foreach (KeyValuePair<string, ReservationsScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ReservationAggregatedList page) =>
+            await foreach (ReservationAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -208,7 +207,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -702,14 +701,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ReservationList, Reservation> response = reservationsClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Reservation item) =>
+            await foreach (Reservation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ReservationList page) =>
+            await foreach (ReservationList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -718,7 +717,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -794,14 +793,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ReservationList, Reservation> response = reservationsClient.ListAsync(project, zone);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Reservation item) =>
+            await foreach (Reservation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ReservationList page) =>
+            await foreach (ReservationList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -810,7 +809,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

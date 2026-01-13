@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,14 +94,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> response = dataMigrationServiceClient.ListMigrationJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MigrationJob item) =>
+            await foreach (MigrationJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMigrationJobsResponse page) =>
+            await foreach (ListMigrationJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -111,7 +110,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -185,14 +184,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> response = dataMigrationServiceClient.ListMigrationJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MigrationJob item) =>
+            await foreach (MigrationJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMigrationJobsResponse page) =>
+            await foreach (ListMigrationJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -201,7 +200,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -275,14 +274,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMigrationJobsResponse, MigrationJob> response = dataMigrationServiceClient.ListMigrationJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MigrationJob item) =>
+            await foreach (MigrationJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMigrationJobsResponse page) =>
+            await foreach (ListMigrationJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -291,7 +290,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1454,14 +1453,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> response = dataMigrationServiceClient.ListConnectionProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConnectionProfile item) =>
+            await foreach (ConnectionProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionProfilesResponse page) =>
+            await foreach (ListConnectionProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1470,7 +1469,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1544,14 +1543,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> response = dataMigrationServiceClient.ListConnectionProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConnectionProfile item) =>
+            await foreach (ConnectionProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionProfilesResponse page) =>
+            await foreach (ListConnectionProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1560,7 +1559,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1634,14 +1633,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConnectionProfilesResponse, ConnectionProfile> response = dataMigrationServiceClient.ListConnectionProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConnectionProfile item) =>
+            await foreach (ConnectionProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectionProfilesResponse page) =>
+            await foreach (ListConnectionProfilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1650,7 +1649,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2629,14 +2628,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2645,7 +2644,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2719,14 +2718,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2735,7 +2734,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2809,14 +2808,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PrivateConnection item) =>
+            await foreach (PrivateConnection item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            await foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2825,7 +2824,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3179,14 +3178,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConversionWorkspace item) =>
+            await foreach (ConversionWorkspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            await foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3195,7 +3194,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3269,14 +3268,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConversionWorkspace item) =>
+            await foreach (ConversionWorkspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            await foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3285,7 +3284,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3359,14 +3358,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConversionWorkspace item) =>
+            await foreach (ConversionWorkspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            await foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3375,7 +3374,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4159,14 +4158,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MappingRule item) =>
+            await foreach (MappingRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            await foreach (ListMappingRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4175,7 +4174,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4249,14 +4248,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MappingRule item) =>
+            await foreach (MappingRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            await foreach (ListMappingRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4265,7 +4264,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4339,14 +4338,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MappingRule item) =>
+            await foreach (MappingRule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            await foreach (ListMappingRulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4355,7 +4354,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4954,14 +4953,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntitiesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DatabaseEntity item) =>
+            await foreach (DatabaseEntity item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((DescribeDatabaseEntitiesResponse page) =>
+            await foreach (DescribeDatabaseEntitiesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4970,7 +4969,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5124,14 +5123,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            await foreach (FetchStaticIpsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5140,7 +5139,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5214,14 +5213,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            await foreach (FetchStaticIpsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5230,7 +5229,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5304,14 +5303,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await foreach (string item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            await foreach (FetchStaticIpsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5320,7 +5319,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

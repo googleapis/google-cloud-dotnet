@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Compute.V1;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -717,14 +716,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> response = projectsClient.GetXpnResourcesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((XpnResourceId item) =>
+            await foreach (XpnResourceId item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ProjectsGetXpnResources page) =>
+            await foreach (ProjectsGetXpnResources page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -733,7 +732,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -807,14 +806,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> response = projectsClient.GetXpnResourcesAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((XpnResourceId item) =>
+            await foreach (XpnResourceId item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ProjectsGetXpnResources page) =>
+            await foreach (ProjectsGetXpnResources page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -823,7 +822,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -911,14 +910,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHostsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Project item) =>
+            await foreach (Project item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((XpnHostList page) =>
+            await foreach (XpnHostList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -927,7 +926,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1003,14 +1002,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHostsAsync(project, projectsListXpnHostsRequestResource);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Project item) =>
+            await foreach (Project item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((XpnHostList page) =>
+            await foreach (XpnHostList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1019,7 +1018,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

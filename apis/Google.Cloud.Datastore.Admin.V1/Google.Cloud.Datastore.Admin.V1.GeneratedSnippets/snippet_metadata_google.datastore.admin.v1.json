@@ -820,12 +820,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 40,
-          "end": 81,
+          "start": 39,
+          "end": 80,
           "type": "SHORT"
         }
       ]

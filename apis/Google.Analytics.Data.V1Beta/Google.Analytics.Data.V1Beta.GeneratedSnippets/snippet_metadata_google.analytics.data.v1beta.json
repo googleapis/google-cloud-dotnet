@@ -1748,12 +1748,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 79,
           "type": "FULL"
         },
         {
-          "start": 38,
-          "end": 78,
+          "start": 37,
+          "end": 77,
           "type": "SHORT"
         }
       ]
@@ -1859,12 +1859,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 77,
+          "end": 76,
           "type": "FULL"
         },
         {
-          "start": 38,
-          "end": 75,
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]
@@ -1970,12 +1970,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 77,
+          "end": 76,
           "type": "FULL"
         },
         {
-          "start": 38,
-          "end": 75,
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]

@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Monitoring.V3;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -93,14 +92,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -109,7 +108,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -183,14 +182,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -199,7 +198,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -273,14 +272,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -289,7 +288,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -363,14 +362,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -379,7 +378,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -453,14 +452,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -469,7 +468,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -543,14 +542,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response = metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            await foreach (MonitoredResourceDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            await foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -559,7 +558,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -757,14 +756,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -773,7 +772,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -847,14 +846,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -863,7 +862,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -937,14 +936,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -953,7 +952,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1027,14 +1026,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1043,7 +1042,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1117,14 +1116,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1133,7 +1132,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1207,14 +1206,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MetricDescriptor item) =>
+            await foreach (MetricDescriptor item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
+            await foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1223,7 +1222,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1723,14 +1722,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeries item) =>
+            await foreach (TimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            await foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1739,7 +1738,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1819,14 +1818,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeries item) =>
+            await foreach (TimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            await foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1835,7 +1834,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1915,14 +1914,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeries item) =>
+            await foreach (TimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            await foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1931,7 +1930,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2011,14 +2010,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeries item) =>
+            await foreach (TimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            await foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2027,7 +2026,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2107,14 +2106,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeries item) =>
+            await foreach (TimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            await foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2123,7 +2122,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

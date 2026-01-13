@@ -1,5 +1,5 @@
 {
-    "imageTag": "latest",
+    "imageTag": "v2026-01-12",
     "libraries": [
         {
             "id": "Google.Ads.AdManager.V1",

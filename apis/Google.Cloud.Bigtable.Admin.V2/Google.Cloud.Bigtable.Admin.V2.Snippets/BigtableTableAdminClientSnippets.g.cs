@@ -25,7 +25,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -398,14 +397,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTablesResponse, Table> response = bigtableTableAdminClient.ListTablesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Table item) =>
+            await foreach (Table item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTablesResponse page) =>
+            await foreach (ListTablesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -414,7 +413,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -488,14 +487,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTablesResponse, Table> response = bigtableTableAdminClient.ListTablesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Table item) =>
+            await foreach (Table item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTablesResponse page) =>
+            await foreach (ListTablesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -504,7 +503,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -578,14 +577,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTablesResponse, Table> response = bigtableTableAdminClient.ListTablesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Table item) =>
+            await foreach (Table item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTablesResponse page) =>
+            await foreach (ListTablesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -594,7 +593,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1360,14 +1359,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AuthorizedView item) =>
+            await foreach (AuthorizedView item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            await foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1376,7 +1375,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1450,14 +1449,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AuthorizedView item) =>
+            await foreach (AuthorizedView item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            await foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1466,7 +1465,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1540,14 +1539,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AuthorizedView item) =>
+            await foreach (AuthorizedView item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            await foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1556,7 +1555,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2564,14 +2563,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = bigtableTableAdminClient.ListSnapshotsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Snapshot item) =>
+            await foreach (Snapshot item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            await foreach (ListSnapshotsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2580,7 +2579,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2654,14 +2653,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = bigtableTableAdminClient.ListSnapshotsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Snapshot item) =>
+            await foreach (Snapshot item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            await foreach (ListSnapshotsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2670,7 +2669,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2744,14 +2743,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = bigtableTableAdminClient.ListSnapshotsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Snapshot item) =>
+            await foreach (Snapshot item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            await foreach (ListSnapshotsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2760,7 +2759,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3364,14 +3363,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = bigtableTableAdminClient.ListBackupsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3380,7 +3379,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3454,14 +3453,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = bigtableTableAdminClient.ListBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3470,7 +3469,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3544,14 +3543,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = bigtableTableAdminClient.ListBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Backup item) =>
+            await foreach (Backup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3560,7 +3559,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4599,14 +4598,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SchemaBundle item) =>
+            await foreach (SchemaBundle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            await foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4615,7 +4614,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4689,14 +4688,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SchemaBundle item) =>
+            await foreach (SchemaBundle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            await foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4705,7 +4704,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4779,14 +4778,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((SchemaBundle item) =>
+            await foreach (SchemaBundle item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            await foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4795,7 +4794,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

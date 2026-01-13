@@ -24,7 +24,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -503,14 +502,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> response = tensorboardServiceClient.ListTensorboardsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Tensorboard item) =>
+            await foreach (Tensorboard item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardsResponse page) =>
+            await foreach (ListTensorboardsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -519,7 +518,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -593,14 +592,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> response = tensorboardServiceClient.ListTensorboardsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Tensorboard item) =>
+            await foreach (Tensorboard item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardsResponse page) =>
+            await foreach (ListTensorboardsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -609,7 +608,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -683,14 +682,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> response = tensorboardServiceClient.ListTensorboardsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Tensorboard item) =>
+            await foreach (Tensorboard item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardsResponse page) =>
+            await foreach (ListTensorboardsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -699,7 +698,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1392,14 +1391,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> response = tensorboardServiceClient.ListTensorboardExperimentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardExperiment item) =>
+            await foreach (TensorboardExperiment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardExperimentsResponse page) =>
+            await foreach (ListTensorboardExperimentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1408,7 +1407,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1482,14 +1481,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> response = tensorboardServiceClient.ListTensorboardExperimentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardExperiment item) =>
+            await foreach (TensorboardExperiment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardExperimentsResponse page) =>
+            await foreach (ListTensorboardExperimentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1498,7 +1497,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1572,14 +1571,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> response = tensorboardServiceClient.ListTensorboardExperimentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardExperiment item) =>
+            await foreach (TensorboardExperiment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardExperimentsResponse page) =>
+            await foreach (ListTensorboardExperimentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1588,7 +1587,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2218,14 +2217,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> response = tensorboardServiceClient.ListTensorboardRunsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardRun item) =>
+            await foreach (TensorboardRun item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardRunsResponse page) =>
+            await foreach (ListTensorboardRunsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2234,7 +2233,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2308,14 +2307,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> response = tensorboardServiceClient.ListTensorboardRunsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardRun item) =>
+            await foreach (TensorboardRun item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardRunsResponse page) =>
+            await foreach (ListTensorboardRunsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2324,7 +2323,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2398,14 +2397,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> response = tensorboardServiceClient.ListTensorboardRunsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardRun item) =>
+            await foreach (TensorboardRun item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardRunsResponse page) =>
+            await foreach (ListTensorboardRunsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2414,7 +2413,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3040,14 +3039,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> response = tensorboardServiceClient.ListTensorboardTimeSeriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardTimeSeries item) =>
+            await foreach (TensorboardTimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardTimeSeriesResponse page) =>
+            await foreach (ListTensorboardTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3056,7 +3055,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3130,14 +3129,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> response = tensorboardServiceClient.ListTensorboardTimeSeriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardTimeSeries item) =>
+            await foreach (TensorboardTimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardTimeSeriesResponse page) =>
+            await foreach (ListTensorboardTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3146,7 +3145,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3220,14 +3219,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> response = tensorboardServiceClient.ListTensorboardTimeSeriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TensorboardTimeSeries item) =>
+            await foreach (TensorboardTimeSeries item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTensorboardTimeSeriesResponse page) =>
+            await foreach (ListTensorboardTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3236,7 +3235,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3984,14 +3983,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> response = tensorboardServiceClient.ExportTensorboardTimeSeriesDataAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeriesDataPoint item) =>
+            await foreach (TimeSeriesDataPoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ExportTensorboardTimeSeriesDataResponse page) =>
+            await foreach (ExportTensorboardTimeSeriesDataResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4000,7 +3999,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4074,14 +4073,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> response = tensorboardServiceClient.ExportTensorboardTimeSeriesDataAsync(tensorboardTimeSeries);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeriesDataPoint item) =>
+            await foreach (TimeSeriesDataPoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ExportTensorboardTimeSeriesDataResponse page) =>
+            await foreach (ExportTensorboardTimeSeriesDataResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4090,7 +4089,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4164,14 +4163,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> response = tensorboardServiceClient.ExportTensorboardTimeSeriesDataAsync(tensorboardTimeSeries);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((TimeSeriesDataPoint item) =>
+            await foreach (TimeSeriesDataPoint item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ExportTensorboardTimeSeriesDataResponse page) =>
+            await foreach (ExportTensorboardTimeSeriesDataResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4180,7 +4179,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

@@ -21,7 +21,6 @@ namespace GoogleCSharpSnippets
     // [START batch_v1_generated_BatchService_ListJobs_async_flattened]
     using Google.Api.Gax;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcbv = Google.Cloud.Batch.V1;
 
@@ -45,14 +44,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcbv::Job item) =>
+            await foreach (gcbv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcbv::ListJobsResponse page) =>
+            await foreach (gcbv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -61,7 +60,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

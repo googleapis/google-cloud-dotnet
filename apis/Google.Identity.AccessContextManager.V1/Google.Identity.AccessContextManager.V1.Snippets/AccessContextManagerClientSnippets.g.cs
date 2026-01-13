@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -92,14 +91,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccessPoliciesResponse, AccessPolicy> response = accessContextManagerClient.ListAccessPoliciesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccessPolicy item) =>
+            await foreach (AccessPolicy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccessPoliciesResponse page) =>
+            await foreach (ListAccessPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -108,7 +107,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -665,14 +664,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> response = accessContextManagerClient.ListAccessLevelsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccessLevel item) =>
+            await foreach (AccessLevel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccessLevelsResponse page) =>
+            await foreach (ListAccessLevelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -681,7 +680,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -755,14 +754,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> response = accessContextManagerClient.ListAccessLevelsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccessLevel item) =>
+            await foreach (AccessLevel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccessLevelsResponse page) =>
+            await foreach (ListAccessLevelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -771,7 +770,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -845,14 +844,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAccessLevelsResponse, AccessLevel> response = accessContextManagerClient.ListAccessLevelsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AccessLevel item) =>
+            await foreach (AccessLevel item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAccessLevelsResponse page) =>
+            await foreach (ListAccessLevelsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -861,7 +860,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1599,14 +1598,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> response = accessContextManagerClient.ListServicePerimetersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ServicePerimeter item) =>
+            await foreach (ServicePerimeter item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicePerimetersResponse page) =>
+            await foreach (ListServicePerimetersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1615,7 +1614,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1689,14 +1688,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> response = accessContextManagerClient.ListServicePerimetersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ServicePerimeter item) =>
+            await foreach (ServicePerimeter item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicePerimetersResponse page) =>
+            await foreach (ListServicePerimetersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1705,7 +1704,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1779,14 +1778,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListServicePerimetersResponse, ServicePerimeter> response = accessContextManagerClient.ListServicePerimetersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ServicePerimeter item) =>
+            await foreach (ServicePerimeter item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicePerimetersResponse page) =>
+            await foreach (ListServicePerimetersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1795,7 +1794,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2604,14 +2603,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> response = accessContextManagerClient.ListGcpUserAccessBindingsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GcpUserAccessBinding item) =>
+            await foreach (GcpUserAccessBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGcpUserAccessBindingsResponse page) =>
+            await foreach (ListGcpUserAccessBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2620,7 +2619,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2694,14 +2693,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> response = accessContextManagerClient.ListGcpUserAccessBindingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GcpUserAccessBinding item) =>
+            await foreach (GcpUserAccessBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGcpUserAccessBindingsResponse page) =>
+            await foreach (ListGcpUserAccessBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2710,7 +2709,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2784,14 +2783,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGcpUserAccessBindingsResponse, GcpUserAccessBinding> response = accessContextManagerClient.ListGcpUserAccessBindingsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GcpUserAccessBinding item) =>
+            await foreach (GcpUserAccessBinding item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGcpUserAccessBindingsResponse page) =>
+            await foreach (ListGcpUserAccessBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2800,7 +2799,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

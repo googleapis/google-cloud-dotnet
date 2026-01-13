@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -240,14 +239,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, KeyValuePair<string, InstanceGroupManagersScopedList>> response = instanceGroupManagersClient.AggregatedListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, InstanceGroupManagersScopedList> item) =>
+            await foreach (KeyValuePair<string, InstanceGroupManagersScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerAggregatedList page) =>
+            await foreach (InstanceGroupManagerAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -256,7 +255,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -330,14 +329,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, KeyValuePair<string, InstanceGroupManagersScopedList>> response = instanceGroupManagersClient.AggregatedListAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((KeyValuePair<string, InstanceGroupManagersScopedList> item) =>
+            await foreach (KeyValuePair<string, InstanceGroupManagersScopedList> item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerAggregatedList page) =>
+            await foreach (InstanceGroupManagerAggregatedList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -346,7 +345,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1318,14 +1317,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> response = instanceGroupManagersClient.ListAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceGroupManager item) =>
+            await foreach (InstanceGroupManager item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerList page) =>
+            await foreach (InstanceGroupManagerList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1334,7 +1333,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1410,14 +1409,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> response = instanceGroupManagersClient.ListAsync(project, zone);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceGroupManager item) =>
+            await foreach (InstanceGroupManager item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagerList page) =>
+            await foreach (InstanceGroupManagerList page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1426,7 +1425,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1516,14 +1515,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = instanceGroupManagersClient.ListErrorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceManagedByIgmError item) =>
+            await foreach (InstanceManagedByIgmError item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListErrorsResponse page) =>
+            await foreach (InstanceGroupManagersListErrorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1532,7 +1531,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1610,14 +1609,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = instanceGroupManagersClient.ListErrorsAsync(project, zone, instanceGroupManager);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((InstanceManagedByIgmError item) =>
+            await foreach (InstanceManagedByIgmError item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListErrorsResponse page) =>
+            await foreach (InstanceGroupManagersListErrorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1626,7 +1625,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1716,14 +1715,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> response = instanceGroupManagersClient.ListManagedInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagedInstance item) =>
+            await foreach (ManagedInstance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListManagedInstancesResponse page) =>
+            await foreach (InstanceGroupManagersListManagedInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1732,7 +1731,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1810,14 +1809,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> response = instanceGroupManagersClient.ListManagedInstancesAsync(project, zone, instanceGroupManager);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ManagedInstance item) =>
+            await foreach (ManagedInstance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListManagedInstancesResponse page) =>
+            await foreach (InstanceGroupManagersListManagedInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1826,7 +1825,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1916,14 +1915,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> response = instanceGroupManagersClient.ListPerInstanceConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PerInstanceConfig item) =>
+            await foreach (PerInstanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListPerInstanceConfigsResp page) =>
+            await foreach (InstanceGroupManagersListPerInstanceConfigsResp page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1932,7 +1931,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2010,14 +2009,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> response = instanceGroupManagersClient.ListPerInstanceConfigsAsync(project, zone, instanceGroupManager);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PerInstanceConfig item) =>
+            await foreach (PerInstanceConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((InstanceGroupManagersListPerInstanceConfigsResp page) =>
+            await foreach (InstanceGroupManagersListPerInstanceConfigsResp page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2026,7 +2025,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

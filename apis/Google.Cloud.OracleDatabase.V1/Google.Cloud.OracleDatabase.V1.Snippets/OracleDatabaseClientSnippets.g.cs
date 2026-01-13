@@ -23,7 +23,6 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -96,14 +95,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudExadataInfrastructuresResponse, CloudExadataInfrastructure> response = oracleDatabaseClient.ListCloudExadataInfrastructuresAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudExadataInfrastructure item) =>
+            await foreach (CloudExadataInfrastructure item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudExadataInfrastructuresResponse page) =>
+            await foreach (ListCloudExadataInfrastructuresResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -112,7 +111,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -186,14 +185,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudExadataInfrastructuresResponse, CloudExadataInfrastructure> response = oracleDatabaseClient.ListCloudExadataInfrastructuresAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudExadataInfrastructure item) =>
+            await foreach (CloudExadataInfrastructure item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudExadataInfrastructuresResponse page) =>
+            await foreach (ListCloudExadataInfrastructuresResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -202,7 +201,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -276,14 +275,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudExadataInfrastructuresResponse, CloudExadataInfrastructure> response = oracleDatabaseClient.ListCloudExadataInfrastructuresAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudExadataInfrastructure item) =>
+            await foreach (CloudExadataInfrastructure item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudExadataInfrastructuresResponse page) =>
+            await foreach (ListCloudExadataInfrastructuresResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -292,7 +291,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -845,14 +844,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudVmClustersResponse, CloudVmCluster> response = oracleDatabaseClient.ListCloudVmClustersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudVmCluster item) =>
+            await foreach (CloudVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudVmClustersResponse page) =>
+            await foreach (ListCloudVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -861,7 +860,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -935,14 +934,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudVmClustersResponse, CloudVmCluster> response = oracleDatabaseClient.ListCloudVmClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudVmCluster item) =>
+            await foreach (CloudVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudVmClustersResponse page) =>
+            await foreach (ListCloudVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -951,7 +950,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1025,14 +1024,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListCloudVmClustersResponse, CloudVmCluster> response = oracleDatabaseClient.ListCloudVmClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((CloudVmCluster item) =>
+            await foreach (CloudVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListCloudVmClustersResponse page) =>
+            await foreach (ListCloudVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1041,7 +1040,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1592,14 +1591,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> response = oracleDatabaseClient.ListEntitlementsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entitlement item) =>
+            await foreach (Entitlement item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitlementsResponse page) =>
+            await foreach (ListEntitlementsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1608,7 +1607,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1682,14 +1681,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> response = oracleDatabaseClient.ListEntitlementsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entitlement item) =>
+            await foreach (Entitlement item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitlementsResponse page) =>
+            await foreach (ListEntitlementsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1698,7 +1697,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1772,14 +1771,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListEntitlementsResponse, Entitlement> response = oracleDatabaseClient.ListEntitlementsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entitlement item) =>
+            await foreach (Entitlement item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitlementsResponse page) =>
+            await foreach (ListEntitlementsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1788,7 +1787,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1868,14 +1867,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbServersResponse, DbServer> response = oracleDatabaseClient.ListDbServersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbServer item) =>
+            await foreach (DbServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbServersResponse page) =>
+            await foreach (ListDbServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1884,7 +1883,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1958,14 +1957,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbServersResponse, DbServer> response = oracleDatabaseClient.ListDbServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbServer item) =>
+            await foreach (DbServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbServersResponse page) =>
+            await foreach (ListDbServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1974,7 +1973,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2048,14 +2047,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbServersResponse, DbServer> response = oracleDatabaseClient.ListDbServersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbServer item) =>
+            await foreach (DbServer item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbServersResponse page) =>
+            await foreach (ListDbServersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2064,7 +2063,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2144,14 +2143,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbNode item) =>
+            await foreach (DbNode item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbNodesResponse page) =>
+            await foreach (ListDbNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2160,7 +2159,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2234,14 +2233,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbNode item) =>
+            await foreach (DbNode item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbNodesResponse page) =>
+            await foreach (ListDbNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2250,7 +2249,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2324,14 +2323,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbNode item) =>
+            await foreach (DbNode item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbNodesResponse page) =>
+            await foreach (ListDbNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2340,7 +2339,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2414,14 +2413,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbNode item) =>
+            await foreach (DbNode item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbNodesResponse page) =>
+            await foreach (ListDbNodesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2430,7 +2429,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2512,14 +2511,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGiVersionsResponse, GiVersion> response = oracleDatabaseClient.ListGiVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GiVersion item) =>
+            await foreach (GiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGiVersionsResponse page) =>
+            await foreach (ListGiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2528,7 +2527,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2602,14 +2601,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGiVersionsResponse, GiVersion> response = oracleDatabaseClient.ListGiVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GiVersion item) =>
+            await foreach (GiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGiVersionsResponse page) =>
+            await foreach (ListGiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2618,7 +2617,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2692,14 +2691,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListGiVersionsResponse, GiVersion> response = oracleDatabaseClient.ListGiVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((GiVersion item) =>
+            await foreach (GiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListGiVersionsResponse page) =>
+            await foreach (ListGiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2708,7 +2707,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2790,14 +2789,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMinorVersionsResponse, MinorVersion> response = oracleDatabaseClient.ListMinorVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MinorVersion item) =>
+            await foreach (MinorVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMinorVersionsResponse page) =>
+            await foreach (ListMinorVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2806,7 +2805,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2880,14 +2879,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMinorVersionsResponse, MinorVersion> response = oracleDatabaseClient.ListMinorVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MinorVersion item) =>
+            await foreach (MinorVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMinorVersionsResponse page) =>
+            await foreach (ListMinorVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2896,7 +2895,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2970,14 +2969,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListMinorVersionsResponse, MinorVersion> response = oracleDatabaseClient.ListMinorVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MinorVersion item) =>
+            await foreach (MinorVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMinorVersionsResponse page) =>
+            await foreach (ListMinorVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2986,7 +2985,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3068,14 +3067,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemShapesResponse, DbSystemShape> response = oracleDatabaseClient.ListDbSystemShapesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemShape item) =>
+            await foreach (DbSystemShape item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemShapesResponse page) =>
+            await foreach (ListDbSystemShapesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3084,7 +3083,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3158,14 +3157,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemShapesResponse, DbSystemShape> response = oracleDatabaseClient.ListDbSystemShapesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemShape item) =>
+            await foreach (DbSystemShape item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemShapesResponse page) =>
+            await foreach (ListDbSystemShapesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3174,7 +3173,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3248,14 +3247,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemShapesResponse, DbSystemShape> response = oracleDatabaseClient.ListDbSystemShapesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemShape item) =>
+            await foreach (DbSystemShape item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemShapesResponse page) =>
+            await foreach (ListDbSystemShapesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3264,7 +3263,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3348,14 +3347,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabasesResponse, AutonomousDatabase> response = oracleDatabaseClient.ListAutonomousDatabasesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabase item) =>
+            await foreach (AutonomousDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabasesResponse page) =>
+            await foreach (ListAutonomousDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3364,7 +3363,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3438,14 +3437,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabasesResponse, AutonomousDatabase> response = oracleDatabaseClient.ListAutonomousDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabase item) =>
+            await foreach (AutonomousDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabasesResponse page) =>
+            await foreach (ListAutonomousDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3454,7 +3453,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3528,14 +3527,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabasesResponse, AutonomousDatabase> response = oracleDatabaseClient.ListAutonomousDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabase item) =>
+            await foreach (AutonomousDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabasesResponse page) =>
+            await foreach (ListAutonomousDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3544,7 +3543,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4517,14 +4516,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDbVersionsResponse, AutonomousDbVersion> response = oracleDatabaseClient.ListAutonomousDbVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDbVersion item) =>
+            await foreach (AutonomousDbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDbVersionsResponse page) =>
+            await foreach (ListAutonomousDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4533,7 +4532,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4607,14 +4606,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDbVersionsResponse, AutonomousDbVersion> response = oracleDatabaseClient.ListAutonomousDbVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDbVersion item) =>
+            await foreach (AutonomousDbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDbVersionsResponse page) =>
+            await foreach (ListAutonomousDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4623,7 +4622,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4697,14 +4696,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDbVersionsResponse, AutonomousDbVersion> response = oracleDatabaseClient.ListAutonomousDbVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDbVersion item) =>
+            await foreach (AutonomousDbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDbVersionsResponse page) =>
+            await foreach (ListAutonomousDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4713,7 +4712,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4795,14 +4794,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseCharacterSetsResponse, AutonomousDatabaseCharacterSet> response = oracleDatabaseClient.ListAutonomousDatabaseCharacterSetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseCharacterSet item) =>
+            await foreach (AutonomousDatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseCharacterSetsResponse page) =>
+            await foreach (ListAutonomousDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4811,7 +4810,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4885,14 +4884,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseCharacterSetsResponse, AutonomousDatabaseCharacterSet> response = oracleDatabaseClient.ListAutonomousDatabaseCharacterSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseCharacterSet item) =>
+            await foreach (AutonomousDatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseCharacterSetsResponse page) =>
+            await foreach (ListAutonomousDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4901,7 +4900,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -4975,14 +4974,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseCharacterSetsResponse, AutonomousDatabaseCharacterSet> response = oracleDatabaseClient.ListAutonomousDatabaseCharacterSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseCharacterSet item) =>
+            await foreach (AutonomousDatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseCharacterSetsResponse page) =>
+            await foreach (ListAutonomousDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4991,7 +4990,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5073,14 +5072,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseBackupsResponse, AutonomousDatabaseBackup> response = oracleDatabaseClient.ListAutonomousDatabaseBackupsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseBackup item) =>
+            await foreach (AutonomousDatabaseBackup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseBackupsResponse page) =>
+            await foreach (ListAutonomousDatabaseBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5089,7 +5088,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5163,14 +5162,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseBackupsResponse, AutonomousDatabaseBackup> response = oracleDatabaseClient.ListAutonomousDatabaseBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseBackup item) =>
+            await foreach (AutonomousDatabaseBackup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseBackupsResponse page) =>
+            await foreach (ListAutonomousDatabaseBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5179,7 +5178,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -5253,14 +5252,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListAutonomousDatabaseBackupsResponse, AutonomousDatabaseBackup> response = oracleDatabaseClient.ListAutonomousDatabaseBackupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AutonomousDatabaseBackup item) =>
+            await foreach (AutonomousDatabaseBackup item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAutonomousDatabaseBackupsResponse page) =>
+            await foreach (ListAutonomousDatabaseBackupsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5269,7 +5268,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6280,14 +6279,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbNetworksResponse, OdbNetwork> response = oracleDatabaseClient.ListOdbNetworksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbNetwork item) =>
+            await foreach (OdbNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbNetworksResponse page) =>
+            await foreach (ListOdbNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6296,7 +6295,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6370,14 +6369,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbNetworksResponse, OdbNetwork> response = oracleDatabaseClient.ListOdbNetworksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbNetwork item) =>
+            await foreach (OdbNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbNetworksResponse page) =>
+            await foreach (ListOdbNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6386,7 +6385,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -6460,14 +6459,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbNetworksResponse, OdbNetwork> response = oracleDatabaseClient.ListOdbNetworksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbNetwork item) =>
+            await foreach (OdbNetwork item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbNetworksResponse page) =>
+            await foreach (ListOdbNetworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -6476,7 +6475,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7029,14 +7028,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbSubnetsResponse, OdbSubnet> response = oracleDatabaseClient.ListOdbSubnetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbSubnet item) =>
+            await foreach (OdbSubnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbSubnetsResponse page) =>
+            await foreach (ListOdbSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7045,7 +7044,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7119,14 +7118,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbSubnetsResponse, OdbSubnet> response = oracleDatabaseClient.ListOdbSubnetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbSubnet item) =>
+            await foreach (OdbSubnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbSubnetsResponse page) =>
+            await foreach (ListOdbSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7135,7 +7134,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7209,14 +7208,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListOdbSubnetsResponse, OdbSubnet> response = oracleDatabaseClient.ListOdbSubnetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((OdbSubnet item) =>
+            await foreach (OdbSubnet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListOdbSubnetsResponse page) =>
+            await foreach (ListOdbSubnetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7225,7 +7224,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7778,14 +7777,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExadbVmClustersResponse, ExadbVmCluster> response = oracleDatabaseClient.ListExadbVmClustersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExadbVmCluster item) =>
+            await foreach (ExadbVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExadbVmClustersResponse page) =>
+            await foreach (ListExadbVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7794,7 +7793,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7868,14 +7867,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExadbVmClustersResponse, ExadbVmCluster> response = oracleDatabaseClient.ListExadbVmClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExadbVmCluster item) =>
+            await foreach (ExadbVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExadbVmClustersResponse page) =>
+            await foreach (ListExadbVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7884,7 +7883,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -7958,14 +7957,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExadbVmClustersResponse, ExadbVmCluster> response = oracleDatabaseClient.ListExadbVmClustersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExadbVmCluster item) =>
+            await foreach (ExadbVmCluster item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExadbVmClustersResponse page) =>
+            await foreach (ListExadbVmClustersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -7974,7 +7973,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8848,14 +8847,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExascaleDbStorageVaultsResponse, ExascaleDbStorageVault> response = oracleDatabaseClient.ListExascaleDbStorageVaultsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExascaleDbStorageVault item) =>
+            await foreach (ExascaleDbStorageVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExascaleDbStorageVaultsResponse page) =>
+            await foreach (ListExascaleDbStorageVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8864,7 +8863,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -8938,14 +8937,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExascaleDbStorageVaultsResponse, ExascaleDbStorageVault> response = oracleDatabaseClient.ListExascaleDbStorageVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExascaleDbStorageVault item) =>
+            await foreach (ExascaleDbStorageVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExascaleDbStorageVaultsResponse page) =>
+            await foreach (ListExascaleDbStorageVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -8954,7 +8953,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9028,14 +9027,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListExascaleDbStorageVaultsResponse, ExascaleDbStorageVault> response = oracleDatabaseClient.ListExascaleDbStorageVaultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ExascaleDbStorageVault item) =>
+            await foreach (ExascaleDbStorageVault item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExascaleDbStorageVaultsResponse page) =>
+            await foreach (ListExascaleDbStorageVaultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9044,7 +9043,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9593,14 +9592,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemInitialStorageSizesResponse, DbSystemInitialStorageSize> response = oracleDatabaseClient.ListDbSystemInitialStorageSizesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemInitialStorageSize item) =>
+            await foreach (DbSystemInitialStorageSize item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemInitialStorageSizesResponse page) =>
+            await foreach (ListDbSystemInitialStorageSizesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9609,7 +9608,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9683,14 +9682,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemInitialStorageSizesResponse, DbSystemInitialStorageSize> response = oracleDatabaseClient.ListDbSystemInitialStorageSizesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemInitialStorageSize item) =>
+            await foreach (DbSystemInitialStorageSize item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemInitialStorageSizesResponse page) =>
+            await foreach (ListDbSystemInitialStorageSizesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9699,7 +9698,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9773,14 +9772,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemInitialStorageSizesResponse, DbSystemInitialStorageSize> response = oracleDatabaseClient.ListDbSystemInitialStorageSizesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystemInitialStorageSize item) =>
+            await foreach (DbSystemInitialStorageSize item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemInitialStorageSizesResponse page) =>
+            await foreach (ListDbSystemInitialStorageSizesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9789,7 +9788,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9871,14 +9870,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabasesResponse, Database> response = oracleDatabaseClient.ListDatabasesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Database item) =>
+            await foreach (Database item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            await foreach (ListDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9887,7 +9886,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -9961,14 +9960,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabasesResponse, Database> response = oracleDatabaseClient.ListDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Database item) =>
+            await foreach (Database item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            await foreach (ListDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -9977,7 +9976,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10051,14 +10050,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabasesResponse, Database> response = oracleDatabaseClient.ListDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Database item) =>
+            await foreach (Database item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            await foreach (ListDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10067,7 +10066,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10236,14 +10235,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPluggableDatabasesResponse, PluggableDatabase> response = oracleDatabaseClient.ListPluggableDatabasesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PluggableDatabase item) =>
+            await foreach (PluggableDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPluggableDatabasesResponse page) =>
+            await foreach (ListPluggableDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10252,7 +10251,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10326,14 +10325,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPluggableDatabasesResponse, PluggableDatabase> response = oracleDatabaseClient.ListPluggableDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PluggableDatabase item) =>
+            await foreach (PluggableDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPluggableDatabasesResponse page) =>
+            await foreach (ListPluggableDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10342,7 +10341,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10416,14 +10415,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListPluggableDatabasesResponse, PluggableDatabase> response = oracleDatabaseClient.ListPluggableDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PluggableDatabase item) =>
+            await foreach (PluggableDatabase item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPluggableDatabasesResponse page) =>
+            await foreach (ListPluggableDatabasesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10432,7 +10431,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10603,14 +10602,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemsResponse, DbSystem> response = oracleDatabaseClient.ListDbSystemsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystem item) =>
+            await foreach (DbSystem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemsResponse page) =>
+            await foreach (ListDbSystemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10619,7 +10618,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10693,14 +10692,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemsResponse, DbSystem> response = oracleDatabaseClient.ListDbSystemsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystem item) =>
+            await foreach (DbSystem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemsResponse page) =>
+            await foreach (ListDbSystemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10709,7 +10708,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -10783,14 +10782,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbSystemsResponse, DbSystem> response = oracleDatabaseClient.ListDbSystemsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbSystem item) =>
+            await foreach (DbSystem item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbSystemsResponse page) =>
+            await foreach (ListDbSystemsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -10799,7 +10798,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11350,14 +11349,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbVersionsResponse, DbVersion> response = oracleDatabaseClient.ListDbVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbVersion item) =>
+            await foreach (DbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbVersionsResponse page) =>
+            await foreach (ListDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11366,7 +11365,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11440,14 +11439,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbVersionsResponse, DbVersion> response = oracleDatabaseClient.ListDbVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbVersion item) =>
+            await foreach (DbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbVersionsResponse page) =>
+            await foreach (ListDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11456,7 +11455,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11530,14 +11529,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDbVersionsResponse, DbVersion> response = oracleDatabaseClient.ListDbVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbVersion item) =>
+            await foreach (DbVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbVersionsResponse page) =>
+            await foreach (ListDbVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11546,7 +11545,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11628,14 +11627,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabaseCharacterSetsResponse, DatabaseCharacterSet> response = oracleDatabaseClient.ListDatabaseCharacterSetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DatabaseCharacterSet item) =>
+            await foreach (DatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabaseCharacterSetsResponse page) =>
+            await foreach (ListDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11644,7 +11643,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11718,14 +11717,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabaseCharacterSetsResponse, DatabaseCharacterSet> response = oracleDatabaseClient.ListDatabaseCharacterSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DatabaseCharacterSet item) =>
+            await foreach (DatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabaseCharacterSetsResponse page) =>
+            await foreach (ListDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11734,7 +11733,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -11808,14 +11807,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<ListDatabaseCharacterSetsResponse, DatabaseCharacterSet> response = oracleDatabaseClient.ListDatabaseCharacterSetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DatabaseCharacterSet item) =>
+            await foreach (DatabaseCharacterSet item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDatabaseCharacterSetsResponse page) =>
+            await foreach (ListDatabaseCharacterSetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -11824,7 +11823,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;

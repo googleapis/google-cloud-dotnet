@@ -22,7 +22,6 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
     using gcnv = Google.Cloud.Notebooks.V1;
 
@@ -86,14 +85,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Instance item) =>
+            await foreach (gcnv::Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListInstancesResponse page) =>
+            await foreach (gcnv::ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -102,7 +101,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -176,14 +175,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Instance item) =>
+            await foreach (gcnv::Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListInstancesResponse page) =>
+            await foreach (gcnv::ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -192,7 +191,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1769,14 +1768,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Environment item) =>
+            await foreach (gcnv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListEnvironmentsResponse page) =>
+            await foreach (gcnv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1785,7 +1784,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -1859,14 +1858,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Environment item) =>
+            await foreach (gcnv::Environment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListEnvironmentsResponse page) =>
+            await foreach (gcnv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1875,7 +1874,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2263,14 +2262,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Schedule item) =>
+            await foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
+            await foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2279,7 +2278,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2353,14 +2352,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Schedule item) =>
+            await foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
+            await foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2369,7 +2368,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -2443,14 +2442,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Schedule item) =>
+            await foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
+            await foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2459,7 +2458,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3073,14 +3072,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Execution item) =>
+            await foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
+            await foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3089,7 +3088,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3163,14 +3162,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Execution item) =>
+            await foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
+            await foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3179,7 +3178,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
@@ -3253,14 +3252,14 @@ namespace GoogleCSharpSnippets
             PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcnv::Execution item) =>
+            await foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
+            await foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3269,7 +3268,7 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
