@@ -16,10 +16,22 @@
                 "CreateDataAgentAsync"
               ]
             },
+            "CreateDataAgentSync": {
+              "methods": [
+                "CreateDataAgentSync",
+                "CreateDataAgentSyncAsync"
+              ]
+            },
             "DeleteDataAgent": {
               "methods": [
                 "DeleteDataAgent",
                 "DeleteDataAgentAsync"
+              ]
+            },
+            "DeleteDataAgentSync": {
+              "methods": [
+                "DeleteDataAgentSync",
+                "DeleteDataAgentSyncAsync"
               ]
             },
             "GetDataAgent": {
@@ -56,6 +68,12 @@
               "methods": [
                 "UpdateDataAgent",
                 "UpdateDataAgentAsync"
+              ]
+            },
+            "UpdateDataAgentSync": {
+              "methods": [
+                "UpdateDataAgentSync",
+                "UpdateDataAgentSyncAsync"
               ]
             }
           }

@@ -879,6 +879,107 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDataAgentSync</summary>
+        public void CreateDataAgentSyncRequestObject()
+        {
+            // Snippet: CreateDataAgentSync(CreateDataAgentRequest, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDataAgentRequest request = new CreateDataAgentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DataAgentId = "",
+                DataAgent = new DataAgent(),
+                RequestId = "",
+            };
+            // Make the request
+            DataAgent response = dataAgentServiceClient.CreateDataAgentSync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataAgentSyncAsync</summary>
+        public async Task CreateDataAgentSyncRequestObjectAsync()
+        {
+            // Snippet: CreateDataAgentSyncAsync(CreateDataAgentRequest, CallSettings)
+            // Additional: CreateDataAgentSyncAsync(CreateDataAgentRequest, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDataAgentRequest request = new CreateDataAgentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DataAgentId = "",
+                DataAgent = new DataAgent(),
+                RequestId = "",
+            };
+            // Make the request
+            DataAgent response = await dataAgentServiceClient.CreateDataAgentSyncAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataAgentSync</summary>
+        public void CreateDataAgentSync()
+        {
+            // Snippet: CreateDataAgentSync(string, DataAgent, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DataAgent dataAgent = new DataAgent();
+            string dataAgentId = "";
+            // Make the request
+            DataAgent response = dataAgentServiceClient.CreateDataAgentSync(parent, dataAgent, dataAgentId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataAgentSyncAsync</summary>
+        public async Task CreateDataAgentSyncAsync()
+        {
+            // Snippet: CreateDataAgentSyncAsync(string, DataAgent, string, CallSettings)
+            // Additional: CreateDataAgentSyncAsync(string, DataAgent, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DataAgent dataAgent = new DataAgent();
+            string dataAgentId = "";
+            // Make the request
+            DataAgent response = await dataAgentServiceClient.CreateDataAgentSyncAsync(parent, dataAgent, dataAgentId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataAgentSync</summary>
+        public void CreateDataAgentSyncResourceNames()
+        {
+            // Snippet: CreateDataAgentSync(LocationName, DataAgent, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DataAgent dataAgent = new DataAgent();
+            string dataAgentId = "";
+            // Make the request
+            DataAgent response = dataAgentServiceClient.CreateDataAgentSync(parent, dataAgent, dataAgentId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataAgentSyncAsync</summary>
+        public async Task CreateDataAgentSyncResourceNamesAsync()
+        {
+            // Snippet: CreateDataAgentSyncAsync(LocationName, DataAgent, string, CallSettings)
+            // Additional: CreateDataAgentSyncAsync(LocationName, DataAgent, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DataAgent dataAgent = new DataAgent();
+            string dataAgentId = "";
+            // Make the request
+            DataAgent response = await dataAgentServiceClient.CreateDataAgentSyncAsync(parent, dataAgent, dataAgentId);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateDataAgent</summary>
         public void UpdateDataAgentRequestObject()
         {
@@ -1006,6 +1107,72 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 DataAgent retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataAgentSync</summary>
+        public void UpdateDataAgentSyncRequestObject()
+        {
+            // Snippet: UpdateDataAgentSync(UpdateDataAgentRequest, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDataAgentRequest request = new UpdateDataAgentRequest
+            {
+                UpdateMask = new FieldMask(),
+                DataAgent = new DataAgent(),
+                RequestId = "",
+            };
+            // Make the request
+            DataAgent response = dataAgentServiceClient.UpdateDataAgentSync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataAgentSyncAsync</summary>
+        public async Task UpdateDataAgentSyncRequestObjectAsync()
+        {
+            // Snippet: UpdateDataAgentSyncAsync(UpdateDataAgentRequest, CallSettings)
+            // Additional: UpdateDataAgentSyncAsync(UpdateDataAgentRequest, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDataAgentRequest request = new UpdateDataAgentRequest
+            {
+                UpdateMask = new FieldMask(),
+                DataAgent = new DataAgent(),
+                RequestId = "",
+            };
+            // Make the request
+            DataAgent response = await dataAgentServiceClient.UpdateDataAgentSyncAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataAgentSync</summary>
+        public void UpdateDataAgentSync()
+        {
+            // Snippet: UpdateDataAgentSync(DataAgent, FieldMask, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            DataAgent dataAgent = new DataAgent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataAgent response = dataAgentServiceClient.UpdateDataAgentSync(dataAgent, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataAgentSyncAsync</summary>
+        public async Task UpdateDataAgentSyncAsync()
+        {
+            // Snippet: UpdateDataAgentSyncAsync(DataAgent, FieldMask, CallSettings)
+            // Additional: UpdateDataAgentSyncAsync(DataAgent, FieldMask, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataAgent dataAgent = new DataAgent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataAgent response = await dataAgentServiceClient.UpdateDataAgentSyncAsync(dataAgent, updateMask);
             // End snippet
         }
 
@@ -1191,6 +1358,95 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSync</summary>
+        public void DeleteDataAgentSyncRequestObject()
+        {
+            // Snippet: DeleteDataAgentSync(DeleteDataAgentRequest, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDataAgentRequest request = new DeleteDataAgentRequest
+            {
+                DataAgentName = DataAgentName.FromProjectLocationDataAgent("[PROJECT]", "[LOCATION]", "[DATA_AGENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            dataAgentServiceClient.DeleteDataAgentSync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSyncAsync</summary>
+        public async Task DeleteDataAgentSyncRequestObjectAsync()
+        {
+            // Snippet: DeleteDataAgentSyncAsync(DeleteDataAgentRequest, CallSettings)
+            // Additional: DeleteDataAgentSyncAsync(DeleteDataAgentRequest, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDataAgentRequest request = new DeleteDataAgentRequest
+            {
+                DataAgentName = DataAgentName.FromProjectLocationDataAgent("[PROJECT]", "[LOCATION]", "[DATA_AGENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            await dataAgentServiceClient.DeleteDataAgentSyncAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSync</summary>
+        public void DeleteDataAgentSync()
+        {
+            // Snippet: DeleteDataAgentSync(string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataAgents/[DATA_AGENT]";
+            // Make the request
+            dataAgentServiceClient.DeleteDataAgentSync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSyncAsync</summary>
+        public async Task DeleteDataAgentSyncAsync()
+        {
+            // Snippet: DeleteDataAgentSyncAsync(string, CallSettings)
+            // Additional: DeleteDataAgentSyncAsync(string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataAgents/[DATA_AGENT]";
+            // Make the request
+            await dataAgentServiceClient.DeleteDataAgentSyncAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSync</summary>
+        public void DeleteDataAgentSyncResourceNames()
+        {
+            // Snippet: DeleteDataAgentSync(DataAgentName, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            DataAgentName name = DataAgentName.FromProjectLocationDataAgent("[PROJECT]", "[LOCATION]", "[DATA_AGENT]");
+            // Make the request
+            dataAgentServiceClient.DeleteDataAgentSync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataAgentSyncAsync</summary>
+        public async Task DeleteDataAgentSyncResourceNamesAsync()
+        {
+            // Snippet: DeleteDataAgentSyncAsync(DataAgentName, CallSettings)
+            // Additional: DeleteDataAgentSyncAsync(DataAgentName, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataAgentName name = DataAgentName.FromProjectLocationDataAgent("[PROJECT]", "[LOCATION]", "[DATA_AGENT]");
+            // Make the request
+            await dataAgentServiceClient.DeleteDataAgentSyncAsync(name);
             // End snippet
         }
 

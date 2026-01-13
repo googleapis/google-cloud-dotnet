@@ -3,7 +3,7 @@
 //     source: google/cloud/geminidataanalytics/v1beta/data_agent_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -84,6 +84,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest> __Marshaller_google_cloud_geminidataanalytics_v1beta_DeleteDataAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
@@ -123,6 +125,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> __Method_CreateDataAgentSync = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDataAgentSync",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_CreateDataAgentRequest,
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_DataAgent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.LongRunning.Operation> __Method_UpdateDataAgent = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -131,12 +141,28 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> __Method_UpdateDataAgentSync = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDataAgentSync",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_UpdateDataAgentRequest,
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_DataAgent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.LongRunning.Operation> __Method_DeleteDataAgent = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteDataAgent",
         __Marshaller_google_cloud_geminidataanalytics_v1beta_DeleteDataAgentRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDataAgentSync = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDataAgentSync",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_DeleteDataAgentRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -214,6 +240,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
 
       /// <summary>
+      /// Creates a new DataAgent in a given project and location synchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> CreateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Updates the parameters of a single DataAgent.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -226,6 +264,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
 
       /// <summary>
+      /// Updates the parameters of a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> UpdateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single DataAgent.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -233,6 +283,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataAgent(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -487,6 +549,54 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataAgent, null, options, request);
       }
       /// <summary>
+      /// Creates a new DataAgent in a given project and location synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent CreateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDataAgentSync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DataAgent in a given project and location synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent CreateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDataAgentSync, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new DataAgent in a given project and location synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> CreateDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDataAgentSyncAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DataAgent in a given project and location synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> CreateDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDataAgentSync, null, options, request);
+      }
+      /// <summary>
       /// Updates the parameters of a single DataAgent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -535,6 +645,54 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataAgent, null, options, request);
       }
       /// <summary>
+      /// Updates the parameters of a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent UpdateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataAgentSync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent UpdateDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDataAgentSync, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> UpdateDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataAgentSyncAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent> UpdateDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDataAgentSync, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single DataAgent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -581,6 +739,54 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataAgentAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataAgent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDataAgentSync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataAgentSync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDataAgentSync, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDataAgentSyncAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DataAgent synchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataAgentSyncAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDataAgentSync, null, options, request);
       }
       /// <summary>
       /// Gets the IAM policy for DataAgent
@@ -696,8 +902,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           .AddMethod(__Method_ListAccessibleDataAgents, serviceImpl.ListAccessibleDataAgents)
           .AddMethod(__Method_GetDataAgent, serviceImpl.GetDataAgent)
           .AddMethod(__Method_CreateDataAgent, serviceImpl.CreateDataAgent)
+          .AddMethod(__Method_CreateDataAgentSync, serviceImpl.CreateDataAgentSync)
           .AddMethod(__Method_UpdateDataAgent, serviceImpl.UpdateDataAgent)
+          .AddMethod(__Method_UpdateDataAgentSync, serviceImpl.UpdateDataAgentSync)
           .AddMethod(__Method_DeleteDataAgent, serviceImpl.DeleteDataAgent)
+          .AddMethod(__Method_DeleteDataAgentSync, serviceImpl.DeleteDataAgentSync)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy).Build();
     }
@@ -713,8 +922,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       serviceBinder.AddMethod(__Method_ListAccessibleDataAgents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsResponse>(serviceImpl.ListAccessibleDataAgents));
       serviceBinder.AddMethod(__Method_GetDataAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>(serviceImpl.GetDataAgent));
       serviceBinder.AddMethod(__Method_CreateDataAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDataAgent));
+      serviceBinder.AddMethod(__Method_CreateDataAgentSync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>(serviceImpl.CreateDataAgentSync));
       serviceBinder.AddMethod(__Method_UpdateDataAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataAgent));
+      serviceBinder.AddMethod(__Method_UpdateDataAgentSync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent>(serviceImpl.UpdateDataAgentSync));
       serviceBinder.AddMethod(__Method_DeleteDataAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDataAgent));
+      serviceBinder.AddMethod(__Method_DeleteDataAgentSync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDataAgentSync));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
     }
