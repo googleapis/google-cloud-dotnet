@@ -28,7 +28,7 @@ namespace Grafeas.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
             "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
             "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
-            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/AoKE0Rp",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQiuQwKE0Rp",
             "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
             "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
             "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
@@ -42,34 +42,39 @@ namespace Grafeas.V1 {
             "LlRpbWVzdGFtcEID4EEDEj8KC3Nib21fc3RhdHVzGAkgASgLMiouZ3JhZmVh",
             "cy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMSWwoZdnVsbmVy",
             "YWJpbGl0eV9hdHRlc3RhdGlvbhgKIAEoCzI4LmdyYWZlYXMudjEuRGlzY292",
-            "ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmlsaXR5QXR0ZXN0YXRpb24aKgoRQW5h",
-            "bHlzaXNDb21wbGV0ZWQSFQoNYW5hbHlzaXNfdHlwZRgBIAMoCRqpAQoKU0JP",
-            "TVN0YXR1cxJICgpzYm9tX3N0YXRlGAEgASgOMjQuZ3JhZmVhcy52MS5EaXNj",
-            "b3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMuU0JPTVN0YXRlEg0KBWVycm9y",
-            "GAIgASgJIkIKCVNCT01TdGF0ZRIaChZTQk9NX1NUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCwoHUEVORElORxABEgwKCENPTVBMRVRFEAIaswIKGFZ1bG5lcmFiaWxp",
-            "dHlBdHRlc3RhdGlvbhI1ChFsYXN0X2F0dGVtcHRfdGltZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASZQoFc3RhdGUYAiABKA4yVi5ncmFm",
-            "ZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuVnVsbmVyYWJpbGl0eUF0dGVz",
-            "dGF0aW9uLlZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEg0KBWVycm9y",
-            "GAMgASgJImoKHVZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEi8KK1ZV",
-            "TE5FUkFCSUxJVFlfQVRURVNUQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIL",
-            "CgdTVUNDRVNTEAESCwoHRkFJTFVSRRACIlMKEkNvbnRpbnVvdXNBbmFseXNp",
-            "cxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoGQUNU",
-            "SVZFEAESDAoISU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0dXMSHwobQU5B",
-            "TFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCFND",
-            "QU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEgwKCENPTVBMRVRFEAMS",
-            "EwoPRklOSVNIRURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5TVVBQT1JURUQQ",
-            "BRoCEAFCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIG",
-            "cHJvdG8z"));
+            "ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmlsaXR5QXR0ZXN0YXRpb24SMwoFZmls",
+            "ZXMYCyADKAsyJC5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuRmls",
+            "ZRoqChFBbmFseXNpc0NvbXBsZXRlZBIVCg1hbmFseXNpc190eXBlGAEgAygJ",
+            "GqkBCgpTQk9NU3RhdHVzEkgKCnNib21fc3RhdGUYASABKA4yNC5ncmFmZWFz",
+            "LnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuU0JPTVN0YXR1cy5TQk9NU3RhdGUS",
+            "DQoFZXJyb3IYAiABKAkiQgoJU0JPTVN0YXRlEhoKFlNCT01fU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIQ09NUExFVEUQAhqzAgoYVnVs",
+            "bmVyYWJpbGl0eUF0dGVzdGF0aW9uEjUKEWxhc3RfYXR0ZW1wdF90aW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJlCgVzdGF0ZRgCIAEo",
+            "DjJWLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmls",
+            "aXR5QXR0ZXN0YXRpb24uVnVsbmVyYWJpbGl0eUF0dGVzdGF0aW9uU3RhdGUS",
+            "DQoFZXJyb3IYAyABKAkiagodVnVsbmVyYWJpbGl0eUF0dGVzdGF0aW9uU3Rh",
+            "dGUSLworVlVMTkVSQUJJTElUWV9BVFRFU1RBVElPTl9TVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgsKB1NVQ0NFU1MQARILCgdGQUlMVVJFEAIahQEKBEZpbGUSDAoE",
+            "bmFtZRgBIAEoCRJACgZkaWdlc3QYAiADKAsyMC5ncmFmZWFzLnYxLkRpc2Nv",
+            "dmVyeU9jY3VycmVuY2UuRmlsZS5EaWdlc3RFbnRyeRotCgtEaWdlc3RFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlMKEkNvbnRpbnVv",
+            "dXNBbmFseXNpcxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVE",
+            "EAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0",
+            "dXMSHwobQU5BTFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElO",
+            "RxABEgwKCFNDQU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEgwKCENP",
+            "TVBMRVRFEAMSEwoPRklOSVNIRURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5T",
+            "VVBQT1JURUQQBRoCEAFCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVh",
+            "c6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryNote), global::Grafeas.V1.DiscoveryNote.Parser, new[]{ "AnalysisKind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus", "VulnerabilityAttestation" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus", "VulnerabilityAttestation", "Files" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus), global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Parser, new[]{ "SbomState", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation), global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Parser, new[]{ "LastAttemptTime", "State", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation), global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Parser, new[]{ "LastAttemptTime", "State", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.File), global::Grafeas.V1.DiscoveryOccurrence.Types.File.Parser, new[]{ "Name", "Digest" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
           }));
     }
     #endregion
@@ -323,6 +328,7 @@ namespace Grafeas.V1 {
       archiveTime_ = other.archiveTime_ != null ? other.archiveTime_.Clone() : null;
       sbomStatus_ = other.sbomStatus_ != null ? other.sbomStatus_.Clone() : null;
       vulnerabilityAttestation_ = other.vulnerabilityAttestation_ != null ? other.vulnerabilityAttestation_.Clone() : null;
+      files_ = other.files_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -481,6 +487,20 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "files" field.</summary>
+    public const int FilesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Grafeas.V1.DiscoveryOccurrence.Types.File> _repeated_files_codec
+        = pb::FieldCodec.ForMessage(90, global::Grafeas.V1.DiscoveryOccurrence.Types.File.Parser);
+    private readonly pbc::RepeatedField<global::Grafeas.V1.DiscoveryOccurrence.Types.File> files_ = new pbc::RepeatedField<global::Grafeas.V1.DiscoveryOccurrence.Types.File>();
+    /// <summary>
+    /// Files that make up the resource described by the occurrence.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Grafeas.V1.DiscoveryOccurrence.Types.File> Files {
+      get { return files_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -506,6 +526,7 @@ namespace Grafeas.V1 {
       if (!object.Equals(ArchiveTime, other.ArchiveTime)) return false;
       if (!object.Equals(SbomStatus, other.SbomStatus)) return false;
       if (!object.Equals(VulnerabilityAttestation, other.VulnerabilityAttestation)) return false;
+      if(!files_.Equals(other.files_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -523,6 +544,7 @@ namespace Grafeas.V1 {
       if (archiveTime_ != null) hash ^= ArchiveTime.GetHashCode();
       if (sbomStatus_ != null) hash ^= SbomStatus.GetHashCode();
       if (vulnerabilityAttestation_ != null) hash ^= VulnerabilityAttestation.GetHashCode();
+      hash ^= files_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -578,6 +600,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(VulnerabilityAttestation);
       }
+      files_.WriteTo(output, _repeated_files_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -625,6 +648,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(VulnerabilityAttestation);
       }
+      files_.WriteTo(ref output, _repeated_files_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -663,6 +687,7 @@ namespace Grafeas.V1 {
       if (vulnerabilityAttestation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VulnerabilityAttestation);
       }
+      size += files_.CalculateSize(_repeated_files_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -721,6 +746,7 @@ namespace Grafeas.V1 {
         }
         VulnerabilityAttestation.MergeFrom(other.VulnerabilityAttestation);
       }
+      files_.Add(other.files_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -794,6 +820,10 @@ namespace Grafeas.V1 {
             input.ReadMessage(VulnerabilityAttestation);
             break;
           }
+          case 90: {
+            files_.AddEntriesFrom(input, _repeated_files_codec);
+            break;
+          }
         }
       }
     #endif
@@ -865,6 +895,10 @@ namespace Grafeas.V1 {
               VulnerabilityAttestation = new global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation();
             }
             input.ReadMessage(VulnerabilityAttestation);
+            break;
+          }
+          case 90: {
+            files_.AddEntriesFrom(ref input, _repeated_files_codec);
             break;
           }
         }
@@ -1685,6 +1719,222 @@ namespace Grafeas.V1 {
 
         }
         #endregion
+
+      }
+
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class File : pb::IMessage<File>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<File> _parser = new pb::MessageParser<File>(() => new File());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<File> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Grafeas.V1.DiscoveryOccurrence.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public File() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public File(File other) : this() {
+          name_ = other.name_;
+          digest_ = other.digest_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public File Clone() {
+          return new File(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "digest" field.</summary>
+        public const int DigestFieldNumber = 2;
+        private static readonly pbc::MapField<string, string>.Codec _map_digest_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+        private readonly pbc::MapField<string, string> digest_ = new pbc::MapField<string, string>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> Digest {
+          get { return digest_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as File);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(File other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (!Digest.Equals(other.Digest)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= Digest.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          digest_.WriteTo(output, _map_digest_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          digest_.WriteTo(ref output, _map_digest_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += digest_.CalculateSize(_map_digest_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(File other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          digest_.MergeFrom(other.digest_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                digest_.AddEntriesFrom(input, _map_digest_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                digest_.AddEntriesFrom(ref input, _map_digest_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

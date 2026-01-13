@@ -25,28 +25,49 @@ namespace Grafeas.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdncmFmZWFzL3YxL3NlY3JldC5wcm90bxIKZ3JhZmVhcy52MRofZ29vZ2xl",
-            "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxoXZ3JhZmVhcy92MS9jb21tb24ucHJvdG8iDAoKU2Vj",
-            "cmV0Tm90ZSKiAQoQU2VjcmV0T2NjdXJyZW5jZRIpCgRraW5kGAEgASgOMhYu",
-            "Z3JhZmVhcy52MS5TZWNyZXRLaW5kQgPgQQISMgoJbG9jYXRpb25zGAIgAygL",
-            "MhouZ3JhZmVhcy52MS5TZWNyZXRMb2NhdGlvbkID4EEBEi8KCHN0YXR1c2Vz",
-            "GAMgAygLMhguZ3JhZmVhcy52MS5TZWNyZXRTdGF0dXNCA+BBASJPCg5TZWNy",
-            "ZXRMb2NhdGlvbhIxCg1maWxlX2xvY2F0aW9uGAEgASgLMhguZ3JhZmVhcy52",
-            "MS5GaWxlTG9jYXRpb25IAEIKCghsb2NhdGlvbiLXAQoMU2VjcmV0U3RhdHVz",
-            "EjQKBnN0YXR1cxgBIAEoDjIfLmdyYWZlYXMudjEuU2VjcmV0U3RhdHVzLlN0",
-            "YXR1c0ID4EEBEjQKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEBEhQKB21lc3NhZ2UYAyABKAlCA+BBASJFCgZT",
-            "dGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHVU5LTk9XThABEgkK",
-            "BVZBTElEEAISCwoHSU5WQUxJRBADKmsKClNlY3JldEtpbmQSGwoXU0VDUkVU",
-            "X0tJTkRfVU5TUEVDSUZJRUQQABIXChNTRUNSRVRfS0lORF9VTktOT1dOEAES",
-            "JwojU0VDUkVUX0tJTkRfR0NQX1NFUlZJQ0VfQUNDT1VOVF9LRVkQAkJRCg1p",
-            "by5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2Fu",
+            "eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ3Jh",
+            "ZmVhcy92MS9jb21tb24ucHJvdG8iDAoKU2VjcmV0Tm90ZSLqAQoQU2VjcmV0",
+            "T2NjdXJyZW5jZRIpCgRraW5kGAEgASgOMhYuZ3JhZmVhcy52MS5TZWNyZXRL",
+            "aW5kQgPgQQISMgoJbG9jYXRpb25zGAIgAygLMhouZ3JhZmVhcy52MS5TZWNy",
+            "ZXRMb2NhdGlvbkID4EEBEi8KCHN0YXR1c2VzGAMgAygLMhguZ3JhZmVhcy52",
+            "MS5TZWNyZXRTdGF0dXNCA+BBARIiCgRkYXRhGAQgASgLMhQuZ29vZ2xlLnBy",
+            "b3RvYnVmLkFueRIiCgZkaWdlc3QYBSABKAsyEi5ncmFmZWFzLnYxLkRpZ2Vz",
+            "dCJPCg5TZWNyZXRMb2NhdGlvbhIxCg1maWxlX2xvY2F0aW9uGAEgASgLMhgu",
+            "Z3JhZmVhcy52MS5GaWxlTG9jYXRpb25IAEIKCghsb2NhdGlvbiLXAQoMU2Vj",
+            "cmV0U3RhdHVzEjQKBnN0YXR1cxgBIAEoDjIfLmdyYWZlYXMudjEuU2VjcmV0",
+            "U3RhdHVzLlN0YXR1c0ID4EEBEjQKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEhQKB21lc3NhZ2UYAyABKAlC",
+            "A+BBASJFCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHVU5L",
+            "Tk9XThABEgkKBVZBTElEEAISCwoHSU5WQUxJRBADKqUHCgpTZWNyZXRLaW5k",
+            "EhsKF1NFQ1JFVF9LSU5EX1VOU1BFQ0lGSUVEEAASFwoTU0VDUkVUX0tJTkRf",
+            "VU5LTk9XThABEicKI1NFQ1JFVF9LSU5EX0dDUF9TRVJWSUNFX0FDQ09VTlRf",
+            "S0VZEAISGwoXU0VDUkVUX0tJTkRfR0NQX0FQSV9LRVkQAxItCilTRUNSRVRf",
+            "S0lORF9HQ1BfT0FVVEgyX0NMSUVOVF9DUkVERU5USUFMUxAEEicKI1NFQ1JF",
+            "VF9LSU5EX0dDUF9PQVVUSDJfQUNDRVNTX1RPS0VOEAUSJwojU0VDUkVUX0tJ",
+            "TkRfQU5USFJPUElDX0FETUlOX0FQSV9LRVkQBhIhCh1TRUNSRVRfS0lORF9B",
+            "TlRIUk9QSUNfQVBJX0tFWRAHEiIKHlNFQ1JFVF9LSU5EX0FaVVJFX0FDQ0VT",
+            "U19UT0tFThAIEiQKIFNFQ1JFVF9LSU5EX0FaVVJFX0lERU5USVRZX1RPS0VO",
+            "EAkSMAosU0VDUkVUX0tJTkRfRE9DS0VSX0hVQl9QRVJTT05BTF9BQ0NFU1Nf",
+            "VE9LRU4QChIoCiRTRUNSRVRfS0lORF9HSVRIVUJfQVBQX1JFRlJFU0hfVE9L",
+            "RU4QCxIxCi1TRUNSRVRfS0lORF9HSVRIVUJfQVBQX1NFUlZFUl9UT19TRVJW",
+            "RVJfVE9LRU4QDBIvCitTRUNSRVRfS0lORF9HSVRIVUJfQVBQX1VTRVJfVE9f",
+            "U0VSVkVSX1RPS0VOEA0SNAowU0VDUkVUX0tJTkRfR0lUSFVCX0NMQVNTSUNf",
+            "UEVSU09OQUxfQUNDRVNTX1RPS0VOEA4SOQo1U0VDUkVUX0tJTkRfR0lUSFVC",
+            "X0ZJTkVfR1JBSU5FRF9QRVJTT05BTF9BQ0NFU1NfVE9LRU4QDxIiCh5TRUNS",
+            "RVRfS0lORF9HSVRIVUJfT0FVVEhfVE9LRU4QEBIjCh9TRUNSRVRfS0lORF9I",
+            "VUdHSU5HRkFDRV9BUElfS0VZEBESHgoaU0VDUkVUX0tJTkRfT1BFTkFJX0FQ",
+            "SV9LRVkQEhIiCh5TRUNSRVRfS0lORF9QRVJQTEVYSVRZX0FQSV9LRVkQExIh",
+            "Ch1TRUNSRVRfS0lORF9TVFJJUEVfU0VDUkVUX0tFWRAUEiUKIVNFQ1JFVF9L",
+            "SU5EX1NUUklQRV9SRVNUUklDVEVEX0tFWRAVEiUKIVNFQ1JFVF9LSU5EX1NU",
+            "UklQRV9XRUJIT09LX1NFQ1JFVBAWQlEKDWlvLmdyYWZlYXMudjFQAVo4Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3Yx",
+            "O2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.SecretKind), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SecretNote), global::Grafeas.V1.SecretNote.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SecretOccurrence), global::Grafeas.V1.SecretOccurrence.Parser, new[]{ "Kind", "Locations", "Statuses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SecretOccurrence), global::Grafeas.V1.SecretOccurrence.Parser, new[]{ "Kind", "Locations", "Statuses", "Data", "Digest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SecretLocation), global::Grafeas.V1.SecretLocation.Parser, new[]{ "FileLocation" }, new[]{ "Location" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SecretStatus), global::Grafeas.V1.SecretStatus.Parser, new[]{ "Status", "UpdateTime", "Message" }, null, new[]{ typeof(global::Grafeas.V1.SecretStatus.Types.Status) }, null, null)
           }));
@@ -68,10 +89,93 @@ namespace Grafeas.V1 {
     /// </summary>
     [pbr::OriginalName("SECRET_KIND_UNKNOWN")] Unknown = 1,
     /// <summary>
-    /// A GCP service account key per:
+    /// A Google Cloud service account key per:
     /// https://cloud.google.com/iam/docs/creating-managing-service-account-keys
     /// </summary>
     [pbr::OriginalName("SECRET_KIND_GCP_SERVICE_ACCOUNT_KEY")] GcpServiceAccountKey = 2,
+    /// <summary>
+    /// A Google Cloud API key per:
+    /// https://cloud.google.com/docs/authentication/api-keys
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GCP_API_KEY")] GcpApiKey = 3,
+    /// <summary>
+    /// A Google Cloud OAuth2 client credentials per:
+    /// https://developers.google.com/identity/protocols/oauth2
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GCP_OAUTH2_CLIENT_CREDENTIALS")] GcpOauth2ClientCredentials = 4,
+    /// <summary>
+    /// A Google Cloud OAuth2 access token per:
+    /// https://cloud.google.com/docs/authentication/token-types#access
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GCP_OAUTH2_ACCESS_TOKEN")] GcpOauth2AccessToken = 5,
+    /// <summary>
+    /// An Anthropic Admin API key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_ANTHROPIC_ADMIN_API_KEY")] AnthropicAdminApiKey = 6,
+    /// <summary>
+    /// An Anthropic API key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_ANTHROPIC_API_KEY")] AnthropicApiKey = 7,
+    /// <summary>
+    /// An Azure access token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_AZURE_ACCESS_TOKEN")] AzureAccessToken = 8,
+    /// <summary>
+    /// An Azure Identity Platform ID token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_AZURE_IDENTITY_TOKEN")] AzureIdentityToken = 9,
+    /// <summary>
+    /// A Docker Hub personal access token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_DOCKER_HUB_PERSONAL_ACCESS_TOKEN")] DockerHubPersonalAccessToken = 10,
+    /// <summary>
+    /// A GitHub App refresh token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_APP_REFRESH_TOKEN")] GithubAppRefreshToken = 11,
+    /// <summary>
+    /// A GitHub App server-to-server token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_APP_SERVER_TO_SERVER_TOKEN")] GithubAppServerToServerToken = 12,
+    /// <summary>
+    /// A GitHub App user-to-server token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_APP_USER_TO_SERVER_TOKEN")] GithubAppUserToServerToken = 13,
+    /// <summary>
+    /// A GitHub personal access token (classic).
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_CLASSIC_PERSONAL_ACCESS_TOKEN")] GithubClassicPersonalAccessToken = 14,
+    /// <summary>
+    /// A GitHub fine-grained personal access token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_FINE_GRAINED_PERSONAL_ACCESS_TOKEN")] GithubFineGrainedPersonalAccessToken = 15,
+    /// <summary>
+    /// A GitHub OAuth token.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_GITHUB_OAUTH_TOKEN")] GithubOauthToken = 16,
+    /// <summary>
+    /// A Hugging Face API key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_HUGGINGFACE_API_KEY")] HuggingfaceApiKey = 17,
+    /// <summary>
+    /// An OpenAI API key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_OPENAI_API_KEY")] OpenaiApiKey = 18,
+    /// <summary>
+    /// A Perplexity API key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_PERPLEXITY_API_KEY")] PerplexityApiKey = 19,
+    /// <summary>
+    /// A Stripe secret key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_STRIPE_SECRET_KEY")] StripeSecretKey = 20,
+    /// <summary>
+    /// A Stripe restricted key.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_STRIPE_RESTRICTED_KEY")] StripeRestrictedKey = 21,
+    /// <summary>
+    /// A Stripe webhook secret.
+    /// </summary>
+    [pbr::OriginalName("SECRET_KIND_STRIPE_WEBHOOK_SECRET")] StripeWebhookSecret = 22,
   }
 
   #endregion
@@ -274,6 +378,8 @@ namespace Grafeas.V1 {
       kind_ = other.kind_;
       locations_ = other.locations_.Clone();
       statuses_ = other.statuses_.Clone();
+      data_ = other.data_ != null ? other.data_.Clone() : null;
+      digest_ = other.digest_ != null ? other.digest_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -326,6 +432,37 @@ namespace Grafeas.V1 {
       get { return statuses_; }
     }
 
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Any data_;
+    /// <summary>
+    /// Scan result of the secret.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Any Data {
+      get { return data_; }
+      set {
+        data_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "digest" field.</summary>
+    public const int DigestFieldNumber = 5;
+    private global::Grafeas.V1.Digest digest_;
+    /// <summary>
+    /// Hash value, typically a digest for the secret data, that allows unique
+    /// identification of a specific secret.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Digest Digest {
+      get { return digest_; }
+      set {
+        digest_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -344,6 +481,8 @@ namespace Grafeas.V1 {
       if (Kind != other.Kind) return false;
       if(!locations_.Equals(other.locations_)) return false;
       if(!statuses_.Equals(other.statuses_)) return false;
+      if (!object.Equals(Data, other.Data)) return false;
+      if (!object.Equals(Digest, other.Digest)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -354,6 +493,8 @@ namespace Grafeas.V1 {
       if (Kind != global::Grafeas.V1.SecretKind.Unspecified) hash ^= Kind.GetHashCode();
       hash ^= locations_.GetHashCode();
       hash ^= statuses_.GetHashCode();
+      if (data_ != null) hash ^= Data.GetHashCode();
+      if (digest_ != null) hash ^= Digest.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -378,6 +519,14 @@ namespace Grafeas.V1 {
       }
       locations_.WriteTo(output, _repeated_locations_codec);
       statuses_.WriteTo(output, _repeated_statuses_codec);
+      if (data_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Data);
+      }
+      if (digest_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Digest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -394,6 +543,14 @@ namespace Grafeas.V1 {
       }
       locations_.WriteTo(ref output, _repeated_locations_codec);
       statuses_.WriteTo(ref output, _repeated_statuses_codec);
+      if (data_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Data);
+      }
+      if (digest_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Digest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -409,6 +566,12 @@ namespace Grafeas.V1 {
       }
       size += locations_.CalculateSize(_repeated_locations_codec);
       size += statuses_.CalculateSize(_repeated_statuses_codec);
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
+      }
+      if (digest_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Digest);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -426,6 +589,18 @@ namespace Grafeas.V1 {
       }
       locations_.Add(other.locations_);
       statuses_.Add(other.statuses_);
+      if (other.data_ != null) {
+        if (data_ == null) {
+          Data = new global::Google.Protobuf.WellKnownTypes.Any();
+        }
+        Data.MergeFrom(other.Data);
+      }
+      if (other.digest_ != null) {
+        if (digest_ == null) {
+          Digest = new global::Grafeas.V1.Digest();
+        }
+        Digest.MergeFrom(other.Digest);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -453,6 +628,20 @@ namespace Grafeas.V1 {
             statuses_.AddEntriesFrom(input, _repeated_statuses_codec);
             break;
           }
+          case 34: {
+            if (data_ == null) {
+              Data = new global::Google.Protobuf.WellKnownTypes.Any();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 42: {
+            if (digest_ == null) {
+              Digest = new global::Grafeas.V1.Digest();
+            }
+            input.ReadMessage(Digest);
+            break;
+          }
         }
       }
     #endif
@@ -478,6 +667,20 @@ namespace Grafeas.V1 {
           }
           case 26: {
             statuses_.AddEntriesFrom(ref input, _repeated_statuses_codec);
+            break;
+          }
+          case 34: {
+            if (data_ == null) {
+              Data = new global::Google.Protobuf.WellKnownTypes.Any();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 42: {
+            if (digest_ == null) {
+              Digest = new global::Grafeas.V1.Digest();
+            }
+            input.ReadMessage(Digest);
             break;
           }
         }

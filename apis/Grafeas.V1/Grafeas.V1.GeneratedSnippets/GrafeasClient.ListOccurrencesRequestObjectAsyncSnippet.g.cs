@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrencesAsync(request);

@@ -44,6 +44,7 @@ namespace Grafeas.V1
             yield return IntotoStatementReflection.Descriptor;
             yield return PackageReflection.Descriptor;
             yield return ProvenanceReflection.Descriptor;
+            yield return RiskReflection.Descriptor;
             yield return SbomReflection.Descriptor;
             yield return SecretReflection.Descriptor;
             yield return SeverityReflection.Descriptor;
