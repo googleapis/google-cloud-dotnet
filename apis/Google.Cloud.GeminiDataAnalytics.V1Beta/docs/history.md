@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-01-13
+
+### New features
+
+- Added sync APIs for the CRUD operations of Data Agent
+
 ## Version 1.0.0-beta06, released 2026-01-05
 
 ### New features
