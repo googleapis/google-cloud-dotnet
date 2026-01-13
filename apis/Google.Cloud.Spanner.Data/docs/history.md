@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.11.0, released 2026-01-13
+
+### New features
+
+- Add Spanner request ID in exceptions
+- Add Spanner request ID header
+
 ## Version 5.10.0, released 2026-01-08
 
 ### New features
