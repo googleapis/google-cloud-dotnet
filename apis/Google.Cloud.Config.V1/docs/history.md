@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.11.0, released 2026-01-13
+
+### New features
+
+- Add support for enabling automigration from deprecated Terraform versions
+- Added error code when failing import values from an external source
+
 ## Version 1.10.0, released 2025-11-05
 
 ### New features
