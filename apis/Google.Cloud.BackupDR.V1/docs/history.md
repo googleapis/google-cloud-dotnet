@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.7.0, released 2026-01-13
+
+### New features
+
+- A new service `BackupDrProtectionSummary` is added
+- A new message `ListResourceBackupConfigsRequest` is added
+- A new message `ListResourceBackupConfigsResponse` is added
+- A new message `ResourceBackupConfig` is added
+- A new resource_definition `backupdr.googleapis.com/ResourceBackupConfig` is added
+- A new message `BackupConfigDetails` is added
+- A new message `PitrSettings` is added
+- A new message `BackupDrTemplateConfig` is added
+- A new message `BackupDrPlanConfig` is added
+- A new message `BackupDrPlanRule` is added
+- A new message `BackupLocation` is added
+
 ## Version 2.6.0, released 2025-12-03
 
 ### New features
