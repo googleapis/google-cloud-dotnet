@@ -1,5 +1,46 @@
 # Version history
 
+## Version 3.12.0, released 2026-01-13
+
+### New features
+
+- A new message `File` is added
+- A new field `files` is added to message `.grafeas.v1.DiscoveryOccurrence`
+- A new field `return_partial_success` is added to message `.grafeas.v1.ListOccurrencesRequest`
+- A new field `unreachable` is added to message `.grafeas.v1.ListOccurrencesResponse`
+- A new field `return_partial_success` is added to message `.grafeas.v1.ListNotesRequest`
+- A new field `unreachable` is added to message `.grafeas.v1.ListNotesResponse`
+- A new message `Risk` is added
+- A new message `CISAKnownExploitedVulnerabilities` is added
+- A new message `ExploitPredictionScoringSystem` is added
+- A new field `data` is added to message `.grafeas.v1.SecretOccurrence`
+- A new field `digest` is added to message `.grafeas.v1.SecretOccurrence`
+- A new value `SECRET_KIND_GCP_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GCP_OAUTH2_CLIENT_CREDENTIALS` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GCP_OAUTH2_ACCESS_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_ANTHROPIC_ADMIN_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_ANTHROPIC_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_AZURE_ACCESS_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_AZURE_IDENTITY_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_DOCKER_HUB_PERSONAL_ACCESS_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_APP_REFRESH_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_APP_SERVER_TO_SERVER_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_APP_USER_TO_SERVER_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_CLASSIC_PERSONAL_ACCESS_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_FINE_GRAINED_PERSONAL_ACCESS_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_GITHUB_OAUTH_TOKEN` is added to enum `SecretKind`
+- A new value `SECRET_KIND_HUGGINGFACE_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_OPENAI_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_PERPLEXITY_API_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_STRIPE_SECRET_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_STRIPE_RESTRICTED_KEY` is added to enum `SecretKind`
+- A new value `SECRET_KIND_STRIPE_WEBHOOK_SECRET` is added to enum `SecretKind`
+- A new field `risk` is added to message `.grafeas.v1.VulnerabilityOccurrence`
+
+### Documentation improvements
+
+- A comment for enum value `SECRET_KIND_GCP_SERVICE_ACCOUNT_KEY` in enum `SecretKind` is changed
+
 ## Version 3.11.0, released 2025-11-05
 
 ### New features
