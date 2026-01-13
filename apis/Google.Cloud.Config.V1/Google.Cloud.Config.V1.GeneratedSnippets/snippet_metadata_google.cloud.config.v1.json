@@ -7402,6 +7402,493 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_sync",
+      "title": "GetAutoMigrationConfigRequestObject",
+      "description": "Snippet for GetAutoMigrationConfig",
+      "file": "ConfigClient.GetAutoMigrationConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfig",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetAutoMigrationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.AutoMigrationConfig",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_async",
+      "title": "GetAutoMigrationConfigRequestObjectAsync",
+      "description": "Snippet for GetAutoMigrationConfigAsync",
+      "file": "ConfigClient.GetAutoMigrationConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfigAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetAutoMigrationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.AutoMigrationConfig>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_sync_flattened",
+      "title": "GetAutoMigrationConfig",
+      "description": "Snippet for GetAutoMigrationConfig",
+      "file": "ConfigClient.GetAutoMigrationConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfig",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.AutoMigrationConfig",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_async_flattened",
+      "title": "GetAutoMigrationConfigAsync",
+      "description": "Snippet for GetAutoMigrationConfigAsync",
+      "file": "ConfigClient.GetAutoMigrationConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfigAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.AutoMigrationConfig>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_sync_flattened_resourceNames",
+      "title": "GetAutoMigrationConfigResourceNames",
+      "description": "Snippet for GetAutoMigrationConfig",
+      "file": "ConfigClient.GetAutoMigrationConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfig",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.AutoMigrationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.AutoMigrationConfig",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetAutoMigrationConfig_async_flattened_resourceNames",
+      "title": "GetAutoMigrationConfigResourceNamesAsync",
+      "description": "Snippet for GetAutoMigrationConfigAsync",
+      "file": "ConfigClient.GetAutoMigrationConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoMigrationConfigAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetAutoMigrationConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.AutoMigrationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.AutoMigrationConfig>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.GetAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateAutoMigrationConfig_sync",
+      "title": "UpdateAutoMigrationConfigRequestObject",
+      "description": "Snippet for UpdateAutoMigrationConfig",
+      "file": "ConfigClient.UpdateAutoMigrationConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoMigrationConfig",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateAutoMigrationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.AutoMigrationConfig, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.UpdateAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateAutoMigrationConfig_async",
+      "title": "UpdateAutoMigrationConfigRequestObjectAsync",
+      "description": "Snippet for UpdateAutoMigrationConfigAsync",
+      "file": "ConfigClient.UpdateAutoMigrationConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoMigrationConfigAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateAutoMigrationConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.AutoMigrationConfig, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.UpdateAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateAutoMigrationConfig_sync_flattened",
+      "title": "UpdateAutoMigrationConfig",
+      "description": "Snippet for UpdateAutoMigrationConfig",
+      "file": "ConfigClient.UpdateAutoMigrationConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoMigrationConfig",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateAutoMigrationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.AutoMigrationConfig",
+            "name": "autoMigrationConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.AutoMigrationConfig, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.UpdateAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateAutoMigrationConfig_async_flattened",
+      "title": "UpdateAutoMigrationConfigAsync",
+      "description": "Snippet for UpdateAutoMigrationConfigAsync",
+      "file": "ConfigClient.UpdateAutoMigrationConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoMigrationConfigAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateAutoMigrationConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.AutoMigrationConfig",
+            "name": "autoMigrationConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.AutoMigrationConfig, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoMigrationConfig",
+          "fullName": "google.cloud.config.v1.Config.UpdateAutoMigrationConfig",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

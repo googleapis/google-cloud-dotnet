@@ -3,7 +3,7 @@
 //     source: google/cloud/config/v1/config.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -156,6 +156,12 @@ namespace Google.Cloud.Config.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetResourceDriftRequest> __Marshaller_google_cloud_config_v1_GetResourceDriftRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetResourceDriftRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ResourceDrift> __Marshaller_google_cloud_config_v1_ResourceDrift = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ResourceDrift.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest> __Marshaller_google_cloud_config_v1_GetAutoMigrationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.AutoMigrationConfig> __Marshaller_google_cloud_config_v1_AutoMigrationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.AutoMigrationConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest> __Marshaller_google_cloud_config_v1_UpdateAutoMigrationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse>(
@@ -372,6 +378,22 @@ namespace Google.Cloud.Config.V1 {
         "GetResourceDrift",
         __Marshaller_google_cloud_config_v1_GetResourceDriftRequest,
         __Marshaller_google_cloud_config_v1_ResourceDrift);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest, global::Google.Cloud.Config.V1.AutoMigrationConfig> __Method_GetAutoMigrationConfig = new grpc::Method<global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest, global::Google.Cloud.Config.V1.AutoMigrationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutoMigrationConfig",
+        __Marshaller_google_cloud_config_v1_GetAutoMigrationConfigRequest,
+        __Marshaller_google_cloud_config_v1_AutoMigrationConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateAutoMigrationConfig = new grpc::Method<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAutoMigrationConfig",
+        __Marshaller_google_cloud_config_v1_UpdateAutoMigrationConfigRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -709,6 +731,30 @@ namespace Google.Cloud.Config.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ResourceDrift> GetResourceDrift(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.AutoMigrationConfig> GetAutoMigrationConfig(global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAutoMigrationConfig(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2062,6 +2108,102 @@ namespace Google.Cloud.Config.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetResourceDrift, null, options, request);
       }
+      /// <summary>
+      /// Get the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.AutoMigrationConfig GetAutoMigrationConfig(global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoMigrationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.AutoMigrationConfig GetAutoMigrationConfig(global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutoMigrationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Get the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.AutoMigrationConfig> GetAutoMigrationConfigAsync(global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoMigrationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.AutoMigrationConfig> GetAutoMigrationConfigAsync(global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutoMigrationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutoMigrationConfig(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutoMigrationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutoMigrationConfig(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAutoMigrationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutoMigrationConfigAsync(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutoMigrationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the AutoMigrationConfig for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutoMigrationConfigAsync(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAutoMigrationConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConfigClient NewInstance(ClientBaseConfiguration configuration)
@@ -2102,7 +2244,9 @@ namespace Google.Cloud.Config.V1 {
           .AddMethod(__Method_ListResourceChanges, serviceImpl.ListResourceChanges)
           .AddMethod(__Method_GetResourceChange, serviceImpl.GetResourceChange)
           .AddMethod(__Method_ListResourceDrifts, serviceImpl.ListResourceDrifts)
-          .AddMethod(__Method_GetResourceDrift, serviceImpl.GetResourceDrift).Build();
+          .AddMethod(__Method_GetResourceDrift, serviceImpl.GetResourceDrift)
+          .AddMethod(__Method_GetAutoMigrationConfig, serviceImpl.GetAutoMigrationConfig)
+          .AddMethod(__Method_UpdateAutoMigrationConfig, serviceImpl.UpdateAutoMigrationConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2139,6 +2283,8 @@ namespace Google.Cloud.Config.V1 {
       serviceBinder.AddMethod(__Method_GetResourceChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetResourceChangeRequest, global::Google.Cloud.Config.V1.ResourceChange>(serviceImpl.GetResourceChange));
       serviceBinder.AddMethod(__Method_ListResourceDrifts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListResourceDriftsRequest, global::Google.Cloud.Config.V1.ListResourceDriftsResponse>(serviceImpl.ListResourceDrifts));
       serviceBinder.AddMethod(__Method_GetResourceDrift, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetResourceDriftRequest, global::Google.Cloud.Config.V1.ResourceDrift>(serviceImpl.GetResourceDrift));
+      serviceBinder.AddMethod(__Method_GetAutoMigrationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest, global::Google.Cloud.Config.V1.AutoMigrationConfig>(serviceImpl.GetAutoMigrationConfig));
+      serviceBinder.AddMethod(__Method_UpdateAutoMigrationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAutoMigrationConfig));
     }
 
   }
