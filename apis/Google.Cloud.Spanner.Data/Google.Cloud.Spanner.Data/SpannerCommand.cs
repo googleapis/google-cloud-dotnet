@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.LongRunning;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -522,6 +521,7 @@ namespace Google.Cloud.Spanner.Data
         /// The command must contain one or more DDL statements;
         /// <see cref="SpannerConnection.CreateDdlCommand(string, string[])"/> for details.
         /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>
         /// The name of the long-running operation that was started for the DDL statement(s).
         /// Note: The ID is empty for DropDatabase commands.

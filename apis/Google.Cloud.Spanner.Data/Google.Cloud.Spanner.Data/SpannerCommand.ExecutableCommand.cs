@@ -244,11 +244,14 @@ namespace Google.Cloud.Spanner.Data
             /// <summary>
             /// Starts a DDL operation, but does not wait for the long-running operation to finish.
             /// </summary>
-            /// <returns>The name of the long-running operation that was created</returns>
+            /// <returns>
+            /// The name of the long-running operation that was created or null if the DDL statement did not
+            /// create a long-running operation.
+            /// </returns>
             internal async Task<string> StartDdlAsync(CancellationToken cancellationToken)
             {
                 var operation = await ExecuteDdlAsync(pollUntilCompleted: false, cancellationToken).ConfigureAwait(false);
-                return operation?.Name ?? "";
+                return operation?.Name;
             }
 
             private async Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted, CancellationToken cancellationToken)
@@ -275,15 +278,8 @@ namespace Google.Cloud.Spanner.Data
                             ExtraStatements = { CommandTextBuilder.ExtraStatements ?? new string[0] },
                             ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
-                        var response = await databaseAdminClient.CreateDatabaseAsync(request).ConfigureAwait(false);
-                        if (pollUntilCompleted)
-                        {
-                            response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
-                        }
-                        if (response.IsFaulted)
-                        {
-                            throw SpannerException.FromOperationFailedException(response.Exception);
-                        }
+                        var createDbOperation = await databaseAdminClient.CreateDatabaseAsync(request).ConfigureAwait(false);
+                        var response = await HandleLro(createDbOperation).ConfigureAwait(false);
                         operation = response.RpcMessage;
                     }
                     else if (CommandTextBuilder.IsDropDatabaseCommand)
@@ -315,16 +311,8 @@ namespace Google.Cloud.Spanner.Data
                             Statements = { commandText, CommandTextBuilder.ExtraStatements ?? Enumerable.Empty<string>() },
                             ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
-
-                        var response = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);
-                        if (pollUntilCompleted)
-                        {
-                            response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
-                        }
-                        if (response.IsFaulted)
-                        {
-                            throw SpannerException.FromOperationFailedException(response.Exception);
-                        }
+                        var updateDdlOperation = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);
+                        var response = await HandleLro(updateDdlOperation).ConfigureAwait(false);
                         operation = response.RpcMessage;
                     }
                 }
@@ -339,6 +327,21 @@ namespace Google.Cloud.Spanner.Data
                 }
 
                 return operation;
+
+                async Task<Operation<TResponse, TMetadata>> HandleLro<TResponse, TMetadata>(Operation<TResponse, TMetadata> operationToPoll)
+                    where TResponse : class, IMessage<TResponse>, new()
+                    where TMetadata : class, IMessage<TMetadata>, new()
+                {
+                    if (pollUntilCompleted)
+                    {
+                        operationToPoll = await operationToPoll.PollUntilCompletedAsync().ConfigureAwait(false);
+                    }
+                    if (operationToPoll.IsFaulted)
+                    {
+                        throw SpannerException.FromOperationFailedException(operationToPoll.Exception);
+                    }
+                    return operationToPoll;
+                }
             }
 
             private async Task<int> ExecuteMutationsAsync(CancellationToken cancellationToken)
