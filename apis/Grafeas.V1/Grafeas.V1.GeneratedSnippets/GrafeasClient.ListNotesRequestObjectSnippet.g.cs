@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotes(request);

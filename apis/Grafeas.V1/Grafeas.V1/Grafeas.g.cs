@@ -85,131 +85,133 @@ namespace Grafeas.V1 {
             "ZWFzLnYxLlNlY3JldE5vdGVIADo16kEyCg9ncmFmZWFzLmlvL05vdGUSH3By",
             "b2plY3RzL3twcm9qZWN0fS9ub3Rlcy97bm90ZX1CBgoEdHlwZSJDChRHZXRP",
             "Y2N1cnJlbmNlUmVxdWVzdBIrCgRuYW1lGAEgASgJQh3gQQL6QRcKFWdyYWZl",
-            "YXMuaW8vT2NjdXJyZW5jZSJ7ChZMaXN0T2NjdXJyZW5jZXNSZXF1ZXN0EioK",
-            "BnBhcmVudBgBIAEoCUIa4EEC+kEUChJncmFmZWFzLmlvL1Byb2plY3QSDgoG",
-            "ZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2Vu",
-            "GAQgASgJIl8KF0xpc3RPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3VycmVu",
-            "Y2VzGAEgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSJGChdEZWxldGVPY2N1cnJlbmNlUmVxdWVzdBIrCgRu",
-            "YW1lGAEgASgJQh3gQQL6QRcKFWdyYWZlYXMuaW8vT2NjdXJyZW5jZSJ2ChdD",
-            "cmVhdGVPY2N1cnJlbmNlUmVxdWVzdBIqCgZwYXJlbnQYASABKAlCGuBBAvpB",
-            "FAoSZ3JhZmVhcy5pby9Qcm9qZWN0Ei8KCm9jY3VycmVuY2UYAiABKAsyFi5n",
-            "cmFmZWFzLnYxLk9jY3VycmVuY2VCA+BBAiKoAQoXVXBkYXRlT2NjdXJyZW5j",
-            "ZVJlcXVlc3QSKwoEbmFtZRgBIAEoCUId4EEC+kEXChVncmFmZWFzLmlvL09j",
-            "Y3VycmVuY2USLwoKb2NjdXJyZW5jZRgCIAEoCzIWLmdyYWZlYXMudjEuT2Nj",
-            "dXJyZW5jZUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFzayI3Cg5HZXROb3RlUmVxdWVzdBIlCgRuYW1lGAEg",
-            "ASgJQhfgQQL6QREKD2dyYWZlYXMuaW8vTm90ZSJHChhHZXRPY2N1cnJlbmNl",
-            "Tm90ZVJlcXVlc3QSKwoEbmFtZRgBIAEoCUId4EEC+kEXChVncmFmZWFzLmlv",
-            "L09jY3VycmVuY2UidQoQTGlzdE5vdGVzUmVxdWVzdBIqCgZwYXJlbnQYASAB",
-            "KAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0Eg4KBmZpbHRlchgCIAEo",
-            "CRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJNChFM",
-            "aXN0Tm90ZXNSZXNwb25zZRIfCgVub3RlcxgBIAMoCzIQLmdyYWZlYXMudjEu",
-            "Tm90ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiOgoRRGVsZXRlTm90ZVJl",
-            "cXVlc3QSJQoEbmFtZRgBIAEoCUIX4EEC+kERCg9ncmFmZWFzLmlvL05vdGUi",
-            "egoRQ3JlYXRlTm90ZVJlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQK",
-            "EmdyYWZlYXMuaW8vUHJvamVjdBIUCgdub3RlX2lkGAIgASgJQgPgQQISIwoE",
-            "bm90ZRgDIAEoCzIQLmdyYWZlYXMudjEuTm90ZUID4EECIpABChFVcGRhdGVO",
-            "b3RlUmVxdWVzdBIlCgRuYW1lGAEgASgJQhfgQQL6QREKD2dyYWZlYXMuaW8v",
-            "Tm90ZRIjCgRub3RlGAIgASgLMhAuZ3JhZmVhcy52MS5Ob3RlQgPgQQISLwoL",
-            "dXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
-            "InoKGkxpc3ROb3RlT2NjdXJyZW5jZXNSZXF1ZXN0EiUKBG5hbWUYASABKAlC",
-            "F+BBAvpBEQoPZ3JhZmVhcy5pby9Ob3RlEg4KBmZpbHRlchgCIAEoCRIRCglw",
-            "YWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJjChtMaXN0Tm90",
-            "ZU9jY3VycmVuY2VzUmVzcG9uc2USKwoLb2NjdXJyZW5jZXMYASADKAsyFi5n",
-            "cmFmZWFzLnYxLk9jY3VycmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "IskBChdCYXRjaENyZWF0ZU5vdGVzUmVxdWVzdBIqCgZwYXJlbnQYASABKAlC",
-            "GuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0EkIKBW5vdGVzGAIgAygLMi4u",
-            "Z3JhZmVhcy52MS5CYXRjaENyZWF0ZU5vdGVzUmVxdWVzdC5Ob3Rlc0VudHJ5",
-            "QgPgQQIaPgoKTm90ZXNFbnRyeRILCgNrZXkYASABKAkSHwoFdmFsdWUYAiAB",
-            "KAsyEC5ncmFmZWFzLnYxLk5vdGU6AjgBIjsKGEJhdGNoQ3JlYXRlTm90ZXNS",
-            "ZXNwb25zZRIfCgVub3RlcxgBIAMoCzIQLmdyYWZlYXMudjEuTm90ZSJ9Ch1C",
-            "YXRjaENyZWF0ZU9jY3VycmVuY2VzUmVxdWVzdBIqCgZwYXJlbnQYASABKAlC",
-            "GuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0EjAKC29jY3VycmVuY2VzGAIg",
-            "AygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlQgPgQQIiTQoeQmF0Y2hDcmVh",
-            "dGVPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3VycmVuY2VzGAEgAygLMhYu",
-            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlMo0WCgdHcmFmZWFzErABCg1HZXRPY2N1",
-            "cnJlbmNlEiAuZ3JhZmVhcy52MS5HZXRPY2N1cnJlbmNlUmVxdWVzdBoWLmdy",
-            "YWZlYXMudjEuT2NjdXJyZW5jZSJl2kEEbmFtZYLT5JMCWBIjL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn1aMRIvL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovb2NjdXJyZW5jZXMvKn0SygEKD0xpc3RPY2N1",
-            "cnJlbmNlcxIiLmdyYWZlYXMudjEuTGlzdE9jY3VycmVuY2VzUmVxdWVzdBoj",
-            "LmdyYWZlYXMudjEuTGlzdE9jY3VycmVuY2VzUmVzcG9uc2UibtpBDXBhcmVu",
-            "dCxmaWx0ZXKC0+STAlgSIy92MS97cGFyZW50PXByb2plY3RzLyp9L29jY3Vy",
-            "cmVuY2VzWjESLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L29jY3VycmVuY2VzErYBChBEZWxldGVPY2N1cnJlbmNlEiMuZ3JhZmVhcy52",
-            "MS5EZWxldGVPY2N1cnJlbmNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSJl2kEEbmFtZYLT5JMCWCojL3YxL3tuYW1lPXByb2plY3RzLyovb2Nj",
-            "dXJyZW5jZXMvKn1aMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovb2NjdXJyZW5jZXMvKn0S3AEKEENyZWF0ZU9jY3VycmVuY2USIy5ncmFm",
-            "ZWFzLnYxLkNyZWF0ZU9jY3VycmVuY2VSZXF1ZXN0GhYuZ3JhZmVhcy52MS5P",
-            "Y2N1cnJlbmNlIooB2kERcGFyZW50LG9jY3VycmVuY2WC0+STAnAiIy92MS97",
-            "cGFyZW50PXByb2plY3RzLyp9L29jY3VycmVuY2VzOgpvY2N1cnJlbmNlWj0i",
-            "Ly92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L29jY3VycmVu",
-            "Y2VzOgpvY2N1cnJlbmNlEoMCChZCYXRjaENyZWF0ZU9jY3VycmVuY2VzEiku",
-            "Z3JhZmVhcy52MS5CYXRjaENyZWF0ZU9jY3VycmVuY2VzUmVxdWVzdBoqLmdy",
-            "YWZlYXMudjEuQmF0Y2hDcmVhdGVPY2N1cnJlbmNlc1Jlc3BvbnNlIpEB2kES",
-            "cGFyZW50LG9jY3VycmVuY2VzgtPkkwJ2Ii8vdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qfS9vY2N1cnJlbmNlczpiYXRjaENyZWF0ZToBKlpAIjsvdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9vY2N1cnJlbmNlczpiYXRjaENy",
-            "ZWF0ZToBKhLmAQoQVXBkYXRlT2NjdXJyZW5jZRIjLmdyYWZlYXMudjEuVXBk",
-            "YXRlT2NjdXJyZW5jZVJlcXVlc3QaFi5ncmFmZWFzLnYxLk9jY3VycmVuY2Ui",
-            "lAHaQRtuYW1lLG9jY3VycmVuY2UsdXBkYXRlX21hc2uC0+STAnAyIy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL29jY3VycmVuY2VzLyp9OgpvY2N1cnJlbmNlWj0y",
-            "Ly92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29jY3VycmVuY2Vz",
-            "Lyp9OgpvY2N1cnJlbmNlEr4BChFHZXRPY2N1cnJlbmNlTm90ZRIkLmdyYWZl",
-            "YXMudjEuR2V0T2NjdXJyZW5jZU5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5O",
-            "b3RlInHaQQRuYW1lgtPkkwJkEikvdjEve25hbWU9cHJvamVjdHMvKi9vY2N1",
-            "cnJlbmNlcy8qfS9ub3Rlc1o3EjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9vY2N1cnJlbmNlcy8qfS9ub3RlcxKSAQoHR2V0Tm90ZRIaLmdy",
-            "YWZlYXMudjEuR2V0Tm90ZVJlcXVlc3QaEC5ncmFmZWFzLnYxLk5vdGUiWdpB",
-            "BG5hbWWC0+STAkwSHS92MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9WisS",
-            "KS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL25vdGVzLyp9EqwB",
-            "CglMaXN0Tm90ZXMSHC5ncmFmZWFzLnYxLkxpc3ROb3Rlc1JlcXVlc3QaHS5n",
-            "cmFmZWFzLnYxLkxpc3ROb3Rlc1Jlc3BvbnNlImLaQQ1wYXJlbnQsZmlsdGVy",
-            "gtPkkwJMEh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9ub3Rlc1orEikvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9ub3RlcxKeAQoKRGVs",
-            "ZXRlTm90ZRIdLmdyYWZlYXMudjEuRGVsZXRlTm90ZVJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiWdpBBG5hbWWC0+STAkwqHS92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL25vdGVzLyp9WisqKS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL25vdGVzLyp9ErMBCgpDcmVhdGVOb3RlEh0uZ3JhZmVhcy52",
-            "MS5DcmVhdGVOb3RlUmVxdWVzdBoQLmdyYWZlYXMudjEuTm90ZSJ02kETcGFy",
-            "ZW50LG5vdGVfaWQsbm90ZYLT5JMCWCIdL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Kn0vbm90ZXM6BG5vdGVaMSIpL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vbm90ZXM6BG5vdGUS3gEKEEJhdGNoQ3JlYXRlTm90ZXMSIy5n",
-            "cmFmZWFzLnYxLkJhdGNoQ3JlYXRlTm90ZXNSZXF1ZXN0GiQuZ3JhZmVhcy52",
-            "MS5CYXRjaENyZWF0ZU5vdGVzUmVzcG9uc2Uif9pBDHBhcmVudCxub3Rlc4LT",
-            "5JMCaiIpL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vbm90ZXM6YmF0Y2hDcmVh",
-            "dGU6ASpaOiI1L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "bm90ZXM6YmF0Y2hDcmVhdGU6ASoStQEKClVwZGF0ZU5vdGUSHS5ncmFmZWFz",
-            "LnYxLlVwZGF0ZU5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlInbaQRVu",
-            "YW1lLG5vdGUsdXBkYXRlX21hc2uC0+STAlgyHS92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL25vdGVzLyp9OgRub3RlWjEyKS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL25vdGVzLyp9OgRub3RlEuABChNMaXN0Tm90ZU9jY3VycmVu",
-            "Y2VzEiYuZ3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVuY2VzUmVxdWVzdBon",
-            "LmdyYWZlYXMudjEuTGlzdE5vdGVPY2N1cnJlbmNlc1Jlc3BvbnNlInjaQQtu",
-            "YW1lLGZpbHRlcoLT5JMCZBIpL3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMv",
-            "Kn0vb2NjdXJyZW5jZXNaNxI1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovbm90ZXMvKn0vb2NjdXJyZW5jZXMaI8pBIGNvbnRhaW5lcmFuYWx5",
-            "c2lzLmdvb2dsZWFwaXMuY29tQnwKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dy",
-            "YWZlYXOiAgNHUkHqQSgKEmdyYWZlYXMuaW8vUHJvamVjdBIScHJvamVjdHMv",
-            "e3Byb2plY3R9YgZwcm90bzM="));
+            "YXMuaW8vT2NjdXJyZW5jZSKbAQoWTGlzdE9jY3VycmVuY2VzUmVxdWVzdBIq",
+            "CgZwYXJlbnQYASABKAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0Eg4K",
+            "BmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tl",
+            "bhgEIAEoCRIeChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAUgASgIInkKF0xp",
+            "c3RPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3VycmVuY2VzGAEgAygLMhYu",
+            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CRIYCgt1bnJlYWNoYWJsZRgDIAMoCUID4EEGIkYKF0RlbGV0ZU9jY3VycmVu",
+            "Y2VSZXF1ZXN0EisKBG5hbWUYASABKAlCHeBBAvpBFwoVZ3JhZmVhcy5pby9P",
+            "Y2N1cnJlbmNlInYKF0NyZWF0ZU9jY3VycmVuY2VSZXF1ZXN0EioKBnBhcmVu",
+            "dBgBIAEoCUIa4EEC+kEUChJncmFmZWFzLmlvL1Byb2plY3QSLwoKb2NjdXJy",
+            "ZW5jZRgCIAEoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5jZUID4EECIqgBChdV",
+            "cGRhdGVPY2N1cnJlbmNlUmVxdWVzdBIrCgRuYW1lGAEgASgJQh3gQQL6QRcK",
+            "FWdyYWZlYXMuaW8vT2NjdXJyZW5jZRIvCgpvY2N1cnJlbmNlGAIgASgLMhYu",
+            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlQgPgQQISLwoLdXBkYXRlX21hc2sYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIjcKDkdldE5vdGVSZXF1",
+            "ZXN0EiUKBG5hbWUYASABKAlCF+BBAvpBEQoPZ3JhZmVhcy5pby9Ob3RlIkcK",
+            "GEdldE9jY3VycmVuY2VOb3RlUmVxdWVzdBIrCgRuYW1lGAEgASgJQh3gQQL6",
+            "QRcKFWdyYWZlYXMuaW8vT2NjdXJyZW5jZSKVAQoQTGlzdE5vdGVzUmVxdWVz",
+            "dBIqCgZwYXJlbnQYASABKAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0",
+            "Eg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90",
+            "b2tlbhgEIAEoCRIeChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAUgASgIImcK",
+            "EUxpc3ROb3Rlc1Jlc3BvbnNlEh8KBW5vdGVzGAEgAygLMhAuZ3JhZmVhcy52",
+            "MS5Ob3RlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIYCgt1bnJlYWNoYWJs",
+            "ZRgDIAMoCUID4EEGIjoKEURlbGV0ZU5vdGVSZXF1ZXN0EiUKBG5hbWUYASAB",
+            "KAlCF+BBAvpBEQoPZ3JhZmVhcy5pby9Ob3RlInoKEUNyZWF0ZU5vdGVSZXF1",
+            "ZXN0EioKBnBhcmVudBgBIAEoCUIa4EEC+kEUChJncmFmZWFzLmlvL1Byb2pl",
+            "Y3QSFAoHbm90ZV9pZBgCIAEoCUID4EECEiMKBG5vdGUYAyABKAsyEC5ncmFm",
+            "ZWFzLnYxLk5vdGVCA+BBAiKQAQoRVXBkYXRlTm90ZVJlcXVlc3QSJQoEbmFt",
+            "ZRgBIAEoCUIX4EEC+kERCg9ncmFmZWFzLmlvL05vdGUSIwoEbm90ZRgCIAEo",
+            "CzIQLmdyYWZlYXMudjEuTm90ZUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJ6ChpMaXN0Tm90ZU9jY3Vy",
+            "cmVuY2VzUmVxdWVzdBIlCgRuYW1lGAEgASgJQhfgQQL6QREKD2dyYWZlYXMu",
+            "aW8vTm90ZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIK",
+            "CnBhZ2VfdG9rZW4YBCABKAkiYwobTGlzdE5vdGVPY2N1cnJlbmNlc1Jlc3Bv",
+            "bnNlEisKC29jY3VycmVuY2VzGAEgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJl",
+            "bmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLJAQoXQmF0Y2hDcmVhdGVO",
+            "b3Rlc1JlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMu",
+            "aW8vUHJvamVjdBJCCgVub3RlcxgCIAMoCzIuLmdyYWZlYXMudjEuQmF0Y2hD",
+            "cmVhdGVOb3Rlc1JlcXVlc3QuTm90ZXNFbnRyeUID4EECGj4KCk5vdGVzRW50",
+            "cnkSCwoDa2V5GAEgASgJEh8KBXZhbHVlGAIgASgLMhAuZ3JhZmVhcy52MS5O",
+            "b3RlOgI4ASI7ChhCYXRjaENyZWF0ZU5vdGVzUmVzcG9uc2USHwoFbm90ZXMY",
+            "ASADKAsyEC5ncmFmZWFzLnYxLk5vdGUifQodQmF0Y2hDcmVhdGVPY2N1cnJl",
+            "bmNlc1JlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMu",
+            "aW8vUHJvamVjdBIwCgtvY2N1cnJlbmNlcxgCIAMoCzIWLmdyYWZlYXMudjEu",
+            "T2NjdXJyZW5jZUID4EECIk0KHkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXNw",
+            "b25zZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYXMudjEuT2NjdXJy",
+            "ZW5jZTKNFgoHR3JhZmVhcxKwAQoNR2V0T2NjdXJyZW5jZRIgLmdyYWZlYXMu",
+            "djEuR2V0T2NjdXJyZW5jZVJlcXVlc3QaFi5ncmFmZWFzLnYxLk9jY3VycmVu",
+            "Y2UiZdpBBG5hbWWC0+STAlgSIy92MS97bmFtZT1wcm9qZWN0cy8qL29jY3Vy",
+            "cmVuY2VzLyp9WjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L29jY3VycmVuY2VzLyp9EsoBCg9MaXN0T2NjdXJyZW5jZXMSIi5ncmFmZWFz",
+            "LnYxLkxpc3RPY2N1cnJlbmNlc1JlcXVlc3QaIy5ncmFmZWFzLnYxLkxpc3RP",
+            "Y2N1cnJlbmNlc1Jlc3BvbnNlIm7aQQ1wYXJlbnQsZmlsdGVygtPkkwJYEiMv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qfS9vY2N1cnJlbmNlc1oxEi8vdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9vY2N1cnJlbmNlcxK2AQoQ",
+            "RGVsZXRlT2NjdXJyZW5jZRIjLmdyYWZlYXMudjEuRGVsZXRlT2NjdXJyZW5j",
+            "ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiZdpBBG5hbWWC0+ST",
+            "AlgqIy92MS97bmFtZT1wcm9qZWN0cy8qL29jY3VycmVuY2VzLyp9WjEqLy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29jY3VycmVuY2VzLyp9",
+            "EtwBChBDcmVhdGVPY2N1cnJlbmNlEiMuZ3JhZmVhcy52MS5DcmVhdGVPY2N1",
+            "cnJlbmNlUmVxdWVzdBoWLmdyYWZlYXMudjEuT2NjdXJyZW5jZSKKAdpBEXBh",
+            "cmVudCxvY2N1cnJlbmNlgtPkkwJwIiMvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "fS9vY2N1cnJlbmNlczoKb2NjdXJyZW5jZVo9Ii8vdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9vY2N1cnJlbmNlczoKb2NjdXJyZW5jZRKD",
+            "AgoWQmF0Y2hDcmVhdGVPY2N1cnJlbmNlcxIpLmdyYWZlYXMudjEuQmF0Y2hD",
+            "cmVhdGVPY2N1cnJlbmNlc1JlcXVlc3QaKi5ncmFmZWFzLnYxLkJhdGNoQ3Jl",
+            "YXRlT2NjdXJyZW5jZXNSZXNwb25zZSKRAdpBEnBhcmVudCxvY2N1cnJlbmNl",
+            "c4LT5JMCdiIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vb2NjdXJyZW5jZXM6",
+            "YmF0Y2hDcmVhdGU6ASpaQCI7L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vb2NjdXJyZW5jZXM6YmF0Y2hDcmVhdGU6ASoS5gEKEFVwZGF0",
+            "ZU9jY3VycmVuY2USIy5ncmFmZWFzLnYxLlVwZGF0ZU9jY3VycmVuY2VSZXF1",
+            "ZXN0GhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlIpQB2kEbbmFtZSxvY2N1cnJl",
+            "bmNlLHVwZGF0ZV9tYXNrgtPkkwJwMiMvdjEve25hbWU9cHJvamVjdHMvKi9v",
+            "Y2N1cnJlbmNlcy8qfToKb2NjdXJyZW5jZVo9Mi8vdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9vY2N1cnJlbmNlcy8qfToKb2NjdXJyZW5jZRK+",
+            "AQoRR2V0T2NjdXJyZW5jZU5vdGUSJC5ncmFmZWFzLnYxLkdldE9jY3VycmVu",
+            "Y2VOb3RlUmVxdWVzdBoQLmdyYWZlYXMudjEuTm90ZSJx2kEEbmFtZYLT5JMC",
+            "ZBIpL3YxL3tuYW1lPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn0vbm90ZXNa",
+            "NxI1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb2NjdXJyZW5j",
+            "ZXMvKn0vbm90ZXMSkgEKB0dldE5vdGUSGi5ncmFmZWFzLnYxLkdldE5vdGVS",
+            "ZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIlnaQQRuYW1lgtPkkwJMEh0vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9ub3Rlcy8qfVorEikvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9ub3Rlcy8qfRKsAQoJTGlzdE5vdGVzEhwuZ3Jh",
+            "ZmVhcy52MS5MaXN0Tm90ZXNSZXF1ZXN0Gh0uZ3JhZmVhcy52MS5MaXN0Tm90",
+            "ZXNSZXNwb25zZSJi2kENcGFyZW50LGZpbHRlcoLT5JMCTBIdL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKn0vbm90ZXNaKxIpL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vbm90ZXMSngEKCkRlbGV0ZU5vdGUSHS5ncmFmZWFz",
+            "LnYxLkRlbGV0ZU5vdGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IlnaQQRuYW1lgtPkkwJMKh0vdjEve25hbWU9cHJvamVjdHMvKi9ub3Rlcy8q",
+            "fVorKikvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9ub3Rlcy8q",
+            "fRKzAQoKQ3JlYXRlTm90ZRIdLmdyYWZlYXMudjEuQ3JlYXRlTm90ZVJlcXVl",
+            "c3QaEC5ncmFmZWFzLnYxLk5vdGUidNpBE3BhcmVudCxub3RlX2lkLG5vdGWC",
+            "0+STAlgiHS92MS97cGFyZW50PXByb2plY3RzLyp9L25vdGVzOgRub3RlWjEi",
+            "KS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L25vdGVzOgRu",
+            "b3RlEt4BChBCYXRjaENyZWF0ZU5vdGVzEiMuZ3JhZmVhcy52MS5CYXRjaENy",
+            "ZWF0ZU5vdGVzUmVxdWVzdBokLmdyYWZlYXMudjEuQmF0Y2hDcmVhdGVOb3Rl",
+            "c1Jlc3BvbnNlIn/aQQxwYXJlbnQsbm90ZXOC0+STAmoiKS92MS97cGFyZW50",
+            "PXByb2plY3RzLyp9L25vdGVzOmJhdGNoQ3JlYXRlOgEqWjoiNS92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L25vdGVzOmJhdGNoQ3JlYXRl",
+            "OgEqErUBCgpVcGRhdGVOb3RlEh0uZ3JhZmVhcy52MS5VcGRhdGVOb3RlUmVx",
+            "dWVzdBoQLmdyYWZlYXMudjEuTm90ZSJ22kEVbmFtZSxub3RlLHVwZGF0ZV9t",
+            "YXNrgtPkkwJYMh0vdjEve25hbWU9cHJvamVjdHMvKi9ub3Rlcy8qfToEbm90",
+            "ZVoxMikvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9ub3Rlcy8q",
+            "fToEbm90ZRLgAQoTTGlzdE5vdGVPY2N1cnJlbmNlcxImLmdyYWZlYXMudjEu",
+            "TGlzdE5vdGVPY2N1cnJlbmNlc1JlcXVlc3QaJy5ncmFmZWFzLnYxLkxpc3RO",
+            "b3RlT2NjdXJyZW5jZXNSZXNwb25zZSJ42kELbmFtZSxmaWx0ZXKC0+STAmQS",
+            "KS92MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9L29jY3VycmVuY2VzWjcS",
+            "NS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL25vdGVzLyp9L29j",
+            "Y3VycmVuY2VzGiPKQSBjb250YWluZXJhbmFseXNpcy5nb29nbGVhcGlzLmNv",
+            "bUJ8Cg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JB6kEoChJn",
+            "cmFmZWFzLmlvL1Byb2plY3QSEnByb2plY3RzL3twcm9qZWN0fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.ComplianceReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.DsseAttestationReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.SbomReflection.Descriptor, global::Grafeas.V1.SecretReflection.Descriptor, global::Grafeas.V1.UpgradeReflection.Descriptor, global::Grafeas.V1.VexReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade", "Compliance", "DsseAttestation", "SbomReference", "Secret", "Envelope" }, new[]{ "Details" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade", "Compliance", "DsseAttestation", "VulnerabilityAssessment", "SbomReference", "Secret" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceRequest), global::Grafeas.V1.GetOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesResponse), global::Grafeas.V1.ListOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesResponse), global::Grafeas.V1.ListOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteOccurrenceRequest), global::Grafeas.V1.DeleteOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateOccurrenceRequest), global::Grafeas.V1.CreateOccurrenceRequest.Parser, new[]{ "Parent", "Occurrence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateOccurrenceRequest), global::Grafeas.V1.UpdateOccurrenceRequest.Parser, new[]{ "Name", "Occurrence", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetNoteRequest), global::Grafeas.V1.GetNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceNoteRequest), global::Grafeas.V1.GetOccurrenceNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesRequest), global::Grafeas.V1.ListNotesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesResponse), global::Grafeas.V1.ListNotesResponse.Parser, new[]{ "Notes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesRequest), global::Grafeas.V1.ListNotesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListNotesResponse), global::Grafeas.V1.ListNotesResponse.Parser, new[]{ "Notes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DeleteNoteRequest), global::Grafeas.V1.DeleteNoteRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CreateNoteRequest), global::Grafeas.V1.CreateNoteRequest.Parser, new[]{ "Parent", "NoteId", "Note" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.UpdateNoteRequest), global::Grafeas.V1.UpdateNoteRequest.Parser, new[]{ "Name", "Note", "UpdateMask" }, null, null, null, null),
@@ -2953,6 +2955,7 @@ namespace Grafeas.V1 {
       filter_ = other.filter_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3024,6 +3027,25 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 5;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// If set, the request will return all reachable Occurrences
+    /// and report all unreachable regions in the `unreachable` field in
+    /// the response.
+    ///
+    /// Only applicable for requests in the global region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3043,6 +3065,7 @@ namespace Grafeas.V1 {
       if (Filter != other.Filter) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3054,6 +3077,7 @@ namespace Grafeas.V1 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3088,6 +3112,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3114,6 +3142,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3135,6 +3167,9 @@ namespace Grafeas.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3159,6 +3194,9 @@ namespace Grafeas.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3191,6 +3229,10 @@ namespace Grafeas.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3220,6 +3262,10 @@ namespace Grafeas.V1 {
           }
           case 34: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -3269,6 +3315,7 @@ namespace Grafeas.V1 {
     public ListOccurrencesResponse(ListOccurrencesResponse other) : this() {
       occurrences_ = other.occurrences_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3309,6 +3356,23 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable regions. Populated for requests from the global region
+    /// when `return_partial_success` is set.
+    ///
+    /// Format: `projects/[PROJECT_ID]/locations/[LOCATION]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3326,6 +3390,7 @@ namespace Grafeas.V1 {
       }
       if(!occurrences_.Equals(other.occurrences_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3335,6 +3400,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       hash ^= occurrences_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3358,6 +3424,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3373,6 +3440,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3387,6 +3455,7 @@ namespace Grafeas.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3403,6 +3472,7 @@ namespace Grafeas.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3426,6 +3496,10 @@ namespace Grafeas.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3447,6 +3521,10 @@ namespace Grafeas.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -4630,6 +4708,7 @@ namespace Grafeas.V1 {
       filter_ = other.filter_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4701,6 +4780,25 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 5;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// If set, the request will return all reachable Notes
+    /// and report all unreachable regions in the `unreachable` field in
+    /// the response.
+    ///
+    /// Only applicable for requests in the global region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4720,6 +4818,7 @@ namespace Grafeas.V1 {
       if (Filter != other.Filter) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4731,6 +4830,7 @@ namespace Grafeas.V1 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4765,6 +4865,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4791,6 +4895,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4812,6 +4920,9 @@ namespace Grafeas.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4836,6 +4947,9 @@ namespace Grafeas.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4868,6 +4982,10 @@ namespace Grafeas.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4897,6 +5015,10 @@ namespace Grafeas.V1 {
           }
           case 34: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -4946,6 +5068,7 @@ namespace Grafeas.V1 {
     public ListNotesResponse(ListNotesResponse other) : this() {
       notes_ = other.notes_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4986,6 +5109,23 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable regions. Populated for requests from the global region
+    /// when `return_partial_success` is set.
+    ///
+    /// Format: `projects/[PROJECT_ID]/locations/[LOCATION]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5003,6 +5143,7 @@ namespace Grafeas.V1 {
       }
       if(!notes_.Equals(other.notes_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5012,6 +5153,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       hash ^= notes_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5035,6 +5177,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5050,6 +5193,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5064,6 +5208,7 @@ namespace Grafeas.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5080,6 +5225,7 @@ namespace Grafeas.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5103,6 +5249,10 @@ namespace Grafeas.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -5124,6 +5274,10 @@ namespace Grafeas.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

@@ -125,6 +125,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrences(request);
@@ -174,6 +175,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> response = grafeasClient.ListOccurrencesAsync(request);
@@ -953,6 +955,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotes(request);
@@ -1002,6 +1005,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListNotesResponse, Note> response = grafeasClient.ListNotesAsync(request);
