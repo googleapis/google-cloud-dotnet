@@ -61,10 +61,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             ProjectName projectName = new ProjectName(projectId);
             IAsyncEnumerable<Topic> topics = client.ListTopicsAsync(projectName);
-            await topics.ForEachAsync(topic =>
+            await foreach (Topic topic in topics)
             {
                 Console.WriteLine(topic.Name);
-            });
+            }
             // End snippet
         }
 

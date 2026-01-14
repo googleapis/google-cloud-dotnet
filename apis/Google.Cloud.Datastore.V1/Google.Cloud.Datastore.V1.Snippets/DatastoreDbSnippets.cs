@@ -142,10 +142,10 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // call AsResponses() to see the raw RPC responses, or
             // GetAllResultsAsync() to get all the results into memory, complete with
             // the end cursor and the reason for the query finishing.
-            await results.ForEachAsync(entity =>
+            await foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
-            });
+            }
             // End snippet
 
             // This will run the query again, admittedly...
@@ -206,10 +206,10 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // call AsResponses() to see the raw RPC responses, or
             // GetAllResultsAsync() to get all the results into memory, complete with
             // the end cursor and the reason for the query finishing.
-            await results.ForEachAsync(entity =>
+            await foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
-            });
+            }
             // End snippet
 
             // This will run the query again, admittedly...

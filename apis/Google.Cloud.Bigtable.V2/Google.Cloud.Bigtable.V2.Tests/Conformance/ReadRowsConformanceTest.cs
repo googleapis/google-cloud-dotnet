@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -50,8 +50,13 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance
             {
                 // Do not use ToList() here. We want to get all results before the first failure.
                 responses = new List<Row>();
-                await Assert.ThrowsAsync<InvalidOperationException>(
-                    () => stream.ForEachAsync(row => responses.Add(row)));
+                await Assert.ThrowsAsync<InvalidOperationException>(async () =>
+                {
+                    await foreach (var row in stream)
+                    {
+                        responses.Add(row);
+                    }
+                });
             }
             else
             {

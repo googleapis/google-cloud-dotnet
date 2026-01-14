@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -220,7 +220,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
             // of Utilities.CreateReadRowsMockClient because the response from the retry stream with the "b" row key
             // should be outside the range of (b-z] requested during retry.
             int rowCount = 0;
-            await Assert.ThrowsAsync<InvalidOperationException>(() => stream.ForEachAsync(row => rowCount++));
+            await Assert.ThrowsAsync<InvalidOperationException>(async () =>
+            {
+                await foreach (var row in stream)
+                {
+                    rowCount++;
+                }
+            });
             Assert.Equal(1, rowCount);
         }
 
