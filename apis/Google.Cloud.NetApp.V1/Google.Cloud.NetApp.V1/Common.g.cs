@@ -26,32 +26,37 @@ namespace Google.Cloud.NetApp.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvbmV0YXBwL3YxL2NvbW1vbi5wcm90bxIWZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90byLHAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
+            "cm90byLlAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
             "ZV9sZXZlbHMYASADKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlNlcnZp",
             "Y2VMZXZlbEID4EEDElAKGnN1cHBvcnRlZF9mbGV4X3BlcmZvcm1hbmNlGAIg",
             "AygOMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5GbGV4UGVyZm9ybWFuY2VC",
-            "A+BBAxIUCgdoYXNfdmNwGAMgASgIQgPgQQMiJQoMVXNlckNvbW1hbmRzEhUK",
-            "CGNvbW1hbmRzGAEgAygJQgPgQQMqXwoMU2VydmljZUxldmVsEh0KGVNFUlZJ",
-            "Q0VfTEVWRUxfVU5TUEVDSUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVN",
-            "RRACEgwKCFNUQU5EQVJEEAMSCAoERkxFWBAEKm4KD0ZsZXhQZXJmb3JtYW5j",
-            "ZRIgChxGTEVYX1BFUkZPUk1BTkNFX1VOU1BFQ0lGSUVEEAASHAoYRkxFWF9Q",
-            "RVJGT1JNQU5DRV9ERUZBVUxUEAESGwoXRkxFWF9QRVJGT1JNQU5DRV9DVVNU",
-            "T00QAipVCg5FbmNyeXB0aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABITCg9TRVJWSUNFX01BTkFHRUQQARINCglDTE9VRF9LTVMQ",
-            "AipUChREaXJlY3RvcnlTZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklD",
-            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKnUK",
+            "A+BBAxIUCgdoYXNfdmNwGAMgASgIQgPgQQMSHAoPaGFzX29udGFwX3Byb3h5",
+            "GAQgASgIQgPgQQMiJQoMVXNlckNvbW1hbmRzEhUKCGNvbW1hbmRzGAEgAygJ",
+            "QgPgQQMqXwoMU2VydmljZUxldmVsEh0KGVNFUlZJQ0VfTEVWRUxfVU5TUEVD",
+            "SUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVNRRACEgwKCFNUQU5EQVJE",
+            "EAMSCAoERkxFWBAEKm4KD0ZsZXhQZXJmb3JtYW5jZRIgChxGTEVYX1BFUkZP",
+            "Uk1BTkNFX1VOU1BFQ0lGSUVEEAASHAoYRkxFWF9QRVJGT1JNQU5DRV9ERUZB",
+            "VUxUEAESGwoXRkxFWF9QRVJGT1JNQU5DRV9DVVNUT00QAipVCg5FbmNyeXB0",
+            "aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABITCg9T",
+            "RVJWSUNFX01BTkFHRUQQARINCglDTE9VRF9LTVMQAipUChREaXJlY3RvcnlT",
+            "ZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklDRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKmcKD1N0b3JhZ2VQb29sVHlw",
+            "ZRIhCh1TVE9SQUdFX1BPT0xfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZJTEUQ",
+            "ARILCgdVTklGSUVEEAISGgoWVU5JRklFRF9MQVJHRV9DQVBBQ0lUWRADKnUK",
             "GUh5YnJpZFJlcGxpY2F0aW9uU2NoZWR1bGUSKwonSFlCUklEX1JFUExJQ0FU",
             "SU9OX1NDSEVEVUxFX1VOU1BFQ0lGSUVEEAASFAoQRVZFUllfMTBfTUlOVVRF",
             "UxABEgoKBkhPVVJMWRACEgkKBURBSUxZEAMqOQoHUW9zVHlwZRIYChRRT1Nf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIKCgZNQU5VQUwQAkKtAQoa",
-            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCC0NvbW1vblByb3RvUAFaMmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
-            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
-            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "VFlQRV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIKCgZNQU5VQUwQAipDCgZP",
+            "c1R5cGUSFwoTT1NfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUxJTlVYEAESCwoH",
+            "V0lORE9XUxACEggKBEVTWEkQA0KtAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRh",
+            "cHAudjFCC0NvbW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0",
+            "YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5l",
+            "dEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNs",
+            "b3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.StoragePoolType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), typeof(global::Google.Cloud.NetApp.V1.OsType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp", "HasOntapProxy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UserCommands), global::Google.Cloud.NetApp.V1.UserCommands.Parser, new[]{ "Commands" }, null, null, null, null)
           }));
     }
@@ -136,6 +141,28 @@ namespace Google.Cloud.NetApp.V1 {
   }
 
   /// <summary>
+  /// Type of storage pool
+  /// </summary>
+  public enum StoragePoolType {
+    /// <summary>
+    /// Storage pool type is not specified.
+    /// </summary>
+    [pbr::OriginalName("STORAGE_POOL_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Storage pool type is file.
+    /// </summary>
+    [pbr::OriginalName("FILE")] File = 1,
+    /// <summary>
+    /// Storage pool type is unified.
+    /// </summary>
+    [pbr::OriginalName("UNIFIED")] Unified = 2,
+    /// <summary>
+    /// Storage pool type is unified large capacity.
+    /// </summary>
+    [pbr::OriginalName("UNIFIED_LARGE_CAPACITY")] UnifiedLargeCapacity = 3,
+  }
+
+  /// <summary>
   /// Schedule for Hybrid Replication.
   /// New enum values may be added in future to support different frequency of
   /// replication.
@@ -175,6 +202,28 @@ namespace Google.Cloud.NetApp.V1 {
     /// QoS Type is Manual
     /// </summary>
     [pbr::OriginalName("MANUAL")] Manual = 2,
+  }
+
+  /// <summary>
+  /// OS types for the host group
+  /// </summary>
+  public enum OsType {
+    /// <summary>
+    /// Unspecified OS Type
+    /// </summary>
+    [pbr::OriginalName("OS_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// OS Type is Linux
+    /// </summary>
+    [pbr::OriginalName("LINUX")] Linux = 1,
+    /// <summary>
+    /// OS Type is Windows
+    /// </summary>
+    [pbr::OriginalName("WINDOWS")] Windows = 2,
+    /// <summary>
+    /// OS Type is VMware ESXi
+    /// </summary>
+    [pbr::OriginalName("ESXI")] Esxi = 3,
   }
 
   #endregion
@@ -222,6 +271,7 @@ namespace Google.Cloud.NetApp.V1 {
       supportedServiceLevels_ = other.supportedServiceLevels_.Clone();
       supportedFlexPerformance_ = other.supportedFlexPerformance_.Clone();
       hasVcp_ = other.hasVcp_;
+      hasOntapProxy_ = other.hasOntapProxy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -274,6 +324,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "has_ontap_proxy" field.</summary>
+    public const int HasOntapProxyFieldNumber = 4;
+    private bool hasOntapProxy_;
+    /// <summary>
+    /// Output only. Indicates if the location has ONTAP Proxy support.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOntapProxy {
+      get { return hasOntapProxy_; }
+      set {
+        hasOntapProxy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -292,6 +357,7 @@ namespace Google.Cloud.NetApp.V1 {
       if(!supportedServiceLevels_.Equals(other.supportedServiceLevels_)) return false;
       if(!supportedFlexPerformance_.Equals(other.supportedFlexPerformance_)) return false;
       if (HasVcp != other.HasVcp) return false;
+      if (HasOntapProxy != other.HasOntapProxy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -302,6 +368,7 @@ namespace Google.Cloud.NetApp.V1 {
       hash ^= supportedServiceLevels_.GetHashCode();
       hash ^= supportedFlexPerformance_.GetHashCode();
       if (HasVcp != false) hash ^= HasVcp.GetHashCode();
+      if (HasOntapProxy != false) hash ^= HasOntapProxy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -326,6 +393,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(24);
         output.WriteBool(HasVcp);
       }
+      if (HasOntapProxy != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(HasOntapProxy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -342,6 +413,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(24);
         output.WriteBool(HasVcp);
       }
+      if (HasOntapProxy != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(HasOntapProxy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -355,6 +430,9 @@ namespace Google.Cloud.NetApp.V1 {
       size += supportedServiceLevels_.CalculateSize(_repeated_supportedServiceLevels_codec);
       size += supportedFlexPerformance_.CalculateSize(_repeated_supportedFlexPerformance_codec);
       if (HasVcp != false) {
+        size += 1 + 1;
+      }
+      if (HasOntapProxy != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -373,6 +451,9 @@ namespace Google.Cloud.NetApp.V1 {
       supportedFlexPerformance_.Add(other.supportedFlexPerformance_);
       if (other.HasVcp != false) {
         HasVcp = other.HasVcp;
+      }
+      if (other.HasOntapProxy != false) {
+        HasOntapProxy = other.HasOntapProxy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -403,6 +484,10 @@ namespace Google.Cloud.NetApp.V1 {
             HasVcp = input.ReadBool();
             break;
           }
+          case 32: {
+            HasOntapProxy = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -430,6 +515,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 24: {
             HasVcp = input.ReadBool();
+            break;
+          }
+          case 32: {
+            HasOntapProxy = input.ReadBool();
             break;
           }
         }

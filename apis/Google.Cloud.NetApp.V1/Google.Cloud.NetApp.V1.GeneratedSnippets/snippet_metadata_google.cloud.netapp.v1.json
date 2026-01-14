@@ -15099,6 +15099,1515 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreBackupFiles_sync",
+      "title": "RestoreBackupFilesRequestObject",
+      "description": "Snippet for RestoreBackupFiles",
+      "file": "NetAppClient.RestoreBackupFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreBackupFiles",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreBackupFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.RestoreBackupFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreBackupFilesResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreBackupFiles",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreBackupFiles",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreBackupFiles_async",
+      "title": "RestoreBackupFilesRequestObjectAsync",
+      "description": "Snippet for RestoreBackupFilesAsync",
+      "file": "NetAppClient.RestoreBackupFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreBackupFilesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreBackupFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.RestoreBackupFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreBackupFilesResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreBackupFiles",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreBackupFiles",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_sync",
+      "title": "ListHostGroupsRequestObject",
+      "description": "Snippet for ListHostGroups",
+      "file": "NetAppClient.ListHostGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListHostGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_async",
+      "title": "ListHostGroupsRequestObjectAsync",
+      "description": "Snippet for ListHostGroupsAsync",
+      "file": "NetAppClient.ListHostGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListHostGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_sync_flattened",
+      "title": "ListHostGroups",
+      "description": "Snippet for ListHostGroups",
+      "file": "NetAppClient.ListHostGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_async_flattened",
+      "title": "ListHostGroupsAsync",
+      "description": "Snippet for ListHostGroupsAsync",
+      "file": "NetAppClient.ListHostGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_sync_flattened_resourceNames",
+      "title": "ListHostGroupsResourceNames",
+      "description": "Snippet for ListHostGroups",
+      "file": "NetAppClient.ListHostGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListHostGroups_async_flattened_resourceNames",
+      "title": "ListHostGroupsResourceNamesAsync",
+      "description": "Snippet for ListHostGroupsAsync",
+      "file": "NetAppClient.ListHostGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListHostGroupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListHostGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListHostGroupsResponse, Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListHostGroups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListHostGroups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_sync",
+      "title": "GetHostGroupRequestObject",
+      "description": "Snippet for GetHostGroup",
+      "file": "NetAppClient.GetHostGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.HostGroup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_async",
+      "title": "GetHostGroupRequestObjectAsync",
+      "description": "Snippet for GetHostGroupAsync",
+      "file": "NetAppClient.GetHostGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_sync_flattened",
+      "title": "GetHostGroup",
+      "description": "Snippet for GetHostGroup",
+      "file": "NetAppClient.GetHostGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.HostGroup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_async_flattened",
+      "title": "GetHostGroupAsync",
+      "description": "Snippet for GetHostGroupAsync",
+      "file": "NetAppClient.GetHostGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_sync_flattened_resourceNames",
+      "title": "GetHostGroupResourceNames",
+      "description": "Snippet for GetHostGroup",
+      "file": "NetAppClient.GetHostGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.HostGroup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetHostGroup_async_flattened_resourceNames",
+      "title": "GetHostGroupResourceNamesAsync",
+      "description": "Snippet for GetHostGroupAsync",
+      "file": "NetAppClient.GetHostGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.HostGroup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_sync",
+      "title": "CreateHostGroupRequestObject",
+      "description": "Snippet for CreateHostGroup",
+      "file": "NetAppClient.CreateHostGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_async",
+      "title": "CreateHostGroupRequestObjectAsync",
+      "description": "Snippet for CreateHostGroupAsync",
+      "file": "NetAppClient.CreateHostGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_sync_flattened",
+      "title": "CreateHostGroup",
+      "description": "Snippet for CreateHostGroup",
+      "file": "NetAppClient.CreateHostGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "hostGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_async_flattened",
+      "title": "CreateHostGroupAsync",
+      "description": "Snippet for CreateHostGroupAsync",
+      "file": "NetAppClient.CreateHostGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "hostGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_sync_flattened_resourceNames",
+      "title": "CreateHostGroupResourceNames",
+      "description": "Snippet for CreateHostGroup",
+      "file": "NetAppClient.CreateHostGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "hostGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateHostGroup_async_flattened_resourceNames",
+      "title": "CreateHostGroupResourceNamesAsync",
+      "description": "Snippet for CreateHostGroupAsync",
+      "file": "NetAppClient.CreateHostGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "hostGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateHostGroup_sync",
+      "title": "UpdateHostGroupRequestObject",
+      "description": "Snippet for UpdateHostGroup",
+      "file": "NetAppClient.UpdateHostGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateHostGroup_async",
+      "title": "UpdateHostGroupRequestObjectAsync",
+      "description": "Snippet for UpdateHostGroupAsync",
+      "file": "NetAppClient.UpdateHostGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateHostGroup_sync_flattened",
+      "title": "UpdateHostGroup",
+      "description": "Snippet for UpdateHostGroup",
+      "file": "NetAppClient.UpdateHostGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateHostGroup_async_flattened",
+      "title": "UpdateHostGroupAsync",
+      "description": "Snippet for UpdateHostGroupAsync",
+      "file": "NetAppClient.UpdateHostGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroup",
+            "name": "hostGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.HostGroup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_sync",
+      "title": "DeleteHostGroupRequestObject",
+      "description": "Snippet for DeleteHostGroup",
+      "file": "NetAppClient.DeleteHostGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_async",
+      "title": "DeleteHostGroupRequestObjectAsync",
+      "description": "Snippet for DeleteHostGroupAsync",
+      "file": "NetAppClient.DeleteHostGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteHostGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_sync_flattened",
+      "title": "DeleteHostGroup",
+      "description": "Snippet for DeleteHostGroup",
+      "file": "NetAppClient.DeleteHostGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_async_flattened",
+      "title": "DeleteHostGroupAsync",
+      "description": "Snippet for DeleteHostGroupAsync",
+      "file": "NetAppClient.DeleteHostGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_sync_flattened_resourceNames",
+      "title": "DeleteHostGroupResourceNames",
+      "description": "Snippet for DeleteHostGroup",
+      "file": "NetAppClient.DeleteHostGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteHostGroup_async_flattened_resourceNames",
+      "title": "DeleteHostGroupResourceNamesAsync",
+      "description": "Snippet for DeleteHostGroupAsync",
+      "file": "NetAppClient.DeleteHostGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteHostGroupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteHostGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.HostGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteHostGroup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteHostGroup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

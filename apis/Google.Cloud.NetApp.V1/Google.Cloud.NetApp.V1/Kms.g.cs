@@ -66,11 +66,15 @@ namespace Google.Cloud.NetApp.V1 {
             "DQoJRElTQUJMSU5HEAkSDAoIRElTQUJMRUQQChINCglNSUdSQVRJTkcQCzp8",
             "6kF5Ch9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnEj9wcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va21zQ29uZmlncy97",
-            "a21zX2NvbmZpZ30qCmttc0NvbmZpZ3MyCWttc0NvbmZpZ0KqAQoaY29tLmdv",
+            "a21zX2NvbmZpZ30qCmttc0NvbmZpZ3MyCWttc0NvbmZpZ0LUAgoaY29tLmdv",
             "b2dsZS5jbG91ZC5uZXRhcHAudjFCCEttc1Byb3RvUAFaMmNsb3VkLmdvb2ds",
             "ZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29v",
             "Z2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHq",
-            "AhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "AhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx6kGmAQooY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbhJ6cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30v",
+            "Y3J5cHRvS2V5cy97Y3J5cHRvX2tleX0vY3J5cHRvS2V5VmVyc2lvbnMve2Ny",
+            "eXB0b19rZXlfdmVyc2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2311,7 +2315,7 @@ namespace Google.Cloud.NetApp.V1 {
   }
 
   /// <summary>
-  /// KmsConfig is the customer managed encryption key(CMEK) configuration.
+  /// KmsConfig is the customer-managed encryption key(CMEK) configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KmsConfig : pb::IMessage<KmsConfig>
@@ -2371,6 +2375,7 @@ namespace Google.Cloud.NetApp.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the KmsConfig.
+    /// Format: `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2385,8 +2390,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int CryptoKeyNameFieldNumber = 2;
     private string cryptoKeyName_ = "";
     /// <summary>
-    /// Required. Customer managed crypto key resource full name. Format:
-    /// projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}.
+    /// Required. Customer-managed crypto key resource full name. Format:
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -9390,5 +9390,949 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for RestoreBackupFiles</summary>
+        public void RestoreBackupFilesRequestObject()
+        {
+            // Snippet: RestoreBackupFiles(RestoreBackupFilesRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            RestoreBackupFilesRequest request = new RestoreBackupFilesRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                BackupAsBackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+                FileList = { "", },
+                RestoreDestinationPath = "",
+            };
+            // Make the request
+            Operation<RestoreBackupFilesResponse, OperationMetadata> response = netAppClient.RestoreBackupFiles(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupFilesResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreBackupFilesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupFilesResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceRestoreBackupFiles(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupFilesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackupFilesAsync</summary>
+        public async Task RestoreBackupFilesRequestObjectAsync()
+        {
+            // Snippet: RestoreBackupFilesAsync(RestoreBackupFilesRequest, CallSettings)
+            // Additional: RestoreBackupFilesAsync(RestoreBackupFilesRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreBackupFilesRequest request = new RestoreBackupFilesRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                BackupAsBackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+                FileList = { "", },
+                RestoreDestinationPath = "",
+            };
+            // Make the request
+            Operation<RestoreBackupFilesResponse, OperationMetadata> response = await netAppClient.RestoreBackupFilesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupFilesResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreBackupFilesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupFilesResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceRestoreBackupFilesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupFilesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroups</summary>
+        public void ListHostGroupsRequestObject()
+        {
+            // Snippet: ListHostGroups(ListHostGroupsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroupsAsync</summary>
+        public async Task ListHostGroupsRequestObjectAsync()
+        {
+            // Snippet: ListHostGroupsAsync(ListHostGroupsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroups</summary>
+        public void ListHostGroups()
+        {
+            // Snippet: ListHostGroups(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroupsAsync</summary>
+        public async Task ListHostGroupsAsync()
+        {
+            // Snippet: ListHostGroupsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroups</summary>
+        public void ListHostGroupsResourceNames()
+        {
+            // Snippet: ListHostGroups(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListHostGroupsAsync</summary>
+        public async Task ListHostGroupsResourceNamesAsync()
+        {
+            // Snippet: ListHostGroupsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> response = netAppClient.ListHostGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (HostGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListHostGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HostGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HostGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HostGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroup</summary>
+        public void GetHostGroupRequestObject()
+        {
+            // Snippet: GetHostGroup(GetHostGroupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetHostGroupRequest request = new GetHostGroupRequest
+            {
+                HostGroupName = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]"),
+            };
+            // Make the request
+            HostGroup response = netAppClient.GetHostGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroupAsync</summary>
+        public async Task GetHostGroupRequestObjectAsync()
+        {
+            // Snippet: GetHostGroupAsync(GetHostGroupRequest, CallSettings)
+            // Additional: GetHostGroupAsync(GetHostGroupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetHostGroupRequest request = new GetHostGroupRequest
+            {
+                HostGroupName = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]"),
+            };
+            // Make the request
+            HostGroup response = await netAppClient.GetHostGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroup</summary>
+        public void GetHostGroup()
+        {
+            // Snippet: GetHostGroup(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/hostGroups/[HOST_GROUP]";
+            // Make the request
+            HostGroup response = netAppClient.GetHostGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroupAsync</summary>
+        public async Task GetHostGroupAsync()
+        {
+            // Snippet: GetHostGroupAsync(string, CallSettings)
+            // Additional: GetHostGroupAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/hostGroups/[HOST_GROUP]";
+            // Make the request
+            HostGroup response = await netAppClient.GetHostGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroup</summary>
+        public void GetHostGroupResourceNames()
+        {
+            // Snippet: GetHostGroup(HostGroupName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            HostGroupName name = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]");
+            // Make the request
+            HostGroup response = netAppClient.GetHostGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHostGroupAsync</summary>
+        public async Task GetHostGroupResourceNamesAsync()
+        {
+            // Snippet: GetHostGroupAsync(HostGroupName, CallSettings)
+            // Additional: GetHostGroupAsync(HostGroupName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            HostGroupName name = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]");
+            // Make the request
+            HostGroup response = await netAppClient.GetHostGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroup</summary>
+        public void CreateHostGroupRequestObject()
+        {
+            // Snippet: CreateHostGroup(CreateHostGroupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            CreateHostGroupRequest request = new CreateHostGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                HostGroup = new HostGroup(),
+                HostGroupId = "",
+            };
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = netAppClient.CreateHostGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroupAsync</summary>
+        public async Task CreateHostGroupRequestObjectAsync()
+        {
+            // Snippet: CreateHostGroupAsync(CreateHostGroupRequest, CallSettings)
+            // Additional: CreateHostGroupAsync(CreateHostGroupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateHostGroupRequest request = new CreateHostGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                HostGroup = new HostGroup(),
+                HostGroupId = "",
+            };
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = await netAppClient.CreateHostGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroup</summary>
+        public void CreateHostGroup()
+        {
+            // Snippet: CreateHostGroup(string, HostGroup, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            HostGroup hostGroup = new HostGroup();
+            string hostGroupId = "";
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = netAppClient.CreateHostGroup(parent, hostGroup, hostGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroupAsync</summary>
+        public async Task CreateHostGroupAsync()
+        {
+            // Snippet: CreateHostGroupAsync(string, HostGroup, string, CallSettings)
+            // Additional: CreateHostGroupAsync(string, HostGroup, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            HostGroup hostGroup = new HostGroup();
+            string hostGroupId = "";
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = await netAppClient.CreateHostGroupAsync(parent, hostGroup, hostGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroup</summary>
+        public void CreateHostGroupResourceNames()
+        {
+            // Snippet: CreateHostGroup(LocationName, HostGroup, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            HostGroup hostGroup = new HostGroup();
+            string hostGroupId = "";
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = netAppClient.CreateHostGroup(parent, hostGroup, hostGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateHostGroupAsync</summary>
+        public async Task CreateHostGroupResourceNamesAsync()
+        {
+            // Snippet: CreateHostGroupAsync(LocationName, HostGroup, string, CallSettings)
+            // Additional: CreateHostGroupAsync(LocationName, HostGroup, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            HostGroup hostGroup = new HostGroup();
+            string hostGroupId = "";
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = await netAppClient.CreateHostGroupAsync(parent, hostGroup, hostGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateHostGroup</summary>
+        public void UpdateHostGroupRequestObject()
+        {
+            // Snippet: UpdateHostGroup(UpdateHostGroupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateHostGroupRequest request = new UpdateHostGroupRequest
+            {
+                HostGroup = new HostGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = netAppClient.UpdateHostGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateHostGroupAsync</summary>
+        public async Task UpdateHostGroupRequestObjectAsync()
+        {
+            // Snippet: UpdateHostGroupAsync(UpdateHostGroupRequest, CallSettings)
+            // Additional: UpdateHostGroupAsync(UpdateHostGroupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateHostGroupRequest request = new UpdateHostGroupRequest
+            {
+                HostGroup = new HostGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = await netAppClient.UpdateHostGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateHostGroup</summary>
+        public void UpdateHostGroup()
+        {
+            // Snippet: UpdateHostGroup(HostGroup, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            HostGroup hostGroup = new HostGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = netAppClient.UpdateHostGroup(hostGroup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateHostGroupAsync</summary>
+        public async Task UpdateHostGroupAsync()
+        {
+            // Snippet: UpdateHostGroupAsync(HostGroup, FieldMask, CallSettings)
+            // Additional: UpdateHostGroupAsync(HostGroup, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            HostGroup hostGroup = new HostGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<HostGroup, OperationMetadata> response = await netAppClient.UpdateHostGroupAsync(hostGroup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<HostGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            HostGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<HostGroup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                HostGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroup</summary>
+        public void DeleteHostGroupRequestObject()
+        {
+            // Snippet: DeleteHostGroup(DeleteHostGroupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            DeleteHostGroupRequest request = new DeleteHostGroupRequest
+            {
+                HostGroupName = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteHostGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroupAsync</summary>
+        public async Task DeleteHostGroupRequestObjectAsync()
+        {
+            // Snippet: DeleteHostGroupAsync(DeleteHostGroupRequest, CallSettings)
+            // Additional: DeleteHostGroupAsync(DeleteHostGroupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteHostGroupRequest request = new DeleteHostGroupRequest
+            {
+                HostGroupName = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteHostGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroup</summary>
+        public void DeleteHostGroup()
+        {
+            // Snippet: DeleteHostGroup(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/hostGroups/[HOST_GROUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteHostGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroupAsync</summary>
+        public async Task DeleteHostGroupAsync()
+        {
+            // Snippet: DeleteHostGroupAsync(string, CallSettings)
+            // Additional: DeleteHostGroupAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/hostGroups/[HOST_GROUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteHostGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroup</summary>
+        public void DeleteHostGroupResourceNames()
+        {
+            // Snippet: DeleteHostGroup(HostGroupName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            HostGroupName name = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteHostGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteHostGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteHostGroupAsync</summary>
+        public async Task DeleteHostGroupResourceNamesAsync()
+        {
+            // Snippet: DeleteHostGroupAsync(HostGroupName, CallSettings)
+            // Additional: DeleteHostGroupAsync(HostGroupName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            HostGroupName name = HostGroupName.FromProjectLocationHostGroup("[PROJECT]", "[LOCATION]", "[HOST_GROUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteHostGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteHostGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

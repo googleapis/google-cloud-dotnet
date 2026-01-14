@@ -34,6 +34,12 @@
                 "CreateBackupVaultAsync"
               ]
             },
+            "CreateHostGroup": {
+              "methods": [
+                "CreateHostGroup",
+                "CreateHostGroupAsync"
+              ]
+            },
             "CreateKmsConfig": {
               "methods": [
                 "CreateKmsConfig",
@@ -92,6 +98,12 @@
               "methods": [
                 "DeleteBackupVault",
                 "DeleteBackupVaultAsync"
+              ]
+            },
+            "DeleteHostGroup": {
+              "methods": [
+                "DeleteHostGroup",
+                "DeleteHostGroupAsync"
               ]
             },
             "DeleteKmsConfig": {
@@ -166,6 +178,12 @@
                 "GetBackupVaultAsync"
               ]
             },
+            "GetHostGroup": {
+              "methods": [
+                "GetHostGroup",
+                "GetHostGroupAsync"
+              ]
+            },
             "GetKmsConfig": {
               "methods": [
                 "GetKmsConfig",
@@ -226,6 +244,12 @@
                 "ListBackupsAsync"
               ]
             },
+            "ListHostGroups": {
+              "methods": [
+                "ListHostGroups",
+                "ListHostGroupsAsync"
+              ]
+            },
             "ListKmsConfigs": {
               "methods": [
                 "ListKmsConfigs",
@@ -260,6 +284,12 @@
               "methods": [
                 "ListVolumes",
                 "ListVolumesAsync"
+              ]
+            },
+            "RestoreBackupFiles": {
+              "methods": [
+                "RestoreBackupFiles",
+                "RestoreBackupFilesAsync"
               ]
             },
             "ResumeReplication": {
@@ -320,6 +350,12 @@
               "methods": [
                 "UpdateBackupVault",
                 "UpdateBackupVaultAsync"
+              ]
+            },
+            "UpdateHostGroup": {
+              "methods": [
+                "UpdateHostGroup",
+                "UpdateHostGroupAsync"
               ]
             },
             "UpdateKmsConfig": {

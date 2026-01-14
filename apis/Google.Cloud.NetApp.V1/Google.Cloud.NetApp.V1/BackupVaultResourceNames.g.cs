@@ -321,6 +321,15 @@ namespace Google.Cloud.NetApp.V1
             get => string.IsNullOrEmpty(DestinationBackupVault) ? null : gcnv::BackupVaultName.Parse(DestinationBackupVault, allowUnparsed: true);
             set => DestinationBackupVault = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="KmsConfigName"/>-typed view over the <see cref="KmsConfig"/> resource name property.
+        /// </summary>
+        public KmsConfigName KmsConfigAsKmsConfigName
+        {
+            get => string.IsNullOrEmpty(KmsConfig) ? null : KmsConfigName.Parse(KmsConfig, allowUnparsed: true);
+            set => KmsConfig = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetBackupVaultRequest
