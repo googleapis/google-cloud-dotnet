@@ -3,7 +3,7 @@
 //     source: google/cloud/netapp/v1/cloud_netapp_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -227,6 +227,22 @@ namespace Google.Cloud.NetApp.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_UpdateQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_DeleteQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest> __Marshaller_google_cloud_netapp_v1_RestoreBackupFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListHostGroupsRequest> __Marshaller_google_cloud_netapp_v1_ListHostGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListHostGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListHostGroupsResponse> __Marshaller_google_cloud_netapp_v1_ListHostGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListHostGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetHostGroupRequest> __Marshaller_google_cloud_netapp_v1_GetHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetHostGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.HostGroup> __Marshaller_google_cloud_netapp_v1_HostGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.HostGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateHostGroupRequest> __Marshaller_google_cloud_netapp_v1_CreateHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateHostGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest> __Marshaller_google_cloud_netapp_v1_UpdateHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest> __Marshaller_google_cloud_netapp_v1_DeleteHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse> __Method_ListStoragePools = new grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse>(
@@ -706,6 +722,54 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "DeleteQuotaRule",
         __Marshaller_google_cloud_netapp_v1_DeleteQuotaRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest, global::Google.LongRunning.Operation> __Method_RestoreBackupFiles = new grpc::Method<global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreBackupFiles",
+        __Marshaller_google_cloud_netapp_v1_RestoreBackupFilesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListHostGroupsRequest, global::Google.Cloud.NetApp.V1.ListHostGroupsResponse> __Method_ListHostGroups = new grpc::Method<global::Google.Cloud.NetApp.V1.ListHostGroupsRequest, global::Google.Cloud.NetApp.V1.ListHostGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListHostGroups",
+        __Marshaller_google_cloud_netapp_v1_ListHostGroupsRequest,
+        __Marshaller_google_cloud_netapp_v1_ListHostGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetHostGroupRequest, global::Google.Cloud.NetApp.V1.HostGroup> __Method_GetHostGroup = new grpc::Method<global::Google.Cloud.NetApp.V1.GetHostGroupRequest, global::Google.Cloud.NetApp.V1.HostGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetHostGroup",
+        __Marshaller_google_cloud_netapp_v1_GetHostGroupRequest,
+        __Marshaller_google_cloud_netapp_v1_HostGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.CreateHostGroupRequest, global::Google.LongRunning.Operation> __Method_CreateHostGroup = new grpc::Method<global::Google.Cloud.NetApp.V1.CreateHostGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateHostGroup",
+        __Marshaller_google_cloud_netapp_v1_CreateHostGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest, global::Google.LongRunning.Operation> __Method_UpdateHostGroup = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateHostGroup",
+        __Marshaller_google_cloud_netapp_v1_UpdateHostGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest, global::Google.LongRunning.Operation> __Method_DeleteHostGroup = new grpc::Method<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteHostGroup",
+        __Marshaller_google_cloud_netapp_v1_DeleteHostGroupRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -1445,6 +1509,79 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteQuotaRule(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Restore files from a backup to a volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreBackupFiles(global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of host groups in a `location`. Use `-` as location to list
+      /// host groups across all locations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListHostGroupsResponse> ListHostGroups(global::Google.Cloud.NetApp.V1.ListHostGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns details of the specified host group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.HostGroup> GetHostGroup(global::Google.Cloud.NetApp.V1.GetHostGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new host group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateHostGroup(global::Google.Cloud.NetApp.V1.CreateHostGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing host group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateHostGroup(global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a host group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteHostGroup(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4402,6 +4539,298 @@ namespace Google.Cloud.NetApp.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteQuotaRule, null, options, request);
       }
+      /// <summary>
+      /// Restore files from a backup to a volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreBackupFiles(global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreBackupFiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restore files from a backup to a volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreBackupFiles(global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreBackupFiles, null, options, request);
+      }
+      /// <summary>
+      /// Restore files from a backup to a volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreBackupFilesAsync(global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreBackupFilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restore files from a backup to a volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreBackupFilesAsync(global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreBackupFiles, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of host groups in a `location`. Use `-` as location to list
+      /// host groups across all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListHostGroupsResponse ListHostGroups(global::Google.Cloud.NetApp.V1.ListHostGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHostGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of host groups in a `location`. Use `-` as location to list
+      /// host groups across all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListHostGroupsResponse ListHostGroups(global::Google.Cloud.NetApp.V1.ListHostGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListHostGroups, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of host groups in a `location`. Use `-` as location to list
+      /// host groups across all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListHostGroupsResponse> ListHostGroupsAsync(global::Google.Cloud.NetApp.V1.ListHostGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHostGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of host groups in a `location`. Use `-` as location to list
+      /// host groups across all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListHostGroupsResponse> ListHostGroupsAsync(global::Google.Cloud.NetApp.V1.ListHostGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListHostGroups, null, options, request);
+      }
+      /// <summary>
+      /// Returns details of the specified host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.HostGroup GetHostGroup(global::Google.Cloud.NetApp.V1.GetHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHostGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details of the specified host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.HostGroup GetHostGroup(global::Google.Cloud.NetApp.V1.GetHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Returns details of the specified host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.HostGroup> GetHostGroupAsync(global::Google.Cloud.NetApp.V1.GetHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHostGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details of the specified host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.HostGroup> GetHostGroupAsync(global::Google.Cloud.NetApp.V1.GetHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateHostGroup(global::Google.Cloud.NetApp.V1.CreateHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateHostGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateHostGroup(global::Google.Cloud.NetApp.V1.CreateHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateHostGroupAsync(global::Google.Cloud.NetApp.V1.CreateHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateHostGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateHostGroupAsync(global::Google.Cloud.NetApp.V1.CreateHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateHostGroup(global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateHostGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateHostGroup(global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateHostGroupAsync(global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateHostGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateHostGroupAsync(global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteHostGroup(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteHostGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteHostGroup(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteHostGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteHostGroupAsync(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteHostGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a host group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteHostGroupAsync(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteHostGroup, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetAppClient NewInstance(ClientBaseConfiguration configuration)
@@ -4475,7 +4904,13 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_GetQuotaRule, serviceImpl.GetQuotaRule)
           .AddMethod(__Method_CreateQuotaRule, serviceImpl.CreateQuotaRule)
           .AddMethod(__Method_UpdateQuotaRule, serviceImpl.UpdateQuotaRule)
-          .AddMethod(__Method_DeleteQuotaRule, serviceImpl.DeleteQuotaRule).Build();
+          .AddMethod(__Method_DeleteQuotaRule, serviceImpl.DeleteQuotaRule)
+          .AddMethod(__Method_RestoreBackupFiles, serviceImpl.RestoreBackupFiles)
+          .AddMethod(__Method_ListHostGroups, serviceImpl.ListHostGroups)
+          .AddMethod(__Method_GetHostGroup, serviceImpl.GetHostGroup)
+          .AddMethod(__Method_CreateHostGroup, serviceImpl.CreateHostGroup)
+          .AddMethod(__Method_UpdateHostGroup, serviceImpl.UpdateHostGroup)
+          .AddMethod(__Method_DeleteHostGroup, serviceImpl.DeleteHostGroup).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4545,6 +4980,12 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_CreateQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateQuotaRule));
       serviceBinder.AddMethod(__Method_UpdateQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateQuotaRule));
       serviceBinder.AddMethod(__Method_DeleteQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteQuotaRule));
+      serviceBinder.AddMethod(__Method_RestoreBackupFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.RestoreBackupFilesRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreBackupFiles));
+      serviceBinder.AddMethod(__Method_ListHostGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListHostGroupsRequest, global::Google.Cloud.NetApp.V1.ListHostGroupsResponse>(serviceImpl.ListHostGroups));
+      serviceBinder.AddMethod(__Method_GetHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetHostGroupRequest, global::Google.Cloud.NetApp.V1.HostGroup>(serviceImpl.GetHostGroup));
+      serviceBinder.AddMethod(__Method_CreateHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHostGroup));
+      serviceBinder.AddMethod(__Method_UpdateHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateHostGroup));
+      serviceBinder.AddMethod(__Method_DeleteHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteHostGroup));
     }
 
   }

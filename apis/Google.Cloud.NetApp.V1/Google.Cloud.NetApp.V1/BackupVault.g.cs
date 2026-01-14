@@ -28,7 +28,7 @@ namespace Google.Cloud.NetApp.V1 {
             "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xl",
             "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ikQoKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
+            "aW1lc3RhbXAucHJvdG8i/gwKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
             "A+BBCBI9CgVzdGF0ZRgCIAEoDjIpLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
             "QmFja3VwVmF1bHQuU3RhdGVCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtkZXNjcmlwdGlv",
@@ -43,46 +43,55 @@ namespace Google.Cloud.NetApp.V1 {
             "dBJLChhkZXN0aW5hdGlvbl9iYWNrdXBfdmF1bHQYCiABKAlCKeBBA/pBIwoh",
             "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0El8KF2JhY2t1cF9y",
             "ZXRlbnRpb25fcG9saWN5GAsgASgLMjkuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
-            "MS5CYWNrdXBWYXVsdC5CYWNrdXBSZXRlbnRpb25Qb2xpY3lCA+BBARrkAQoV",
-            "QmFja3VwUmV0ZW50aW9uUG9saWN5EjMKJmJhY2t1cF9taW5pbXVtX2VuZm9y",
-            "Y2VkX3JldGVudGlvbl9kYXlzGAEgASgFQgPgQQISIwoWZGFpbHlfYmFja3Vw",
-            "X2ltbXV0YWJsZRgCIAEoCEID4EEBEiQKF3dlZWtseV9iYWNrdXBfaW1tdXRh",
-            "YmxlGAMgASgIQgPgQQESJQoYbW9udGhseV9iYWNrdXBfaW1tdXRhYmxlGAQg",
-            "ASgIQgPgQQESJAoXbWFudWFsX2JhY2t1cF9pbW11dGFibGUYBSABKAhCA+BB",
-            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIl4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJ",
-            "TkcQARIJCgVSRUFEWRACEgwKCERFTEVUSU5HEAMSCQoFRVJST1IQBBIMCghV",
-            "UERBVElORxAFIlUKD0JhY2t1cFZhdWx0VHlwZRIhCh1CQUNLVVBfVkFVTFRf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEg0KCUlOX1JFR0lPThABEhAKDENST1NTX1JF",
-            "R0lPThACOocB6kGDAQohbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZh",
-            "dWx0EkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "YmFja3VwVmF1bHRzL3tiYWNrdXBfdmF1bHR9KgxiYWNrdXBWYXVsdHMyC2Jh",
-            "Y2t1cFZhdWx0IlAKFUdldEJhY2t1cFZhdWx0UmVxdWVzdBI3CgRuYW1lGAEg",
-            "ASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
-            "dCKdAQoXTGlzdEJhY2t1cFZhdWx0c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
-            "QingQQL6QSMSIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVsdBIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQCghvcmRl",
-            "cl9ieRgEIAEoCRIOCgZmaWx0ZXIYBSABKAkihAEKGExpc3RCYWNrdXBWYXVs",
-            "dHNSZXNwb25zZRI6Cg1iYWNrdXBfdmF1bHRzGAEgAygLMiMuZ29vZ2xlLmNs",
-            "b3VkLm5ldGFwcC52MS5CYWNrdXBWYXVsdBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiswEKGENyZWF0ZUJhY2t1cFZh",
-            "dWx0UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0YXBwLmdv",
-            "b2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EhwKD2JhY2t1cF92YXVsdF9pZBgC",
-            "IAEoCUID4EECEj4KDGJhY2t1cF92YXVsdBgDIAEoCzIjLmdvb2dsZS5jbG91",
-            "ZC5uZXRhcHAudjEuQmFja3VwVmF1bHRCA+BBAiJTChhEZWxldGVCYWNrdXBW",
-            "YXVsdFJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29v",
-            "Z2xlYXBpcy5jb20vQmFja3VwVmF1bHQikAEKGFVwZGF0ZUJhY2t1cFZhdWx0",
-            "UmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5GaWVsZE1hc2tCA+BBAhI+CgxiYWNrdXBfdmF1bHQYAiABKAsyIy5nb29n",
-            "bGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cFZhdWx0QgPgQQJCsgEKGmNvbS5n",
-            "b29nbGUuY2xvdWQubmV0YXBwLnYxQhBCYWNrdXBWYXVsdFByb3RvUAFaMmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
-            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
-            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "MS5CYWNrdXBWYXVsdC5CYWNrdXBSZXRlbnRpb25Qb2xpY3lCA+BBARI7Cgpr",
+            "bXNfY29uZmlnGAwgASgJQifgQQH6QSEKH25ldGFwcC5nb29nbGVhcGlzLmNv",
+            "bS9LbXNDb25maWcSUgoQZW5jcnlwdGlvbl9zdGF0ZRgNIAEoDjIzLmdvb2ds",
+            "ZS5jbG91ZC5uZXRhcHAudjEuQmFja3VwVmF1bHQuRW5jcnlwdGlvblN0YXRl",
+            "QgPgQQMSJwoaYmFja3Vwc19jcnlwdG9fa2V5X3ZlcnNpb24YDiABKAlCA+BB",
+            "AxrkAQoVQmFja3VwUmV0ZW50aW9uUG9saWN5EjMKJmJhY2t1cF9taW5pbXVt",
+            "X2VuZm9yY2VkX3JldGVudGlvbl9kYXlzGAEgASgFQgPgQQISIwoWZGFpbHlf",
+            "YmFja3VwX2ltbXV0YWJsZRgCIAEoCEID4EEBEiQKF3dlZWtseV9iYWNrdXBf",
+            "aW1tdXRhYmxlGAMgASgIQgPgQQESJQoYbW9udGhseV9iYWNrdXBfaW1tdXRh",
+            "YmxlGAQgASgIQgPgQQESJAoXbWFudWFsX2JhY2t1cF9pbW11dGFibGUYBSAB",
+            "KAhCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIl4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
+            "Q1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCERFTEVUSU5HEAMSCQoFRVJST1IQ",
+            "BBIMCghVUERBVElORxAFIlUKD0JhY2t1cFZhdWx0VHlwZRIhCh1CQUNLVVBf",
+            "VkFVTFRfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUlOX1JFR0lPThABEhAKDENS",
+            "T1NTX1JFR0lPThACIrABCg9FbmNyeXB0aW9uU3RhdGUSIAocRU5DUllQVElP",
+            "Tl9TVEFURV9VTlNQRUNJRklFRBAAEhwKGEVOQ1JZUFRJT05fU1RBVEVfUEVO",
+            "RElORxABEh4KGkVOQ1JZUFRJT05fU1RBVEVfQ09NUExFVEVEEAISIAocRU5D",
+            "UllQVElPTl9TVEFURV9JTl9QUk9HUkVTUxADEhsKF0VOQ1JZUFRJT05fU1RB",
+            "VEVfRkFJTEVEEAQ6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFj",
+            "a3VwVmF1bHQSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9iYWNrdXBWYXVsdHMve2JhY2t1cF92YXVsdH0qDGJhY2t1cFZhdWx0",
+            "czILYmFja3VwVmF1bHQiUAoVR2V0QmFja3VwVmF1bHRSZXF1ZXN0EjcKBG5h",
+            "bWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1",
+            "cFZhdWx0Ip0BChdMaXN0QmFja3VwVmF1bHRzUmVxdWVzdBI5CgZwYXJlbnQY",
+            "ASABKAlCKeBBAvpBIxIhbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZh",
+            "dWx0EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAK",
+            "CG9yZGVyX2J5GAQgASgJEg4KBmZpbHRlchgFIAEoCSKEAQoYTGlzdEJhY2t1",
+            "cFZhdWx0c1Jlc3BvbnNlEjoKDWJhY2t1cF92YXVsdHMYASADKAsyIy5nb29n",
+            "bGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cFZhdWx0EhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSKzAQoYQ3JlYXRlQmFj",
+            "a3VwVmF1bHRSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjEiFuZXRh",
+            "cHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSHAoPYmFja3VwX3ZhdWx0",
+            "X2lkGAIgASgJQgPgQQISPgoMYmFja3VwX3ZhdWx0GAMgASgLMiMuZ29vZ2xl",
+            "LmNsb3VkLm5ldGFwcC52MS5CYWNrdXBWYXVsdEID4EECIlMKGERlbGV0ZUJh",
+            "Y2t1cFZhdWx0UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFw",
+            "cC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVsdCKQAQoYVXBkYXRlQmFja3Vw",
+            "VmF1bHRSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFza0ID4EECEj4KDGJhY2t1cF92YXVsdBgCIAEoCzIj",
+            "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQmFja3VwVmF1bHRCA+BBAkKyAQoa",
+            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEEJhY2t1cFZhdWx0UHJvdG9Q",
+            "AVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7",
+            "bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENs",
+            "b3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels", "BackupVaultType", "SourceRegion", "BackupRegion", "SourceBackupVault", "DestinationBackupVault", "BackupRetentionPolicy" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy), global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy.Parser, new[]{ "BackupMinimumEnforcedRetentionDays", "DailyBackupImmutable", "WeeklyBackupImmutable", "MonthlyBackupImmutable", "ManualBackupImmutable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels", "BackupVaultType", "SourceRegion", "BackupRegion", "SourceBackupVault", "DestinationBackupVault", "BackupRetentionPolicy", "KmsConfig", "EncryptionState", "BackupsCryptoKeyVersion" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy), global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy.Parser, new[]{ "BackupMinimumEnforcedRetentionDays", "DailyBackupImmutable", "WeeklyBackupImmutable", "MonthlyBackupImmutable", "ManualBackupImmutable" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest), global::Google.Cloud.NetApp.V1.GetBackupVaultRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest), global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
@@ -145,6 +154,9 @@ namespace Google.Cloud.NetApp.V1 {
       sourceBackupVault_ = other.sourceBackupVault_;
       destinationBackupVault_ = other.destinationBackupVault_;
       backupRetentionPolicy_ = other.backupRetentionPolicy_ != null ? other.backupRetentionPolicy_.Clone() : null;
+      kmsConfig_ = other.kmsConfig_;
+      encryptionState_ = other.encryptionState_;
+      backupsCryptoKeyVersion_ = other.backupsCryptoKeyVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -316,7 +328,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int BackupRetentionPolicyFieldNumber = 11;
     private global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy backupRetentionPolicy_;
     /// <summary>
-    /// Optional. Backup retention policy defining the retenton of backups.
+    /// Optional. Backup retention policy defining the retention of backups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -324,6 +336,55 @@ namespace Google.Cloud.NetApp.V1 {
       get { return backupRetentionPolicy_; }
       set {
         backupRetentionPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "kms_config" field.</summary>
+    public const int KmsConfigFieldNumber = 12;
+    private string kmsConfig_ = "";
+    /// <summary>
+    /// Optional. Specifies the Key Management System (KMS) configuration to be
+    /// used for backup encryption. Format:
+    /// `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsConfig {
+      get { return kmsConfig_; }
+      set {
+        kmsConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "encryption_state" field.</summary>
+    public const int EncryptionStateFieldNumber = 13;
+    private global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState encryptionState_ = global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified;
+    /// <summary>
+    /// Output only. Field indicating encryption state of CMEK backups.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState EncryptionState {
+      get { return encryptionState_; }
+      set {
+        encryptionState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "backups_crypto_key_version" field.</summary>
+    public const int BackupsCryptoKeyVersionFieldNumber = 14;
+    private string backupsCryptoKeyVersion_ = "";
+    /// <summary>
+    /// Output only. The crypto key version used to encrypt the backup vault.
+    /// Format:
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackupsCryptoKeyVersion {
+      get { return backupsCryptoKeyVersion_; }
+      set {
+        backupsCryptoKeyVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -353,6 +414,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (SourceBackupVault != other.SourceBackupVault) return false;
       if (DestinationBackupVault != other.DestinationBackupVault) return false;
       if (!object.Equals(BackupRetentionPolicy, other.BackupRetentionPolicy)) return false;
+      if (KmsConfig != other.KmsConfig) return false;
+      if (EncryptionState != other.EncryptionState) return false;
+      if (BackupsCryptoKeyVersion != other.BackupsCryptoKeyVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -371,6 +435,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (SourceBackupVault.Length != 0) hash ^= SourceBackupVault.GetHashCode();
       if (DestinationBackupVault.Length != 0) hash ^= DestinationBackupVault.GetHashCode();
       if (backupRetentionPolicy_ != null) hash ^= BackupRetentionPolicy.GetHashCode();
+      if (KmsConfig.Length != 0) hash ^= KmsConfig.GetHashCode();
+      if (EncryptionState != global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified) hash ^= EncryptionState.GetHashCode();
+      if (BackupsCryptoKeyVersion.Length != 0) hash ^= BackupsCryptoKeyVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -430,6 +497,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(BackupRetentionPolicy);
       }
+      if (KmsConfig.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(KmsConfig);
+      }
+      if (EncryptionState != global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) EncryptionState);
+      }
+      if (BackupsCryptoKeyVersion.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(BackupsCryptoKeyVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -481,6 +560,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(BackupRetentionPolicy);
       }
+      if (KmsConfig.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(KmsConfig);
+      }
+      if (EncryptionState != global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) EncryptionState);
+      }
+      if (BackupsCryptoKeyVersion.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(BackupsCryptoKeyVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -521,6 +612,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (backupRetentionPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupRetentionPolicy);
+      }
+      if (KmsConfig.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsConfig);
+      }
+      if (EncryptionState != global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionState);
+      }
+      if (BackupsCryptoKeyVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupsCryptoKeyVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -570,6 +670,15 @@ namespace Google.Cloud.NetApp.V1 {
           BackupRetentionPolicy = new global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy();
         }
         BackupRetentionPolicy.MergeFrom(other.BackupRetentionPolicy);
+      }
+      if (other.KmsConfig.Length != 0) {
+        KmsConfig = other.KmsConfig;
+      }
+      if (other.EncryptionState != global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState.Unspecified) {
+        EncryptionState = other.EncryptionState;
+      }
+      if (other.BackupsCryptoKeyVersion.Length != 0) {
+        BackupsCryptoKeyVersion = other.BackupsCryptoKeyVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -634,6 +743,18 @@ namespace Google.Cloud.NetApp.V1 {
               BackupRetentionPolicy = new global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy();
             }
             input.ReadMessage(BackupRetentionPolicy);
+            break;
+          }
+          case 98: {
+            KmsConfig = input.ReadString();
+            break;
+          }
+          case 104: {
+            EncryptionState = (global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            BackupsCryptoKeyVersion = input.ReadString();
             break;
           }
         }
@@ -701,6 +822,18 @@ namespace Google.Cloud.NetApp.V1 {
             input.ReadMessage(BackupRetentionPolicy);
             break;
           }
+          case 98: {
+            KmsConfig = input.ReadString();
+            break;
+          }
+          case 104: {
+            EncryptionState = (global::Google.Cloud.NetApp.V1.BackupVault.Types.EncryptionState) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            BackupsCryptoKeyVersion = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -757,6 +890,32 @@ namespace Google.Cloud.NetApp.V1 {
         /// BackupVault type is CROSS_REGION.
         /// </summary>
         [pbr::OriginalName("CROSS_REGION")] CrossRegion = 2,
+      }
+
+      /// <summary>
+      /// Encryption state of customer-managed encryption keys (CMEK) backups.
+      /// </summary>
+      public enum EncryptionState {
+        /// <summary>
+        /// Encryption state not set.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Encryption state is pending.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_STATE_PENDING")] Pending = 1,
+        /// <summary>
+        /// Encryption is complete.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_STATE_COMPLETED")] Completed = 2,
+        /// <summary>
+        /// Encryption is in progress.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_STATE_IN_PROGRESS")] InProgress = 3,
+        /// <summary>
+        /// Encryption has failed.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_STATE_FAILED")] Failed = 4,
       }
 
       /// <summary>

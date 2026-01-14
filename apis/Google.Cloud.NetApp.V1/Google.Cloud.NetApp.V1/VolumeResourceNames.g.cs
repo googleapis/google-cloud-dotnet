@@ -402,4 +402,34 @@ namespace Google.Cloud.NetApp.V1
             set => Replication = value?.ToString() ?? "";
         }
     }
+
+    public partial class BlockDevice
+    {
+        /// <summary>
+        /// <see cref="HostGroupName"/>-typed view over the <see cref="HostGroups"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<HostGroupName> HostGroupsAsHostGroupNames
+        {
+            get => new gax::ResourceNameList<HostGroupName>(HostGroups, s => string.IsNullOrEmpty(s) ? null : HostGroupName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class RestoreBackupFilesRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+    }
 }

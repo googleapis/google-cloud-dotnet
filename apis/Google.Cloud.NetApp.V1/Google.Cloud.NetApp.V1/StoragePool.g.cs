@@ -49,7 +49,7 @@ namespace Google.Cloud.NetApp.V1 {
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
             "YWdlUG9vbCJZCh5Td2l0Y2hBY3RpdmVSZXBsaWNhWm9uZVJlcXVlc3QSNwoE",
             "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
-            "cmFnZVBvb2wi5AwKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
+            "cmFnZVBvb2wirg0KC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
             "Cg1zZXJ2aWNlX2xldmVsGAIgASgOMiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZCgxjYXBhY2l0eV9naWIYAyABKANCA+BB",
             "AhIgChN2b2x1bWVfY2FwYWNpdHlfZ2liGAQgASgDQgPgQQMSGQoMdm9sdW1l",
@@ -77,23 +77,25 @@ namespace Google.Cloud.NetApp.V1 {
             "Mh8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Rb3NUeXBlQgPgQQESJwoaYXZh",
             "aWxhYmxlX3Rocm91Z2hwdXRfbWlicHMYHyABKAFCA+BBAxIkChdjb2xkX3Rp",
             "ZXJfc2l6ZV91c2VkX2dpYhghIAEoA0ID4EEDEiMKFmhvdF90aWVyX3NpemVf",
-            "dXNlZF9naWIYIiABKANCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERFTEVUSU5H",
-            "EAMSDAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNBQkxFRBAG",
-            "EgkKBUVSUk9SEAc6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
-            "cmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH0qDHN0b3JhZ2VQb29s",
-            "czILc3RvcmFnZVBvb2xCGAoWX2dsb2JhbF9hY2Nlc3NfYWxsb3dlZEIeChxf",
-            "ZW5hYmxlX2hvdF90aWVyX2F1dG9fcmVzaXplIqgBCh9WYWxpZGF0ZURpcmVj",
-            "dG9yeVNlcnZpY2VSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQb29sEkwKFmRpcmVjdG9yeV9z",
-            "ZXJ2aWNlX3R5cGUYAiABKA4yLC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkRp",
-            "cmVjdG9yeVNlcnZpY2VUeXBlQrIBChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFw",
-            "cC52MUIQU3RvcmFnZVBvb2xQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dv",
-            "L25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91",
-            "ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xl",
-            "OjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
+            "dXNlZF9naWIYIiABKANCA+BBAxI/CgR0eXBlGCMgASgOMicuZ29vZ2xlLmNs",
+            "b3VkLm5ldGFwcC52MS5TdG9yYWdlUG9vbFR5cGVCA+BBAUgCiAEBGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVSRUFEWRABEgwKCENS",
+            "RUFUSU5HEAISDAoIREVMRVRJTkcQAxIMCghVUERBVElORxAEEg0KCVJFU1RP",
+            "UklORxAFEgwKCERJU0FCTEVEEAYSCQoFRVJST1IQBzqHAepBgwEKIW5ldGFw",
+            "cC5nb29nbGVhcGlzLmNvbS9TdG9yYWdlUG9vbBJDcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3N0b3JhZ2VQb29scy97c3RvcmFn",
+            "ZV9wb29sfSoMc3RvcmFnZVBvb2xzMgtzdG9yYWdlUG9vbEIYChZfZ2xvYmFs",
+            "X2FjY2Vzc19hbGxvd2VkQh4KHF9lbmFibGVfaG90X3RpZXJfYXV0b19yZXNp",
+            "emVCBwoFX3R5cGUiqAEKH1ZhbGlkYXRlRGlyZWN0b3J5U2VydmljZVJlcXVl",
+            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
+            "b20vU3RvcmFnZVBvb2wSTAoWZGlyZWN0b3J5X3NlcnZpY2VfdHlwZRgCIAEo",
+            "DjIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuRGlyZWN0b3J5U2VydmljZVR5",
+            "cGVCsgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQhBTdG9yYWdlUG9v",
+            "bFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25l",
+            "dGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdv",
+            "b2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -104,7 +106,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest), global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi", "CustomPerformanceEnabled", "TotalThroughputMibps", "TotalIops", "HotTierSizeGib", "EnableHotTierAutoResize", "QosType", "AvailableThroughputMibps", "ColdTierSizeUsedGib", "HotTierSizeUsedGib" }, new[]{ "GlobalAccessAllowed", "EnableHotTierAutoResize" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi", "CustomPerformanceEnabled", "TotalThroughputMibps", "TotalIops", "HotTierSizeGib", "EnableHotTierAutoResize", "QosType", "AvailableThroughputMibps", "ColdTierSizeUsedGib", "HotTierSizeUsedGib", "Type" }, new[]{ "GlobalAccessAllowed", "EnableHotTierAutoResize", "Type" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest), global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest.Parser, new[]{ "Name", "DirectoryServiceType" }, null, null, null, null)
           }));
     }
@@ -1932,6 +1934,7 @@ namespace Google.Cloud.NetApp.V1 {
       availableThroughputMibps_ = other.availableThroughputMibps_;
       coldTierSizeUsedGib_ = other.coldTierSizeUsedGib_;
       hotTierSizeUsedGib_ = other.hotTierSizeUsedGib_;
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2454,6 +2457,40 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 35;
+    private readonly static global::Google.Cloud.NetApp.V1.StoragePoolType TypeDefaultValue = global::Google.Cloud.NetApp.V1.StoragePoolType.Unspecified;
+
+    private global::Google.Cloud.NetApp.V1.StoragePoolType type_;
+    /// <summary>
+    /// Optional. Type of the storage pool. This field is used to control whether
+    /// the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
+    /// `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
+    /// volumes with large capacity. If not specified during creation, it defaults
+    /// to `FILE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.StoragePoolType Type {
+      get { if ((_hasBits0 & 4) != 0) { return type_; } else { return TypeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        type_ = value;
+      }
+    }
+    /// <summary>Gets whether the "type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasType {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearType() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2500,6 +2537,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(AvailableThroughputMibps, other.AvailableThroughputMibps)) return false;
       if (ColdTierSizeUsedGib != other.ColdTierSizeUsedGib) return false;
       if (HotTierSizeUsedGib != other.HotTierSizeUsedGib) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2538,6 +2576,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (AvailableThroughputMibps != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AvailableThroughputMibps);
       if (ColdTierSizeUsedGib != 0L) hash ^= ColdTierSizeUsedGib.GetHashCode();
       if (HotTierSizeUsedGib != 0L) hash ^= HotTierSizeUsedGib.GetHashCode();
+      if (HasType) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2677,6 +2716,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(144, 2);
         output.WriteInt64(HotTierSizeUsedGib);
       }
+      if (HasType) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2808,6 +2851,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(144, 2);
         output.WriteInt64(HotTierSizeUsedGib);
       }
+      if (HasType) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2908,6 +2955,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HotTierSizeUsedGib != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(HotTierSizeUsedGib);
+      }
+      if (HasType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3014,6 +3064,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HotTierSizeUsedGib != 0L) {
         HotTierSizeUsedGib = other.HotTierSizeUsedGib;
+      }
+      if (other.HasType) {
+        Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3157,6 +3210,10 @@ namespace Google.Cloud.NetApp.V1 {
             HotTierSizeUsedGib = input.ReadInt64();
             break;
           }
+          case 280: {
+            Type = (global::Google.Cloud.NetApp.V1.StoragePoolType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -3297,6 +3354,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 272: {
             HotTierSizeUsedGib = input.ReadInt64();
+            break;
+          }
+          case 280: {
+            Type = (global::Google.Cloud.NetApp.V1.StoragePoolType) input.ReadEnum();
             break;
           }
         }

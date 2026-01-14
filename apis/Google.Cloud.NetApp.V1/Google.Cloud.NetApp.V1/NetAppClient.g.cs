@@ -148,6 +148,16 @@ namespace Google.Cloud.NetApp.V1
             UpdateQuotaRuleOperationsSettings = existing.UpdateQuotaRuleOperationsSettings.Clone();
             DeleteQuotaRuleSettings = existing.DeleteQuotaRuleSettings;
             DeleteQuotaRuleOperationsSettings = existing.DeleteQuotaRuleOperationsSettings.Clone();
+            RestoreBackupFilesSettings = existing.RestoreBackupFilesSettings;
+            RestoreBackupFilesOperationsSettings = existing.RestoreBackupFilesOperationsSettings.Clone();
+            ListHostGroupsSettings = existing.ListHostGroupsSettings;
+            GetHostGroupSettings = existing.GetHostGroupSettings;
+            CreateHostGroupSettings = existing.CreateHostGroupSettings;
+            CreateHostGroupOperationsSettings = existing.CreateHostGroupOperationsSettings.Clone();
+            UpdateHostGroupSettings = existing.UpdateHostGroupSettings;
+            UpdateHostGroupOperationsSettings = existing.UpdateHostGroupOperationsSettings.Clone();
+            DeleteHostGroupSettings = existing.DeleteHostGroupSettings;
+            DeleteHostGroupOperationsSettings = existing.DeleteHostGroupOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -1680,6 +1690,150 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteQuotaRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.RestoreBackupFiles</c> and <c>NetAppClient.RestoreBackupFilesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreBackupFilesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.RestoreBackupFiles</c> and
+        /// <c>NetAppClient.RestoreBackupFilesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestoreBackupFilesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.ListHostGroups</c>
+        ///  and <c>NetAppClient.ListHostGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListHostGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.GetHostGroup</c>
+        ///  and <c>NetAppClient.GetHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetHostGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.CreateHostGroup</c> and <c>NetAppClient.CreateHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateHostGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.CreateHostGroup</c> and
+        /// <c>NetAppClient.CreateHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateHostGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.UpdateHostGroup</c> and <c>NetAppClient.UpdateHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateHostGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateHostGroup</c> and
+        /// <c>NetAppClient.UpdateHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateHostGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.DeleteHostGroup</c> and <c>NetAppClient.DeleteHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteHostGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.DeleteHostGroup</c> and
+        /// <c>NetAppClient.DeleteHostGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteHostGroupOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -9496,6 +9650,781 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(QuotaRuleName name, st::CancellationToken cancellationToken) =>
             DeleteQuotaRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restore files from a backup to a volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreBackupFilesResponse, OperationMetadata> RestoreBackupFiles(RestoreBackupFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restore files from a backup to a volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreBackupFilesResponse, OperationMetadata>> RestoreBackupFilesAsync(RestoreBackupFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restore files from a backup to a volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreBackupFilesResponse, OperationMetadata>> RestoreBackupFilesAsync(RestoreBackupFilesRequest request, st::CancellationToken cancellationToken) =>
+            RestoreBackupFilesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestoreBackupFiles</c>.</summary>
+        public virtual lro::OperationsClient RestoreBackupFilesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestoreBackupFiles</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreBackupFilesResponse, OperationMetadata> PollOnceRestoreBackupFiles(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreBackupFilesResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreBackupFilesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestoreBackupFiles</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreBackupFilesResponse, OperationMetadata>> PollOnceRestoreBackupFilesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreBackupFilesResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreBackupFilesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroups(ListHostGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroupsAsync(ListHostGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListHostGroupsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHostGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListHostGroupsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHostGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListHostGroupsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHostGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListHostGroupsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HostGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHostGroupsRequest request = new ListHostGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHostGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual HostGroup GetHostGroup(GetHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(GetHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(GetHostGroupRequest request, st::CancellationToken cancellationToken) =>
+            GetHostGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual HostGroup GetHostGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetHostGroup(new GetHostGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetHostGroupAsync(new GetHostGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual HostGroup GetHostGroup(HostGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetHostGroup(new GetHostGroupRequest
+            {
+                HostGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(HostGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetHostGroupAsync(new GetHostGroupRequest
+            {
+                HostGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<HostGroup> GetHostGroupAsync(HostGroupName name, st::CancellationToken cancellationToken) =>
+            GetHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> CreateHostGroup(CreateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(CreateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(CreateHostGroupRequest request, st::CancellationToken cancellationToken) =>
+            CreateHostGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateHostGroup</c>.</summary>
+        public virtual lro::OperationsClient CreateHostGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> PollOnceCreateHostGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<HostGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> PollOnceCreateHostGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<HostGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> CreateHostGroup(string parent, HostGroup hostGroup, string hostGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateHostGroup(new CreateHostGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                HostGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(hostGroupId, nameof(hostGroupId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(string parent, HostGroup hostGroup, string hostGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateHostGroupAsync(new CreateHostGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                HostGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(hostGroupId, nameof(hostGroupId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(string parent, HostGroup hostGroup, string hostGroupId, st::CancellationToken cancellationToken) =>
+            CreateHostGroupAsync(parent, hostGroup, hostGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> CreateHostGroup(gagr::LocationName parent, HostGroup hostGroup, string hostGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateHostGroup(new CreateHostGroupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                HostGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(hostGroupId, nameof(hostGroupId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(gagr::LocationName parent, HostGroup hostGroup, string hostGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateHostGroupAsync(new CreateHostGroupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                HostGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(hostGroupId, nameof(hostGroupId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateHostGroupRequest
+        /// </param>
+        /// <param name="hostGroup">
+        /// Required. Fields of the host group to create.
+        /// </param>
+        /// <param name="hostGroupId">
+        /// Required. ID of the host group to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(gagr::LocationName parent, HostGroup hostGroup, string hostGroupId, st::CancellationToken cancellationToken) =>
+            CreateHostGroupAsync(parent, hostGroup, hostGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> UpdateHostGroup(UpdateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> UpdateHostGroupAsync(UpdateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> UpdateHostGroupAsync(UpdateHostGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateHostGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateHostGroup</c>.</summary>
+        public virtual lro::OperationsClient UpdateHostGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> PollOnceUpdateHostGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<HostGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> PollOnceUpdateHostGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<HostGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="hostGroup">
+        /// Required. The host group to update.
+        /// The host group's `name` field is used to identify the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<HostGroup, OperationMetadata> UpdateHostGroup(HostGroup hostGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateHostGroup(new UpdateHostGroupRequest
+            {
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="hostGroup">
+        /// Required. The host group to update.
+        /// The host group's `name` field is used to identify the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> UpdateHostGroupAsync(HostGroup hostGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateHostGroupAsync(new UpdateHostGroupRequest
+            {
+                HostGroup = gax::GaxPreconditions.CheckNotNull(hostGroup, nameof(hostGroup)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="hostGroup">
+        /// Required. The host group to update.
+        /// The host group's `name` field is used to identify the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<HostGroup, OperationMetadata>> UpdateHostGroupAsync(HostGroup hostGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateHostGroupAsync(hostGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteHostGroup(DeleteHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(DeleteHostGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(DeleteHostGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteHostGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteHostGroup</c>.</summary>
+        public virtual lro::OperationsClient DeleteHostGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteHostGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteHostGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteHostGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteHostGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteHostGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteHostGroup(new DeleteHostGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteHostGroupAsync(new DeleteHostGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteHostGroup(HostGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteHostGroup(new DeleteHostGroupRequest
+            {
+                HostGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(HostGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteHostGroupAsync(new DeleteHostGroupRequest
+            {
+                HostGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the host group.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/hostGroups/{host_group_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(HostGroupName name, st::CancellationToken cancellationToken) =>
+            DeleteHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetApp client wrapper implementation, for convenient use.</summary>
@@ -9624,6 +10553,18 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<DeleteQuotaRuleRequest, lro::Operation> _callDeleteQuotaRule;
 
+        private readonly gaxgrpc::ApiCall<RestoreBackupFilesRequest, lro::Operation> _callRestoreBackupFiles;
+
+        private readonly gaxgrpc::ApiCall<ListHostGroupsRequest, ListHostGroupsResponse> _callListHostGroups;
+
+        private readonly gaxgrpc::ApiCall<GetHostGroupRequest, HostGroup> _callGetHostGroup;
+
+        private readonly gaxgrpc::ApiCall<CreateHostGroupRequest, lro::Operation> _callCreateHostGroup;
+
+        private readonly gaxgrpc::ApiCall<UpdateHostGroupRequest, lro::Operation> _callUpdateHostGroup;
+
+        private readonly gaxgrpc::ApiCall<DeleteHostGroupRequest, lro::Operation> _callDeleteHostGroup;
+
         /// <summary>
         /// Constructs a client wrapper for the NetApp service, with the specified gRPC client and settings.
         /// </summary>
@@ -9678,6 +10619,10 @@ namespace Google.Cloud.NetApp.V1
             CreateQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateQuotaRuleOperationsSettings, logger);
             UpdateQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateQuotaRuleOperationsSettings, logger);
             DeleteQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteQuotaRuleOperationsSettings, logger);
+            RestoreBackupFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreBackupFilesOperationsSettings, logger);
+            CreateHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHostGroupOperationsSettings, logger);
+            UpdateHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHostGroupOperationsSettings, logger);
+            DeleteHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHostGroupOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListStoragePools = clientHelper.BuildApiCall<ListStoragePoolsRequest, ListStoragePoolsResponse>("ListStoragePools", grpcClient.ListStoragePoolsAsync, grpcClient.ListStoragePools, effectiveSettings.ListStoragePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStoragePools);
@@ -9859,6 +10804,24 @@ namespace Google.Cloud.NetApp.V1
             _callDeleteQuotaRule = clientHelper.BuildApiCall<DeleteQuotaRuleRequest, lro::Operation>("DeleteQuotaRule", grpcClient.DeleteQuotaRuleAsync, grpcClient.DeleteQuotaRule, effectiveSettings.DeleteQuotaRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteQuotaRule);
             Modify_DeleteQuotaRuleApiCall(ref _callDeleteQuotaRule);
+            _callRestoreBackupFiles = clientHelper.BuildApiCall<RestoreBackupFilesRequest, lro::Operation>("RestoreBackupFiles", grpcClient.RestoreBackupFilesAsync, grpcClient.RestoreBackupFiles, effectiveSettings.RestoreBackupFilesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRestoreBackupFiles);
+            Modify_RestoreBackupFilesApiCall(ref _callRestoreBackupFiles);
+            _callListHostGroups = clientHelper.BuildApiCall<ListHostGroupsRequest, ListHostGroupsResponse>("ListHostGroups", grpcClient.ListHostGroupsAsync, grpcClient.ListHostGroups, effectiveSettings.ListHostGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListHostGroups);
+            Modify_ListHostGroupsApiCall(ref _callListHostGroups);
+            _callGetHostGroup = clientHelper.BuildApiCall<GetHostGroupRequest, HostGroup>("GetHostGroup", grpcClient.GetHostGroupAsync, grpcClient.GetHostGroup, effectiveSettings.GetHostGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetHostGroup);
+            Modify_GetHostGroupApiCall(ref _callGetHostGroup);
+            _callCreateHostGroup = clientHelper.BuildApiCall<CreateHostGroupRequest, lro::Operation>("CreateHostGroup", grpcClient.CreateHostGroupAsync, grpcClient.CreateHostGroup, effectiveSettings.CreateHostGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateHostGroup);
+            Modify_CreateHostGroupApiCall(ref _callCreateHostGroup);
+            _callUpdateHostGroup = clientHelper.BuildApiCall<UpdateHostGroupRequest, lro::Operation>("UpdateHostGroup", grpcClient.UpdateHostGroupAsync, grpcClient.UpdateHostGroup, effectiveSettings.UpdateHostGroupSettings).WithGoogleRequestParam("host_group.name", request => request.HostGroup?.Name);
+            Modify_ApiCall(ref _callUpdateHostGroup);
+            Modify_UpdateHostGroupApiCall(ref _callUpdateHostGroup);
+            _callDeleteHostGroup = clientHelper.BuildApiCall<DeleteHostGroupRequest, lro::Operation>("DeleteHostGroup", grpcClient.DeleteHostGroupAsync, grpcClient.DeleteHostGroup, effectiveSettings.DeleteHostGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteHostGroup);
+            Modify_DeleteHostGroupApiCall(ref _callDeleteHostGroup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -9983,6 +10946,18 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateQuotaRuleApiCall(ref gaxgrpc::ApiCall<UpdateQuotaRuleRequest, lro::Operation> call);
 
         partial void Modify_DeleteQuotaRuleApiCall(ref gaxgrpc::ApiCall<DeleteQuotaRuleRequest, lro::Operation> call);
+
+        partial void Modify_RestoreBackupFilesApiCall(ref gaxgrpc::ApiCall<RestoreBackupFilesRequest, lro::Operation> call);
+
+        partial void Modify_ListHostGroupsApiCall(ref gaxgrpc::ApiCall<ListHostGroupsRequest, ListHostGroupsResponse> call);
+
+        partial void Modify_GetHostGroupApiCall(ref gaxgrpc::ApiCall<GetHostGroupRequest, HostGroup> call);
+
+        partial void Modify_CreateHostGroupApiCall(ref gaxgrpc::ApiCall<CreateHostGroupRequest, lro::Operation> call);
+
+        partial void Modify_UpdateHostGroupApiCall(ref gaxgrpc::ApiCall<UpdateHostGroupRequest, lro::Operation> call);
+
+        partial void Modify_DeleteHostGroupApiCall(ref gaxgrpc::ApiCall<DeleteHostGroupRequest, lro::Operation> call);
 
         partial void OnConstruction(NetApp.NetAppClient grpcClient, NetAppSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -10111,6 +11086,18 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateQuotaRuleRequest(ref UpdateQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteQuotaRuleRequest(ref DeleteQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreBackupFilesRequest(ref RestoreBackupFilesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListHostGroupsRequest(ref ListHostGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetHostGroupRequest(ref GetHostGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateHostGroupRequest(ref CreateHostGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateHostGroupRequest(ref UpdateHostGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteHostGroupRequest(ref DeleteHostGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -11690,6 +12677,164 @@ namespace Google.Cloud.NetApp.V1
             Modify_DeleteQuotaRuleRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteQuotaRule.Async(request, callSettings).ConfigureAwait(false), DeleteQuotaRuleOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>RestoreBackupFiles</c>.</summary>
+        public override lro::OperationsClient RestoreBackupFilesOperationsClient { get; }
+
+        /// <summary>
+        /// Restore files from a backup to a volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreBackupFilesResponse, OperationMetadata> RestoreBackupFiles(RestoreBackupFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreBackupFilesRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreBackupFilesResponse, OperationMetadata>(_callRestoreBackupFiles.Sync(request, callSettings), RestoreBackupFilesOperationsClient);
+        }
+
+        /// <summary>
+        /// Restore files from a backup to a volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreBackupFilesResponse, OperationMetadata>> RestoreBackupFilesAsync(RestoreBackupFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreBackupFilesRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreBackupFilesResponse, OperationMetadata>(await _callRestoreBackupFiles.Async(request, callSettings).ConfigureAwait(false), RestoreBackupFilesOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HostGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroups(ListHostGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListHostGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListHostGroupsRequest, ListHostGroupsResponse, HostGroup>(_callListHostGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of host groups in a `location`. Use `-` as location to list
+        /// host groups across all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HostGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListHostGroupsResponse, HostGroup> ListHostGroupsAsync(ListHostGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListHostGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListHostGroupsRequest, ListHostGroupsResponse, HostGroup>(_callListHostGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override HostGroup GetHostGroup(GetHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetHostGroupRequest(ref request, ref callSettings);
+            return _callGetHostGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<HostGroup> GetHostGroupAsync(GetHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetHostGroupRequest(ref request, ref callSettings);
+            return _callGetHostGroup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateHostGroup</c>.</summary>
+        public override lro::OperationsClient CreateHostGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<HostGroup, OperationMetadata> CreateHostGroup(CreateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<HostGroup, OperationMetadata>(_callCreateHostGroup.Sync(request, callSettings), CreateHostGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<HostGroup, OperationMetadata>> CreateHostGroupAsync(CreateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<HostGroup, OperationMetadata>(await _callCreateHostGroup.Async(request, callSettings).ConfigureAwait(false), CreateHostGroupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateHostGroup</c>.</summary>
+        public override lro::OperationsClient UpdateHostGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<HostGroup, OperationMetadata> UpdateHostGroup(UpdateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<HostGroup, OperationMetadata>(_callUpdateHostGroup.Sync(request, callSettings), UpdateHostGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an existing host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<HostGroup, OperationMetadata>> UpdateHostGroupAsync(UpdateHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<HostGroup, OperationMetadata>(await _callUpdateHostGroup.Async(request, callSettings).ConfigureAwait(false), UpdateHostGroupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteHostGroup</c>.</summary>
+        public override lro::OperationsClient DeleteHostGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteHostGroup(DeleteHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteHostGroup.Sync(request, callSettings), DeleteHostGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a host group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(DeleteHostGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteHostGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteHostGroup.Async(request, callSettings).ConfigureAwait(false), DeleteHostGroupOperationsClient);
+        }
     }
 
     public partial class ListStoragePoolsRequest : gaxgrpc::IPageRequest
@@ -11729,6 +12874,10 @@ namespace Google.Cloud.NetApp.V1
     }
 
     public partial class ListQuotaRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListHostGroupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -11808,6 +12957,14 @@ namespace Google.Cloud.NetApp.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<QuotaRule> GetEnumerator() => QuotaRules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListHostGroupsResponse : gaxgrpc::IPageResponse<HostGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<HostGroup> GetEnumerator() => HostGroups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
