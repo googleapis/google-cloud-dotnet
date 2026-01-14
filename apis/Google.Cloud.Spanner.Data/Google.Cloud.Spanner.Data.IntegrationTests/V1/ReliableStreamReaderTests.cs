@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.Data;
 using Google.Cloud.Spanner.Data.IntegrationTests;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using System.Threading.Tasks;
 using Xunit;
@@ -41,12 +42,14 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 ParamTypes = { { "Key", new Type { Code = TypeCode.String } } }
             };
             var builder = new SpannerConnectionStringBuilder(_fixture.ConnectionString);
-            var pool = await builder.AcquireSessionPoolAsync();
+            var managedSession = await builder.AcquireManagedSessionAsync();
             try
             {
-                using (var pooledSession = await pool.AcquireSessionAsync(_fixture.DatabaseName, null, default))
+                using (SpannerConnection connection = new SpannerConnection(builder))
                 {
-                    using (var reader = pooledSession.ExecuteSqlStreamReader(request, null))
+                    await connection.OpenAsync(default);
+                    ManagedTransaction managedTransaction = await connection.AcquireManagedTransaction(null, out _);
+                    using (var reader = managedTransaction.ExecuteSqlStreamReaderAsync(request, null))
                     {
                         // While there are more values to read, HasDataAsync should return true
                         for (int valuesRead = 0; valuesRead < expectedValueCount; valuesRead++)
@@ -69,7 +72,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             }
             finally
             {
-                builder.SessionPoolManager.Release(pool);
+                // Nothing to clean here
             }
         }
     }

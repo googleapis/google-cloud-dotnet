@@ -13,10 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Http;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
-using Grpc.Core;
 using Grpc.Auth;
 using System;
 using System.IO;
@@ -33,7 +31,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder
             {
-                DataSource = "projects/project_id/instances/instance_id",
+                DataSource = "projects/project_id/instances/instance_id/databases/database_id",
                 CredentialFile = "this_will_not_exist.json"
             };
             using (var connection = new SpannerConnection(builder))
@@ -46,7 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void ConnectionString_SetterMaintainsChannelCredentialsAndSessionPoolManager()
         {
             var channelCredentials = new FakeCredential().ToChannelCredentials();
-            var sessionPoolManager = new SessionPoolManager(new SessionPoolOptions(), SpannerSettings.GetDefault(), Logger.DefaultLogger, (o, s) => throw new InvalidOperationException());
+            var sessionPoolManager = new SessionPoolManager(new ManagedSessionOptions(), SpannerSettings.GetDefault(), Logger.DefaultLogger, (o, s) => throw new InvalidOperationException());
 
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project_id/instances/instance_id; ClrToSpannerTypeDefaultMappings=DecimalToNumeric", channelCredentials)
             {
