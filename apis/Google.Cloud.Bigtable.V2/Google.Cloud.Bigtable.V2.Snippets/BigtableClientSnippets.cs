@@ -414,7 +414,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 CallSettings.FromCancellationToken(cancellationToken));
 
             // Read streaming responses from server until complete
-            await streamingResponse.ForEachAsync(row =>
+            await foreach (Row row in streamingResponse)
             {
                 Console.WriteLine($"Row key: {row.Key.ToStringUtf8()}");
                 foreach (Family family in row.Families)
@@ -431,7 +431,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                         }
                     }
                 }
-            });
+            }
             // End snippet
         }
 

@@ -169,10 +169,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             ProjectName projectName = new ProjectName(projectId);
             IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsAsync(projectName);
-            await subscriptions.ForEachAsync(subscription =>
+            await foreach (Subscription subscription in subscriptions)
             {
                 Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
-            });
+            }
             // End snippet
         }
 

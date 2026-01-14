@@ -71,14 +71,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, tableId);
             PagedAsyncEnumerable<TableDataList, BigQueryRow> result = table.ListRowsAsync();
-            await result.ForEachAsync(row =>
+            await foreach (BigQueryRow row in result)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
                 long level = (long)row["level"];
                 long score = (long)row["score"];
                 string player = (string)row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
-            });
+            }
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.

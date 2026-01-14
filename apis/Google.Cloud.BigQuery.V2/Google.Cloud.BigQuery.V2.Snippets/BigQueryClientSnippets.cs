@@ -1158,10 +1158,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             BigQueryResults query = await client.ExecuteQueryAsync(sql, parameters: null);
 
-            await query.GetRowsAsync().ForEachAsync(row =>
+            await foreach (BigQueryRow row in query.GetRowsAsync())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
-            });
+            }
             // End sample
         }
 
@@ -1178,10 +1178,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryParameter[] parameters = null;
             BigQueryResults query = await client.ExecuteQueryAsync(sql, parameters, new QueryOptions { UseLegacySql = true });
 
-            await query.GetRowsAsync().ForEachAsync(row =>
+            await foreach (BigQueryRow row in query.GetRowsAsync())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
-            });
+            }
             // End sample
         }
 
@@ -1231,10 +1231,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                    GROUP BY player
                    ORDER BY score DESC",
                 parameters: null);
-            await result.GetRowsAsync().ForEachAsync(row =>
+            await foreach (BigQueryRow row in result.GetRowsAsync())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
-            });
+            }
             // End snippet
 
             List<string> players = result.Select(r => (string) r["player"]).ToList();
@@ -1413,14 +1413,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ListRowsAsync(string, string, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             PagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, tableId);
-            await result.ForEachAsync(row =>
+            await foreach (BigQueryRow row in result)
             {
                 DateTime timestamp = (DateTime) row["game_started"];
                 long level = (long) row["level"];
                 long score = (long) row["score"];
                 string player = (string) row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
-            });
+            }
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
@@ -1632,10 +1632,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
             BigQueryResults result = await client.GetQueryResultsAsync(job.Reference);
-            await result.GetRowsAsync().ForEachAsync(row =>
+            await foreach (BigQueryRow row in result.GetRowsAsync())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
-            });
+            }
             // End snippet
 
             List<string> players = result.Select(r => (string) r["player"]).ToList();
@@ -1871,10 +1871,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ListProjectsAsync(*)
             BigQueryClient client = BigQueryClient.Create("irrelevant");
             PagedAsyncEnumerable<ProjectList, CloudProject> projects = client.ListProjectsAsync();
-            await projects.ForEachAsync(project =>
+            await foreach (var project in projects)
             {
                 Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");
-            });
+            }
             // End snippet
             Assert.Contains(_fixture.ProjectId, await projects.Select(p => p.ProjectId).ToListAsync());
         }
@@ -1898,10 +1898,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             };
             BigQueryResults queryJob = await client.ExecuteQueryAsync(sql, parameters);
             IAsyncEnumerable<BigQueryRow> resultRows = queryJob.GetRowsAsync();
-            await resultRows.ForEachAsync(row =>
+            await foreach (BigQueryRow row in resultRows)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
-            });
+            }
             // End sample
         }
 
@@ -1924,10 +1924,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryResults queryJob = await client.ExecuteQueryAsync(sql, parameters,
                 new QueryOptions { ParameterMode = BigQueryParameterMode.Positional });
             IAsyncEnumerable<BigQueryRow> resultRows = queryJob.GetRowsAsync();
-            await resultRows.ForEachAsync(row =>
+            await foreach (BigQueryRow row in resultRows)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
-            });
+            }
             /// End sample
         }
 

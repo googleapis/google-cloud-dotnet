@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All rights reserved.
+// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -238,7 +238,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int currentRowIndex = 0;
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 var currentRowKey = rowKeys[currentRowIndex++];
                 Assert.Equal(currentRowKey.Value, row.Key);
@@ -249,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(originalIndexes[currentRowKey]),
                     new BigtableVersion(1));
-            });
+            }
 
             Assert.Equal(currentRowIndex, endRowIndex);
         }
@@ -283,7 +283,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int rowCount = 0;
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 rowCount++;
                 int index = originalIndexes[row.Key];
@@ -297,7 +297,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(index),
                     new BigtableVersion(version));
-            });
+            }
 
             Assert.Equal(50, rowCount);
         }
@@ -329,7 +329,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int rowCount = 0;
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 rowCount++;
                 int index = originalIndexes[row.Key];
@@ -341,7 +341,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(index),
                     new BigtableVersion(version));
-            });
+            }
 
             Assert.Equal(37, rowCount);
         }
@@ -366,7 +366,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowSet.FromRowRanges(RowRange.ClosedOpen(startRange, endRange)));
 
             int currentRowIndex = 0;
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -374,7 +374,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));
-            });
+            }
 
             Assert.Equal(endRowIndex, currentRowIndex);
         }
@@ -401,7 +401,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.ValueRegex(".*[a-z]$"));
 
             int currentRowIndex = 'a';
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -409,7 +409,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));
-            });
+            }
 
             Assert.Equal('z' + 1, currentRowIndex);
         }
@@ -435,7 +435,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 rowsLimit: 37);
 
             int currentRowIndex = 0;
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -443,7 +443,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));
-            });
+            }
 
             Assert.Equal(37, currentRowIndex);
         }
@@ -458,10 +458,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             System.Diagnostics.Debug.WriteLine((string)rowKey);
 
             var response = client.ReadRows(tableName);
-            await response.ForEachAsync(row =>
+            await foreach (var row in response)
             {
                 Assert.Equal(rowKey.Value, row.Key);
-            });
+            }
 
             Assert.Throws<InvalidOperationException>(() => response.GetAsyncEnumerator(default));
         }
@@ -499,7 +499,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.RowKeyExact("row\0\\1"));
 
             int rowCount = 0;
-            await rowsStream.ForEachAsync(row =>
+            await foreach (var row in rowsStream)
             {
                 rowCount++;
                 Assert.Equal("row\0\\1", row.Key.ToStringUtf8());
@@ -508,7 +508,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultColumnFamily,
                     "i",
                     2);
-            });
+            }
             Assert.Equal(1, rowCount);
         }
     }

@@ -578,7 +578,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var stream = client.ReadRows(request);
 
             int rowCount = 0;
-            await stream.ForEachAsync(row =>
+            await foreach (var row in stream)
             {
                 rowCount++;
 
@@ -598,7 +598,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Assert.Equal("z", family.Name);
                 Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
                 Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-            });
+            }
             Assert.Equal(1, rowCount);
         }
 
