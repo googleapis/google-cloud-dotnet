@@ -3,7 +3,7 @@
 //     source: google/cloud/databasecenter/v1beta/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,6 +75,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest> __Marshaller_google_cloud_databasecenter_v1beta_AggregateIssueStatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse> __Marshaller_google_cloud_databasecenter_v1beta_AggregateIssueStatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse> __Method_QueryProducts = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse>(
@@ -99,6 +103,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         "QueryDatabaseResourceGroups",
         __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsRequest,
         __Marshaller_google_cloud_databasecenter_v1beta_QueryDatabaseResourceGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse> __Method_AggregateIssueStats = new grpc::Method<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AggregateIssueStats",
+        __Marshaller_google_cloud_databasecenter_v1beta_AggregateIssueStatsRequest,
+        __Marshaller_google_cloud_databasecenter_v1beta_AggregateIssueStatsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -144,6 +156,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse> QueryDatabaseResourceGroups(global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// AggregateIssueStats provides database resource issues statistics.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse> AggregateIssueStats(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -329,6 +353,54 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryDatabaseResourceGroups, null, options, request);
       }
+      /// <summary>
+      /// AggregateIssueStats provides database resource issues statistics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse AggregateIssueStats(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AggregateIssueStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// AggregateIssueStats provides database resource issues statistics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse AggregateIssueStats(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AggregateIssueStats, null, options, request);
+      }
+      /// <summary>
+      /// AggregateIssueStats provides database resource issues statistics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse> AggregateIssueStatsAsync(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AggregateIssueStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// AggregateIssueStats provides database resource issues statistics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse> AggregateIssueStatsAsync(global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AggregateIssueStats, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatabaseCenterClient NewInstance(ClientBaseConfiguration configuration)
@@ -345,7 +417,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_QueryProducts, serviceImpl.QueryProducts)
           .AddMethod(__Method_AggregateFleet, serviceImpl.AggregateFleet)
-          .AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl.QueryDatabaseResourceGroups).Build();
+          .AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl.QueryDatabaseResourceGroups)
+          .AddMethod(__Method_AggregateIssueStats, serviceImpl.AggregateIssueStats).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -358,6 +431,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       serviceBinder.AddMethod(__Method_QueryProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse>(serviceImpl.QueryProducts));
       serviceBinder.AddMethod(__Method_AggregateFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateFleetResponse>(serviceImpl.AggregateFleet));
       serviceBinder.AddMethod(__Method_QueryDatabaseResourceGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.QueryDatabaseResourceGroupsResponse>(serviceImpl.QueryDatabaseResourceGroups));
+      serviceBinder.AddMethod(__Method_AggregateIssueStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest, global::Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse>(serviceImpl.AggregateIssueStats));
     }
 
   }

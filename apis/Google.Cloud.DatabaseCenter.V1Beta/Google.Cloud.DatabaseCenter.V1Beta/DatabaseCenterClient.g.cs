@@ -48,6 +48,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             QueryProductsSettings = existing.QueryProductsSettings;
             AggregateFleetSettings = existing.AggregateFleetSettings;
             QueryDatabaseResourceGroupsSettings = existing.QueryDatabaseResourceGroupsSettings;
+            AggregateIssueStatsSettings = existing.AggregateIssueStatsSettings;
             OnCopy(existing);
         }
 
@@ -89,6 +90,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryDatabaseResourceGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseCenterClient.AggregateIssueStats</c> and <c>DatabaseCenterClient.AggregateIssueStatsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregateIssueStatsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseCenterSettings"/> object.</returns>
@@ -288,6 +301,33 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceGroup"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup> QueryDatabaseResourceGroupsAsync(QueryDatabaseResourceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// AggregateIssueStats provides database resource issues statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AggregateIssueStatsResponse AggregateIssueStats(AggregateIssueStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// AggregateIssueStats provides database resource issues statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AggregateIssueStatsResponse> AggregateIssueStatsAsync(AggregateIssueStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// AggregateIssueStats provides database resource issues statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AggregateIssueStatsResponse> AggregateIssueStatsAsync(AggregateIssueStatsRequest request, st::CancellationToken cancellationToken) =>
+            AggregateIssueStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DatabaseCenter client wrapper implementation, for convenient use.</summary>
@@ -301,6 +341,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         private readonly gaxgrpc::ApiCall<AggregateFleetRequest, AggregateFleetResponse> _callAggregateFleet;
 
         private readonly gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> _callQueryDatabaseResourceGroups;
+
+        private readonly gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> _callAggregateIssueStats;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseCenter service, with the specified gRPC client and settings.
@@ -326,6 +368,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             _callQueryDatabaseResourceGroups = clientHelper.BuildApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse>("QueryDatabaseResourceGroups", grpcClient.QueryDatabaseResourceGroupsAsync, grpcClient.QueryDatabaseResourceGroups, effectiveSettings.QueryDatabaseResourceGroupsSettings);
             Modify_ApiCall(ref _callQueryDatabaseResourceGroups);
             Modify_QueryDatabaseResourceGroupsApiCall(ref _callQueryDatabaseResourceGroups);
+            _callAggregateIssueStats = clientHelper.BuildApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse>("AggregateIssueStats", grpcClient.AggregateIssueStatsAsync, grpcClient.AggregateIssueStats, effectiveSettings.AggregateIssueStatsSettings);
+            Modify_ApiCall(ref _callAggregateIssueStats);
+            Modify_AggregateIssueStatsApiCall(ref _callAggregateIssueStats);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -337,6 +382,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         partial void Modify_QueryDatabaseResourceGroupsApiCall(ref gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> call);
 
+        partial void Modify_AggregateIssueStatsApiCall(ref gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> call);
+
         partial void OnConstruction(DatabaseCenter.DatabaseCenterClient grpcClient, DatabaseCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseCenter client</summary>
@@ -347,6 +394,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         partial void Modify_AggregateFleetRequest(ref AggregateFleetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryDatabaseResourceGroupsRequest(ref QueryDatabaseResourceGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AggregateIssueStatsRequest(ref AggregateIssueStatsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// QueryProducts provides a list of all possible products which can be used to
@@ -422,6 +471,30 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         {
             Modify_QueryDatabaseResourceGroupsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse, DatabaseResourceGroup>(_callQueryDatabaseResourceGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// AggregateIssueStats provides database resource issues statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AggregateIssueStatsResponse AggregateIssueStats(AggregateIssueStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateIssueStatsRequest(ref request, ref callSettings);
+            return _callAggregateIssueStats.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// AggregateIssueStats provides database resource issues statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AggregateIssueStatsResponse> AggregateIssueStatsAsync(AggregateIssueStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateIssueStatsRequest(ref request, ref callSettings);
+            return _callAggregateIssueStats.Async(request, callSettings);
         }
     }
 

@@ -300,6 +300,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateIssueStats_sync",
+      "title": "AggregateIssueStatsRequestObject",
+      "description": "Snippet for AggregateIssueStats",
+      "file": "DatabaseCenterClient.AggregateIssueStatsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateIssueStats",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateIssueStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateIssueStats",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateIssueStats",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateIssueStats_async",
+      "title": "AggregateIssueStatsRequestObjectAsync",
+      "description": "Snippet for AggregateIssueStatsAsync",
+      "file": "DatabaseCenterClient.AggregateIssueStatsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateIssueStatsAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateIssueStatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DatabaseCenter.V1Beta.AggregateIssueStatsResponse>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateIssueStats",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateIssueStats",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
