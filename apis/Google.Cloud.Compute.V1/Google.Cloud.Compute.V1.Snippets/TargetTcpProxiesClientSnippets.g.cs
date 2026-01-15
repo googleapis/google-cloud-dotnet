@@ -1007,5 +1007,73 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsTargetTcpProxyRequest, CallSettings)
+            // Create client
+            TargetTcpProxiesClient targetTcpProxiesClient = TargetTcpProxiesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsTargetTcpProxyRequest request = new TestIamPermissionsTargetTcpProxyRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = targetTcpProxiesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsTargetTcpProxyRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsTargetTcpProxyRequest, CancellationToken)
+            // Create client
+            TargetTcpProxiesClient targetTcpProxiesClient = await TargetTcpProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsTargetTcpProxyRequest request = new TestIamPermissionsTargetTcpProxyRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await targetTcpProxiesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            TargetTcpProxiesClient targetTcpProxiesClient = TargetTcpProxiesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = targetTcpProxiesClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            TargetTcpProxiesClient targetTcpProxiesClient = await TargetTcpProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await targetTcpProxiesClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
     }
 }

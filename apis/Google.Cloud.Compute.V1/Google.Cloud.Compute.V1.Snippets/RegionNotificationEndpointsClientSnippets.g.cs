@@ -558,5 +558,77 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRegionNotificationEndpointRequest, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = RegionNotificationEndpointsClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionNotificationEndpointRequest request = new TestIamPermissionsRegionNotificationEndpointRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = regionNotificationEndpointsClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRegionNotificationEndpointRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRegionNotificationEndpointRequest, CancellationToken)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = await RegionNotificationEndpointsClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionNotificationEndpointRequest request = new TestIamPermissionsRegionNotificationEndpointRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await regionNotificationEndpointsClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = RegionNotificationEndpointsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = regionNotificationEndpointsClient.TestIamPermissions(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = await RegionNotificationEndpointsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await regionNotificationEndpointsClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
     }
 }
