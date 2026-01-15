@@ -49,7 +49,6 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
   /// <summary>
   /// MachineConfig describes the configuration of a machine specific to a Database
   /// Resource.
-  /// NextID: 5
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MachineConfig : pb::IMessage<MachineConfig>

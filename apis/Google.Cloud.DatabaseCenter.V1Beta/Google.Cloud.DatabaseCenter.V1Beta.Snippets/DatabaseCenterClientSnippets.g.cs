@@ -328,5 +328,50 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for AggregateIssueStats</summary>
+        public void AggregateIssueStatsRequestObject()
+        {
+            // Snippet: AggregateIssueStats(AggregateIssueStatsRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = DatabaseCenterClient.Create();
+            // Initialize request argument(s)
+            AggregateIssueStatsRequest request = new AggregateIssueStatsRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalTypeGroups =
+                {
+                    new SignalTypeGroup(),
+                },
+                BaselineDate = new Date(),
+            };
+            // Make the request
+            AggregateIssueStatsResponse response = databaseCenterClient.AggregateIssueStats(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregateIssueStatsAsync</summary>
+        public async Task AggregateIssueStatsRequestObjectAsync()
+        {
+            // Snippet: AggregateIssueStatsAsync(AggregateIssueStatsRequest, CallSettings)
+            // Additional: AggregateIssueStatsAsync(AggregateIssueStatsRequest, CancellationToken)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = await DatabaseCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregateIssueStatsRequest request = new AggregateIssueStatsRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalTypeGroups =
+                {
+                    new SignalTypeGroup(),
+                },
+                BaselineDate = new Date(),
+            };
+            // Make the request
+            AggregateIssueStatsResponse response = await databaseCenterClient.AggregateIssueStatsAsync(request);
+            // End snippet
+        }
     }
 }

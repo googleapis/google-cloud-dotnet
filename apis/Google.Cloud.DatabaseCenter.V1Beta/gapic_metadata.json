@@ -16,6 +16,12 @@
                 "AggregateFleetAsync"
               ]
             },
+            "AggregateIssueStats": {
+              "methods": [
+                "AggregateIssueStats",
+                "AggregateIssueStatsAsync"
+              ]
+            },
             "QueryDatabaseResourceGroups": {
               "methods": [
                 "QueryDatabaseResourceGroups",
