@@ -145,6 +145,12 @@
                 "PatchAsync"
               ]
             },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
             "Update": {
               "methods": [
                 "Update",
@@ -1154,6 +1160,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {
@@ -3421,6 +3433,12 @@
                 "PatchAsync"
               ]
             },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
             "Update": {
               "methods": [
                 "Update",
@@ -3755,6 +3773,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {
@@ -4247,6 +4271,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -5015,6 +5045,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -5871,6 +5907,12 @@
                 "SetSslPolicy",
                 "SetSslPolicyAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -5921,6 +5963,12 @@
               "methods": [
                 "SetProxyHeader",
                 "SetProxyHeaderAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -6017,6 +6065,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {

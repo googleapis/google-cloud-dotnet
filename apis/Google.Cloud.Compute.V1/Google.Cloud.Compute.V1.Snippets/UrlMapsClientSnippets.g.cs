@@ -1008,6 +1008,74 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsUrlMapRequest, CallSettings)
+            // Create client
+            UrlMapsClient urlMapsClient = UrlMapsClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsUrlMapRequest request = new TestIamPermissionsUrlMapRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = urlMapsClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsUrlMapRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsUrlMapRequest, CancellationToken)
+            // Create client
+            UrlMapsClient urlMapsClient = await UrlMapsClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsUrlMapRequest request = new TestIamPermissionsUrlMapRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await urlMapsClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            UrlMapsClient urlMapsClient = UrlMapsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = urlMapsClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            UrlMapsClient urlMapsClient = await UrlMapsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await urlMapsClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Update</summary>
         public void UpdateRequestObject()
         {

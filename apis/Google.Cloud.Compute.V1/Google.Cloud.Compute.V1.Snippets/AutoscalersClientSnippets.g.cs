@@ -892,6 +892,78 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsAutoscalerRequest, CallSettings)
+            // Create client
+            AutoscalersClient autoscalersClient = AutoscalersClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsAutoscalerRequest request = new TestIamPermissionsAutoscalerRequest
+            {
+                Zone = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = autoscalersClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsAutoscalerRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsAutoscalerRequest, CancellationToken)
+            // Create client
+            AutoscalersClient autoscalersClient = await AutoscalersClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsAutoscalerRequest request = new TestIamPermissionsAutoscalerRequest
+            {
+                Zone = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await autoscalersClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            AutoscalersClient autoscalersClient = AutoscalersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = autoscalersClient.TestIamPermissions(project, zone, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            AutoscalersClient autoscalersClient = await AutoscalersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await autoscalersClient.TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Update</summary>
         public void UpdateRequestObject()
         {

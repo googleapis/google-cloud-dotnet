@@ -2106,6 +2106,50 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity"/>
+        /// message.
+        /// </summary>
+        public static class BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity.Types.Spillover"/>
+            ///  enum.
+            /// </summary>
+            public static class Spillover
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity.Types.Spillover.UndefinedSpillover"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSpillover = "UNDEFINED_SPILLOVER";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity.Types.Spillover.ZonalAffinityDisabled"/>
+                /// .
+                /// </summary>
+                public const string ZonalAffinityDisabled = "ZONAL_AFFINITY_DISABLED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity.Types.Spillover.ZonalAffinitySpillCrossZone"/>
+                /// .
+                /// </summary>
+                public const string ZonalAffinitySpillCrossZone = "ZONAL_AFFINITY_SPILL_CROSS_ZONE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity.Types.Spillover.ZonalAffinityStayWithinZone"/>
+                /// .
+                /// </summary>
+                public const string ZonalAffinityStayWithinZone = "ZONAL_AFFINITY_STAY_WITHIN_ZONE";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BfdPacket"/> message.
         /// </summary>
         public static class BfdPacket
@@ -2781,9 +2825,21 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX4144024T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX4144024T = "MEMORY_OPTIMIZED_X4_1440_24T";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX416Tb"/>.
                 /// </summary>
                 public const string MemoryOptimizedX416Tb = "MEMORY_OPTIMIZED_X4_16TB";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX4192032T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX4192032T = "MEMORY_OPTIMIZED_X4_1920_32T";
 
                 /// <summary>
                 /// Wire representation of
@@ -2796,6 +2852,30 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX432Tb"/>.
                 /// </summary>
                 public const string MemoryOptimizedX432Tb = "MEMORY_OPTIMIZED_X4_32TB";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX44806T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX44806T = "MEMORY_OPTIMIZED_X4_480_6T";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX44808T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX44808T = "MEMORY_OPTIMIZED_X4_480_8T";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX496012T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX496012T = "MEMORY_OPTIMIZED_X4_960_12T";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX496016T"/>.
+                /// </summary>
+                public const string MemoryOptimizedX496016T = "MEMORY_OPTIMIZED_X4_960_16T";
 
                 /// <summary>
                 /// Wire representation of
@@ -3442,6 +3522,20 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FirewallPolicyRuleMatcher.Types.DestNetworkContext"/> enum.
+            /// </summary>
+            public static class DestNetworkContext
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FirewallPolicyRuleMatcher.Types.DestNetworkContext.UndefinedDestNetworkContext"/>
+                /// .
+                /// </summary>
+                public const string UndefinedDestNetworkContext = "UNDEFINED_DEST_NETWORK_CONTEXT";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.FirewallPolicyRuleMatcher.Types.DestNetworkType"/> enum.
             /// </summary>
             public static class DestNetworkType
@@ -3452,6 +3546,20 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string UndefinedDestNetworkType = "UNDEFINED_DEST_NETWORK_TYPE";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FirewallPolicyRuleMatcher.Types.SrcNetworkContext"/> enum.
+            /// </summary>
+            public static class SrcNetworkContext
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FirewallPolicyRuleMatcher.Types.SrcNetworkContext.UndefinedSrcNetworkContext"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSrcNetworkContext = "UNDEFINED_SRC_NETWORK_CONTEXT";
             }
 
             /// <summary>
@@ -10142,6 +10250,35 @@ namespace Google.Cloud.Compute.V1
 
             /// <summary>
             /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAddressCreation"/>
+            /// enum.
+            /// </summary>
+            public static class AllowAddressCreation
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAddressCreation.UndefinedAllowAddressCreation"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAllowAddressCreation = "UNDEFINED_ALLOW_ADDRESS_CREATION";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAddressCreation.AddressCreationAllowed"/>
+                /// .
+                /// </summary>
+                public const string AddressCreationAllowed = "ADDRESS_CREATION_ALLOWED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAddressCreation.AddressCreationBlocked"/>
+                /// .
+                /// </summary>
+                public const string AddressCreationBlocked = "ADDRESS_CREATION_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAliasIpRanges"/>
             /// enum.
             /// </summary>
@@ -10343,6 +10480,35 @@ namespace Google.Cloud.Compute.V1
 
             /// <summary>
             /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowFirewallPolicy"/>
+            /// enum.
+            /// </summary>
+            public static class AllowFirewallPolicy
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowFirewallPolicy.UndefinedAllowFirewallPolicy"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAllowFirewallPolicy = "UNDEFINED_ALLOW_FIREWALL_POLICY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowFirewallPolicy.FirewallPolicyAllowed"/>
+                /// .
+                /// </summary>
+                public const string FirewallPolicyAllowed = "FIREWALL_POLICY_ALLOWED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowFirewallPolicy.FirewallPolicyBlocked"/>
+                /// .
+                /// </summary>
+                public const string FirewallPolicyBlocked = "FIREWALL_POLICY_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowInterconnect"/>
             /// enum.
             /// </summary>
@@ -10455,6 +10621,35 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string MultiNicInSameNetworkBlocked = "MULTI_NIC_IN_SAME_NETWORK_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameSubnetwork"/>
+            ///  enum.
+            /// </summary>
+            public static class AllowMultiNicInSameSubnetwork
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameSubnetwork.UndefinedAllowMultiNicInSameSubnetwork"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAllowMultiNicInSameSubnetwork = "UNDEFINED_ALLOW_MULTI_NIC_IN_SAME_SUBNETWORK";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameSubnetwork.MultiNicInSameSubnetworkAllowed"/>
+                /// .
+                /// </summary>
+                public const string MultiNicInSameSubnetworkAllowed = "MULTI_NIC_IN_SAME_SUBNETWORK_ALLOWED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameSubnetwork.MultiNicInSameSubnetworkBlocked"/>
+                /// .
+                /// </summary>
+                public const string MultiNicInSameSubnetworkBlocked = "MULTI_NIC_IN_SAME_SUBNETWORK_BLOCKED";
             }
 
             /// <summary>
@@ -10717,6 +10912,64 @@ namespace Google.Cloud.Compute.V1
 
             /// <summary>
             /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubnetworkCreation"/>
+            ///  enum.
+            /// </summary>
+            public static class AllowSubnetworkCreation
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubnetworkCreation.UndefinedAllowSubnetworkCreation"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAllowSubnetworkCreation = "UNDEFINED_ALLOW_SUBNETWORK_CREATION";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubnetworkCreation.SubnetworkCreationAllowed"/>
+                /// .
+                /// </summary>
+                public const string SubnetworkCreationAllowed = "SUBNETWORK_CREATION_ALLOWED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubnetworkCreation.SubnetworkCreationBlocked"/>
+                /// .
+                /// </summary>
+                public const string SubnetworkCreationBlocked = "SUBNETWORK_CREATION_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcFirewallRules"/>
+            /// enum.
+            /// </summary>
+            public static class AllowVpcFirewallRules
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcFirewallRules.UndefinedAllowVpcFirewallRules"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAllowVpcFirewallRules = "UNDEFINED_ALLOW_VPC_FIREWALL_RULES";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcFirewallRules.VpcFirewallRulesAllowed"/>
+                /// .
+                /// </summary>
+                public const string VpcFirewallRulesAllowed = "VPC_FIREWALL_RULES_ALLOWED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcFirewallRules.VpcFirewallRulesBlocked"/>
+                /// .
+                /// </summary>
+                public const string VpcFirewallRulesBlocked = "VPC_FIREWALL_RULES_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcPeering"/> enum.
             /// </summary>
             public static class AllowVpcPeering
@@ -10769,6 +11022,35 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string VpnBlocked = "VPN_BLOCKED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.FirewallPolicyTypes"/>
+            /// enum.
+            /// </summary>
+            public static class FirewallPolicyTypes
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.FirewallPolicyTypes.UndefinedFirewallPolicyTypes"/>
+                /// .
+                /// </summary>
+                public const string UndefinedFirewallPolicyTypes = "UNDEFINED_FIREWALL_POLICY_TYPES";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.FirewallPolicyTypes.RdmaRocePolicy"/>
+                /// .
+                /// </summary>
+                public const string RdmaRocePolicy = "RDMA_ROCE_POLICY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.FirewallPolicyTypes.VpcPolicy"/>
+                /// .
+                /// </summary>
+                public const string VpcPolicy = "VPC_POLICY";
             }
 
             /// <summary>
@@ -11105,6 +11387,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype.Roce"/>.
                 /// </summary>
                 public const string Roce = "ROCE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype.RoceMetal"/>.
+                /// </summary>
+                public const string RoceMetal = "ROCE_METAL";
             }
 
             /// <summary>
@@ -17362,6 +17650,42 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string Stop = "STOP";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.PostKeyRevocationActionType"/>
+            /// enum.
+            /// </summary>
+            public static class PostKeyRevocationActionType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.PostKeyRevocationActionType.UndefinedPostKeyRevocationActionType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedPostKeyRevocationActionType = "UNDEFINED_POST_KEY_REVOCATION_ACTION_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.PostKeyRevocationActionType.Noop"/>
+                /// .
+                /// </summary>
+                public const string Noop = "NOOP";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.PostKeyRevocationActionType.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SourceInstanceProperties.Types.PostKeyRevocationActionType.Shutdown"/>
+                /// .
+                /// </summary>
+                public const string Shutdown = "SHUTDOWN";
             }
         }
 
