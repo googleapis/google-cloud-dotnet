@@ -4747,7 +4747,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T09:50:01.544087018Z",
-            "lastGeneratedCommit": "e030b932b009475306781259763ca7fde8eb5eb2",
+            "lastGeneratedCommit": "fe3d7591b8367857cb98ece8aba22b8f8cf03e10",
             "lastReleasedCommit": "e030b932b009475306781259763ca7fde8eb5eb2",
             "apiPaths": [
                 "google/ads/datamanager/v1"
