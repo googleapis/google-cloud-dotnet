@@ -2431,6 +2431,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string audioExportPattern_ = "";
         /// <summary>
         /// Filename pattern for exported audio.
+        /// {conversation} and {timestamp} are placeholders that will be replaced
+        /// with the conversation ID and epoch micros of the conversation.
+        /// For example, "{conversation}/recording_{timestamp}.mulaw".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

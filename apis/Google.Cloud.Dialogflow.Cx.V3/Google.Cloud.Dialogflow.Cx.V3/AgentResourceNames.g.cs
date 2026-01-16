@@ -797,6 +797,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => SecuritySettings = value?.ToString() ?? "";
         }
 
+        /// <summary>
+        /// <see cref="PlaybookName"/>-typed view over the <see cref="StartPlaybook"/> resource name property.
+        /// </summary>
+        public PlaybookName StartPlaybookAsPlaybookName
+        {
+            get => string.IsNullOrEmpty(StartPlaybook) ? null : PlaybookName.Parse(StartPlaybook, allowUnparsed: true);
+            set => StartPlaybook = value?.ToString() ?? "";
+        }
+
         public partial class Types
         {
             public partial class ClientCertificateSettings

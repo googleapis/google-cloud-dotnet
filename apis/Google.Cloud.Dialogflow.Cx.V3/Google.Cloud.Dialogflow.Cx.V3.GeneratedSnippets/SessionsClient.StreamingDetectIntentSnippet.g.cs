@@ -67,6 +67,7 @@ namespace GoogleCSharpSnippets
                     OutputAudioConfig = new OutputAudioConfig(),
                     EnablePartialResponse = false,
                     EnableDebuggingInfo = false,
+                    ResponseView = DetectIntentResponseView.Unspecified,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

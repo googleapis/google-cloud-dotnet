@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseView = DetectIntentResponseView.Unspecified,
             };
             // Make the request
             DetectIntentResponse response = await sessionsClient.DetectIntentAsync(request);

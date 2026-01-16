@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseView = DetectIntentResponseView.Unspecified,
             };
             // Make the request
             DetectIntentResponse response = sessionsClient.DetectIntent(request);
@@ -57,6 +58,7 @@ namespace GoogleCSharpSnippets
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseView = DetectIntentResponseView.Unspecified,
             };
             // Make the request
             DetectIntentResponse response = await sessionsClient.DetectIntentAsync(request);
@@ -76,6 +78,7 @@ namespace GoogleCSharpSnippets
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseView = DetectIntentResponseView.Unspecified,
             };
             // Make the request, returning a streaming response
             using SessionsClient.ServerStreamingDetectIntentStream response = sessionsClient.ServerStreamingDetectIntent(request);
@@ -130,6 +133,7 @@ namespace GoogleCSharpSnippets
                     OutputAudioConfig = new OutputAudioConfig(),
                     EnablePartialResponse = false,
                     EnableDebuggingInfo = false,
+                    ResponseView = DetectIntentResponseView.Unspecified,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

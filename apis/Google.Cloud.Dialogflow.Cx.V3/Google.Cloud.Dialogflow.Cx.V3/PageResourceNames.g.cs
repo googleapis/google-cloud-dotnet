@@ -355,6 +355,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(TargetFlow) ? null : FlowName.Parse(TargetFlow, allowUnparsed: true);
             set => TargetFlow = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="PlaybookName"/>-typed view over the <see cref="TargetPlaybook"/> resource name property.
+        /// </summary>
+        public PlaybookName TargetPlaybookAsPlaybookName
+        {
+            get => string.IsNullOrEmpty(TargetPlaybook) ? null : PlaybookName.Parse(TargetPlaybook, allowUnparsed: true);
+            set => TargetPlaybook = value?.ToString() ?? "";
+        }
     }
 
     public partial class TransitionRoute

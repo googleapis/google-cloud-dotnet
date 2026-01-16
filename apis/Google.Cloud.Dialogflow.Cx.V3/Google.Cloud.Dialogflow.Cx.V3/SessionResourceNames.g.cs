@@ -723,6 +723,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => new gax::ResourceNameList<VersionName>(FlowVersions, s => string.IsNullOrEmpty(s) ? null : VersionName.Parse(s, allowUnparsed: true));
         }
+
+        /// <summary>
+        /// <see cref="PlaybookName"/>-typed view over the <see cref="CurrentPlaybook"/> resource name property.
+        /// </summary>
+        public PlaybookName CurrentPlaybookAsPlaybookName
+        {
+            get => string.IsNullOrEmpty(CurrentPlaybook) ? null : PlaybookName.Parse(CurrentPlaybook, allowUnparsed: true);
+            set => CurrentPlaybook = value?.ToString() ?? "";
+        }
     }
 
     public partial class BoostSpecs
