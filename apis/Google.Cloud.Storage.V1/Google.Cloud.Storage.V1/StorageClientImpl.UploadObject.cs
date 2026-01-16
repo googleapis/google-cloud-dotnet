@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType, options);
             options?.ModifyMediaUpload(mediaUpload);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, mediaUpload);
             return mediaUpload;
@@ -143,9 +143,6 @@ namespace Google.Cloud.Storage.V1
         {
             private readonly StorageClient _client;
             private readonly ObjectsResource.InsertMediaUpload _mediaUpload;
-            private readonly Crc32c _crc;
-            private readonly Action<Object> _validationFailureAction;
-            private readonly Func<Object, CancellationToken, Task> _validationFailureAsyncAction;
 
             internal UploadHelper(
                 StorageClient client,
@@ -160,22 +157,6 @@ namespace Google.Cloud.Storage.V1
                 {
                     _mediaUpload.ProgressChanged += progress.Report;
                 }
-
-                var validationMode = options?.UploadValidationMode ?? UploadObjectOptions.DefaultValidationMode;
-                GaxPreconditions.CheckEnumValue(validationMode, nameof(UploadObjectOptions.UploadValidationMode));
-                switch (validationMode)
-                {
-                    case UploadValidationMode.DeleteAndThrow:
-                        _crc = new Crc32c();
-                        _mediaUpload.UploadStreamInterceptor += _crc.UpdateHash;
-                        _validationFailureAction = obj => client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
-                        _validationFailureAsyncAction = (obj, token) => client.DeleteObjectAsync(obj, new DeleteObjectOptions { Generation = obj.Generation }, token);
-                        break;
-                    case UploadValidationMode.ThrowOnly:
-                        _crc = new Crc32c();
-                        _mediaUpload.UploadStreamInterceptor += _crc.UpdateHash;
-                        break;
-                }
             }
 
             internal Object Execute()
@@ -183,20 +164,6 @@ namespace Google.Cloud.Storage.V1
                 _mediaUpload.Upload();
                 _mediaUpload.GetProgress().ThrowOnFailure();
                 var result = _mediaUpload.ResponseBody;
-                var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
-                if (hash != result.Crc32c)
-                {
-                    AggregateException additionalFailures = null;
-                    try
-                    {
-                        _validationFailureAction?.Invoke(result);
-                    }
-                    catch (Exception e)
-                    {
-                        additionalFailures = new AggregateException(e);
-                    }
-                    throw new UploadValidationException(hash, result, additionalFailures);
-                }
                 return result;
             }
 
@@ -205,23 +172,6 @@ namespace Google.Cloud.Storage.V1
                 await _mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
                 _mediaUpload.GetProgress().ThrowOnFailure();
                 var result = _mediaUpload.ResponseBody;
-                var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
-                if (hash != result.Crc32c)
-                {
-                    AggregateException additionalFailures = null;
-                    try
-                    {
-                        if (_validationFailureAsyncAction != null)
-                        {
-                            await _validationFailureAsyncAction(result, cancellationToken).ConfigureAwait(false);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        additionalFailures = new AggregateException(e);
-                    }
-                    throw new UploadValidationException(hash, result, additionalFailures);
-                }
                 return result;
             }
         }
