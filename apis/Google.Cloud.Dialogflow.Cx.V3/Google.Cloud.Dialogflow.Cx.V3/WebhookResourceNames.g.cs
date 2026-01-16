@@ -562,6 +562,48 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         public partial class Types
         {
+            public partial class GenericWebService
+            {
+                /// <summary>
+                /// <see cref="SecretVersionName"/>-typed view over the <see cref="SecretVersionForUsernamePassword"/>
+                /// resource name property.
+                /// </summary>
+                public SecretVersionName SecretVersionForUsernamePasswordAsSecretVersionName
+                {
+                    get => string.IsNullOrEmpty(SecretVersionForUsernamePassword) ? null : SecretVersionName.Parse(SecretVersionForUsernamePassword, allowUnparsed: true);
+                    set => SecretVersionForUsernamePassword = value?.ToString() ?? "";
+                }
+
+                public partial class Types
+                {
+                    public partial class SecretVersionHeaderValue
+                    {
+                        /// <summary>
+                        /// <see cref="SecretVersionName"/>-typed view over the <see cref="SecretVersion"/> resource
+                        /// name property.
+                        /// </summary>
+                        public SecretVersionName SecretVersionAsSecretVersionName
+                        {
+                            get => string.IsNullOrEmpty(SecretVersion) ? null : SecretVersionName.Parse(SecretVersion, allowUnparsed: true);
+                            set => SecretVersion = value?.ToString() ?? "";
+                        }
+                    }
+
+                    public partial class OAuthConfig
+                    {
+                        /// <summary>
+                        /// <see cref="SecretVersionName"/>-typed view over the
+                        /// <see cref="SecretVersionForClientSecret"/> resource name property.
+                        /// </summary>
+                        public SecretVersionName SecretVersionForClientSecretAsSecretVersionName
+                        {
+                            get => string.IsNullOrEmpty(SecretVersionForClientSecret) ? null : SecretVersionName.Parse(SecretVersionForClientSecret, allowUnparsed: true);
+                            set => SecretVersionForClientSecret = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+
             public partial class ServiceDirectoryConfig
             {
                 /// <summary>

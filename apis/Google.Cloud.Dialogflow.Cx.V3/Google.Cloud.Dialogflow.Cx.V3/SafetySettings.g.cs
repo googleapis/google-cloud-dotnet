@@ -26,19 +26,47 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9zYWZldHlfc2V0dGlu",
             "Z3MucHJvdG8SHWdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzGh9nb29n",
-            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIpcBCg5TYWZldHlTZXR0aW5n",
-            "cxJMCg5iYW5uZWRfcGhyYXNlcxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLlNhZmV0eVNldHRpbmdzLlBocmFzZRo3CgZQaHJhc2US",
-            "EQoEdGV4dBgBIAEoCUID4EECEhoKDWxhbmd1YWdlX2NvZGUYAiABKAlCA+BB",
-            "AkK2AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhNTYWZl",
-            "dHlTZXR0aW5nc1Byb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9n",
-            "Zmxvdy9jeC9hcGl2My9jeHBiO2N4cGKiAgJERqoCHUdvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6",
-            "Q1g6OlYzYgZwcm90bzM="));
+            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIqAKCg5TYWZldHlTZXR0aW5n",
+            "cxJ0CiRkZWZhdWx0X2Jhbm5lZF9waHJhc2VfbWF0Y2hfc3RyYXRlZ3kYBCAB",
+            "KA4yQS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TYWZldHlTZXR0",
+            "aW5ncy5QaHJhc2VNYXRjaFN0cmF0ZWd5QgPgQQESTAoOYmFubmVkX3BocmFz",
+            "ZXMYASADKAsyNC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TYWZl",
+            "dHlTZXR0aW5ncy5QaHJhc2USVAoMcmFpX3NldHRpbmdzGAIgASgLMjkuZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2FmZXR5U2V0dGluZ3MuUmFp",
+            "U2V0dGluZ3NCA+BBARJfChRkZWZhdWx0X3JhaV9zZXR0aW5ncxgDIAEoCzI5",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlNhZmV0eVNldHRpbmdz",
+            "LlJhaVNldHRpbmdzQgbgQQHgQQUSawoYcHJvbXB0X3NlY3VyaXR5X3NldHRp",
+            "bmdzGAggASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2Fm",
+            "ZXR5U2V0dGluZ3MuUHJvbXB0U2VjdXJpdHlTZXR0aW5nc0ID4EEBGjcKBlBo",
+            "cmFzZRIRCgR0ZXh0GAEgASgJQgPgQQISGgoNbGFuZ3VhZ2VfY29kZRgCIAEo",
+            "CUID4EECGswECgtSYWlTZXR0aW5ncxJnChBjYXRlZ29yeV9maWx0ZXJzGAMg",
+            "AygLMkguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU2FmZXR5U2V0",
+            "dGluZ3MuUmFpU2V0dGluZ3MuQ2F0ZWdvcnlGaWx0ZXJCA+BBARrPAQoOQ2F0",
+            "ZWdvcnlGaWx0ZXISWgoIY2F0ZWdvcnkYASABKA4ySC5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy5jeC52My5TYWZldHlTZXR0aW5ncy5SYWlTZXR0aW5ncy5T",
+            "YWZldHlDYXRlZ29yeRJhCgxmaWx0ZXJfbGV2ZWwYAiABKA4ySy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5TYWZldHlTZXR0aW5ncy5SYWlTZXR0",
+            "aW5ncy5TYWZldHlGaWx0ZXJMZXZlbCJ3ChFTYWZldHlGaWx0ZXJMZXZlbBIj",
+            "Ch9TQUZFVFlfRklMVEVSX0xFVkVMX1VOU1BFQ0lGSUVEEAASDgoKQkxPQ0tf",
+            "Tk9ORRABEg0KCUJMT0NLX0ZFVxACEg4KCkJMT0NLX1NPTUUQAxIOCgpCTE9D",
+            "S19NT1NUEAQiiAEKDlNhZmV0eUNhdGVnb3J5Eh8KG1NBRkVUWV9DQVRFR09S",
+            "WV9VTlNQRUNJRklFRBAAEhUKEURBTkdFUk9VU19DT05URU5UEAESDwoLSEFU",
+            "RV9TUEVFQ0gQAhIOCgpIQVJBU1NNRU5UEAMSHQoZU0VYVUFMTFlfRVhQTElD",
+            "SVRfQ09OVEVOVBAEGj0KFlByb21wdFNlY3VyaXR5U2V0dGluZ3MSIwoWZW5h",
+            "YmxlX3Byb21wdF9zZWN1cml0eRgBIAEoCEID4EEBIl8KE1BocmFzZU1hdGNo",
+            "U3RyYXRlZ3kSJQohUEhSQVNFX01BVENIX1NUUkFURUdZX1VOU1BFQ0lGSUVE",
+            "EAASEQoNUEFSVElBTF9NQVRDSBABEg4KCldPUkRfTUFUQ0gQAkK2AQohY29t",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhNTYWZldHlTZXR0aW5n",
+            "c1Byb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9h",
+            "cGl2My9jeHBiO2N4cGKiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93",
+            "LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Parser, new[]{ "BannedPhrases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.Phrase), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.Phrase.Parser, new[]{ "Text", "LanguageCode" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Parser, new[]{ "DefaultBannedPhraseMatchStrategy", "BannedPhrases", "RaiSettings", "DefaultRaiSettings", "PromptSecuritySettings" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.Phrase), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.Phrase.Parser, new[]{ "Text", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Parser, new[]{ "CategoryFilters" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter.Parser, new[]{ "Category", "FilterLevel" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings), global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings.Parser, new[]{ "EnablePromptSecurity" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -83,7 +111,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SafetySettings(SafetySettings other) : this() {
+      defaultBannedPhraseMatchStrategy_ = other.defaultBannedPhraseMatchStrategy_;
       bannedPhrases_ = other.bannedPhrases_.Clone();
+      raiSettings_ = other.raiSettings_ != null ? other.raiSettings_.Clone() : null;
+      defaultRaiSettings_ = other.defaultRaiSettings_ != null ? other.defaultRaiSettings_.Clone() : null;
+      promptSecuritySettings_ = other.promptSecuritySettings_ != null ? other.promptSecuritySettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,6 +123,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SafetySettings Clone() {
       return new SafetySettings(this);
+    }
+
+    /// <summary>Field number for the "default_banned_phrase_match_strategy" field.</summary>
+    public const int DefaultBannedPhraseMatchStrategyFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy defaultBannedPhraseMatchStrategy_ = global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified;
+    /// <summary>
+    /// Optional. Default phrase match strategy for banned phrases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy DefaultBannedPhraseMatchStrategy {
+      get { return defaultBannedPhraseMatchStrategy_; }
+      set {
+        defaultBannedPhraseMatchStrategy_ = value;
+      }
     }
 
     /// <summary>Field number for the "banned_phrases" field.</summary>
@@ -105,6 +152,53 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.Phrase> BannedPhrases {
       get { return bannedPhrases_; }
+    }
+
+    /// <summary>Field number for the "rai_settings" field.</summary>
+    public const int RaiSettingsFieldNumber = 2;
+    private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings raiSettings_;
+    /// <summary>
+    /// Optional. Settings for Responsible AI checks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings RaiSettings {
+      get { return raiSettings_; }
+      set {
+        raiSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_rai_settings" field.</summary>
+    public const int DefaultRaiSettingsFieldNumber = 3;
+    private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings defaultRaiSettings_;
+    /// <summary>
+    /// Optional. Immutable. Default RAI settings to be annotated on the agent, so
+    /// that users will be able to restore their RAI configurations to the default
+    /// settings. Read-only field for the API proto only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings DefaultRaiSettings {
+      get { return defaultRaiSettings_; }
+      set {
+        defaultRaiSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "prompt_security_settings" field.</summary>
+    public const int PromptSecuritySettingsFieldNumber = 8;
+    private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings promptSecuritySettings_;
+    /// <summary>
+    /// Optional. Settings for prompt security checks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings PromptSecuritySettings {
+      get { return promptSecuritySettings_; }
+      set {
+        promptSecuritySettings_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +216,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DefaultBannedPhraseMatchStrategy != other.DefaultBannedPhraseMatchStrategy) return false;
       if(!bannedPhrases_.Equals(other.bannedPhrases_)) return false;
+      if (!object.Equals(RaiSettings, other.RaiSettings)) return false;
+      if (!object.Equals(DefaultRaiSettings, other.DefaultRaiSettings)) return false;
+      if (!object.Equals(PromptSecuritySettings, other.PromptSecuritySettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,7 +228,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DefaultBannedPhraseMatchStrategy != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified) hash ^= DefaultBannedPhraseMatchStrategy.GetHashCode();
       hash ^= bannedPhrases_.GetHashCode();
+      if (raiSettings_ != null) hash ^= RaiSettings.GetHashCode();
+      if (defaultRaiSettings_ != null) hash ^= DefaultRaiSettings.GetHashCode();
+      if (promptSecuritySettings_ != null) hash ^= PromptSecuritySettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -150,6 +252,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       output.WriteRawMessage(this);
     #else
       bannedPhrases_.WriteTo(output, _repeated_bannedPhrases_codec);
+      if (raiSettings_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RaiSettings);
+      }
+      if (defaultRaiSettings_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DefaultRaiSettings);
+      }
+      if (DefaultBannedPhraseMatchStrategy != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DefaultBannedPhraseMatchStrategy);
+      }
+      if (promptSecuritySettings_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PromptSecuritySettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -161,6 +279,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       bannedPhrases_.WriteTo(ref output, _repeated_bannedPhrases_codec);
+      if (raiSettings_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RaiSettings);
+      }
+      if (defaultRaiSettings_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DefaultRaiSettings);
+      }
+      if (DefaultBannedPhraseMatchStrategy != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DefaultBannedPhraseMatchStrategy);
+      }
+      if (promptSecuritySettings_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PromptSecuritySettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -171,7 +305,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (DefaultBannedPhraseMatchStrategy != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultBannedPhraseMatchStrategy);
+      }
       size += bannedPhrases_.CalculateSize(_repeated_bannedPhrases_codec);
+      if (raiSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RaiSettings);
+      }
+      if (defaultRaiSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultRaiSettings);
+      }
+      if (promptSecuritySettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PromptSecuritySettings);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -184,7 +330,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (other == null) {
         return;
       }
+      if (other.DefaultBannedPhraseMatchStrategy != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy.Unspecified) {
+        DefaultBannedPhraseMatchStrategy = other.DefaultBannedPhraseMatchStrategy;
+      }
       bannedPhrases_.Add(other.bannedPhrases_);
+      if (other.raiSettings_ != null) {
+        if (raiSettings_ == null) {
+          RaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+        }
+        RaiSettings.MergeFrom(other.RaiSettings);
+      }
+      if (other.defaultRaiSettings_ != null) {
+        if (defaultRaiSettings_ == null) {
+          DefaultRaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+        }
+        DefaultRaiSettings.MergeFrom(other.DefaultRaiSettings);
+      }
+      if (other.promptSecuritySettings_ != null) {
+        if (promptSecuritySettings_ == null) {
+          PromptSecuritySettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings();
+        }
+        PromptSecuritySettings.MergeFrom(other.PromptSecuritySettings);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -202,6 +369,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             break;
           case 10: {
             bannedPhrases_.AddEntriesFrom(input, _repeated_bannedPhrases_codec);
+            break;
+          }
+          case 18: {
+            if (raiSettings_ == null) {
+              RaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+            }
+            input.ReadMessage(RaiSettings);
+            break;
+          }
+          case 26: {
+            if (defaultRaiSettings_ == null) {
+              DefaultRaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+            }
+            input.ReadMessage(DefaultRaiSettings);
+            break;
+          }
+          case 32: {
+            DefaultBannedPhraseMatchStrategy = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (promptSecuritySettings_ == null) {
+              PromptSecuritySettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings();
+            }
+            input.ReadMessage(PromptSecuritySettings);
             break;
           }
         }
@@ -223,6 +415,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             bannedPhrases_.AddEntriesFrom(ref input, _repeated_bannedPhrases_codec);
             break;
           }
+          case 18: {
+            if (raiSettings_ == null) {
+              RaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+            }
+            input.ReadMessage(RaiSettings);
+            break;
+          }
+          case 26: {
+            if (defaultRaiSettings_ == null) {
+              DefaultRaiSettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings();
+            }
+            input.ReadMessage(DefaultRaiSettings);
+            break;
+          }
+          case 32: {
+            DefaultBannedPhraseMatchStrategy = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PhraseMatchStrategy) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (promptSecuritySettings_ == null) {
+              PromptSecuritySettings = new global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.PromptSecuritySettings();
+            }
+            input.ReadMessage(PromptSecuritySettings);
+            break;
+          }
         }
       }
     }
@@ -233,6 +450,26 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Strategy for matching phrases.
+      /// </summary>
+      public enum PhraseMatchStrategy {
+        /// <summary>
+        /// Unspecified, defaults to PARTIAL_MATCH.
+        /// </summary>
+        [pbr::OriginalName("PHRASE_MATCH_STRATEGY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Text that contains the phrase as a substring will be matched, e.g. "foo"
+        /// will match "afoobar".
+        /// </summary>
+        [pbr::OriginalName("PARTIAL_MATCH")] PartialMatch = 1,
+        /// <summary>
+        /// Text that contains the tokenized words of the phrase will be matched,
+        /// e.g. "foo" will match "a foo bar" and "foo bar", but not "foobar".
+        /// </summary>
+        [pbr::OriginalName("WORD_MATCH")] WordMatch = 2,
+      }
+
       /// <summary>
       /// Text input which can be used for prompt or banned phrases.
       /// </summary>
@@ -460,6 +697,683 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               }
               case 18: {
                 LanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Settings for Responsible AI.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RaiSettings : pb::IMessage<RaiSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RaiSettings> _parser = new pb::MessageParser<RaiSettings>(() => new RaiSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RaiSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RaiSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RaiSettings(RaiSettings other) : this() {
+          categoryFilters_ = other.categoryFilters_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RaiSettings Clone() {
+          return new RaiSettings(this);
+        }
+
+        /// <summary>Field number for the "category_filters" field.</summary>
+        public const int CategoryFiltersFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter> _repeated_categoryFilters_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter> categoryFilters_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter>();
+        /// <summary>
+        /// Optional. RAI blocking configurations.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.CategoryFilter> CategoryFilters {
+          get { return categoryFilters_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RaiSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RaiSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!categoryFilters_.Equals(other.categoryFilters_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= categoryFilters_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          categoryFilters_.WriteTo(output, _repeated_categoryFilters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          categoryFilters_.WriteTo(ref output, _repeated_categoryFilters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += categoryFilters_.CalculateSize(_repeated_categoryFilters_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RaiSettings other) {
+          if (other == null) {
+            return;
+          }
+          categoryFilters_.Add(other.categoryFilters_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 26: {
+                categoryFilters_.AddEntriesFrom(input, _repeated_categoryFilters_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 26: {
+                categoryFilters_.AddEntriesFrom(ref input, _repeated_categoryFilters_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the RaiSettings message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Sensitivity level for RAI categories.
+          /// </summary>
+          public enum SafetyFilterLevel {
+            /// <summary>
+            /// Unspecified -- uses default sensitivity levels.
+            /// </summary>
+            [pbr::OriginalName("SAFETY_FILTER_LEVEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Block no text -- effectively disables the category.
+            /// </summary>
+            [pbr::OriginalName("BLOCK_NONE")] BlockNone = 1,
+            /// <summary>
+            /// Block a few suspicious texts.
+            /// </summary>
+            [pbr::OriginalName("BLOCK_FEW")] BlockFew = 2,
+            /// <summary>
+            /// Block some suspicious texts.
+            /// </summary>
+            [pbr::OriginalName("BLOCK_SOME")] BlockSome = 3,
+            /// <summary>
+            /// Block most suspicious texts.
+            /// </summary>
+            [pbr::OriginalName("BLOCK_MOST")] BlockMost = 4,
+          }
+
+          /// <summary>
+          /// RAI categories to configure.
+          /// </summary>
+          public enum SafetyCategory {
+            /// <summary>
+            /// Unspecified.
+            /// </summary>
+            [pbr::OriginalName("SAFETY_CATEGORY_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Dangerous content.
+            /// </summary>
+            [pbr::OriginalName("DANGEROUS_CONTENT")] DangerousContent = 1,
+            /// <summary>
+            /// Hate speech.
+            /// </summary>
+            [pbr::OriginalName("HATE_SPEECH")] HateSpeech = 2,
+            /// <summary>
+            /// Harassment.
+            /// </summary>
+            [pbr::OriginalName("HARASSMENT")] Harassment = 3,
+            /// <summary>
+            /// Sexually explicit content.
+            /// </summary>
+            [pbr::OriginalName("SEXUALLY_EXPLICIT_CONTENT")] SexuallyExplicitContent = 4,
+          }
+
+          /// <summary>
+          /// Configuration of the sensitivity level for blocking an RAI category.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CategoryFilter : pb::IMessage<CategoryFilter>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CategoryFilter> _parser = new pb::MessageParser<CategoryFilter>(() => new CategoryFilter());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CategoryFilter> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CategoryFilter() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CategoryFilter(CategoryFilter other) : this() {
+              category_ = other.category_;
+              filterLevel_ = other.filterLevel_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CategoryFilter Clone() {
+              return new CategoryFilter(this);
+            }
+
+            /// <summary>Field number for the "category" field.</summary>
+            public const int CategoryFieldNumber = 1;
+            private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory category_ = global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified;
+            /// <summary>
+            /// RAI category to configure.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory Category {
+              get { return category_; }
+              set {
+                category_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "filter_level" field.</summary>
+            public const int FilterLevelFieldNumber = 2;
+            private global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel filterLevel_ = global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified;
+            /// <summary>
+            /// Blocking sensitivity level to configure for the RAI category.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel FilterLevel {
+              get { return filterLevel_; }
+              set {
+                filterLevel_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CategoryFilter);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CategoryFilter other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Category != other.Category) return false;
+              if (FilterLevel != other.FilterLevel) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Category != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified) hash ^= Category.GetHashCode();
+              if (FilterLevel != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified) hash ^= FilterLevel.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Category != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Category);
+              }
+              if (FilterLevel != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) FilterLevel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Category != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Category);
+              }
+              if (FilterLevel != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) FilterLevel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Category != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Category);
+              }
+              if (FilterLevel != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FilterLevel);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CategoryFilter other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Category != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory.Unspecified) {
+                Category = other.Category;
+              }
+              if (other.FilterLevel != global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel.Unspecified) {
+                FilterLevel = other.FilterLevel;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    Category = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    FilterLevel = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Category = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyCategory) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    FilterLevel = (global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Types.RaiSettings.Types.SafetyFilterLevel) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Settings for prompt security checks.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PromptSecuritySettings : pb::IMessage<PromptSecuritySettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PromptSecuritySettings> _parser = new pb::MessageParser<PromptSecuritySettings>(() => new PromptSecuritySettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PromptSecuritySettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.SafetySettings.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PromptSecuritySettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PromptSecuritySettings(PromptSecuritySettings other) : this() {
+          enablePromptSecurity_ = other.enablePromptSecurity_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PromptSecuritySettings Clone() {
+          return new PromptSecuritySettings(this);
+        }
+
+        /// <summary>Field number for the "enable_prompt_security" field.</summary>
+        public const int EnablePromptSecurityFieldNumber = 1;
+        private bool enablePromptSecurity_;
+        /// <summary>
+        /// Optional. Enable prompt security checks.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnablePromptSecurity {
+          get { return enablePromptSecurity_; }
+          set {
+            enablePromptSecurity_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PromptSecuritySettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PromptSecuritySettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnablePromptSecurity != other.EnablePromptSecurity) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnablePromptSecurity != false) hash ^= EnablePromptSecurity.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnablePromptSecurity != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnablePromptSecurity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnablePromptSecurity != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnablePromptSecurity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnablePromptSecurity != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PromptSecuritySettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnablePromptSecurity != false) {
+            EnablePromptSecurity = other.EnablePromptSecurity;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnablePromptSecurity = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnablePromptSecurity = input.ReadBool();
                 break;
               }
             }

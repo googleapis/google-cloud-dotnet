@@ -115,6 +115,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [pbr::OriginalName("AUDIO_ENCODING_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// Uncompressed 16-bit signed little-endian samples (Linear PCM).
+    /// LINT: LEGACY_NAMES
     /// </summary>
     [pbr::OriginalName("AUDIO_ENCODING_LINEAR_16")] Linear16 = 1,
     /// <summary>
@@ -242,6 +243,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Uncompressed 16-bit signed little-endian samples (Linear PCM).
     /// Audio content returned as LINEAR16 also contains a WAV header.
+    /// LINT: LEGACY_NAMES
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_LINEAR_16")] Linear16 = 1,
     /// <summary>
@@ -250,6 +252,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3")] Mp3 = 2,
     /// <summary>
     /// MP3 audio at 64kbps.
+    /// LINT: LEGACY_NAMES
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3_64_KBPS")] Mp364Kbps = 4,
     /// <summary>

@@ -26,56 +26,58 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNz",
             "YWdlLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxofZ29v",
-            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
-            "L3N0cnVjdC5wcm90byLxDQoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
-            "KAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
-            "c3NhZ2UuVGV4dEgAEioKB3BheWxvYWQYAiABKAsyFy5nb29nbGUucHJvdG9i",
-            "dWYuU3RydWN0SAASYgoUY29udmVyc2F0aW9uX3N1Y2Nlc3MYCSABKAsyQi5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2Uu",
-            "Q29udmVyc2F0aW9uU3VjY2Vzc0gAElsKEW91dHB1dF9hdWRpb190ZXh0GAgg",
-            "ASgLMj4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VN",
-            "ZXNzYWdlLk91dHB1dEF1ZGlvVGV4dEgAEl0KEmxpdmVfYWdlbnRfaGFuZG9m",
-            "ZhgKIAEoCzI/Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3Bv",
-            "bnNlTWVzc2FnZS5MaXZlQWdlbnRIYW5kb2ZmSAASXQoPZW5kX2ludGVyYWN0",
-            "aW9uGAsgASgLMj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLkVuZEludGVyYWN0aW9uQgPgQQNIABJOCgpwbGF5X2F1",
-            "ZGlvGAwgASgLMjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlBsYXlBdWRpb0gAElUKC21peGVkX2F1ZGlvGA0gASgL",
-            "MjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
-            "YWdlLk1peGVkQXVkaW9CA+BBA0gAEmcKF3RlbGVwaG9ueV90cmFuc2Zlcl9j",
-            "YWxsGBIgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEl8KE2tub3ds",
-            "ZWRnZV9pbmZvX2NhcmQYFCABKAsyQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5SZXNwb25zZU1lc3NhZ2UuS25vd2xlZGdlSW5mb0NhcmRIABJS",
-            "Cg1yZXNwb25zZV90eXBlGAQgASgOMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlLlJlc3BvbnNlVHlwZRIPCgdjaGFu",
-            "bmVsGBMgASgJGkMKBFRleHQSEQoEdGV4dBgBIAMoCUID4EECEigKG2FsbG93",
-            "X3BsYXliYWNrX2ludGVycnVwdGlvbhgCIAEoCEID4EEDGj0KEExpdmVBZ2Vu",
-            "dEhhbmRvZmYSKQoIbWV0YWRhdGEYASABKAsyFy5nb29nbGUucHJvdG9idWYu",
-            "U3RydWN0GkAKE0NvbnZlcnNhdGlvblN1Y2Nlc3MSKQoIbWV0YWRhdGEYASAB",
-            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0GmUKD091dHB1dEF1ZGlvVGV4",
-            "dBIOCgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAEigKG2FsbG93X3Bs",
-            "YXliYWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EEDQggKBnNvdXJjZRoQCg5F",
-            "bmRJbnRlcmFjdGlvbhpNCglQbGF5QXVkaW8SFgoJYXVkaW9fdXJpGAEgASgJ",
-            "QgPgQQISKAobYWxsb3dfcGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPg",
-            "QQMawQEKCk1peGVkQXVkaW8SUwoIc2VnbWVudHMYASADKAsyQS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2UuTWl4ZWRB",
-            "dWRpby5TZWdtZW50Gl4KB1NlZ21lbnQSDwoFYXVkaW8YASABKAxIABINCgN1",
-            "cmkYAiABKAlIABIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyAB",
-            "KAhCA+BBA0IJCgdjb250ZW50GjsKFVRlbGVwaG9ueVRyYW5zZmVyQ2FsbBIW",
-            "CgxwaG9uZV9udW1iZXIYASABKAlIAEIKCghlbmRwb2ludBoTChFLbm93bGVk",
-            "Z2VJbmZvQ2FyZCJpCgxSZXNwb25zZVR5cGUSHQoZUkVTUE9OU0VfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEhAKDEVOVFJZX1BST01QVBABEhQKEFBBUkFNRVRFUl9Q",
-            "Uk9NUFQQAhISCg5IQU5ETEVSX1BST01QVBADQgkKB21lc3NhZ2VCtwEKIWNv",
-            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9uc2VNZXNz",
-            "YWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4",
-            "L2FwaXYzL2N4cGI7Y3hwYqICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zs",
-            "b3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjNi",
-            "BnByb3RvMw=="));
+            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxotZ29vZ2xlL2Nsb3VkL2Rp",
+            "YWxvZ2Zsb3cvY3gvdjMvdG9vbF9jYWxsLnByb3RvGhxnb29nbGUvcHJvdG9i",
+            "dWYvc3RydWN0LnByb3RvIq8OCg9SZXNwb25zZU1lc3NhZ2USQwoEdGV4dBgB",
+            "IAEoCzIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNl",
+            "TWVzc2FnZS5UZXh0SAASKgoHcGF5bG9hZBgCIAEoCzIXLmdvb2dsZS5wcm90",
+            "b2J1Zi5TdHJ1Y3RIABJiChRjb252ZXJzYXRpb25fc3VjY2VzcxgJIAEoCzJC",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2Fn",
+            "ZS5Db252ZXJzYXRpb25TdWNjZXNzSAASWwoRb3V0cHV0X2F1ZGlvX3RleHQY",
+            "CCABKAsyPi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25z",
+            "ZU1lc3NhZ2UuT3V0cHV0QXVkaW9UZXh0SAASXQoSbGl2ZV9hZ2VudF9oYW5k",
+            "b2ZmGAogASgLMj8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
+            "cG9uc2VNZXNzYWdlLkxpdmVBZ2VudEhhbmRvZmZIABJdCg9lbmRfaW50ZXJh",
+            "Y3Rpb24YCyABKAsyPS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5S",
+            "ZXNwb25zZU1lc3NhZ2UuRW5kSW50ZXJhY3Rpb25CA+BBA0gAEk4KCnBsYXlf",
+            "YXVkaW8YDCABKAsyOC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5S",
+            "ZXNwb25zZU1lc3NhZ2UuUGxheUF1ZGlvSAASVQoLbWl4ZWRfYXVkaW8YDSAB",
+            "KAsyOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
+            "c3NhZ2UuTWl4ZWRBdWRpb0ID4EEDSAASZwoXdGVsZXBob255X3RyYW5zZmVy",
+            "X2NhbGwYEiABKAsyRC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5S",
+            "ZXNwb25zZU1lc3NhZ2UuVGVsZXBob255VHJhbnNmZXJDYWxsSAASXwoTa25v",
+            "d2xlZGdlX2luZm9fY2FyZBgUIAEoCzJALmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5Lbm93bGVkZ2VJbmZvQ2FyZEgA",
+            "EjwKCXRvb2xfY2FsbBgWIAEoCzInLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LmN4LnYzLlRvb2xDYWxsSAASUgoNcmVzcG9uc2VfdHlwZRgEIAEoDjI7Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5S",
+            "ZXNwb25zZVR5cGUSDwoHY2hhbm5lbBgTIAEoCRpDCgRUZXh0EhEKBHRleHQY",
+            "ASADKAlCA+BBAhIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiAB",
+            "KAhCA+BBAxo9ChBMaXZlQWdlbnRIYW5kb2ZmEikKCG1ldGFkYXRhGAEgASgL",
+            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBpAChNDb252ZXJzYXRpb25TdWNj",
+            "ZXNzEikKCG1ldGFkYXRhGAEgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
+            "dBplCg9PdXRwdXRBdWRpb1RleHQSDgoEdGV4dBgBIAEoCUgAEg4KBHNzbWwY",
+            "AiABKAlIABIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyABKAhC",
+            "A+BBA0IICgZzb3VyY2UaEAoORW5kSW50ZXJhY3Rpb24aTQoJUGxheUF1ZGlv",
+            "EhYKCWF1ZGlvX3VyaRgBIAEoCUID4EECEigKG2FsbG93X3BsYXliYWNrX2lu",
+            "dGVycnVwdGlvbhgCIAEoCEID4EEDGsEBCgpNaXhlZEF1ZGlvElMKCHNlZ21l",
+            "bnRzGAEgAygLMkEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
+            "cG9uc2VNZXNzYWdlLk1peGVkQXVkaW8uU2VnbWVudBpeCgdTZWdtZW50Eg8K",
+            "BWF1ZGlvGAEgASgMSAASDQoDdXJpGAIgASgJSAASKAobYWxsb3dfcGxheWJh",
+            "Y2tfaW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCQoHY29udGVudBo7ChVUZWxl",
+            "cGhvbnlUcmFuc2ZlckNhbGwSFgoMcGhvbmVfbnVtYmVyGAEgASgJSABCCgoI",
+            "ZW5kcG9pbnQaEwoRS25vd2xlZGdlSW5mb0NhcmQiaQoMUmVzcG9uc2VUeXBl",
+            "Eh0KGVJFU1BPTlNFX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxFTlRSWV9QUk9N",
+            "UFQQARIUChBQQVJBTUVURVJfUFJPTVBUEAISEgoOSEFORExFUl9QUk9NUFQQ",
+            "A0IJCgdtZXNzYWdlQrcBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjNCFFJlc3BvbnNlTWVzc2FnZVByb3RvUAFaMWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGKiAgJERqoCHUdv",
+            "b2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6",
+            "RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ToolCallReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "KnowledgeInfoCard", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "KnowledgeInfoCard", "ToolCall", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
@@ -176,6 +178,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case MessageOneofCase.KnowledgeInfoCard:
           KnowledgeInfoCard = other.KnowledgeInfoCard.Clone();
+          break;
+        case MessageOneofCase.ToolCall:
+          ToolCall = other.ToolCall.Clone();
           break;
       }
 
@@ -354,6 +359,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "tool_call" field.</summary>
+    public const int ToolCallFieldNumber = 22;
+    /// <summary>
+    /// Returns the definition of a tool call that should be executed by the
+    /// client.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ToolCall ToolCall {
+      get { return messageCase_ == MessageOneofCase.ToolCall ? (global::Google.Cloud.Dialogflow.Cx.V3.ToolCall) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.ToolCall;
+      }
+    }
+
     /// <summary>Field number for the "response_type" field.</summary>
     public const int ResponseTypeFieldNumber = 4;
     private global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType responseType_ = global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified;
@@ -401,6 +422,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       MixedAudio = 13,
       TelephonyTransferCall = 18,
       KnowledgeInfoCard = 20,
+      ToolCall = 22,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -441,6 +463,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(MixedAudio, other.MixedAudio)) return false;
       if (!object.Equals(TelephonyTransferCall, other.TelephonyTransferCall)) return false;
       if (!object.Equals(KnowledgeInfoCard, other.KnowledgeInfoCard)) return false;
+      if (!object.Equals(ToolCall, other.ToolCall)) return false;
       if (ResponseType != other.ResponseType) return false;
       if (Channel != other.Channel) return false;
       if (MessageCase != other.MessageCase) return false;
@@ -461,6 +484,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.MixedAudio) hash ^= MixedAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) hash ^= TelephonyTransferCall.GetHashCode();
       if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) hash ^= KnowledgeInfoCard.GetHashCode();
+      if (messageCase_ == MessageOneofCase.ToolCall) hash ^= ToolCall.GetHashCode();
       if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= (int) messageCase_;
@@ -530,6 +554,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(KnowledgeInfoCard);
       }
+      if (messageCase_ == MessageOneofCase.ToolCall) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ToolCall);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -588,6 +616,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(KnowledgeInfoCard);
       }
+      if (messageCase_ == MessageOneofCase.ToolCall) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ToolCall);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -627,6 +659,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(KnowledgeInfoCard);
+      }
+      if (messageCase_ == MessageOneofCase.ToolCall) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ToolCall);
       }
       if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseType);
@@ -712,6 +747,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             KnowledgeInfoCard = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
           }
           KnowledgeInfoCard.MergeFrom(other.KnowledgeInfoCard);
+          break;
+        case MessageOneofCase.ToolCall:
+          if (ToolCall == null) {
+            ToolCall = new global::Google.Cloud.Dialogflow.Cx.V3.ToolCall();
+          }
+          ToolCall.MergeFrom(other.ToolCall);
           break;
       }
 
@@ -828,6 +869,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             KnowledgeInfoCard = subBuilder;
             break;
           }
+          case 178: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ToolCall subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ToolCall();
+            if (messageCase_ == MessageOneofCase.ToolCall) {
+              subBuilder.MergeFrom(ToolCall);
+            }
+            input.ReadMessage(subBuilder);
+            ToolCall = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -939,6 +989,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             }
             input.ReadMessage(subBuilder);
             KnowledgeInfoCard = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ToolCall subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ToolCall();
+            if (messageCase_ == MessageOneofCase.ToolCall) {
+              subBuilder.MergeFrom(ToolCall);
+            }
+            input.ReadMessage(subBuilder);
+            ToolCall = subBuilder;
             break;
           }
         }

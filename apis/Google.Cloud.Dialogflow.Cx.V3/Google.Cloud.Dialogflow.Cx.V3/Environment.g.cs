@@ -712,11 +712,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int VersionFieldNumber = 1;
         private string version_ = "";
         /// <summary>
-        /// Required. Both flow and playbook versions are supported.
+        /// Required. Flow, playbook and tool versions are supported.
         /// Format for flow version:
         /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>.
         /// Format for playbook version:
         /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/playbooks/&lt;PlaybookID>/versions/&lt;VersionID>.
+        /// Format for tool version:
+        /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/tools/&lt;ToolID>/versions/&lt;VersionID>.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseView = DetectIntentResponseView.Unspecified,
             };
             // Make the request, returning a streaming response
             using SessionsClient.ServerStreamingDetectIntentStream response = sessionsClient.ServerStreamingDetectIntent(request);

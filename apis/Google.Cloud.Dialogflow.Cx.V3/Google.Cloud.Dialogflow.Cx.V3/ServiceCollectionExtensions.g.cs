@@ -189,6 +189,38 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcdcv::ExamplesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddExamplesClient(this IServiceCollection services, sys::Action<gcdcv::ExamplesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::ExamplesClientBuilder builder = new gcdcv::ExamplesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdcv::ExamplesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddExamplesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdcv::ExamplesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::ExamplesClientBuilder builder = new gcdcv::ExamplesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdcv::ExperimentsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -349,6 +381,38 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcdcv::PlaybooksClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPlaybooksClient(this IServiceCollection services, sys::Action<gcdcv::PlaybooksClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::PlaybooksClientBuilder builder = new gcdcv::PlaybooksClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdcv::PlaybooksClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPlaybooksClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdcv::PlaybooksClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::PlaybooksClientBuilder builder = new gcdcv::PlaybooksClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcdcv::SecuritySettingsServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -481,6 +545,38 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcdcv::TestCasesClientBuilder builder = new gcdcv::TestCasesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdcv::ToolsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddToolsClient(this IServiceCollection services, sys::Action<gcdcv::ToolsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::ToolsClientBuilder builder = new gcdcv::ToolsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdcv::ToolsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddToolsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdcv::ToolsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdcv::ToolsClientBuilder builder = new gcdcv::ToolsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
