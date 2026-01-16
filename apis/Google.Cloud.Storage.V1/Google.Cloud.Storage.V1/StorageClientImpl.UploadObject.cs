@@ -229,29 +229,57 @@ namespace Google.Cloud.Storage.V1
         private sealed class LengthOnlyStream : Stream
         {
             private readonly long? _length;
+            private long _position;
             internal LengthOnlyStream(long? length) => _length = length;
 
             public override long Length => _length ?? throw new NotSupportedException();
             public override bool CanSeek => _length.HasValue;
-
-            public override bool CanRead => throw new NotImplementedException();
-            public override bool CanWrite => throw new NotImplementedException();
+            public override bool CanRead => true;
+            public override bool CanWrite => false;
 
             public override long Position
             {
-                get => throw new NotImplementedException();
-                set => throw new NotImplementedException();
+                get => _position;
+                set
+                {
+                    if (!CanSeek) throw new NotSupportedException();
+                    if (value < 0 || value > Length) throw new ArgumentOutOfRangeException(nameof(value));
+                    _position = value;
+                }
             }
 
-            public override void Flush() => throw new NotImplementedException();
-            public override int Read(byte[] buffer, int offset, int count) =>
-                throw new NotImplementedException();
-            public override long Seek(long offset, SeekOrigin origin) =>
-                throw new NotImplementedException();
-            public override void SetLength(long value) =>
-                throw new NotImplementedException();
-            public override void Write(byte[] buffer, int offset, int count) =>
-                throw new NotImplementedException();
+            public override int Read(byte[] buffer, int offset, int count)
+            {
+                if (!_length.HasValue)
+                {
+                    return 0;
+                }
+                long remaining = _length.Value - _position;
+                if (remaining <= 0) return 0;
+
+                int toRead = (int) Math.Min(count, remaining);
+
+                Array.Clear(buffer, offset, toRead);
+
+                _position += toRead;
+                return toRead;
+            }
+
+            public override void Flush() { }
+
+            public override long Seek(long offset, SeekOrigin origin)
+            {
+                switch (origin)
+                {
+                    case SeekOrigin.Begin: Position = offset; break;
+                    case SeekOrigin.Current: Position += offset; break;
+                    case SeekOrigin.End: Position = Length + offset; break;
+                }
+                return Position;
+            }
+
+            public override void SetLength(long value) => throw new NotSupportedException();
+            public override void Write(byte[] buffer, int offset, int count) => throw new NotSupportedException();
         }
     }
 }
