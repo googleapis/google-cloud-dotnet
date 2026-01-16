@@ -59,8 +59,10 @@ namespace Google.Cloud.Run.V2
             yield return gcl::LocationsReflection.Descriptor;
             yield return BuildReflection.Descriptor;
             yield return ConditionReflection.Descriptor;
+            yield return ContainerStatusReflection.Descriptor;
             yield return ExecutionReflection.Descriptor;
             yield return ExecutionTemplateReflection.Descriptor;
+            yield return InstanceReflection.Descriptor;
             yield return InstanceSplitReflection.Descriptor;
             yield return JobReflection.Descriptor;
             yield return K8SMinReflection.Descriptor;
