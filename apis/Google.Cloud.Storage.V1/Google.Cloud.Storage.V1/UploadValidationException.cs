@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@ namespace Google.Cloud.Storage.V1
     /// <summary>
     /// Exception thrown when an upload failed validation.
     /// </summary>
+    [Obsolete("This exception is no longer thrown. Server-side validation is now performed, " +
+              "resulting in a GoogleApiException with a 400 (Bad Request) status code on failure.")]
     public sealed class UploadValidationException : IOException
     {
         /// <summary>
