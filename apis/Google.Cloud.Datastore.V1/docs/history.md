@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.1.0, released 2026-01-19
+
+### New features
+
+- Implement IAsyncDisposable on DatastoreTransaction (#15364)
+
 ## Version 5.0.0, released 2025-12-03
 
 ### New features
