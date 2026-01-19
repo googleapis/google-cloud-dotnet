@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-01-19
+
+### New features
+
+- Adding Method AggregateIssueStats of Database Center API v1beta
+
 ## Version 1.0.0-beta03, released 2026-01-08
 
 ### New features
