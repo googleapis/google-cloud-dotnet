@@ -1961,7 +1961,7 @@
     },
     {
       "id": "Google.Cloud.DatabaseCenter.V1Beta",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Database Center",
       "productUrl": "https://cloud.google.com/database-center/docs/overview",
