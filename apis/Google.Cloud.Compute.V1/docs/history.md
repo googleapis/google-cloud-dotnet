@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.23.0, released 2026-01-19
+
+### New features
+
+- Update Compute Engine v1 API to revision 20251230 (#1144)
+
 ## Version 3.22.0, released 2026-01-08
 
 ### New features
