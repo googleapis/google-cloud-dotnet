@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.19.0, released 2026-01-19
+
+### New features
+
+- Add instances client library
+
+### Documentation improvements
+
+- Add instances description
+
 ## Version 2.18.0, released 2025-12-09
 
 ### New features
