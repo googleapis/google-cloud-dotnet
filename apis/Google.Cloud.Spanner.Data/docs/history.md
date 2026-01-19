@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.12.0, released 2026-01-19
+
+### New features
+
+- Add support for UUID data type.
+- Spanner non-awaiting DDL (#15280)
+
 ## Version 5.11.0, released 2026-01-13
 
 ### New features
