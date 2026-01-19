@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.14.0, released 2026-01-19
+
+### New features
+
+- Update NetApp v1 API with Host Groups, Block Volumes, Cache Volumes, and Backup Restore
+
+### Documentation improvements
+
+- A comment for field `backup_retention_policy` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- A comment for message `KmsConfig` is changed
+- A comment for field `name` in message `.google.cloud.netapp.v1.KmsConfig` is changed
+- A comment for field `crypto_key_name` in message `.google.cloud.netapp.v1.KmsConfig` is changed
+- A comment for enum `SquashMode` is changed
+- A comment for enum value `SQUASH_MODE_UNSPECIFIED` in enum `SquashMode` is changed
+- A comment for field `anon_uid` in message `.google.cloud.netapp.v1.SimpleExportPolicyRule` is changed
+
 ## Version 1.13.0, released 2025-12-03
 
 ### New features
