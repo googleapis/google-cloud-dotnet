@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.0.0, released 2026-01-21
+
+### New features
+
+- Updated v3 dialogflow client libraries
+
+### Bug fixes
+
+- An existing field `start_flow` is moved in to oneof in message `.google.cloud.dialogflow.cx.v3.Agent`
+- An existing field `webhook_ids` is removed from message `.google.cloud.dialogflow.cx.v3.QueryResult`
+- An existing field `webhook_display_names` is removed from message `.google.cloud.dialogflow.cx.v3.QueryResult`
+- An existing field `webhook_latencies` is removed from message `.google.cloud.dialogflow.cx.v3.QueryResult`
+- An existing field `webhook_tags` is removed from message `.google.cloud.dialogflow.cx.v3.QueryResult`
+
+### Documentation improvements
+
+- Updated v3 dialogflow client libraries
+
 ## Version 2.25.0, released 2025-11-05
 
 ### New features
