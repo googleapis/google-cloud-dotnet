@@ -496,12 +496,20 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
-        private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> msgIds)
+        private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> leaseTracking)
         {
             // Running async. Common data needs locking
             for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
             {
-                _softStopCts.Token.ThrowIfCancellationRequested();
+                if (_softStopCts.IsCancellationRequested)
+                {
+                    // If the subscriber was shutdown we should stop processing and nack remaining messages, releasing
+                    // the message for re-delivery.
+                    var remainingAckIds = msgs.Skip(msgIndex).Select(x => x.AckId);
+                    Nack(remainingAckIds);
+                    _softStopCts.Token.ThrowIfCancellationRequested();
+                }
+
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
@@ -510,7 +518,6 @@ public sealed partial class SubscriberClientImpl
                     // Running async. Common data needs locking
                     lock (_lock)
                     {
-                        _softStopCts.Token.ThrowIfCancellationRequested();
                         _userHandlerInFlight += 1;
                     }
                     if (msg.DeliveryAttempt > 0)
@@ -518,11 +525,18 @@ public sealed partial class SubscriberClientImpl
                         msg.Message.Attributes[DeliveryAttemptAttrKey] = msg.DeliveryAttempt.ToString(CultureInfo.InvariantCulture);
                     }
                     // Call user message handler
-                    var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handler.HandleMessage(msg.Message, _hardStopCts.Token), Reply.Nack);
-                    // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
-                    lock (msgIds)
+                    var reply = await _taskHelper.ConfigureAwaitHideErrors(() =>
                     {
-                        msgIds.Remove(msg.AckId);
+                        // If the subscriber shut down while waiting for flow control, skip the handler.
+                        // Throwing here triggers a Nack, releasing the message for redelivery.
+                        _softStopCts.Token.ThrowIfCancellationRequested();
+                        return _handler.HandleMessage(msg.Message, _hardStopCts.Token);
+                    }, Reply.Nack);
+
+                    // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
+                    lock (leaseTracking)
+                    {
+                        leaseTracking.Remove(msg.AckId);
                     }
                     // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
                     lock (_lock)
@@ -534,6 +548,20 @@ public sealed partial class SubscriberClientImpl
                     // Ids have been added to ack/nack-queue, so trigger a push.
                     _eventPush.Set();
                 }));
+            }
+
+            void Nack(IEnumerable<string> ackIds)
+            {
+                lock (_lock)
+                {
+                    _nackQueue.Enqueue(ackIds);
+                }
+                lock (leaseTracking)
+                {
+                    leaseTracking.ExceptWith(ackIds);
+                }
+                // Ids have been added to nack-queue, so trigger a push.
+                _eventPush.Set();
             }
         }
 
