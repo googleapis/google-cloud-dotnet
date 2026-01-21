@@ -302,8 +302,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // The file has a Content-Encoding of gzip, and it's stored compressed.
             // We should still be able to download it, and the result should be the original plain text.
             var stream = new MemoryStream();
-            _fixture.Client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream);
-            var expected = Encoding.UTF8.GetBytes("hello world");
+            _fixture.Client.DownloadObject(StorageFixture.TestBucket, StorageFixture.GzippedObjectName, stream);
+            var expected = Encoding.UTF8.GetBytes(StorageFixture.GzippedObjectContent);
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }
@@ -322,8 +322,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream);
-            var expected = Encoding.UTF8.GetBytes("hello world");
+            client.DownloadObject(StorageFixture.TestBucket, StorageFixture.GzippedObjectName, stream);
+            var expected = Encoding.UTF8.GetBytes(StorageFixture.GzippedObjectContent);
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }
@@ -340,9 +340,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream,
+            client.DownloadObject(StorageFixture.TestBucket, StorageFixture.GzippedObjectName, stream,
                 new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Never });
-            var expected = Encoding.UTF8.GetBytes("hello world");
+            var expected = Encoding.UTF8.GetBytes(StorageFixture.GzippedObjectContent);
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }
@@ -359,9 +359,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            var obj = client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream,
+            var obj = client.DownloadObject(StorageFixture.TestBucket, StorageFixture.GzippedObjectName, stream,
                 new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Automatic });
-            var expected = Encoding.UTF8.GetBytes("hello world");
+            var expected = Encoding.UTF8.GetBytes(StorageFixture.GzippedObjectContent);
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }

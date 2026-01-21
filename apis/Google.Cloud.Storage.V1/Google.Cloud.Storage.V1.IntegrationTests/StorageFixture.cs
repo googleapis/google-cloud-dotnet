@@ -42,6 +42,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     public sealed class StorageFixture : CloudProjectFixtureBase, ICollectionFixture<StorageFixture>
     {
         internal const string TestBucket = "dotnet-storage-library-test-bucket";
+        internal const string GzippedObjectName = "gzipped-text.txt";
+        internal const string GzippedObjectContent = "Hello World";
 
         private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
         private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";
