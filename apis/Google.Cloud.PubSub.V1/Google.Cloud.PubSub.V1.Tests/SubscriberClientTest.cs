@@ -2017,6 +2017,53 @@ namespace Google.Cloud.PubSub.V1.Tests
             });
         }
 
+        [Fact]
+        public void NackMessagesOnShutdown()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2", "msg3"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg4", "msg5"]),
+                ServerAction.Inf()
+            } };
+            // Set flowMaxElements to 2 to ensure that "msg0" and "msg2" block flow control preventing
+            // "msg3","msg4","msg5" from being processed.
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        handledMsgs.Locked(() => handledMsgs.Add(data));
+                        if (data == "msg0" || data == "msg2")
+                        {
+                            // Delay handling so that StopAsync is called while the rest
+                            // are still pulled but waiting for a flow control slot.
+                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), ct));
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    // Wait for "msg0" and "msg2" to start being handled. "msg1" will also be handled, but not hold onto
+                    // flow control, releasing it so "msg2" can begin being handled.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs);
+
+                    // Stop the subscriber. This should ensure pulled messages that haven't entered the user handler yet
+                    // will be NAck'ed. Specifically for messages already in flow control, they will have to wait for pending
+                    // messages to be processed before they are NAck'ed.
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+
+                    // Verify that "msg0", "msg1" and "msg2" completed handling normally, while the rest were
+                    // automatically Nacked during shutdown.
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, fake.Subscribers[0].Acks.Select(x => x.Id));
+                    Assert.Equivalent(new [] {"msg3", "msg4", "msg5"}, fake.Subscribers[0].Nacks.Select(x => x.Id));
+                });
+            }
+        }
+
         /// <summary>
         /// Creates a sequence of failing streaming pull responses, optionally followed by one "never responds" streaming pull.
         /// The nested aspect is because each streaming pull can (theoretically) consist of multiple responses.
