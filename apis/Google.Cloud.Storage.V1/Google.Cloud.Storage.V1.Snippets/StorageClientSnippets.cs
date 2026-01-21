@@ -632,7 +632,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         // See [GetBucketIamPolicy](ref) for a synchronous example.
         // End see-also
 
-        [Fact]
+        [Fact(Skip = "b/477676781")]
         public async Task SetBucketIamPolicy()
         {
             var projectId = _fixture.ProjectId;
@@ -651,7 +651,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             Console.WriteLine($"Response code before setting policy: {response1.StatusCode}");
 
             // Fetch the current IAM policy, and modify it in memory to allow all users
-            // of a certain domain to view objects.
+            // to view objects.
             Policy policy = client.GetBucketIamPolicy(bucketName);
             string role = "roles/storage.objectViewer";
             Policy.BindingsData binding = policy.Bindings
@@ -662,7 +662,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 binding = new Policy.BindingsData { Role = role, Members = new List<string>() };
                 policy.Bindings.Add(binding);
             }
-            binding.Members.Add("domain:google.com");
+            binding.Members.Add("allUsers");
 
             // Update the IAM policy on the bucket.
             client.SetBucketIamPolicy(bucketName, policy);

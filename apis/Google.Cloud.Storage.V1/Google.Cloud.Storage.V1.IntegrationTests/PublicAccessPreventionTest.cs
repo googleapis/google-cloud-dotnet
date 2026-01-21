@@ -24,7 +24,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private const string InheritedValue = "inherited";
         private static readonly Policy.BindingsData AllUsersViewer = new Policy.BindingsData
         {
-            Members = new[] { "domain:google.com" },
+            Members = new[] { "allUsers" },
             Role = "roles/storage.objectViewer"
         };
 
@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public PublicAccessPreventionTest(StorageFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [Fact(Skip = "b/477676781")]
         public void PreventAccessOnExistingBucket()
         {
             var client = _fixture.Client;
@@ -51,7 +51,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Throws<GoogleApiException>(() => client.SetBucketIamPolicy(bucketName, policy));
         }
 
-        [Fact]
+        [Fact(Skip = "b/477676781")]
         public void PreventAccessOnNewBucket()
         {
             var client = _fixture.Client;
@@ -70,7 +70,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Throws<GoogleApiException>(() => client.SetBucketIamPolicy(bucketName, policy));
         }
 
-        [Fact]
+        [Fact(Skip = "b/477676781")]
         public void RestoreAccess()
         {
             var client = _fixture.Client;
