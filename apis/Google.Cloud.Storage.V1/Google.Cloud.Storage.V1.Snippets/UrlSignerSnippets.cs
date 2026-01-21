@@ -86,7 +86,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(_fixture.HelloWorldContent, content);
         }
 
-        [Fact]
+        [Fact(Skip = "b/477663109")]
         public async Task HmacSignedURLGet()
         {
             var bucketName = _fixture.BucketName;

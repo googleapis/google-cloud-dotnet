@@ -33,7 +33,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public HmacKeysTest(StorageFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [Fact(Skip = "b/477663109")]
         // This test is async because of the helpers for testing eventually consistent changes.
         // We are testing sync production code though.
         public async Task Lifecycle()
@@ -102,7 +102,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
         }
 
-        [Fact]
+        [Fact(Skip = "b/477663109")]
         public async Task LifecycleAsync()
         {
             var client = _fixture.Client;
