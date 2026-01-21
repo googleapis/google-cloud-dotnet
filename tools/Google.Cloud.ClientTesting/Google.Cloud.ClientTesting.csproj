@@ -15,7 +15,7 @@
     <PackageReference Include="xunit.core" />
     <PackageReference Include="Xunit.SkippableFact" />
     <PackageReference Include="Google.Apis" VersionOverride="1.73.0" />
-    <PackageReference Include="Grpc.Core.Api" VersionOverride="2.66.0" />
+    <PackageReference Include="Grpc.Core.Api" VersionOverride="2.76.0" />
     <PackageReference Include="Google.Api.Gax" />
     <PackageReference Include="Google.Protobuf" />
   </ItemGroup>
