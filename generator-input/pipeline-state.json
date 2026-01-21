@@ -1384,8 +1384,9 @@
         {
             "id": "Google.Cloud.Dialogflow.Cx.V3",
             "currentVersion": "2.25.0",
+            "nextVersion": "3.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T16:43:34.709246096Z",
             "lastGeneratedCommit": "b8d149138be9552543ed2ad7700d2d0bc1a0045d",
             "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
