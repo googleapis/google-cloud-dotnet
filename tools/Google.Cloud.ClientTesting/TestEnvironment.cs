@@ -92,7 +92,7 @@ namespace Google.Cloud.ClientTesting
         {
             if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable)))
             {
-                throw new SkipException("Test skipped in VPCSC environment");
+                throw new SkipException("Test skipped in restricted environment");
             }
         }
 
