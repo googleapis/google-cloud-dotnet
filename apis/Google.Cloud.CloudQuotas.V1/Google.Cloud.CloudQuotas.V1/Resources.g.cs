@@ -224,7 +224,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int QuotaIdFieldNumber = 2;
     private string quotaId_ = "";
     /// <summary>
-    /// The id of the quota, which is unquie within the service.
+    /// The id of the quota, which is unique within the service.
     /// Example: `CpusPerProjectPerRegion`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
