@@ -110,6 +110,69 @@
         }
       }
     },
+    "HsmManagement": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "HsmManagementClient",
+          "rpcs": {
+            "ApproveSingleTenantHsmInstanceProposal": {
+              "methods": [
+                "ApproveSingleTenantHsmInstanceProposal",
+                "ApproveSingleTenantHsmInstanceProposalAsync"
+              ]
+            },
+            "CreateSingleTenantHsmInstance": {
+              "methods": [
+                "CreateSingleTenantHsmInstance",
+                "CreateSingleTenantHsmInstanceAsync"
+              ]
+            },
+            "CreateSingleTenantHsmInstanceProposal": {
+              "methods": [
+                "CreateSingleTenantHsmInstanceProposal",
+                "CreateSingleTenantHsmInstanceProposalAsync"
+              ]
+            },
+            "DeleteSingleTenantHsmInstanceProposal": {
+              "methods": [
+                "DeleteSingleTenantHsmInstanceProposal",
+                "DeleteSingleTenantHsmInstanceProposalAsync"
+              ]
+            },
+            "ExecuteSingleTenantHsmInstanceProposal": {
+              "methods": [
+                "ExecuteSingleTenantHsmInstanceProposal",
+                "ExecuteSingleTenantHsmInstanceProposalAsync"
+              ]
+            },
+            "GetSingleTenantHsmInstance": {
+              "methods": [
+                "GetSingleTenantHsmInstance",
+                "GetSingleTenantHsmInstanceAsync"
+              ]
+            },
+            "GetSingleTenantHsmInstanceProposal": {
+              "methods": [
+                "GetSingleTenantHsmInstanceProposal",
+                "GetSingleTenantHsmInstanceProposalAsync"
+              ]
+            },
+            "ListSingleTenantHsmInstanceProposals": {
+              "methods": [
+                "ListSingleTenantHsmInstanceProposals",
+                "ListSingleTenantHsmInstanceProposalsAsync"
+              ]
+            },
+            "ListSingleTenantHsmInstances": {
+              "methods": [
+                "ListSingleTenantHsmInstances",
+                "ListSingleTenantHsmInstancesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "KeyManagementService": {
       "clients": {
         "grpc": {

@@ -3609,6 +3609,2730 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_sync",
+      "title": "ListSingleTenantHsmInstancesRequestObject",
+      "description": "Snippet for ListSingleTenantHsmInstances",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstances",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_async",
+      "title": "ListSingleTenantHsmInstancesRequestObjectAsync",
+      "description": "Snippet for ListSingleTenantHsmInstancesAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstancesAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_sync_flattened",
+      "title": "ListSingleTenantHsmInstances",
+      "description": "Snippet for ListSingleTenantHsmInstances",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstances",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_async_flattened",
+      "title": "ListSingleTenantHsmInstancesAsync",
+      "description": "Snippet for ListSingleTenantHsmInstancesAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstancesAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_sync_flattened_resourceNames",
+      "title": "ListSingleTenantHsmInstancesResourceNames",
+      "description": "Snippet for ListSingleTenantHsmInstances",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstances",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstances_async_flattened_resourceNames",
+      "title": "ListSingleTenantHsmInstancesResourceNamesAsync",
+      "description": "Snippet for ListSingleTenantHsmInstancesAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstancesAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstancesResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstances",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstances",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_sync",
+      "title": "GetSingleTenantHsmInstanceRequestObject",
+      "description": "Snippet for GetSingleTenantHsmInstance",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetSingleTenantHsmInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_async",
+      "title": "GetSingleTenantHsmInstanceRequestObjectAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetSingleTenantHsmInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_sync_flattened",
+      "title": "GetSingleTenantHsmInstance",
+      "description": "Snippet for GetSingleTenantHsmInstance",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_async_flattened",
+      "title": "GetSingleTenantHsmInstanceAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_sync_flattened_resourceNames",
+      "title": "GetSingleTenantHsmInstanceResourceNames",
+      "description": "Snippet for GetSingleTenantHsmInstance",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstance_async_flattened_resourceNames",
+      "title": "GetSingleTenantHsmInstanceResourceNamesAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstance>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_sync",
+      "title": "CreateSingleTenantHsmInstanceRequestObject",
+      "description": "Snippet for CreateSingleTenantHsmInstance",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_async",
+      "title": "CreateSingleTenantHsmInstanceRequestObjectAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_sync_flattened",
+      "title": "CreateSingleTenantHsmInstance",
+      "description": "Snippet for CreateSingleTenantHsmInstance",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+            "name": "singleTenantHsmInstance"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_async_flattened",
+      "title": "CreateSingleTenantHsmInstanceAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+            "name": "singleTenantHsmInstance"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_sync_flattened_resourceNames",
+      "title": "CreateSingleTenantHsmInstanceResourceNames",
+      "description": "Snippet for CreateSingleTenantHsmInstance",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstance",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+            "name": "singleTenantHsmInstance"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstance_async_flattened_resourceNames",
+      "title": "CreateSingleTenantHsmInstanceResourceNamesAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstance",
+            "name": "singleTenantHsmInstance"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstance, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstance",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstance",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_sync",
+      "title": "CreateSingleTenantHsmInstanceProposalRequestObject",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_async",
+      "title": "CreateSingleTenantHsmInstanceProposalRequestObjectAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_sync_flattened",
+      "title": "CreateSingleTenantHsmInstanceProposal",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+            "name": "singleTenantHsmInstanceProposal"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceProposalId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_async_flattened",
+      "title": "CreateSingleTenantHsmInstanceProposalAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+            "name": "singleTenantHsmInstanceProposal"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceProposalId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_sync_flattened_resourceNames",
+      "title": "CreateSingleTenantHsmInstanceProposalResourceNames",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+            "name": "singleTenantHsmInstanceProposal"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceProposalId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_CreateSingleTenantHsmInstanceProposal_async_flattened_resourceNames",
+      "title": "CreateSingleTenantHsmInstanceProposalResourceNamesAsync",
+      "description": "Snippet for CreateSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.CreateSingleTenantHsmInstanceProposalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.CreateSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+            "name": "singleTenantHsmInstanceProposal"
+          },
+          {
+            "type": "System.String",
+            "name": "singleTenantHsmInstanceProposalId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal, Google.Cloud.Kms.V1.CreateSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "CreateSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.CreateSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_sync",
+      "title": "ApproveSingleTenantHsmInstanceProposalRequestObject",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_async",
+      "title": "ApproveSingleTenantHsmInstanceProposalRequestObjectAsync",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_sync_flattened",
+      "title": "ApproveSingleTenantHsmInstanceProposal",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest+Types+QuorumReply",
+            "name": "quorumReply"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_async_flattened",
+      "title": "ApproveSingleTenantHsmInstanceProposalAsync",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest+Types+QuorumReply",
+            "name": "quorumReply"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_sync_flattened_resourceNames",
+      "title": "ApproveSingleTenantHsmInstanceProposalResourceNames",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest+Types+QuorumReply",
+            "name": "quorumReply"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ApproveSingleTenantHsmInstanceProposal_async_flattened_resourceNames",
+      "title": "ApproveSingleTenantHsmInstanceProposalResourceNamesAsync",
+      "description": "Snippet for ApproveSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ApproveSingleTenantHsmInstanceProposalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ApproveSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalRequest+Types+QuorumReply",
+            "name": "quorumReply"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ApproveSingleTenantHsmInstanceProposalResponse>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ApproveSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ApproveSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_sync",
+      "title": "ExecuteSingleTenantHsmInstanceProposalRequestObject",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_async",
+      "title": "ExecuteSingleTenantHsmInstanceProposalRequestObjectAsync",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_sync_flattened",
+      "title": "ExecuteSingleTenantHsmInstanceProposal",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_async_flattened",
+      "title": "ExecuteSingleTenantHsmInstanceProposalAsync",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_sync_flattened_resourceNames",
+      "title": "ExecuteSingleTenantHsmInstanceProposalResourceNames",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ExecuteSingleTenantHsmInstanceProposal_async_flattened_resourceNames",
+      "title": "ExecuteSingleTenantHsmInstanceProposalResourceNamesAsync",
+      "description": "Snippet for ExecuteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ExecuteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalResponse, Google.Cloud.Kms.V1.ExecuteSingleTenantHsmInstanceProposalMetadata>>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ExecuteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ExecuteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_sync",
+      "title": "GetSingleTenantHsmInstanceProposalRequestObject",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_async",
+      "title": "GetSingleTenantHsmInstanceProposalRequestObjectAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_sync_flattened",
+      "title": "GetSingleTenantHsmInstanceProposal",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_async_flattened",
+      "title": "GetSingleTenantHsmInstanceProposalAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_sync_flattened_resourceNames",
+      "title": "GetSingleTenantHsmInstanceProposalResourceNames",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_GetSingleTenantHsmInstanceProposal_async_flattened_resourceNames",
+      "title": "GetSingleTenantHsmInstanceProposalResourceNamesAsync",
+      "description": "Snippet for GetSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.GetSingleTenantHsmInstanceProposalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.GetSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "GetSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.GetSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_sync",
+      "title": "ListSingleTenantHsmInstanceProposalsRequestObject",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposals",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposals",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposals",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_async",
+      "title": "ListSingleTenantHsmInstanceProposalsRequestObjectAsync",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposalsAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposalsAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposalsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_sync_flattened",
+      "title": "ListSingleTenantHsmInstanceProposals",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposals",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposals",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposals",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_async_flattened",
+      "title": "ListSingleTenantHsmInstanceProposalsAsync",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposalsAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposalsAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposalsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_sync_flattened_resourceNames",
+      "title": "ListSingleTenantHsmInstanceProposalsResourceNames",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposals",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposals",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposals",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_ListSingleTenantHsmInstanceProposals_async_flattened_resourceNames",
+      "title": "ListSingleTenantHsmInstanceProposalsResourceNamesAsync",
+      "description": "Snippet for ListSingleTenantHsmInstanceProposalsAsync",
+      "file": "HsmManagementClient.ListSingleTenantHsmInstanceProposalsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSingleTenantHsmInstanceProposalsAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.ListSingleTenantHsmInstanceProposalsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListSingleTenantHsmInstanceProposalsResponse, Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposal>",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "ListSingleTenantHsmInstanceProposals",
+          "fullName": "google.cloud.kms.v1.HsmManagement.ListSingleTenantHsmInstanceProposals",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_sync",
+      "title": "DeleteSingleTenantHsmInstanceProposalRequestObject",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_async",
+      "title": "DeleteSingleTenantHsmInstanceProposalRequestObjectAsync",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteSingleTenantHsmInstanceProposalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_sync_flattened",
+      "title": "DeleteSingleTenantHsmInstanceProposal",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_async_flattened",
+      "title": "DeleteSingleTenantHsmInstanceProposalAsync",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_sync_flattened_resourceNames",
+      "title": "DeleteSingleTenantHsmInstanceProposalResourceNames",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposal",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposal",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_HsmManagement_DeleteSingleTenantHsmInstanceProposal_async_flattened_resourceNames",
+      "title": "DeleteSingleTenantHsmInstanceProposalResourceNamesAsync",
+      "description": "Snippet for DeleteSingleTenantHsmInstanceProposalAsync",
+      "file": "HsmManagementClient.DeleteSingleTenantHsmInstanceProposalResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSingleTenantHsmInstanceProposalAsync",
+        "fullName": "Google.Cloud.Kms.V1.HsmManagementClient.DeleteSingleTenantHsmInstanceProposalAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.SingleTenantHsmInstanceProposalName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "HsmManagementClient",
+          "fullName": "Google.Cloud.Kms.V1.HsmManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSingleTenantHsmInstanceProposal",
+          "fullName": "google.cloud.kms.v1.HsmManagement.DeleteSingleTenantHsmInstanceProposal",
+          "service": {
+            "shortName": "HsmManagement",
+            "fullName": "google.cloud.kms.v1.HsmManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_ListKeyRings_sync",
       "title": "ListKeyRingsRequestObject",
       "description": "Snippet for ListKeyRings",
