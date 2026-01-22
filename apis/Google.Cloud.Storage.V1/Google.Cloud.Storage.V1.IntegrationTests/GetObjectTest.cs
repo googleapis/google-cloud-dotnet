@@ -41,7 +41,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Null(obj.Acl);
         }
 
-        [Fact]
+        [Fact(Skip = "b/478003908")]
         public void FullProjection()
         {
             var obj = _fixture.Client.GetObject(_fixture.ReadBucket, _fixture.SmallObject,

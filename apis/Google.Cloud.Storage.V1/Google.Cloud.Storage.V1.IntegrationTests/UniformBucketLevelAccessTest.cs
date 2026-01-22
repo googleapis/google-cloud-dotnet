@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public UniformBucketLevelAccessTest(StorageFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [Fact(Skip = "b/478003908")]
         public void EnableDisableOnExistingBucket()
         {
             string bucketName = _fixture.GenerateBucketName();
