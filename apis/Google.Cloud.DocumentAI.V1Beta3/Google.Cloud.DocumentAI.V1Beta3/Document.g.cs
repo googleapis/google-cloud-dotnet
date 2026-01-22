@@ -766,8 +766,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.BlobAsset> blobAssets_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.BlobAsset>();
     /// <summary>
     /// Optional. The blob assets in this document. This is used to store the
-    /// content of the inline blobs in this document, e.g. image bytes, such that
-    /// it can be referenced by other fields in the document via asset id.
+    /// content of the inline blobs in this document, for example, image bytes,
+    /// such that it can be referenced by other fields in the document via asset
+    /// id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -811,10 +812,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int EntitiesRevisionIdFieldNumber = 23;
     private string entitiesRevisionId_ = "";
     /// <summary>
-    /// The entity revision id that `document.entities` field is based on.
+    /// The entity revision ID that `document.entities` field is based on.
     /// If this field is set and `entities_revisions` is not empty, the entities in
     /// `document.entities` field are the entities in the entity revision with this
-    /// id and `document.entity_validation_output` field is the
+    /// ID and `document.entity_validation_output` field is the
     /// `entity_validation_output` field in this entity revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2657,7 +2658,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             = pb::FieldCodec.ForMessage(74, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement> visualElements_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement>();
         /// <summary>
-        /// A list of detected non-text visual elements e.g. checkbox,
+        /// A list of detected non-text visual elements for example, checkbox,
         /// signature etc. on the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4195,9 +4196,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             /// <summary>
             /// Confidence of the current
             /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] within
-            /// context of the object this layout is for. e.g. confidence can be for a
-            /// single token, a table, a visual element, etc. depending on context.
-            /// Range `[0, 1]`.
+            /// context of the object this layout is for. For example, confidence can
+            /// be for a single token, a table, a visual element, etc. depending on
+            /// context. Range `[0, 1]`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6991,8 +6992,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
 
           /// <summary>
-          /// Detected non-text visual elements e.g. checkbox, signature etc. on the
-          /// page.
+          /// Detected non-text visual elements, for example, checkbox, signature, etc.
+          /// on the page.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class VisualElement : pb::IMessage<VisualElement>
@@ -8179,7 +8180,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta3.Document.Page.Layout] for the
             /// [FormField][google.cloud.documentai.v1beta3.Document.Page.FormField]
-            /// name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+            /// name. For example, `Address`, `Email`, `Grand total`, `Phone number`,
+            /// etc.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9672,7 +9674,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int TypeFieldNumber = 2;
         private string type_ = "";
         /// <summary>
-        /// Required. Entity type from a schema e.g. `Address`.
+        /// Required. Entity type from a schema for example, `Address`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9687,7 +9689,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int MentionTextFieldNumber = 3;
         private string mentionText_ = "";
         /// <summary>
-        /// Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+        /// Optional. Text value of the entity for example, `1600 Amphitheatre Pkwy`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9748,7 +9750,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int IdFieldNumber = 7;
         private string id_ = "";
         /// <summary>
-        /// Optional. Canonical id. This will be a unique value in the entity list
+        /// Optional. Canonical ID. This will be a unique value in the entity list
         /// for this document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9765,9 +9767,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Entity.Types.NormalizedValue normalizedValue_;
         /// <summary>
         /// Optional. Normalized entity value. Absent if the extracted value could
-        /// not be converted or the type (e.g. address) is not supported for certain
-        /// parsers. This field is also only populated for certain supported document
-        /// types.
+        /// not be converted or the type (for example, address) is not supported for
+        /// certain parsers. This field is also only populated for certain supported
+        /// document types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11036,7 +11038,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int SubjectIdFieldNumber = 1;
         private string subjectId_ = "";
         /// <summary>
-        /// Subject entity id.
+        /// Subject entity ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11051,7 +11053,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int ObjectIdFieldNumber = 2;
         private string objectId_ = "";
         /// <summary>
-        /// Object entity id.
+        /// Object entity ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12444,7 +12446,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int IdFieldNumber = 2;
         private int id_;
         /// <summary>
-        /// The Id of this operation.  Needs to be unique within the scope of the
+        /// The ID of this operation.  Needs to be unique within the scope of the
         /// revision.
         /// </summary>
         [global::System.ObsoleteAttribute]
@@ -12817,7 +12819,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int IdFieldNumber = 2;
             private int id_;
             /// <summary>
-            /// The id of the parent provenance.
+            /// The ID of the parent provenance.
             /// </summary>
             [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13079,7 +13081,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// <summary>Field number for the "agent" field.</summary>
         public const int AgentFieldNumber = 4;
         /// <summary>
-        /// If the change was made by a person specify the name or id of that
+        /// If the change was made by a person specify the name or ID of that
         /// person.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13140,7 +13142,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int IdFieldNumber = 1;
         private string id_ = "";
         /// <summary>
-        /// Id of the revision, internally generated by doc proto storage.
+        /// ID of the revision, internally generated by doc proto storage.
         /// Unique within the context of the document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13175,7 +13177,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             = pb::FieldCodec.ForString(58);
         private readonly pbc::RepeatedField<string> parentIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The revisions that this revision is based on. Must include all the ids
+        /// The revisions that this revision is based on. Must include all the IDs
         /// that have anything to do with this revision - eg. there are
         /// `provenance.parent.revision` fields that index into this field.
         /// </summary>
@@ -13575,7 +13577,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int StateFieldNumber = 1;
             private string state_ = "";
             /// <summary>
-            /// Human review state. e.g. `requested`, `succeeded`, `rejected`.
+            /// Human review state. For example, `requested`, `succeeded`, `rejected`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16762,7 +16764,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "blob_asset_id" field.</summary>
                 public const int BlobAssetIdFieldNumber = 4;
                 /// <summary>
-                /// Optional. Asset id of the inline image. If set, find the image
+                /// Optional. Asset ID of the inline image. If set, find the image
                 /// content in the blob_assets field.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16792,7 +16794,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "gcs_uri" field.</summary>
                 public const int GcsUriFieldNumber = 5;
                 /// <summary>
-                /// Optional. Google Cloud Storage uri of the image.
+                /// Optional. Google Cloud Storage URI of the image.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16821,11 +16823,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "data_uri" field.</summary>
                 public const int DataUriFieldNumber = 6;
                 /// <summary>
-                /// Optional. Data uri of the image.
+                /// Optional. Data URI of the image.
                 /// It is composed of four parts: a prefix (data:), a MIME type
                 /// indicating the type of data, an optional base64 token if
                 /// non-textual, and the data itself:
-                /// data:[&lt;mediatype>][;base64],&lt;data>
+                /// data:[&lt;mediatype>][;base64],&lt;data>.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18578,7 +18580,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "blob_asset_id" field.</summary>
                 public const int BlobAssetIdFieldNumber = 1;
                 /// <summary>
-                /// Optional. Asset id of the inline image. If set, find the image
+                /// Optional. Asset ID of the inline image. If set, find the image
                 /// content in the blob_assets field.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18608,7 +18610,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "gcs_uri" field.</summary>
                 public const int GcsUriFieldNumber = 2;
                 /// <summary>
-                /// Optional. Google Cloud Storage uri of the image.
+                /// Optional. Google Cloud Storage URI of the image.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18637,11 +18639,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// <summary>Field number for the "data_uri" field.</summary>
                 public const int DataUriFieldNumber = 3;
                 /// <summary>
-                /// Optional. Data uri of the image.
+                /// Optional. Data URI of the image.
                 /// It is composed of four parts: a prefix (data:), a MIME type
                 /// indicating the type of data, an optional base64 token if
                 /// non-textual, and the data itself:
-                /// data:[&lt;mediatype>][;base64],&lt;data>
+                /// data:[&lt;mediatype>][;base64],&lt;data>.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19130,7 +19132,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
               /// <summary>
               /// The chunk field in the chunk. A chunk field could be one of the various
-              /// types (e.g. image, table) supported.
+              /// types (for example, image, table) supported.
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class ChunkField : pb::IMessage<ChunkField>
@@ -19436,8 +19438,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
       /// <summary>
       /// Represents a blob asset. It's used to store the content of the inline blob
-      /// in this document, e.g. image bytes, such that it can be referenced by
-      /// other fields in the document via asset id.
+      /// in this document, for example, image bytes, such that it can be referenced
+      /// by other fields in the document via asset ID.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BlobAsset : pb::IMessage<BlobAsset>
@@ -19490,7 +19492,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int AssetIdFieldNumber = 1;
         private string assetId_ = "";
         /// <summary>
-        /// Optional. The id of the blob asset.
+        /// Optional. The ID of the blob asset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19505,7 +19507,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int ContentFieldNumber = 2;
         private pb::ByteString content_ = pb::ByteString.Empty;
         /// <summary>
-        /// Optional. The content of the blob asset, e.g. image bytes.
+        /// Optional. The content of the blob asset, for example, image bytes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20353,7 +20355,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int RevisionIdFieldNumber = 1;
         private string revisionId_ = "";
         /// <summary>
-        /// The revision id.
+        /// The revision ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20669,7 +20671,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// <summary>Field number for the "revision_id" field.</summary>
     public const int RevisionIdFieldNumber = 2;
     /// <summary>
-    /// Reads the revision given by the id.
+    /// Reads the revision given by the ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
