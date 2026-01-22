@@ -73,6 +73,7 @@ namespace Google.Cloud.Kms.V1
             yield return AutokeyReflection.Descriptor;
             yield return AutokeyAdminReflection.Descriptor;
             yield return EkmServiceReflection.Descriptor;
+            yield return HsmManagementReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
