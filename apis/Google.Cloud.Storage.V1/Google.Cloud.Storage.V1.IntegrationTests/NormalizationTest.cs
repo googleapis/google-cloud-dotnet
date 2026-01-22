@@ -33,7 +33,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [InlineData("Caf\u00e9", "Normalization Form C")]
         // Normalization Form D: an ASCII e followed by U+0301 combining character
         // URL should end with Bebe%CC%81
-        [InlineData("Bebe\u0301", "Normalization Form D", Skip = "b/477619774")]
+        // Note: We need to skip this test by commenting it out because of
+        // https://github.com/xunit/visualstudio.xunit/issues/266 and similar issues.
+        // [InlineData("Bebe\u0301", "Normalization Form D", Skip = "b/477619774")]
         public void FetchObjectAndCheckContent(string name, string expectedContent)
         {
             TestEnvironment.SkipIfVpcSc();
