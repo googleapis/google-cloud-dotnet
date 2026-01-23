@@ -71,6 +71,8 @@ namespace GoogleCSharpSnippets
                 MaxRunDuration = new Duration(),
                 FlexStart = false,
                 BootDisk = new BootDisk(),
+                NodeDrainConfig = new NodePool.Types.NodeDrainConfig(),
+                ConsolidationDelay = new Duration(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
