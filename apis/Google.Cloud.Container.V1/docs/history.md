@@ -1,5 +1,36 @@
 # Version history
 
+## Version 3.37.0, released 2026-01-26
+
+### New features
+
+- Add SwapConfig to enable and configure swap memory for node pools
+- Add GPUDirectConfig to configure GPU Direct for node pools
+- Add consolidation_delay to configure Cluster Autoscaler node consolidation delay
+- Add RegistryHostConfig to ContainerdConfig for containerd registry host configuration
+- Add SliceControllerConfig to AddonsConfig to manage the Slice Controller addon
+- Add ManagedOpenTelemetryConfig to Cluster to manage the OpenTelemetry pipeline
+- Add NodeDrainConfig to NodePool to configure node draining behavior
+- Add AutopilotGeneralProfile to ClusterAutoscaling to configure Autopilot profiles
+- Add SHORT_LIVED as a NodePoolUpdateStrategy
+- Add DRAINING status to AdditionalIPRangesConfig for subnet draining
+- Allow specifying subnetwork in NodeNetworkConfig during node pool creation
+- Add DisruptionEvent to provide details on node disruption events
+
+### Documentation improvements
+
+- A comment for field `sysctls` in message `.google.container.v1.LinuxNodeConfig` is changed
+- A comment for field `subnetwork` in message `.google.container.v1.NodeNetworkConfig` is changed
+- A comment for field `gcp_secret_manager_certificate_config` in message `.google.container.v1.ContainerdConfig` is changed
+- A comment for field `cluster_ipv4_cidr_block` in message `.google.container.v1.IPAllocationPolicy` is changed
+- A comment for field `node_ipv4_cidr_block` in message `.google.container.v1.IPAllocationPolicy` is changed
+- A comment for field `services_ipv4_cidr_block` in message `.google.container.v1.IPAllocationPolicy` is changed
+- A comment for field `tpu_ipv4_cidr_block` in message `.google.container.v1.IPAllocationPolicy` is changed
+- A comment for field `cluster_ipv4_cidr` in message `.google.container.v1.Cluster` is changed
+- A comment for field `services_ipv4_cidr` in message `.google.container.v1.Cluster` is changed
+- A comment for field `tpu_ipv4_cidr_block` in message `.google.container.v1.Cluster` is changed
+- A comment for field `recurrence` in message `.google.container.v1.RecurringTimeWindow` is changed
+
 ## Version 3.36.0, released 2025-10-23
 
 ### New features
