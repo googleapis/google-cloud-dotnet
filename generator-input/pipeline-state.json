@@ -4813,6 +4813,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ApiRegistry.V1Beta/Google.Cloud.ApiRegistry.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.ApiRegistry.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/apiregistry/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.ApiRegistry.V1/Google.Cloud.ApiRegistry.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
