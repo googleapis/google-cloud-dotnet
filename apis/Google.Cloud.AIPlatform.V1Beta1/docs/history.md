@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta66, released 2026-01-26
+
+### New features
+
+- RAG - add mode config to RagEngineConfig with Spanner and Serverless
+- RAG - deprecate tier from RagEngineConfig
+
+### Documentation improvements
+
+- A comment for message `RagManagedDbConfig` is changed
+- A comment for field `scaled` in message `.google.cloud.aiplatform.v1beta1.RagManagedDbConfig` is changed
+- A comment for field `basic` in message `.google.cloud.aiplatform.v1beta1.RagManagedDbConfig` is changed
+- A comment for field `unprovisioned` in message `.google.cloud.aiplatform.v1beta1.RagManagedDbConfig` is changed
+
 ## Version 1.0.0-beta65, released 2026-01-08
 
 ### New features
