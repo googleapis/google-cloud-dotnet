@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.14.0, released 2026-01-26
+
+### New features
+
+- Add ReturnPartialSuccess support to ListBuckets
+- Generalize move object feature to all types of buckets (#15216)
+- Deprecate insecure UrlSigner credential loading methods.
+
 ## Version 4.13.0, released 2025-04-25
 
 This is effectively a re-release of 4.12.0 to fix the release
