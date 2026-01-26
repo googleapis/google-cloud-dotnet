@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.14.0, released 2026-01-26
+
+### New features
+
+- Added OUTPUT_ONLY annotations to create_time and update_time in InternalRange to reflect existing service behavior
+
 ## Version 2.13.0, released 2025-11-05
 
 ### New features
