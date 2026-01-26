@@ -1163,12 +1163,12 @@
         },
         {
             "id": "Google.Cloud.Container.V1",
-            "currentVersion": "3.36.0",
+            "currentVersion": "3.37.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-23T16:08:32.392942733Z",
+            "releaseTimestamp": "2026-01-26T14:07:08.055609810Z",
             "lastGeneratedCommit": "928703e0380b0d937505cea9925e05256e0738a1",
-            "lastReleasedCommit": "94ccdfe4519e0ba817bd33aa22eb9c64f88a6874",
+            "lastReleasedCommit": "928703e0380b0d937505cea9925e05256e0738a1",
             "apiPaths": [
                 "google/container/v1"
             ],
