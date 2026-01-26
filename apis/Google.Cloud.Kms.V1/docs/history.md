@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.21.0, released 2026-01-26
+
+### New features
+
+- Add the SingleTenantHsm functionality including the management API and resource types
+
+### Documentation improvements
+
+- A comment for field `crypto_key_backend` in message `.google.cloud.kms.v1.CryptoKey` is expanded to include SingleTenantHsmInstances
+- A comment for enum value `MODIFIED_CUSTOMER_INITIATED_ACCESS` in enum `AccessReason` is changed
+- A comment for enum value `MODIFIED_GOOGLE_INITIATED_SYSTEM_OPERATION` in enum `AccessReason` is changed
+- Marking MODIFIED_CUSTOMER_INITIATED_ACCESS and MODIFIED_GOOGLE_INITIATED_SYSTEM_OPERATION Key Access Justification codes as deprecated in favor of GOOGLE_RESPONSE_TO_PRODUCTION_ALERT
+
 ## Version 3.20.0, released 2025-11-03
 
 ### New features
