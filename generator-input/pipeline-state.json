@@ -2268,12 +2268,12 @@
         },
         {
             "id": "Google.Cloud.NetworkManagement.V1",
-            "currentVersion": "2.17.0",
+            "currentVersion": "2.18.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T22:05:19.440999231Z",
+            "releaseTimestamp": "2026-01-26T14:11:37.226820256Z",
             "lastGeneratedCommit": "3343c4ed68f17a8910a04ef54647e337818e7ec2",
-            "lastReleasedCommit": "4d45a59e3edfa9607e43502515ae16b745890f3b",
+            "lastReleasedCommit": "3343c4ed68f17a8910a04ef54647e337818e7ec2",
             "apiPaths": [
                 "google/cloud/networkmanagement/v1"
             ],

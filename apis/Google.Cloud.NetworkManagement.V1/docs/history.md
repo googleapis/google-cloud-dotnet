@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.18.0, released 2026-01-26
+
+### New features
+
+- Add fields and messages for GKE Pods and IP masquerading
+
+### Documentation improvements
+
+- Update comments
+
 ## Version 2.17.0, released 2025-11-05
 
 ### New features
