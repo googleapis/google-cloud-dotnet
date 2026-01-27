@@ -4806,7 +4806,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "2ac88973cbafba24e4fb6f31038e0c76174ae704",
+            "lastGeneratedCommit": "4ba4d6d3b5e81359f508fb19db492b97bbb01fe6",
             "apiPaths": [
                 "google/cloud/apiregistry/v1beta"
             ],
