@@ -28,9 +28,9 @@ public class UpdateMaskSnippets
     }
 
     [Fact]
-    public void UpdateMasks()
+    public async Task UpdateMasks()
     {
-        string projectId = _fixture.ProjectId;;
+        string projectId = _fixture.ProjectId;
         string secretId = "test-secret";
 
         // Sample: UpdateMasks

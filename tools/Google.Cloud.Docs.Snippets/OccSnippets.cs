@@ -19,7 +19,7 @@ using Grpc.Core;
 
 namespace Google.Cloud.Tools.Snippets;
 
-public class OccForIamSnippets
+public class OccSnippets
 {
     private readonly SnippetFixture _fixture;
 
@@ -29,9 +29,9 @@ public class OccForIamSnippets
     }
 
     [Fact]
-    public void OccForIam()
+    public async Task OccForIam()
     {
-        string projectId = _ficxture.ProjectId;
+        string projectId = _fixture.ProjectId;
         string role = "roles/cloudkms.cryptoKeyEncrypterDecrypter";
         string member = "user:betterbrent@google.com";
 
@@ -72,13 +72,12 @@ public class OccForIamSnippets
             // SUCCESS
             Console.WriteLine("Successfully updated IAM policy.");
         }
-        catch (RpcException ex) when (
-            ex.StatusCode == StatusCode.Aborted ||
-            ex.StatusCode == StatusCode.FailedPrecondition)
+        catch (RpcException ex) when ( ex.StatusCode == StatusCode.Aborted )
         {
-            // A concurrency conflict can manifest as either Aborted or FailedPrecondition,
-            // depending on the specifics of the API and the race condition.
-            // To ensure the retry mechanism is robust, we catch both.
+            // A concurrency conflict usually manifests as Aborted but dependeing on the API
+            // other error codes may be used, like FailedPrecondition.
+            // To ensure the retry mechanism is robust, check the documentation for the API
+            // you are implementing OCC for.
             Console.WriteLine($"Concurrency conflict (Etag mismatch).");
 
             // Handle the etag mismatch. For example, retry the change or prompt the user to
