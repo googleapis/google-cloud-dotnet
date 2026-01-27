@@ -28,7 +28,7 @@ namespace Grafeas.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
             "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
             "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
-            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQiuQwKE0Rp",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/QwKE0Rp",
             "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
             "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
             "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
@@ -44,34 +44,35 @@ namespace Grafeas.V1 {
             "YWJpbGl0eV9hdHRlc3RhdGlvbhgKIAEoCzI4LmdyYWZlYXMudjEuRGlzY292",
             "ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmlsaXR5QXR0ZXN0YXRpb24SMwoFZmls",
             "ZXMYCyADKAsyJC5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuRmls",
-            "ZRoqChFBbmFseXNpc0NvbXBsZXRlZBIVCg1hbmFseXNpc190eXBlGAEgAygJ",
-            "GqkBCgpTQk9NU3RhdHVzEkgKCnNib21fc3RhdGUYASABKA4yNC5ncmFmZWFz",
-            "LnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuU0JPTVN0YXR1cy5TQk9NU3RhdGUS",
-            "DQoFZXJyb3IYAiABKAkiQgoJU0JPTVN0YXRlEhoKFlNCT01fU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIQ09NUExFVEUQAhqzAgoYVnVs",
-            "bmVyYWJpbGl0eUF0dGVzdGF0aW9uEjUKEWxhc3RfYXR0ZW1wdF90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJlCgVzdGF0ZRgCIAEo",
-            "DjJWLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmls",
-            "aXR5QXR0ZXN0YXRpb24uVnVsbmVyYWJpbGl0eUF0dGVzdGF0aW9uU3RhdGUS",
-            "DQoFZXJyb3IYAyABKAkiagodVnVsbmVyYWJpbGl0eUF0dGVzdGF0aW9uU3Rh",
-            "dGUSLworVlVMTkVSQUJJTElUWV9BVFRFU1RBVElPTl9TVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgsKB1NVQ0NFU1MQARILCgdGQUlMVVJFEAIahQEKBEZpbGUSDAoE",
-            "bmFtZRgBIAEoCRJACgZkaWdlc3QYAiADKAsyMC5ncmFmZWFzLnYxLkRpc2Nv",
-            "dmVyeU9jY3VycmVuY2UuRmlsZS5EaWdlc3RFbnRyeRotCgtEaWdlc3RFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlMKEkNvbnRpbnVv",
-            "dXNBbmFseXNpcxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVE",
-            "EAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0",
-            "dXMSHwobQU5BTFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElO",
-            "RxABEgwKCFNDQU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEgwKCENP",
-            "TVBMRVRFEAMSEwoPRklOSVNIRURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5T",
-            "VVBQT1JURUQQBRoCEAFCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVh",
-            "c6ICA0dSQWIGcHJvdG8z"));
+            "ZRJCCh5sYXN0X3Z1bG5lcmFiaWxpdHlfdXBkYXRlX3RpbWUYDCABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wGioKEUFuYWx5c2lzQ29tcGxldGVk",
+            "EhUKDWFuYWx5c2lzX3R5cGUYASADKAkaqQEKClNCT01TdGF0dXMSSAoKc2Jv",
+            "bV9zdGF0ZRgBIAEoDjI0LmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5j",
+            "ZS5TQk9NU3RhdHVzLlNCT01TdGF0ZRINCgVlcnJvchgCIAEoCSJCCglTQk9N",
+            "U3RhdGUSGgoWU0JPTV9TVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQ",
+            "ARIMCghDT01QTEVURRACGrMCChhWdWxuZXJhYmlsaXR5QXR0ZXN0YXRpb24S",
+            "NQoRbGFzdF9hdHRlbXB0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEmUKBXN0YXRlGAIgASgOMlYuZ3JhZmVhcy52MS5EaXNjb3Zl",
+            "cnlPY2N1cnJlbmNlLlZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvbi5WdWxuZXJh",
+            "YmlsaXR5QXR0ZXN0YXRpb25TdGF0ZRINCgVlcnJvchgDIAEoCSJqCh1WdWxu",
+            "ZXJhYmlsaXR5QXR0ZXN0YXRpb25TdGF0ZRIvCitWVUxORVJBQklMSVRZX0FU",
+            "VEVTVEFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1VDQ0VTUxABEgsK",
+            "B0ZBSUxVUkUQAhqFAQoERmlsZRIMCgRuYW1lGAEgASgJEkAKBmRpZ2VzdBgC",
+            "IAMoCzIwLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5GaWxlLkRp",
+            "Z2VzdEVudHJ5Gi0KC0RpZ2VzdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiUwoSQ29udGludW91c0FuYWx5c2lzEiMKH0NPTlRJTlVP",
+            "VVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFD",
+            "VElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtBTkFMWVNJU19TVEFUVVNf",
+            "VU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIU0NBTk5JTkcQAhIUChBG",
+            "SU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQAxITCg9GSU5JU0hFRF9G",
+            "QUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRFRBAFGgIQAUJRCg1pby5n",
+            "cmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryNote), global::Grafeas.V1.DiscoveryNote.Parser, new[]{ "AnalysisKind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus", "VulnerabilityAttestation", "Files" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus", "VulnerabilityAttestation", "Files", "LastVulnerabilityUpdateTime" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus), global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Parser, new[]{ "SbomState", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation), global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Parser, new[]{ "LastAttemptTime", "State", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.File), global::Grafeas.V1.DiscoveryOccurrence.Types.File.Parser, new[]{ "Name", "Digest" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
@@ -329,6 +330,7 @@ namespace Grafeas.V1 {
       sbomStatus_ = other.sbomStatus_ != null ? other.sbomStatus_.Clone() : null;
       vulnerabilityAttestation_ = other.vulnerabilityAttestation_ != null ? other.vulnerabilityAttestation_.Clone() : null;
       files_ = other.files_.Clone();
+      lastVulnerabilityUpdateTime_ = other.lastVulnerabilityUpdateTime_ != null ? other.lastVulnerabilityUpdateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -501,6 +503,21 @@ namespace Grafeas.V1 {
       get { return files_; }
     }
 
+    /// <summary>Field number for the "last_vulnerability_update_time" field.</summary>
+    public const int LastVulnerabilityUpdateTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastVulnerabilityUpdateTime_;
+    /// <summary>
+    /// The last time vulnerability scan results changed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastVulnerabilityUpdateTime {
+      get { return lastVulnerabilityUpdateTime_; }
+      set {
+        lastVulnerabilityUpdateTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -527,6 +544,7 @@ namespace Grafeas.V1 {
       if (!object.Equals(SbomStatus, other.SbomStatus)) return false;
       if (!object.Equals(VulnerabilityAttestation, other.VulnerabilityAttestation)) return false;
       if(!files_.Equals(other.files_)) return false;
+      if (!object.Equals(LastVulnerabilityUpdateTime, other.LastVulnerabilityUpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -545,6 +563,7 @@ namespace Grafeas.V1 {
       if (sbomStatus_ != null) hash ^= SbomStatus.GetHashCode();
       if (vulnerabilityAttestation_ != null) hash ^= VulnerabilityAttestation.GetHashCode();
       hash ^= files_.GetHashCode();
+      if (lastVulnerabilityUpdateTime_ != null) hash ^= LastVulnerabilityUpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -601,6 +620,10 @@ namespace Grafeas.V1 {
         output.WriteMessage(VulnerabilityAttestation);
       }
       files_.WriteTo(output, _repeated_files_codec);
+      if (lastVulnerabilityUpdateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(LastVulnerabilityUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -649,6 +672,10 @@ namespace Grafeas.V1 {
         output.WriteMessage(VulnerabilityAttestation);
       }
       files_.WriteTo(ref output, _repeated_files_codec);
+      if (lastVulnerabilityUpdateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(LastVulnerabilityUpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -688,6 +715,9 @@ namespace Grafeas.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VulnerabilityAttestation);
       }
       size += files_.CalculateSize(_repeated_files_codec);
+      if (lastVulnerabilityUpdateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastVulnerabilityUpdateTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -747,6 +777,12 @@ namespace Grafeas.V1 {
         VulnerabilityAttestation.MergeFrom(other.VulnerabilityAttestation);
       }
       files_.Add(other.files_);
+      if (other.lastVulnerabilityUpdateTime_ != null) {
+        if (lastVulnerabilityUpdateTime_ == null) {
+          LastVulnerabilityUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastVulnerabilityUpdateTime.MergeFrom(other.LastVulnerabilityUpdateTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -824,6 +860,13 @@ namespace Grafeas.V1 {
             files_.AddEntriesFrom(input, _repeated_files_codec);
             break;
           }
+          case 98: {
+            if (lastVulnerabilityUpdateTime_ == null) {
+              LastVulnerabilityUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastVulnerabilityUpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -899,6 +942,13 @@ namespace Grafeas.V1 {
           }
           case 90: {
             files_.AddEntriesFrom(ref input, _repeated_files_codec);
+            break;
+          }
+          case 98: {
+            if (lastVulnerabilityUpdateTime_ == null) {
+              LastVulnerabilityUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastVulnerabilityUpdateTime);
             break;
           }
         }
