@@ -1,0 +1,42 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.apiregistry.v1",
+  "libraryPackage": "Google.Cloud.ApiRegistry.V1",
+  "services": {
+    "CloudApiRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudApiRegistryClient",
+          "rpcs": {
+            "GetMcpServer": {
+              "methods": [
+                "GetMcpServer",
+                "GetMcpServerAsync"
+              ]
+            },
+            "GetMcpTool": {
+              "methods": [
+                "GetMcpTool",
+                "GetMcpToolAsync"
+              ]
+            },
+            "ListMcpServers": {
+              "methods": [
+                "ListMcpServers",
+                "ListMcpServersAsync"
+              ]
+            },
+            "ListMcpTools": {
+              "methods": [
+                "ListMcpTools",
+                "ListMcpToolsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
