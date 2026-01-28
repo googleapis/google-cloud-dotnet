@@ -800,7 +800,7 @@
       "type": "grpc",
       "productName": "Audit Manager",
       "productUrl": "https://cloud.google.com/audit-manager/docs",
-      "description": "",
+      "description": "Audit Manager provides assessments about a project or folder's adherence to compliance requirements.",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Location": "2.4.0",
