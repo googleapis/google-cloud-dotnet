@@ -116,6 +116,12 @@ public sealed class ManagedTransaction : IAsyncDisposable
     /// </remarks>
     public Timestamp ReadTimestamp => Interlocked.CompareExchange(ref _transaction, null, null)?.ReadTimestamp;
 
+    // These are internal properties that are only needed while we support the session pool.
+    // Marking as deprecated from the start so we remove then on the next major version.
+
+    [Obsolete("Used by session pool only.")]
+    internal bool Shared => _shared;
+
     private ManagedTransaction(
         SpannerClient client, TimeSpan? transactionOperationsTimeout,
         Session session, ByteString transactionId,
