@@ -28,45 +28,6 @@ namespace Google.Cloud.Spanner.V1.Internal
         internal const string ResourceInfoMetadataKey = "google.rpc.resourceinfo-bin";
 
         /// <summary>
-        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
-        /// </summary>
-        internal static async Task<T> WithSessionExpiryChecking<T>(this Task<T> task, Session session)
-        {
-            try
-            {
-                return await task.ConfigureAwait(false);
-            }
-            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
-            {
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
-        /// </summary>
-        internal static async Task WithSessionExpiryChecking(this Task task, Session session)
-        {
-            try
-            {
-                await task.ConfigureAwait(false);
-            }
-            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
-            {
-                throw;
-            }
-        }
-
-        private static bool CheckForSessionExpiredError(this RpcException rpcException, Session session)
-        {
-            if (rpcException.IsSessionExpiredError())
-            {
-                session.Expired = true;
-            }
-            return false;
-        }
-
-        /// <summary>
         /// Determines whether <paramref name="rpcException"/> is due to a session expiry.
         /// </summary>
         public static bool IsSessionExpiredError(this RpcException rpcException) =>

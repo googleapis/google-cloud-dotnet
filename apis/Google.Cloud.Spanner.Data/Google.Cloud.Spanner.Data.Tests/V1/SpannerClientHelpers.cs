@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
@@ -21,18 +20,17 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Google.Rpc;
-using Google.Rpc.Context;
 using Grpc.Core;
+using NSubstitute;
+using NSubstitute.Core;
+using NSubstitute.ExceptionExtensions;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Status = Grpc.Core.Status;
 using static Google.Cloud.Spanner.V1.SpannerClientImpl;
-using NSubstitute;
-using NSubstitute.Extensions;
-using NSubstitute.ExceptionExtensions;
-using NSubstitute.Core;
+using Status = Grpc.Core.Status;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -63,31 +61,6 @@ namespace Google.Cloud.Spanner.V1.Tests
             var mock = Substitute.ForPartsOf<SpannerClient>();
             mock.Settings.Returns(settings);
             return mock;
-        }
-
-        internal static SpannerClient SetupBatchCreateSessionsAsync(this SpannerClient spannerClientMock)
-        {
-            spannerClientMock.Configure()
-                .BatchCreateSessionsAsync(Arg.Is<BatchCreateSessionsRequest>(x => x != null), Arg.Any<CallSettings>())
-                .Returns(args =>
-                {
-                    var request = (BatchCreateSessionsRequest) args[0];
-                    BatchCreateSessionsResponse response = new BatchCreateSessionsResponse();
-
-                    for (int i = 0; i < request.SessionCount; i++)
-                    {
-                        var session = request.SessionTemplate.Clone();
-                        session.CreateTime = session.ApproximateLastUseTime = spannerClientMock.GetNowTimestamp();
-                        session.Expired = false;
-                        session.Name = Guid.NewGuid().ToString();
-                        session.SessionName = new SessionName(ProjectId, Instance, Database, session.Name);
-
-                        response.Session.Add(session);
-                    }
-
-                    return Task.FromResult(response);
-                });
-            return spannerClientMock;
         }
 
         internal static SpannerClient SetupCreateSessionAsync(this SpannerClient spannerClientMock)

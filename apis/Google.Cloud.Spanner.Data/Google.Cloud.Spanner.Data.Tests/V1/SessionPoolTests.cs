@@ -23,7 +23,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.SessionPool;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -35,7 +34,6 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         private static readonly DatabaseName s_sampleDatabaseName = new DatabaseName("project", "instance", "database");
         private static readonly DatabaseName s_sampleDatabaseName2 = new DatabaseName("project", "instance", "database2");
-        private static readonly string s_databaseRole = "testrole";
         private static readonly SessionName s_sampleSessionName = new SessionName("project", "instance", "database", "session");
         private static readonly ByteString s_sampleTransactionId = ByteString.CopyFromUtf8("transaction-id");
 
