@@ -113,3 +113,5 @@ The backoff between retries is more complex. It consists of:
 
 - [RetrySettings.FromConstantBackoff](xref:Google.Api.Gax.Grpc.RetrySettings#Google_Api_Gax_Grpc_RetrySettings_FromConstantBackoff_System_Int32_System_TimeSpan_System_Predicate_System_Exception__Google_Api_Gax_Grpc_RetrySettings_IJitter_) which uses a multiplier of 1 and no maximum (because it's constant)
 - [RetrySettings.FromExponentialBackoff](xref:Google.Api.Gax.Grpc.RetrySettings#Google_Api_Gax_Grpc_RetrySettings_FromExponentialBackoff_System_Int32_System_TimeSpan_System_TimeSpan_System_Double_System_Predicate_System_Exception__Google_Api_Gax_Grpc_RetrySettings_IJitter_) which allows every aspect to be specified
+
+[!code-cs[](../examples/help.CallSettings.txt#RetrySettingsTiming)]
