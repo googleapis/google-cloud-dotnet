@@ -28,45 +28,6 @@ namespace Google.Cloud.Spanner.V1.Internal
         internal const string ResourceInfoMetadataKey = "google.rpc.resourceinfo-bin";
 
         /// <summary>
-        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
-        /// </summary>
-        internal static async Task<T> WithSessionExpiryChecking<T>(this Task<T> task, Session session)
-        {
-            try
-            {
-                return await task.ConfigureAwait(false);
-            }
-            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
-            {
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
-        /// </summary>
-        internal static async Task WithSessionExpiryChecking(this Task task, Session session)
-        {
-            try
-            {
-                await task.ConfigureAwait(false);
-            }
-            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
-            {
-                throw;
-            }
-        }
-
-        private static bool CheckForSessionExpiredError(this RpcException rpcException, Session session)
-        {
-            if (rpcException.IsSessionExpiredError())
-            {
-                session.Expired = true;
-            }
-            return false;
-        }
-
-        /// <summary>
         /// Determines whether <paramref name="rpcException"/> is due to a session expiry.
         /// </summary>
         public static bool IsSessionExpiredError(this RpcException rpcException) =>
@@ -112,31 +73,6 @@ namespace Google.Cloud.Spanner.V1.Internal
                 {
                     var completedTask = await Task.WhenAny(task, cts.Task).ConfigureAwait(false);
                     await completedTask.ConfigureAwait(false);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Returns a task which can be cancelled by the given cancellation token, but otherwise observes the original
-        /// task's state. This does *not* cancel any work that the original task was doing, and should be used carefully.
-        /// </summary>
-        internal static Task<TResult> WithCancellationToken<TResult>(this Task<TResult> task, CancellationToken cancellationToken)
-        {
-            if (!cancellationToken.CanBeCanceled)
-            {
-                return task;
-            }
-
-            return ImplAsync();
-
-            // Separate async method to allow the above optimization to avoid creating any new state machines etc.
-            async Task<TResult> ImplAsync()
-            {
-                var cts = new TaskCompletionSource<TResult>();
-                using (cancellationToken.Register(() => cts.TrySetCanceled()))
-                {
-                    var completedTask = await Task.WhenAny(task, cts.Task).ConfigureAwait(false);
-                    return await completedTask.ConfigureAwait(false);
                 }
             }
         }
