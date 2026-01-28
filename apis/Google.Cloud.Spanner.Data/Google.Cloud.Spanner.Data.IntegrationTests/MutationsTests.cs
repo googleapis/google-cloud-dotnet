@@ -65,7 +65,7 @@ public class MutationsTests
         // "the amount of values does not match the number of columns in the key".
         if (!_fixture.RunningOnEmulator) // The message is different on the emulator.
         {
-            Assert.Contains("does not specify any value", exception.RpcException.Message);
+            Assert.Contains("invalid mutation key", exception.RpcException.Message);
         }
     }
 

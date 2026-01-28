@@ -340,11 +340,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = GetConnection())
             {
-                var cmd = connection.CreateInsertCommand(_fixture.TableName);
-                cmd.Parameters.Add("K", SpannerDbType.Float64, 0.1);
+                var values = new SpannerParameterCollection
+                {
+                    {"StringValue", SpannerDbType.String, "abc"},
+                    // This is a string
+                    {"K", SpannerDbType.Float64, 0.1}
+                };
+                var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
                 var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteNonQueryAsyncWithRetry());
                 Logger.DefaultLogger.Debug($"BadColumnType: Caught error code: {e.ErrorCode}");
-                Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
+                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
         }

@@ -56,6 +56,11 @@ namespace Google.Cloud.Spanner.V1
         DirectedReadOptions DirectedReadOptions { get; set; }
 
         /// <summary>
+        /// See <see cref="ReadRequest.RequestOptions"/> and <see cref="ExecuteSqlRequest.RequestOptions"/>
+        /// </summary>
+        RequestOptions RequestOptions { get; set; }
+
+        /// <summary>
         /// See <see cref="ReadRequest.ResumeToken"/> and <see cref="ExecuteSqlRequest.ResumeToken"/>
         /// </summary>
         ByteString ResumeToken { set; }

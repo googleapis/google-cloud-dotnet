@@ -18,14 +18,4 @@
       <DependentUpon>SessionPool.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="SpannerClientPartial.*.cs">
-      <DependentUpon>SpannerClientPartial.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="SpannerClientBuilderPartial.*.cs">
-      <DependentUpon>SpannerClientBuilderPartial.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
 </Project>
