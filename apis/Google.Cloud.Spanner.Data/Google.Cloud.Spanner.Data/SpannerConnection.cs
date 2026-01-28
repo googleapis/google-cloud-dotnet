@@ -1065,6 +1065,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
         /// associated with the <see cref="SessionPoolSegmentKey"/>.</returns>
+        [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
         public SessionPool.SessionPoolSegmentStatistics GetSessionPoolSegmentStatistics()
         {
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(GetSessionPoolSegmentStatistics));

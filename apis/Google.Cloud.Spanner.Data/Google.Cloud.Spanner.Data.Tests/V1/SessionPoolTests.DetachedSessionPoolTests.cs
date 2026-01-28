@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using NSubstitute;
-using NSubstitute.Extensions;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -26,63 +25,23 @@ namespace Google.Cloud.Spanner.V1.Tests
         // and recreate a session.
         public sealed class DetachedSessionPoolTests
         {
+            private static readonly TimeSpan s_releaseWaitTime = TimeSpan.FromSeconds(1);
+
             [Fact]
-            public void ReleaseDetachedSession_NoDelete()
+            public async Task ReleaseDetachedSession_NoRollback()
             {
                 var logger = new InMemoryLogger();
                 var mock = SpannerClientHelpers.CreateMockClient(logger);
                 var pool = new SessionPool(mock, new SessionPoolOptions());
                 var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
 
-                // No calls to DeleteSession
+                // No calls to any method, we haven't configure anything.
                 session.ReleaseToPool(false);
+                // We wait a little in real time because ReleaseToPool ends up disposing but
+                // in a fire and forget manner.
+                await Task.Delay(s_releaseWaitTime);
                 logger.AssertNoWarningsOrErrors();
-            }
-
-            [Fact]
-            public void ReleaseDetachedSession_Delete()
-            {
-                var logger = new InMemoryLogger();
-                var mock = SpannerClientHelpers.CreateMockClient(logger);
-                // We will force the session to be deleted, so check it happens in the mock.
-                mock.Configure()
-                    .DeleteSessionAsync(new DeleteSessionRequest { SessionName = s_sampleSessionName }, null)
-                    .Returns(Task.CompletedTask);
-
-                var pool = new SessionPool(mock, new SessionPoolOptions());
-                var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
-
-                // Logically, the deletion happens asynchronously. However, everything completes synchronously so we don't need
-                // to sleep or anything to wait for the call to come through.
-                session.ReleaseToPool(true);
-                logger.AssertNoWarningsOrErrors();
-                // Equivalent of verify.
-                mock.Received().DeleteSessionAsync(new DeleteSessionRequest { SessionName = s_sampleSessionName }, null);
-            }
-
-            [Fact]
-            public void ReleaseDetachedSession_RollbackAndDelete()
-            {
-                var logger = new InMemoryLogger();
-                var mock = SpannerClientHelpers.CreateMockClient(logger);
-                // We will force the transaction to be rollbacked and the session to be deleted, so check it happens in the mock.
-                mock.Configure()
-                    .RollbackAsync(new RollbackRequest { SessionAsSessionName = s_sampleSessionName, TransactionId = s_sampleTransactionId })
-                    .Returns(Task.CompletedTask);
-                mock.Configure()
-                    .DeleteSessionAsync(new DeleteSessionRequest { SessionName = s_sampleSessionName }, null)
-                    .Returns(Task.CompletedTask);
-
-                var pool = new SessionPool(mock, new SessionPoolOptions());
-                var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadWrite);
-
-                // Logically, the deletion happens asynchronously. However, everything completes synchronously so we don't need
-                // to sleep or anything to wait for the call to come through.
-                session.ReleaseToPool(true);
-                logger.AssertNoWarningsOrErrors();
-                // Equivalent of verify.
-                mock.Received().RollbackAsync(new RollbackRequest { SessionAsSessionName = s_sampleSessionName, TransactionId = s_sampleTransactionId });
-                mock.Received().DeleteSessionAsync(new DeleteSessionRequest { SessionName = s_sampleSessionName }, null);
+                
             }
         }
     }

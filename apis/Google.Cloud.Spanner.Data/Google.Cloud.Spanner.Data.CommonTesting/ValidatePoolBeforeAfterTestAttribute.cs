@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Reflection;
 using Xunit;
 using Xunit.Sdk;
@@ -22,6 +23,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
     /// When applied to a class or method, each test has the state of the client and session pools checked
     /// before and after the test.
     /// </summary>
+    [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
     public class ValidatePoolBeforeAfterTestAttribute : BeforeAfterTestAttribute
     {
         public override void Before(MethodInfo methodUnderTest) => ValidatePoolInfo("Before", methodUnderTest);

@@ -144,12 +144,17 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Provides a diagnostic summary of this session pool manager.
         /// </summary>
-        /// <returns></returns>
+        [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
         internal string ToDiagnosticSummary() => string.Join(Environment.NewLine, GetStatistics());
 
+        [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
         internal IReadOnlyList<Statistics> GetStatistics() =>
             _targetedPools.ToArray().Select(tp => tp.Value.GetStatisticsSnapshot()).ToList().AsReadOnly();
 
+        [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
         internal SessionPoolSegmentStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, SessionPoolSegmentKey key)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
@@ -198,6 +203,8 @@ namespace Google.Cloud.Spanner.Data
             /// <summary>
             /// Returns a snapshot of statistics for all session pools managed by this instance.
             /// </summary>
+            [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
             internal Statistics GetStatisticsSnapshot()
             {
                 SessionPool.Statistics sessionPoolStatistics = SessionPoolOrNull?.GetStatisticsSnapshot();

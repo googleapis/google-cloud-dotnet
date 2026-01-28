@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using System;
 using System.Reflection;
 using Xunit.Sdk;
 
@@ -22,6 +23,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
     /// When applied to a class or method, the state of the client, session and transaction pools is summarized
     /// at the start and end of each test is with <see cref="FileLogger"/>.
     /// </summary>
+    [Obsolete("The session pool now relies on multiplexed sessions, which support multiple transactions. " +
+            "There's no need for session pooling and these statistics are meaningless.")]
     public class DumpPoolSummariesBeforeAfterTestAttribute : BeforeAfterTestAttribute
     {
         public override void Before(MethodInfo methodUnderTest) => DumpPoolSummaries(methodUnderTest, "before");

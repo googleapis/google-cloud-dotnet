@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -41,7 +41,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Ditto allow a bit longer than normal for any test assertions to complete; this is particularly
             // relevant in tests that generate a lot of logs.
             // This will increase test times, but reduce flakiness.
-            public FakeScheduler Scheduler { get; } = new FakeScheduler
+            // Also use a starting time that's not in the extremes, to make certain our operations are not out of bounds.
+            public FakeScheduler Scheduler { get; } = new FakeScheduler(new FakeClock(new DateTime(1990, 1, 1, 0, 0, 0)))
             {
                 IdleTimeBeforeAdvancing = TimeSpan.FromMilliseconds(200),
                 PostLoopSettleTime = TimeSpan.FromMilliseconds(200),
@@ -75,6 +76,20 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     Id = ByteString.CopyFromUtf8($"transaction-{count}"),
                     ReadTimestamp = Timestamp.FromDateTime(Clock.GetCurrentDateTimeUtc())
+                };
+            }
+
+            public override async Task<Session> CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)
+            {
+                await CheckFailAllRpcs();
+                await Scheduler.Delay(CreateSessionDelay);
+                int count = count = Interlocked.Increment(ref _sessionCounter);
+                var database = request.DatabaseAsDatabaseName;
+                return new Session
+                {
+                    SessionName = new SessionName(database.ProjectId, database.InstanceId, database.DatabaseId, $"session-{count}"),
+                    Multiplexed = true,
+                    CreateTime = Clock.GetCurrentDateTimeUtc().ToTimestamp()
                 };
             }
 

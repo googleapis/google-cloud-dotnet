@@ -173,7 +173,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var cancellationToken = new CancellationTokenSource(30000).Token;
             await pool.WhenPoolReady(_fixture.DatabaseName, cancellationToken);
 
-            logger.Info($"Prewarm complete. Pool stats: {pool.GetSegmentStatisticsSnapshot(_fixture.DatabaseName)}");
+            logger.Info($"Prewarm complete.");
 
             // Now run the test, with performance logging enabled, but without debug logging.
             // (Debug logging can write a lot to our log file, breaking the test.)

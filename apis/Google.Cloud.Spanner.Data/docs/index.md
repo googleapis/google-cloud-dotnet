@@ -249,12 +249,6 @@ provides a simple method to accomplish this:
 
 {{sample:SpannerConnection.ShutdownSessionPoolAsync}}
 
-If you want to diagnose session management issues,
-`SpannerConnection` provides a method to fetch a snapshot of
-the statistics for the session pool associated with the connection:
-
-{{sample:SpannerConnection.GetSessionPoolSegmentStatistics}}
-
 ## Retrieving an RpcException from a SpannerException
 
 The `RpcException` property of `SpannerException` returns the underlying
