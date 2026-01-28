@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Collections.Generic;
 using System.Reflection;
 using Xunit.Sdk;
@@ -29,8 +28,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private static readonly List<BeforeAfterTestAttribute> s_attributes = new List<BeforeAfterTestAttribute>
         {
-            new ValidatePoolBeforeAfterTestAttribute(),
-            //new DumpPoolSummariesBeforeAfterTestAttribute(),
             new FileLoggerBeforeAfterTestAttribute()
         };
 

@@ -50,7 +50,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool2 = await manager.AcquireSessionPoolAsync(options2);
             Assert.Same(pool1, pool2);
             Assert.Equal(1, factoryCalls);
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.Equal(1, manager.GetStatistics().Count);
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         [Fact]
@@ -71,7 +73,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool2 = await manager.AcquireSessionPoolAsync(options2);
             Assert.NotSame(pool1, pool2);
             Assert.Equal(2, factoryCalls);
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.Equal(2, manager.GetStatistics().Count);
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         [Fact]
@@ -128,23 +132,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             var settings = new SpannerSettings {Logger = new DefaultLogger()};
             var manager = SessionPoolManager.CreateWithSettings(new SessionPoolOptions(), settings);
             Assert.Same(settings.Logger, manager.Logger);
-        }
-
-        [Fact]
-        public async Task ReleaseDecreasesCount()
-        {
-            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
-
-            var options = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
-            var pool = await manager.AcquireSessionPoolAsync(options);
-
-            var stats = manager.GetStatistics().Single();
-            Assert.Equal(1, stats.ActiveConnectionCount);
-
-            manager.Release(pool);
-
-            stats = manager.GetStatistics().Single();
-            Assert.Equal(0, stats.ActiveConnectionCount);
         }
 
         // At one point we thought we'd need different options for production and emulators. We reverted that.

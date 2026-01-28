@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
-using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -43,6 +42,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             backoffMultiplier: 2.0,
             retryFilter: ignored => false,
             RetrySettings.NoJitter);
+
+        private static readonly SessionName s_sessionName = SessionName.FromProjectInstanceDatabaseSession("project", "instance", "database", "session");
+        private static readonly Session s_session = new Session { SessionName = s_sessionName };
+        private static readonly ByteString s_transactionId = ByteString.CopyFromUtf8("transaction");
+        private static readonly TransactionOptions s_readWrite = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
 
         [InlineData(typeof(ReadRequest))]
         [InlineData(typeof(ExecuteSqlRequest))]
@@ -317,7 +321,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             => new ResultStream(
                 client,
                 ReadOrQueryRequest.FromRequest(type == typeof(ExecuteSqlRequest) ? new ExecuteSqlRequest() : new ReadRequest() as IReadOrQueryRequest),
-                PooledSession.FromSessionName(new PooledSessionTests.FakeSessionPool(), SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "sessionId")),
+                ManagedTransaction.FromTransaction(client, s_session, s_transactionId, s_readWrite, null),
                 callSettings ?? s_simpleCallSettings,
                 maxBufferSize,
                 retrySettings ?? s_retrySettings);

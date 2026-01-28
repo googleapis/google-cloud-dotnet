@@ -55,7 +55,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// </summary>
         internal static SpannerClient CreateMockClient(Logger logger)
         {
-            var fakeScheduler = new FakeScheduler();
+            var fakeScheduler = new FakeScheduler(new FakeClock(new DateTime(1990, 1, 1, 0, 0, 0)));
             var settings = SpannerSettings.GetDefault();
             settings.Scheduler = fakeScheduler;
             settings.Clock = fakeScheduler.Clock;
@@ -86,6 +86,25 @@ namespace Google.Cloud.Spanner.V1.Tests
                     }
 
                     return Task.FromResult(response);
+                });
+            return spannerClientMock;
+        }
+
+        internal static SpannerClient SetupCreateSessionAsync(this SpannerClient spannerClientMock)
+        {
+            spannerClientMock.Configure()
+                .CreateSessionAsync(Arg.Is<CreateSessionRequest>(x => x != null), Arg.Any<CallSettings>())
+                .Returns(args =>
+                {
+                    var request = (CreateSessionRequest) args[0];
+                    Session session = new Session
+                    {
+                        SessionName = new SessionName(ProjectId, Instance, Database, Guid.NewGuid().ToString()),
+                        CreateTime = spannerClientMock.GetNowTimestamp(),
+                        Multiplexed = true
+                    };
+
+                    return Task.FromResult(session);
                 });
             return spannerClientMock;
         }
