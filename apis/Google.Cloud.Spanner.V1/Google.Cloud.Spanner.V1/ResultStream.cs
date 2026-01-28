@@ -104,6 +104,7 @@ namespace Google.Cloud.Spanner.V1
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
             var value = await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
+            await _managedTransaction.MaybeUpdatePrecommitToken(value?.PrecommitToken, cancellationToken).ConfigureAwait(false);
             Current = value;
             return value != null;
         }
@@ -147,6 +148,8 @@ namespace Google.Cloud.Spanner.V1
                             commandAsync: ExecuteStreamingAsync,
                             inlinedTransactionExtractor: GetInlinedTransaction,
                             skipTransactionCreation: false,
+                            mutation: null,
+                            transactionTag: _request.UnderlyingRequest.RequestOptions?.TransactionTag,
                             cancellationToken).ConfigureAwait(false);
 
                         void SetCommandTransaction(TransactionSelector transactionSelector) => _request.Transaction = transactionSelector;

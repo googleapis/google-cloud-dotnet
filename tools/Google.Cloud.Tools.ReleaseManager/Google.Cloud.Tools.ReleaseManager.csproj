@@ -21,7 +21,7 @@
     <PackageReference Include="Grpc.Net.Client" />
 
     <!-- Ensure that we've got the default version of GAX available. -->
-    <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="4.13.0" />
 
     <!-- Ensure that Microsoft.Bcl.AsyncInterfaces is available. -->
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />

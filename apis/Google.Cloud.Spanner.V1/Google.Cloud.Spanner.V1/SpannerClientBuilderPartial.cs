@@ -43,27 +43,14 @@ namespace Google.Cloud.Spanner.V1
         {
             // Note: Can't use nameof for affinity keys, as we need the original proto field name.
 
-            // Creating a session isn't bound to a channel, but binds the resulting session to that channel
+            // Explicit beging transaction binds the channel to the returned transaciton ID.
             new MethodConfig
             {
-                Name = { "/google.spanner.v1.Spanner/CreateSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
+                Name = { "/google.spanner.v1.Spanner/BeginTransaction" },
+                Affinity = new AffinityConfig { AffinityKey = "id", Command = Command.Bind }
             },
-
-            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
-            new MethodConfig
-            {
-                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
-                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
-            },
-
-            // Most methods are bound by the session within the request
-            new MethodConfig
-            {
-                // We don't currently use this, but include it for completeness...
-                Name = { "/google.spanner.v1.Spanner/GetSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bound }
-            },
+            // Inlining begin transation for Execute SQL and Read binds the channel to the transaction ID returned
+            // in the response metadata.
             new MethodConfig
             {
                 Name =
@@ -72,21 +59,49 @@ namespace Google.Cloud.Spanner.V1
                     "/google.spanner.v1.Spanner/ExecuteStreamingSql",
                     "/google.spanner.v1.Spanner/Read",
                     "/google.spanner.v1.Spanner/StreamingRead",
-                    "/google.spanner.v1.Spanner/BeginTransaction",
-                    "/google.spanner.v1.Spanner/Commit",
-                    "/google.spanner.v1.Spanner/Rollback",
-                    "/google.spanner.v1.Spanner/PartitionQuery",
-                    "/google.spanner.v1.Spanner/PartitionRead",
                 },
-                Affinity = new AffinityConfig { AffinityKey = "session", Command = Command.Bound }
+                Affinity = new AffinityConfig { AffinityKey = "metadata.transaction.id", Command = Command.Bind }
             },
-
-            // DeleteSession is bound by the session within the request, and removes the key afterwards
+            // Inlining begin transation for Execute Batch DML binds the channel to the transaction ID returned
+            // in the response result_sets metadata.
             new MethodConfig
             {
-                Name = { "/google.spanner.v1.Spanner/DeleteSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Unbind }
-            }
+                Name = { "/google.spanner.v1.Spanner/ExecuteBatchDml" },
+                Affinity = new AffinityConfig { AffinityKey = "result_sets.metadata.transaction.id", Command = Command.Bind }
+            },
+            // Commands are bound by the transaction ID on the transaction selector of the request.
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/ExecuteBatchDml",
+                    "/google.spanner.v1.Spanner/ExecuteSql",
+                    "/google.spanner.v1.Spanner/ExecuteStreamingSql",
+                    "/google.spanner.v1.Spanner/Read",
+                    "/google.spanner.v1.Spanner/StreamingRead",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "transaction.id", Command = Command.Bound }
+            },
+            // Commit and rollback are bound by the transaction_id field of the request.
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/Commit",
+                    "/google.spanner.v1.Spanner/Rollback",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "transaction_id", Command = Command.Bound }
+            },
+            // Commit and rollback unbind.
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/Commit",
+                    "/google.spanner.v1.Spanner/Rollback",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "transaction_id", Command = Command.Unbind }
+            },
         };
 
         /// <summary>
