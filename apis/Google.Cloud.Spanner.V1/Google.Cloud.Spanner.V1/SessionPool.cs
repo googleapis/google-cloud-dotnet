@@ -36,12 +36,9 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed partial class SessionPool
     {
-        private readonly ISessionPool _detachedSessionPool;
         private readonly Logger _logger;
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
-
-        private readonly SemaphoreSlim _batchSessionCreateSemaphore;
 
         /// <summary>
         /// The options governing this session pool.
@@ -53,8 +50,8 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         internal SpannerClient Client { get; }
 
-        private readonly ConcurrentDictionary<SessionPoolSegmentKey, TargetedSessionPool> _targetedPools =
-            new ConcurrentDictionary<SessionPoolSegmentKey, TargetedSessionPool>();
+        private readonly ConcurrentDictionary<SessionPoolSegmentKey, ManagedSession> _managedSessions =
+            new ConcurrentDictionary<SessionPoolSegmentKey, ManagedSession>();
 
         /// <summary>
         /// Creates a session pool for the given client.
@@ -68,68 +65,22 @@ namespace Google.Cloud.Spanner.V1
             _scheduler = client.Settings.Scheduler ?? SystemScheduler.Instance;
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = client.Settings.Logger; // Just to avoid fetching it all the time
-            _detachedSessionPool = new DetachedSessionPool(this);
-            _batchSessionCreateSemaphore = new SemaphoreSlim( (int) Math.Ceiling(
-                Options.MaximumConcurrentSessionCreates / (double) Options.CreateSessionMaximumBatchSize));
-            if (Options.MaintenanceLoopDelay != TimeSpan.Zero)
-            {
-                Task.Run(() => PoolMaintenanceLoop(this));
-            }
-        }
-
-        /// <summary>
-        /// A long-running loop performing pool maintenance. Each iteration runs <see cref="MaintainPool"/>.
-        /// This is a static method to allow the target pool to be garbage collected, at which point the
-        /// method will complete. (This method only retains a week reference to the specified pool.)
-        /// </summary>
-        /// <param name="pool">The pool to maintain.</param>
-        /// <returns>A task which completes when the maintenance loop has finished, due to the session pool being
-        /// garbage collected</returns>
-        private static async Task PoolMaintenanceLoop(SessionPool pool)
-        {
-            // Keep a weak reference so that the pool can be garbage collected and we can stop the
-            // maintenance task.
-            var weakRef = new WeakReference<SessionPool>(pool);
-            // Make sure that even if the pool variable is captured due to compiler implementation details,
-            // it won't prevent garbage collection.
-            pool = null;
-            while (true)
-            {
-                if (!weakRef.TryGetTarget(out var localPool))
-                {
-                    return;
-                }
-                try
-                {
-                    localPool.MaintainPool();
-                }
-                catch (Exception e)
-                {
-                    localPool._logger.Error($"Error running {nameof(SessionPool)} maintenance task", e);
-                }
-                var scheduler = localPool._scheduler;
-                var delay = localPool.Options.MaintenanceLoopDelay;
-                // Allow the pool to be collected while we're waiting.
-                localPool = null;
-                await scheduler.Delay(delay, CancellationToken.None).ConfigureAwait(false);
-            }
-        }
-
-        private void MaintainPool()
-        {
-            var snapshot = _targetedPools.ToArray();
-            foreach (var pool in snapshot.Select(pair => pair.Value))
-            {
-                pool.MaintainPool();
-            }
         }
 
         /// <summary>
         /// Provides a snapshot of statistics for this pool.
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>
-        public Statistics GetStatisticsSnapshot() =>
-            new Statistics(_targetedPools.ToArray().Select(p => p.Value.GetStatisticsSnapshot()).ToList().AsReadOnly());
+        public Statistics GetStatisticsSnapshot() => new Statistics(_managedSessions.ToArray().Select(p =>
+            new SessionPoolSegmentStatistics(
+                p.Key,
+                activeSessionCount: 1,
+                poolCount: 1,
+                inFlightCreationCount: 0,
+                pendingAcquisitionCount: 0,
+                healthy: true,
+                shutdown: false))
+            .ToList().AsReadOnly());
 
         /// <summary>
         /// Provides a snapshot of statistics for the pool associated with the given <see cref="SessionPoolSegmentKey"/>.
@@ -138,7 +89,16 @@ namespace Google.Cloud.Spanner.V1
         public SessionPoolSegmentStatistics GetSegmentStatisticsSnapshot(SessionPoolSegmentKey key)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
-            return _targetedPools.TryGetValue(key, out var pool) ? pool.GetStatisticsSnapshot() : null;
+            return _managedSessions.TryGetValue(key, out var pool) ?
+                new SessionPoolSegmentStatistics(
+                    key,
+                    activeSessionCount: 1,
+                    poolCount: 1,
+                    inFlightCreationCount: 0,
+                    pendingAcquisitionCount: 0,
+                    healthy: true,
+                    shutdown: false) :
+                null;
         }
 
         /// <summary>
@@ -148,7 +108,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>
         public SessionPoolSegmentStatistics GetSegmentStatisticsSnapshot(DatabaseName databaseName) =>
-            _targetedPools.TryGetValue(SessionPoolSegmentKey.Create(databaseName), out var pool) ? pool.GetStatisticsSnapshot() : null;
+            GetSegmentStatisticsSnapshot(SessionPoolSegmentKey.Create(databaseName));
 
         /// <summary>
         /// Asynchronously acquires a session that will handle transaction creation as needed.
@@ -189,15 +149,17 @@ namespace Google.Cloud.Spanner.V1
         public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
             AcquireSessionAsync(key, transactionOptions, singleUseTransaction, detached: false, cancellationToken);
 
-        private Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
+        private async Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
-            GaxPreconditions.CheckArgument(
-                transactionOptions?.ModeCase == ModeOneofCase.ReadOnly || !singleUseTransaction,
-                nameof(singleUseTransaction),
-                "Single use transactions are only supported for read-only transaction.");
-            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
-            return targetedPool.AcquireSessionAsync(transactionOptions, singleUseTransaction, detached, cancellationToken);
+
+            var managedSession = _managedSessions.GetOrAdd(key, CreateManagedSession);
+            var managedTransaction = await CreateManagedTransaction().ConfigureAwait(false);
+
+            return new PooledSession(managedTransaction,detached ? null : CreateManagedTransaction);
+
+            Task<ManagedTransaction> CreateManagedTransaction() =>
+                managedSession.BeginTransactionAsync(transactionOptions, singleUseTransaction, detached, cancellationToken);
         }
 
         /// <summary>
@@ -252,7 +214,10 @@ namespace Google.Cloud.Spanner.V1
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), singleUseTransaction: false, readTimestamp);
+
+            var managedTransaction = ManagedTransaction.FromTransaction(Client, BuildSession(), transactionId, BuildTransactionOptions(), readTimestamp);
+
+            return new PooledSession(managedTransaction, null);
 
             TransactionOptions BuildTransactionOptions() => transactionMode switch
             {
@@ -261,6 +226,10 @@ namespace Google.Cloud.Spanner.V1
                 ModeOneofCase.ReadWrite => new TransactionOptions { ReadWrite = new() },
                 ModeOneofCase.ReadOnly => new TransactionOptions() { ReadOnly = new() },
                 _ => throw new ArgumentException(nameof(transactionMode), $"Unknown {typeof(ModeOneofCase).FullName}: {transactionMode}")
+            };
+
+            Session BuildSession() => new Session {
+                SessionName = sessionName
             };
         }
 
@@ -292,8 +261,8 @@ namespace Google.Cloud.Spanner.V1
         public Task WhenPoolReady(SessionPoolSegmentKey key, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
-            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true)); ;
-            return targetedPool.WhenPoolReady(cancellationToken);
+            var managedSession = _managedSessions.GetOrAdd(key, CreateManagedSession);
+            return managedSession.EnsureFreshAsync(cancellationToken);
         }
 
         /// <summary>
@@ -314,7 +283,6 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Shuts down the session pool of the given SessionPoolSegmentKey.
-        /// Further attempts to acquire sessions will fail immediately.
         /// </summary>
         /// <remarks>
         /// This call will delete all pooled sessions, and wait for all active sessions to be released back to the pool
@@ -325,44 +293,14 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
         public Task ShutdownPoolAsync(SessionPoolSegmentKey key, CancellationToken cancellationToken)
         {
-            // Note that we do potentially create a pool, so that we consistently end the call with a shut-down session pool
-            // associated with the given name.
             GaxPreconditions.CheckNotNull(key, nameof(key));
-            var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: false));
-            return targetedPool.ShutdownPoolAsync(cancellationToken);
+            _ = _managedSessions.TryRemove(key, out var _);
+            return Task.CompletedTask;
         }
 
-        /// <summary>
-        /// Awooga! Async void method! This is almost always a bad idea, but in this case we have "fire and forget" background
-        /// tasks (all created within this method). We want to log errors, but that's all.
-        /// </summary>
-        private async void ConsumeBackgroundTask(Task task, string purpose)
-        {
-            try
-            {
-                await task.ConfigureAwait(false);
-            }
-            catch (Exception e)
-            {
-                _logger.Error($"Error in background session pool task for {purpose}", e);
-            }
-        }
-
-        private void DeleteSessionFireAndForget(PooledSession session)
-        {
-            ConsumeBackgroundTask(DeleteSessionAsync(session), "session deletion");
-        }
-
-        private async Task DeleteSessionAsync(PooledSession session)
-        {
-            try
-            {
-                await Client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
-            }
-            catch (RpcException e)
-            {
-                _logger.Warn("Failed to delete session. Session will be abandoned to garbage collection.", e);
-            }
-        }
+        private ManagedSession CreateManagedSession(SessionPoolSegmentKey key) => new ManagedSession(
+            ManagedSessionOptions.Create(key.DatabaseName, Client)
+                .WithDatabaseRole(key.DatabaseRole)
+                .WithTimeout(Options.Timeout));
     }
 }
