@@ -4826,6 +4826,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ApiRegistry.V1/Google.Cloud.ApiRegistry.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.AuditManager.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/auditmanager/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.AuditManager.V1/Google.Cloud.AuditManager.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
