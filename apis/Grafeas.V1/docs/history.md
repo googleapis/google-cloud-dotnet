@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.13.0, released 2026-01-29
+
+### New features
+
+- A new field `last_vulnerability_update_time` is added to message `.grafeas.v1.DiscoveryOccurrence`
+
 ## Version 3.12.0, released 2026-01-13
 
 ### New features
