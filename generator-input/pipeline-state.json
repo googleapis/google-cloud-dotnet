@@ -4805,7 +4805,7 @@
             "id": "Google.Cloud.ApiRegistry.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "4ba4d6d3b5e81359f508fb19db492b97bbb01fe6",
             "apiPaths": [
                 "google/cloud/apiregistry/v1beta"
@@ -4818,7 +4818,7 @@
             "id": "Google.Cloud.ApiRegistry.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "2ac88973cbafba24e4fb6f31038e0c76174ae704",
             "apiPaths": [
                 "google/cloud/apiregistry/v1"
@@ -4831,7 +4831,7 @@
             "id": "Google.Cloud.AuditManager.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "cfe62b3c5ceb9f81879c61480f26707980534462",
             "apiPaths": [
                 "google/cloud/auditmanager/v1"
