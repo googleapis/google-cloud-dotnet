@@ -1,0 +1,2280 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AuditManager.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.auditmanager.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_EnrollResource_sync",
+      "title": "EnrollResourceRequestObject",
+      "description": "Snippet for EnrollResource",
+      "file": "AuditManagerClient.EnrollResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnrollResource",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.EnrollResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.Enrollment",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "EnrollResource",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.EnrollResource",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_EnrollResource_async",
+      "title": "EnrollResourceRequestObjectAsync",
+      "description": "Snippet for EnrollResourceAsync",
+      "file": "AuditManagerClient.EnrollResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnrollResourceAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.EnrollResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.Enrollment>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "EnrollResource",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.EnrollResource",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_EnrollResource_sync_flattened",
+      "title": "EnrollResource",
+      "description": "Snippet for EnrollResource",
+      "file": "AuditManagerClient.EnrollResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnrollResource",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.EnrollResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AuditManager.V1.EnrollResourceRequest+Types+EligibleDestination>",
+            "name": "destinations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.Enrollment",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "EnrollResource",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.EnrollResource",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_EnrollResource_async_flattened",
+      "title": "EnrollResourceAsync",
+      "description": "Snippet for EnrollResourceAsync",
+      "file": "AuditManagerClient.EnrollResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnrollResourceAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.EnrollResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AuditManager.V1.EnrollResourceRequest+Types+EligibleDestination>",
+            "name": "destinations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.Enrollment>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "EnrollResource",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.EnrollResource",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_sync",
+      "title": "GenerateAuditScopeReportRequestObject",
+      "description": "Snippet for GenerateAuditScopeReport",
+      "file": "AuditManagerClient.GenerateAuditScopeReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditScopeReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditScopeReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditScopeReport",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditScopeReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditScopeReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_async",
+      "title": "GenerateAuditScopeReportRequestObjectAsync",
+      "description": "Snippet for GenerateAuditScopeReportAsync",
+      "file": "AuditManagerClient.GenerateAuditScopeReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditScopeReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditScopeReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditScopeReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditScopeReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditScopeReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_sync_flattened",
+      "title": "GenerateAuditScopeReport",
+      "description": "Snippet for GenerateAuditScopeReport",
+      "file": "AuditManagerClient.GenerateAuditScopeReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditScopeReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditScopeReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceStandard"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest+Types+AuditScopeReportFormat",
+            "name": "reportFormat"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditScopeReport",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditScopeReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditScopeReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_async_flattened",
+      "title": "GenerateAuditScopeReportAsync",
+      "description": "Snippet for GenerateAuditScopeReportAsync",
+      "file": "AuditManagerClient.GenerateAuditScopeReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditScopeReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditScopeReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceStandard"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest+Types+AuditScopeReportFormat",
+            "name": "reportFormat"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditScopeReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditScopeReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditScopeReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditReport_sync",
+      "title": "GenerateAuditReportRequestObject",
+      "description": "Snippet for GenerateAuditReport",
+      "file": "AuditManagerClient.GenerateAuditReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AuditManager.V1.AuditReport, Google.Cloud.AuditManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditReport_async",
+      "title": "GenerateAuditReportRequestObjectAsync",
+      "description": "Snippet for GenerateAuditReportAsync",
+      "file": "AuditManagerClient.GenerateAuditReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AuditManager.V1.AuditReport, Google.Cloud.AuditManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditReport_sync_flattened",
+      "title": "GenerateAuditReport",
+      "description": "Snippet for GenerateAuditReport",
+      "file": "AuditManagerClient.GenerateAuditReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "gcsUri"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceStandard"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditReportRequest+Types+AuditReportFormat",
+            "name": "reportFormat"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AuditManager.V1.AuditReport, Google.Cloud.AuditManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GenerateAuditReport_async_flattened",
+      "title": "GenerateAuditReportAsync",
+      "description": "Snippet for GenerateAuditReportAsync",
+      "file": "AuditManagerClient.GenerateAuditReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAuditReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GenerateAuditReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "gcsUri"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceStandard"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.GenerateAuditReportRequest+Types+AuditReportFormat",
+            "name": "reportFormat"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AuditManager.V1.AuditReport, Google.Cloud.AuditManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GenerateAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_sync",
+      "title": "ListAuditReportsRequestObject",
+      "description": "Snippet for ListAuditReports",
+      "file": "AuditManagerClient.ListAuditReportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReports",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListAuditReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_async",
+      "title": "ListAuditReportsRequestObjectAsync",
+      "description": "Snippet for ListAuditReportsAsync",
+      "file": "AuditManagerClient.ListAuditReportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReportsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListAuditReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_sync_flattened",
+      "title": "ListAuditReports",
+      "description": "Snippet for ListAuditReports",
+      "file": "AuditManagerClient.ListAuditReportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReports",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_async_flattened",
+      "title": "ListAuditReportsAsync",
+      "description": "Snippet for ListAuditReportsAsync",
+      "file": "AuditManagerClient.ListAuditReportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReportsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_sync_flattened_resourceNames1",
+      "title": "ListAuditReportsResourceNames1",
+      "description": "Snippet for ListAuditReports",
+      "file": "AuditManagerClient.ListAuditReportsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReports",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReports",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_async_flattened_resourceNames1",
+      "title": "ListAuditReportsResourceNames1Async",
+      "description": "Snippet for ListAuditReportsAsync",
+      "file": "AuditManagerClient.ListAuditReportsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReportsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_sync_flattened_resourceNames2",
+      "title": "ListAuditReportsResourceNames2",
+      "description": "Snippet for ListAuditReports",
+      "file": "AuditManagerClient.ListAuditReportsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReports",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditReports_async_flattened_resourceNames2",
+      "title": "ListAuditReportsResourceNames2Async",
+      "description": "Snippet for ListAuditReportsAsync",
+      "file": "AuditManagerClient.ListAuditReportsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditReportsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditReportsResponse, Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditReports",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditReports",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_sync",
+      "title": "GetAuditReportRequestObject",
+      "description": "Snippet for GetAuditReport",
+      "file": "AuditManagerClient.GetAuditReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetAuditReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditReport",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_async",
+      "title": "GetAuditReportRequestObjectAsync",
+      "description": "Snippet for GetAuditReportAsync",
+      "file": "AuditManagerClient.GetAuditReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetAuditReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_sync_flattened",
+      "title": "GetAuditReport",
+      "description": "Snippet for GetAuditReport",
+      "file": "AuditManagerClient.GetAuditReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditReport",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_async_flattened",
+      "title": "GetAuditReportAsync",
+      "description": "Snippet for GetAuditReportAsync",
+      "file": "AuditManagerClient.GetAuditReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_sync_flattened_resourceNames",
+      "title": "GetAuditReportResourceNames",
+      "description": "Snippet for GetAuditReport",
+      "file": "AuditManagerClient.GetAuditReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReport",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditReport",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditReport_async_flattened_resourceNames",
+      "title": "GetAuditReportResourceNamesAsync",
+      "description": "Snippet for GetAuditReportAsync",
+      "file": "AuditManagerClient.GetAuditReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditReportAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditReport>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditReport",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditReport",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_sync",
+      "title": "GetResourceEnrollmentStatusRequestObject",
+      "description": "Snippet for GetResourceEnrollmentStatus",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatus",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_async",
+      "title": "GetResourceEnrollmentStatusRequestObjectAsync",
+      "description": "Snippet for GetResourceEnrollmentStatusAsync",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatusAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_sync_flattened",
+      "title": "GetResourceEnrollmentStatus",
+      "description": "Snippet for GetResourceEnrollmentStatus",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatus",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_async_flattened",
+      "title": "GetResourceEnrollmentStatusAsync",
+      "description": "Snippet for GetResourceEnrollmentStatusAsync",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatusAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_sync_flattened_resourceNames",
+      "title": "GetResourceEnrollmentStatusResourceNames",
+      "description": "Snippet for GetResourceEnrollmentStatus",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatus",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ResourceEnrollmentStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetResourceEnrollmentStatus_async_flattened_resourceNames",
+      "title": "GetResourceEnrollmentStatusResourceNamesAsync",
+      "description": "Snippet for GetResourceEnrollmentStatusAsync",
+      "file": "AuditManagerClient.GetResourceEnrollmentStatusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceEnrollmentStatusAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetResourceEnrollmentStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ResourceEnrollmentStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetResourceEnrollmentStatus",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_sync",
+      "title": "ListResourceEnrollmentStatusesRequestObject",
+      "description": "Snippet for ListResourceEnrollmentStatuses",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatuses",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatuses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_async",
+      "title": "ListResourceEnrollmentStatusesRequestObjectAsync",
+      "description": "Snippet for ListResourceEnrollmentStatusesAsync",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatusesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_sync_flattened",
+      "title": "ListResourceEnrollmentStatuses",
+      "description": "Snippet for ListResourceEnrollmentStatuses",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatuses",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatuses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_async_flattened",
+      "title": "ListResourceEnrollmentStatusesAsync",
+      "description": "Snippet for ListResourceEnrollmentStatusesAsync",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatusesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_sync_flattened_resourceNames",
+      "title": "ListResourceEnrollmentStatusesResourceNames",
+      "description": "Snippet for ListResourceEnrollmentStatuses",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatuses",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatuses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListResourceEnrollmentStatuses_async_flattened_resourceNames",
+      "title": "ListResourceEnrollmentStatusesResourceNamesAsync",
+      "description": "Snippet for ListResourceEnrollmentStatusesAsync",
+      "file": "AuditManagerClient.ListResourceEnrollmentStatusesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceEnrollmentStatusesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListResourceEnrollmentStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse, Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListResourceEnrollmentStatuses",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_sync",
+      "title": "ListControlsRequestObject",
+      "description": "Snippet for ListControls",
+      "file": "AuditManagerClient.ListControlsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_async",
+      "title": "ListControlsRequestObjectAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "AuditManagerClient.ListControlsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_sync_flattened",
+      "title": "ListControls",
+      "description": "Snippet for ListControls",
+      "file": "AuditManagerClient.ListControlsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_async_flattened",
+      "title": "ListControlsAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "AuditManagerClient.ListControlsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_sync_flattened_resourceNames",
+      "title": "ListControlsResourceNames",
+      "description": "Snippet for ListControls",
+      "file": "AuditManagerClient.ListControlsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControls",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.StandardName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListControls_async_flattened_resourceNames",
+      "title": "ListControlsResourceNamesAsync",
+      "description": "Snippet for ListControlsAsync",
+      "file": "AuditManagerClient.ListControlsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlsAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.StandardName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListControlsResponse, Google.Cloud.AuditManager.V1.Control>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListControls",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListControls",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
