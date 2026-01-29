@@ -4094,12 +4094,12 @@
         },
         {
             "id": "Google.Cloud.DevTools.ContainerAnalysis",
-            "currentVersion": "3.12.0",
+            "currentVersion": "3.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-13T09:45:58.290750521Z",
+            "releaseTimestamp": "2026-01-29T19:07:38.248500389Z",
             "lastGeneratedCommit": "70da46f8ba5c1e8823690a48cc80b985050c371e",
-            "lastReleasedCommit": "406651201ecf188465807558d7e68f176eba61e6",
+            "lastReleasedCommit": "70da46f8ba5c1e8823690a48cc80b985050c371e",
             "apiPaths": [
                 "google/devtools/containeranalysis/v1",
                 "grafeas/v1"
