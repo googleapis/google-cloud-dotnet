@@ -27,156 +27,162 @@ namespace Google.Cloud.BackupDR.V1 {
             "Cipnb29nbGUvY2xvdWQvYmFja3VwZHIvdjEvYmFja3VwdmF1bHQucHJvdG8S",
             "GGdvb2dsZS5jbG91ZC5iYWNrdXBkci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxobZ29vZ2xlL2FwaS9maWVsZF9pbmZvLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQvYmFja3Vw",
-            "ZHIvdjEvYmFja3VwdmF1bHRfYmEucHJvdG8aM2dvb2dsZS9jbG91ZC9iYWNr",
-            "dXBkci92MS9iYWNrdXB2YXVsdF9jbG91ZHNxbC5wcm90bxovZ29vZ2xlL2Ns",
-            "b3VkL2JhY2t1cGRyL3YxL2JhY2t1cHZhdWx0X2Rpc2sucHJvdG8aLmdvb2ds",
-            "ZS9jbG91ZC9iYWNrdXBkci92MS9iYWNrdXB2YXVsdF9nY2UucHJvdG8aHmdv",
-            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
-            "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIp8PCgtCYWNrdXBWYXVs",
-            "dBIUCgRuYW1lGAEgASgJQgbgQQPgQQgSHQoLZGVzY3JpcHRpb24YAiABKAlC",
-            "A+BBAUgAiAEBEkYKBmxhYmVscxgDIAMoCzIxLmdvb2dsZS5jbG91ZC5iYWNr",
-            "dXBkci52MS5CYWNrdXBWYXVsdC5MYWJlbHNFbnRyeUID4EEBEjkKC2NyZWF0",
-            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "SAGIAQESOQoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQNIAogBARJXCipiYWNrdXBfbWluaW11bV9lbmZvcmNl",
-            "ZF9yZXRlbnRpb25fZHVyYXRpb24YFCABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb25CA+BBAkgDiAEBEnAKHGJhY2t1cF9yZXRlbnRpb25faW5oZXJp",
-            "dGFuY2UYGyABKA4yQC5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3Vw",
-            "VmF1bHQuQmFja3VwUmV0ZW50aW9uSW5oZXJpdGFuY2VCA+BBAUgEiAEBEhsK",
-            "CWRlbGV0YWJsZRgIIAEoCEID4EEDSAWIAQESFgoEZXRhZxgJIAEoCUID4EEB",
-            "SAaIAQESPwoFc3RhdGUYCiABKA4yKy5nb29nbGUuY2xvdWQuYmFja3VwZHIu",
-            "djEuQmFja3VwVmF1bHQuU3RhdGVCA+BBAxI8Cg5lZmZlY3RpdmVfdGltZRgM",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAUgHiAEBEhkK",
-            "DGJhY2t1cF9jb3VudBgRIAEoA0ID4EEDEhwKD3NlcnZpY2VfYWNjb3VudBgS",
-            "IAEoCUID4EEDEh8KEnRvdGFsX3N0b3JlZF9ieXRlcxgTIAEoA0ID4EEDEhgK",
-            "A3VpZBgVIAEoCUIL4EED4ozP1wgCCAESUAoLYW5ub3RhdGlvbnMYFiADKAsy",
-            "Ni5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwVmF1bHQuQW5ub3Rh",
-            "dGlvbnNFbnRyeUID4EEBElgKEmFjY2Vzc19yZXN0cmljdGlvbhgYIAEoDjI3",
-            "Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBWYXVsdC5BY2Nlc3NS",
-            "ZXN0cmljdGlvbkID4EEBElsKEWVuY3J5cHRpb25fY29uZmlnGB0gASgLMjYu",
-            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFZhdWx0LkVuY3J5cHRp",
-            "b25Db25maWdCA+BBAUgIiAEBGmkKEEVuY3J5cHRpb25Db25maWcSRAoMa21z",
-            "X2tleV9uYW1lGAEgASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMu",
-            "Y29tL0NyeXB0b0tleUgAiAEBQg8KDV9rbXNfa2V5X25hbWUaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5v",
-            "dGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
-            "hQEKGkJhY2t1cFJldGVudGlvbkluaGVyaXRhbmNlEiwKKEJBQ0tVUF9SRVRF",
-            "TlRJT05fSU5IRVJJVEFOQ0VfVU5TUEVDSUZJRUQQABIbChdJTkhFUklUX1ZB",
-            "VUxUX1JFVEVOVElPThABEhwKGE1BVENIX0JBQ0tVUF9FWFBJUkVfVElNRRAC",
-            "Il8KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQ",
-            "ARIKCgZBQ1RJVkUQAhIMCghERUxFVElORxADEgkKBUVSUk9SEAQSDAoIVVBE",
-            "QVRJTkcQBSKeAQoRQWNjZXNzUmVzdHJpY3Rpb24SIgoeQUNDRVNTX1JFU1RS",
-            "SUNUSU9OX1VOU1BFQ0lGSUVEEAASEgoOV0lUSElOX1BST0pFQ1QQARIXChNX",
-            "SVRISU5fT1JHQU5JWkFUSU9OEAISEAoMVU5SRVNUUklDVEVEEAMSJgoiV0lU",
-            "SElOX09SR19CVVRfVU5SRVNUUklDVEVEX0ZPUl9CQRAEOogB6kGEAQojYmFj",
-            "a3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSQnByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBWYXVsdHMve2Jh",
-            "Y2t1cHZhdWx0fSoMYmFja3VwVmF1bHRzMgtiYWNrdXBWYXVsdEIOCgxfZGVz",
-            "Y3JpcHRpb25CDgoMX2NyZWF0ZV90aW1lQg4KDF91cGRhdGVfdGltZUItCitf",
-            "YmFja3VwX21pbmltdW1fZW5mb3JjZWRfcmV0ZW50aW9uX2R1cmF0aW9uQh8K",
-            "HV9iYWNrdXBfcmV0ZW50aW9uX2luaGVyaXRhbmNlQgwKCl9kZWxldGFibGVC",
-            "BwoFX2V0YWdCEQoPX2VmZmVjdGl2ZV90aW1lQhQKEl9lbmNyeXB0aW9uX2Nv",
-            "bmZpZyKMCQoKRGF0YVNvdXJjZRIUCgRuYW1lGAEgASgJQgbgQQPgQQgSPgoF",
-            "c3RhdGUYFSABKA4yKi5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuRGF0YVNv",
-            "dXJjZS5TdGF0ZUID4EEDEkUKBmxhYmVscxgEIAMoCzIwLmdvb2dsZS5jbG91",
-            "ZC5iYWNrdXBkci52MS5EYXRhU291cmNlLkxhYmVsc0VudHJ5QgPgQQESOQoL",
-            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQNIAYgBARI5Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBA0gCiAEBEhkKDGJhY2t1cF9jb3VudBgHIAEo",
-            "A0gDiAEBEhEKBGV0YWcYDiABKAlIBIgBARIfChJ0b3RhbF9zdG9yZWRfYnl0",
-            "ZXMYFyABKANIBYgBARJGCgxjb25maWdfc3RhdGUYGCABKA4yKy5nb29nbGUu",
-            "Y2xvdWQuYmFja3VwZHIudjEuQmFja3VwQ29uZmlnU3RhdGVCA+BBAxJLChJi",
-            "YWNrdXBfY29uZmlnX2luZm8YGSABKAsyKi5nb29nbGUuY2xvdWQuYmFja3Vw",
-            "ZHIudjEuQmFja3VwQ29uZmlnSW5mb0ID4EEDElMKGGRhdGFfc291cmNlX2dj",
-            "cF9yZXNvdXJjZRgaIAEoCzIvLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5E",
-            "YXRhU291cmNlR2NwUmVzb3VyY2VIABJyCihkYXRhX3NvdXJjZV9iYWNrdXBf",
-            "YXBwbGlhbmNlX2FwcGxpY2F0aW9uGBsgASgLMj4uZ29vZ2xlLmNsb3VkLmJh",
-            "Y2t1cGRyLnYxLkRhdGFTb3VyY2VCYWNrdXBBcHBsaWFuY2VBcHBsaWNhdGlv",
-            "bkgAEjcKKmJhY2t1cF9ibG9ja2VkX2J5X3ZhdWx0X2FjY2Vzc19yZXN0cmlj",
-            "dGlvbhgcIAEoCEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEiUQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMS",
-            "CQoFRVJST1IQBDqeAepBmgEKImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0Rh",
-            "dGFTb3VyY2USW3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9iYWNrdXBWYXVsdHMve2JhY2t1cHZhdWx0fS9kYXRhU291cmNlcy97",
-            "ZGF0YXNvdXJjZX0qC2RhdGFTb3VyY2VzMgpkYXRhU291cmNlQhEKD3NvdXJj",
-            "ZV9yZXNvdXJjZUIOCgxfY3JlYXRlX3RpbWVCDgoMX3VwZGF0ZV90aW1lQg8K",
-            "DV9iYWNrdXBfY291bnRCBwoFX2V0YWdCFQoTX3RvdGFsX3N0b3JlZF9ieXRl",
-            "cyKxBAoQQmFja3VwQ29uZmlnSW5mbxJaChFsYXN0X2JhY2t1cF9zdGF0ZRgB",
-            "IAEoDjI6Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBDb25maWdJ",
-            "bmZvLkxhc3RCYWNrdXBTdGF0ZUID4EEDElAKJ2xhc3Rfc3VjY2Vzc2Z1bF9i",
-            "YWNrdXBfY29uc2lzdGVuY3lfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIyChFsYXN0X2JhY2t1cF9lcnJvchgDIAEoCzIS",
-            "Lmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSRgoRZ2NwX2JhY2t1cF9jb25maWcY",
-            "BCABKAsyKS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuR2NwQmFja3VwQ29u",
-            "ZmlnSAASXwoeYmFja3VwX2FwcGxpYW5jZV9iYWNrdXBfY29uZmlnGAUgASgL",
-            "MjUuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cEFwcGxpYW5jZUJh",
-            "Y2t1cENvbmZpZ0gAIoABCg9MYXN0QmFja3VwU3RhdGUSIQodTEFTVF9CQUNL",
-            "VVBfU1RBVEVfVU5TUEVDSUZJRUQQABIYChRGSVJTVF9CQUNLVVBfUEVORElO",
-            "RxABEg0KCVNVQ0NFRURFRBACEgoKBkZBSUxFRBADEhUKEVBFUk1JU1NJT05f",
-            "REVOSUVEEARCDwoNYmFja3VwX2NvbmZpZyKkAgoPR2NwQmFja3VwQ29uZmln",
-            "EjwKC2JhY2t1cF9wbGFuGAEgASgJQif6QSQKImJhY2t1cGRyLmdvb2dsZWFw",
-            "aXMuY29tL0JhY2t1cFBsYW4SHwoXYmFja3VwX3BsYW5fZGVzY3JpcHRpb24Y",
-            "AiABKAkSUwoXYmFja3VwX3BsYW5fYXNzb2NpYXRpb24YAyABKAlCMvpBLwot",
-            "YmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxhbkFzc29jaWF0aW9u",
-            "EhkKEWJhY2t1cF9wbGFuX3J1bGVzGAQgAygJEiEKGWJhY2t1cF9wbGFuX3Jl",
-            "dmlzaW9uX25hbWUYBSABKAkSHwoXYmFja3VwX3BsYW5fcmV2aXNpb25faWQY",
-            "BiABKAkiugEKG0JhY2t1cEFwcGxpYW5jZUJhY2t1cENvbmZpZxIdChViYWNr",
-            "dXBfYXBwbGlhbmNlX25hbWUYASABKAkSGwoTYmFja3VwX2FwcGxpYW5jZV9p",
-            "ZBgCIAEoAxIOCgZzbGFfaWQYAyABKAMSGAoQYXBwbGljYXRpb25fbmFtZRgE",
-            "IAEoCRIRCglob3N0X25hbWUYBSABKAkSEAoIc2x0X25hbWUYBiABKAkSEAoI",
-            "c2xwX25hbWUYByABKAkitQMKFURhdGFTb3VyY2VHY3BSZXNvdXJjZRIdChBn",
-            "Y3BfcmVzb3VyY2VuYW1lGAEgASgJQgPgQQMSEAoIbG9jYXRpb24YAiABKAkS",
-            "DAoEdHlwZRgDIAEoCRJvCiZjb21wdXRlX2luc3RhbmNlX2RhdGFzb3VyY2Vf",
-            "cHJvcGVydGllcxgEIAEoCzI9Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5D",
-            "b21wdXRlSW5zdGFuY2VEYXRhU291cmNlUHJvcGVydGllc0gAEncKKGNsb3Vk",
-            "X3NxbF9pbnN0YW5jZV9kYXRhc291cmNlX3Byb3BlcnRpZXMYBSABKAsyPi5n",
-            "b29nbGUuY2xvdWQuYmFja3VwZHIudjEuQ2xvdWRTcWxJbnN0YW5jZURhdGFT",
-            "b3VyY2VQcm9wZXJ0aWVzQgPgQQNIABJYChpkaXNrX2RhdGFzb3VyY2VfcHJv",
-            "cGVydGllcxgHIAEoCzIyLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5EaXNr",
-            "RGF0YVNvdXJjZVByb3BlcnRpZXNIAEIZChdnY3BfcmVzb3VyY2VfcHJvcGVy",
-            "dGllcyK5AQokRGF0YVNvdXJjZUJhY2t1cEFwcGxpYW5jZUFwcGxpY2F0aW9u",
-            "EhgKEGFwcGxpY2F0aW9uX25hbWUYASABKAkSGAoQYmFja3VwX2FwcGxpYW5j",
-            "ZRgCIAEoCRIUCgxhcHBsaWFuY2VfaWQYAyABKAMSDAoEdHlwZRgEIAEoCRIW",
-            "Cg5hcHBsaWNhdGlvbl9pZBgIIAEoAxIQCghob3N0bmFtZRgGIAEoCRIPCgdo",
-            "b3N0X2lkGAcgASgDIikKD1NlcnZpY2VMb2NrSW5mbxIWCglvcGVyYXRpb24Y",
-            "ASABKAlCA+BBAyLGAQoXQmFja3VwQXBwbGlhbmNlTG9ja0luZm8SIAoTYmFj",
-            "a3VwX2FwcGxpYW5jZV9pZBgBIAEoA0ID4EECEiIKFWJhY2t1cF9hcHBsaWFu",
-            "Y2VfbmFtZRgCIAEoCUID4EECEhgKC2xvY2tfcmVhc29uGAUgASgJQgPgQQIS",
-            "EgoIam9iX25hbWUYBiABKAlIABIWCgxiYWNrdXBfaW1hZ2UYByABKAlIABIQ",
-            "CgZzbGFfaWQYCCABKANIAEINCgtsb2NrX3NvdXJjZSL+AQoKQmFja3VwTG9j",
-            "axI4Cg9sb2NrX3VudGlsX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQISVwoaYmFja3VwX2FwcGxpYW5jZV9sb2NrX2luZm8Y",
-            "AyABKAsyMS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwQXBwbGlh",
-            "bmNlTG9ja0luZm9IABJLChFzZXJ2aWNlX2xvY2tfaW5mbxgEIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC5iYWNrdXBkci52MS5TZXJ2aWNlTG9ja0luZm9CA+BBA0gA",
-            "QhAKDkNsaWVudExvY2tJbmZvIpsTCgZCYWNrdXASFAoEbmFtZRgBIAEoCUIG",
-            "4EED4EEIEh0KC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQNIA4gBARI5CgtjcmVh",
-            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "A0gEiAEBEjkKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDSAWIAQESQQoGbGFiZWxzGAUgAygLMiwuZ29vZ2xl",
-            "LmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cC5MYWJlbHNFbnRyeUID4EEBEkkK",
-            "G2VuZm9yY2VkX3JldGVudGlvbl9lbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAUgGiAEBEnAKHGJhY2t1cF9yZXRlbnRp",
-            "b25faW5oZXJpdGFuY2UYHiABKA4yQC5nb29nbGUuY2xvdWQuYmFja3VwZHIu",
-            "djEuQmFja3VwVmF1bHQuQmFja3VwUmV0ZW50aW9uSW5oZXJpdGFuY2VCA+BB",
-            "A0gHiAEBEjkKC2V4cGlyZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEBSAiIAQESPgoQY29uc2lzdGVuY3lfdGltZRgJIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gJiAEBEhYKBGV0",
-            "YWcYCyABKAlCA+BBAUgKiAEBEjoKBXN0YXRlGA8gASgOMiYuZ29vZ2xlLmNs",
-            "b3VkLmJhY2t1cGRyLnYxLkJhY2t1cC5TdGF0ZUID4EEDEkAKDXNlcnZpY2Vf",
-            "bG9ja3MYESADKAsyJC5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3Vw",
-            "TG9ja0ID4EEDEkkKFmJhY2t1cF9hcHBsaWFuY2VfbG9ja3MYEiADKAsyJC5n",
-            "b29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwTG9ja0ID4EEBEmwKImNv",
-            "bXB1dGVfaW5zdGFuY2VfYmFja3VwX3Byb3BlcnRpZXMYEyABKAsyOS5nb29n",
-            "bGUuY2xvdWQuYmFja3VwZHIudjEuQ29tcHV0ZUluc3RhbmNlQmFja3VwUHJv",
-            "cGVydGllc0ID4EEDSAASbwokY2xvdWRfc3FsX2luc3RhbmNlX2JhY2t1cF9w",
-            "cm9wZXJ0aWVzGBogASgLMjouZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkNs",
-            "b3VkU3FsSW5zdGFuY2VCYWNrdXBQcm9wZXJ0aWVzQgPgQQNIABJsCiJiYWNr",
-            "dXBfYXBwbGlhbmNlX2JhY2t1cF9wcm9wZXJ0aWVzGBUgASgLMjkuZ29vZ2xl",
-            "LmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cEFwcGxpYW5jZUJhY2t1cFByb3Bl",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjJnb29nbGUvY2xvdWQvYmFja3Vw",
+            "ZHIvdjEvYmFja3VwdmF1bHRfYWxsb3lkYi5wcm90bxotZ29vZ2xlL2Nsb3Vk",
+            "L2JhY2t1cGRyL3YxL2JhY2t1cHZhdWx0X2JhLnByb3RvGjNnb29nbGUvY2xv",
+            "dWQvYmFja3VwZHIvdjEvYmFja3VwdmF1bHRfY2xvdWRzcWwucHJvdG8aL2dv",
+            "b2dsZS9jbG91ZC9iYWNrdXBkci92MS9iYWNrdXB2YXVsdF9kaXNrLnByb3Rv",
+            "Gi5nb29nbGUvY2xvdWQvYmFja3VwZHIvdjEvYmFja3VwdmF1bHRfZ2NlLnBy",
+            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9w",
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKfDwoLQmFj",
+            "a3VwVmF1bHQSFAoEbmFtZRgBIAEoCUIG4EED4EEIEh0KC2Rlc2NyaXB0aW9u",
+            "GAIgASgJQgPgQQFIAIgBARJGCgZsYWJlbHMYAyADKAsyMS5nb29nbGUuY2xv",
+            "dWQuYmFja3VwZHIudjEuQmFja3VwVmF1bHQuTGFiZWxzRW50cnlCA+BBARI5",
+            "CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBA0gBiAEBEjkKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDSAKIAQESVwoqYmFja3VwX21pbmltdW1f",
+            "ZW5mb3JjZWRfcmV0ZW50aW9uX2R1cmF0aW9uGBQgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQgPgQQJIA4gBARJwChxiYWNrdXBfcmV0ZW50aW9u",
+            "X2luaGVyaXRhbmNlGBsgASgOMkAuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYx",
+            "LkJhY2t1cFZhdWx0LkJhY2t1cFJldGVudGlvbkluaGVyaXRhbmNlQgPgQQFI",
+            "BIgBARIbCglkZWxldGFibGUYCCABKAhCA+BBA0gFiAEBEhYKBGV0YWcYCSAB",
+            "KAlCA+BBAUgGiAEBEj8KBXN0YXRlGAogASgOMisuZ29vZ2xlLmNsb3VkLmJh",
+            "Y2t1cGRyLnYxLkJhY2t1cFZhdWx0LlN0YXRlQgPgQQMSPAoOZWZmZWN0aXZl",
+            "X3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFI",
+            "B4gBARIZCgxiYWNrdXBfY291bnQYESABKANCA+BBAxIcCg9zZXJ2aWNlX2Fj",
+            "Y291bnQYEiABKAlCA+BBAxIfChJ0b3RhbF9zdG9yZWRfYnl0ZXMYEyABKANC",
+            "A+BBAxIYCgN1aWQYFSABKAlCC+BBA+KMz9cIAggBElAKC2Fubm90YXRpb25z",
+            "GBYgAygLMjYuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFZhdWx0",
+            "LkFubm90YXRpb25zRW50cnlCA+BBARJYChJhY2Nlc3NfcmVzdHJpY3Rpb24Y",
+            "GCABKA4yNy5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwVmF1bHQu",
+            "QWNjZXNzUmVzdHJpY3Rpb25CA+BBARJbChFlbmNyeXB0aW9uX2NvbmZpZxgd",
+            "IAEoCzI2Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBWYXVsdC5F",
+            "bmNyeXB0aW9uQ29uZmlnQgPgQQFICIgBARppChBFbmNyeXB0aW9uQ29uZmln",
+            "EkQKDGttc19rZXlfbmFtZRgBIAEoCUIp4EEB+kEjCiFjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9DcnlwdG9LZXlIAIgBAUIPCg1fa21zX2tleV9uYW1lGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEa",
+            "MgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIoUBChpCYWNrdXBSZXRlbnRpb25Jbmhlcml0YW5jZRIsCihCQUNL",
+            "VVBfUkVURU5USU9OX0lOSEVSSVRBTkNFX1VOU1BFQ0lGSUVEEAASGwoXSU5I",
+            "RVJJVF9WQVVMVF9SRVRFTlRJT04QARIcChhNQVRDSF9CQUNLVVBfRVhQSVJF",
+            "X1RJTUUQAiJfCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENS",
+            "RUFUSU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAxIJCgVFUlJPUhAE",
+            "EgwKCFVQREFUSU5HEAUingEKEUFjY2Vzc1Jlc3RyaWN0aW9uEiIKHkFDQ0VT",
+            "U19SRVNUUklDVElPTl9VTlNQRUNJRklFRBAAEhIKDldJVEhJTl9QUk9KRUNU",
+            "EAESFwoTV0lUSElOX09SR0FOSVpBVElPThACEhAKDFVOUkVTVFJJQ1RFRBAD",
+            "EiYKIldJVEhJTl9PUkdfQlVUX1VOUkVTVFJJQ1RFRF9GT1JfQkEQBDqIAepB",
+            "hAEKI2JhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EkJwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmFja3VwVmF1",
+            "bHRzL3tiYWNrdXB2YXVsdH0qDGJhY2t1cFZhdWx0czILYmFja3VwVmF1bHRC",
+            "DgoMX2Rlc2NyaXB0aW9uQg4KDF9jcmVhdGVfdGltZUIOCgxfdXBkYXRlX3Rp",
+            "bWVCLQorX2JhY2t1cF9taW5pbXVtX2VuZm9yY2VkX3JldGVudGlvbl9kdXJh",
+            "dGlvbkIfCh1fYmFja3VwX3JldGVudGlvbl9pbmhlcml0YW5jZUIMCgpfZGVs",
+            "ZXRhYmxlQgcKBV9ldGFnQhEKD19lZmZlY3RpdmVfdGltZUIUChJfZW5jcnlw",
+            "dGlvbl9jb25maWcijAkKCkRhdGFTb3VyY2USFAoEbmFtZRgBIAEoCUIG4EED",
+            "4EEIEj4KBXN0YXRlGBUgASgOMiouZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYx",
+            "LkRhdGFTb3VyY2UuU3RhdGVCA+BBAxJFCgZsYWJlbHMYBCADKAsyMC5nb29n",
+            "bGUuY2xvdWQuYmFja3VwZHIudjEuRGF0YVNvdXJjZS5MYWJlbHNFbnRyeUID",
+            "4EEBEjkKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDSAGIAQESOQoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIAogBARIZCgxiYWNrdXBfY291",
+            "bnQYByABKANIA4gBARIRCgRldGFnGA4gASgJSASIAQESHwoSdG90YWxfc3Rv",
+            "cmVkX2J5dGVzGBcgASgDSAWIAQESRgoMY29uZmlnX3N0YXRlGBggASgOMisu",
+            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cENvbmZpZ1N0YXRlQgPg",
+            "QQMSSwoSYmFja3VwX2NvbmZpZ19pbmZvGBkgASgLMiouZ29vZ2xlLmNsb3Vk",
+            "LmJhY2t1cGRyLnYxLkJhY2t1cENvbmZpZ0luZm9CA+BBAxJTChhkYXRhX3Nv",
+            "dXJjZV9nY3BfcmVzb3VyY2UYGiABKAsyLy5nb29nbGUuY2xvdWQuYmFja3Vw",
+            "ZHIudjEuRGF0YVNvdXJjZUdjcFJlc291cmNlSAAScgooZGF0YV9zb3VyY2Vf",
+            "YmFja3VwX2FwcGxpYW5jZV9hcHBsaWNhdGlvbhgbIAEoCzI+Lmdvb2dsZS5j",
+            "bG91ZC5iYWNrdXBkci52MS5EYXRhU291cmNlQmFja3VwQXBwbGlhbmNlQXBw",
+            "bGljYXRpb25IABI3CipiYWNrdXBfYmxvY2tlZF9ieV92YXVsdF9hY2Nlc3Nf",
+            "cmVzdHJpY3Rpb24YHCABKAhCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlEKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIMCghERUxF",
+            "VElORxADEgkKBUVSUk9SEAQ6ngHqQZoBCiJiYWNrdXBkci5nb29nbGVhcGlz",
+            "LmNvbS9EYXRhU291cmNlEltwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vYmFja3VwVmF1bHRzL3tiYWNrdXB2YXVsdH0vZGF0YVNv",
+            "dXJjZXMve2RhdGFzb3VyY2V9KgtkYXRhU291cmNlczIKZGF0YVNvdXJjZUIR",
+            "Cg9zb3VyY2VfcmVzb3VyY2VCDgoMX2NyZWF0ZV90aW1lQg4KDF91cGRhdGVf",
+            "dGltZUIPCg1fYmFja3VwX2NvdW50QgcKBV9ldGFnQhUKE190b3RhbF9zdG9y",
+            "ZWRfYnl0ZXMisQQKEEJhY2t1cENvbmZpZ0luZm8SWgoRbGFzdF9iYWNrdXBf",
+            "c3RhdGUYASABKA4yOi5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3Vw",
+            "Q29uZmlnSW5mby5MYXN0QmFja3VwU3RhdGVCA+BBAxJQCidsYXN0X3N1Y2Nl",
+            "c3NmdWxfYmFja3VwX2NvbnNpc3RlbmN5X3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMgoRbGFzdF9iYWNrdXBfZXJyb3IY",
+            "AyABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkYKEWdjcF9iYWNrdXBf",
+            "Y29uZmlnGAQgASgLMikuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkdjcEJh",
+            "Y2t1cENvbmZpZ0gAEl8KHmJhY2t1cF9hcHBsaWFuY2VfYmFja3VwX2NvbmZp",
+            "ZxgFIAEoCzI1Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBBcHBs",
+            "aWFuY2VCYWNrdXBDb25maWdIACKAAQoPTGFzdEJhY2t1cFN0YXRlEiEKHUxB",
+            "U1RfQkFDS1VQX1NUQVRFX1VOU1BFQ0lGSUVEEAASGAoURklSU1RfQkFDS1VQ",
+            "X1BFTkRJTkcQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxIVChFQRVJN",
+            "SVNTSU9OX0RFTklFRBAEQg8KDWJhY2t1cF9jb25maWcipAIKD0djcEJhY2t1",
+            "cENvbmZpZxI8CgtiYWNrdXBfcGxhbhgBIAEoCUIn+kEkCiJiYWNrdXBkci5n",
+            "b29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEh8KF2JhY2t1cF9wbGFuX2Rlc2Ny",
+            "aXB0aW9uGAIgASgJElMKF2JhY2t1cF9wbGFuX2Fzc29jaWF0aW9uGAMgASgJ",
+            "QjL6QS8KLWJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3Nv",
+            "Y2lhdGlvbhIZChFiYWNrdXBfcGxhbl9ydWxlcxgEIAMoCRIhChliYWNrdXBf",
+            "cGxhbl9yZXZpc2lvbl9uYW1lGAUgASgJEh8KF2JhY2t1cF9wbGFuX3Jldmlz",
+            "aW9uX2lkGAYgASgJIroBChtCYWNrdXBBcHBsaWFuY2VCYWNrdXBDb25maWcS",
+            "HQoVYmFja3VwX2FwcGxpYW5jZV9uYW1lGAEgASgJEhsKE2JhY2t1cF9hcHBs",
+            "aWFuY2VfaWQYAiABKAMSDgoGc2xhX2lkGAMgASgDEhgKEGFwcGxpY2F0aW9u",
+            "X25hbWUYBCABKAkSEQoJaG9zdF9uYW1lGAUgASgJEhAKCHNsdF9uYW1lGAYg",
+            "ASgJEhAKCHNscF9uYW1lGAcgASgJIqoEChVEYXRhU291cmNlR2NwUmVzb3Vy",
+            "Y2USHQoQZ2NwX3Jlc291cmNlbmFtZRgBIAEoCUID4EEDEhAKCGxvY2F0aW9u",
+            "GAIgASgJEgwKBHR5cGUYAyABKAkSbwomY29tcHV0ZV9pbnN0YW5jZV9kYXRh",
+            "c291cmNlX3Byb3BlcnRpZXMYBCABKAsyPS5nb29nbGUuY2xvdWQuYmFja3Vw",
+            "ZHIudjEuQ29tcHV0ZUluc3RhbmNlRGF0YVNvdXJjZVByb3BlcnRpZXNIABJ3",
+            "CihjbG91ZF9zcWxfaW5zdGFuY2VfZGF0YXNvdXJjZV9wcm9wZXJ0aWVzGAUg",
+            "ASgLMj4uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkNsb3VkU3FsSW5zdGFu",
+            "Y2VEYXRhU291cmNlUHJvcGVydGllc0ID4EEDSAAScwomYWxsb3lfZGJfY2x1",
+            "c3Rlcl9kYXRhc291cmNlX3Byb3BlcnRpZXMYBiABKAsyPC5nb29nbGUuY2xv",
+            "dWQuYmFja3VwZHIudjEuQWxsb3lEQkNsdXN0ZXJEYXRhU291cmNlUHJvcGVy",
+            "dGllc0ID4EEDSAASWAoaZGlza19kYXRhc291cmNlX3Byb3BlcnRpZXMYByAB",
+            "KAsyMi5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuRGlza0RhdGFTb3VyY2VQ",
+            "cm9wZXJ0aWVzSABCGQoXZ2NwX3Jlc291cmNlX3Byb3BlcnRpZXMiuQEKJERh",
+            "dGFTb3VyY2VCYWNrdXBBcHBsaWFuY2VBcHBsaWNhdGlvbhIYChBhcHBsaWNh",
+            "dGlvbl9uYW1lGAEgASgJEhgKEGJhY2t1cF9hcHBsaWFuY2UYAiABKAkSFAoM",
+            "YXBwbGlhbmNlX2lkGAMgASgDEgwKBHR5cGUYBCABKAkSFgoOYXBwbGljYXRp",
+            "b25faWQYCCABKAMSEAoIaG9zdG5hbWUYBiABKAkSDwoHaG9zdF9pZBgHIAEo",
+            "AyIpCg9TZXJ2aWNlTG9ja0luZm8SFgoJb3BlcmF0aW9uGAEgASgJQgPgQQMi",
+            "xgEKF0JhY2t1cEFwcGxpYW5jZUxvY2tJbmZvEiAKE2JhY2t1cF9hcHBsaWFu",
+            "Y2VfaWQYASABKANCA+BBAhIiChViYWNrdXBfYXBwbGlhbmNlX25hbWUYAiAB",
+            "KAlCA+BBAhIYCgtsb2NrX3JlYXNvbhgFIAEoCUID4EECEhIKCGpvYl9uYW1l",
+            "GAYgASgJSAASFgoMYmFja3VwX2ltYWdlGAcgASgJSAASEAoGc2xhX2lkGAgg",
+            "ASgDSABCDQoLbG9ja19zb3VyY2Ui/gEKCkJhY2t1cExvY2sSOAoPbG9ja191",
+            "bnRpbF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EECElcKGmJhY2t1cF9hcHBsaWFuY2VfbG9ja19pbmZvGAMgASgLMjEuZ29v",
+            "Z2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cEFwcGxpYW5jZUxvY2tJbmZv",
+            "SAASSwoRc2VydmljZV9sb2NrX2luZm8YBCABKAsyKS5nb29nbGUuY2xvdWQu",
+            "YmFja3VwZHIudjEuU2VydmljZUxvY2tJbmZvQgPgQQNIAEIQCg5DbGllbnRM",
+            "b2NrSW5mbyKAFAoGQmFja3VwEhQKBG5hbWUYASABKAlCBuBBA+BBCBIdCgtk",
+            "ZXNjcmlwdGlvbhgCIAEoCUID4EEDSAOIAQESOQoLY3JlYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIBIgBARI5Cgt1",
+            "cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBA0gFiAEBEkEKBmxhYmVscxgFIAMoCzIsLmdvb2dsZS5jbG91ZC5iYWNr",
+            "dXBkci52MS5CYWNrdXAuTGFiZWxzRW50cnlCA+BBARJJChtlbmZvcmNlZF9y",
+            "ZXRlbnRpb25fZW5kX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQFIBogBARJwChxiYWNrdXBfcmV0ZW50aW9uX2luaGVyaXRh",
+            "bmNlGB4gASgOMkAuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFZh",
+            "dWx0LkJhY2t1cFJldGVudGlvbkluaGVyaXRhbmNlQgPgQQNIB4gBARI5Cgtl",
+            "eHBpcmVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAUgIiAEBEj4KEGNvbnNpc3RlbmN5X3RpbWUYCSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQNICYgBARIWCgRldGFnGAsgASgJQgPg",
+            "QQFICogBARI6CgVzdGF0ZRgPIAEoDjImLmdvb2dsZS5jbG91ZC5iYWNrdXBk",
+            "ci52MS5CYWNrdXAuU3RhdGVCA+BBAxJACg1zZXJ2aWNlX2xvY2tzGBEgAygL",
+            "MiQuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cExvY2tCA+BBAxJJ",
+            "ChZiYWNrdXBfYXBwbGlhbmNlX2xvY2tzGBIgAygLMiQuZ29vZ2xlLmNsb3Vk",
+            "LmJhY2t1cGRyLnYxLkJhY2t1cExvY2tCA+BBARJsCiJjb21wdXRlX2luc3Rh",
+            "bmNlX2JhY2t1cF9wcm9wZXJ0aWVzGBMgASgLMjkuZ29vZ2xlLmNsb3VkLmJh",
+            "Y2t1cGRyLnYxLkNvbXB1dGVJbnN0YW5jZUJhY2t1cFByb3BlcnRpZXNCA+BB",
+            "A0gAEm8KJGNsb3VkX3NxbF9pbnN0YW5jZV9iYWNrdXBfcHJvcGVydGllcxga",
+            "IAEoCzI6Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5DbG91ZFNxbEluc3Rh",
+            "bmNlQmFja3VwUHJvcGVydGllc0ID4EEDSAASbAoiYmFja3VwX2FwcGxpYW5j",
+            "ZV9iYWNrdXBfcHJvcGVydGllcxgVIAEoCzI5Lmdvb2dsZS5jbG91ZC5iYWNr",
+            "dXBkci52MS5CYWNrdXBBcHBsaWFuY2VCYWNrdXBQcm9wZXJ0aWVzQgPgQQNI",
+            "ABJjChphbGxveV9kYl9iYWNrdXBfcHJvcGVydGllcxgbIAEoCzI4Lmdvb2ds",
+            "ZS5jbG91ZC5iYWNrdXBkci52MS5BbGxveURiQ2x1c3RlckJhY2t1cFByb3Bl",
             "cnRpZXNCA+BBA0gAElUKFmRpc2tfYmFja3VwX3Byb3BlcnRpZXMYHCABKAsy",
             "Li5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuRGlza0JhY2t1cFByb3BlcnRp",
             "ZXNCA+BBA0gAEkUKC2JhY2t1cF90eXBlGBQgASgOMisuZ29vZ2xlLmNsb3Vk",
@@ -325,7 +331,7 @@ namespace Google.Cloud.BackupDR.V1 {
             "bmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25z",
             "L3tjcnlwdG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultBaReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultCloudsqlReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultDiskReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultGceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultAlloydbReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultBaReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultCloudsqlReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultDiskReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultGceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BackupDR.V1.BackupConfigState), typeof(global::Google.Cloud.BackupDR.V1.BackupView), typeof(global::Google.Cloud.BackupDR.V1.BackupVaultView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupVault), global::Google.Cloud.BackupDR.V1.BackupVault.Parser, new[]{ "Name", "Description", "Labels", "CreateTime", "UpdateTime", "BackupMinimumEnforcedRetentionDuration", "BackupRetentionInheritance", "Deletable", "Etag", "State", "EffectiveTime", "BackupCount", "ServiceAccount", "TotalStoredBytes", "Uid", "Annotations", "AccessRestriction", "EncryptionConfig" }, new[]{ "Description", "CreateTime", "UpdateTime", "BackupMinimumEnforcedRetentionDuration", "BackupRetentionInheritance", "Deletable", "Etag", "EffectiveTime", "EncryptionConfig" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupVault.Types.BackupRetentionInheritance), typeof(global::Google.Cloud.BackupDR.V1.BackupVault.Types.State), typeof(global::Google.Cloud.BackupDR.V1.BackupVault.Types.AccessRestriction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupVault.Types.EncryptionConfig), global::Google.Cloud.BackupDR.V1.BackupVault.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, new[]{ "KmsKeyName" }, null, null, null),
             null, null, }),
@@ -333,12 +339,12 @@ namespace Google.Cloud.BackupDR.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupConfigInfo), global::Google.Cloud.BackupDR.V1.BackupConfigInfo.Parser, new[]{ "LastBackupState", "LastSuccessfulBackupConsistencyTime", "LastBackupError", "GcpBackupConfig", "BackupApplianceBackupConfig" }, new[]{ "BackupConfig" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupConfigInfo.Types.LastBackupState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GcpBackupConfig), global::Google.Cloud.BackupDR.V1.GcpBackupConfig.Parser, new[]{ "BackupPlan", "BackupPlanDescription", "BackupPlanAssociation", "BackupPlanRules", "BackupPlanRevisionName", "BackupPlanRevisionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupApplianceBackupConfig), global::Google.Cloud.BackupDR.V1.BackupApplianceBackupConfig.Parser, new[]{ "BackupApplianceName", "BackupApplianceId", "SlaId", "ApplicationName", "HostName", "SltName", "SlpName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceGcpResource), global::Google.Cloud.BackupDR.V1.DataSourceGcpResource.Parser, new[]{ "GcpResourcename", "Location", "Type", "ComputeInstanceDatasourceProperties", "CloudSqlInstanceDatasourceProperties", "DiskDatasourceProperties" }, new[]{ "GcpResourceProperties" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceGcpResource), global::Google.Cloud.BackupDR.V1.DataSourceGcpResource.Parser, new[]{ "GcpResourcename", "Location", "Type", "ComputeInstanceDatasourceProperties", "CloudSqlInstanceDatasourceProperties", "AlloyDbClusterDatasourceProperties", "DiskDatasourceProperties" }, new[]{ "GcpResourceProperties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceBackupApplianceApplication), global::Google.Cloud.BackupDR.V1.DataSourceBackupApplianceApplication.Parser, new[]{ "ApplicationName", "BackupAppliance", "ApplianceId", "Type", "ApplicationId", "Hostname", "HostId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ServiceLockInfo), global::Google.Cloud.BackupDR.V1.ServiceLockInfo.Parser, new[]{ "Operation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupApplianceLockInfo), global::Google.Cloud.BackupDR.V1.BackupApplianceLockInfo.Parser, new[]{ "BackupApplianceId", "BackupApplianceName", "LockReason", "JobName", "BackupImage", "SlaId" }, new[]{ "LockSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupLock), global::Google.Cloud.BackupDR.V1.BackupLock.Parser, new[]{ "LockUntilTime", "BackupApplianceLockInfo", "ServiceLockInfo" }, new[]{ "ClientLockInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.Backup), global::Google.Cloud.BackupDR.V1.Backup.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "EnforcedRetentionEndTime", "BackupRetentionInheritance", "ExpireTime", "ConsistencyTime", "Etag", "State", "ServiceLocks", "BackupApplianceLocks", "ComputeInstanceBackupProperties", "CloudSqlInstanceBackupProperties", "BackupApplianceBackupProperties", "DiskBackupProperties", "BackupType", "GcpBackupPlanInfo", "ResourceSizeBytes", "SatisfiesPzs", "SatisfiesPzi", "GcpResource", "KmsKeyVersions" }, new[]{ "BackupProperties", "PlanInfo", "SourceResource", "Description", "CreateTime", "UpdateTime", "EnforcedRetentionEndTime", "BackupRetentionInheritance", "ExpireTime", "ConsistencyTime", "Etag", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.State), typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.BackupType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.GCPBackupPlanInfo), global::Google.Cloud.BackupDR.V1.Backup.Types.GCPBackupPlanInfo.Parser, new[]{ "BackupPlan", "BackupPlanRuleId", "BackupPlanRevisionName", "BackupPlanRevisionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.Backup), global::Google.Cloud.BackupDR.V1.Backup.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "EnforcedRetentionEndTime", "BackupRetentionInheritance", "ExpireTime", "ConsistencyTime", "Etag", "State", "ServiceLocks", "BackupApplianceLocks", "ComputeInstanceBackupProperties", "CloudSqlInstanceBackupProperties", "BackupApplianceBackupProperties", "AlloyDbBackupProperties", "DiskBackupProperties", "BackupType", "GcpBackupPlanInfo", "ResourceSizeBytes", "SatisfiesPzs", "SatisfiesPzi", "GcpResource", "KmsKeyVersions" }, new[]{ "BackupProperties", "PlanInfo", "SourceResource", "Description", "CreateTime", "UpdateTime", "EnforcedRetentionEndTime", "BackupRetentionInheritance", "ExpireTime", "ConsistencyTime", "Etag", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.State), typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.BackupType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.Backup.Types.GCPBackupPlanInfo), global::Google.Cloud.BackupDR.V1.Backup.Types.GCPBackupPlanInfo.Parser, new[]{ "BackupPlan", "BackupPlanRuleId", "BackupPlanRevisionName", "BackupPlanRevisionId" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CreateBackupVaultRequest), global::Google.Cloud.BackupDR.V1.CreateBackupVaultRequest.Parser, new[]{ "Parent", "BackupVaultId", "BackupVault", "RequestId", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupVaultsRequest), global::Google.Cloud.BackupDR.V1.ListBackupVaultsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "View" }, null, null, null, null),
@@ -3905,6 +3911,9 @@ namespace Google.Cloud.BackupDR.V1 {
         case GcpResourcePropertiesOneofCase.CloudSqlInstanceDatasourceProperties:
           CloudSqlInstanceDatasourceProperties = other.CloudSqlInstanceDatasourceProperties.Clone();
           break;
+        case GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties:
+          AlloyDbClusterDatasourceProperties = other.AlloyDbClusterDatasourceProperties.Clone();
+          break;
         case GcpResourcePropertiesOneofCase.DiskDatasourceProperties:
           DiskDatasourceProperties = other.DiskDatasourceProperties.Clone();
           break;
@@ -3998,6 +4007,22 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "alloy_db_cluster_datasource_properties" field.</summary>
+    public const int AlloyDbClusterDatasourcePropertiesFieldNumber = 6;
+    /// <summary>
+    /// Output only. AlloyDBClusterDataSourceProperties has a subset of AlloyDB
+    /// cluster properties that are useful at the Datasource level.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties AlloyDbClusterDatasourceProperties {
+      get { return gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties ? (global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties) gcpResourceProperties_ : null; }
+      set {
+        gcpResourceProperties_ = value;
+        gcpResourcePropertiesCase_ = value == null ? GcpResourcePropertiesOneofCase.None : GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties;
+      }
+    }
+
     /// <summary>Field number for the "disk_datasource_properties" field.</summary>
     public const int DiskDatasourcePropertiesFieldNumber = 7;
     /// <summary>
@@ -4020,6 +4045,7 @@ namespace Google.Cloud.BackupDR.V1 {
       None = 0,
       ComputeInstanceDatasourceProperties = 4,
       CloudSqlInstanceDatasourceProperties = 5,
+      AlloyDbClusterDatasourceProperties = 6,
       DiskDatasourceProperties = 7,
     }
     private GcpResourcePropertiesOneofCase gcpResourcePropertiesCase_ = GcpResourcePropertiesOneofCase.None;
@@ -4056,6 +4082,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (Type != other.Type) return false;
       if (!object.Equals(ComputeInstanceDatasourceProperties, other.ComputeInstanceDatasourceProperties)) return false;
       if (!object.Equals(CloudSqlInstanceDatasourceProperties, other.CloudSqlInstanceDatasourceProperties)) return false;
+      if (!object.Equals(AlloyDbClusterDatasourceProperties, other.AlloyDbClusterDatasourceProperties)) return false;
       if (!object.Equals(DiskDatasourceProperties, other.DiskDatasourceProperties)) return false;
       if (GcpResourcePropertiesCase != other.GcpResourcePropertiesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4070,6 +4097,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.ComputeInstanceDatasourceProperties) hash ^= ComputeInstanceDatasourceProperties.GetHashCode();
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.CloudSqlInstanceDatasourceProperties) hash ^= CloudSqlInstanceDatasourceProperties.GetHashCode();
+      if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) hash ^= AlloyDbClusterDatasourceProperties.GetHashCode();
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.DiskDatasourceProperties) hash ^= DiskDatasourceProperties.GetHashCode();
       hash ^= (int) gcpResourcePropertiesCase_;
       if (_unknownFields != null) {
@@ -4110,6 +4138,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CloudSqlInstanceDatasourceProperties);
       }
+      if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AlloyDbClusterDatasourceProperties);
+      }
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.DiskDatasourceProperties) {
         output.WriteRawTag(58);
         output.WriteMessage(DiskDatasourceProperties);
@@ -4144,6 +4176,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CloudSqlInstanceDatasourceProperties);
       }
+      if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AlloyDbClusterDatasourceProperties);
+      }
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.DiskDatasourceProperties) {
         output.WriteRawTag(58);
         output.WriteMessage(DiskDatasourceProperties);
@@ -4172,6 +4208,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.CloudSqlInstanceDatasourceProperties) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSqlInstanceDatasourceProperties);
+      }
+      if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AlloyDbClusterDatasourceProperties);
       }
       if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.DiskDatasourceProperties) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiskDatasourceProperties);
@@ -4209,6 +4248,12 @@ namespace Google.Cloud.BackupDR.V1 {
             CloudSqlInstanceDatasourceProperties = new global::Google.Cloud.BackupDR.V1.CloudSqlInstanceDataSourceProperties();
           }
           CloudSqlInstanceDatasourceProperties.MergeFrom(other.CloudSqlInstanceDatasourceProperties);
+          break;
+        case GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties:
+          if (AlloyDbClusterDatasourceProperties == null) {
+            AlloyDbClusterDatasourceProperties = new global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties();
+          }
+          AlloyDbClusterDatasourceProperties.MergeFrom(other.AlloyDbClusterDatasourceProperties);
           break;
         case GcpResourcePropertiesOneofCase.DiskDatasourceProperties:
           if (DiskDatasourceProperties == null) {
@@ -4263,6 +4308,15 @@ namespace Google.Cloud.BackupDR.V1 {
             CloudSqlInstanceDatasourceProperties = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties subBuilder = new global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties();
+            if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) {
+              subBuilder.MergeFrom(AlloyDbClusterDatasourceProperties);
+            }
+            input.ReadMessage(subBuilder);
+            AlloyDbClusterDatasourceProperties = subBuilder;
+            break;
+          }
           case 58: {
             global::Google.Cloud.BackupDR.V1.DiskDataSourceProperties subBuilder = new global::Google.Cloud.BackupDR.V1.DiskDataSourceProperties();
             if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.DiskDatasourceProperties) {
@@ -4315,6 +4369,15 @@ namespace Google.Cloud.BackupDR.V1 {
             }
             input.ReadMessage(subBuilder);
             CloudSqlInstanceDatasourceProperties = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties subBuilder = new global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties();
+            if (gcpResourcePropertiesCase_ == GcpResourcePropertiesOneofCase.AlloyDbClusterDatasourceProperties) {
+              subBuilder.MergeFrom(AlloyDbClusterDatasourceProperties);
+            }
+            input.ReadMessage(subBuilder);
+            AlloyDbClusterDatasourceProperties = subBuilder;
             break;
           }
           case 58: {
@@ -5861,6 +5924,9 @@ namespace Google.Cloud.BackupDR.V1 {
         case BackupPropertiesOneofCase.BackupApplianceBackupProperties:
           BackupApplianceBackupProperties = other.BackupApplianceBackupProperties.Clone();
           break;
+        case BackupPropertiesOneofCase.AlloyDbBackupProperties:
+          AlloyDbBackupProperties = other.AlloyDbBackupProperties.Clone();
+          break;
         case BackupPropertiesOneofCase.DiskBackupProperties:
           DiskBackupProperties = other.DiskBackupProperties.Clone();
           break;
@@ -6176,6 +6242,21 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "alloy_db_backup_properties" field.</summary>
+    public const int AlloyDbBackupPropertiesFieldNumber = 27;
+    /// <summary>
+    /// Output only. AlloyDB specific backup properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties AlloyDbBackupProperties {
+      get { return backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties ? (global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties) backupProperties_ : null; }
+      set {
+        backupProperties_ = value;
+        backupPropertiesCase_ = value == null ? BackupPropertiesOneofCase.None : BackupPropertiesOneofCase.AlloyDbBackupProperties;
+      }
+    }
+
     /// <summary>Field number for the "disk_backup_properties" field.</summary>
     public const int DiskBackupPropertiesFieldNumber = 28;
     /// <summary>
@@ -6334,6 +6415,7 @@ namespace Google.Cloud.BackupDR.V1 {
       ComputeInstanceBackupProperties = 19,
       CloudSqlInstanceBackupProperties = 26,
       BackupApplianceBackupProperties = 21,
+      AlloyDbBackupProperties = 27,
       DiskBackupProperties = 28,
     }
     private BackupPropertiesOneofCase backupPropertiesCase_ = BackupPropertiesOneofCase.None;
@@ -6421,6 +6503,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (!object.Equals(ComputeInstanceBackupProperties, other.ComputeInstanceBackupProperties)) return false;
       if (!object.Equals(CloudSqlInstanceBackupProperties, other.CloudSqlInstanceBackupProperties)) return false;
       if (!object.Equals(BackupApplianceBackupProperties, other.BackupApplianceBackupProperties)) return false;
+      if (!object.Equals(AlloyDbBackupProperties, other.AlloyDbBackupProperties)) return false;
       if (!object.Equals(DiskBackupProperties, other.DiskBackupProperties)) return false;
       if (BackupType != other.BackupType) return false;
       if (!object.Equals(GcpBackupPlanInfo, other.GcpBackupPlanInfo)) return false;
@@ -6455,6 +6538,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.ComputeInstanceBackupProperties) hash ^= ComputeInstanceBackupProperties.GetHashCode();
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.CloudSqlInstanceBackupProperties) hash ^= CloudSqlInstanceBackupProperties.GetHashCode();
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.BackupApplianceBackupProperties) hash ^= BackupApplianceBackupProperties.GetHashCode();
+      if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) hash ^= AlloyDbBackupProperties.GetHashCode();
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.DiskBackupProperties) hash ^= DiskBackupProperties.GetHashCode();
       if (BackupType != global::Google.Cloud.BackupDR.V1.Backup.Types.BackupType.Unspecified) hash ^= BackupType.GetHashCode();
       if (planInfoCase_ == PlanInfoOneofCase.GcpBackupPlanInfo) hash ^= GcpBackupPlanInfo.GetHashCode();
@@ -6555,6 +6639,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(CloudSqlInstanceBackupProperties);
       }
+      if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(AlloyDbBackupProperties);
+      }
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.DiskBackupProperties) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DiskBackupProperties);
@@ -6649,6 +6737,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(CloudSqlInstanceBackupProperties);
       }
+      if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(AlloyDbBackupProperties);
+      }
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.DiskBackupProperties) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DiskBackupProperties);
@@ -6713,6 +6805,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.BackupApplianceBackupProperties) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BackupApplianceBackupProperties);
+      }
+      if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AlloyDbBackupProperties);
       }
       if (backupPropertiesCase_ == BackupPropertiesOneofCase.DiskBackupProperties) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DiskBackupProperties);
@@ -6827,6 +6922,12 @@ namespace Google.Cloud.BackupDR.V1 {
             BackupApplianceBackupProperties = new global::Google.Cloud.BackupDR.V1.BackupApplianceBackupProperties();
           }
           BackupApplianceBackupProperties.MergeFrom(other.BackupApplianceBackupProperties);
+          break;
+        case BackupPropertiesOneofCase.AlloyDbBackupProperties:
+          if (AlloyDbBackupProperties == null) {
+            AlloyDbBackupProperties = new global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties();
+          }
+          AlloyDbBackupProperties.MergeFrom(other.AlloyDbBackupProperties);
           break;
         case BackupPropertiesOneofCase.DiskBackupProperties:
           if (DiskBackupProperties == null) {
@@ -6984,6 +7085,15 @@ namespace Google.Cloud.BackupDR.V1 {
             CloudSqlInstanceBackupProperties = subBuilder;
             break;
           }
+          case 218: {
+            global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties subBuilder = new global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties();
+            if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) {
+              subBuilder.MergeFrom(AlloyDbBackupProperties);
+            }
+            input.ReadMessage(subBuilder);
+            AlloyDbBackupProperties = subBuilder;
+            break;
+          }
           case 226: {
             global::Google.Cloud.BackupDR.V1.DiskBackupProperties subBuilder = new global::Google.Cloud.BackupDR.V1.DiskBackupProperties();
             if (backupPropertiesCase_ == BackupPropertiesOneofCase.DiskBackupProperties) {
@@ -7138,6 +7248,15 @@ namespace Google.Cloud.BackupDR.V1 {
             }
             input.ReadMessage(subBuilder);
             CloudSqlInstanceBackupProperties = subBuilder;
+            break;
+          }
+          case 218: {
+            global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties subBuilder = new global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties();
+            if (backupPropertiesCase_ == BackupPropertiesOneofCase.AlloyDbBackupProperties) {
+              subBuilder.MergeFrom(AlloyDbBackupProperties);
+            }
+            input.ReadMessage(subBuilder);
+            AlloyDbBackupProperties = subBuilder;
             break;
           }
           case 226: {
