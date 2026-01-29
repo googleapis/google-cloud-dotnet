@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.32.0, released 2026-01-29
+
+### New features
+
+- Nack pending messages during shutdown.
+
 ## Version 3.31.0, released 2026-01-13
 
 ### New features
