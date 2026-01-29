@@ -4832,6 +4832,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "cfe62b3c5ceb9f81879c61480f26707980534462",
             "apiPaths": [
                 "google/cloud/auditmanager/v1"
             ],

@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.auditmanager.v1",
+  "libraryPackage": "Google.Cloud.AuditManager.V1",
+  "services": {
+    "AuditManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AuditManagerClient",
+          "rpcs": {
+            "EnrollResource": {
+              "methods": [
+                "EnrollResource",
+                "EnrollResourceAsync"
+              ]
+            },
+            "GenerateAuditReport": {
+              "methods": [
+                "GenerateAuditReport",
+                "GenerateAuditReportAsync"
+              ]
+            },
+            "GenerateAuditScopeReport": {
+              "methods": [
+                "GenerateAuditScopeReport",
+                "GenerateAuditScopeReportAsync"
+              ]
+            },
+            "GetAuditReport": {
+              "methods": [
+                "GetAuditReport",
+                "GetAuditReportAsync"
+              ]
+            },
+            "GetResourceEnrollmentStatus": {
+              "methods": [
+                "GetResourceEnrollmentStatus",
+                "GetResourceEnrollmentStatusAsync"
+              ]
+            },
+            "ListAuditReports": {
+              "methods": [
+                "ListAuditReports",
+                "ListAuditReportsAsync"
+              ]
+            },
+            "ListControls": {
+              "methods": [
+                "ListControls",
+                "ListControlsAsync"
+              ]
+            },
+            "ListResourceEnrollmentStatuses": {
+              "methods": [
+                "ListResourceEnrollmentStatuses",
+                "ListResourceEnrollmentStatusesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
