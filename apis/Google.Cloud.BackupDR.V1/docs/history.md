@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.8.0, released 2026-01-29
+
+### New features
+
+- Add support for AlloyDB backup and restore
+
+### Documentation improvements
+
+- A comment for field `log_retention_days` in message `.google.cloud.backupdr.v1.BackupPlan` is changed
+
 ## Version 2.7.0, released 2026-01-13
 
 ### New features
