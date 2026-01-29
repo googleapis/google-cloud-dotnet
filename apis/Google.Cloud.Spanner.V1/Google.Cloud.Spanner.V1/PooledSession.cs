@@ -18,6 +18,7 @@ using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -578,7 +579,7 @@ namespace Google.Cloud.Spanner.V1
                 skipTransactionCreation: request.Mutations.Count == 0, // If there are only mutations we won't have a transaction but we need one.
                 callSettings?.CancellationToken ?? default);
 
-            void SetCommandTransaction(TransactionSelector transactionSelector) 
+            void SetCommandTransaction(TransactionSelector transactionSelector)
             {
                 switch (transactionSelector.SelectorCase)
                 {
@@ -850,6 +851,44 @@ namespace Google.Cloud.Spanner.V1
             Transaction GetInlinedTransaction(ExecuteBatchDmlResponse response) => response?.ResultSets?.FirstOrDefault()?.Metadata?.Transaction;
         }
 
+        /// <summary>
+        /// Executes a BatchWrite RPC asynchronously, returning a stream of responses.
+        /// </summary>
+        /// <remarks>
+        /// This operation can only be run when the session is configured to use no transaction.
+        /// </remarks>
+        /// <param name="request">The batch write request. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation, with a result of the stream of <see cref="BatchWriteResponse"/> objects.</returns>
+        public Task<AsyncResponseStream<BatchWriteResponse>> BatchWriteAsync(BatchWriteRequest request, CallSettings callSettings)
+        {
+            CheckNotDisposed();
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+
+            request.SessionAsSessionName = SessionName;
+
+            return ExecuteMaybeWithTransactionSelectorAsync(
+                transactionSelectorSetter: SetCommandTransaction,
+                commandAsync: async () =>
+                {
+                    var call = Client.BatchWrite(request, callSettings);
+                    var stream = call.GetResponseStream();
+
+                    // Update refresh time before returning the stream to ensure the session isn't reclaimed prematurely.
+                    UpdateRefreshTime();
+
+                    return stream;
+                },
+                inlinedTransactionExtractor: null,
+                skipTransactionCreation: true,
+                cancellationToken: callSettings?.CancellationToken ?? default);
+
+            void SetCommandTransaction(TransactionSelector transactionSelector) =>
+                    throw new InvalidOperationException($"{nameof(BatchWriteAsync)} BatchWrite does not support explicitly set transactions, it won't be executed within an active transaction."
+                    + $"The sessions most be acquired with {nameof(TransactionOptions.ModeCase)} = {nameof(ModeOneofCase.None)} or {nameof(BatchWriteAsync)} should complete execution before any other commands that"
+                    + "would create a transaction are executed.");
+        }
+
         private void MaybeApplyDirectedReadOptions(IReadOrQueryRequest request)
         {
             if (TransactionMode == ModeOneofCase.ReadOnly // Directed reads apply only to single use or read only transactions. Single use are read only.
@@ -874,6 +913,22 @@ namespace Google.Cloud.Spanner.V1
         {
             await task.WithSessionExpiryChecking(Session).ConfigureAwait(false);
             UpdateRefreshTime();
+        }
+
+        private async IAsyncEnumerable<TResponse> StreamResponsesAndRecordSuccessAsync<TResponse>(AsyncResponseStream<TResponse> responseStream)
+        {
+            try
+            {
+                while (await responseStream.MoveNextAsync().WithSessionExpiryChecking(Session).ConfigureAwait(false))
+                {
+                    UpdateRefreshTime();
+                    yield return responseStream.Current;
+                }
+            }
+            finally
+            {
+                await responseStream.DisposeAsync().ConfigureAwait(false);
+            }
         }
 
         /// <summary>
