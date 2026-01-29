@@ -86,6 +86,7 @@ namespace Google.Cloud.BackupDR.V1
             yield return BackupplanReflection.Descriptor;
             yield return BackupplanassociationReflection.Descriptor;
             yield return BackupvaultReflection.Descriptor;
+            yield return BackupvaultAlloydbReflection.Descriptor;
             yield return BackupvaultBaReflection.Descriptor;
             yield return BackupvaultCloudsqlReflection.Descriptor;
             yield return BackupvaultDiskReflection.Descriptor;
