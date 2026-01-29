@@ -4803,10 +4803,12 @@
         },
         {
             "id": "Google.Cloud.ApiRegistry.V1Beta",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-01-29T19:08:35.458876109Z",
             "lastGeneratedCommit": "4ba4d6d3b5e81359f508fb19db492b97bbb01fe6",
+            "lastReleasedCommit": "4ba4d6d3b5e81359f508fb19db492b97bbb01fe6",
             "apiPaths": [
                 "google/cloud/apiregistry/v1beta"
             ],
