@@ -294,7 +294,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for this request.</returns>
         public ReliableStreamReader ExecuteReadOrQueryStreamReader(PooledSession session, CallSettings callSettings) =>
-            session.ExecuteReadOrQueryStreamReader(this, callSettings);
+            session.ManagedTransaction.ExecuteReadOrQueryStreamReader(this, callSettings);
 
         /// <inheritdoc/>
         public override bool Equals(object o) =>
@@ -367,7 +367,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
         public Task<PartitionResponse> PartitionReadOrQueryAsync(PooledSession session, CallSettings callSettings) =>
-            session.PartitionReadOrQueryAsync(this, callSettings);
+            session.ManagedTransaction.PartitionReadOrQueryAsync(this, callSettings);
 
         /// <inheritdoc/>
         public override bool Equals(object o) =>

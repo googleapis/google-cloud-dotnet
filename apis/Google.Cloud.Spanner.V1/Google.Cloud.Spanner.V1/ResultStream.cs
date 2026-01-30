@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.V1.Internal;
 using Google.Rpc;
 using Grpc.Core;
 using System;
@@ -50,7 +49,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
-        private readonly PooledSession _pooledSession;
+        private readonly ManagedTransaction _managedTransaction;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -66,8 +65,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, PooledSession pooledSession, CallSettings callSettings)
-            : this(client, request, pooledSession, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, ManagedTransaction managedTransaction, CallSettings callSettings)
+            : this(client, request, managedTransaction, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
 
@@ -77,7 +76,7 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(
             SpannerClient client,
             ReadOrQueryRequest request,
-            PooledSession pooledSession,
+            ManagedTransaction managedTransaction,
             CallSettings callSettings,
             int maxBufferSize,
             RetrySettings retrySettings)
@@ -85,7 +84,7 @@ namespace Google.Cloud.Spanner.V1
             _buffer = new LinkedList<PartialResultSet>();
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _request = GaxPreconditions.CheckNotNull(request, nameof(request));
-            _pooledSession = GaxPreconditions.CheckNotNull(pooledSession, nameof(pooledSession));
+            _managedTransaction = GaxPreconditions.CheckNotNull(managedTransaction, nameof(managedTransaction));
             _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
             _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
@@ -142,7 +141,7 @@ namespace Google.Cloud.Spanner.V1
                         // but doing it every time simplifies implementation and adds little overhead, because
                         // once there's a transaction ID, ExecuteMaybeWithTransactionSelectorAsync returns
                         // inmediately.
-                        await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
+                        await _managedTransaction.ExecuteMaybeWithTransactionSelectorAsync(
                             transactionSelectorSetter: SetCommandTransaction,
                             commandAsync: ExecuteStreamingAsync,
                             inlinedTransactionExtractor: GetInlinedTransaction,
@@ -173,7 +172,7 @@ namespace Google.Cloud.Spanner.V1
                         hasNext = await MoveNextAsync().ConfigureAwait(false);
                     }
 
-                    Task<bool> MoveNextAsync() => _grpcCall.ResponseStream.MoveNext(cancellationToken).WithSessionExpiryChecking(_pooledSession.Session);
+                    Task<bool> MoveNextAsync() => _grpcCall.ResponseStream.MoveNext(cancellationToken);
 
                     retryState.Reset();
 
