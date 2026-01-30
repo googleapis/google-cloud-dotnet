@@ -2,3 +2,5 @@ This file only exists to work around an issue in Librarian v0.1.0
 where libraries without source paths couldn't be released.
 
 Do not change this file without consulting jonskeet@.
+
+2026-02-02
