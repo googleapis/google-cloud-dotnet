@@ -73,6 +73,7 @@ namespace GoogleCSharpSnippets
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
                     CxCurrentPage = "",
+                    OutputMultipleUtterances = false,
                     EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
