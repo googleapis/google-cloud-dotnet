@@ -242,7 +242,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         public virtual QuotaAdjusterSettingsManager.QuotaAdjusterSettingsManagerClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -251,7 +251,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -260,7 +260,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -269,7 +269,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             UpdateQuotaAdjusterSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="quotaAdjusterSettings">
         /// Required. The QuotaAdjusterSettings to update.
@@ -287,7 +287,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="quotaAdjusterSettings">
         /// Required. The QuotaAdjusterSettings to update.
@@ -305,7 +305,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="quotaAdjusterSettings">
         /// Required. The QuotaAdjusterSettings to update.
@@ -319,7 +319,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             UpdateQuotaAdjusterSettingsAsync(quotaAdjusterSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -328,7 +328,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -337,7 +337,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -346,7 +346,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             GetQuotaAdjusterSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -361,7 +361,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -376,7 +376,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -388,7 +388,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             GetQuotaAdjusterSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -403,7 +403,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -418,7 +418,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
@@ -488,7 +488,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         partial void Modify_GetQuotaAdjusterSettingsRequest(ref GetQuotaAdjusterSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -500,7 +500,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         }
 
         /// <summary>
-        /// RPC Method for updating QuotaAdjusterSettings based on the request
+        /// Updates the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -512,7 +512,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         }
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -524,7 +524,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         }
 
         /// <summary>
-        /// RPC Method for getting QuotaAdjusterSettings based on the request
+        /// Gets the QuotaAdjusterSettings for the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -102,7 +102,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public abstract partial class QuotaAdjusterSettingsManagerBase
     {
       /// <summary>
-      /// RPC Method for updating QuotaAdjusterSettings based on the request
+      /// Updates the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -114,7 +114,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       }
 
       /// <summary>
-      /// RPC Method for getting QuotaAdjusterSettings based on the request
+      /// Gets the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +155,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       }
 
       /// <summary>
-      /// RPC Method for updating QuotaAdjusterSettings based on the request
+      /// Updates the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -168,7 +168,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return UpdateQuotaAdjusterSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RPC Method for updating QuotaAdjusterSettings based on the request
+      /// Updates the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -179,7 +179,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateQuotaAdjusterSettings, null, options, request);
       }
       /// <summary>
-      /// RPC Method for updating QuotaAdjusterSettings based on the request
+      /// Updates the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -192,7 +192,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return UpdateQuotaAdjusterSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RPC Method for updating QuotaAdjusterSettings based on the request
+      /// Updates the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -203,7 +203,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateQuotaAdjusterSettings, null, options, request);
       }
       /// <summary>
-      /// RPC Method for getting QuotaAdjusterSettings based on the request
+      /// Gets the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -216,7 +216,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return GetQuotaAdjusterSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RPC Method for getting QuotaAdjusterSettings based on the request
+      /// Gets the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -227,7 +227,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetQuotaAdjusterSettings, null, options, request);
       }
       /// <summary>
-      /// RPC Method for getting QuotaAdjusterSettings based on the request
+      /// Gets the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -240,7 +240,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         return GetQuotaAdjusterSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// RPC Method for getting QuotaAdjusterSettings based on the request
+      /// Gets the QuotaAdjusterSettings for the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
