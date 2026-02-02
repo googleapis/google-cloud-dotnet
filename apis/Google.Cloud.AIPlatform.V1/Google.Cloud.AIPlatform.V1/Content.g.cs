@@ -33,7 +33,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
             "Y3QucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8iUgoHQ29udGVudBIR",
             "CgRyb2xlGAEgASgJQgPgQQESNAoFcGFydHMYAiADKAsyIC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5QYXJ0QgPgQQIi6AQKBFBhcnQSEwoEdGV4dBgB",
+            "dWQuYWlwbGF0Zm9ybS52MS5QYXJ0QgPgQQIiuQcKBFBhcnQSEwoEdGV4dBgB",
             "IAEoCUID4EEBSAASPAoLaW5saW5lX2RhdGEYAiABKAsyIC5nb29nbGUuY2xv",
             "dWQuYWlwbGF0Zm9ybS52MS5CbG9iQgPgQQFIABI+CglmaWxlX2RhdGEYAyAB",
             "KAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GaWxlRGF0YUID4EEB",
@@ -46,222 +46,257 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LmNsb3VkLmFpcGxhdGZvcm0udjEuQ29kZUV4ZWN1dGlvblJlc3VsdEID4EEB",
             "SAASFAoHdGhvdWdodBgKIAEoCEID4EEBEh4KEXRob3VnaHRfc2lnbmF0dXJl",
             "GAsgASgMQgPgQQESSAoOdmlkZW9fbWV0YWRhdGEYBCABKAsyKS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5WaWRlb01ldGFkYXRhQgPgQQFIAUIGCgRk",
-            "YXRhQgoKCG1ldGFkYXRhIjEKBEJsb2ISFgoJbWltZV90eXBlGAEgASgJQgPg",
-            "QQISEQoEZGF0YRgCIAEoDEID4EECIjkKCEZpbGVEYXRhEhYKCW1pbWVfdHlw",
-            "ZRgBIAEoCUID4EECEhUKCGZpbGVfdXJpGAIgASgJQgPgQQIieQoNVmlkZW9N",
-            "ZXRhZGF0YRI0CgxzdGFydF9vZmZzZXQYASABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb25CA+BBARIyCgplbmRfb2Zmc2V0GAIgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQEiPQoTUHJlYnVpbHRWb2ljZUNvbmZp",
-            "ZxIXCgp2b2ljZV9uYW1lGAEgASgJSACIAQFCDQoLX3ZvaWNlX25hbWUiUAoV",
-            "UmVwbGljYXRlZFZvaWNlQ29uZmlnEhYKCW1pbWVfdHlwZRgBIAEoCUID4EEB",
-            "Eh8KEnZvaWNlX3NhbXBsZV9hdWRpbxgCIAEoDEID4EEBIsoBCgtWb2ljZUNv",
-            "bmZpZxJQChVwcmVidWlsdF92b2ljZV9jb25maWcYASABKAsyLy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5QcmVidWlsdFZvaWNlQ29uZmlnSAASWQoX",
-            "cmVwbGljYXRlZF92b2ljZV9jb25maWcYAyABKAsyMS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5SZXBsaWNhdGVkVm9pY2VDb25maWdCA+BBAUgAQg4K",
-            "DHZvaWNlX2NvbmZpZyJuChJTcGVha2VyVm9pY2VDb25maWcSFAoHc3BlYWtl",
-            "chgBIAEoCUID4EECEkIKDHZvaWNlX2NvbmZpZxgCIAEoCzInLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlZvaWNlQ29uZmlnQgPgQQIibQoXTXVsdGlT",
-            "cGVha2VyVm9pY2VDb25maWcSUgoVc3BlYWtlcl92b2ljZV9jb25maWdzGAIg",
-            "AygLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlYWtlclZvaWNl",
-            "Q29uZmlnQgPgQQIiwgEKDFNwZWVjaENvbmZpZxI9Cgx2b2ljZV9jb25maWcY",
-            "ASABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Wb2ljZUNvbmZp",
-            "ZxIaCg1sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQESVwoabXVsdGlfc3BlYWtl",
-            "cl92b2ljZV9jb25maWcYAyABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5NdWx0aVNwZWFrZXJWb2ljZUNvbmZpZyI+CgtJbWFnZUNvbmZpZxIe",
-            "Cgxhc3BlY3RfcmF0aW8YAiABKAlCA+BBAUgAiAEBQg8KDV9hc3BlY3RfcmF0",
-            "aW8itg4KEEdlbmVyYXRpb25Db25maWcSHQoLdGVtcGVyYXR1cmUYASABKAJC",
-            "A+BBAUgAiAEBEhcKBXRvcF9wGAIgASgCQgPgQQFIAYgBARIXCgV0b3BfaxgD",
-            "IAEoAkID4EEBSAKIAQESIQoPY2FuZGlkYXRlX2NvdW50GAQgASgFQgPgQQFI",
-            "A4gBARIjChFtYXhfb3V0cHV0X3Rva2VucxgFIAEoBUID4EEBSASIAQESGwoO",
-            "c3RvcF9zZXF1ZW5jZXMYBiADKAlCA+BBARIjChFyZXNwb25zZV9sb2dwcm9i",
-            "cxgSIAEoCEID4EEBSAWIAQESGgoIbG9ncHJvYnMYByABKAVCA+BBAUgGiAEB",
-            "EiIKEHByZXNlbmNlX3BlbmFsdHkYCCABKAJCA+BBAUgHiAEBEiMKEWZyZXF1",
-            "ZW5jeV9wZW5hbHR5GAkgASgCQgPgQQFICIgBARIWCgRzZWVkGAwgASgFQgPg",
-            "QQFICYgBARIfChJyZXNwb25zZV9taW1lX3R5cGUYDSABKAlCA+BBARJMCg9y",
-            "ZXNwb25zZV9zY2hlbWEYECABKAsyKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5PcGVuQXBpU2NoZW1hQgPgQQFICogBARI+ChRyZXNwb25zZV9qc29u",
-            "X3NjaGVtYRgcIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EEBSAuI",
-            "AQESXAoOcm91dGluZ19jb25maWcYESABKAsyOi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5HZW5lcmF0aW9uQ29uZmlnLlJvdXRpbmdDb25maWdCA+BB",
-            "AUgMiAEBEkkKDXNwZWVjaF9jb25maWcYFyABKAsyKC5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5TcGVlY2hDb25maWdCA+BBAUgNiAEBElkKD3RoaW5r",
-            "aW5nX2NvbmZpZxgZIAEoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkdlbmVyYXRpb25Db25maWcuVGhpbmtpbmdDb25maWdCA+BBARJHCgxpbWFn",
-            "ZV9jb25maWcYHiABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
-            "bWFnZUNvbmZpZ0ID4EEBSA6IAQEawgQKDVJvdXRpbmdDb25maWcSXwoJYXV0",
-            "b19tb2RlGAEgASgLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Vu",
-            "ZXJhdGlvbkNvbmZpZy5Sb3V0aW5nQ29uZmlnLkF1dG9Sb3V0aW5nTW9kZUgA",
-            "EmMKC21hbnVhbF9tb2RlGAIgASgLMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuR2VuZXJhdGlvbkNvbmZpZy5Sb3V0aW5nQ29uZmlnLk1hbnVhbFJv",
-            "dXRpbmdNb2RlSAAamwIKD0F1dG9Sb3V0aW5nTW9kZRKIAQoYbW9kZWxfcm91",
-            "dGluZ19wcmVmZXJlbmNlGAEgASgOMmEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuR2VuZXJhdGlvbkNvbmZpZy5Sb3V0aW5nQ29uZmlnLkF1dG9Sb3V0",
-            "aW5nTW9kZS5Nb2RlbFJvdXRpbmdQcmVmZXJlbmNlSACIAQEiYAoWTW9kZWxS",
-            "b3V0aW5nUHJlZmVyZW5jZRILCgdVTktOT1dOEAASFgoSUFJJT1JJVElaRV9R",
-            "VUFMSVRZEAESDAoIQkFMQU5DRUQQAhITCg9QUklPUklUSVpFX0NPU1QQA0Ib",
-            "ChlfbW9kZWxfcm91dGluZ19wcmVmZXJlbmNlGjsKEU1hbnVhbFJvdXRpbmdN",
-            "b2RlEhcKCm1vZGVsX25hbWUYASABKAlIAIgBAUINCgtfbW9kZWxfbmFtZUIQ",
-            "Cg5yb3V0aW5nX2NvbmZpZxqAAQoOVGhpbmtpbmdDb25maWcSIgoQaW5jbHVk",
-            "ZV90aG91Z2h0cxgBIAEoCEID4EEBSACIAQESIQoPdGhpbmtpbmdfYnVkZ2V0",
-            "GAMgASgFQgPgQQFIAYgBAUITChFfaW5jbHVkZV90aG91Z2h0c0ISChBfdGhp",
-            "bmtpbmdfYnVkZ2V0Qg4KDF90ZW1wZXJhdHVyZUIICgZfdG9wX3BCCAoGX3Rv",
-            "cF9rQhIKEF9jYW5kaWRhdGVfY291bnRCFAoSX21heF9vdXRwdXRfdG9rZW5z",
-            "QhQKEl9yZXNwb25zZV9sb2dwcm9ic0ILCglfbG9ncHJvYnNCEwoRX3ByZXNl",
-            "bmNlX3BlbmFsdHlCFAoSX2ZyZXF1ZW5jeV9wZW5hbHR5QgcKBV9zZWVkQhIK",
-            "EF9yZXNwb25zZV9zY2hlbWFCFwoVX3Jlc3BvbnNlX2pzb25fc2NoZW1hQhEK",
-            "D19yb3V0aW5nX2NvbmZpZ0IQCg5fc3BlZWNoX2NvbmZpZ0IPCg1faW1hZ2Vf",
-            "Y29uZmlnIusDCg1TYWZldHlTZXR0aW5nEj8KCGNhdGVnb3J5GAEgASgOMigu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSGFybUNhdGVnb3J5QgPgQQIS",
-            "VAoJdGhyZXNob2xkGAIgASgOMjwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU2FmZXR5U2V0dGluZy5IYXJtQmxvY2tUaHJlc2hvbGRCA+BBAhJOCgZt",
-            "ZXRob2QYBCABKA4yOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TYWZl",
-            "dHlTZXR0aW5nLkhhcm1CbG9ja01ldGhvZEID4EEBIp0BChJIYXJtQmxvY2tU",
-            "aHJlc2hvbGQSJAogSEFSTV9CTE9DS19USFJFU0hPTERfVU5TUEVDSUZJRUQQ",
-            "ABIXChNCTE9DS19MT1dfQU5EX0FCT1ZFEAESGgoWQkxPQ0tfTUVESVVNX0FO",
-            "RF9BQk9WRRACEhMKD0JMT0NLX09OTFlfSElHSBADEg4KCkJMT0NLX05PTkUQ",
-            "BBIHCgNPRkYQBSJTCg9IYXJtQmxvY2tNZXRob2QSIQodSEFSTV9CTE9DS19N",
-            "RVRIT0RfVU5TUEVDSUZJRUQQABIMCghTRVZFUklUWRABEg8KC1BST0JBQklM",
-            "SVRZEAIivwQKDFNhZmV0eVJhdGluZxI/CghjYXRlZ29yeRgBIAEoDjIoLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkhhcm1DYXRlZ29yeUID4EEDElIK",
-            "C3Byb2JhYmlsaXR5GAIgASgOMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU2FmZXR5UmF0aW5nLkhhcm1Qcm9iYWJpbGl0eUID4EEDEh4KEXByb2Jh",
-            "YmlsaXR5X3Njb3JlGAUgASgCQgPgQQMSTAoIc2V2ZXJpdHkYBiABKA4yNS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TYWZldHlSYXRpbmcuSGFybVNl",
-            "dmVyaXR5QgPgQQMSGwoOc2V2ZXJpdHlfc2NvcmUYByABKAJCA+BBAxIUCgdi",
-            "bG9ja2VkGAMgASgIQgPgQQMiYgoPSGFybVByb2JhYmlsaXR5EiAKHEhBUk1f",
-            "UFJPQkFCSUxJVFlfVU5TUEVDSUZJRUQQABIOCgpORUdMSUdJQkxFEAESBwoD",
-            "TE9XEAISCgoGTUVESVVNEAMSCAoESElHSBAEIpQBCgxIYXJtU2V2ZXJpdHkS",
-            "HQoZSEFSTV9TRVZFUklUWV9VTlNQRUNJRklFRBAAEhwKGEhBUk1fU0VWRVJJ",
-            "VFlfTkVHTElHSUJMRRABEhUKEUhBUk1fU0VWRVJJVFlfTE9XEAISGAoUSEFS",
-            "TV9TRVZFUklUWV9NRURJVU0QAxIWChJIQVJNX1NFVkVSSVRZX0hJR0gQBCJQ",
-            "ChBDaXRhdGlvbk1ldGFkYXRhEjwKCWNpdGF0aW9ucxgBIAMoCzIkLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNpdGF0aW9uQgPgQQMiqgEKCENpdGF0",
-            "aW9uEhgKC3N0YXJ0X2luZGV4GAEgASgFQgPgQQMSFgoJZW5kX2luZGV4GAIg",
-            "ASgFQgPgQQMSEAoDdXJpGAMgASgJQgPgQQMSEgoFdGl0bGUYBCABKAlCA+BB",
-            "AxIUCgdsaWNlbnNlGAUgASgJQgPgQQMSMAoQcHVibGljYXRpb25fZGF0ZRgG",
-            "IAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BBAyLgBgoJQ2FuZGlkYXRlEhIK",
-            "BWluZGV4GAEgASgFQgPgQQMSOQoHY29udGVudBgCIAEoCzIjLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkNvbnRlbnRCA+BBAxISCgVzY29yZRgIIAEo",
-            "AUID4EEDEhkKDGF2Z19sb2dwcm9icxgJIAEoAUID4EEDEkgKD2xvZ3Byb2Jz",
-            "X3Jlc3VsdBgKIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxv",
-            "Z3Byb2JzUmVzdWx0QgPgQQMSTgoNZmluaXNoX3JlYXNvbhgDIAEoDjIyLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNhbmRpZGF0ZS5GaW5pc2hSZWFz",
-            "b25CA+BBAxJFCg5zYWZldHlfcmF0aW5ncxgEIAMoCzIoLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlNhZmV0eVJhdGluZ0ID4EEDEiAKDmZpbmlzaF9t",
-            "ZXNzYWdlGAUgASgJQgPgQQNIAIgBARJMChFjaXRhdGlvbl9tZXRhZGF0YRgG",
-            "IAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNpdGF0aW9uTWV0",
-            "YWRhdGFCA+BBAxJOChJncm91bmRpbmdfbWV0YWRhdGEYByABKAsyLS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdNZXRhZGF0YUID4EED",
-            "ElEKFHVybF9jb250ZXh0X21ldGFkYXRhGAsgASgLMi4uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuVXJsQ29udGV4dE1ldGFkYXRhQgPgQQMizQEKDEZp",
-            "bmlzaFJlYXNvbhIdChlGSU5JU0hfUkVBU09OX1VOU1BFQ0lGSUVEEAASCAoE",
-            "U1RPUBABEg4KCk1BWF9UT0tFTlMQAhIKCgZTQUZFVFkQAxIOCgpSRUNJVEFU",
-            "SU9OEAQSCQoFT1RIRVIQBRINCglCTE9DS0xJU1QQBhIWChJQUk9ISUJJVEVE",
-            "X0NPTlRFTlQQBxIICgRTUElJEAgSGwoXTUFMRk9STUVEX0ZVTkNUSU9OX0NB",
-            "TEwQCRIPCgtNT0RFTF9BUk1PUhAKQhEKD19maW5pc2hfbWVzc2FnZSJYChJV",
-            "cmxDb250ZXh0TWV0YWRhdGESQgoMdXJsX21ldGFkYXRhGAEgAygLMicuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXJsTWV0YWRhdGFCA+BBAyL8AQoL",
-            "VXJsTWV0YWRhdGESFQoNcmV0cmlldmVkX3VybBgBIAEoCRJYChR1cmxfcmV0",
-            "cmlldmFsX3N0YXR1cxgCIAEoDjI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlVybE1ldGFkYXRhLlVybFJldHJpZXZhbFN0YXR1cyJ8ChJVcmxSZXRy",
-            "aWV2YWxTdGF0dXMSJAogVVJMX1JFVFJJRVZBTF9TVEFUVVNfVU5TUEVDSUZJ",
-            "RUQQABIgChxVUkxfUkVUUklFVkFMX1NUQVRVU19TVUNDRVNTEAESHgoaVVJM",
-            "X1JFVFJJRVZBTF9TVEFUVVNfRVJST1IQAiKPAwoOTG9ncHJvYnNSZXN1bHQS",
-            "UAoOdG9wX2NhbmRpZGF0ZXMYASADKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5Mb2dwcm9ic1Jlc3VsdC5Ub3BDYW5kaWRhdGVzEk8KEWNob3Nl",
-            "bl9jYW5kaWRhdGVzGAIgAygLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTG9ncHJvYnNSZXN1bHQuQ2FuZGlkYXRlGn8KCUNhbmRpZGF0ZRISCgV0",
-            "b2tlbhgBIAEoCUgAiAEBEhUKCHRva2VuX2lkGAMgASgFSAGIAQESHAoPbG9n",
-            "X3Byb2JhYmlsaXR5GAIgASgCSAKIAQFCCAoGX3Rva2VuQgsKCV90b2tlbl9p",
-            "ZEISChBfbG9nX3Byb2JhYmlsaXR5GlkKDVRvcENhbmRpZGF0ZXMSSAoKY2Fu",
-            "ZGlkYXRlcxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxv",
-            "Z3Byb2JzUmVzdWx0LkNhbmRpZGF0ZSJnCgdTZWdtZW50EhcKCnBhcnRfaW5k",
-            "ZXgYASABKAVCA+BBAxIYCgtzdGFydF9pbmRleBgCIAEoBUID4EEDEhYKCWVu",
-            "ZF9pbmRleBgDIAEoBUID4EEDEhEKBHRleHQYBCABKAlCA+BBAyLSBwoOR3Jv",
-            "dW5kaW5nQ2h1bmsSPQoDd2ViGAEgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuR3JvdW5kaW5nQ2h1bmsuV2ViSAASWAoRcmV0cmlldmVkX2Nv",
-            "bnRleHQYAiABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91",
-            "bmRpbmdDaHVuay5SZXRyaWV2ZWRDb250ZXh0SAASPwoEbWFwcxgDIAEoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ0NodW5rLk1h",
-            "cHNIABo9CgNXZWISEAoDdXJpGAEgASgJSACIAQESEgoFdGl0bGUYAiABKAlI",
-            "AYgBAUIGCgRfdXJpQggKBl90aXRsZRrnAQoQUmV0cmlldmVkQ29udGV4dBI5",
-            "CglyYWdfY2h1bmsYBCABKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5SYWdDaHVua0gAEhAKA3VyaRgBIAEoCUgBiAEBEhIKBXRpdGxlGAIgASgJ",
-            "SAKIAQESEQoEdGV4dBgDIAEoCUgDiAEBEh8KDWRvY3VtZW50X25hbWUYBiAB",
-            "KAlCA+BBA0gEiAEBQhEKD2NvbnRleHRfZGV0YWlsc0IGCgRfdXJpQggKBl90",
-            "aXRsZUIHCgVfdGV4dEIQCg5fZG9jdW1lbnRfbmFtZRquAwoETWFwcxIQCgN1",
-            "cmkYASABKAlIAIgBARISCgV0aXRsZRgCIAEoCUgBiAEBEhEKBHRleHQYAyAB",
-            "KAlIAogBARIVCghwbGFjZV9pZBgEIAEoCUgDiAEBEmAKFHBsYWNlX2Fuc3dl",
-            "cl9zb3VyY2VzGAUgASgLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "R3JvdW5kaW5nQ2h1bmsuTWFwcy5QbGFjZUFuc3dlclNvdXJjZXMaywEKElBs",
-            "YWNlQW5zd2VyU291cmNlcxJpCg9yZXZpZXdfc25pcHBldHMYASADKAsyUC5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdDaHVuay5NYXBz",
-            "LlBsYWNlQW5zd2VyU291cmNlcy5SZXZpZXdTbmlwcGV0GkoKDVJldmlld1Nu",
-            "aXBwZXQSEQoJcmV2aWV3X2lkGAEgASgJEhcKD2dvb2dsZV9tYXBzX3VyaRgC",
-            "IAEoCRINCgV0aXRsZRgDIAEoCUIGCgRfdXJpQggKBl90aXRsZUIHCgVfdGV4",
-            "dEILCglfcGxhY2VfaWRCDAoKY2h1bmtfdHlwZSKVAQoQR3JvdW5kaW5nU3Vw",
-            "cG9ydBI5CgdzZWdtZW50GAEgASgLMiMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuU2VnbWVudEgAiAEBEh8KF2dyb3VuZGluZ19jaHVua19pbmRpY2Vz",
-            "GAIgAygFEhkKEWNvbmZpZGVuY2Vfc2NvcmVzGAMgAygCQgoKCF9zZWdtZW50",
-            "IqAFChFHcm91bmRpbmdNZXRhZGF0YRIfChJ3ZWJfc2VhcmNoX3F1ZXJpZXMY",
-            "ASADKAlCA+BBARJSChJzZWFyY2hfZW50cnlfcG9pbnQYBCABKAsyLC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TZWFyY2hFbnRyeVBvaW50QgPgQQFI",
-            "AIgBARJEChBncm91bmRpbmdfY2h1bmtzGAUgAygLMiouZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuR3JvdW5kaW5nQ2h1bmsSTQoSZ3JvdW5kaW5nX3N1",
-            "cHBvcnRzGAYgAygLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR3Jv",
-            "dW5kaW5nU3VwcG9ydEID4EEBElYKEnJldHJpZXZhbF9tZXRhZGF0YRgHIAEo",
-            "CzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJldHJpZXZhbE1ldGFk",
-            "YXRhQgbgQQHgQQNIAYgBARI1CiBnb29nbGVfbWFwc193aWRnZXRfY29udGV4",
-            "dF90b2tlbhgIIAEoCUIG4EEB4EEDSAKIAQESXQoUc291cmNlX2ZsYWdnaW5n",
-            "X3VyaXMYCSADKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91",
-            "bmRpbmdNZXRhZGF0YS5Tb3VyY2VGbGFnZ2luZ1VyaRpAChFTb3VyY2VGbGFn",
-            "Z2luZ1VyaRIRCglzb3VyY2VfaWQYASABKAkSGAoQZmxhZ19jb250ZW50X3Vy",
-            "aRgCIAEoCUIVChNfc2VhcmNoX2VudHJ5X3BvaW50QhUKE19yZXRyaWV2YWxf",
-            "bWV0YWRhdGFCIwohX2dvb2dsZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2Vu",
-            "IkgKEFNlYXJjaEVudHJ5UG9pbnQSHQoQcmVuZGVyZWRfY29udGVudBgBIAEo",
-            "CUID4EEBEhUKCHNka19ibG9iGAIgASgMQgPgQQEiRwoRUmV0cmlldmFsTWV0",
-            "YWRhdGESMgolZ29vZ2xlX3NlYXJjaF9keW5hbWljX3JldHJpZXZhbF9zY29y",
-            "ZRgCIAEoAkID4EEBIqgBChBNb2RlbEFybW9yQ29uZmlnEkgKFHByb21wdF90",
-            "ZW1wbGF0ZV9uYW1lGAEgASgJQirgQQH6QSQKIm1vZGVsYXJtb3IuZ29vZ2xl",
-            "YXBpcy5jb20vVGVtcGxhdGUSSgoWcmVzcG9uc2VfdGVtcGxhdGVfbmFtZRgC",
-            "IAEoCUIq4EEB+kEkCiJtb2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBs",
-            "YXRlImEKEk1vZGFsaXR5VG9rZW5Db3VudBI2Cghtb2RhbGl0eRgBIAEoDjIk",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGFsaXR5EhMKC3Rva2Vu",
-            "X2NvdW50GAIgASgFKvgBCgxIYXJtQ2F0ZWdvcnkSHQoZSEFSTV9DQVRFR09S",
-            "WV9VTlNQRUNJRklFRBAAEh0KGUhBUk1fQ0FURUdPUllfSEFURV9TUEVFQ0gQ",
-            "ARIjCh9IQVJNX0NBVEVHT1JZX0RBTkdFUk9VU19DT05URU5UEAISHAoYSEFS",
-            "TV9DQVRFR09SWV9IQVJBU1NNRU5UEAMSIwofSEFSTV9DQVRFR09SWV9TRVhV",
-            "QUxMWV9FWFBMSUNJVBAEEiUKHUhBUk1fQ0FURUdPUllfQ0lWSUNfSU5URUdS",
-            "SVRZEAUaAggBEhsKF0hBUk1fQ0FURUdPUllfSkFJTEJSRUFLEAYqXQoITW9k",
-            "YWxpdHkSGAoUTU9EQUxJVFlfVU5TUEVDSUZJRUQQABIICgRURVhUEAESCQoF",
-            "SU1BR0UQAhIJCgVWSURFTxADEgkKBUFVRElPEAQSDAoIRE9DVU1FTlQQBUKv",
-            "AgoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgxDb250ZW50UHJv",
-            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
-            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
-            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
-            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjHqQWIKIm1vZGVsYXJtb3IuZ29vZ2xl",
-            "YXBpcy5jb20vVGVtcGxhdGUSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS90ZW1wbGF0ZXMve3RlbXBsYXRlfWIGcHJvdG8z"));
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5WaWRlb01ldGFkYXRhQgPgQQFIARJKChBt",
+            "ZWRpYV9yZXNvbHV0aW9uGAwgASgLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuUGFydC5NZWRpYVJlc29sdXRpb24aggIKD01lZGlhUmVzb2x1dGlv",
+            "bhJHCgVsZXZlbBgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlBhcnQuTWVkaWFSZXNvbHV0aW9uLkxldmVsSAAinAEKBUxldmVsEiAKHE1F",
+            "RElBX1JFU09MVVRJT05fVU5TUEVDSUZJRUQQABIYChRNRURJQV9SRVNPTFVU",
+            "SU9OX0xPVxABEhsKF01FRElBX1JFU09MVVRJT05fTUVESVVNEAISGQoVTUVE",
+            "SUFfUkVTT0xVVElPTl9ISUdIEAMSHwobTUVESUFfUkVTT0xVVElPTl9VTFRS",
+            "QV9ISUdIEARCBwoFdmFsdWVCBgoEZGF0YUIKCghtZXRhZGF0YSIxCgRCbG9i",
+            "EhYKCW1pbWVfdHlwZRgBIAEoCUID4EECEhEKBGRhdGEYAiABKAxCA+BBAiI5",
+            "CghGaWxlRGF0YRIWCgltaW1lX3R5cGUYASABKAlCA+BBAhIVCghmaWxlX3Vy",
+            "aRgCIAEoCUID4EECIosBCg1WaWRlb01ldGFkYXRhEjQKDHN0YXJ0X29mZnNl",
+            "dBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjIKCmVu",
+            "ZF9vZmZzZXQYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
+            "ARIQCgNmcHMYAyABKAFCA+BBASI9ChNQcmVidWlsdFZvaWNlQ29uZmlnEhcK",
+            "CnZvaWNlX25hbWUYASABKAlIAIgBAUINCgtfdm9pY2VfbmFtZSJQChVSZXBs",
+            "aWNhdGVkVm9pY2VDb25maWcSFgoJbWltZV90eXBlGAEgASgJQgPgQQESHwoS",
+            "dm9pY2Vfc2FtcGxlX2F1ZGlvGAIgASgMQgPgQQEiygEKC1ZvaWNlQ29uZmln",
+            "ElAKFXByZWJ1aWx0X3ZvaWNlX2NvbmZpZxgBIAEoCzIvLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlByZWJ1aWx0Vm9pY2VDb25maWdIABJZChdyZXBs",
+            "aWNhdGVkX3ZvaWNlX2NvbmZpZxgDIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlJlcGxpY2F0ZWRWb2ljZUNvbmZpZ0ID4EEBSABCDgoMdm9p",
+            "Y2VfY29uZmlnIm4KElNwZWFrZXJWb2ljZUNvbmZpZxIUCgdzcGVha2VyGAEg",
+            "ASgJQgPgQQISQgoMdm9pY2VfY29uZmlnGAIgASgLMicuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuVm9pY2VDb25maWdCA+BBAiJtChdNdWx0aVNwZWFr",
+            "ZXJWb2ljZUNvbmZpZxJSChVzcGVha2VyX3ZvaWNlX2NvbmZpZ3MYAiADKAsy",
+            "Li5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TcGVha2VyVm9pY2VDb25m",
+            "aWdCA+BBAiLCAQoMU3BlZWNoQ29uZmlnEj0KDHZvaWNlX2NvbmZpZxgBIAEo",
+            "CzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlZvaWNlQ29uZmlnEhoK",
+            "DWxhbmd1YWdlX2NvZGUYAiABKAlCA+BBARJXChptdWx0aV9zcGVha2VyX3Zv",
+            "aWNlX2NvbmZpZxgDIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "Lk11bHRpU3BlYWtlclZvaWNlQ29uZmlnIsQECgtJbWFnZUNvbmZpZxJiChRp",
+            "bWFnZV9vdXRwdXRfb3B0aW9ucxgBIAEoCzI6Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkltYWdlQ29uZmlnLkltYWdlT3V0cHV0T3B0aW9uc0ID4EEB",
+            "SACIAQESHgoMYXNwZWN0X3JhdGlvGAIgASgJQgPgQQFIAYgBARJdChFwZXJz",
+            "b25fZ2VuZXJhdGlvbhgDIAEoDjI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLkltYWdlQ29uZmlnLlBlcnNvbkdlbmVyYXRpb25CA+BBAUgCiAEBEhwK",
+            "CmltYWdlX3NpemUYBCABKAlCA+BBAUgDiAEBGn4KEkltYWdlT3V0cHV0T3B0",
+            "aW9ucxIbCgltaW1lX3R5cGUYASABKAlCA+BBAUgAiAEBEiUKE2NvbXByZXNz",
+            "aW9uX3F1YWxpdHkYAiABKAVCA+BBAUgBiAEBQgwKCl9taW1lX3R5cGVCFgoU",
+            "X2NvbXByZXNzaW9uX3F1YWxpdHkiZQoQUGVyc29uR2VuZXJhdGlvbhIhCh1Q",
+            "RVJTT05fR0VORVJBVElPTl9VTlNQRUNJRklFRBAAEg0KCUFMTE9XX0FMTBAB",
+            "Eg8KC0FMTE9XX0FEVUxUEAISDgoKQUxMT1dfTk9ORRADQhcKFV9pbWFnZV9v",
+            "dXRwdXRfb3B0aW9uc0IPCg1fYXNwZWN0X3JhdGlvQhQKEl9wZXJzb25fZ2Vu",
+            "ZXJhdGlvbkINCgtfaW1hZ2Vfc2l6ZSLoEwoQR2VuZXJhdGlvbkNvbmZpZxId",
+            "Cgt0ZW1wZXJhdHVyZRgBIAEoAkID4EEBSACIAQESFwoFdG9wX3AYAiABKAJC",
+            "A+BBAUgBiAEBEhcKBXRvcF9rGAMgASgCQgPgQQFIAogBARIhCg9jYW5kaWRh",
+            "dGVfY291bnQYBCABKAVCA+BBAUgDiAEBEiMKEW1heF9vdXRwdXRfdG9rZW5z",
+            "GAUgASgFQgPgQQFIBIgBARIbCg5zdG9wX3NlcXVlbmNlcxgGIAMoCUID4EEB",
+            "EiMKEXJlc3BvbnNlX2xvZ3Byb2JzGBIgASgIQgPgQQFIBYgBARIaCghsb2dw",
+            "cm9icxgHIAEoBUID4EEBSAaIAQESIgoQcHJlc2VuY2VfcGVuYWx0eRgIIAEo",
+            "AkID4EEBSAeIAQESIwoRZnJlcXVlbmN5X3BlbmFsdHkYCSABKAJCA+BBAUgI",
+            "iAEBEhYKBHNlZWQYDCABKAVCA+BBAUgJiAEBEh8KEnJlc3BvbnNlX21pbWVf",
+            "dHlwZRgNIAEoCUID4EEBEkwKD3Jlc3BvbnNlX3NjaGVtYRgQIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWFCA+BBAUgK",
+            "iAEBEj4KFHJlc3BvbnNlX2pzb25fc2NoZW1hGBwgASgLMhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLlZhbHVlQgPgQQFIC4gBARJcCg5yb3V0aW5nX2NvbmZpZxgRIAEo",
+            "CzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyYXRpb25Db25m",
+            "aWcuUm91dGluZ0NvbmZpZ0ID4EEBSAyIAQESIQoPYXVkaW9fdGltZXN0YW1w",
+            "GBQgASgIQgPgQQFIDYgBARJXChNyZXNwb25zZV9tb2RhbGl0aWVzGBUgAygO",
+            "MjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2VuZXJhdGlvbkNvbmZp",
+            "Zy5Nb2RhbGl0eUID4EEBEmAKEG1lZGlhX3Jlc29sdXRpb24YFiABKA4yPC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmF0aW9uQ29uZmlnLk1l",
+            "ZGlhUmVzb2x1dGlvbkID4EEBSA6IAQESSQoNc3BlZWNoX2NvbmZpZxgXIAEo",
+            "CzIoLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNwZWVjaENvbmZpZ0ID",
+            "4EEBSA+IAQESWQoPdGhpbmtpbmdfY29uZmlnGBkgASgLMjsuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuR2VuZXJhdGlvbkNvbmZpZy5UaGlua2luZ0Nv",
+            "bmZpZ0ID4EEBEkcKDGltYWdlX2NvbmZpZxgeIAEoCzInLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLkltYWdlQ29uZmlnQgPgQQFIEIgBARrCBAoNUm91",
+            "dGluZ0NvbmZpZxJfCglhdXRvX21vZGUYASABKAsySi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5HZW5lcmF0aW9uQ29uZmlnLlJvdXRpbmdDb25maWcu",
+            "QXV0b1JvdXRpbmdNb2RlSAASYwoLbWFudWFsX21vZGUYAiABKAsyTC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmF0aW9uQ29uZmlnLlJvdXRp",
+            "bmdDb25maWcuTWFudWFsUm91dGluZ01vZGVIABqbAgoPQXV0b1JvdXRpbmdN",
+            "b2RlEogBChhtb2RlbF9yb3V0aW5nX3ByZWZlcmVuY2UYASABKA4yYS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmF0aW9uQ29uZmlnLlJvdXRp",
+            "bmdDb25maWcuQXV0b1JvdXRpbmdNb2RlLk1vZGVsUm91dGluZ1ByZWZlcmVu",
+            "Y2VIAIgBASJgChZNb2RlbFJvdXRpbmdQcmVmZXJlbmNlEgsKB1VOS05PV04Q",
+            "ABIWChJQUklPUklUSVpFX1FVQUxJVFkQARIMCghCQUxBTkNFRBACEhMKD1BS",
+            "SU9SSVRJWkVfQ09TVBADQhsKGV9tb2RlbF9yb3V0aW5nX3ByZWZlcmVuY2Ua",
+            "OwoRTWFudWFsUm91dGluZ01vZGUSFwoKbW9kZWxfbmFtZRgBIAEoCUgAiAEB",
+            "Qg0KC19tb2RlbF9uYW1lQhAKDnJvdXRpbmdfY29uZmlnGt0CCg5UaGlua2lu",
+            "Z0NvbmZpZxIiChBpbmNsdWRlX3Rob3VnaHRzGAEgASgIQgPgQQFIAIgBARIh",
+            "Cg90aGlua2luZ19idWRnZXQYAyABKAVCA+BBAUgBiAEBEmsKDnRoaW5raW5n",
+            "X2xldmVsGAQgASgOMkkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Vu",
+            "ZXJhdGlvbkNvbmZpZy5UaGlua2luZ0NvbmZpZy5UaGlua2luZ0xldmVsQgPg",
+            "QQFIAogBASJbCg1UaGlua2luZ0xldmVsEh4KGlRISU5LSU5HX0xFVkVMX1VO",
+            "U1BFQ0lGSUVEEAASBwoDTE9XEAESCgoGTUVESVVNEAISCAoESElHSBADEgsK",
+            "B01JTklNQUwQBEITChFfaW5jbHVkZV90aG91Z2h0c0ISChBfdGhpbmtpbmdf",
+            "YnVkZ2V0QhEKD190aGlua2luZ19sZXZlbCJECghNb2RhbGl0eRIYChRNT0RB",
+            "TElUWV9VTlNQRUNJRklFRBAAEggKBFRFWFQQARIJCgVJTUFHRRACEgkKBUFV",
+            "RElPEAMihQEKD01lZGlhUmVzb2x1dGlvbhIgChxNRURJQV9SRVNPTFVUSU9O",
+            "X1VOU1BFQ0lGSUVEEAASGAoUTUVESUFfUkVTT0xVVElPTl9MT1cQARIbChdN",
+            "RURJQV9SRVNPTFVUSU9OX01FRElVTRACEhkKFU1FRElBX1JFU09MVVRJT05f",
+            "SElHSBADQg4KDF90ZW1wZXJhdHVyZUIICgZfdG9wX3BCCAoGX3RvcF9rQhIK",
+            "EF9jYW5kaWRhdGVfY291bnRCFAoSX21heF9vdXRwdXRfdG9rZW5zQhQKEl9y",
+            "ZXNwb25zZV9sb2dwcm9ic0ILCglfbG9ncHJvYnNCEwoRX3ByZXNlbmNlX3Bl",
+            "bmFsdHlCFAoSX2ZyZXF1ZW5jeV9wZW5hbHR5QgcKBV9zZWVkQhIKEF9yZXNw",
+            "b25zZV9zY2hlbWFCFwoVX3Jlc3BvbnNlX2pzb25fc2NoZW1hQhEKD19yb3V0",
+            "aW5nX2NvbmZpZ0ISChBfYXVkaW9fdGltZXN0YW1wQhMKEV9tZWRpYV9yZXNv",
+            "bHV0aW9uQhAKDl9zcGVlY2hfY29uZmlnQg8KDV9pbWFnZV9jb25maWci6wMK",
+            "DVNhZmV0eVNldHRpbmcSPwoIY2F0ZWdvcnkYASABKA4yKC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5IYXJtQ2F0ZWdvcnlCA+BBAhJUCgl0aHJlc2hv",
+            "bGQYAiABKA4yPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TYWZldHlT",
+            "ZXR0aW5nLkhhcm1CbG9ja1RocmVzaG9sZEID4EECEk4KBm1ldGhvZBgEIAEo",
+            "DjI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNhZmV0eVNldHRpbmcu",
+            "SGFybUJsb2NrTWV0aG9kQgPgQQEinQEKEkhhcm1CbG9ja1RocmVzaG9sZBIk",
+            "CiBIQVJNX0JMT0NLX1RIUkVTSE9MRF9VTlNQRUNJRklFRBAAEhcKE0JMT0NL",
+            "X0xPV19BTkRfQUJPVkUQARIaChZCTE9DS19NRURJVU1fQU5EX0FCT1ZFEAIS",
+            "EwoPQkxPQ0tfT05MWV9ISUdIEAMSDgoKQkxPQ0tfTk9ORRAEEgcKA09GRhAF",
+            "IlMKD0hhcm1CbG9ja01ldGhvZBIhCh1IQVJNX0JMT0NLX01FVEhPRF9VTlNQ",
+            "RUNJRklFRBAAEgwKCFNFVkVSSVRZEAESDwoLUFJPQkFCSUxJVFkQAiK/BAoM",
+            "U2FmZXR5UmF0aW5nEj8KCGNhdGVnb3J5GAEgASgOMiguZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuSGFybUNhdGVnb3J5QgPgQQMSUgoLcHJvYmFiaWxp",
+            "dHkYAiABKA4yOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TYWZldHlS",
+            "YXRpbmcuSGFybVByb2JhYmlsaXR5QgPgQQMSHgoRcHJvYmFiaWxpdHlfc2Nv",
+            "cmUYBSABKAJCA+BBAxJMCghzZXZlcml0eRgGIAEoDjI1Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlNhZmV0eVJhdGluZy5IYXJtU2V2ZXJpdHlCA+BB",
+            "AxIbCg5zZXZlcml0eV9zY29yZRgHIAEoAkID4EEDEhQKB2Jsb2NrZWQYAyAB",
+            "KAhCA+BBAyJiCg9IYXJtUHJvYmFiaWxpdHkSIAocSEFSTV9QUk9CQUJJTElU",
+            "WV9VTlNQRUNJRklFRBAAEg4KCk5FR0xJR0lCTEUQARIHCgNMT1cQAhIKCgZN",
+            "RURJVU0QAxIICgRISUdIEAQilAEKDEhhcm1TZXZlcml0eRIdChlIQVJNX1NF",
+            "VkVSSVRZX1VOU1BFQ0lGSUVEEAASHAoYSEFSTV9TRVZFUklUWV9ORUdMSUdJ",
+            "QkxFEAESFQoRSEFSTV9TRVZFUklUWV9MT1cQAhIYChRIQVJNX1NFVkVSSVRZ",
+            "X01FRElVTRADEhYKEkhBUk1fU0VWRVJJVFlfSElHSBAEIlAKEENpdGF0aW9u",
+            "TWV0YWRhdGESPAoJY2l0YXRpb25zGAEgAygLMiQuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuQ2l0YXRpb25CA+BBAyKqAQoIQ2l0YXRpb24SGAoLc3Rh",
+            "cnRfaW5kZXgYASABKAVCA+BBAxIWCgllbmRfaW5kZXgYAiABKAVCA+BBAxIQ",
+            "CgN1cmkYAyABKAlCA+BBAxISCgV0aXRsZRgEIAEoCUID4EEDEhQKB2xpY2Vu",
+            "c2UYBSABKAlCA+BBAxIwChBwdWJsaWNhdGlvbl9kYXRlGAYgASgLMhEuZ29v",
+            "Z2xlLnR5cGUuRGF0ZUID4EEDIuAGCglDYW5kaWRhdGUSEgoFaW5kZXgYASAB",
+            "KAVCA+BBAxI5Cgdjb250ZW50GAIgASgLMiMuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuQ29udGVudEID4EEDEhIKBXNjb3JlGAggASgBQgPgQQMSGQoM",
+            "YXZnX2xvZ3Byb2JzGAkgASgBQgPgQQMSSAoPbG9ncHJvYnNfcmVzdWx0GAog",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTG9ncHJvYnNSZXN1",
+            "bHRCA+BBAxJOCg1maW5pc2hfcmVhc29uGAMgASgOMjIuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuQ2FuZGlkYXRlLkZpbmlzaFJlYXNvbkID4EEDEkUK",
+            "DnNhZmV0eV9yYXRpbmdzGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU2FmZXR5UmF0aW5nQgPgQQMSIAoOZmluaXNoX21lc3NhZ2UYBSAB",
+            "KAlCA+BBA0gAiAEBEkwKEWNpdGF0aW9uX21ldGFkYXRhGAYgASgLMiwuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ2l0YXRpb25NZXRhZGF0YUID4EED",
+            "Ek4KEmdyb3VuZGluZ19tZXRhZGF0YRgHIAEoCzItLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkdyb3VuZGluZ01ldGFkYXRhQgPgQQMSUQoUdXJsX2Nv",
+            "bnRleHRfbWV0YWRhdGEYCyABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5VcmxDb250ZXh0TWV0YWRhdGFCA+BBAyLNAQoMRmluaXNoUmVhc29u",
+            "Eh0KGUZJTklTSF9SRUFTT05fVU5TUEVDSUZJRUQQABIICgRTVE9QEAESDgoK",
+            "TUFYX1RPS0VOUxACEgoKBlNBRkVUWRADEg4KClJFQ0lUQVRJT04QBBIJCgVP",
+            "VEhFUhAFEg0KCUJMT0NLTElTVBAGEhYKElBST0hJQklURURfQ09OVEVOVBAH",
+            "EggKBFNQSUkQCBIbChdNQUxGT1JNRURfRlVOQ1RJT05fQ0FMTBAJEg8KC01P",
+            "REVMX0FSTU9SEApCEQoPX2ZpbmlzaF9tZXNzYWdlIlgKElVybENvbnRleHRN",
+            "ZXRhZGF0YRJCCgx1cmxfbWV0YWRhdGEYASADKAsyJy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5VcmxNZXRhZGF0YUID4EEDIvwBCgtVcmxNZXRhZGF0",
+            "YRIVCg1yZXRyaWV2ZWRfdXJsGAEgASgJElgKFHVybF9yZXRyaWV2YWxfc3Rh",
+            "dHVzGAIgASgOMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXJsTWV0",
+            "YWRhdGEuVXJsUmV0cmlldmFsU3RhdHVzInwKElVybFJldHJpZXZhbFN0YXR1",
+            "cxIkCiBVUkxfUkVUUklFVkFMX1NUQVRVU19VTlNQRUNJRklFRBAAEiAKHFVS",
+            "TF9SRVRSSUVWQUxfU1RBVFVTX1NVQ0NFU1MQARIeChpVUkxfUkVUUklFVkFM",
+            "X1NUQVRVU19FUlJPUhACIo8DCg5Mb2dwcm9ic1Jlc3VsdBJQCg50b3BfY2Fu",
+            "ZGlkYXRlcxgBIAMoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxv",
+            "Z3Byb2JzUmVzdWx0LlRvcENhbmRpZGF0ZXMSTwoRY2hvc2VuX2NhbmRpZGF0",
+            "ZXMYAiADKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Mb2dwcm9i",
+            "c1Jlc3VsdC5DYW5kaWRhdGUafwoJQ2FuZGlkYXRlEhIKBXRva2VuGAEgASgJ",
+            "SACIAQESFQoIdG9rZW5faWQYAyABKAVIAYgBARIcCg9sb2dfcHJvYmFiaWxp",
+            "dHkYAiABKAJIAogBAUIICgZfdG9rZW5CCwoJX3Rva2VuX2lkQhIKEF9sb2df",
+            "cHJvYmFiaWxpdHkaWQoNVG9wQ2FuZGlkYXRlcxJICgpjYW5kaWRhdGVzGAEg",
+            "AygLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTG9ncHJvYnNSZXN1",
+            "bHQuQ2FuZGlkYXRlImcKB1NlZ21lbnQSFwoKcGFydF9pbmRleBgBIAEoBUID",
+            "4EEDEhgKC3N0YXJ0X2luZGV4GAIgASgFQgPgQQMSFgoJZW5kX2luZGV4GAMg",
+            "ASgFQgPgQQMSEQoEdGV4dBgEIAEoCUID4EEDItIHCg5Hcm91bmRpbmdDaHVu",
+            "axI9CgN3ZWIYASABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5H",
+            "cm91bmRpbmdDaHVuay5XZWJIABJYChFyZXRyaWV2ZWRfY29udGV4dBgCIAEo",
+            "CzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ0NodW5r",
+            "LlJldHJpZXZlZENvbnRleHRIABI/CgRtYXBzGAMgASgLMi8uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuR3JvdW5kaW5nQ2h1bmsuTWFwc0gAGj0KA1dl",
+            "YhIQCgN1cmkYASABKAlIAIgBARISCgV0aXRsZRgCIAEoCUgBiAEBQgYKBF91",
+            "cmlCCAoGX3RpdGxlGucBChBSZXRyaWV2ZWRDb250ZXh0EjkKCXJhZ19jaHVu",
+            "axgEIAEoCzIkLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ0NodW5r",
+            "SAASEAoDdXJpGAEgASgJSAGIAQESEgoFdGl0bGUYAiABKAlIAogBARIRCgR0",
+            "ZXh0GAMgASgJSAOIAQESHwoNZG9jdW1lbnRfbmFtZRgGIAEoCUID4EEDSASI",
+            "AQFCEQoPY29udGV4dF9kZXRhaWxzQgYKBF91cmlCCAoGX3RpdGxlQgcKBV90",
+            "ZXh0QhAKDl9kb2N1bWVudF9uYW1lGq4DCgRNYXBzEhAKA3VyaRgBIAEoCUgA",
+            "iAEBEhIKBXRpdGxlGAIgASgJSAGIAQESEQoEdGV4dBgDIAEoCUgCiAEBEhUK",
+            "CHBsYWNlX2lkGAQgASgJSAOIAQESYAoUcGxhY2VfYW5zd2VyX3NvdXJjZXMY",
+            "BSABKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdD",
+            "aHVuay5NYXBzLlBsYWNlQW5zd2VyU291cmNlcxrLAQoSUGxhY2VBbnN3ZXJT",
+            "b3VyY2VzEmkKD3Jldmlld19zbmlwcGV0cxgBIAMoCzJQLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ0NodW5rLk1hcHMuUGxhY2VBbnN3",
+            "ZXJTb3VyY2VzLlJldmlld1NuaXBwZXQaSgoNUmV2aWV3U25pcHBldBIRCgly",
+            "ZXZpZXdfaWQYASABKAkSFwoPZ29vZ2xlX21hcHNfdXJpGAIgASgJEg0KBXRp",
+            "dGxlGAMgASgJQgYKBF91cmlCCAoGX3RpdGxlQgcKBV90ZXh0QgsKCV9wbGFj",
+            "ZV9pZEIMCgpjaHVua190eXBlIpUBChBHcm91bmRpbmdTdXBwb3J0EjkKB3Nl",
+            "Z21lbnQYASABKAsyIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TZWdt",
+            "ZW50SACIAQESHwoXZ3JvdW5kaW5nX2NodW5rX2luZGljZXMYAiADKAUSGQoR",
+            "Y29uZmlkZW5jZV9zY29yZXMYAyADKAJCCgoIX3NlZ21lbnQioAUKEUdyb3Vu",
+            "ZGluZ01ldGFkYXRhEh8KEndlYl9zZWFyY2hfcXVlcmllcxgBIAMoCUID4EEB",
+            "ElIKEnNlYXJjaF9lbnRyeV9wb2ludBgEIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlNlYXJjaEVudHJ5UG9pbnRCA+BBAUgAiAEBEkQKEGdy",
+            "b3VuZGluZ19jaHVua3MYBSADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5Hcm91bmRpbmdDaHVuaxJNChJncm91bmRpbmdfc3VwcG9ydHMYBiAD",
+            "KAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdTdXBw",
+            "b3J0QgPgQQESVgoScmV0cmlldmFsX21ldGFkYXRhGAcgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuUmV0cmlldmFsTWV0YWRhdGFCBuBBAeBB",
+            "A0gBiAEBEjUKIGdvb2dsZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2VuGAgg",
+            "ASgJQgbgQQHgQQNIAogBARJdChRzb3VyY2VfZmxhZ2dpbmdfdXJpcxgJIAMo",
+            "CzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ01ldGFk",
+            "YXRhLlNvdXJjZUZsYWdnaW5nVXJpGkAKEVNvdXJjZUZsYWdnaW5nVXJpEhEK",
+            "CXNvdXJjZV9pZBgBIAEoCRIYChBmbGFnX2NvbnRlbnRfdXJpGAIgASgJQhUK",
+            "E19zZWFyY2hfZW50cnlfcG9pbnRCFQoTX3JldHJpZXZhbF9tZXRhZGF0YUIj",
+            "CiFfZ29vZ2xlX21hcHNfd2lkZ2V0X2NvbnRleHRfdG9rZW4iSAoQU2VhcmNo",
+            "RW50cnlQb2ludBIdChByZW5kZXJlZF9jb250ZW50GAEgASgJQgPgQQESFQoI",
+            "c2RrX2Jsb2IYAiABKAxCA+BBASJHChFSZXRyaWV2YWxNZXRhZGF0YRIyCiVn",
+            "b29nbGVfc2VhcmNoX2R5bmFtaWNfcmV0cmlldmFsX3Njb3JlGAIgASgCQgPg",
+            "QQEiqAEKEE1vZGVsQXJtb3JDb25maWcSSAoUcHJvbXB0X3RlbXBsYXRlX25h",
+            "bWUYASABKAlCKuBBAfpBJAoibW9kZWxhcm1vci5nb29nbGVhcGlzLmNvbS9U",
+            "ZW1wbGF0ZRJKChZyZXNwb25zZV90ZW1wbGF0ZV9uYW1lGAIgASgJQirgQQH6",
+            "QSQKIm1vZGVsYXJtb3IuZ29vZ2xlYXBpcy5jb20vVGVtcGxhdGUiYQoSTW9k",
+            "YWxpdHlUb2tlbkNvdW50EjYKCG1vZGFsaXR5GAEgASgOMiQuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuTW9kYWxpdHkSEwoLdG9rZW5fY291bnQYAiAB",
+            "KAUq+AEKDEhhcm1DYXRlZ29yeRIdChlIQVJNX0NBVEVHT1JZX1VOU1BFQ0lG",
+            "SUVEEAASHQoZSEFSTV9DQVRFR09SWV9IQVRFX1NQRUVDSBABEiMKH0hBUk1f",
+            "Q0FURUdPUllfREFOR0VST1VTX0NPTlRFTlQQAhIcChhIQVJNX0NBVEVHT1JZ",
+            "X0hBUkFTU01FTlQQAxIjCh9IQVJNX0NBVEVHT1JZX1NFWFVBTExZX0VYUExJ",
+            "Q0lUEAQSJQodSEFSTV9DQVRFR09SWV9DSVZJQ19JTlRFR1JJVFkQBRoCCAES",
+            "GwoXSEFSTV9DQVRFR09SWV9KQUlMQlJFQUsQBipdCghNb2RhbGl0eRIYChRN",
+            "T0RBTElUWV9VTlNQRUNJRklFRBAAEggKBFRFWFQQARIJCgVJTUFHRRACEgkK",
+            "BVZJREVPEAMSCQoFQVVESU8QBBIMCghET0NVTUVOVBAFQq8CCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDENvbnRlbnRQcm90b1ABWj5jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
+            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
+            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
+            "SVBsYXRmb3JtOjpWMepBYgoibW9kZWxhcm1vci5nb29nbGVhcGlzLmNvbS9U",
+            "ZW1wbGF0ZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3RlbXBsYXRlcy97dGVtcGxhdGV9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Content), global::Google.Cloud.AIPlatform.V1.Content.Parser, new[]{ "Role", "Parts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Part), global::Google.Cloud.AIPlatform.V1.Part.Parser, new[]{ "Text", "InlineData", "FileData", "FunctionCall", "FunctionResponse", "ExecutableCode", "CodeExecutionResult", "Thought", "ThoughtSignature", "VideoMetadata" }, new[]{ "Data", "Metadata" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Part), global::Google.Cloud.AIPlatform.V1.Part.Parser, new[]{ "Text", "InlineData", "FileData", "FunctionCall", "FunctionResponse", "ExecutableCode", "CodeExecutionResult", "Thought", "ThoughtSignature", "VideoMetadata", "MediaResolution" }, new[]{ "Data", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution), global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution.Parser, new[]{ "Level" }, new[]{ "Value" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution.Types.Level) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Blob), global::Google.Cloud.AIPlatform.V1.Blob.Parser, new[]{ "MimeType", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FileData), global::Google.Cloud.AIPlatform.V1.FileData.Parser, new[]{ "MimeType", "FileUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VideoMetadata), global::Google.Cloud.AIPlatform.V1.VideoMetadata.Parser, new[]{ "StartOffset", "EndOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VideoMetadata), global::Google.Cloud.AIPlatform.V1.VideoMetadata.Parser, new[]{ "StartOffset", "EndOffset", "Fps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrebuiltVoiceConfig), global::Google.Cloud.AIPlatform.V1.PrebuiltVoiceConfig.Parser, new[]{ "VoiceName" }, new[]{ "VoiceName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReplicatedVoiceConfig), global::Google.Cloud.AIPlatform.V1.ReplicatedVoiceConfig.Parser, new[]{ "MimeType", "VoiceSampleAudio" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VoiceConfig), global::Google.Cloud.AIPlatform.V1.VoiceConfig.Parser, new[]{ "PrebuiltVoiceConfig", "ReplicatedVoiceConfig" }, new[]{ "VoiceConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpeakerVoiceConfig), global::Google.Cloud.AIPlatform.V1.SpeakerVoiceConfig.Parser, new[]{ "Speaker", "VoiceConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MultiSpeakerVoiceConfig), global::Google.Cloud.AIPlatform.V1.MultiSpeakerVoiceConfig.Parser, new[]{ "SpeakerVoiceConfigs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpeechConfig), global::Google.Cloud.AIPlatform.V1.SpeechConfig.Parser, new[]{ "VoiceConfig", "LanguageCode", "MultiSpeakerVoiceConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImageConfig), global::Google.Cloud.AIPlatform.V1.ImageConfig.Parser, new[]{ "AspectRatio" }, new[]{ "AspectRatio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Parser, new[]{ "Temperature", "TopP", "TopK", "CandidateCount", "MaxOutputTokens", "StopSequences", "ResponseLogprobs", "Logprobs", "PresencePenalty", "FrequencyPenalty", "Seed", "ResponseMimeType", "ResponseSchema", "ResponseJsonSchema", "RoutingConfig", "SpeechConfig", "ThinkingConfig", "ImageConfig" }, new[]{ "Temperature", "TopP", "TopK", "CandidateCount", "MaxOutputTokens", "ResponseLogprobs", "Logprobs", "PresencePenalty", "FrequencyPenalty", "Seed", "ResponseSchema", "ResponseJsonSchema", "RoutingConfig", "SpeechConfig", "ImageConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Parser, new[]{ "AutoMode", "ManualMode" }, new[]{ "RoutingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode.Parser, new[]{ "ModelRoutingPreference" }, new[]{ "ModelRoutingPreference" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode.Types.ModelRoutingPreference) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImageConfig), global::Google.Cloud.AIPlatform.V1.ImageConfig.Parser, new[]{ "ImageOutputOptions", "AspectRatio", "PersonGeneration", "ImageSize" }, new[]{ "ImageOutputOptions", "AspectRatio", "PersonGeneration", "ImageSize" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions), global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions.Parser, new[]{ "MimeType", "CompressionQuality" }, new[]{ "MimeType", "CompressionQuality" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Parser, new[]{ "Temperature", "TopP", "TopK", "CandidateCount", "MaxOutputTokens", "StopSequences", "ResponseLogprobs", "Logprobs", "PresencePenalty", "FrequencyPenalty", "Seed", "ResponseMimeType", "ResponseSchema", "ResponseJsonSchema", "RoutingConfig", "AudioTimestamp", "ResponseModalities", "MediaResolution", "SpeechConfig", "ThinkingConfig", "ImageConfig" }, new[]{ "Temperature", "TopP", "TopK", "CandidateCount", "MaxOutputTokens", "ResponseLogprobs", "Logprobs", "PresencePenalty", "FrequencyPenalty", "Seed", "ResponseSchema", "ResponseJsonSchema", "RoutingConfig", "AudioTimestamp", "MediaResolution", "SpeechConfig", "ImageConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality), typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Parser, new[]{ "AutoMode", "ManualMode" }, new[]{ "RoutingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode.Parser, new[]{ "ModelRoutingPreference" }, new[]{ "ModelRoutingPreference" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.AutoRoutingMode.Types.ModelRoutingPreference) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.ManualRoutingMode), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig.Types.ManualRoutingMode.Parser, new[]{ "ModelName" }, new[]{ "ModelName" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Parser, new[]{ "IncludeThoughts", "ThinkingBudget" }, new[]{ "IncludeThoughts", "ThinkingBudget" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig), global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Parser, new[]{ "IncludeThoughts", "ThinkingBudget", "ThinkingLevel" }, new[]{ "IncludeThoughts", "ThinkingBudget", "ThinkingLevel" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SafetySetting), global::Google.Cloud.AIPlatform.V1.SafetySetting.Parser, new[]{ "Category", "Threshold", "Method" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.SafetySetting.Types.HarmBlockThreshold), typeof(global::Google.Cloud.AIPlatform.V1.SafetySetting.Types.HarmBlockMethod) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SafetyRating), global::Google.Cloud.AIPlatform.V1.SafetyRating.Parser, new[]{ "Category", "Probability", "ProbabilityScore", "Severity", "SeverityScore", "Blocked" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.SafetyRating.Types.HarmProbability), typeof(global::Google.Cloud.AIPlatform.V1.SafetyRating.Types.HarmSeverity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CitationMetadata), global::Google.Cloud.AIPlatform.V1.CitationMetadata.Parser, new[]{ "Citations" }, null, null, null, null),
@@ -635,6 +670,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public Part(Part other) : this() {
       thought_ = other.thought_;
       thoughtSignature_ = other.thoughtSignature_;
+      mediaResolution_ = other.mediaResolution_ != null ? other.mediaResolution_.Clone() : null;
       switch (other.DataCase) {
         case DataOneofCase.Text:
           Text = other.Text;
@@ -845,6 +881,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "media_resolution" field.</summary>
+    public const int MediaResolutionFieldNumber = 12;
+    private global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution mediaResolution_;
+    /// <summary>
+    /// per part media resolution.
+    /// Media resolution for the input media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution MediaResolution {
+      get { return mediaResolution_; }
+      set {
+        mediaResolution_ = value;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
@@ -916,6 +968,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Thought != other.Thought) return false;
       if (ThoughtSignature != other.ThoughtSignature) return false;
       if (!object.Equals(VideoMetadata, other.VideoMetadata)) return false;
+      if (!object.Equals(MediaResolution, other.MediaResolution)) return false;
       if (DataCase != other.DataCase) return false;
       if (MetadataCase != other.MetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -935,6 +988,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Thought != false) hash ^= Thought.GetHashCode();
       if (ThoughtSignature.Length != 0) hash ^= ThoughtSignature.GetHashCode();
       if (metadataCase_ == MetadataOneofCase.VideoMetadata) hash ^= VideoMetadata.GetHashCode();
+      if (mediaResolution_ != null) hash ^= MediaResolution.GetHashCode();
       hash ^= (int) dataCase_;
       hash ^= (int) metadataCase_;
       if (_unknownFields != null) {
@@ -995,6 +1049,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteBytes(ThoughtSignature);
       }
+      if (mediaResolution_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(MediaResolution);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1045,6 +1103,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteBytes(ThoughtSignature);
       }
+      if (mediaResolution_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(MediaResolution);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1085,6 +1147,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (metadataCase_ == MetadataOneofCase.VideoMetadata) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VideoMetadata);
       }
+      if (mediaResolution_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MediaResolution);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1102,6 +1167,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.ThoughtSignature.Length != 0) {
         ThoughtSignature = other.ThoughtSignature;
+      }
+      if (other.mediaResolution_ != null) {
+        if (mediaResolution_ == null) {
+          MediaResolution = new global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution();
+        }
+        MediaResolution.MergeFrom(other.MediaResolution);
       }
       switch (other.DataCase) {
         case DataOneofCase.Text:
@@ -1244,6 +1315,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             ThoughtSignature = input.ReadBytes();
             break;
           }
+          case 98: {
+            if (mediaResolution_ == null) {
+              MediaResolution = new global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution();
+            }
+            input.ReadMessage(MediaResolution);
+            break;
+          }
         }
       }
     #endif
@@ -1334,10 +1412,302 @@ namespace Google.Cloud.AIPlatform.V1 {
             ThoughtSignature = input.ReadBytes();
             break;
           }
+          case 98: {
+            if (mediaResolution_ == null) {
+              MediaResolution = new global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution();
+            }
+            input.ReadMessage(MediaResolution);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Part message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// per part media resolution.
+      /// Media resolution for the input media.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MediaResolution : pb::IMessage<MediaResolution>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MediaResolution> _parser = new pb::MessageParser<MediaResolution>(() => new MediaResolution());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MediaResolution> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.Part.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaResolution() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaResolution(MediaResolution other) : this() {
+          switch (other.ValueCase) {
+            case ValueOneofCase.Level:
+              Level = other.Level;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaResolution Clone() {
+          return new MediaResolution(this);
+        }
+
+        /// <summary>Field number for the "level" field.</summary>
+        public const int LevelFieldNumber = 1;
+        /// <summary>
+        /// The tokenization quality used for given media.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution.Types.Level Level {
+          get { return HasLevel ? (global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution.Types.Level) value_ : global::Google.Cloud.AIPlatform.V1.Part.Types.MediaResolution.Types.Level.MediaResolutionUnspecified; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.Level;
+          }
+        }
+        /// <summary>Gets whether the "level" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasLevel {
+          get { return valueCase_ == ValueOneofCase.Level; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "level" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearLevel() {
+          if (HasLevel) {
+            ClearValue();
+          }
+        }
+
+        private object value_;
+        /// <summary>Enum of possible cases for the "value" oneof.</summary>
+        public enum ValueOneofCase {
+          None = 0,
+          Level = 1,
+        }
+        private ValueOneofCase valueCase_ = ValueOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ValueOneofCase ValueCase {
+          get { return valueCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          valueCase_ = ValueOneofCase.None;
+          value_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MediaResolution);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MediaResolution other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Level != other.Level) return false;
+          if (ValueCase != other.ValueCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasLevel) hash ^= Level.GetHashCode();
+          hash ^= (int) valueCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasLevel) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Level);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasLevel) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Level);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasLevel) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MediaResolution other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.ValueCase) {
+            case ValueOneofCase.Level:
+              Level = other.Level;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                value_ = input.ReadEnum();
+                valueCase_ = ValueOneofCase.Level;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                value_ = input.ReadEnum();
+                valueCase_ = ValueOneofCase.Level;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MediaResolution message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The media resolution level.
+          /// </summary>
+          public enum Level {
+            /// <summary>
+            /// Media resolution has not been set.
+            /// </summary>
+            [pbr::OriginalName("MEDIA_RESOLUTION_UNSPECIFIED")] MediaResolutionUnspecified = 0,
+            /// <summary>
+            /// Media resolution set to low.
+            /// </summary>
+            [pbr::OriginalName("MEDIA_RESOLUTION_LOW")] MediaResolutionLow = 1,
+            /// <summary>
+            /// Media resolution set to medium.
+            /// </summary>
+            [pbr::OriginalName("MEDIA_RESOLUTION_MEDIUM")] MediaResolutionMedium = 2,
+            /// <summary>
+            /// Media resolution set to high.
+            /// </summary>
+            [pbr::OriginalName("MEDIA_RESOLUTION_HIGH")] MediaResolutionHigh = 3,
+            /// <summary>
+            /// Media resolution set to ultra high. This is for image only.
+            /// </summary>
+            [pbr::OriginalName("MEDIA_RESOLUTION_ULTRA_HIGH")] MediaResolutionUltraHigh = 4,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1856,6 +2226,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public VideoMetadata(VideoMetadata other) : this() {
       startOffset_ = other.startOffset_ != null ? other.startOffset_.Clone() : null;
       endOffset_ = other.endOffset_ != null ? other.endOffset_.Clone() : null;
+      fps_ = other.fps_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1895,6 +2266,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "fps" field.</summary>
+    public const int FpsFieldNumber = 3;
+    private double fps_;
+    /// <summary>
+    /// Optional. The frame rate of the video sent to the model. If not specified,
+    /// the default value is 1.0. The valid range is (0.0, 24.0].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Fps {
+      get { return fps_; }
+      set {
+        fps_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1912,6 +2299,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(StartOffset, other.StartOffset)) return false;
       if (!object.Equals(EndOffset, other.EndOffset)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Fps, other.Fps)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1921,6 +2309,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (startOffset_ != null) hash ^= StartOffset.GetHashCode();
       if (endOffset_ != null) hash ^= EndOffset.GetHashCode();
+      if (Fps != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Fps);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1947,6 +2336,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(EndOffset);
       }
+      if (Fps != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Fps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1965,6 +2358,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(EndOffset);
       }
+      if (Fps != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Fps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1980,6 +2377,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (endOffset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndOffset);
+      }
+      if (Fps != 0D) {
+        size += 1 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2004,6 +2404,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           EndOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         EndOffset.MergeFrom(other.EndOffset);
+      }
+      if (other.Fps != 0D) {
+        Fps = other.Fps;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2034,6 +2437,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EndOffset);
             break;
           }
+          case 25: {
+            Fps = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -2061,6 +2468,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EndOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(EndOffset);
+            break;
+          }
+          case 25: {
+            Fps = input.ReadDouble();
             break;
           }
         }
@@ -3553,6 +3964,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   {
     private static readonly pb::MessageParser<ImageConfig> _parser = new pb::MessageParser<ImageConfig>(() => new ImageConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageConfig> Parser { get { return _parser; } }
@@ -3580,7 +3992,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageConfig(ImageConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      imageOutputOptions_ = other.imageOutputOptions_ != null ? other.imageOutputOptions_.Clone() : null;
       aspectRatio_ = other.aspectRatio_;
+      personGeneration_ = other.personGeneration_;
+      imageSize_ = other.imageSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3588,6 +4004,21 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageConfig Clone() {
       return new ImageConfig(this);
+    }
+
+    /// <summary>Field number for the "image_output_options" field.</summary>
+    public const int ImageOutputOptionsFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions imageOutputOptions_;
+    /// <summary>
+    /// Optional. The image output format for generated images.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions ImageOutputOptions {
+      get { return imageOutputOptions_; }
+      set {
+        imageOutputOptions_ = value;
+      }
     }
 
     /// <summary>Field number for the "aspect_ratio" field.</summary>
@@ -3627,6 +4058,66 @@ namespace Google.Cloud.AIPlatform.V1 {
       aspectRatio_ = null;
     }
 
+    /// <summary>Field number for the "person_generation" field.</summary>
+    public const int PersonGenerationFieldNumber = 3;
+    private readonly static global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration PersonGenerationDefaultValue = global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration.Unspecified;
+
+    private global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration personGeneration_;
+    /// <summary>
+    /// Optional. Controls whether the model can generate people.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration PersonGeneration {
+      get { if ((_hasBits0 & 1) != 0) { return personGeneration_; } else { return PersonGenerationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        personGeneration_ = value;
+      }
+    }
+    /// <summary>Gets whether the "person_generation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPersonGeneration {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "person_generation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPersonGeneration() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "image_size" field.</summary>
+    public const int ImageSizeFieldNumber = 4;
+    private readonly static string ImageSizeDefaultValue = "";
+
+    private string imageSize_;
+    /// <summary>
+    /// Optional. Specifies the size of generated images. Supported values are
+    /// `1K`, `2K`, `4K`. If not specified, the model will use default value `1K`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageSize {
+      get { return imageSize_ ?? ImageSizeDefaultValue; }
+      set {
+        imageSize_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "image_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageSize {
+      get { return imageSize_ != null; }
+    }
+    /// <summary>Clears the value of the "image_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageSize() {
+      imageSize_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3642,7 +4133,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ImageOutputOptions, other.ImageOutputOptions)) return false;
       if (AspectRatio != other.AspectRatio) return false;
+      if (PersonGeneration != other.PersonGeneration) return false;
+      if (ImageSize != other.ImageSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3650,7 +4144,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (imageOutputOptions_ != null) hash ^= ImageOutputOptions.GetHashCode();
       if (HasAspectRatio) hash ^= AspectRatio.GetHashCode();
+      if (HasPersonGeneration) hash ^= PersonGeneration.GetHashCode();
+      if (HasImageSize) hash ^= ImageSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3669,9 +4166,21 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (imageOutputOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ImageOutputOptions);
+      }
       if (HasAspectRatio) {
         output.WriteRawTag(18);
         output.WriteString(AspectRatio);
+      }
+      if (HasPersonGeneration) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PersonGeneration);
+      }
+      if (HasImageSize) {
+        output.WriteRawTag(34);
+        output.WriteString(ImageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3683,9 +4192,21 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (imageOutputOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ImageOutputOptions);
+      }
       if (HasAspectRatio) {
         output.WriteRawTag(18);
         output.WriteString(AspectRatio);
+      }
+      if (HasPersonGeneration) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PersonGeneration);
+      }
+      if (HasImageSize) {
+        output.WriteRawTag(34);
+        output.WriteString(ImageSize);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3697,8 +4218,17 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (imageOutputOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImageOutputOptions);
+      }
       if (HasAspectRatio) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AspectRatio);
+      }
+      if (HasPersonGeneration) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PersonGeneration);
+      }
+      if (HasImageSize) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3712,8 +4242,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
+      if (other.imageOutputOptions_ != null) {
+        if (imageOutputOptions_ == null) {
+          ImageOutputOptions = new global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions();
+        }
+        ImageOutputOptions.MergeFrom(other.ImageOutputOptions);
+      }
       if (other.HasAspectRatio) {
         AspectRatio = other.AspectRatio;
+      }
+      if (other.HasPersonGeneration) {
+        PersonGeneration = other.PersonGeneration;
+      }
+      if (other.HasImageSize) {
+        ImageSize = other.ImageSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3730,8 +4272,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            if (imageOutputOptions_ == null) {
+              ImageOutputOptions = new global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions();
+            }
+            input.ReadMessage(ImageOutputOptions);
+            break;
+          }
           case 18: {
             AspectRatio = input.ReadString();
+            break;
+          }
+          case 24: {
+            PersonGeneration = (global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            ImageSize = input.ReadString();
             break;
           }
         }
@@ -3749,14 +4306,328 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            if (imageOutputOptions_ == null) {
+              ImageOutputOptions = new global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.ImageOutputOptions();
+            }
+            input.ReadMessage(ImageOutputOptions);
+            break;
+          }
           case 18: {
             AspectRatio = input.ReadString();
+            break;
+          }
+          case 24: {
+            PersonGeneration = (global::Google.Cloud.AIPlatform.V1.ImageConfig.Types.PersonGeneration) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            ImageSize = input.ReadString();
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImageConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum for controlling the generation of people in images.
+      /// </summary>
+      public enum PersonGeneration {
+        /// <summary>
+        /// The default behavior is unspecified. The model will decide whether to
+        /// generate images of people.
+        /// </summary>
+        [pbr::OriginalName("PERSON_GENERATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Allows the model to generate images of people, including adults and
+        /// children.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_ALL")] AllowAll = 1,
+        /// <summary>
+        /// Allows the model to generate images of adults, but not children.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_ADULT")] AllowAdult = 2,
+        /// <summary>
+        /// Prevents the model from generating images of people.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_NONE")] AllowNone = 3,
+      }
+
+      /// <summary>
+      /// The image output format for generated images.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ImageOutputOptions : pb::IMessage<ImageOutputOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ImageOutputOptions> _parser = new pb::MessageParser<ImageOutputOptions>(() => new ImageOutputOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ImageOutputOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.ImageConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImageOutputOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImageOutputOptions(ImageOutputOptions other) : this() {
+          _hasBits0 = other._hasBits0;
+          mimeType_ = other.mimeType_;
+          compressionQuality_ = other.compressionQuality_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImageOutputOptions Clone() {
+          return new ImageOutputOptions(this);
+        }
+
+        /// <summary>Field number for the "mime_type" field.</summary>
+        public const int MimeTypeFieldNumber = 1;
+        private readonly static string MimeTypeDefaultValue = "";
+
+        private string mimeType_;
+        /// <summary>
+        /// Optional. The image format that the output should be saved as.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MimeType {
+          get { return mimeType_ ?? MimeTypeDefaultValue; }
+          set {
+            mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "mime_type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMimeType {
+          get { return mimeType_ != null; }
+        }
+        /// <summary>Clears the value of the "mime_type" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMimeType() {
+          mimeType_ = null;
+        }
+
+        /// <summary>Field number for the "compression_quality" field.</summary>
+        public const int CompressionQualityFieldNumber = 2;
+        private readonly static int CompressionQualityDefaultValue = 0;
+
+        private int compressionQuality_;
+        /// <summary>
+        /// Optional. The compression quality of the output image.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CompressionQuality {
+          get { if ((_hasBits0 & 1) != 0) { return compressionQuality_; } else { return CompressionQualityDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            compressionQuality_ = value;
+          }
+        }
+        /// <summary>Gets whether the "compression_quality" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCompressionQuality {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "compression_quality" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCompressionQuality() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ImageOutputOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ImageOutputOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MimeType != other.MimeType) return false;
+          if (CompressionQuality != other.CompressionQuality) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasMimeType) hash ^= MimeType.GetHashCode();
+          if (HasCompressionQuality) hash ^= CompressionQuality.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasMimeType) {
+            output.WriteRawTag(10);
+            output.WriteString(MimeType);
+          }
+          if (HasCompressionQuality) {
+            output.WriteRawTag(16);
+            output.WriteInt32(CompressionQuality);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasMimeType) {
+            output.WriteRawTag(10);
+            output.WriteString(MimeType);
+          }
+          if (HasCompressionQuality) {
+            output.WriteRawTag(16);
+            output.WriteInt32(CompressionQuality);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasMimeType) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+          }
+          if (HasCompressionQuality) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(CompressionQuality);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ImageOutputOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasMimeType) {
+            MimeType = other.MimeType;
+          }
+          if (other.HasCompressionQuality) {
+            CompressionQuality = other.CompressionQuality;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                MimeType = input.ReadString();
+                break;
+              }
+              case 16: {
+                CompressionQuality = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MimeType = input.ReadString();
+                break;
+              }
+              case 16: {
+                CompressionQuality = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -3815,6 +4686,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       responseSchema_ = other.responseSchema_ != null ? other.responseSchema_.Clone() : null;
       responseJsonSchema_ = other.responseJsonSchema_ != null ? other.responseJsonSchema_.Clone() : null;
       routingConfig_ = other.routingConfig_ != null ? other.routingConfig_.Clone() : null;
+      audioTimestamp_ = other.audioTimestamp_;
+      responseModalities_ = other.responseModalities_.Clone();
+      mediaResolution_ = other.mediaResolution_;
       speechConfig_ = other.speechConfig_ != null ? other.speechConfig_.Clone() : null;
       thinkingConfig_ = other.thinkingConfig_ != null ? other.thinkingConfig_.Clone() : null;
       imageConfig_ = other.imageConfig_ != null ? other.imageConfig_.Clone() : null;
@@ -4248,6 +5122,90 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "audio_timestamp" field.</summary>
+    public const int AudioTimestampFieldNumber = 20;
+    private readonly static bool AudioTimestampDefaultValue = false;
+
+    private bool audioTimestamp_;
+    /// <summary>
+    /// Optional. If enabled, audio timestamps will be included in the request to
+    /// the model. This can be useful for synchronizing audio with other modalities
+    /// in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AudioTimestamp {
+      get { if ((_hasBits0 & 1024) != 0) { return audioTimestamp_; } else { return AudioTimestampDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        audioTimestamp_ = value;
+      }
+    }
+    /// <summary>Gets whether the "audio_timestamp" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudioTimestamp {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "audio_timestamp" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudioTimestamp() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "response_modalities" field.</summary>
+    public const int ResponseModalitiesFieldNumber = 21;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality> _repeated_responseModalities_codec
+        = pb::FieldCodec.ForEnum(170, x => (int) x, x => (global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality> responseModalities_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality>();
+    /// <summary>
+    /// Optional. The modalities of the response. The model will generate a
+    /// response that includes all the specified modalities. For example, if this
+    /// is set to `[TEXT, IMAGE]`, the response will include both text and an
+    /// image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.Modality> ResponseModalities {
+      get { return responseModalities_; }
+    }
+
+    /// <summary>Field number for the "media_resolution" field.</summary>
+    public const int MediaResolutionFieldNumber = 22;
+    private readonly static global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution MediaResolutionDefaultValue = global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution.Unspecified;
+
+    private global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution mediaResolution_;
+    /// <summary>
+    /// Optional. The token resolution at which input media content is sampled.
+    /// This is used to control the trade-off between the quality of the response
+    /// and the number of tokens used to represent the media. A higher resolution
+    /// allows the model to perceive more detail, which can lead to a more nuanced
+    /// response, but it will also use more tokens. This does not affect the
+    /// image dimensions sent to the model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution MediaResolution {
+      get { if ((_hasBits0 & 2048) != 0) { return mediaResolution_; } else { return MediaResolutionDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        mediaResolution_ = value;
+      }
+    }
+    /// <summary>Gets whether the "media_resolution" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMediaResolution {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "media_resolution" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMediaResolution() {
+      _hasBits0 &= ~2048;
+    }
+
     /// <summary>Field number for the "speech_config" field.</summary>
     public const int SpeechConfigFieldNumber = 23;
     private global::Google.Cloud.AIPlatform.V1.SpeechConfig speechConfig_;
@@ -4325,6 +5283,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(ResponseSchema, other.ResponseSchema)) return false;
       if (!object.Equals(ResponseJsonSchema, other.ResponseJsonSchema)) return false;
       if (!object.Equals(RoutingConfig, other.RoutingConfig)) return false;
+      if (AudioTimestamp != other.AudioTimestamp) return false;
+      if(!responseModalities_.Equals(other.responseModalities_)) return false;
+      if (MediaResolution != other.MediaResolution) return false;
       if (!object.Equals(SpeechConfig, other.SpeechConfig)) return false;
       if (!object.Equals(ThinkingConfig, other.ThinkingConfig)) return false;
       if (!object.Equals(ImageConfig, other.ImageConfig)) return false;
@@ -4350,6 +5311,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (responseSchema_ != null) hash ^= ResponseSchema.GetHashCode();
       if (responseJsonSchema_ != null) hash ^= ResponseJsonSchema.GetHashCode();
       if (routingConfig_ != null) hash ^= RoutingConfig.GetHashCode();
+      if (HasAudioTimestamp) hash ^= AudioTimestamp.GetHashCode();
+      hash ^= responseModalities_.GetHashCode();
+      if (HasMediaResolution) hash ^= MediaResolution.GetHashCode();
       if (speechConfig_ != null) hash ^= SpeechConfig.GetHashCode();
       if (thinkingConfig_ != null) hash ^= ThinkingConfig.GetHashCode();
       if (imageConfig_ != null) hash ^= ImageConfig.GetHashCode();
@@ -4423,6 +5387,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (HasResponseLogprobs) {
         output.WriteRawTag(144, 1);
         output.WriteBool(ResponseLogprobs);
+      }
+      if (HasAudioTimestamp) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(AudioTimestamp);
+      }
+      responseModalities_.WriteTo(output, _repeated_responseModalities_codec);
+      if (HasMediaResolution) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) MediaResolution);
       }
       if (speechConfig_ != null) {
         output.WriteRawTag(186, 1);
@@ -4503,6 +5476,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(144, 1);
         output.WriteBool(ResponseLogprobs);
       }
+      if (HasAudioTimestamp) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(AudioTimestamp);
+      }
+      responseModalities_.WriteTo(ref output, _repeated_responseModalities_codec);
+      if (HasMediaResolution) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) MediaResolution);
+      }
       if (speechConfig_ != null) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(SpeechConfig);
@@ -4571,6 +5553,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (routingConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoutingConfig);
+      }
+      if (HasAudioTimestamp) {
+        size += 2 + 1;
+      }
+      size += responseModalities_.CalculateSize(_repeated_responseModalities_codec);
+      if (HasMediaResolution) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MediaResolution);
       }
       if (speechConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SpeechConfig);
@@ -4644,6 +5633,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           RoutingConfig = new global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.RoutingConfig();
         }
         RoutingConfig.MergeFrom(other.RoutingConfig);
+      }
+      if (other.HasAudioTimestamp) {
+        AudioTimestamp = other.AudioTimestamp;
+      }
+      responseModalities_.Add(other.responseModalities_);
+      if (other.HasMediaResolution) {
+        MediaResolution = other.MediaResolution;
       }
       if (other.speechConfig_ != null) {
         if (speechConfig_ == null) {
@@ -4738,6 +5734,19 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 144: {
             ResponseLogprobs = input.ReadBool();
+            break;
+          }
+          case 160: {
+            AudioTimestamp = input.ReadBool();
+            break;
+          }
+          case 170:
+          case 168: {
+            responseModalities_.AddEntriesFrom(input, _repeated_responseModalities_codec);
+            break;
+          }
+          case 176: {
+            MediaResolution = (global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution) input.ReadEnum();
             break;
           }
           case 186: {
@@ -4845,6 +5854,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             ResponseLogprobs = input.ReadBool();
             break;
           }
+          case 160: {
+            AudioTimestamp = input.ReadBool();
+            break;
+          }
+          case 170:
+          case 168: {
+            responseModalities_.AddEntriesFrom(ref input, _repeated_responseModalities_codec);
+            break;
+          }
+          case 176: {
+            MediaResolution = (global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.MediaResolution) input.ReadEnum();
+            break;
+          }
           case 186: {
             if (speechConfig_ == null) {
               SpeechConfig = new global::Google.Cloud.AIPlatform.V1.SpeechConfig();
@@ -4883,6 +5905,50 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The modalities of the response.
+      /// </summary>
+      public enum Modality {
+        /// <summary>
+        /// Unspecified modality. Will be processed as text.
+        /// </summary>
+        [pbr::OriginalName("MODALITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Text modality.
+        /// </summary>
+        [pbr::OriginalName("TEXT")] Text = 1,
+        /// <summary>
+        /// Image modality.
+        /// </summary>
+        [pbr::OriginalName("IMAGE")] Image = 2,
+        /// <summary>
+        /// Audio modality.
+        /// </summary>
+        [pbr::OriginalName("AUDIO")] Audio = 3,
+      }
+
+      /// <summary>
+      /// Media resolution for the input media.
+      /// </summary>
+      public enum MediaResolution {
+        /// <summary>
+        /// Media resolution has not been set.
+        /// </summary>
+        [pbr::OriginalName("MEDIA_RESOLUTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Media resolution set to low (64 tokens).
+        /// </summary>
+        [pbr::OriginalName("MEDIA_RESOLUTION_LOW")] Low = 1,
+        /// <summary>
+        /// Media resolution set to medium (256 tokens).
+        /// </summary>
+        [pbr::OriginalName("MEDIA_RESOLUTION_MEDIUM")] Medium = 2,
+        /// <summary>
+        /// Media resolution set to high (zoomed reframing with 256 tokens).
+        /// </summary>
+        [pbr::OriginalName("MEDIA_RESOLUTION_HIGH")] High = 3,
+      }
+
       /// <summary>
       /// The configuration for routing the request to a specific model.
       /// </summary>
@@ -5684,6 +6750,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           _hasBits0 = other._hasBits0;
           includeThoughts_ = other.includeThoughts_;
           thinkingBudget_ = other.thinkingBudget_;
+          thinkingLevel_ = other.thinkingLevel_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5755,6 +6822,36 @@ namespace Google.Cloud.AIPlatform.V1 {
           _hasBits0 &= ~2;
         }
 
+        /// <summary>Field number for the "thinking_level" field.</summary>
+        public const int ThinkingLevelFieldNumber = 4;
+        private readonly static global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel ThinkingLevelDefaultValue = global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Unspecified;
+
+        private global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel thinkingLevel_;
+        /// <summary>
+        /// Optional. The number of thoughts tokens that the model should generate.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel ThinkingLevel {
+          get { if ((_hasBits0 & 4) != 0) { return thinkingLevel_; } else { return ThinkingLevelDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            thinkingLevel_ = value;
+          }
+        }
+        /// <summary>Gets whether the "thinking_level" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasThinkingLevel {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "thinking_level" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearThinkingLevel() {
+          _hasBits0 &= ~4;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5772,6 +6869,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (IncludeThoughts != other.IncludeThoughts) return false;
           if (ThinkingBudget != other.ThinkingBudget) return false;
+          if (ThinkingLevel != other.ThinkingLevel) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5781,6 +6879,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (HasIncludeThoughts) hash ^= IncludeThoughts.GetHashCode();
           if (HasThinkingBudget) hash ^= ThinkingBudget.GetHashCode();
+          if (HasThinkingLevel) hash ^= ThinkingLevel.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5807,6 +6906,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(24);
             output.WriteInt32(ThinkingBudget);
           }
+          if (HasThinkingLevel) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ThinkingLevel);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5825,6 +6928,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(24);
             output.WriteInt32(ThinkingBudget);
           }
+          if (HasThinkingLevel) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ThinkingLevel);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5840,6 +6947,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (HasThinkingBudget) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(ThinkingBudget);
+          }
+          if (HasThinkingLevel) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ThinkingLevel);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5858,6 +6968,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.HasThinkingBudget) {
             ThinkingBudget = other.ThinkingBudget;
+          }
+          if (other.HasThinkingLevel) {
+            ThinkingLevel = other.ThinkingLevel;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5880,6 +6993,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 24: {
                 ThinkingBudget = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                ThinkingLevel = (global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel) input.ReadEnum();
                 break;
               }
             }
@@ -5905,10 +7022,48 @@ namespace Google.Cloud.AIPlatform.V1 {
                 ThinkingBudget = input.ReadInt32();
                 break;
               }
+              case 32: {
+                ThinkingLevel = (global::Google.Cloud.AIPlatform.V1.GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel) input.ReadEnum();
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ThinkingConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The thinking level for the model.
+          /// </summary>
+          public enum ThinkingLevel {
+            /// <summary>
+            /// Unspecified thinking level.
+            /// </summary>
+            [pbr::OriginalName("THINKING_LEVEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Low thinking level.
+            /// </summary>
+            [pbr::OriginalName("LOW")] Low = 1,
+            /// <summary>
+            /// Medium thinking level.
+            /// </summary>
+            [pbr::OriginalName("MEDIUM")] Medium = 2,
+            /// <summary>
+            /// High thinking level.
+            /// </summary>
+            [pbr::OriginalName("HIGH")] High = 3,
+            /// <summary>
+            /// MINIMAL thinking level.
+            /// </summary>
+            [pbr::OriginalName("MINIMAL")] Minimal = 4,
+          }
+
+        }
+        #endregion
 
       }
 
