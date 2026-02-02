@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-02-02
+
+### New features
+
+- Hierarchical Quota Adjuster
+
+### Documentation improvements
+
+- Folder level and organization level support for the quota adjuster feature.
+- Correct typo in comment for field `quota_id`
+
 ## Version 1.0.0-beta03, released 2025-11-05
 
 ### New features
