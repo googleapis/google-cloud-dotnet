@@ -41,12 +41,11 @@ namespace Google.Ads.DataManager.V1 {
             "QgPgQQISFQoIcm9sZV9hcm4YAiABKAlCA+BBAhIUCgdrZWtfdXJpGAMgASgJ",
             "QgPgQQISGgoNZW5jcnlwdGVkX2RlaxgEIAEoCUID4EECIjsKB0tleVR5cGUS",
             "GAoUS0VZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJYQ0hBQ0hBMjBfUE9MWTEz",
-            "MDUQAULTAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCE0VuY3J5",
-            "cHRpb25JbmZvUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9hZHMvZGF0YW1hbmFnZXIvdjE7ZGF0YW1hbmFnZXKqAhlH",
-            "b29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFu",
-            "YWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3Rv",
-            "Mw=="));
+            "MDUQAULQAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCE0VuY3J5",
+            "cHRpb25JbmZvUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFu",
+            "YWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29n",
+            "bGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdl",
+            "clxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -445,7 +444,9 @@ namespace Google.Ads.DataManager.V1 {
     /// Required. Google Cloud Platform [Cloud Key Management Service resource
     /// ID](//cloud.google.com/kms/docs/getting-resource-ids).  Should be in the
     /// format of
-    /// "projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}".
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
+    /// or
+    /// `gcp-kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -770,7 +771,7 @@ namespace Google.Ads.DataManager.V1 {
     /// <summary>
     /// Required. The Amazon Resource Name of the IAM Role to assume for KMS
     /// decryption access. Should be in the format of
-    /// "arn:{partition}:iam::{account_id}:role/{role_name}"
+    /// `arn:{partition}:iam::{account_id}:role/{role_name}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -786,7 +787,8 @@ namespace Google.Ads.DataManager.V1 {
     private string kekUri_ = "";
     /// <summary>
     /// Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
-    /// the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+    /// the format of `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or
+    /// `aws-kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
