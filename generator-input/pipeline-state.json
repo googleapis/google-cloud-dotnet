@@ -2004,8 +2004,9 @@
         {
             "id": "Google.Cloud.Logging.NLog",
             "currentVersion": "5.2.0",
+            "nextVersion": "6.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-26T08:16:33Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.NLog/Google.Cloud.Logging.NLog"
