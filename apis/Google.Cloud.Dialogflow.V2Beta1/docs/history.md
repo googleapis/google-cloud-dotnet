@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta28, released 2026-02-02
+
+### New features
+
+- Added a new field StreamingAnalyzeContentRequest.output_multiple_utterances
+
 ## Version 1.0.0-beta27, released 2025-12-15
 
 ### New features
