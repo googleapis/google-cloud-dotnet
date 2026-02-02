@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-02-02
+
+### Bug fixes
+
+- Update `go_package` packaging option from `google.golang.org/genproto/googleapis/ads/datamanager/v1;datamanager` to `cloud.google.com/go/datamanager/apiv1/datamanagerpb;datamanagerpb`
+
+### Documentation improvements
+
+- Describe additional URI format for kek_uri in GcpEncryptionInfo and AwsKmsEncryptionInfo
+
 ## Version 1.0.0-beta02, released 2025-11-06
 
 ### New features
