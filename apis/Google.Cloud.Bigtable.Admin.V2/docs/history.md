@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.31.0, released 2026-02-02
+
+### New features
+
+- Add TieredStorageConfig to table admin api
+
 ## Version 3.30.0, released 2025-11-05
 
 ### New features

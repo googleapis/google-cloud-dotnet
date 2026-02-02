@@ -793,12 +793,12 @@
         },
         {
             "id": "Google.Cloud.Bigtable.Admin.V2",
-            "currentVersion": "3.30.0",
+            "currentVersion": "3.31.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T08:50:25.047605824Z",
+            "releaseTimestamp": "2026-02-02T14:08:49.604101116Z",
             "lastGeneratedCommit": "a6cbf809c4c165e618ee23a059442af90a80a0f5",
-            "lastReleasedCommit": "3b2a2ae91db23a9c879b2b725d6a5de6bd64a800",
+            "lastReleasedCommit": "a6cbf809c4c165e618ee23a059442af90a80a0f5",
             "apiPaths": [
                 "google/bigtable/admin/v2"
             ],
