@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.61.0, released 2026-02-02
+
+### New features
+
+- Add `fps` to message `VideoMetadata`
+- Add `mediaResolution` to `Part`
+- Add `responseModalities, audioTimestamp, mediaResolution` to `GenerationConfig`
+- Add `thinkingLevel` to `ThinkingConfig`
+- Add `imageOutputOptions, personGeneration, imageSize` to `ImageConfig`
+
 ## Version 3.60.0, released 2026-01-05
 
 ### New features
