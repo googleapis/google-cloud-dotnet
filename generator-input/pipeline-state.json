@@ -4337,8 +4337,10 @@
         },
         {
             "id": "docs-help",
+            "currentVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-02-02T16:56:59.630372820Z",
             "sourcePaths": [
                 "docs/fake-source-path.txt"
             ]
