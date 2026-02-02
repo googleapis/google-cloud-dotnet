@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-02-02
+
+### New features
+
+- Add ClarificationMessage, thought-signature, formatted-data
+
+### Documentation improvements
+
+- A comment for enum value THOUGHT in enum TextType is changed
+
 ## Version 1.0.0-beta07, released 2026-01-13
 
 ### New features
