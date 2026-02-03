@@ -67,69 +67,84 @@ namespace Google.Apps.Chat.V1 {
             "KAsyHy5nb29nbGUuY2hhdC52MS5BY2Nlc3NvcnlXaWRnZXRCA+BBATpD6kFA",
             "ChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USIXNwYWNlcy97c3BhY2V9",
             "L21lc3NhZ2VzL3ttZXNzYWdlfSIfCgtBdHRhY2hlZEdpZhIQCgN1cmkYASAB",
-            "KAlCA+BBAyKJAgoVUXVvdGVkTWVzc2FnZU1ldGFkYXRhEjEKBG5hbWUYASAB",
+            "KAlCA+BBAyKYBAoVUXVvdGVkTWVzc2FnZU1ldGFkYXRhEjEKBG5hbWUYASAB",
             "KAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEjkKEGxh",
             "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQI6gQHqQX4KKWNoYXQuZ29vZ2xlYXBpcy5jb20vUXVvdGVkTWVz",
-            "c2FnZU1ldGFkYXRhElFzcGFjZXMve3NwYWNlfS9tZXNzYWdlcy97bWVzc2Fn",
-            "ZX0vcXVvdGVkTWVzc2FnZU1ldGFkYXRhL3txdW90ZWRfbWVzc2FnZV9tZXRh",
-            "ZGF0YX0idgoGVGhyZWFkEhEKBG5hbWUYASABKAlCA+BBCBIXCgp0aHJlYWRf",
-            "a2V5GAMgASgJQgPgQQE6QOpBPQoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJl",
-            "YWQSH3NwYWNlcy97c3BhY2V9L3RocmVhZHMve3RocmVhZH0i0gQKDkFjdGlv",
-            "blJlc3BvbnNlEj4KBHR5cGUYASABKA4yKy5nb29nbGUuY2hhdC52MS5BY3Rp",
-            "b25SZXNwb25zZS5SZXNwb25zZVR5cGVCA+BBBBIQCgN1cmwYAiABKAlCA+BB",
-            "BBI4Cg1kaWFsb2dfYWN0aW9uGAMgASgLMhwuZ29vZ2xlLmNoYXQudjEuRGlh",
-            "bG9nQWN0aW9uQgPgQQQSSQoOdXBkYXRlZF93aWRnZXQYBCABKAsyLC5nb29n",
-            "bGUuY2hhdC52MS5BY3Rpb25SZXNwb25zZS5VcGRhdGVkV2lkZ2V0QgPgQQQa",
-            "UgoOU2VsZWN0aW9uSXRlbXMSQAoFaXRlbXMYASADKAsyMS5nb29nbGUuYXBw",
-            "cy5jYXJkLnYxLlNlbGVjdGlvbklucHV0LlNlbGVjdGlvbkl0ZW0adwoNVXBk",
-            "YXRlZFdpZGdldBJECgtzdWdnZXN0aW9ucxgBIAEoCzItLmdvb2dsZS5jaGF0",
-            "LnYxLkFjdGlvblJlc3BvbnNlLlNlbGVjdGlvbkl0ZW1zSAASDgoGd2lkZ2V0",
-            "GAIgASgJQhAKDnVwZGF0ZWRfd2lkZ2V0IpsBCgxSZXNwb25zZVR5cGUSFAoQ",
-            "VFlQRV9VTlNQRUNJRklFRBAAEg8KC05FV19NRVNTQUdFEAESEgoOVVBEQVRF",
-            "X01FU1NBR0UQAhIdChlVUERBVEVfVVNFUl9NRVNTQUdFX0NBUkRTEAYSEgoO",
-            "UkVRVUVTVF9DT05GSUcQAxIKCgZESUFMT0cQBBIRCg1VUERBVEVfV0lER0VU",
-            "EAciUwoPQWNjZXNzb3J5V2lkZ2V0EjYKC2J1dHRvbl9saXN0GAEgASgLMh8u",
-            "Z29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25MaXN0SABCCAoGYWN0aW9uIkYK",
-            "EUdldE1lc3NhZ2VSZXF1ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hh",
-            "dC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlIl0KFERlbGV0ZU1lc3NhZ2VSZXF1",
-            "ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNv",
-            "bS9NZXNzYWdlEhIKBWZvcmNlGAIgASgIQgPgQQEilwEKFFVwZGF0ZU1lc3Nh",
-            "Z2VSZXF1ZXN0Ei0KB21lc3NhZ2UYASABKAsyFy5nb29nbGUuY2hhdC52MS5N",
-            "ZXNzYWdlQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrQgPgQQISGgoNYWxsb3dfbWlzc2luZxgEIAEoCEID",
-            "4EEBIqQDChRDcmVhdGVNZXNzYWdlUmVxdWVzdBIzCgZwYXJlbnQYASABKAlC",
-            "I+BBAvpBHRIbY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEi0KB21lc3Nh",
-            "Z2UYBCABKAsyFy5nb29nbGUuY2hhdC52MS5NZXNzYWdlQgPgQQISGQoKdGhy",
-            "ZWFkX2tleRgGIAEoCUIFGAHgQQESFwoKcmVxdWVzdF9pZBgHIAEoCUID4EEB",
-            "EloKFG1lc3NhZ2VfcmVwbHlfb3B0aW9uGAggASgOMjcuZ29vZ2xlLmNoYXQu",
-            "djEuQ3JlYXRlTWVzc2FnZVJlcXVlc3QuTWVzc2FnZVJlcGx5T3B0aW9uQgPg",
-            "QQESFwoKbWVzc2FnZV9pZBgJIAEoCUID4EEBIn8KEk1lc3NhZ2VSZXBseU9w",
-            "dGlvbhIkCiBNRVNTQUdFX1JFUExZX09QVElPTl9VTlNQRUNJRklFRBAAEigK",
-            "JFJFUExZX01FU1NBR0VfRkFMTEJBQ0tfVE9fTkVXX1RIUkVBRBABEhkKFVJF",
-            "UExZX01FU1NBR0VfT1JfRkFJTBACIsIBChNMaXN0TWVzc2FnZXNSZXF1ZXN0",
-            "EjMKBnBhcmVudBgBIAEoCUIj4EEC+kEdEhtjaGF0Lmdvb2dsZWFwaXMuY29t",
-            "L01lc3NhZ2USFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5",
-            "GAUgASgJQgPgQQESGQoMc2hvd19kZWxldGVkGAYgASgIQgPgQQEiWgoUTGlz",
-            "dE1lc3NhZ2VzUmVzcG9uc2USKQoIbWVzc2FnZXMYASADKAsyFy5nb29nbGUu",
-            "Y2hhdC52MS5NZXNzYWdlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKBAQoM",
-            "RGlhbG9nQWN0aW9uEi0KBmRpYWxvZxgBIAEoCzIWLmdvb2dsZS5jaGF0LnYx",
-            "LkRpYWxvZ0ID4EEESAASOAoNYWN0aW9uX3N0YXR1cxgCIAEoCzIcLmdvb2ds",
-            "ZS5jaGF0LnYxLkFjdGlvblN0YXR1c0ID4EEEQggKBmFjdGlvbiI2CgZEaWFs",
-            "b2cSLAoEYm9keRgBIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZEID",
-            "4EEEIkYKCkNhcmRXaXRoSWQSDwoHY2FyZF9pZBgBIAEoCRInCgRjYXJkGAIg",
-            "ASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkQqUBChJjb20uZ29vZ2xl",
-            "LmNoYXQudjFCDE1lc3NhZ2VQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29v",
-            "Z2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29n",
-            "bGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "YW1wQgPgQQISSAoKcXVvdGVfdHlwZRgEIAEoDjIvLmdvb2dsZS5jaGF0LnYx",
+            "LlF1b3RlZE1lc3NhZ2VNZXRhZGF0YS5RdW90ZVR5cGVCA+BBARJLChdxdW90",
+            "ZWRfbWVzc2FnZV9zbmFwc2hvdBgFIAEoCzIlLmdvb2dsZS5jaGF0LnYxLlF1",
+            "b3RlZE1lc3NhZ2VTbmFwc2hvdEID4EEDEkIKEmZvcndhcmRlZF9tZXRhZGF0",
+            "YRgGIAEoCzIhLmdvb2dsZS5jaGF0LnYxLkZvcndhcmRlZE1ldGFkYXRhQgPg",
+            "QQMiMgoJUXVvdGVUeXBlEhoKFlFVT1RFX1RZUEVfVU5TUEVDSUZJRUQQABIJ",
+            "CgVSRVBMWRABOoEB6kF+CiljaGF0Lmdvb2dsZWFwaXMuY29tL1F1b3RlZE1l",
+            "c3NhZ2VNZXRhZGF0YRJRc3BhY2VzL3tzcGFjZX0vbWVzc2FnZXMve21lc3Nh",
+            "Z2V9L3F1b3RlZE1lc3NhZ2VNZXRhZGF0YS97cXVvdGVkX21lc3NhZ2VfbWV0",
+            "YWRhdGF9IsgBChVRdW90ZWRNZXNzYWdlU25hcHNob3QSEwoGc2VuZGVyGAEg",
+            "ASgJQgPgQQMSEQoEdGV4dBgCIAEoCUID4EEDEhsKDmZvcm1hdHRlZF90ZXh0",
+            "GAMgASgJQgPgQQMSNAoLYW5ub3RhdGlvbnMYBCADKAsyGi5nb29nbGUuY2hh",
+            "dC52MS5Bbm5vdGF0aW9uQgPgQQMSNAoLYXR0YWNobWVudHMYBSADKAsyGi5n",
+            "b29nbGUuY2hhdC52MS5BdHRhY2htZW50QgPgQQMiZgoRRm9yd2FyZGVkTWV0",
+            "YWRhdGESMAoFc3BhY2UYASABKAlCIeBBA/pBGwoZY2hhdC5nb29nbGVhcGlz",
+            "LmNvbS9TcGFjZRIfChJzcGFjZV9kaXNwbGF5X25hbWUYAiABKAlCA+BBAyJ2",
+            "CgZUaHJlYWQSEQoEbmFtZRgBIAEoCUID4EEIEhcKCnRocmVhZF9rZXkYAyAB",
+            "KAlCA+BBATpA6kE9ChpjaGF0Lmdvb2dsZWFwaXMuY29tL1RocmVhZBIfc3Bh",
+            "Y2VzL3tzcGFjZX0vdGhyZWFkcy97dGhyZWFkfSLSBAoOQWN0aW9uUmVzcG9u",
+            "c2USPgoEdHlwZRgBIAEoDjIrLmdvb2dsZS5jaGF0LnYxLkFjdGlvblJlc3Bv",
+            "bnNlLlJlc3BvbnNlVHlwZUID4EEEEhAKA3VybBgCIAEoCUID4EEEEjgKDWRp",
+            "YWxvZ19hY3Rpb24YAyABKAsyHC5nb29nbGUuY2hhdC52MS5EaWFsb2dBY3Rp",
+            "b25CA+BBBBJJCg51cGRhdGVkX3dpZGdldBgEIAEoCzIsLmdvb2dsZS5jaGF0",
+            "LnYxLkFjdGlvblJlc3BvbnNlLlVwZGF0ZWRXaWRnZXRCA+BBBBpSCg5TZWxl",
+            "Y3Rpb25JdGVtcxJACgVpdGVtcxgBIAMoCzIxLmdvb2dsZS5hcHBzLmNhcmQu",
+            "djEuU2VsZWN0aW9uSW5wdXQuU2VsZWN0aW9uSXRlbRp3Cg1VcGRhdGVkV2lk",
+            "Z2V0EkQKC3N1Z2dlc3Rpb25zGAEgASgLMi0uZ29vZ2xlLmNoYXQudjEuQWN0",
+            "aW9uUmVzcG9uc2UuU2VsZWN0aW9uSXRlbXNIABIOCgZ3aWRnZXQYAiABKAlC",
+            "EAoOdXBkYXRlZF93aWRnZXQimwEKDFJlc3BvbnNlVHlwZRIUChBUWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDwoLTkVXX01FU1NBR0UQARISCg5VUERBVEVfTUVTU0FH",
+            "RRACEh0KGVVQREFURV9VU0VSX01FU1NBR0VfQ0FSRFMQBhISCg5SRVFVRVNU",
+            "X0NPTkZJRxADEgoKBkRJQUxPRxAEEhEKDVVQREFURV9XSURHRVQQByJTCg9B",
+            "Y2Nlc3NvcnlXaWRnZXQSNgoLYnV0dG9uX2xpc3QYASABKAsyHy5nb29nbGUu",
+            "YXBwcy5jYXJkLnYxLkJ1dHRvbkxpc3RIAEIICgZhY3Rpb24iRgoRR2V0TWVz",
+            "c2FnZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0Lmdvb2ds",
+            "ZWFwaXMuY29tL01lc3NhZ2UiXQoURGVsZXRlTWVzc2FnZVJlcXVlc3QSMQoE",
+            "bmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3Nh",
+            "Z2USEgoFZm9yY2UYAiABKAhCA+BBASKXAQoUVXBkYXRlTWVzc2FnZVJlcXVl",
+            "c3QSLQoHbWVzc2FnZRgBIAEoCzIXLmdvb2dsZS5jaGF0LnYxLk1lc3NhZ2VC",
+            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2tCA+BBAhIaCg1hbGxvd19taXNzaW5nGAQgASgIQgPgQQEipAMK",
+            "FENyZWF0ZU1lc3NhZ2VSZXF1ZXN0EjMKBnBhcmVudBgBIAEoCUIj4EEC+kEd",
+            "EhtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USLQoHbWVzc2FnZRgEIAEo",
+            "CzIXLmdvb2dsZS5jaGF0LnYxLk1lc3NhZ2VCA+BBAhIZCgp0aHJlYWRfa2V5",
+            "GAYgASgJQgUYAeBBARIXCgpyZXF1ZXN0X2lkGAcgASgJQgPgQQESWgoUbWVz",
+            "c2FnZV9yZXBseV9vcHRpb24YCCABKA4yNy5nb29nbGUuY2hhdC52MS5DcmVh",
+            "dGVNZXNzYWdlUmVxdWVzdC5NZXNzYWdlUmVwbHlPcHRpb25CA+BBARIXCgpt",
+            "ZXNzYWdlX2lkGAkgASgJQgPgQQEifwoSTWVzc2FnZVJlcGx5T3B0aW9uEiQK",
+            "IE1FU1NBR0VfUkVQTFlfT1BUSU9OX1VOU1BFQ0lGSUVEEAASKAokUkVQTFlf",
+            "TUVTU0FHRV9GQUxMQkFDS19UT19ORVdfVEhSRUFEEAESGQoVUkVQTFlfTUVT",
+            "U0FHRV9PUl9GQUlMEAIiwgEKE0xpc3RNZXNzYWdlc1JlcXVlc3QSMwoGcGFy",
+            "ZW50GAEgASgJQiPgQQL6QR0SG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2Fn",
+            "ZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
+            "QgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlC",
+            "A+BBARIZCgxzaG93X2RlbGV0ZWQYBiABKAhCA+BBASJaChRMaXN0TWVzc2Fn",
+            "ZXNSZXNwb25zZRIpCghtZXNzYWdlcxgBIAMoCzIXLmdvb2dsZS5jaGF0LnYx",
+            "Lk1lc3NhZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoEBCgxEaWFsb2dB",
+            "Y3Rpb24SLQoGZGlhbG9nGAEgASgLMhYuZ29vZ2xlLmNoYXQudjEuRGlhbG9n",
+            "QgPgQQRIABI4Cg1hY3Rpb25fc3RhdHVzGAIgASgLMhwuZ29vZ2xlLmNoYXQu",
+            "djEuQWN0aW9uU3RhdHVzQgPgQQRCCAoGYWN0aW9uIjYKBkRpYWxvZxIsCgRi",
+            "b2R5GAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkQgPgQQQiRgoK",
+            "Q2FyZFdpdGhJZBIPCgdjYXJkX2lkGAEgASgJEicKBGNhcmQYAiABKAsyGS5n",
+            "b29nbGUuYXBwcy5jYXJkLnYxLkNhcmRCpQEKEmNvbS5nb29nbGUuY2hhdC52",
+            "MUIMTWVzc2FnZVByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9h",
+            "cGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBw",
+            "cy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBw",
+            "czo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Card.V1.CardReflection.Descriptor, global::Google.Apps.Chat.V1.ActionStatusReflection.Descriptor, global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ContextualAddonReflection.Descriptor, global::Google.Apps.Chat.V1.DeletionMetadataReflection.Descriptor, global::Google.Apps.Chat.V1.MatchedUrlReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.SlashCommandReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Message), global::Google.Apps.Chat.V1.Message.Parser, new[]{ "Name", "Sender", "CreateTime", "LastUpdateTime", "DeleteTime", "Text", "FormattedText", "Cards", "CardsV2", "Annotations", "Thread", "Space", "FallbackText", "ActionResponse", "ArgumentText", "SlashCommand", "Attachment", "MatchedUrl", "ThreadReply", "ClientAssignedMessageId", "EmojiReactionSummaries", "PrivateMessageViewer", "DeletionMetadata", "QuotedMessageMetadata", "AttachedGifs", "AccessoryWidgets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.AttachedGif), global::Google.Apps.Chat.V1.AttachedGif.Parser, new[]{ "Uri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.QuotedMessageMetadata), global::Google.Apps.Chat.V1.QuotedMessageMetadata.Parser, new[]{ "Name", "LastUpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.QuotedMessageMetadata), global::Google.Apps.Chat.V1.QuotedMessageMetadata.Parser, new[]{ "Name", "LastUpdateTime", "QuoteType", "QuotedMessageSnapshot", "ForwardedMetadata" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.QuotedMessageSnapshot), global::Google.Apps.Chat.V1.QuotedMessageSnapshot.Parser, new[]{ "Sender", "Text", "FormattedText", "Annotations", "Attachments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ForwardedMetadata), global::Google.Apps.Chat.V1.ForwardedMetadata.Parser, new[]{ "Space", "SpaceDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Thread), global::Google.Apps.Chat.V1.Thread.Parser, new[]{ "Name", "ThreadKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ActionResponse), global::Google.Apps.Chat.V1.ActionResponse.Parser, new[]{ "Type", "Url", "DialogAction", "UpdatedWidget" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.ActionResponse.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ActionResponse.Types.SelectionItems), global::Google.Apps.Chat.V1.ActionResponse.Types.SelectionItems.Parser, new[]{ "Items" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ActionResponse.Types.UpdatedWidget), global::Google.Apps.Chat.V1.ActionResponse.Types.UpdatedWidget.Parser, new[]{ "Suggestions", "Widget" }, new[]{ "UpdatedWidget" }, null, null, null)}),
@@ -1748,6 +1763,9 @@ namespace Google.Apps.Chat.V1 {
     public QuotedMessageMetadata(QuotedMessageMetadata other) : this() {
       name_ = other.name_;
       lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
+      quoteType_ = other.quoteType_;
+      quotedMessageSnapshot_ = other.quotedMessageSnapshot_ != null ? other.quotedMessageSnapshot_.Clone() : null;
+      forwardedMetadata_ = other.forwardedMetadata_ != null ? other.forwardedMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1796,6 +1814,53 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "quote_type" field.</summary>
+    public const int QuoteTypeFieldNumber = 4;
+    private global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType quoteType_ = global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified;
+    /// <summary>
+    /// Optional. Specifies the quote type. If not set, defaults to REPLY in the
+    /// message read/write path for backward compatibility.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType QuoteType {
+      get { return quoteType_; }
+      set {
+        quoteType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quoted_message_snapshot" field.</summary>
+    public const int QuotedMessageSnapshotFieldNumber = 5;
+    private global::Google.Apps.Chat.V1.QuotedMessageSnapshot quotedMessageSnapshot_;
+    /// <summary>
+    /// Output only. A snapshot of the quoted message's content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.QuotedMessageSnapshot QuotedMessageSnapshot {
+      get { return quotedMessageSnapshot_; }
+      set {
+        quotedMessageSnapshot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "forwarded_metadata" field.</summary>
+    public const int ForwardedMetadataFieldNumber = 6;
+    private global::Google.Apps.Chat.V1.ForwardedMetadata forwardedMetadata_;
+    /// <summary>
+    /// Output only. Metadata about the source space of the quoted message.
+    /// Populated only for FORWARD quote type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.ForwardedMetadata ForwardedMetadata {
+      get { return forwardedMetadata_; }
+      set {
+        forwardedMetadata_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1813,6 +1878,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+      if (QuoteType != other.QuoteType) return false;
+      if (!object.Equals(QuotedMessageSnapshot, other.QuotedMessageSnapshot)) return false;
+      if (!object.Equals(ForwardedMetadata, other.ForwardedMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1822,6 +1890,9 @@ namespace Google.Apps.Chat.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+      if (QuoteType != global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified) hash ^= QuoteType.GetHashCode();
+      if (quotedMessageSnapshot_ != null) hash ^= QuotedMessageSnapshot.GetHashCode();
+      if (forwardedMetadata_ != null) hash ^= ForwardedMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1848,6 +1919,18 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(LastUpdateTime);
       }
+      if (QuoteType != global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) QuoteType);
+      }
+      if (quotedMessageSnapshot_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(QuotedMessageSnapshot);
+      }
+      if (forwardedMetadata_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForwardedMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1866,6 +1949,18 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(LastUpdateTime);
       }
+      if (QuoteType != global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) QuoteType);
+      }
+      if (quotedMessageSnapshot_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(QuotedMessageSnapshot);
+      }
+      if (forwardedMetadata_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForwardedMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1881,6 +1976,15 @@ namespace Google.Apps.Chat.V1 {
       }
       if (lastUpdateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+      }
+      if (QuoteType != global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) QuoteType);
+      }
+      if (quotedMessageSnapshot_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuotedMessageSnapshot);
+      }
+      if (forwardedMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForwardedMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1902,6 +2006,21 @@ namespace Google.Apps.Chat.V1 {
           LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastUpdateTime.MergeFrom(other.LastUpdateTime);
+      }
+      if (other.QuoteType != global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType.Unspecified) {
+        QuoteType = other.QuoteType;
+      }
+      if (other.quotedMessageSnapshot_ != null) {
+        if (quotedMessageSnapshot_ == null) {
+          QuotedMessageSnapshot = new global::Google.Apps.Chat.V1.QuotedMessageSnapshot();
+        }
+        QuotedMessageSnapshot.MergeFrom(other.QuotedMessageSnapshot);
+      }
+      if (other.forwardedMetadata_ != null) {
+        if (forwardedMetadata_ == null) {
+          ForwardedMetadata = new global::Google.Apps.Chat.V1.ForwardedMetadata();
+        }
+        ForwardedMetadata.MergeFrom(other.ForwardedMetadata);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1929,6 +2048,24 @@ namespace Google.Apps.Chat.V1 {
             input.ReadMessage(LastUpdateTime);
             break;
           }
+          case 32: {
+            QuoteType = (global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (quotedMessageSnapshot_ == null) {
+              QuotedMessageSnapshot = new global::Google.Apps.Chat.V1.QuotedMessageSnapshot();
+            }
+            input.ReadMessage(QuotedMessageSnapshot);
+            break;
+          }
+          case 50: {
+            if (forwardedMetadata_ == null) {
+              ForwardedMetadata = new global::Google.Apps.Chat.V1.ForwardedMetadata();
+            }
+            input.ReadMessage(ForwardedMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -1953,6 +2090,636 @@ namespace Google.Apps.Chat.V1 {
               LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastUpdateTime);
+            break;
+          }
+          case 32: {
+            QuoteType = (global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (quotedMessageSnapshot_ == null) {
+              QuotedMessageSnapshot = new global::Google.Apps.Chat.V1.QuotedMessageSnapshot();
+            }
+            input.ReadMessage(QuotedMessageSnapshot);
+            break;
+          }
+          case 50: {
+            if (forwardedMetadata_ == null) {
+              ForwardedMetadata = new global::Google.Apps.Chat.V1.ForwardedMetadata();
+            }
+            input.ReadMessage(ForwardedMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the QuotedMessageMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The quote type of the quoted message.
+      /// </summary>
+      public enum QuoteType {
+        /// <summary>
+        /// Reserved. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("QUOTE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// If quote_type is `REPLY`, you can do the following:
+        ///
+        /// * If you're replying in a thread, you can quote another message in that
+        /// thread.
+        ///
+        /// * If you're creating a root message, you can quote another root message
+        /// in that space.
+        ///
+        /// You can't quote a message reply from a different thread.
+        /// </summary>
+        [pbr::OriginalName("REPLY")] Reply = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Provides a snapshot of the content of the quoted message at the time of
+  /// quoting or forwarding
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QuotedMessageSnapshot : pb::IMessage<QuotedMessageSnapshot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QuotedMessageSnapshot> _parser = new pb::MessageParser<QuotedMessageSnapshot>(() => new QuotedMessageSnapshot());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QuotedMessageSnapshot> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuotedMessageSnapshot() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuotedMessageSnapshot(QuotedMessageSnapshot other) : this() {
+      sender_ = other.sender_;
+      text_ = other.text_;
+      formattedText_ = other.formattedText_;
+      annotations_ = other.annotations_.Clone();
+      attachments_ = other.attachments_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QuotedMessageSnapshot Clone() {
+      return new QuotedMessageSnapshot(this);
+    }
+
+    /// <summary>Field number for the "sender" field.</summary>
+    public const int SenderFieldNumber = 1;
+    private string sender_ = "";
+    /// <summary>
+    /// Output only. The quoted message's author name.
+    /// Populated for both REPLY &amp; FORWARD quote types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Sender {
+      get { return sender_; }
+      set {
+        sender_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 2;
+    private string text_ = "";
+    /// <summary>
+    /// Output only. Snapshot of the quoted message's text content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "formatted_text" field.</summary>
+    public const int FormattedTextFieldNumber = 3;
+    private string formattedText_ = "";
+    /// <summary>
+    /// Output only. Contains the quoted message `text` with markups added to
+    /// support rich formatting like hyperlinks,custom emojis, markup, etc.
+    /// Populated only for FORWARD quote type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FormattedText {
+      get { return formattedText_; }
+      set {
+        formattedText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Apps.Chat.V1.Annotation> _repeated_annotations_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Apps.Chat.V1.Annotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Annotation> annotations_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Annotation>();
+    /// <summary>
+    /// Output only. Annotations parsed from the text body of the quoted message.
+    /// Populated only for FORWARD quote type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Chat.V1.Annotation> Annotations {
+      get { return annotations_; }
+    }
+
+    /// <summary>Field number for the "attachments" field.</summary>
+    public const int AttachmentsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Apps.Chat.V1.Attachment> _repeated_attachments_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Apps.Chat.V1.Attachment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Attachment> attachments_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Attachment>();
+    /// <summary>
+    /// Output only. Attachments that were part of the quoted message. These are
+    /// copies of the quoted message's attachment metadata. Populated only for
+    /// FORWARD quote type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Chat.V1.Attachment> Attachments {
+      get { return attachments_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QuotedMessageSnapshot);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QuotedMessageSnapshot other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Sender != other.Sender) return false;
+      if (Text != other.Text) return false;
+      if (FormattedText != other.FormattedText) return false;
+      if(!annotations_.Equals(other.annotations_)) return false;
+      if(!attachments_.Equals(other.attachments_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Sender.Length != 0) hash ^= Sender.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (FormattedText.Length != 0) hash ^= FormattedText.GetHashCode();
+      hash ^= annotations_.GetHashCode();
+      hash ^= attachments_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Sender.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Sender);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (FormattedText.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FormattedText);
+      }
+      annotations_.WriteTo(output, _repeated_annotations_codec);
+      attachments_.WriteTo(output, _repeated_attachments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Sender.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Sender);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (FormattedText.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FormattedText);
+      }
+      annotations_.WriteTo(ref output, _repeated_annotations_codec);
+      attachments_.WriteTo(ref output, _repeated_attachments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Sender.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sender);
+      }
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (FormattedText.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FormattedText);
+      }
+      size += annotations_.CalculateSize(_repeated_annotations_codec);
+      size += attachments_.CalculateSize(_repeated_attachments_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QuotedMessageSnapshot other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Sender.Length != 0) {
+        Sender = other.Sender;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      if (other.FormattedText.Length != 0) {
+        FormattedText = other.FormattedText;
+      }
+      annotations_.Add(other.annotations_);
+      attachments_.Add(other.attachments_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            FormattedText = input.ReadString();
+            break;
+          }
+          case 34: {
+            annotations_.AddEntriesFrom(input, _repeated_annotations_codec);
+            break;
+          }
+          case 42: {
+            attachments_.AddEntriesFrom(input, _repeated_attachments_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            FormattedText = input.ReadString();
+            break;
+          }
+          case 34: {
+            annotations_.AddEntriesFrom(ref input, _repeated_annotations_codec);
+            break;
+          }
+          case 42: {
+            attachments_.AddEntriesFrom(ref input, _repeated_attachments_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata about the source space from which a message was forwarded.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ForwardedMetadata : pb::IMessage<ForwardedMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ForwardedMetadata> _parser = new pb::MessageParser<ForwardedMetadata>(() => new ForwardedMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ForwardedMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardedMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardedMetadata(ForwardedMetadata other) : this() {
+      space_ = other.space_;
+      spaceDisplayName_ = other.spaceDisplayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardedMetadata Clone() {
+      return new ForwardedMetadata(this);
+    }
+
+    /// <summary>Field number for the "space" field.</summary>
+    public const int SpaceFieldNumber = 1;
+    private string space_ = "";
+    /// <summary>
+    /// Output only. The resource name of the source space.
+    /// Format: spaces/{space}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Space {
+      get { return space_; }
+      set {
+        space_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "space_display_name" field.</summary>
+    public const int SpaceDisplayNameFieldNumber = 2;
+    private string spaceDisplayName_ = "";
+    /// <summary>
+    /// Output only. The display name of the source space or DM at the time of
+    /// forwarding. For `SPACE`, this is the space name. For `DIRECT_MESSAGE`, this
+    /// is the other participant's name (e.g., "User A"). For `GROUP_CHAT`, this is
+    /// a generated name based on members' first names, limited to 5 including the
+    /// creator (e.g., "User A, User B").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SpaceDisplayName {
+      get { return spaceDisplayName_; }
+      set {
+        spaceDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ForwardedMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ForwardedMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Space != other.Space) return false;
+      if (SpaceDisplayName != other.SpaceDisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Space.Length != 0) hash ^= Space.GetHashCode();
+      if (SpaceDisplayName.Length != 0) hash ^= SpaceDisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Space.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Space);
+      }
+      if (SpaceDisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SpaceDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Space.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Space);
+      }
+      if (SpaceDisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SpaceDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Space.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Space);
+      }
+      if (SpaceDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpaceDisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ForwardedMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Space.Length != 0) {
+        Space = other.Space;
+      }
+      if (other.SpaceDisplayName.Length != 0) {
+        SpaceDisplayName = other.SpaceDisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Space = input.ReadString();
+            break;
+          }
+          case 18: {
+            SpaceDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Space = input.ReadString();
+            break;
+          }
+          case 18: {
+            SpaceDisplayName = input.ReadString();
             break;
           }
         }
@@ -1986,7 +2753,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2231,7 +2998,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3082,7 +3849,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3321,7 +4088,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3524,7 +4291,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3773,7 +4540,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4088,7 +4855,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4561,7 +5328,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5017,7 +5784,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5245,7 +6012,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5538,7 +6305,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5753,7 +6520,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
