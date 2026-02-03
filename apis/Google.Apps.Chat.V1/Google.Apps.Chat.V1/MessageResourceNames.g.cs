@@ -759,6 +759,16 @@ namespace Google.Apps.Chat.V1
         }
     }
 
+    public partial class ForwardedMetadata
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Space"/> resource name property.</summary>
+        public SpaceName SpaceAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Space) ? null : SpaceName.Parse(Space, allowUnparsed: true);
+            set => Space = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Thread
     {
         /// <summary>
