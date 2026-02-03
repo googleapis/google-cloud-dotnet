@@ -714,6 +714,7 @@ namespace GoogleCSharpSnippets
             {
                 RagCorpusName = RagCorpusName.FromProjectLocationRagCorpus("[PROJECT]", "[LOCATION]", "[RAG_CORPUS]"),
                 Force = false,
+                ForceDelete = false,
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = vertexRagDataServiceClient.DeleteRagCorpus(request);
@@ -748,6 +749,7 @@ namespace GoogleCSharpSnippets
             {
                 RagCorpusName = RagCorpusName.FromProjectLocationRagCorpus("[PROJECT]", "[LOCATION]", "[RAG_CORPUS]"),
                 Force = false,
+                ForceDelete = false,
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = await vertexRagDataServiceClient.DeleteRagCorpusAsync(request);
