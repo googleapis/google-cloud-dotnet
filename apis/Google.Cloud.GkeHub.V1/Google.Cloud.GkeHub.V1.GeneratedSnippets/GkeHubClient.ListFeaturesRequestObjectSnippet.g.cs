@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListFeaturesResponse, Feature> response = gkeHubClient.ListFeatures(request);

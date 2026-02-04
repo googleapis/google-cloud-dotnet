@@ -56,6 +56,7 @@ namespace Google.Cloud.GkeHub.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return FeatureReflection.Descriptor;
+            yield return FleetReflection.Descriptor;
             yield return MembershipReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

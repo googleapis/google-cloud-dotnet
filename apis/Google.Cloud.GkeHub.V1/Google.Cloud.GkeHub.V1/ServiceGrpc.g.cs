@@ -3,7 +3,7 @@
 //     source: google/cloud/gkehub/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -84,6 +84,10 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListMembershipsResponse> __Marshaller_google_cloud_gkehub_v1_ListMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListMembershipsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest> __Marshaller_google_cloud_gkehub_v1_ListBoundMembershipsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse> __Marshaller_google_cloud_gkehub_v1_ListBoundMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListFeaturesRequest> __Marshaller_google_cloud_gkehub_v1_ListFeaturesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListFeaturesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListFeaturesResponse> __Marshaller_google_cloud_gkehub_v1_ListFeaturesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListFeaturesResponse.Parser));
@@ -113,6 +117,96 @@ namespace Google.Cloud.GkeHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest> __Marshaller_google_cloud_gkehub_v1_GenerateConnectManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse> __Marshaller_google_cloud_gkehub_v1_GenerateConnectManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateFleetRequest> __Marshaller_google_cloud_gkehub_v1_CreateFleetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateFleetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetFleetRequest> __Marshaller_google_cloud_gkehub_v1_GetFleetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetFleetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.Fleet> __Marshaller_google_cloud_gkehub_v1_Fleet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.Fleet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateFleetRequest> __Marshaller_google_cloud_gkehub_v1_UpdateFleetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateFleetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteFleetRequest> __Marshaller_google_cloud_gkehub_v1_DeleteFleetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteFleetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListFleetsRequest> __Marshaller_google_cloud_gkehub_v1_ListFleetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListFleetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListFleetsResponse> __Marshaller_google_cloud_gkehub_v1_ListFleetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListFleetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest> __Marshaller_google_cloud_gkehub_v1_GetScopeNamespaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.Namespace> __Marshaller_google_cloud_gkehub_v1_Namespace = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.Namespace.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest> __Marshaller_google_cloud_gkehub_v1_CreateScopeNamespaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest> __Marshaller_google_cloud_gkehub_v1_UpdateScopeNamespaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest> __Marshaller_google_cloud_gkehub_v1_DeleteScopeNamespaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest> __Marshaller_google_cloud_gkehub_v1_ListScopeNamespacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse> __Marshaller_google_cloud_gkehub_v1_ListScopeNamespacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_GetScopeRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> __Marshaller_google_cloud_gkehub_v1_RBACRoleBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.RBACRoleBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_CreateScopeRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_UpdateScopeRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_DeleteScopeRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest> __Marshaller_google_cloud_gkehub_v1_ListScopeRBACRoleBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse> __Marshaller_google_cloud_gkehub_v1_ListScopeRBACRoleBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetScopeRequest> __Marshaller_google_cloud_gkehub_v1_GetScopeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetScopeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.Scope> __Marshaller_google_cloud_gkehub_v1_Scope = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.Scope.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateScopeRequest> __Marshaller_google_cloud_gkehub_v1_CreateScopeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateScopeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateScopeRequest> __Marshaller_google_cloud_gkehub_v1_UpdateScopeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateScopeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteScopeRequest> __Marshaller_google_cloud_gkehub_v1_DeleteScopeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteScopeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopesRequest> __Marshaller_google_cloud_gkehub_v1_ListScopesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListScopesResponse> __Marshaller_google_cloud_gkehub_v1_ListScopesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListScopesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest> __Marshaller_google_cloud_gkehub_v1_ListPermittedScopesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse> __Marshaller_google_cloud_gkehub_v1_ListPermittedScopesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest> __Marshaller_google_cloud_gkehub_v1_GetMembershipBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.MembershipBinding> __Marshaller_google_cloud_gkehub_v1_MembershipBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.MembershipBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest> __Marshaller_google_cloud_gkehub_v1_CreateMembershipBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest> __Marshaller_google_cloud_gkehub_v1_UpdateMembershipBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest> __Marshaller_google_cloud_gkehub_v1_DeleteMembershipBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest> __Marshaller_google_cloud_gkehub_v1_ListMembershipBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse> __Marshaller_google_cloud_gkehub_v1_ListMembershipBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_GetMembershipRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_CreateMembershipRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_UpdateMembershipRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest> __Marshaller_google_cloud_gkehub_v1_DeleteMembershipRBACRoleBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest> __Marshaller_google_cloud_gkehub_v1_ListMembershipRBACRoleBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse> __Marshaller_google_cloud_gkehub_v1_ListMembershipRBACRoleBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest> __Marshaller_google_cloud_gkehub_v1_GenerateMembershipRBACRoleBindingYAMLRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse> __Marshaller_google_cloud_gkehub_v1_GenerateMembershipRBACRoleBindingYAMLResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipsResponse> __Method_ListMemberships = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipsResponse>(
@@ -121,6 +215,14 @@ namespace Google.Cloud.GkeHub.V1 {
         "ListMemberships",
         __Marshaller_google_cloud_gkehub_v1_ListMembershipsRequest,
         __Marshaller_google_cloud_gkehub_v1_ListMembershipsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse> __Method_ListBoundMemberships = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBoundMemberships",
+        __Marshaller_google_cloud_gkehub_v1_ListBoundMembershipsRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListBoundMembershipsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListFeaturesRequest, global::Google.Cloud.GkeHub.V1.ListFeaturesResponse> __Method_ListFeatures = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListFeaturesRequest, global::Google.Cloud.GkeHub.V1.ListFeaturesResponse>(
@@ -202,6 +304,262 @@ namespace Google.Cloud.GkeHub.V1 {
         __Marshaller_google_cloud_gkehub_v1_GenerateConnectManifestRequest,
         __Marshaller_google_cloud_gkehub_v1_GenerateConnectManifestResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateFleetRequest, global::Google.LongRunning.Operation> __Method_CreateFleet = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateFleetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateFleet",
+        __Marshaller_google_cloud_gkehub_v1_CreateFleetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetFleetRequest, global::Google.Cloud.GkeHub.V1.Fleet> __Method_GetFleet = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetFleetRequest, global::Google.Cloud.GkeHub.V1.Fleet>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFleet",
+        __Marshaller_google_cloud_gkehub_v1_GetFleetRequest,
+        __Marshaller_google_cloud_gkehub_v1_Fleet);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateFleetRequest, global::Google.LongRunning.Operation> __Method_UpdateFleet = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateFleetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFleet",
+        __Marshaller_google_cloud_gkehub_v1_UpdateFleetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteFleetRequest, global::Google.LongRunning.Operation> __Method_DeleteFleet = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteFleetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFleet",
+        __Marshaller_google_cloud_gkehub_v1_DeleteFleetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListFleetsRequest, global::Google.Cloud.GkeHub.V1.ListFleetsResponse> __Method_ListFleets = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListFleetsRequest, global::Google.Cloud.GkeHub.V1.ListFleetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFleets",
+        __Marshaller_google_cloud_gkehub_v1_ListFleetsRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListFleetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest, global::Google.Cloud.GkeHub.V1.Namespace> __Method_GetScopeNamespace = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest, global::Google.Cloud.GkeHub.V1.Namespace>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetScopeNamespace",
+        __Marshaller_google_cloud_gkehub_v1_GetScopeNamespaceRequest,
+        __Marshaller_google_cloud_gkehub_v1_Namespace);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest, global::Google.LongRunning.Operation> __Method_CreateScopeNamespace = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateScopeNamespace",
+        __Marshaller_google_cloud_gkehub_v1_CreateScopeNamespaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest, global::Google.LongRunning.Operation> __Method_UpdateScopeNamespace = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateScopeNamespace",
+        __Marshaller_google_cloud_gkehub_v1_UpdateScopeNamespaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest, global::Google.LongRunning.Operation> __Method_DeleteScopeNamespace = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteScopeNamespace",
+        __Marshaller_google_cloud_gkehub_v1_DeleteScopeNamespaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest, global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse> __Method_ListScopeNamespaces = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest, global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListScopeNamespaces",
+        __Marshaller_google_cloud_gkehub_v1_ListScopeNamespacesRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListScopeNamespacesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding> __Method_GetScopeRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetScopeRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_GetScopeRBACRoleBindingRequest,
+        __Marshaller_google_cloud_gkehub_v1_RBACRoleBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_CreateScopeRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateScopeRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_CreateScopeRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_UpdateScopeRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateScopeRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_UpdateScopeRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_DeleteScopeRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteScopeRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_DeleteScopeRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse> __Method_ListScopeRBACRoleBindings = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListScopeRBACRoleBindings",
+        __Marshaller_google_cloud_gkehub_v1_ListScopeRBACRoleBindingsRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListScopeRBACRoleBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeRequest, global::Google.Cloud.GkeHub.V1.Scope> __Method_GetScope = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetScopeRequest, global::Google.Cloud.GkeHub.V1.Scope>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetScope",
+        __Marshaller_google_cloud_gkehub_v1_GetScopeRequest,
+        __Marshaller_google_cloud_gkehub_v1_Scope);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeRequest, global::Google.LongRunning.Operation> __Method_CreateScope = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateScopeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateScope",
+        __Marshaller_google_cloud_gkehub_v1_CreateScopeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeRequest, global::Google.LongRunning.Operation> __Method_UpdateScope = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateScopeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateScope",
+        __Marshaller_google_cloud_gkehub_v1_UpdateScopeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeRequest, global::Google.LongRunning.Operation> __Method_DeleteScope = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteScopeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteScope",
+        __Marshaller_google_cloud_gkehub_v1_DeleteScopeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopesRequest, global::Google.Cloud.GkeHub.V1.ListScopesResponse> __Method_ListScopes = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListScopesRequest, global::Google.Cloud.GkeHub.V1.ListScopesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListScopes",
+        __Marshaller_google_cloud_gkehub_v1_ListScopesRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListScopesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest, global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse> __Method_ListPermittedScopes = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest, global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPermittedScopes",
+        __Marshaller_google_cloud_gkehub_v1_ListPermittedScopesRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListPermittedScopesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest, global::Google.Cloud.GkeHub.V1.MembershipBinding> __Method_GetMembershipBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest, global::Google.Cloud.GkeHub.V1.MembershipBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMembershipBinding",
+        __Marshaller_google_cloud_gkehub_v1_GetMembershipBindingRequest,
+        __Marshaller_google_cloud_gkehub_v1_MembershipBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest, global::Google.LongRunning.Operation> __Method_CreateMembershipBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMembershipBinding",
+        __Marshaller_google_cloud_gkehub_v1_CreateMembershipBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest, global::Google.LongRunning.Operation> __Method_UpdateMembershipBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMembershipBinding",
+        __Marshaller_google_cloud_gkehub_v1_UpdateMembershipBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest, global::Google.LongRunning.Operation> __Method_DeleteMembershipBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMembershipBinding",
+        __Marshaller_google_cloud_gkehub_v1_DeleteMembershipBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse> __Method_ListMembershipBindings = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMembershipBindings",
+        __Marshaller_google_cloud_gkehub_v1_ListMembershipBindingsRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListMembershipBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding> __Method_GetMembershipRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMembershipRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_GetMembershipRBACRoleBindingRequest,
+        __Marshaller_google_cloud_gkehub_v1_RBACRoleBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_CreateMembershipRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMembershipRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_CreateMembershipRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_UpdateMembershipRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMembershipRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_UpdateMembershipRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation> __Method_DeleteMembershipRBACRoleBinding = new grpc::Method<global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMembershipRBACRoleBinding",
+        __Marshaller_google_cloud_gkehub_v1_DeleteMembershipRBACRoleBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse> __Method_ListMembershipRBACRoleBindings = new grpc::Method<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMembershipRBACRoleBindings",
+        __Marshaller_google_cloud_gkehub_v1_ListMembershipRBACRoleBindingsRequest,
+        __Marshaller_google_cloud_gkehub_v1_ListMembershipRBACRoleBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest, global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse> __Method_GenerateMembershipRBACRoleBindingYAML = new grpc::Method<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest, global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateMembershipRBACRoleBindingYAML",
+        __Marshaller_google_cloud_gkehub_v1_GenerateMembershipRBACRoleBindingYAMLRequest,
+        __Marshaller_google_cloud_gkehub_v1_GenerateMembershipRBACRoleBindingYAMLResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -220,6 +578,19 @@ namespace Google.Cloud.GkeHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListMembershipsResponse> ListMemberships(global::Google.Cloud.GkeHub.V1.ListMembershipsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Memberships bound to a Scope. The response includes relevant
+      /// Memberships from all regions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse> ListBoundMemberships(global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -355,6 +726,392 @@ namespace Google.Cloud.GkeHub.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Creates a fleet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateFleet(global::Google.Cloud.GkeHub.V1.CreateFleetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a fleet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.Fleet> GetFleet(global::Google.Cloud.GkeHub.V1.GetFleetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a fleet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateFleet(global::Google.Cloud.GkeHub.V1.UpdateFleetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Removes a Fleet. There must be no memberships remaining in the Fleet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteFleet(global::Google.Cloud.GkeHub.V1.DeleteFleetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns all fleets within an organization or a project that the caller has
+      /// access to.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListFleetsResponse> ListFleets(global::Google.Cloud.GkeHub.V1.ListFleetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.Namespace> GetScopeNamespace(global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateScopeNamespace(global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateScopeNamespace(global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteScopeNamespace(global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists fleet namespaces.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse> ListScopeNamespaces(global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Scope RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse> ListScopeRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a Scope.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.Scope> GetScope(global::Google.Cloud.GkeHub.V1.GetScopeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Scope.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateScope(global::Google.Cloud.GkeHub.V1.CreateScopeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a scopes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateScope(global::Google.Cloud.GkeHub.V1.UpdateScopeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Scope.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteScope(global::Google.Cloud.GkeHub.V1.DeleteScopeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Scopes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListScopesResponse> ListScopes(global::Google.Cloud.GkeHub.V1.ListScopesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists permitted Scopes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse> ListPermittedScopes(global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.MembershipBinding> GetMembershipBinding(global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMembershipBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateMembershipBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteMembershipBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists MembershipBindings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse> ListMembershipBindings(global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the details of a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Membership RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse> ListMembershipRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates a YAML of the  RBAC policies for the specified
+      /// RoleBinding and its associated impersonation resources.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse> GenerateMembershipRBACRoleBindingYAML(global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for GkeHub</summary>
@@ -431,6 +1188,58 @@ namespace Google.Cloud.GkeHub.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListMembershipsResponse> ListMembershipsAsync(global::Google.Cloud.GkeHub.V1.ListMembershipsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMemberships, null, options, request);
+      }
+      /// <summary>
+      /// Lists Memberships bound to a Scope. The response includes relevant
+      /// Memberships from all regions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse ListBoundMemberships(global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBoundMemberships(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Memberships bound to a Scope. The response includes relevant
+      /// Memberships from all regions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse ListBoundMemberships(global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBoundMemberships, null, options, request);
+      }
+      /// <summary>
+      /// Lists Memberships bound to a Scope. The response includes relevant
+      /// Memberships from all regions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse> ListBoundMembershipsAsync(global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBoundMembershipsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Memberships bound to a Scope. The response includes relevant
+      /// Memberships from all regions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse> ListBoundMembershipsAsync(global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBoundMemberships, null, options, request);
       }
       /// <summary>
       /// Lists Features in a given project and location.
@@ -956,6 +1765,1550 @@ namespace Google.Cloud.GkeHub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConnectManifest, null, options, request);
       }
+      /// <summary>
+      /// Creates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateFleet(global::Google.Cloud.GkeHub.V1.CreateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFleet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateFleet(global::Google.Cloud.GkeHub.V1.CreateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateFleet, null, options, request);
+      }
+      /// <summary>
+      /// Creates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateFleetAsync(global::Google.Cloud.GkeHub.V1.CreateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFleetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateFleetAsync(global::Google.Cloud.GkeHub.V1.CreateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateFleet, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Fleet GetFleet(global::Google.Cloud.GkeHub.V1.GetFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFleet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Fleet GetFleet(global::Google.Cloud.GkeHub.V1.GetFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFleet, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Fleet> GetFleetAsync(global::Google.Cloud.GkeHub.V1.GetFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFleetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Fleet> GetFleetAsync(global::Google.Cloud.GkeHub.V1.GetFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFleet, null, options, request);
+      }
+      /// <summary>
+      /// Updates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateFleet(global::Google.Cloud.GkeHub.V1.UpdateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFleet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateFleet(global::Google.Cloud.GkeHub.V1.UpdateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFleet, null, options, request);
+      }
+      /// <summary>
+      /// Updates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateFleetAsync(global::Google.Cloud.GkeHub.V1.UpdateFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFleetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateFleetAsync(global::Google.Cloud.GkeHub.V1.UpdateFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFleet, null, options, request);
+      }
+      /// <summary>
+      /// Removes a Fleet. There must be no memberships remaining in the Fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFleet(global::Google.Cloud.GkeHub.V1.DeleteFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFleet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes a Fleet. There must be no memberships remaining in the Fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFleet(global::Google.Cloud.GkeHub.V1.DeleteFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFleet, null, options, request);
+      }
+      /// <summary>
+      /// Removes a Fleet. There must be no memberships remaining in the Fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFleetAsync(global::Google.Cloud.GkeHub.V1.DeleteFleetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFleetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes a Fleet. There must be no memberships remaining in the Fleet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFleetAsync(global::Google.Cloud.GkeHub.V1.DeleteFleetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFleet, null, options, request);
+      }
+      /// <summary>
+      /// Returns all fleets within an organization or a project that the caller has
+      /// access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListFleetsResponse ListFleets(global::Google.Cloud.GkeHub.V1.ListFleetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFleets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns all fleets within an organization or a project that the caller has
+      /// access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListFleetsResponse ListFleets(global::Google.Cloud.GkeHub.V1.ListFleetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFleets, null, options, request);
+      }
+      /// <summary>
+      /// Returns all fleets within an organization or a project that the caller has
+      /// access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListFleetsResponse> ListFleetsAsync(global::Google.Cloud.GkeHub.V1.ListFleetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFleetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns all fleets within an organization or a project that the caller has
+      /// access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListFleetsResponse> ListFleetsAsync(global::Google.Cloud.GkeHub.V1.ListFleetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFleets, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Namespace GetScopeNamespace(global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScopeNamespace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Namespace GetScopeNamespace(global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Namespace> GetScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScopeNamespaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Namespace> GetScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Creates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScopeNamespace(global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScopeNamespace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScopeNamespace(global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Creates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScopeNamespaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Updates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScopeNamespace(global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScopeNamespace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScopeNamespace(global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Updates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScopeNamespaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScopeNamespace(global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScopeNamespace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScopeNamespace(global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScopeNamespaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a fleet namespace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeNamespaceAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteScopeNamespace, null, options, request);
+      }
+      /// <summary>
+      /// Lists fleet namespaces.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse ListScopeNamespaces(global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopeNamespaces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists fleet namespaces.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse ListScopeNamespaces(global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListScopeNamespaces, null, options, request);
+      }
+      /// <summary>
+      /// Lists fleet namespaces.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse> ListScopeNamespacesAsync(global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopeNamespacesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists fleet namespaces.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse> ListScopeNamespacesAsync(global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListScopeNamespaces, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.RBACRoleBinding GetScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScopeRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.RBACRoleBinding GetScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScopeRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScopeRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScopeRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScopeRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScopeRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScopeRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScopeRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScopeRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Scope RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteScopeRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Scope RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse ListScopeRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopeRBACRoleBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Scope RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse ListScopeRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListScopeRBACRoleBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Scope RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse> ListScopeRBACRoleBindingsAsync(global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopeRBACRoleBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Scope RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse> ListScopeRBACRoleBindingsAsync(global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListScopeRBACRoleBindings, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Scope GetScope(global::Google.Cloud.GkeHub.V1.GetScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScope(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.Scope GetScope(global::Google.Cloud.GkeHub.V1.GetScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetScope, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Scope> GetScopeAsync(global::Google.Cloud.GkeHub.V1.GetScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetScopeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.Scope> GetScopeAsync(global::Google.Cloud.GkeHub.V1.GetScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetScope, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScope(global::Google.Cloud.GkeHub.V1.CreateScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScope(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateScope(global::Google.Cloud.GkeHub.V1.CreateScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateScope, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeAsync(global::Google.Cloud.GkeHub.V1.CreateScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateScopeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateScopeAsync(global::Google.Cloud.GkeHub.V1.CreateScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateScope, null, options, request);
+      }
+      /// <summary>
+      /// Updates a scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScope(global::Google.Cloud.GkeHub.V1.UpdateScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScope(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateScope(global::Google.Cloud.GkeHub.V1.UpdateScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateScope, null, options, request);
+      }
+      /// <summary>
+      /// Updates a scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateScopeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateScopeAsync(global::Google.Cloud.GkeHub.V1.UpdateScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateScope, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScope(global::Google.Cloud.GkeHub.V1.DeleteScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScope(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteScope(global::Google.Cloud.GkeHub.V1.DeleteScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteScope, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteScopeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteScopeAsync(global::Google.Cloud.GkeHub.V1.DeleteScopeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteScope, null, options, request);
+      }
+      /// <summary>
+      /// Lists Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopesResponse ListScopes(global::Google.Cloud.GkeHub.V1.ListScopesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListScopesResponse ListScopes(global::Google.Cloud.GkeHub.V1.ListScopesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListScopes, null, options, request);
+      }
+      /// <summary>
+      /// Lists Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopesResponse> ListScopesAsync(global::Google.Cloud.GkeHub.V1.ListScopesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListScopesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListScopesResponse> ListScopesAsync(global::Google.Cloud.GkeHub.V1.ListScopesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListScopes, null, options, request);
+      }
+      /// <summary>
+      /// Lists permitted Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse ListPermittedScopes(global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPermittedScopes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists permitted Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse ListPermittedScopes(global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPermittedScopes, null, options, request);
+      }
+      /// <summary>
+      /// Lists permitted Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse> ListPermittedScopesAsync(global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPermittedScopesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists permitted Scopes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse> ListPermittedScopesAsync(global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPermittedScopes, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.MembershipBinding GetMembershipBinding(global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMembershipBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.MembershipBinding GetMembershipBinding(global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.MembershipBinding> GetMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMembershipBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.MembershipBinding> GetMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMembershipBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMembershipBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMembershipBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMembershipBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMembershipBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembershipBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMembershipBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembershipBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteMembershipBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMembershipBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteMembershipBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMembershipBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a MembershipBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMembershipBinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists MembershipBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse ListMembershipBindings(global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembershipBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists MembershipBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse ListMembershipBindings(global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMembershipBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists MembershipBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse> ListMembershipBindingsAsync(global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembershipBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists MembershipBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse> ListMembershipBindingsAsync(global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMembershipBindings, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.RBACRoleBinding GetMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMembershipRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.RBACRoleBinding GetMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the details of a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMembershipRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the details of a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.RBACRoleBinding> GetMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMembershipRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMembershipRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembershipRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembershipRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMembershipRBACRoleBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteMembershipRBACRoleBinding(global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMembershipRBACRoleBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Membership RBACRoleBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipRBACRoleBindingAsync(global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMembershipRBACRoleBinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Membership RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse ListMembershipRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembershipRBACRoleBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Membership RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse ListMembershipRBACRoleBindings(global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMembershipRBACRoleBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Membership RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse> ListMembershipRBACRoleBindingsAsync(global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembershipRBACRoleBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Membership RBACRoleBindings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse> ListMembershipRBACRoleBindingsAsync(global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMembershipRBACRoleBindings, null, options, request);
+      }
+      /// <summary>
+      /// Generates a YAML of the  RBAC policies for the specified
+      /// RoleBinding and its associated impersonation resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse GenerateMembershipRBACRoleBindingYAML(global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateMembershipRBACRoleBindingYAML(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates a YAML of the  RBAC policies for the specified
+      /// RoleBinding and its associated impersonation resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse GenerateMembershipRBACRoleBindingYAML(global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateMembershipRBACRoleBindingYAML, null, options, request);
+      }
+      /// <summary>
+      /// Generates a YAML of the  RBAC policies for the specified
+      /// RoleBinding and its associated impersonation resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse> GenerateMembershipRBACRoleBindingYAMLAsync(global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateMembershipRBACRoleBindingYAMLAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates a YAML of the  RBAC policies for the specified
+      /// RoleBinding and its associated impersonation resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse> GenerateMembershipRBACRoleBindingYAMLAsync(global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateMembershipRBACRoleBindingYAML, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GkeHubClient NewInstance(ClientBaseConfiguration configuration)
@@ -971,6 +3324,7 @@ namespace Google.Cloud.GkeHub.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListMemberships, serviceImpl.ListMemberships)
+          .AddMethod(__Method_ListBoundMemberships, serviceImpl.ListBoundMemberships)
           .AddMethod(__Method_ListFeatures, serviceImpl.ListFeatures)
           .AddMethod(__Method_GetMembership, serviceImpl.GetMembership)
           .AddMethod(__Method_GetFeature, serviceImpl.GetFeature)
@@ -980,7 +3334,39 @@ namespace Google.Cloud.GkeHub.V1 {
           .AddMethod(__Method_DeleteFeature, serviceImpl.DeleteFeature)
           .AddMethod(__Method_UpdateMembership, serviceImpl.UpdateMembership)
           .AddMethod(__Method_UpdateFeature, serviceImpl.UpdateFeature)
-          .AddMethod(__Method_GenerateConnectManifest, serviceImpl.GenerateConnectManifest).Build();
+          .AddMethod(__Method_GenerateConnectManifest, serviceImpl.GenerateConnectManifest)
+          .AddMethod(__Method_CreateFleet, serviceImpl.CreateFleet)
+          .AddMethod(__Method_GetFleet, serviceImpl.GetFleet)
+          .AddMethod(__Method_UpdateFleet, serviceImpl.UpdateFleet)
+          .AddMethod(__Method_DeleteFleet, serviceImpl.DeleteFleet)
+          .AddMethod(__Method_ListFleets, serviceImpl.ListFleets)
+          .AddMethod(__Method_GetScopeNamespace, serviceImpl.GetScopeNamespace)
+          .AddMethod(__Method_CreateScopeNamespace, serviceImpl.CreateScopeNamespace)
+          .AddMethod(__Method_UpdateScopeNamespace, serviceImpl.UpdateScopeNamespace)
+          .AddMethod(__Method_DeleteScopeNamespace, serviceImpl.DeleteScopeNamespace)
+          .AddMethod(__Method_ListScopeNamespaces, serviceImpl.ListScopeNamespaces)
+          .AddMethod(__Method_GetScopeRBACRoleBinding, serviceImpl.GetScopeRBACRoleBinding)
+          .AddMethod(__Method_CreateScopeRBACRoleBinding, serviceImpl.CreateScopeRBACRoleBinding)
+          .AddMethod(__Method_UpdateScopeRBACRoleBinding, serviceImpl.UpdateScopeRBACRoleBinding)
+          .AddMethod(__Method_DeleteScopeRBACRoleBinding, serviceImpl.DeleteScopeRBACRoleBinding)
+          .AddMethod(__Method_ListScopeRBACRoleBindings, serviceImpl.ListScopeRBACRoleBindings)
+          .AddMethod(__Method_GetScope, serviceImpl.GetScope)
+          .AddMethod(__Method_CreateScope, serviceImpl.CreateScope)
+          .AddMethod(__Method_UpdateScope, serviceImpl.UpdateScope)
+          .AddMethod(__Method_DeleteScope, serviceImpl.DeleteScope)
+          .AddMethod(__Method_ListScopes, serviceImpl.ListScopes)
+          .AddMethod(__Method_ListPermittedScopes, serviceImpl.ListPermittedScopes)
+          .AddMethod(__Method_GetMembershipBinding, serviceImpl.GetMembershipBinding)
+          .AddMethod(__Method_CreateMembershipBinding, serviceImpl.CreateMembershipBinding)
+          .AddMethod(__Method_UpdateMembershipBinding, serviceImpl.UpdateMembershipBinding)
+          .AddMethod(__Method_DeleteMembershipBinding, serviceImpl.DeleteMembershipBinding)
+          .AddMethod(__Method_ListMembershipBindings, serviceImpl.ListMembershipBindings)
+          .AddMethod(__Method_GetMembershipRBACRoleBinding, serviceImpl.GetMembershipRBACRoleBinding)
+          .AddMethod(__Method_CreateMembershipRBACRoleBinding, serviceImpl.CreateMembershipRBACRoleBinding)
+          .AddMethod(__Method_UpdateMembershipRBACRoleBinding, serviceImpl.UpdateMembershipRBACRoleBinding)
+          .AddMethod(__Method_DeleteMembershipRBACRoleBinding, serviceImpl.DeleteMembershipRBACRoleBinding)
+          .AddMethod(__Method_ListMembershipRBACRoleBindings, serviceImpl.ListMembershipRBACRoleBindings)
+          .AddMethod(__Method_GenerateMembershipRBACRoleBindingYAML, serviceImpl.GenerateMembershipRBACRoleBindingYAML).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -991,6 +3377,7 @@ namespace Google.Cloud.GkeHub.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GkeHubBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipsResponse>(serviceImpl.ListMemberships));
+      serviceBinder.AddMethod(__Method_ListBoundMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListBoundMembershipsRequest, global::Google.Cloud.GkeHub.V1.ListBoundMembershipsResponse>(serviceImpl.ListBoundMemberships));
       serviceBinder.AddMethod(__Method_ListFeatures, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListFeaturesRequest, global::Google.Cloud.GkeHub.V1.ListFeaturesResponse>(serviceImpl.ListFeatures));
       serviceBinder.AddMethod(__Method_GetMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetMembershipRequest, global::Google.Cloud.GkeHub.V1.Membership>(serviceImpl.GetMembership));
       serviceBinder.AddMethod(__Method_GetFeature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetFeatureRequest, global::Google.Cloud.GkeHub.V1.Feature>(serviceImpl.GetFeature));
@@ -1001,6 +3388,38 @@ namespace Google.Cloud.GkeHub.V1 {
       serviceBinder.AddMethod(__Method_UpdateMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateMembershipRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMembership));
       serviceBinder.AddMethod(__Method_UpdateFeature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateFeatureRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateFeature));
       serviceBinder.AddMethod(__Method_GenerateConnectManifest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest, global::Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse>(serviceImpl.GenerateConnectManifest));
+      serviceBinder.AddMethod(__Method_CreateFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateFleetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateFleet));
+      serviceBinder.AddMethod(__Method_GetFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetFleetRequest, global::Google.Cloud.GkeHub.V1.Fleet>(serviceImpl.GetFleet));
+      serviceBinder.AddMethod(__Method_UpdateFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateFleetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateFleet));
+      serviceBinder.AddMethod(__Method_DeleteFleet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteFleetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFleet));
+      serviceBinder.AddMethod(__Method_ListFleets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListFleetsRequest, global::Google.Cloud.GkeHub.V1.ListFleetsResponse>(serviceImpl.ListFleets));
+      serviceBinder.AddMethod(__Method_GetScopeNamespace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetScopeNamespaceRequest, global::Google.Cloud.GkeHub.V1.Namespace>(serviceImpl.GetScopeNamespace));
+      serviceBinder.AddMethod(__Method_CreateScopeNamespace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateScopeNamespaceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateScopeNamespace));
+      serviceBinder.AddMethod(__Method_UpdateScopeNamespace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateScopeNamespaceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateScopeNamespace));
+      serviceBinder.AddMethod(__Method_DeleteScopeNamespace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteScopeNamespaceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteScopeNamespace));
+      serviceBinder.AddMethod(__Method_ListScopeNamespaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListScopeNamespacesRequest, global::Google.Cloud.GkeHub.V1.ListScopeNamespacesResponse>(serviceImpl.ListScopeNamespaces));
+      serviceBinder.AddMethod(__Method_GetScopeRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetScopeRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding>(serviceImpl.GetScopeRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_CreateScopeRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateScopeRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_UpdateScopeRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateScopeRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_DeleteScopeRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteScopeRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteScopeRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_ListScopeRBACRoleBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListScopeRBACRoleBindingsResponse>(serviceImpl.ListScopeRBACRoleBindings));
+      serviceBinder.AddMethod(__Method_GetScope, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetScopeRequest, global::Google.Cloud.GkeHub.V1.Scope>(serviceImpl.GetScope));
+      serviceBinder.AddMethod(__Method_CreateScope, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateScopeRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateScope));
+      serviceBinder.AddMethod(__Method_UpdateScope, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateScopeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateScope));
+      serviceBinder.AddMethod(__Method_DeleteScope, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteScopeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteScope));
+      serviceBinder.AddMethod(__Method_ListScopes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListScopesRequest, global::Google.Cloud.GkeHub.V1.ListScopesResponse>(serviceImpl.ListScopes));
+      serviceBinder.AddMethod(__Method_ListPermittedScopes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListPermittedScopesRequest, global::Google.Cloud.GkeHub.V1.ListPermittedScopesResponse>(serviceImpl.ListPermittedScopes));
+      serviceBinder.AddMethod(__Method_GetMembershipBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetMembershipBindingRequest, global::Google.Cloud.GkeHub.V1.MembershipBinding>(serviceImpl.GetMembershipBinding));
+      serviceBinder.AddMethod(__Method_CreateMembershipBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateMembershipBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMembershipBinding));
+      serviceBinder.AddMethod(__Method_UpdateMembershipBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateMembershipBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMembershipBinding));
+      serviceBinder.AddMethod(__Method_DeleteMembershipBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteMembershipBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteMembershipBinding));
+      serviceBinder.AddMethod(__Method_ListMembershipBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListMembershipBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipBindingsResponse>(serviceImpl.ListMembershipBindings));
+      serviceBinder.AddMethod(__Method_GetMembershipRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GetMembershipRBACRoleBindingRequest, global::Google.Cloud.GkeHub.V1.RBACRoleBinding>(serviceImpl.GetMembershipRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_CreateMembershipRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.CreateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMembershipRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_UpdateMembershipRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.UpdateMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMembershipRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_DeleteMembershipRBACRoleBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.DeleteMembershipRBACRoleBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteMembershipRBACRoleBinding));
+      serviceBinder.AddMethod(__Method_ListMembershipRBACRoleBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsRequest, global::Google.Cloud.GkeHub.V1.ListMembershipRBACRoleBindingsResponse>(serviceImpl.ListMembershipRBACRoleBindings));
+      serviceBinder.AddMethod(__Method_GenerateMembershipRBACRoleBindingYAML, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLRequest, global::Google.Cloud.GkeHub.V1.GenerateMembershipRBACRoleBindingYAMLResponse>(serviceImpl.GenerateMembershipRBACRoleBindingYAML));
     }
 
   }
