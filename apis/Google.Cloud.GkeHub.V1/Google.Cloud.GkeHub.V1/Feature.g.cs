@@ -29,62 +29,79 @@ namespace Google.Cloud.GkeHub.V1 {
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aPmdvb2dsZS9jbG91",
             "ZC9na2VodWIvdjEvY29uZmlnbWFuYWdlbWVudC9jb25maWdtYW5hZ2VtZW50",
             "LnByb3RvGkRnb29nbGUvY2xvdWQvZ2tlaHViL3YxL211bHRpY2x1c3Rlcmlu",
-            "Z3Jlc3MvbXVsdGljbHVzdGVyaW5ncmVzcy5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byLPBwoHRmVhdHVyZRIRCgRuYW1lGAEgASgJ",
-            "QgPgQQMSOwoGbGFiZWxzGAIgAygLMisuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52",
-            "MS5GZWF0dXJlLkxhYmVsc0VudHJ5EkkKDnJlc291cmNlX3N0YXRlGAMgASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5GZWF0dXJlUmVzb3VyY2VTdGF0",
-            "ZUID4EEDEjwKBHNwZWMYBCABKAsyKS5nb29nbGUuY2xvdWQuZ2tlaHViLnYx",
-            "LkNvbW1vbkZlYXR1cmVTcGVjQgPgQQESUwoQbWVtYmVyc2hpcF9zcGVjcxgF",
-            "IAMoCzI0Lmdvb2dsZS5jbG91ZC5na2VodWIudjEuRmVhdHVyZS5NZW1iZXJz",
-            "aGlwU3BlY3NFbnRyeUID4EEBEj4KBXN0YXRlGAYgASgLMiouZ29vZ2xlLmNs",
-            "b3VkLmdrZWh1Yi52MS5Db21tb25GZWF0dXJlU3RhdGVCA+BBAxJVChFtZW1i",
-            "ZXJzaGlwX3N0YXRlcxgHIAMoCzI1Lmdvb2dsZS5jbG91ZC5na2VodWIudjEu",
-            "RmVhdHVyZS5NZW1iZXJzaGlwU3RhdGVzRW50cnlCA+BBAxI0CgtjcmVhdGVf",
-            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
-            "Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI0CgtkZWxldGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBGmUKFE1lbWJlcnNoaXBTcGVjc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRI8CgV2YWx1ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5na2Vo",
-            "dWIudjEuTWVtYmVyc2hpcEZlYXR1cmVTcGVjOgI4ARpnChVNZW1iZXJzaGlw",
-            "U3RhdGVzRW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVlGAIgASgLMi4uZ29v",
-            "Z2xlLmNsb3VkLmdrZWh1Yi52MS5NZW1iZXJzaGlwRmVhdHVyZVN0YXRlOgI4",
-            "ATpe6kFbCh1na2VodWIuZ29vZ2xlYXBpcy5jb20vRmVhdHVyZRI6cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVzL3tm",
-            "ZWF0dXJlfSLGAQoURmVhdHVyZVJlc291cmNlU3RhdGUSQQoFc3RhdGUYASAB",
-            "KA4yMi5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLkZlYXR1cmVSZXNvdXJjZVN0",
-            "YXRlLlN0YXRlImsKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "RU5BQkxJTkcQARIKCgZBQ1RJVkUQAhINCglESVNBQkxJTkcQAxIMCghVUERB",
-            "VElORxAEEhQKEFNFUlZJQ0VfVVBEQVRJTkcQBSLLAQoMRmVhdHVyZVN0YXRl",
-            "EjcKBGNvZGUYASABKA4yKS5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLkZlYXR1",
-            "cmVTdGF0ZS5Db2RlEhMKC2Rlc2NyaXB0aW9uGAIgASgJEi8KC3VwZGF0ZV90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8CgRDb2Rl",
-            "EhQKEENPREVfVU5TUEVDSUZJRUQQABIGCgJPSxABEgsKB1dBUk5JTkcQAhIJ",
-            "CgVFUlJPUhADInsKEUNvbW1vbkZlYXR1cmVTcGVjElYKE211bHRpY2x1c3Rl",
-            "cmluZ3Jlc3MYZiABKAsyNy5nb29nbGUuY2xvdWQuZ2tlaHViLm11bHRpY2x1",
-            "c3RlcmluZ3Jlc3MudjEuRmVhdHVyZVNwZWNIAEIOCgxmZWF0dXJlX3NwZWMi",
-            "TgoSQ29tbW9uRmVhdHVyZVN0YXRlEjgKBXN0YXRlGAEgASgLMiQuZ29vZ2xl",
-            "LmNsb3VkLmdrZWh1Yi52MS5GZWF0dXJlU3RhdGVCA+BBAyJ8ChVNZW1iZXJz",
-            "aGlwRmVhdHVyZVNwZWMSUwoQY29uZmlnbWFuYWdlbWVudBhqIAEoCzI3Lmdv",
-            "b2dsZS5jbG91ZC5na2VodWIuY29uZmlnbWFuYWdlbWVudC52MS5NZW1iZXJz",
-            "aGlwU3BlY0gAQg4KDGZlYXR1cmVfc3BlYyK0AQoWTWVtYmVyc2hpcEZlYXR1",
-            "cmVTdGF0ZRJUChBjb25maWdtYW5hZ2VtZW50GGogASgLMjguZ29vZ2xlLmNs",
-            "b3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLk1lbWJlcnNoaXBTdGF0",
-            "ZUgAEjMKBXN0YXRlGAEgASgLMiQuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5G",
-            "ZWF0dXJlU3RhdGVCDwoNZmVhdHVyZV9zdGF0ZUKuAQoaY29tLmdvb2dsZS5j",
-            "bG91ZC5na2VodWIudjFCDEZlYXR1cmVQcm90b1ABWjJjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2drZWh1Yi9hcGl2MS9na2VodWJwYjtna2VodWJwYqoCFkdvb2ds",
-            "ZS5DbG91ZC5Ha2VIdWIuVjHKAhZHb29nbGVcQ2xvdWRcR2tlSHViXFYx6gIZ",
-            "R29vZ2xlOjpDbG91ZDo6R2tlSHViOjpWMWIGcHJvdG8z"));
+            "Z3Jlc3MvbXVsdGljbHVzdGVyaW5ncmVzcy5wcm90bxpOZ29vZ2xlL2Nsb3Vk",
+            "L2drZWh1Yi92MS9yYmFjcm9sZWJpbmRpbmdhY3R1YXRpb24vcmJhY3JvbGVi",
+            "aW5kaW5nYWN0dWF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
+            "YW1wLnByb3RvIr0KCgdGZWF0dXJlEhEKBG5hbWUYASABKAlCA+BBAxI7CgZs",
+            "YWJlbHMYAiADKAsyKy5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLkZlYXR1cmUu",
+            "TGFiZWxzRW50cnkSSQoOcmVzb3VyY2Vfc3RhdGUYAyABKAsyLC5nb29nbGUu",
+            "Y2xvdWQuZ2tlaHViLnYxLkZlYXR1cmVSZXNvdXJjZVN0YXRlQgPgQQMSPAoE",
+            "c3BlYxgEIAEoCzIpLmdvb2dsZS5jbG91ZC5na2VodWIudjEuQ29tbW9uRmVh",
+            "dHVyZVNwZWNCA+BBARJTChBtZW1iZXJzaGlwX3NwZWNzGAUgAygLMjQuZ29v",
+            "Z2xlLmNsb3VkLmdrZWh1Yi52MS5GZWF0dXJlLk1lbWJlcnNoaXBTcGVjc0Vu",
+            "dHJ5QgPgQQESPgoFc3RhdGUYBiABKAsyKi5nb29nbGUuY2xvdWQuZ2tlaHVi",
+            "LnYxLkNvbW1vbkZlYXR1cmVTdGF0ZUID4EEDElUKEW1lbWJlcnNoaXBfc3Rh",
+            "dGVzGAcgAygLMjUuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5GZWF0dXJlLk1l",
+            "bWJlcnNoaXBTdGF0ZXNFbnRyeUID4EEDEjQKC2NyZWF0ZV90aW1lGAggASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
+            "C2RlbGV0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEkkKC3Njb3BlX3NwZWNzGAwgAygLMi8uZ29vZ2xlLmNsb3VkLmdr",
+            "ZWh1Yi52MS5GZWF0dXJlLlNjb3BlU3BlY3NFbnRyeUID4EEBEksKDHNjb3Bl",
+            "X3N0YXRlcxgNIAMoCzIwLmdvb2dsZS5jbG91ZC5na2VodWIudjEuRmVhdHVy",
+            "ZS5TY29wZVN0YXRlc0VudHJ5QgPgQQMSGAoLdW5yZWFjaGFibGUYDyADKAlC",
+            "A+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGmUKFE1lbWJlcnNoaXBTcGVjc0VudHJ5EgsKA2tleRgBIAEoCRI8",
+            "CgV2YWx1ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5na2VodWIudjEuTWVtYmVy",
+            "c2hpcEZlYXR1cmVTcGVjOgI4ARpnChVNZW1iZXJzaGlwU3RhdGVzRW50cnkS",
+            "CwoDa2V5GAEgASgJEj0KBXZhbHVlGAIgASgLMi4uZ29vZ2xlLmNsb3VkLmdr",
+            "ZWh1Yi52MS5NZW1iZXJzaGlwRmVhdHVyZVN0YXRlOgI4ARpbCg9TY29wZVNw",
+            "ZWNzRW50cnkSCwoDa2V5GAEgASgJEjcKBXZhbHVlGAIgASgLMiguZ29vZ2xl",
+            "LmNsb3VkLmdrZWh1Yi52MS5TY29wZUZlYXR1cmVTcGVjOgI4ARpdChBTY29w",
+            "ZVN0YXRlc0VudHJ5EgsKA2tleRgBIAEoCRI4CgV2YWx1ZRgCIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5na2VodWIudjEuU2NvcGVGZWF0dXJlU3RhdGU6AjgBOl7q",
+            "QVsKHWdrZWh1Yi5nb29nbGVhcGlzLmNvbS9GZWF0dXJlEjpwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZXMve2ZlYXR1",
+            "cmV9IsYBChRGZWF0dXJlUmVzb3VyY2VTdGF0ZRJBCgVzdGF0ZRgBIAEoDjIy",
+            "Lmdvb2dsZS5jbG91ZC5na2VodWIudjEuRmVhdHVyZVJlc291cmNlU3RhdGUu",
+            "U3RhdGUiawoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghFTkFC",
+            "TElORxABEgoKBkFDVElWRRACEg0KCURJU0FCTElORxADEgwKCFVQREFUSU5H",
+            "EAQSFAoQU0VSVklDRV9VUERBVElORxAFIssBCgxGZWF0dXJlU3RhdGUSNwoE",
+            "Y29kZRgBIAEoDjIpLmdvb2dsZS5jbG91ZC5na2VodWIudjEuRmVhdHVyZVN0",
+            "YXRlLkNvZGUSEwoLZGVzY3JpcHRpb24YAiABKAkSLwoLdXBkYXRlX3RpbWUY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIjwKBENvZGUSFAoQ",
+            "Q09ERV9VTlNQRUNJRklFRBAAEgYKAk9LEAESCwoHV0FSTklORxACEgkKBUVS",
+            "Uk9SEAMiewoRQ29tbW9uRmVhdHVyZVNwZWMSVgoTbXVsdGljbHVzdGVyaW5n",
+            "cmVzcxhmIAEoCzI3Lmdvb2dsZS5jbG91ZC5na2VodWIubXVsdGljbHVzdGVy",
+            "aW5ncmVzcy52MS5GZWF0dXJlU3BlY0gAQg4KDGZlYXR1cmVfc3BlYyLCAQoS",
+            "Q29tbW9uRmVhdHVyZVN0YXRlEmEKGHJiYWNyb2xlYmluZGluZ2FjdHVhdGlv",
+            "bhh4IAEoCzI9Lmdvb2dsZS5jbG91ZC5na2VodWIucmJhY3JvbGViaW5kaW5n",
+            "YWN0dWF0aW9uLnYxLkZlYXR1cmVTdGF0ZUgAEjgKBXN0YXRlGAEgASgLMiQu",
+            "Z29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5GZWF0dXJlU3RhdGVCA+BBA0IPCg1m",
+            "ZWF0dXJlX3N0YXRlIhIKEFNjb3BlRmVhdHVyZVNwZWMiTQoRU2NvcGVGZWF0",
+            "dXJlU3RhdGUSOAoFc3RhdGUYASABKAsyJC5nb29nbGUuY2xvdWQuZ2tlaHVi",
+            "LnYxLkZlYXR1cmVTdGF0ZUID4EEDInwKFU1lbWJlcnNoaXBGZWF0dXJlU3Bl",
+            "YxJTChBjb25maWdtYW5hZ2VtZW50GGogASgLMjcuZ29vZ2xlLmNsb3VkLmdr",
+            "ZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxLk1lbWJlcnNoaXBTcGVjSABCDgoM",
+            "ZmVhdHVyZV9zcGVjIrQBChZNZW1iZXJzaGlwRmVhdHVyZVN0YXRlElQKEGNv",
+            "bmZpZ21hbmFnZW1lbnQYaiABKAsyOC5nb29nbGUuY2xvdWQuZ2tlaHViLmNv",
+            "bmZpZ21hbmFnZW1lbnQudjEuTWVtYmVyc2hpcFN0YXRlSAASMwoFc3RhdGUY",
+            "ASABKAsyJC5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLkZlYXR1cmVTdGF0ZUIP",
+            "Cg1mZWF0dXJlX3N0YXRlQq4BChpjb20uZ29vZ2xlLmNsb3VkLmdrZWh1Yi52",
+            "MUIMRmVhdHVyZVByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vZ2tlaHVi",
+            "L2FwaXYxL2drZWh1YnBiO2drZWh1YnBiqgIWR29vZ2xlLkNsb3VkLkdrZUh1",
+            "Yi5WMcoCFkdvb2dsZVxDbG91ZFxHa2VIdWJcVjHqAhlHb29nbGU6OkNsb3Vk",
+            "OjpHa2VIdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor, global::Google.Cloud.GkeHub.V1.MultiClusterIngress.MulticlusteringressReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor, global::Google.Cloud.GkeHub.V1.MultiClusterIngress.MulticlusteringressReflection.Descriptor, global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.RbacrolebindingactuationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Feature), global::Google.Cloud.GkeHub.V1.Feature.Parser, new[]{ "Name", "Labels", "ResourceState", "Spec", "MembershipSpecs", "State", "MembershipStates", "CreateTime", "UpdateTime", "DeleteTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Feature), global::Google.Cloud.GkeHub.V1.Feature.Parser, new[]{ "Name", "Labels", "ResourceState", "Spec", "MembershipSpecs", "State", "MembershipStates", "CreateTime", "UpdateTime", "DeleteTime", "ScopeSpecs", "ScopeStates", "Unreachable" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.FeatureResourceState), global::Google.Cloud.GkeHub.V1.FeatureResourceState.Parser, new[]{ "State" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.FeatureResourceState.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.FeatureState), global::Google.Cloud.GkeHub.V1.FeatureState.Parser, new[]{ "Code", "Description", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.FeatureState.Types.Code) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.CommonFeatureSpec), global::Google.Cloud.GkeHub.V1.CommonFeatureSpec.Parser, new[]{ "Multiclusteringress" }, new[]{ "FeatureSpec" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.CommonFeatureState), global::Google.Cloud.GkeHub.V1.CommonFeatureState.Parser, new[]{ "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.CommonFeatureState), global::Google.Cloud.GkeHub.V1.CommonFeatureState.Parser, new[]{ "Rbacrolebindingactuation", "State" }, new[]{ "FeatureState" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec), global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ScopeFeatureState), global::Google.Cloud.GkeHub.V1.ScopeFeatureState.Parser, new[]{ "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec), global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec.Parser, new[]{ "Configmanagement" }, new[]{ "FeatureSpec" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipFeatureState), global::Google.Cloud.GkeHub.V1.MembershipFeatureState.Parser, new[]{ "Configmanagement", "State" }, new[]{ "FeatureState" }, null, null, null)
           }));
@@ -94,7 +111,7 @@ namespace Google.Cloud.GkeHub.V1 {
   }
   #region Messages
   /// <summary>
-  /// Feature represents the settings and status of any Hub Feature.
+  /// Feature represents the settings and status of any Fleet Feature.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
@@ -141,6 +158,9 @@ namespace Google.Cloud.GkeHub.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      scopeSpecs_ = other.scopeSpecs_.Clone();
+      scopeStates_ = other.scopeStates_.Clone();
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -172,7 +192,7 @@ namespace Google.Cloud.GkeHub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// GCP labels for this Feature.
+    /// Labels for this Feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,8 +219,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int SpecFieldNumber = 4;
     private global::Google.Cloud.GkeHub.V1.CommonFeatureSpec spec_;
     /// <summary>
-    /// Optional. Hub-wide Feature configuration. If this Feature does not support any
-    /// Hub-wide configuration, this field may be unused.
+    /// Optional. Fleet-wide Feature configuration. If this Feature does not
+    /// support any Fleet-wide configuration, this field may be unused.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -217,12 +237,13 @@ namespace Google.Cloud.GkeHub.V1 {
         = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec> membershipSpecs_ = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.MembershipFeatureSpec>();
     /// <summary>
-    /// Optional. Membership-specific configuration for this Feature. If this Feature does
-    /// not support any per-Membership configuration, this field may be unused.
+    /// Optional. Membership-specific configuration for this Feature. If this
+    /// Feature does not support any per-Membership configuration, this field may
+    /// be unused.
     ///
     /// The keys indicate which Membership the configuration is for, in the form:
     ///
-    ///     projects/{p}/locations/{l}/memberships/{m}
+    /// `projects/{p}/locations/{l}/memberships/{m}`
     ///
     /// Where {p} is the project, {l} is a valid location and {m} is a valid
     /// Membership in this project at that location. {p} WILL match the Feature's
@@ -245,7 +266,7 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int StateFieldNumber = 6;
     private global::Google.Cloud.GkeHub.V1.CommonFeatureState state_;
     /// <summary>
-    /// Output only. The Hub-wide Feature state.
+    /// Output only. The Fleet-wide Feature state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -267,7 +288,7 @@ namespace Google.Cloud.GkeHub.V1 {
     ///
     /// The keys indicate which Membership the state is for, in the form:
     ///
-    ///     projects/{p}/locations/{l}/memberships/{m}
+    /// `projects/{p}/locations/{l}/memberships/{m}`
     ///
     /// Where {p} is the project number, {l} is a valid location and {m} is a valid
     /// Membership in this project at that location. {p} MUST match the Feature's
@@ -324,6 +345,72 @@ namespace Google.Cloud.GkeHub.V1 {
       }
     }
 
+    /// <summary>Field number for the "scope_specs" field.</summary>
+    public const int ScopeSpecsFieldNumber = 12;
+    private static readonly pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec>.Codec _map_scopeSpecs_codec
+        = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec.Parser), 98);
+    private readonly pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec> scopeSpecs_ = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec>();
+    /// <summary>
+    /// Optional. Scope-specific configuration for this Feature. If this Feature
+    /// does not support any per-Scope configuration, this field may be unused.
+    ///
+    /// The keys indicate which Scope the configuration is for, in the form:
+    ///
+    /// `projects/{p}/locations/global/scopes/{s}`
+    ///
+    /// Where {p} is the project, {s} is a valid Scope in this project.
+    /// {p} WILL match the Feature's project.
+    ///
+    /// {p} will always be returned as the project number, but the project ID is
+    /// also accepted during input. If the same Scope is specified in the map
+    /// twice (using the project ID form, and the project number form), exactly
+    /// ONE of the entries will be saved, with no guarantees as to which. For this
+    /// reason, it is recommended the same format be used for all entries when
+    /// mutating a Feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureSpec> ScopeSpecs {
+      get { return scopeSpecs_; }
+    }
+
+    /// <summary>Field number for the "scope_states" field.</summary>
+    public const int ScopeStatesFieldNumber = 13;
+    private static readonly pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureState>.Codec _map_scopeStates_codec
+        = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureState>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1.ScopeFeatureState.Parser), 106);
+    private readonly pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureState> scopeStates_ = new pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureState>();
+    /// <summary>
+    /// Output only. Scope-specific Feature status. If this Feature does
+    /// report any per-Scope status, this field may be unused.
+    ///
+    /// The keys indicate which Scope the state is for, in the form:
+    ///
+    /// `projects/{p}/locations/global/scopes/{s}`
+    ///
+    /// Where {p} is the project, {s} is a valid Scope in this project.
+    /// {p} WILL match the Feature's project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.GkeHub.V1.ScopeFeatureState> ScopeStates {
+      get { return scopeStates_; }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 15;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(122);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. List of locations that could not be reached while fetching
+    /// this feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -349,6 +436,9 @@ namespace Google.Cloud.GkeHub.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!ScopeSpecs.Equals(other.ScopeSpecs)) return false;
+      if (!ScopeStates.Equals(other.ScopeStates)) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -366,6 +456,9 @@ namespace Google.Cloud.GkeHub.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      hash ^= ScopeSpecs.GetHashCode();
+      hash ^= ScopeStates.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -415,6 +508,9 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(DeleteTime);
       }
+      scopeSpecs_.WriteTo(output, _map_scopeSpecs_codec);
+      scopeStates_.WriteTo(output, _map_scopeStates_codec);
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -456,6 +552,9 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(DeleteTime);
       }
+      scopeSpecs_.WriteTo(ref output, _map_scopeSpecs_codec);
+      scopeStates_.WriteTo(ref output, _map_scopeStates_codec);
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -490,6 +589,9 @@ namespace Google.Cloud.GkeHub.V1 {
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
       }
+      size += scopeSpecs_.CalculateSize(_map_scopeSpecs_codec);
+      size += scopeStates_.CalculateSize(_map_scopeStates_codec);
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -544,6 +646,9 @@ namespace Google.Cloud.GkeHub.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
+      scopeSpecs_.MergeFrom(other.scopeSpecs_);
+      scopeStates_.MergeFrom(other.scopeStates_);
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -615,6 +720,18 @@ namespace Google.Cloud.GkeHub.V1 {
               DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 98: {
+            scopeSpecs_.AddEntriesFrom(input, _map_scopeSpecs_codec);
+            break;
+          }
+          case 106: {
+            scopeStates_.AddEntriesFrom(input, _map_scopeStates_codec);
+            break;
+          }
+          case 122: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -690,6 +807,18 @@ namespace Google.Cloud.GkeHub.V1 {
             input.ReadMessage(DeleteTime);
             break;
           }
+          case 98: {
+            scopeSpecs_.AddEntriesFrom(ref input, _map_scopeSpecs_codec);
+            break;
+          }
+          case 106: {
+            scopeStates_.AddEntriesFrom(ref input, _map_scopeStates_codec);
+            break;
+          }
+          case 122: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     }
@@ -700,7 +829,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// <summary>
   /// FeatureResourceState describes the state of a Feature *resource* in the
   /// GkeHub API. See `FeatureState` for the "running state" of the Feature in the
-  /// Hub and across Memberships.
+  /// Fleet and across Memberships.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureResourceState : pb::IMessage<FeatureResourceState>
@@ -908,16 +1037,16 @@ namespace Google.Cloud.GkeHub.V1 {
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The Feature is being enabled, and the Feature resource is being created.
-        /// Once complete, the corresponding Feature will be enabled in this Hub.
+        /// Once complete, the corresponding Feature will be enabled in this Fleet.
         /// </summary>
         [pbr::OriginalName("ENABLING")] Enabling = 1,
         /// <summary>
-        /// The Feature is enabled in this Hub, and the Feature resource is fully
+        /// The Feature is enabled in this Fleet, and the Feature resource is fully
         /// available.
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 2,
         /// <summary>
-        /// The Feature is being disabled in this Hub, and the Feature resource
+        /// The Feature is being disabled in this Fleet, and the Feature resource
         /// is being deleted.
         /// </summary>
         [pbr::OriginalName("DISABLING")] Disabling = 3,
@@ -1499,7 +1628,7 @@ namespace Google.Cloud.GkeHub.V1 {
   }
 
   /// <summary>
-  /// CommonFeatureState contains Hub-wide Feature status information.
+  /// CommonFeatureState contains Fleet-wide Feature status information.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonFeatureState : pb::IMessage<CommonFeatureState>
@@ -1537,6 +1666,12 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonFeatureState(CommonFeatureState other) : this() {
       state_ = other.state_ != null ? other.state_.Clone() : null;
+      switch (other.FeatureStateCase) {
+        case FeatureStateOneofCase.Rbacrolebindingactuation:
+          Rbacrolebindingactuation = other.Rbacrolebindingactuation.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1546,11 +1681,449 @@ namespace Google.Cloud.GkeHub.V1 {
       return new CommonFeatureState(this);
     }
 
+    /// <summary>Field number for the "rbacrolebindingactuation" field.</summary>
+    public const int RbacrolebindingactuationFieldNumber = 120;
+    /// <summary>
+    /// RBAC Role Binding Actuation feature state
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState Rbacrolebindingactuation {
+      get { return featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation ? (global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState) featureState_ : null; }
+      set {
+        featureState_ = value;
+        featureStateCase_ = value == null ? FeatureStateOneofCase.None : FeatureStateOneofCase.Rbacrolebindingactuation;
+      }
+    }
+
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.GkeHub.V1.FeatureState state_;
     /// <summary>
-    /// Output only. The "running state" of the Feature in this Hub.
+    /// Output only. The "running state" of the Feature in this Fleet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.FeatureState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    private object featureState_;
+    /// <summary>Enum of possible cases for the "feature_state" oneof.</summary>
+    public enum FeatureStateOneofCase {
+      None = 0,
+      Rbacrolebindingactuation = 120,
+    }
+    private FeatureStateOneofCase featureStateCase_ = FeatureStateOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FeatureStateOneofCase FeatureStateCase {
+      get { return featureStateCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFeatureState() {
+      featureStateCase_ = FeatureStateOneofCase.None;
+      featureState_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CommonFeatureState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CommonFeatureState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Rbacrolebindingactuation, other.Rbacrolebindingactuation)) return false;
+      if (!object.Equals(State, other.State)) return false;
+      if (FeatureStateCase != other.FeatureStateCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) hash ^= Rbacrolebindingactuation.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
+      hash ^= (int) featureStateCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (state_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(State);
+      }
+      if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) {
+        output.WriteRawTag(194, 7);
+        output.WriteMessage(Rbacrolebindingactuation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (state_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(State);
+      }
+      if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) {
+        output.WriteRawTag(194, 7);
+        output.WriteMessage(Rbacrolebindingactuation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Rbacrolebindingactuation);
+      }
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CommonFeatureState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::Google.Cloud.GkeHub.V1.FeatureState();
+        }
+        State.MergeFrom(other.State);
+      }
+      switch (other.FeatureStateCase) {
+        case FeatureStateOneofCase.Rbacrolebindingactuation:
+          if (Rbacrolebindingactuation == null) {
+            Rbacrolebindingactuation = new global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState();
+          }
+          Rbacrolebindingactuation.MergeFrom(other.Rbacrolebindingactuation);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (state_ == null) {
+              State = new global::Google.Cloud.GkeHub.V1.FeatureState();
+            }
+            input.ReadMessage(State);
+            break;
+          }
+          case 962: {
+            global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState subBuilder = new global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState();
+            if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) {
+              subBuilder.MergeFrom(Rbacrolebindingactuation);
+            }
+            input.ReadMessage(subBuilder);
+            Rbacrolebindingactuation = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (state_ == null) {
+              State = new global::Google.Cloud.GkeHub.V1.FeatureState();
+            }
+            input.ReadMessage(State);
+            break;
+          }
+          case 962: {
+            global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState subBuilder = new global::Google.Cloud.GkeHub.V1.RbacRoleBindingActuation.FeatureState();
+            if (featureStateCase_ == FeatureStateOneofCase.Rbacrolebindingactuation) {
+              subBuilder.MergeFrom(Rbacrolebindingactuation);
+            }
+            input.ReadMessage(subBuilder);
+            Rbacrolebindingactuation = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ScopeFeatureSpec contains feature specs for a fleet scope.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ScopeFeatureSpec : pb::IMessage<ScopeFeatureSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ScopeFeatureSpec> _parser = new pb::MessageParser<ScopeFeatureSpec>(() => new ScopeFeatureSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ScopeFeatureSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureSpec(ScopeFeatureSpec other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureSpec Clone() {
+      return new ScopeFeatureSpec(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ScopeFeatureSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ScopeFeatureSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ScopeFeatureSpec other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ScopeFeatureState contains Scope-wide Feature status information.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ScopeFeatureState : pb::IMessage<ScopeFeatureState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ScopeFeatureState> _parser = new pb::MessageParser<ScopeFeatureState>(() => new ScopeFeatureState());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ScopeFeatureState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureState(ScopeFeatureState other) : this() {
+      state_ = other.state_ != null ? other.state_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScopeFeatureState Clone() {
+      return new ScopeFeatureState(this);
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.GkeHub.V1.FeatureState state_;
+    /// <summary>
+    /// Output only. The "running state" of the Feature in this Scope.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1564,12 +2137,12 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CommonFeatureState);
+      return Equals(other as ScopeFeatureState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CommonFeatureState other) {
+    public bool Equals(ScopeFeatureState other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1642,7 +2215,7 @@ namespace Google.Cloud.GkeHub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CommonFeatureState other) {
+    public void MergeFrom(ScopeFeatureState other) {
       if (other == null) {
         return;
       }
@@ -1722,7 +2295,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1962,7 +2535,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.GkeHub.V1.FeatureReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             Feature response = gkeHubClient.GetFeature(request);
