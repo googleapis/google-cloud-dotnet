@@ -200,25 +200,31 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task OneWrite_SuccessAsync()
         {
-            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-            using (var writeConnection = _fixture.GetConnection())
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
-                await writeConnection.OpenAsync();
-                await UpdateValueAsync(writeConnection);
-                scope.Complete();
-            }
+                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                using (var writeConnection = _fixture.GetConnection())
+                {
+                    await writeConnection.OpenAsync();
+                    await UpdateValueAsync(writeConnection);
+                    scope.Complete();
+                }
+            });
         }
 
         [Fact]
         public void OneWrite_Success()
         {
-            using (var scope = new TransactionScope())
-            using (var writeConnection = _fixture.GetConnection())
+            RetryHelpers.ExecuteWithRetry(() =>
             {
-                writeConnection.Open();
-                UpdateValue(writeConnection);
-                scope.Complete();
-            }
+                using (var scope = new TransactionScope())
+                using (var writeConnection = _fixture.GetConnection())
+                {
+                    writeConnection.Open();
+                    UpdateValue(writeConnection);
+                    scope.Complete();
+                }
+            });
         }
 
         [Fact]
