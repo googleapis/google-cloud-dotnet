@@ -6537,6 +6537,23 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Developers.Knowledge.V1Alpha",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Developer Knowledge",
+      "productUrl": "https://developers.google.com/knowledge",
+      "description": "The Developer Knowledge API provides access to Google's developer knowledge.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/developers/knowledge/v1alpha",
+      "includeCommonResourcesProto": true,
+      "shortName": "developerknowledge",
+      "serviceConfigFile": "developerknowledge_v1alpha.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Geo.Type",
       "version": "1.3.0",
       "type": "other",
