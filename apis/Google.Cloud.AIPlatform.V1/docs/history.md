@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.62.0, released 2026-02-05
+
+### New features
+
+- Add resource_reference to the field `name` in message `.google.cloud.aiplatform.v1.Dataset`
+- Add resource_reference to the field `name` in message `.google.cloud.aiplatform.v1.DatasetVersion`
+
+### Documentation improvements
+
+- Update documentation of `.google.cloud.aiplatform.v1.DatasetService`, `.google.cloud.aiplatform.v1.Dataset`, and `.google.cloud.aiplatform.v1.DatasetVersion`
+
 ## Version 3.61.0, released 2026-02-02
 
 ### New features
