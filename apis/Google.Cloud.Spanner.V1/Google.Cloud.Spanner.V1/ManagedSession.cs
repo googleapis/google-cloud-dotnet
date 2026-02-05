@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -47,6 +48,28 @@ public sealed partial class ManagedSession
     {
         var session = await _lifecycleManager.GetFreshSessionAsync(cancellationToken).ConfigureAwait(false);
         return ManagedTransaction.FromTransactionOptions(_options, session, transactionOptions, singleUse, shared);
+    }
+
+	/// <summary>
+	/// Executes a BatchWrite RPC asynchronously, returning a stream of responses.
+	/// </summary>
+    /// <remarks>
+    /// This method modifies the <paramref name="request"/> to include the session name from this managed session.
+    /// </remarks>
+	/// <param name="request">The batch write request. Must not be null.</param>
+	/// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+    /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response stream of <see cref="BatchWriteResponse"/> objects.</returns>
+	public async Task<AsyncResponseStream<BatchWriteResponse>> BatchWriteAsync(BatchWriteRequest request, CallSettings callSettings)
+	{
+		GaxPreconditions.CheckNotNull(request, nameof(request));
+        CancellationToken cancellationToken = callSettings.CancellationToken ?? default;
+        var session = await _lifecycleManager.GetFreshSessionAsync(cancellationToken).ConfigureAwait(false);
+
+        // Populate the request with the current session name.
+        request.Session = session.SessionName.ToString();
+
+        var response = _options.Client.BatchWrite(request, callSettings);
+        return response.GetResponseStream();
     }
 
     /// <summary>
