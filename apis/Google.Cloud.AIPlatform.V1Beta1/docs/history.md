@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta67, released 2026-02-05
+
+### New features
+
+- Add resource_reference to the field `name` in message `.google.cloud.aiplatform.v1beta1.Dataset`
+- Add resource_reference to the field `name` in message `.google.cloud.aiplatform.v1beta1.DatasetVersion`
+- Force-delete for RagCorpora, ignoring any external errors and ensuring deletion of the RagCorpus
+
+### Documentation improvements
+
+- Update documentation of `.google.cloud.aiplatform.v1beta1.Dataset` and `.google.cloud.aiplatform.v1beta1.DatasetVersion`
+
 ## Version 1.0.0-beta66, released 2026-01-26
 
 ### New features
