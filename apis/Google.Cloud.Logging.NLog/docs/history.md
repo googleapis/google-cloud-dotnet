@@ -1,5 +1,16 @@
 # Version history
 
+## Version 6.0.0, released 2026-02-05
+
+### New features
+
+- BREAKING CHANGE: Support credential type parameter for NLog.
+- Update dependencies
+
+BREAKING CHANGE: When loading credentials from a file or JSON, it is now required to specify the credential type.
+If left unspecified, the credential will be assumed to be a service account credential.
+See [Externally Sourced Credentials](https://cloud.google.com/docs/authentication/external/externally-sourced-credentials) for details.
+
 ## Version 5.2.0, released 2024-09-26
 
 ### New features
