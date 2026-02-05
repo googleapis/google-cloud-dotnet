@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
@@ -117,6 +118,23 @@ namespace Google.Cloud.Spanner.V1
             "There's no need for session pooling and these statistics are meaningless.")]
         public SessionPoolSegmentStatistics GetSegmentStatisticsSnapshot(DatabaseName databaseName) =>
             GetSegmentStatisticsSnapshot(SessionPoolSegmentKey.Create(databaseName));
+
+        /// <summary>
+        /// Executes a BatchWrite RPC asynchronously, returning a stream of responses.
+        /// </summary>
+        /// <param name="request">The batch write request. Must not be null.</param>
+        /// <param name="key">The session pool segment key. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response stream of <see cref="BatchWriteResponse"/> objects.</returns>
+        [Obsolete("Use ManagedSession.BatchWriteAsync instead.")]
+        public async Task<AsyncResponseStream<BatchWriteResponse>> BatchWriteAsync(BatchWriteRequest request, SessionPoolSegmentKey key, CallSettings callSettings)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
+
+            var managedSession = _managedSessions.GetOrAdd(key, CreateManagedSession);
+            return await managedSession.BatchWriteAsync(request, callSettings).ConfigureAwait(false);
+        }
 
         /// <summary>
         /// Asynchronously acquires a session that will handle transaction creation as needed.
