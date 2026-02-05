@@ -3623,7 +3623,7 @@
     },
     {
       "id": "Google.Cloud.Logging.NLog",
-      "version": "5.2.0",
+      "version": "6.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "NLog target for the Google Cloud Logging API.",
