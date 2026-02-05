@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta21, released 2026-02-05
+
+### New features
+
+- Addition of QuoteType enum, QuotedMessageSnapshot & ForwardMetadata in the QuotedMessageMetadata proto
+
 ## Version 1.0.0-beta20, released 2026-01-05
 
 ### New features
