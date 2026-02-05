@@ -1773,12 +1773,12 @@
         },
         {
             "id": "Google.Cloud.GkeHub.V1",
-            "currentVersion": "2.7.0",
+            "currentVersion": "2.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T17:09:48.280705143Z",
+            "releaseTimestamp": "2026-02-05T17:00:51.102395321Z",
             "lastGeneratedCommit": "7a5706618f42f482acf583febcc7b977b66c25b2",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "7a5706618f42f482acf583febcc7b977b66c25b2",
             "apiPaths": [
                 "google/cloud/gkehub/v1"
             ],
