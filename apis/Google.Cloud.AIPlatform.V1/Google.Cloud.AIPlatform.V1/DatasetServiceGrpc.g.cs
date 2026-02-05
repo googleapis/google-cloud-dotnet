@@ -3,7 +3,7 @@
 //     source: google/cloud/aiplatform/v1/dataset_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -501,9 +501,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
-      /// This RPC is only available in InternalDatasetService. It is only used for
-      /// exporting conversation data to CCAI Insights.
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1408,9 +1406,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnnotationSpec, null, options, request);
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
-      /// This RPC is only available in InternalDatasetService. It is only used for
-      /// exporting conversation data to CCAI Insights.
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1423,9 +1419,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return ListAnnotations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
-      /// This RPC is only available in InternalDatasetService. It is only used for
-      /// exporting conversation data to CCAI Insights.
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1436,9 +1430,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAnnotations, null, options, request);
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
-      /// This RPC is only available in InternalDatasetService. It is only used for
-      /// exporting conversation data to CCAI Insights.
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1451,9 +1443,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return ListAnnotationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
-      /// This RPC is only available in InternalDatasetService. It is only used for
-      /// exporting conversation data to CCAI Insights.
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
