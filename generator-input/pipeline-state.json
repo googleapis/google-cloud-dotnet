@@ -4064,6 +4064,7 @@
         {
             "id": "Google.Cloud.Spanner",
             "currentVersion": "5.12.0",
+            "nextVersion": "5.13.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-19T14:21:42.122750012Z",
