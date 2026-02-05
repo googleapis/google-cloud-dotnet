@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.15.0, released 2026-02-05
+
+### New features
+
+- Add DIRSUM_SHA256 hash type
+
 ## Version 2.14.0, released 2026-01-05
 
 ### New features
