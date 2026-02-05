@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.17.0, released 2026-02-05
+
+### New features
+
+- Expose the `Database.firestore_data_access_mode` parameter
+- Expose the `Database.mongodb_compatible_data_access_mode` parameter
+- Expose the `Database.realtime_updates_mode` parameter
+- Expose the `Index.unique` parameter
+
+### Documentation improvements
+
+- Update documentation on several parameters, especially when relating to the new `enterprise` database edition
+
 ## Version 3.16.0, released 2025-11-05
 
 ### New features
