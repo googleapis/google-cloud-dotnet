@@ -28,8 +28,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "c2lvbi5wcm90bxIfZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
             "ZXNvdXJjZS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLyAwoORGF0YXNldFZl",
-            "cnNpb24SFAoEbmFtZRgBIAEoCUIG4EED4EEIEjQKC2NyZWF0ZV90aW1lGAIg",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKfBAoORGF0YXNldFZl",
+            "cnNpb24SQQoEbmFtZRgBIAEoCUIz4EED4EEI+kEqCihhaXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFzZXRWZXJzaW9uEjQKC2NyZWF0ZV90aW1lGAIg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
             "ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
             "EgwKBGV0YWcYAyABKAkSIwoWYmlnX3F1ZXJ5X2RhdGFzZXRfbmFtZRgEIAEo",
@@ -118,6 +119,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. Identifier. The resource name of the DatasetVersion.
+    /// Format:
+    /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
