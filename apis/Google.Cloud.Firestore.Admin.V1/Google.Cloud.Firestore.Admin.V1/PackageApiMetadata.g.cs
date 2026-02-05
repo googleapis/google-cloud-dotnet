@@ -63,6 +63,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             yield return IndexReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return OperationReflection.Descriptor;
+            yield return RealtimeUpdatesReflection.Descriptor;
             yield return ScheduleReflection.Descriptor;
             yield return SnapshotReflection.Descriptor;
             yield return UserCredsReflection.Descriptor;

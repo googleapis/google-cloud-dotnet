@@ -680,7 +680,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// with first character a letter and the last a letter or a number. Must not
     /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
     ///
-    /// "(default)" database ID is also valid.
+    /// "(default)" database ID is also valid if the database is Standard edition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7489,8 +7489,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which collection IDs to export. Unspecified means all collections. Each
-    /// collection ID in this list must be unique.
+    /// IDs of the collection groups to export. Unspecified means all
+    /// collection groups. Each collection group in this list must be unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7852,8 +7852,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which collection IDs to import. Unspecified means all collections included
-    /// in the import. Each collection ID in this list must be unique.
+    /// IDs of the collection groups to import. Unspecified means all collection
+    /// groups that were included in the export. Each collection group in this list
+    /// must be unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9469,7 +9470,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// with first character a letter and the last a letter or a number. Must not
     /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
     ///
-    /// "(default)" database ID is also valid.
+    /// "(default)" database ID is also valid if the database is Standard edition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9846,7 +9847,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// with first character a letter and the last a letter or a number. Must not
     /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
     ///
-    /// "(default)" database ID is also valid.
+    /// "(default)" database ID is also valid if the database is Standard edition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
