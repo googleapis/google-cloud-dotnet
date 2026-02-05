@@ -1,5 +1,29 @@
 # Version history
 
+## Version 2.8.0, released 2026-02-05
+
+### New features
+
+- Add GKE Hub teams scope and RBAC GAPIC
+
+### Documentation improvements
+
+- A comment for message `Feature` is changed
+- A comment for field `labels` in message `.google.cloud.gkehub.v1.Feature` is changed
+- A comment for field `spec` in message `.google.cloud.gkehub.v1.Feature` is changed
+- A comment for field `membership_specs` in message `.google.cloud.gkehub.v1.Feature` is changed
+- A comment for field `state` in message `.google.cloud.gkehub.v1.Feature` is changed
+- A comment for field `membership_states` in message `.google.cloud.gkehub.v1.Feature` is changed
+- A comment for message `FeatureResourceState` is changed
+- A comment for enum value `ENABLING` in enum `State` is changed
+- A comment for enum value `ACTIVE` in enum `State` is changed
+- A comment for enum value `DISABLING` in enum `State` is changed
+- A comment for message `CommonFeatureState` is changed
+- A comment for field `state` in message `.google.cloud.gkehub.v1.CommonFeatureState` is changed
+- A comment for field `request_id` in message `.google.cloud.gkehub.v1.CreateFeatureRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.gkehub.v1.UpdateFeatureRequest` is changed
+- A comment for field `cancel_requested` in message `.google.cloud.gkehub.v1.OperationMetadata` is changed
+
 ## Version 2.7.0, released 2025-11-05
 
 ### New features

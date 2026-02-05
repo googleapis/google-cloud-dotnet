@@ -3129,7 +3129,7 @@
     },
     {
       "id": "Google.Cloud.GkeHub.V1",
-      "version": "2.7.0",
+      "version": "2.8.0",
       "type": "grpc",
       "productName": "GKE Hub",
       "productUrl": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
