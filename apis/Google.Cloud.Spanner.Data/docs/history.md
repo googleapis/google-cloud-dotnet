@@ -1,5 +1,20 @@
 # Version history
 
+## Version 5.13.0-beta01, released 2026-02-05
+
+### New features
+
+- Include cache updates into the ResultSet response
+- Implement session pooling over MUX.
+- Add MUX support
+
+### Documentation improvements
+
+- A comment for field `transaction_tag` in message `.google.spanner.v1.RequestOptions` is changed
+- A comment for field `params` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `param_types` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `commit_timestamp` in message `.google.spanner.v1.BatchWriteResponse` is changed
+
 ## Version 5.12.0, released 2026-01-19
 
 ### New features
