@@ -26,7 +26,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           string.Concat(
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvEhlnb29n",
             "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIu0KCgVJbmRl",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIoILCgVJbmRl",
             "eBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2xl",
             "LmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNjb3BlEjwKCWFwaV9z",
             "Y29wZRgFIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgu",
@@ -35,38 +35,39 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZRI+CgdkZW5zaXR5",
             "GAYgASgOMiguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5EZW5z",
             "aXR5QgPgQQUSFQoIbXVsdGlrZXkYByABKAhCA+BBARIYCgtzaGFyZF9jb3Vu",
-            "dBgIIAEoBUID4EEBGqIECgpJbmRleEZpZWxkEhIKCmZpZWxkX3BhdGgYASAB",
-            "KAkSQgoFb3JkZXIYAiABKA4yMS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "LkluZGV4LkluZGV4RmllbGQuT3JkZXJIABJPCgxhcnJheV9jb25maWcYAyAB",
-            "KA4yNy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4LkluZGV4Rmll",
-            "bGQuQXJyYXlDb25maWdIABJRCg12ZWN0b3JfY29uZmlnGAQgASgLMjguZ29v",
-            "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLlZlY3Rv",
-            "ckNvbmZpZ0gAGo8BCgxWZWN0b3JDb25maWcSFgoJZGltZW5zaW9uGAEgASgF",
-            "QgPgQQISUgoEZmxhdBgCIAEoCzJCLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4u",
-            "djEuSW5kZXguSW5kZXhGaWVsZC5WZWN0b3JDb25maWcuRmxhdEluZGV4SAAa",
-            "CwoJRmxhdEluZGV4QgYKBHR5cGUiPQoFT3JkZXISFQoRT1JERVJfVU5TUEVD",
-            "SUZJRUQQABINCglBU0NFTkRJTkcQARIOCgpERVNDRU5ESU5HEAIiOQoLQXJy",
-            "YXlDb25maWcSHAoYQVJSQVlfQ09ORklHX1VOU1BFQ0lGSUVEEAASDAoIQ09O",
-            "VEFJTlMQAUIMCgp2YWx1ZV9tb2RlImkKClF1ZXJ5U2NvcGUSGwoXUVVFUllf",
-            "U0NPUEVfVU5TUEVDSUZJRUQQABIOCgpDT0xMRUNUSU9OEAESFAoQQ09MTEVD",
-            "VElPTl9HUk9VUBACEhgKFENPTExFQ1RJT05fUkVDVVJTSVZFEAMiSwoIQXBp",
-            "U2NvcGUSCwoHQU5ZX0FQSRAAEhYKEkRBVEFTVE9SRV9NT0RFX0FQSRABEhoK",
-            "Fk1PTkdPREJfQ09NUEFUSUJMRV9BUEkQAiJJCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxORUVE",
-            "U19SRVBBSVIQAyJNCgdEZW5zaXR5EhcKE0RFTlNJVFlfVU5TUEVDSUZJRUQQ",
-            "ABIOCgpTUEFSU0VfQUxMEAESDgoKU1BBUlNFX0FOWRACEgkKBURFTlNFEAM6",
-            "eupBdwoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0luZGV4ElVwcm9qZWN0",
-            "cy97cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdy",
-            "b3Vwcy97Y29sbGVjdGlvbn0vaW5kZXhlcy97aW5kZXh9QtkBCh1jb20uZ29v",
-            "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MUIKSW5kZXhQcm90b1ABWjljbG91ZC5n",
-            "b29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1pbi9hZG1pbnBiO2Fk",
-            "bWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5W",
-            "McoCH0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6",
-            "OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
+            "dBgIIAEoBUID4EEBEhMKBnVuaXF1ZRgKIAEoCEID4EEBGqIECgpJbmRleEZp",
+            "ZWxkEhIKCmZpZWxkX3BhdGgYASABKAkSQgoFb3JkZXIYAiABKA4yMS5nb29n",
+            "bGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4LkluZGV4RmllbGQuT3JkZXJI",
+            "ABJPCgxhcnJheV9jb25maWcYAyABKA4yNy5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLkluZGV4LkluZGV4RmllbGQuQXJyYXlDb25maWdIABJRCg12ZWN0",
+            "b3JfY29uZmlnGAQgASgLMjguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5J",
+            "bmRleC5JbmRleEZpZWxkLlZlY3RvckNvbmZpZ0gAGo8BCgxWZWN0b3JDb25m",
+            "aWcSFgoJZGltZW5zaW9uGAEgASgFQgPgQQISUgoEZmxhdBgCIAEoCzJCLmdv",
+            "b2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5WZWN0",
+            "b3JDb25maWcuRmxhdEluZGV4SAAaCwoJRmxhdEluZGV4QgYKBHR5cGUiPQoF",
+            "T3JkZXISFQoRT1JERVJfVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIO",
+            "CgpERVNDRU5ESU5HEAIiOQoLQXJyYXlDb25maWcSHAoYQVJSQVlfQ09ORklH",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ09OVEFJTlMQAUIMCgp2YWx1ZV9tb2RlImkK",
+            "ClF1ZXJ5U2NvcGUSGwoXUVVFUllfU0NPUEVfVU5TUEVDSUZJRUQQABIOCgpD",
+            "T0xMRUNUSU9OEAESFAoQQ09MTEVDVElPTl9HUk9VUBACEhgKFENPTExFQ1RJ",
+            "T05fUkVDVVJTSVZFEAMiSwoIQXBpU2NvcGUSCwoHQU5ZX0FQSRAAEhYKEkRB",
+            "VEFTVE9SRV9NT0RFX0FQSRABEhoKFk1PTkdPREJfQ09NUEFUSUJMRV9BUEkQ",
+            "AiJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
+            "EAESCQoFUkVBRFkQAhIQCgxORUVEU19SRVBBSVIQAyJNCgdEZW5zaXR5EhcK",
+            "E0RFTlNJVFlfVU5TUEVDSUZJRUQQABIOCgpTUEFSU0VfQUxMEAESDgoKU1BB",
+            "UlNFX0FOWRACEgkKBURFTlNFEAM6eupBdwoeZmlyZXN0b3JlLmdvb2dsZWFw",
+            "aXMuY29tL0luZGV4ElVwcm9qZWN0cy97cHJvamVjdH0vZGF0YWJhc2VzL3tk",
+            "YXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vwcy97Y29sbGVjdGlvbn0vaW5kZXhl",
+            "cy97aW5kZXh9QtkBCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIK",
+            "SW5kZXhQcm90b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9h",
+            "cGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNs",
+            "b3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3Rv",
+            "cmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWlu",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "ApiScope", "Fields", "State", "Density", "Multikey", "ShardCount" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.Density) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig", "VectorConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Parser, new[]{ "Dimension", "Flat" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex.Parser, null, null, null, null, null)})})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "ApiScope", "Fields", "State", "Density", "Multikey", "ShardCount", "Unique" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.Density) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig", "VectorConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Parser, new[]{ "Dimension", "Flat" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex.Parser, null, null, null, null, null)})})})
           }));
     }
     #endregion
@@ -120,6 +121,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       density_ = other.density_;
       multikey_ = other.multikey_;
       shardCount_ = other.shardCount_;
+      unique_ = other.unique_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -274,6 +276,22 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "unique" field.</summary>
+    public const int UniqueFieldNumber = 10;
+    private bool unique_;
+    /// <summary>
+    /// Optional. Whether it is an unique index. Unique index ensures all values
+    /// for the indexed field(s) are unique across documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Unique {
+      get { return unique_; }
+      set {
+        unique_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -297,6 +315,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Density != other.Density) return false;
       if (Multikey != other.Multikey) return false;
       if (ShardCount != other.ShardCount) return false;
+      if (Unique != other.Unique) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -312,6 +331,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Density != global::Google.Cloud.Firestore.Admin.V1.Index.Types.Density.Unspecified) hash ^= Density.GetHashCode();
       if (Multikey != false) hash ^= Multikey.GetHashCode();
       if (ShardCount != 0) hash ^= ShardCount.GetHashCode();
+      if (Unique != false) hash ^= Unique.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -359,6 +379,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ShardCount);
       }
+      if (Unique != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(Unique);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -398,6 +422,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ShardCount);
       }
+      if (Unique != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(Unique);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -429,6 +457,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (ShardCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ShardCount);
+      }
+      if (Unique != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -463,6 +494,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.ShardCount != 0) {
         ShardCount = other.ShardCount;
+      }
+      if (other.Unique != false) {
+        Unique = other.Unique;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -511,6 +545,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             ShardCount = input.ReadInt32();
             break;
           }
+          case 80: {
+            Unique = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -556,6 +594,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 64: {
             ShardCount = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            Unique = input.ReadBool();
             break;
           }
         }
@@ -663,25 +705,67 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// </summary>
         [pbr::OriginalName("DENSITY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// In order for an index entry to be added, the document must
-        /// contain all fields specified in the index.
+        /// An index entry will only exist if ALL fields are present in the document.
         ///
-        /// This is the only allowed value for indexes having ApiScope `ANY_API` and
-        /// `DATASTORE_MODE_API`.
+        /// This is both the default and only allowed value for Standard Edition
+        /// databases (for both Cloud Firestore `ANY_API` and Cloud Datastore
+        /// `DATASTORE_MODE_API`).
+        ///
+        /// Take for example the following document:
+        ///
+        /// ```
+        /// {
+        ///   "__name__": "...",
+        ///   "a": 1,
+        ///   "b": 2,
+        ///   "c": 3
+        /// }
+        /// ```
+        ///
+        /// an index on `(a ASC, b ASC, c ASC, __name__ ASC)` will generate an index
+        /// entry for this document since `a`, 'b', `c`, and `__name__` are all
+        /// present but an index of `(a ASC, d ASC, __name__ ASC)` will not generate
+        /// an index entry for this document since `d` is missing.
+        ///
+        /// This means that such indexes can only be used to serve a query when the
+        /// query has either implicit or explicit requirements that all fields from
+        /// the index are present.
         /// </summary>
         [pbr::OriginalName("SPARSE_ALL")] SparseAll = 1,
         /// <summary>
-        /// In order for an index entry to be added, the document must
-        /// contain at least one of the fields specified in the index.
-        /// Non-existent fields are treated as having a NULL value when generating
-        /// index entries.
+        /// An index entry will exist if ANY field are present in the document.
+        ///
+        /// This is used as the definition of a sparse index for Enterprise Edition
+        /// databases.
+        ///
+        /// Take for example the following document:
+        ///
+        /// ```
+        /// {
+        ///   "__name__": "...",
+        ///   "a": 1,
+        ///   "b": 2,
+        ///   "c": 3
+        /// }
+        /// ```
+        ///
+        /// an index on `(a ASC, d ASC)` will generate an index entry for this
+        /// document since `a` is present, and will fill in an `unset` value for `d`.
+        /// An index on `(d ASC, e ASC)` will not generate any index entry as neither
+        /// `d` nor `e` are present.
+        ///
+        /// An index that contains `__name__` will generate an index entry for all
+        /// documents since Firestore guarantees that all documents have a `__name__`
+        /// field.
         /// </summary>
         [pbr::OriginalName("SPARSE_ANY")] SparseAny = 2,
         /// <summary>
-        /// An index entry will be added regardless of whether the
-        /// document contains any of the fields specified in the index.
-        /// Non-existent fields are treated as having a NULL value when generating
-        /// index entries.
+        /// An index entry will exist regardless of if the fields are present or not.
+        ///
+        /// This is the default density for an Enterprise Edition database.
+        ///
+        /// The index will store `unset` values for fields that are not present in
+        /// the document.
         /// </summary>
         [pbr::OriginalName("DENSE")] Dense = 3,
       }
