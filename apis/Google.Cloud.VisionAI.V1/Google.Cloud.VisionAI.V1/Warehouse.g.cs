@@ -607,7 +607,7 @@ namespace Google.Cloud.VisionAI.V1 {
             "QUNFVF9CVUNLRVRfVFlQRV9VTlNQRUNJRklFRBAAEhsKF0ZBQ0VUX0JVQ0tF",
             "VF9UWVBFX1ZBTFVFEAESHgoaRkFDRVRfQlVDS0VUX1RZUEVfREFURVRJTUUQ",
             "AhIhCh1GQUNFVF9CVUNLRVRfVFlQRV9GSVhFRF9SQU5HRRADEiIKHkZBQ0VU",
-            "X0JVQ0tFVF9UWVBFX0NVU1RPTV9SQU5HRRAEMpFmCglXYXJlaG91c2USuQEK",
+            "X0JVQ0tFVF9UWVBFX0NVU1RPTV9SQU5HRRAEMptmCglXYXJlaG91c2USuQEK",
             "C0NyZWF0ZUFzc2V0EiwuZ29vZ2xlLmNsb3VkLnZpc2lvbmFpLnYxLkNyZWF0",
             "ZUFzc2V0UmVxdWVzdBofLmdvb2dsZS5jbG91ZC52aXNpb25haS52MS5Bc3Nl",
             "dCJb2kEVcGFyZW50LGFzc2V0LGFzc2V0X2lkgtPkkwI9IjQvdjEve3BhcmVu",
@@ -896,13 +896,13 @@ namespace Google.Cloud.VisionAI.V1 {
             "b2dsZS5jbG91ZC52aXNpb25haS52MS5WaWV3Q29sbGVjdGlvbkl0ZW1zUmVz",
             "cG9uc2UiaNpBCmNvbGxlY3Rpb26C0+STAlUSUy92MS97Y29sbGVjdGlvbj1w",
             "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvcnBvcmEvKi9jb2xsZWN0aW9ucy8q",
-            "fTp2aWV3Q29sbGVjdGlvbkl0ZW1zGkvKQRd2aXNpb25haS5nb29nbGVhcGlz",
-            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm1CvgEKHGNvbS5nb29nbGUuY2xvdWQudmlzaW9uYWkudjFCDldh",
-            "cmVob3VzZVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vdmlzaW9uYWkv",
-            "YXBpdjEvdmlzaW9uYWlwYjt2aXNpb25haXBiqgIYR29vZ2xlLkNsb3VkLlZp",
-            "c2lvbkFJLlYxygIYR29vZ2xlXENsb3VkXFZpc2lvbkFJXFYx6gIbR29vZ2xl",
-            "OjpDbG91ZDo6VmlzaW9uQUk6OlYxYgZwcm90bzM="));
+            "fTp2aWV3Q29sbGVjdGlvbkl0ZW1zGlXKQSF3YXJlaG91c2UtdmlzaW9uYWku",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQr4BChxjb20uZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bmFpLnYxQg5XYXJlaG91c2VQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
+            "L3Zpc2lvbmFpL2FwaXYxL3Zpc2lvbmFpcGI7dmlzaW9uYWlwYqoCGEdvb2ds",
+            "ZS5DbG91ZC5WaXNpb25BSS5WMcoCGEdvb2dsZVxDbG91ZFxWaXNpb25BSVxW",
+            "MeoCG0dvb2dsZTo6Q2xvdWQ6OlZpc2lvbkFJOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.VisionAI.V1.CommonReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VisionAI.V1.FacetBucketType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -39551,7 +39551,7 @@ namespace Google.Cloud.VisionAI.V1 {
     /// If negative, INVALID_ARGUMENT error will be returned.
     /// If unspecified or 0, API will pick a default size, which is 10.
     /// If the requested page size is larger than the maximum size, API will pick
-    /// the maximum size, which is 100.
+    /// the maximum size, which is 200.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -41244,8 +41244,8 @@ namespace Google.Cloud.VisionAI.V1 {
     /// image query).
     /// By default this represents cosine similarity between the query and the
     /// retrieved media content. The value is in the range of [-1, 1].
-    /// Note that search ranking is not only decided by this relevance score,
-    /// but also other factors such as the match of annotations.
+    /// Note that search ranking is not only decided by this relevance score, but
+    /// also other factors such as the match of annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

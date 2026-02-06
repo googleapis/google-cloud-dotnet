@@ -34,6 +34,16 @@ namespace Google.Cloud.VisionAI.V1
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
+                {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
                     proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
