@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 SignedEntities = { new SignedEntity(), },
                 GceShieldedIdentity = new GceShieldedIdentity(),
                 Options = new VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions(),
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyConfidentialSpaceResponse response = confidentialComputingClient.VerifyConfidentialSpace(request);

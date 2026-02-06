@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 TokenOptions = new TokenOptions(),
                 TdCcel = new TdxCcelAttestation(),
                 Attester = "",
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);

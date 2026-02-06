@@ -132,6 +132,7 @@ namespace GoogleCSharpSnippets
                 TokenOptions = new TokenOptions(),
                 TdCcel = new TdxCcelAttestation(),
                 Attester = "",
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyAttestationResponse response = confidentialComputingClient.VerifyAttestation(request);
@@ -155,6 +156,7 @@ namespace GoogleCSharpSnippets
                 TokenOptions = new TokenOptions(),
                 TdCcel = new TdxCcelAttestation(),
                 Attester = "",
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
@@ -176,6 +178,7 @@ namespace GoogleCSharpSnippets
                 SignedEntities = { new SignedEntity(), },
                 GceShieldedIdentity = new GceShieldedIdentity(),
                 Options = new VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions(),
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyConfidentialSpaceResponse response = confidentialComputingClient.VerifyConfidentialSpace(request);
@@ -198,6 +201,7 @@ namespace GoogleCSharpSnippets
                 SignedEntities = { new SignedEntity(), },
                 GceShieldedIdentity = new GceShieldedIdentity(),
                 Options = new VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions(),
+                NvidiaAttestation = new NvidiaAttestation(),
             };
             // Make the request
             VerifyConfidentialSpaceResponse response = await confidentialComputingClient.VerifyConfidentialSpaceAsync(request);
@@ -215,6 +219,7 @@ namespace GoogleCSharpSnippets
             {
                 ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
                 TpmAttestation = new TpmAttestation(),
+                Options = new VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions(),
             };
             // Make the request
             VerifyConfidentialGkeResponse response = confidentialComputingClient.VerifyConfidentialGke(request);
@@ -233,6 +238,7 @@ namespace GoogleCSharpSnippets
             {
                 ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
                 TpmAttestation = new TpmAttestation(),
+                Options = new VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions(),
             };
             // Make the request
             VerifyConfidentialGkeResponse response = await confidentialComputingClient.VerifyConfidentialGkeAsync(request);

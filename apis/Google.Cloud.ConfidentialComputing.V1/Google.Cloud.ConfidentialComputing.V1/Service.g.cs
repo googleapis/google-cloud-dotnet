@@ -40,142 +40,188 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
             "YXBpcy5jb20vTG9jYXRpb24SSAoJY2hhbGxlbmdlGAIgASgLMjAuZ29vZ2xl",
             "LmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2VCA+BB",
-            "AiKfBQoYVmVyaWZ5QXR0ZXN0YXRpb25SZXF1ZXN0ElEKB3RkX2NjZWwYBiAB",
+            "AiKSBgoYVmVyaWZ5QXR0ZXN0YXRpb25SZXF1ZXN0ElEKB3RkX2NjZWwYBiAB",
             "KAsyOS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRk",
             "eENjZWxBdHRlc3RhdGlvbkID4EEBSAASXAoTc2V2X3NucF9hdHRlc3RhdGlv",
             "bhgHIAEoCzI4Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
-            "djEuU2V2U25wQXR0ZXN0YXRpb25CA+BBAUgAEkkKCWNoYWxsZW5nZRgBIAEo",
-            "CUI24EEC+kEwCi5jb25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBpcy5j",
-            "b20vQ2hhbGxlbmdlElMKD2djcF9jcmVkZW50aWFscxgCIAEoCzI1Lmdvb2ds",
-            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuR2NwQ3JlZGVudGlh",
-            "bHNCA+BBARJTCg90cG1fYXR0ZXN0YXRpb24YAyABKAsyNS5nb29nbGUuY2xv",
-            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uQgPg",
-            "QQISYgoXY29uZmlkZW50aWFsX3NwYWNlX2luZm8YBCABKAsyPC5nb29nbGUu",
-            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbmZpZGVudGlhbFNw",
-            "YWNlSW5mb0ID4EEBEk8KDXRva2VuX29wdGlvbnMYBSABKAsyMy5nb29nbGUu",
-            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuT3B0aW9uc0ID",
-            "4EEBEhUKCGF0dGVzdGVyGAggASgJQgPgQQFCEQoPdGVlX2F0dGVzdGF0aW9u",
-            "IoMBChJUZHhDY2VsQXR0ZXN0YXRpb24SHAoPY2NlbF9hY3BpX3RhYmxlGAEg",
-            "ASgMQgPgQQESFgoJY2NlbF9kYXRhGAIgASgMQgPgQQESIAoTY2Fub25pY2Fs",
-            "X2V2ZW50X2xvZxgDIAEoDEID4EEBEhUKCHRkX3F1b3RlGAQgASgMQgPgQQEi",
-            "PwoRU2V2U25wQXR0ZXN0YXRpb24SEwoGcmVwb3J0GAEgASgMQgPgQQESFQoI",
-            "YXV4X2Jsb2IYAiABKAxCA+BBASJsChlWZXJpZnlBdHRlc3RhdGlvblJlc3Bv",
-            "bnNlEh4KEW9pZGNfY2xhaW1zX3Rva2VuGAIgASgJQgPgQQMSLwoOcGFydGlh",
-            "bF9lcnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDIjMKDkdj",
-            "cENyZWRlbnRpYWxzEiEKGXNlcnZpY2VfYWNjb3VudF9pZF90b2tlbnMYAiAD",
-            "KAkihQIKDFRva2VuT3B0aW9ucxJpChphd3NfcHJpbmNpcGFsX3RhZ3Nfb3B0",
-            "aW9ucxgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
-            "bmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnNCA+BBAUgAEhUKCGF1ZGll",
-            "bmNlGAEgASgJQgPgQQESEgoFbm9uY2UYAiADKAlCA+BBARJJCgp0b2tlbl90",
-            "eXBlGAMgASgOMjAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGlu",
-            "Zy52MS5Ub2tlblR5cGVCA+BBAUIUChJ0b2tlbl90eXBlX29wdGlvbnMi9gIK",
-            "F0F3c1ByaW5jaXBhbFRhZ3NPcHRpb25zEngKFmFsbG93ZWRfcHJpbmNpcGFs",
-            "X3RhZ3MYASABKAsyUy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
-            "aW5nLnYxLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zLkFsbG93ZWRQcmluY2lw",
-            "YWxUYWdzQgPgQQEa4AEKFEFsbG93ZWRQcmluY2lwYWxUYWdzEpUBChpjb250",
-            "YWluZXJfaW1hZ2Vfc2lnbmF0dXJlcxgBIAEoCzJsLmdvb2dsZS5jbG91ZC5j",
+            "djEuU2V2U25wQXR0ZXN0YXRpb25CA+BBAUgAElsKEm52aWRpYV9hdHRlc3Rh",
+            "dGlvbhgJIAEoCzI4Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcudjEuTnZpZGlhQXR0ZXN0YXRpb25CA+BBAUgBEkkKCWNoYWxsZW5nZRgB",
+            "IAEoCUI24EEC+kEwCi5jb25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBp",
+            "cy5jb20vQ2hhbGxlbmdlElMKD2djcF9jcmVkZW50aWFscxgCIAEoCzI1Lmdv",
+            "b2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuR2NwQ3JlZGVu",
+            "dGlhbHNCA+BBARJTCg90cG1fYXR0ZXN0YXRpb24YAyABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9u",
+            "QgPgQQISYgoXY29uZmlkZW50aWFsX3NwYWNlX2luZm8YBCABKAsyPC5nb29n",
+            "bGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbmZpZGVudGlh",
+            "bFNwYWNlSW5mb0ID4EEBEk8KDXRva2VuX29wdGlvbnMYBSABKAsyMy5nb29n",
+            "bGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuT3B0aW9u",
+            "c0ID4EEBEhUKCGF0dGVzdGVyGAggASgJQgPgQQFCEQoPdGVlX2F0dGVzdGF0",
+            "aW9uQhQKEmRldmljZV9hdHRlc3RhdGlvbiK7CgoRTnZpZGlhQXR0ZXN0YXRp",
+            "b24SZAoDc3B0GAEgASgLMlUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNv",
+            "bXB1dGluZy52MS5OdmlkaWFBdHRlc3RhdGlvbi5TaW5nbGVQYXNzdGhyb3Vn",
+            "aEF0dGVzdGF0aW9uSAASYgoFcHBjaWUYAiABKAsyUS5nb29nbGUuY2xvdWQu",
+            "Y29uZmlkZW50aWFsY29tcHV0aW5nLnYxLk52aWRpYUF0dGVzdGF0aW9uLlBy",
+            "b3RlY3RlZFBjaWVBdHRlc3RhdGlvbkgAEmwKA21wdBgDIAEoCzJdLmdvb2ds",
+            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuTnZpZGlhQXR0ZXN0",
+            "YXRpb24uTXVsdGlHcHVTZWN1cmVQYXNzdGhyb3VnaEF0dGVzdGF0aW9uSAAa",
+            "lAIKB0dwdUluZm8SEQoEdXVpZBgBIAEoCUID4EEBEhsKDmRyaXZlcl92ZXJz",
+            "aW9uGAIgASgJQgPgQQESGgoNdmJpb3NfdmVyc2lvbhgDIAEoCUID4EEBEnAK",
+            "FWdwdV9hcmNoaXRlY3R1cmVfdHlwZRgEIAEoDjJMLmdvb2dsZS5jbG91ZC5j",
+            "b25maWRlbnRpYWxjb21wdXRpbmcudjEuTnZpZGlhQXR0ZXN0YXRpb24uR3B1",
+            "QXJjaGl0ZWN0dXJlVHlwZUID4EEBEioKHWF0dGVzdGF0aW9uX2NlcnRpZmlj",
+            "YXRlX2NoYWluGAUgASgMQgPgQQESHwoSYXR0ZXN0YXRpb25fcmVwb3J0GAYg",
+            "ASgMQgPgQQEabAoKU3dpdGNoSW5mbxIRCgR1dWlkGAEgASgJQgPgQQESKgod",
+            "YXR0ZXN0YXRpb25fY2VydGlmaWNhdGVfY2hhaW4YAiABKAxCA+BBARIfChJh",
+            "dHRlc3RhdGlvbl9yZXBvcnQYAyABKAxCA+BBARp4ChxTaW5nbGVQYXNzdGhy",
+            "b3VnaEF0dGVzdGF0aW9uElgKCWdwdV9xdW90ZRgBIAEoCzJALmdvb2dsZS5j",
+            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuTnZpZGlhQXR0ZXN0YXRp",
+            "b24uR3B1SW5mb0ID4EEBGtYBChhQcm90ZWN0ZWRQY2llQXR0ZXN0YXRpb24S",
+            "WQoKZ3B1X3F1b3RlcxgBIAMoCzJALmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuTnZpZGlhQXR0ZXN0YXRpb24uR3B1SW5mb0ID4EEB",
+            "El8KDXN3aXRjaF9xdW90ZXMYAiADKAsyQy5nb29nbGUuY2xvdWQuY29uZmlk",
+            "ZW50aWFsY29tcHV0aW5nLnYxLk52aWRpYUF0dGVzdGF0aW9uLlN3aXRjaElu",
+            "Zm9CA+BBARqBAQokTXVsdGlHcHVTZWN1cmVQYXNzdGhyb3VnaEF0dGVzdGF0",
+            "aW9uElkKCmdwdV9xdW90ZXMYASADKAsyQC5nb29nbGUuY2xvdWQuY29uZmlk",
+            "ZW50aWFsY29tcHV0aW5nLnYxLk52aWRpYUF0dGVzdGF0aW9uLkdwdUluZm9C",
+            "A+BBASKDAQoTR3B1QXJjaGl0ZWN0dXJlVHlwZRIlCiFHUFVfQVJDSElURUNU",
+            "VVJFX1RZUEVfVU5TUEVDSUZJRUQQABIgChxHUFVfQVJDSElURUNUVVJFX1RZ",
+            "UEVfSE9QUEVSEAgSIwofR1BVX0FSQ0hJVEVDVFVSRV9UWVBFX0JMQUNLV0VM",
+            "TBAKQgwKCmNjX2ZlYXR1cmUigwEKElRkeENjZWxBdHRlc3RhdGlvbhIcCg9j",
+            "Y2VsX2FjcGlfdGFibGUYASABKAxCA+BBARIWCgljY2VsX2RhdGEYAiABKAxC",
+            "A+BBARIgChNjYW5vbmljYWxfZXZlbnRfbG9nGAMgASgMQgPgQQESFQoIdGRf",
+            "cXVvdGUYBCABKAxCA+BBASI/ChFTZXZTbnBBdHRlc3RhdGlvbhITCgZyZXBv",
+            "cnQYASABKAxCA+BBARIVCghhdXhfYmxvYhgCIAEoDEID4EEBImwKGVZlcmlm",
+            "eUF0dGVzdGF0aW9uUmVzcG9uc2USHgoRb2lkY19jbGFpbXNfdG9rZW4YAiAB",
+            "KAlCA+BBAxIvCg5wYXJ0aWFsX2Vycm9ycxgDIAMoCzISLmdvb2dsZS5ycGMu",
+            "U3RhdHVzQgPgQQMiMwoOR2NwQ3JlZGVudGlhbHMSIQoZc2VydmljZV9hY2Nv",
+            "dW50X2lkX3Rva2VucxgCIAMoCSKFAgoMVG9rZW5PcHRpb25zEmkKGmF3c19w",
+            "cmluY2lwYWxfdGFnc19vcHRpb25zGAQgASgLMj4uZ29vZ2xlLmNsb3VkLmNv",
+            "bmZpZGVudGlhbGNvbXB1dGluZy52MS5Bd3NQcmluY2lwYWxUYWdzT3B0aW9u",
+            "c0ID4EEBSAASFQoIYXVkaWVuY2UYASABKAlCA+BBARISCgVub25jZRgCIAMo",
+            "CUID4EEBEkkKCnRva2VuX3R5cGUYAyABKA4yMC5nb29nbGUuY2xvdWQuY29u",
+            "ZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuVHlwZUID4EEBQhQKEnRva2Vu",
+            "X3R5cGVfb3B0aW9ucyL2AgoXQXdzUHJpbmNpcGFsVGFnc09wdGlvbnMSeAoW",
+            "YWxsb3dlZF9wcmluY2lwYWxfdGFncxgBIAEoCzJTLmdvb2dsZS5jbG91ZC5j",
             "b25maWRlbnRpYWxjb21wdXRpbmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlv",
-            "bnMuQWxsb3dlZFByaW5jaXBhbFRhZ3MuQ29udGFpbmVySW1hZ2VTaWduYXR1",
-            "cmVzQgPgQQEaMAoYQ29udGFpbmVySW1hZ2VTaWduYXR1cmVzEhQKB2tleV9p",
-            "ZHMYASADKAlCA+BBASKPAwoOVHBtQXR0ZXN0YXRpb24SSwoGcXVvdGVzGAEg",
-            "AygLMjsuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
-            "cG1BdHRlc3RhdGlvbi5RdW90ZRIVCg10Y2dfZXZlbnRfbG9nGAIgASgMEhsK",
-            "E2Nhbm9uaWNhbF9ldmVudF9sb2cYAyABKAwSDwoHYWtfY2VydBgEIAEoDBIS",
-            "CgpjZXJ0X2NoYWluGAUgAygMGtYBCgVRdW90ZRIRCgloYXNoX2FsZ28YASAB",
-            "KAUSXgoKcGNyX3ZhbHVlcxgCIAMoCzJKLmdvb2dsZS5jbG91ZC5jb25maWRl",
-            "bnRpYWxjb21wdXRpbmcudjEuVHBtQXR0ZXN0YXRpb24uUXVvdGUuUGNyVmFs",
-            "dWVzRW50cnkSEQoJcmF3X3F1b3RlGAMgASgMEhUKDXJhd19zaWduYXR1cmUY",
-            "BCABKAwaMAoOUGNyVmFsdWVzRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVl",
-            "GAIgASgMOgI4ASJqChVDb25maWRlbnRpYWxTcGFjZUluZm8SUQoPc2lnbmVk",
-            "X2VudGl0aWVzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNv",
-            "bXB1dGluZy52MS5TaWduZWRFbnRpdHlCA+BBASJ3CgxTaWduZWRFbnRpdHkS",
-            "ZwoaY29udGFpbmVyX2ltYWdlX3NpZ25hdHVyZXMYASADKAsyPi5nb29nbGUu",
-            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbnRhaW5lckltYWdl",
-            "U2lnbmF0dXJlQgPgQQEirwEKF0NvbnRhaW5lckltYWdlU2lnbmF0dXJlEhQK",
-            "B3BheWxvYWQYASABKAxCA+BBARIWCglzaWduYXR1cmUYAiABKAxCA+BBARIX",
-            "CgpwdWJsaWNfa2V5GAMgASgMQgPgQQESTQoHc2lnX2FsZxgEIAEoDjI3Lmdv",
-            "b2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2lnbmluZ0Fs",
-            "Z29yaXRobUID4EEBIpYICh5WZXJpZnlDb25maWRlbnRpYWxTcGFjZVJlcXVl",
-            "c3QSUQoHdGRfY2NlbBgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
-            "YWxjb21wdXRpbmcudjEuVGR4Q2NlbEF0dGVzdGF0aW9uQgPgQQRIABJVCg90",
-            "cG1fYXR0ZXN0YXRpb24YBCABKAsyNS5nb29nbGUuY2xvdWQuY29uZmlkZW50",
-            "aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uQgPgQQRIABJJCgljaGFs",
-            "bGVuZ2UYASABKAlCNuBBAvpBMAouY29uZmlkZW50aWFsY29tcHV0aW5nLmdv",
-            "b2dsZWFwaXMuY29tL0NoYWxsZW5nZRJTCg9nY3BfY3JlZGVudGlhbHMYAiAB",
-            "KAsyNS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkdj",
-            "cENyZWRlbnRpYWxzQgPgQQESUQoPc2lnbmVkX2VudGl0aWVzGAUgAygLMjMu",
-            "Z29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5TaWduZWRF",
-            "bnRpdHlCA+BBARJeChVnY2Vfc2hpZWxkZWRfaWRlbnRpdHkYBiABKAsyOi5n",
-            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkdjZVNoaWVs",
-            "ZGVkSWRlbnRpdHlCA+BBARJ0CgdvcHRpb25zGAcgASgLMl4uZ29vZ2xlLmNs",
-            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlDb25maWRlbnRp",
-            "YWxTcGFjZVJlcXVlc3QuQ29uZmlkZW50aWFsU3BhY2VPcHRpb25zQgPgQQEa",
-            "7QIKGENvbmZpZGVudGlhbFNwYWNlT3B0aW9ucxJpChphd3NfcHJpbmNpcGFs",
-            "X3RhZ3Nfb3B0aW9ucxgFIAEoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
-            "YWxjb21wdXRpbmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnNCA+BBAUgA",
-            "EhUKCGF1ZGllbmNlGAEgASgJQgPgQQESTwoNdG9rZW5fcHJvZmlsZRgCIAEo",
-            "DjIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVG9r",
-            "ZW5Qcm9maWxlQgPgQQESEgoFbm9uY2UYAyADKAlCA+BBARJRCg5zaWduYXR1",
-            "cmVfdHlwZRgEIAEoDjI0Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
-            "dXRpbmcudjEuU2lnbmF0dXJlVHlwZUID4EEBQhcKFXRva2VuX3Byb2ZpbGVf",
-            "b3B0aW9uc0IRCg90ZWVfYXR0ZXN0YXRpb24iRwoTR2NlU2hpZWxkZWRJZGVu",
-            "dGl0eRIUCgdha19jZXJ0GAEgASgMQgPgQQESGgoNYWtfY2VydF9jaGFpbhgC",
-            "IAMoDEID4EEBInIKH1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVzcG9uc2US",
-            "HgoRYXR0ZXN0YXRpb25fdG9rZW4YASABKAlCA+BBAxIvCg5wYXJ0aWFsX2Vy",
-            "cm9ycxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMizgEKHFZlcmlm",
-            "eUNvbmZpZGVudGlhbEdrZVJlcXVlc3QSUAoPdHBtX2F0dGVzdGF0aW9uGAIg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
-            "cG1BdHRlc3RhdGlvbkgAEkkKCWNoYWxsZW5nZRgBIAEoCUI24EEC+kEwCi5j",
-            "b25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBpcy5jb20vQ2hhbGxlbmdl",
-            "QhEKD3RlZV9hdHRlc3RhdGlvbiI/Ch1WZXJpZnlDb25maWRlbnRpYWxHa2VS",
-            "ZXNwb25zZRIeChFhdHRlc3RhdGlvbl90b2tlbhgBIAEoCUID4EEDKn8KEFNp",
-            "Z25pbmdBbGdvcml0aG0SIQodU0lHTklOR19BTEdPUklUSE1fVU5TUEVDSUZJ",
-            "RUQQABIVChFSU0FTU0FfUFNTX1NIQTI1NhABEhoKFlJTQVNTQV9QS0NTMVYx",
-            "NV9TSEEyNTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1NhADKo4BCglUb2tlblR5",
-            "cGUSGgoWVE9LRU5fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1RPS0VOX1RZUEVf",
-            "T0lEQxABEhIKDlRPS0VOX1RZUEVfUEtJEAISGgoWVE9LRU5fVFlQRV9MSU1J",
-            "VEVEX0FXUxADEiAKHFRPS0VOX1RZUEVfQVdTX1BSSU5DSVBBTFRBR1MQBCpg",
-            "Cg1TaWduYXR1cmVUeXBlEh4KGlNJR05BVFVSRV9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASFwoTU0lHTkFUVVJFX1RZUEVfT0lEQxABEhYKElNJR05BVFVSRV9UWVBF",
-            "X1BLSRACKmMKDFRva2VuUHJvZmlsZRIdChlUT0tFTl9QUk9GSUxFX1VOU1BF",
-            "Q0lGSUVEEAASHQoZVE9LRU5fUFJPRklMRV9ERUZBVUxUX0VBVBABEhUKEVRP",
-            "S0VOX1BST0ZJTEVfQVdTEAIytQgKFUNvbmZpZGVudGlhbENvbXB1dGluZxLY",
-            "AQoPQ3JlYXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlh",
-            "bGNvbXB1dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xl",
-            "LmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpB",
-            "EHBhcmVudCxjaGFsbGVuZ2WC0+STAjsiLi92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVy",
-            "aWZ5QXR0ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
-            "cHV0aW5nLnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5j",
-            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRp",
-            "b25SZXNwb25zZSJQgtPkkwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246",
-            "ASoSgAIKF1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNlEkUuZ29vZ2xlLmNsb3Vk",
-            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlDb25maWRlbnRpYWxT",
-            "cGFjZVJlcXVlc3QaRi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
-            "aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVzcG9uc2UiVoLT5JMC",
-            "UCJLL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jaGFs",
-            "bGVuZ2VzLyp9OnZlcmlmeUNvbmZpZGVudGlhbFNwYWNlOgEqEvgBChVWZXJp",
-            "ZnlDb25maWRlbnRpYWxHa2USQy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFs",
-            "Y29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbEdrZVJlcXVlc3QaRC5n",
-            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNv",
-            "bmZpZGVudGlhbEdrZVJlc3BvbnNlIlSC0+STAk4iSS92MS97Y2hhbGxlbmdl",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2hhbGxlbmdlcy8qfTp2ZXJpZnlD",
-            "b25maWRlbnRpYWxHa2U6ASoaWMpBJGNvbmZpZGVudGlhbGNvbXB1dGluZy5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1ClwIKKWNvbS5nb29nbGUuY2xvdWQuY29uZmlk",
-            "ZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJvdG9QAVpfY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRpbmcvYXBpdjEvY29uZmlk",
-            "ZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFsY29tcHV0aW5ncGKqAiVH",
-            "b29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0aW5nLlYxygIlR29vZ2xl",
-            "XENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xWMeoCKEdvb2dsZTo6Q2xv",
-            "dWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjFiBnByb3RvMw=="));
+            "bnMuQWxsb3dlZFByaW5jaXBhbFRhZ3NCA+BBARrgAQoUQWxsb3dlZFByaW5j",
+            "aXBhbFRhZ3MSlQEKGmNvbnRhaW5lcl9pbWFnZV9zaWduYXR1cmVzGAEgASgL",
+            "MmwuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5Bd3NQ",
+            "cmluY2lwYWxUYWdzT3B0aW9ucy5BbGxvd2VkUHJpbmNpcGFsVGFncy5Db250",
+            "YWluZXJJbWFnZVNpZ25hdHVyZXNCA+BBARowChhDb250YWluZXJJbWFnZVNp",
+            "Z25hdHVyZXMSFAoHa2V5X2lkcxgBIAMoCUID4EEBIo8DCg5UcG1BdHRlc3Rh",
+            "dGlvbhJLCgZxdW90ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuY29uZmlkZW50",
+            "aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlEhUKDXRjZ19l",
+            "dmVudF9sb2cYAiABKAwSGwoTY2Fub25pY2FsX2V2ZW50X2xvZxgDIAEoDBIP",
+            "Cgdha19jZXJ0GAQgASgMEhIKCmNlcnRfY2hhaW4YBSADKAwa1gEKBVF1b3Rl",
+            "EhEKCWhhc2hfYWxnbxgBIAEoBRJeCgpwY3JfdmFsdWVzGAIgAygLMkouZ29v",
+            "Z2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3Rh",
+            "dGlvbi5RdW90ZS5QY3JWYWx1ZXNFbnRyeRIRCglyYXdfcXVvdGUYAyABKAwS",
+            "FQoNcmF3X3NpZ25hdHVyZRgEIAEoDBowCg5QY3JWYWx1ZXNFbnRyeRILCgNr",
+            "ZXkYASABKAUSDQoFdmFsdWUYAiABKAw6AjgBImoKFUNvbmZpZGVudGlhbFNw",
+            "YWNlSW5mbxJRCg9zaWduZWRfZW50aXRpZXMYASADKAsyMy5nb29nbGUuY2xv",
+            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25lZEVudGl0eUID4EEB",
+            "IncKDFNpZ25lZEVudGl0eRJnChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0dXJl",
+            "cxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
+            "djEuQ29udGFpbmVySW1hZ2VTaWduYXR1cmVCA+BBASKvAQoXQ29udGFpbmVy",
+            "SW1hZ2VTaWduYXR1cmUSFAoHcGF5bG9hZBgBIAEoDEID4EEBEhYKCXNpZ25h",
+            "dHVyZRgCIAEoDEID4EEBEhcKCnB1YmxpY19rZXkYAyABKAxCA+BBARJNCgdz",
+            "aWdfYWxnGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1",
+            "dGluZy52MS5TaWduaW5nQWxnb3JpdGhtQgPgQQEi8QgKHlZlcmlmeUNvbmZp",
+            "ZGVudGlhbFNwYWNlUmVxdWVzdBJRCgd0ZF9jY2VsGAMgASgLMjkuZ29vZ2xl",
+            "LmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UZHhDY2VsQXR0ZXN0",
+            "YXRpb25CA+BBBEgAElUKD3RwbV9hdHRlc3RhdGlvbhgEIAEoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVHBtQXR0ZXN0YXRp",
+            "b25CA+BBBEgAEkkKCWNoYWxsZW5nZRgBIAEoCUI24EEC+kEwCi5jb25maWRl",
+            "bnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBpcy5jb20vQ2hhbGxlbmdlElMKD2dj",
+            "cF9jcmVkZW50aWFscxgCIAEoCzI1Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuR2NwQ3JlZGVudGlhbHNCA+BBARJRCg9zaWduZWRf",
+            "ZW50aXRpZXMYBSADKAsyMy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
+            "cHV0aW5nLnYxLlNpZ25lZEVudGl0eUID4EEBEl4KFWdjZV9zaGllbGRlZF9p",
+            "ZGVudGl0eRgGIAEoCzI6Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
+            "dXRpbmcudjEuR2NlU2hpZWxkZWRJZGVudGl0eUID4EEBEnQKB29wdGlvbnMY",
+            "ByABKAsyXi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYx",
+            "LlZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVxdWVzdC5Db25maWRlbnRpYWxT",
+            "cGFjZU9wdGlvbnNCA+BBARJZChJudmlkaWFfYXR0ZXN0YXRpb24YCCABKAsy",
+            "OC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLk52aWRp",
+            "YUF0dGVzdGF0aW9uQgPgQQEa7QIKGENvbmZpZGVudGlhbFNwYWNlT3B0aW9u",
+            "cxJpChphd3NfcHJpbmNpcGFsX3RhZ3Nfb3B0aW9ucxgFIAEoCzI+Lmdvb2ds",
+            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuQXdzUHJpbmNpcGFs",
+            "VGFnc09wdGlvbnNCA+BBAUgAEhUKCGF1ZGllbmNlGAEgASgJQgPgQQESTwoN",
+            "dG9rZW5fcHJvZmlsZRgCIAEoDjIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuVG9rZW5Qcm9maWxlQgPgQQESEgoFbm9uY2UYAyAD",
+            "KAlCA+BBARJRCg5zaWduYXR1cmVfdHlwZRgEIAEoDjI0Lmdvb2dsZS5jbG91",
+            "ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2lnbmF0dXJlVHlwZUID4EEB",
+            "QhcKFXRva2VuX3Byb2ZpbGVfb3B0aW9uc0IRCg90ZWVfYXR0ZXN0YXRpb24i",
+            "RwoTR2NlU2hpZWxkZWRJZGVudGl0eRIUCgdha19jZXJ0GAEgASgMQgPgQQES",
+            "GgoNYWtfY2VydF9jaGFpbhgCIAMoDEID4EEBInIKH1ZlcmlmeUNvbmZpZGVu",
+            "dGlhbFNwYWNlUmVzcG9uc2USHgoRYXR0ZXN0YXRpb25fdG9rZW4YASABKAlC",
+            "A+BBAxIvCg5wYXJ0aWFsX2Vycm9ycxgCIAMoCzISLmdvb2dsZS5ycGMuU3Rh",
+            "dHVzQgPgQQMi2QMKHFZlcmlmeUNvbmZpZGVudGlhbEdrZVJlcXVlc3QSUAoP",
+            "dHBtX2F0dGVzdGF0aW9uGAIgASgLMjUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3RhdGlvbkgAEkkKCWNoYWxsZW5n",
+            "ZRgBIAEoCUI24EEC+kEwCi5jb25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xl",
+            "YXBpcy5jb20vQ2hhbGxlbmdlEnAKB29wdGlvbnMYAyABKAsyWi5nb29nbGUu",
+            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVu",
+            "dGlhbEdrZVJlcXVlc3QuQ29uZmlkZW50aWFsR2tlT3B0aW9uc0ID4EEBGpYB",
+            "ChZDb25maWRlbnRpYWxHa2VPcHRpb25zEhUKCGF1ZGllbmNlGAEgASgJQgPg",
+            "QQESEgoFbm9uY2UYAyADKAlCA+BBARJRCg5zaWduYXR1cmVfdHlwZRgEIAEo",
+            "DjI0Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2ln",
+            "bmF0dXJlVHlwZUID4EEBQhEKD3RlZV9hdHRlc3RhdGlvbiI/Ch1WZXJpZnlD",
+            "b25maWRlbnRpYWxHa2VSZXNwb25zZRIeChFhdHRlc3RhdGlvbl90b2tlbhgB",
+            "IAEoCUID4EEDKn8KEFNpZ25pbmdBbGdvcml0aG0SIQodU0lHTklOR19BTEdP",
+            "UklUSE1fVU5TUEVDSUZJRUQQABIVChFSU0FTU0FfUFNTX1NIQTI1NhABEhoK",
+            "FlJTQVNTQV9QS0NTMVYxNV9TSEEyNTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1",
+            "NhADKo4BCglUb2tlblR5cGUSGgoWVE9LRU5fVFlQRV9VTlNQRUNJRklFRBAA",
+            "EhMKD1RPS0VOX1RZUEVfT0lEQxABEhIKDlRPS0VOX1RZUEVfUEtJEAISGgoW",
+            "VE9LRU5fVFlQRV9MSU1JVEVEX0FXUxADEiAKHFRPS0VOX1RZUEVfQVdTX1BS",
+            "SU5DSVBBTFRBR1MQBCpgCg1TaWduYXR1cmVUeXBlEh4KGlNJR05BVFVSRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASFwoTU0lHTkFUVVJFX1RZUEVfT0lEQxABEhYK",
+            "ElNJR05BVFVSRV9UWVBFX1BLSRACKmMKDFRva2VuUHJvZmlsZRIdChlUT0tF",
+            "Tl9QUk9GSUxFX1VOU1BFQ0lGSUVEEAASHQoZVE9LRU5fUFJPRklMRV9ERUZB",
+            "VUxUX0VBVBABEhUKEVRPS0VOX1BST0ZJTEVfQVdTEAIytQgKFUNvbmZpZGVu",
+            "dGlhbENvbXB1dGluZxLYAQoPQ3JlYXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNs",
+            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52",
+            "MS5DaGFsbGVuZ2UiVNpBEHBhcmVudCxjaGFsbGVuZ2WC0+STAjsiLi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NoYWxsZW5nZXM6CWNo",
+            "YWxsZW5nZRLoAQoRVmVyaWZ5QXR0ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQu",
+            "Y29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVx",
+            "dWVzdBpALmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEu",
+            "VmVyaWZ5QXR0ZXN0YXRpb25SZXNwb25zZSJQgtPkkwJKIkUvdjEve2NoYWxs",
+            "ZW5nZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVy",
+            "aWZ5QXR0ZXN0YXRpb246ASoSgAIKF1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNl",
+            "EkUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJp",
+            "ZnlDb25maWRlbnRpYWxTcGFjZVJlcXVlc3QaRi5nb29nbGUuY2xvdWQuY29u",
+            "ZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbFNwYWNl",
+            "UmVzcG9uc2UiVoLT5JMCUCJLL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jaGFsbGVuZ2VzLyp9OnZlcmlmeUNvbmZpZGVudGlhbFNw",
+            "YWNlOgEqEvgBChVWZXJpZnlDb25maWRlbnRpYWxHa2USQy5nb29nbGUuY2xv",
+            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlh",
+            "bEdrZVJlcXVlc3QaRC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
+            "aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbEdrZVJlc3BvbnNlIlSC0+STAk4i",
+            "SS92MS97Y2hhbGxlbmdlPXByb2plY3RzLyovbG9jYXRpb25zLyovY2hhbGxl",
+            "bmdlcy8qfTp2ZXJpZnlDb25maWRlbnRpYWxHa2U6ASoaWMpBJGNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIKKWNvbS5nb29n",
+            "bGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJv",
+            "dG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcvYXBpdjEvY29uZmlkZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFs",
+            "Y29tcHV0aW5ncGKqAiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0",
+            "aW5nLlYxygIlR29vZ2xlXENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xW",
+            "MeoCKEdvb2dsZTo6Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), typeof(global::Google.Cloud.ConfidentialComputing.V1.SignatureType), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenProfile), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.Challenge), global::Google.Cloud.ConfidentialComputing.V1.Challenge.Parser, new[]{ "Name", "CreateTime", "ExpireTime", "Used", "TpmNonce" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest), global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest.Parser, new[]{ "Parent", "Challenge" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "TdCcel", "SevSnpAttestation", "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions", "Attester" }, new[]{ "TeeAttestation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "TdCcel", "SevSnpAttestation", "NvidiaAttestation", "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions", "Attester" }, new[]{ "TeeAttestation", "DeviceAttestation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Parser, new[]{ "Spt", "Ppcie", "Mpt" }, new[]{ "CcFeature" }, new[]{ typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo.Parser, new[]{ "Uuid", "DriverVersion", "VbiosVersion", "GpuArchitectureType", "AttestationCertificateChain", "AttestationReport" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo.Parser, new[]{ "Uuid", "AttestationCertificateChain", "AttestationReport" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation.Parser, new[]{ "GpuQuote" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation.Parser, new[]{ "GpuQuotes", "SwitchQuotes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation), global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation.Parser, new[]{ "GpuQuotes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation), global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation.Parser, new[]{ "CcelAcpiTable", "CcelData", "CanonicalEventLog", "TdQuote" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation), global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation.Parser, new[]{ "Report", "AuxBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser, new[]{ "OidcClaimsToken", "PartialErrors" }, null, null, null, null),
@@ -186,10 +232,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo), global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo.Parser, new[]{ "SignedEntities" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SignedEntity), global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature), global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature.Parser, new[]{ "Payload", "Signature", "PublicKey", "SigAlg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Parser, new[]{ "TdCcel", "TpmAttestation", "Challenge", "GcpCredentials", "SignedEntities", "GceShieldedIdentity", "Options" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "TokenProfile", "Nonce", "SignatureType" }, new[]{ "TokenProfileOptions" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Parser, new[]{ "TdCcel", "TpmAttestation", "Challenge", "GcpCredentials", "SignedEntities", "GceShieldedIdentity", "Options", "NvidiaAttestation" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "TokenProfile", "Nonce", "SignatureType" }, new[]{ "TokenProfileOptions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity), global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity.Parser, new[]{ "AkCert", "AkCertChain" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse.Parser, new[]{ "AttestationToken", "PartialErrors" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser, new[]{ "TpmAttestation", "Challenge" }, new[]{ "TeeAttestation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser, new[]{ "TpmAttestation", "Challenge", "Options" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions.Parser, new[]{ "Audience", "Nonce", "SignatureType" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse.Parser, new[]{ "AttestationToken" }, null, null, null, null)
           }));
     }
@@ -962,6 +1008,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           break;
       }
 
+      switch (other.DeviceAttestationCase) {
+        case DeviceAttestationOneofCase.NvidiaAttestation:
+          NvidiaAttestation = other.NvidiaAttestation.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -998,6 +1050,21 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       set {
         teeAttestation_ = value;
         teeAttestationCase_ = value == null ? TeeAttestationOneofCase.None : TeeAttestationOneofCase.SevSnpAttestation;
+      }
+    }
+
+    /// <summary>Field number for the "nvidia_attestation" field.</summary>
+    public const int NvidiaAttestationFieldNumber = 9;
+    /// <summary>
+    /// Optional. An Nvidia attestation report for GPU and NVSwitch devices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation NvidiaAttestation {
+      get { return deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation ? (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation) deviceAttestation_ : null; }
+      set {
+        deviceAttestation_ = value;
+        deviceAttestationCase_ = value == null ? DeviceAttestationOneofCase.None : DeviceAttestationOneofCase.NvidiaAttestation;
       }
     }
 
@@ -1118,6 +1185,26 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       teeAttestation_ = null;
     }
 
+    private object deviceAttestation_;
+    /// <summary>Enum of possible cases for the "device_attestation" oneof.</summary>
+    public enum DeviceAttestationOneofCase {
+      None = 0,
+      NvidiaAttestation = 9,
+    }
+    private DeviceAttestationOneofCase deviceAttestationCase_ = DeviceAttestationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceAttestationOneofCase DeviceAttestationCase {
+      get { return deviceAttestationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeviceAttestation() {
+      deviceAttestationCase_ = DeviceAttestationOneofCase.None;
+      deviceAttestation_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1135,6 +1222,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (!object.Equals(TdCcel, other.TdCcel)) return false;
       if (!object.Equals(SevSnpAttestation, other.SevSnpAttestation)) return false;
+      if (!object.Equals(NvidiaAttestation, other.NvidiaAttestation)) return false;
       if (Challenge != other.Challenge) return false;
       if (!object.Equals(GcpCredentials, other.GcpCredentials)) return false;
       if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
@@ -1142,6 +1230,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (!object.Equals(TokenOptions, other.TokenOptions)) return false;
       if (Attester != other.Attester) return false;
       if (TeeAttestationCase != other.TeeAttestationCase) return false;
+      if (DeviceAttestationCase != other.DeviceAttestationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1151,6 +1240,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       int hash = 1;
       if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) hash ^= TdCcel.GetHashCode();
       if (teeAttestationCase_ == TeeAttestationOneofCase.SevSnpAttestation) hash ^= SevSnpAttestation.GetHashCode();
+      if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) hash ^= NvidiaAttestation.GetHashCode();
       if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
       if (gcpCredentials_ != null) hash ^= GcpCredentials.GetHashCode();
       if (tpmAttestation_ != null) hash ^= TpmAttestation.GetHashCode();
@@ -1158,6 +1248,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (tokenOptions_ != null) hash ^= TokenOptions.GetHashCode();
       if (Attester.Length != 0) hash ^= Attester.GetHashCode();
       hash ^= (int) teeAttestationCase_;
+      hash ^= (int) deviceAttestationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1208,6 +1299,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(66);
         output.WriteString(Attester);
       }
+      if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) {
+        output.WriteRawTag(74);
+        output.WriteMessage(NvidiaAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1250,6 +1345,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(66);
         output.WriteString(Attester);
       }
+      if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) {
+        output.WriteRawTag(74);
+        output.WriteMessage(NvidiaAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1265,6 +1364,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (teeAttestationCase_ == TeeAttestationOneofCase.SevSnpAttestation) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SevSnpAttestation);
+      }
+      if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NvidiaAttestation);
       }
       if (Challenge.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Challenge);
@@ -1341,6 +1443,15 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           break;
       }
 
+      switch (other.DeviceAttestationCase) {
+        case DeviceAttestationOneofCase.NvidiaAttestation:
+          if (NvidiaAttestation == null) {
+            NvidiaAttestation = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+          }
+          NvidiaAttestation.MergeFrom(other.NvidiaAttestation);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1408,6 +1519,15 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           }
           case 66: {
             Attester = input.ReadString();
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+            if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) {
+              subBuilder.MergeFrom(NvidiaAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            NvidiaAttestation = subBuilder;
             break;
           }
         }
@@ -1479,10 +1599,1680 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             Attester = input.ReadString();
             break;
           }
+          case 74: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+            if (deviceAttestationCase_ == DeviceAttestationOneofCase.NvidiaAttestation) {
+              subBuilder.MergeFrom(NvidiaAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            NvidiaAttestation = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// An Nvidia attestation report for GPU and NVSwitch devices.
+  /// Contains necessary attestation evidence that the client collects for
+  /// verification.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NvidiaAttestation : pb::IMessage<NvidiaAttestation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NvidiaAttestation> _parser = new pb::MessageParser<NvidiaAttestation>(() => new NvidiaAttestation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NvidiaAttestation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NvidiaAttestation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NvidiaAttestation(NvidiaAttestation other) : this() {
+      switch (other.CcFeatureCase) {
+        case CcFeatureOneofCase.Spt:
+          Spt = other.Spt.Clone();
+          break;
+        case CcFeatureOneofCase.Ppcie:
+          Ppcie = other.Ppcie.Clone();
+          break;
+        case CcFeatureOneofCase.Mpt:
+          Mpt = other.Mpt.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NvidiaAttestation Clone() {
+      return new NvidiaAttestation(this);
+    }
+
+    /// <summary>Field number for the "spt" field.</summary>
+    public const int SptFieldNumber = 1;
+    /// <summary>
+    /// Single GPU Passthrough (SPT) attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation Spt {
+      get { return ccFeatureCase_ == CcFeatureOneofCase.Spt ? (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation) ccFeature_ : null; }
+      set {
+        ccFeature_ = value;
+        ccFeatureCase_ = value == null ? CcFeatureOneofCase.None : CcFeatureOneofCase.Spt;
+      }
+    }
+
+    /// <summary>Field number for the "ppcie" field.</summary>
+    public const int PpcieFieldNumber = 2;
+    /// <summary>
+    /// Protected PCIe (PPCIE) attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation Ppcie {
+      get { return ccFeatureCase_ == CcFeatureOneofCase.Ppcie ? (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation) ccFeature_ : null; }
+      set {
+        ccFeature_ = value;
+        ccFeatureCase_ = value == null ? CcFeatureOneofCase.None : CcFeatureOneofCase.Ppcie;
+      }
+    }
+
+    /// <summary>Field number for the "mpt" field.</summary>
+    public const int MptFieldNumber = 3;
+    /// <summary>
+    /// Multi-GPU Secure Passthrough (MPT) attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation Mpt {
+      get { return ccFeatureCase_ == CcFeatureOneofCase.Mpt ? (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation) ccFeature_ : null; }
+      set {
+        ccFeature_ = value;
+        ccFeatureCase_ = value == null ? CcFeatureOneofCase.None : CcFeatureOneofCase.Mpt;
+      }
+    }
+
+    private object ccFeature_;
+    /// <summary>Enum of possible cases for the "cc_feature" oneof.</summary>
+    public enum CcFeatureOneofCase {
+      None = 0,
+      Spt = 1,
+      Ppcie = 2,
+      Mpt = 3,
+    }
+    private CcFeatureOneofCase ccFeatureCase_ = CcFeatureOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CcFeatureOneofCase CcFeatureCase {
+      get { return ccFeatureCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCcFeature() {
+      ccFeatureCase_ = CcFeatureOneofCase.None;
+      ccFeature_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NvidiaAttestation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NvidiaAttestation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Spt, other.Spt)) return false;
+      if (!object.Equals(Ppcie, other.Ppcie)) return false;
+      if (!object.Equals(Mpt, other.Mpt)) return false;
+      if (CcFeatureCase != other.CcFeatureCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ccFeatureCase_ == CcFeatureOneofCase.Spt) hash ^= Spt.GetHashCode();
+      if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) hash ^= Ppcie.GetHashCode();
+      if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) hash ^= Mpt.GetHashCode();
+      hash ^= (int) ccFeatureCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ccFeatureCase_ == CcFeatureOneofCase.Spt) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Spt);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Ppcie);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Mpt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ccFeatureCase_ == CcFeatureOneofCase.Spt) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Spt);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Ppcie);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Mpt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ccFeatureCase_ == CcFeatureOneofCase.Spt) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Spt);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ppcie);
+      }
+      if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mpt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NvidiaAttestation other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.CcFeatureCase) {
+        case CcFeatureOneofCase.Spt:
+          if (Spt == null) {
+            Spt = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation();
+          }
+          Spt.MergeFrom(other.Spt);
+          break;
+        case CcFeatureOneofCase.Ppcie:
+          if (Ppcie == null) {
+            Ppcie = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation();
+          }
+          Ppcie.MergeFrom(other.Ppcie);
+          break;
+        case CcFeatureOneofCase.Mpt:
+          if (Mpt == null) {
+            Mpt = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation();
+          }
+          Mpt.MergeFrom(other.Mpt);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Spt) {
+              subBuilder.MergeFrom(Spt);
+            }
+            input.ReadMessage(subBuilder);
+            Spt = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) {
+              subBuilder.MergeFrom(Ppcie);
+            }
+            input.ReadMessage(subBuilder);
+            Ppcie = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) {
+              subBuilder.MergeFrom(Mpt);
+            }
+            input.ReadMessage(subBuilder);
+            Mpt = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SinglePassthroughAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Spt) {
+              subBuilder.MergeFrom(Spt);
+            }
+            input.ReadMessage(subBuilder);
+            Spt = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.ProtectedPcieAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Ppcie) {
+              subBuilder.MergeFrom(Ppcie);
+            }
+            input.ReadMessage(subBuilder);
+            Ppcie = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.MultiGpuSecurePassthroughAttestation();
+            if (ccFeatureCase_ == CcFeatureOneofCase.Mpt) {
+              subBuilder.MergeFrom(Mpt);
+            }
+            input.ReadMessage(subBuilder);
+            Mpt = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NvidiaAttestation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// GpuArchitectureType enumerates the supported GPU architecture types.
+      /// </summary>
+      public enum GpuArchitectureType {
+        /// <summary>
+        /// Unspecified GPU architecture type.
+        /// </summary>
+        [pbr::OriginalName("GPU_ARCHITECTURE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Hopper GPU architecture type.
+        /// </summary>
+        [pbr::OriginalName("GPU_ARCHITECTURE_TYPE_HOPPER")] Hopper = 8,
+        /// <summary>
+        /// Blackwell GPU architecture type.
+        /// </summary>
+        [pbr::OriginalName("GPU_ARCHITECTURE_TYPE_BLACKWELL")] Blackwell = 10,
+      }
+
+      /// <summary>
+      /// GpuInfo contains the attestation evidence for a GPU device.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GpuInfo : pb::IMessage<GpuInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GpuInfo> _parser = new pb::MessageParser<GpuInfo>(() => new GpuInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GpuInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GpuInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GpuInfo(GpuInfo other) : this() {
+          uuid_ = other.uuid_;
+          driverVersion_ = other.driverVersion_;
+          vbiosVersion_ = other.vbiosVersion_;
+          gpuArchitectureType_ = other.gpuArchitectureType_;
+          attestationCertificateChain_ = other.attestationCertificateChain_;
+          attestationReport_ = other.attestationReport_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GpuInfo Clone() {
+          return new GpuInfo(this);
+        }
+
+        /// <summary>Field number for the "uuid" field.</summary>
+        public const int UuidFieldNumber = 1;
+        private string uuid_ = "";
+        /// <summary>
+        /// Optional. The UUID of the GPU device.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uuid {
+          get { return uuid_; }
+          set {
+            uuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "driver_version" field.</summary>
+        public const int DriverVersionFieldNumber = 2;
+        private string driverVersion_ = "";
+        /// <summary>
+        /// Optional. The driver version of the GPU.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DriverVersion {
+          get { return driverVersion_; }
+          set {
+            driverVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "vbios_version" field.</summary>
+        public const int VbiosVersionFieldNumber = 3;
+        private string vbiosVersion_ = "";
+        /// <summary>
+        /// Optional. The vBIOS version of the GPU.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string VbiosVersion {
+          get { return vbiosVersion_; }
+          set {
+            vbiosVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "gpu_architecture_type" field.</summary>
+        public const int GpuArchitectureTypeFieldNumber = 4;
+        private global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType gpuArchitectureType_ = global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified;
+        /// <summary>
+        /// Optional. The GPU architecture type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType GpuArchitectureType {
+          get { return gpuArchitectureType_; }
+          set {
+            gpuArchitectureType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "attestation_certificate_chain" field.</summary>
+        public const int AttestationCertificateChainFieldNumber = 5;
+        private pb::ByteString attestationCertificateChain_ = pb::ByteString.Empty;
+        /// <summary>
+        /// Optional. The raw attestation certificate chain for the GPU device.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString AttestationCertificateChain {
+          get { return attestationCertificateChain_; }
+          set {
+            attestationCertificateChain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "attestation_report" field.</summary>
+        public const int AttestationReportFieldNumber = 6;
+        private pb::ByteString attestationReport_ = pb::ByteString.Empty;
+        /// <summary>
+        /// Optional. The raw attestation report for the GPU device.
+        /// This field contains SPDM request/response defined in
+        /// https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString AttestationReport {
+          get { return attestationReport_; }
+          set {
+            attestationReport_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GpuInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GpuInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uuid != other.Uuid) return false;
+          if (DriverVersion != other.DriverVersion) return false;
+          if (VbiosVersion != other.VbiosVersion) return false;
+          if (GpuArchitectureType != other.GpuArchitectureType) return false;
+          if (AttestationCertificateChain != other.AttestationCertificateChain) return false;
+          if (AttestationReport != other.AttestationReport) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uuid.Length != 0) hash ^= Uuid.GetHashCode();
+          if (DriverVersion.Length != 0) hash ^= DriverVersion.GetHashCode();
+          if (VbiosVersion.Length != 0) hash ^= VbiosVersion.GetHashCode();
+          if (GpuArchitectureType != global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified) hash ^= GpuArchitectureType.GetHashCode();
+          if (AttestationCertificateChain.Length != 0) hash ^= AttestationCertificateChain.GetHashCode();
+          if (AttestationReport.Length != 0) hash ^= AttestationReport.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uuid);
+          }
+          if (DriverVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DriverVersion);
+          }
+          if (VbiosVersion.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(VbiosVersion);
+          }
+          if (GpuArchitectureType != global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) GpuArchitectureType);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteBytes(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteBytes(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uuid);
+          }
+          if (DriverVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DriverVersion);
+          }
+          if (VbiosVersion.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(VbiosVersion);
+          }
+          if (GpuArchitectureType != global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) GpuArchitectureType);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteBytes(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteBytes(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uuid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uuid);
+          }
+          if (DriverVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DriverVersion);
+          }
+          if (VbiosVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(VbiosVersion);
+          }
+          if (GpuArchitectureType != global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GpuArchitectureType);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GpuInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uuid.Length != 0) {
+            Uuid = other.Uuid;
+          }
+          if (other.DriverVersion.Length != 0) {
+            DriverVersion = other.DriverVersion;
+          }
+          if (other.VbiosVersion.Length != 0) {
+            VbiosVersion = other.VbiosVersion;
+          }
+          if (other.GpuArchitectureType != global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType.Unspecified) {
+            GpuArchitectureType = other.GpuArchitectureType;
+          }
+          if (other.AttestationCertificateChain.Length != 0) {
+            AttestationCertificateChain = other.AttestationCertificateChain;
+          }
+          if (other.AttestationReport.Length != 0) {
+            AttestationReport = other.AttestationReport;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                DriverVersion = input.ReadString();
+                break;
+              }
+              case 26: {
+                VbiosVersion = input.ReadString();
+                break;
+              }
+              case 32: {
+                GpuArchitectureType = (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                AttestationCertificateChain = input.ReadBytes();
+                break;
+              }
+              case 50: {
+                AttestationReport = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                DriverVersion = input.ReadString();
+                break;
+              }
+              case 26: {
+                VbiosVersion = input.ReadString();
+                break;
+              }
+              case 32: {
+                GpuArchitectureType = (global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuArchitectureType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                AttestationCertificateChain = input.ReadBytes();
+                break;
+              }
+              case 50: {
+                AttestationReport = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// SwitchInfo contains the attestation evidence for a NVSwitch device.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SwitchInfo : pb::IMessage<SwitchInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SwitchInfo> _parser = new pb::MessageParser<SwitchInfo>(() => new SwitchInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SwitchInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SwitchInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SwitchInfo(SwitchInfo other) : this() {
+          uuid_ = other.uuid_;
+          attestationCertificateChain_ = other.attestationCertificateChain_;
+          attestationReport_ = other.attestationReport_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SwitchInfo Clone() {
+          return new SwitchInfo(this);
+        }
+
+        /// <summary>Field number for the "uuid" field.</summary>
+        public const int UuidFieldNumber = 1;
+        private string uuid_ = "";
+        /// <summary>
+        /// Optional. The UUID of the NVSwitch device.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uuid {
+          get { return uuid_; }
+          set {
+            uuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "attestation_certificate_chain" field.</summary>
+        public const int AttestationCertificateChainFieldNumber = 2;
+        private pb::ByteString attestationCertificateChain_ = pb::ByteString.Empty;
+        /// <summary>
+        /// Optional. The raw attestation certificate chain for the NVSwitch device.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString AttestationCertificateChain {
+          get { return attestationCertificateChain_; }
+          set {
+            attestationCertificateChain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "attestation_report" field.</summary>
+        public const int AttestationReportFieldNumber = 3;
+        private pb::ByteString attestationReport_ = pb::ByteString.Empty;
+        /// <summary>
+        /// Optional. The raw attestation report for the NvSwitch device.
+        /// This field contains SPDM request/response defined in
+        /// https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString AttestationReport {
+          get { return attestationReport_; }
+          set {
+            attestationReport_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SwitchInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SwitchInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uuid != other.Uuid) return false;
+          if (AttestationCertificateChain != other.AttestationCertificateChain) return false;
+          if (AttestationReport != other.AttestationReport) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uuid.Length != 0) hash ^= Uuid.GetHashCode();
+          if (AttestationCertificateChain.Length != 0) hash ^= AttestationCertificateChain.GetHashCode();
+          if (AttestationReport.Length != 0) hash ^= AttestationReport.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uuid);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteBytes(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uuid);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteBytes(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uuid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uuid);
+          }
+          if (AttestationCertificateChain.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(AttestationCertificateChain);
+          }
+          if (AttestationReport.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(AttestationReport);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SwitchInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uuid.Length != 0) {
+            Uuid = other.Uuid;
+          }
+          if (other.AttestationCertificateChain.Length != 0) {
+            AttestationCertificateChain = other.AttestationCertificateChain;
+          }
+          if (other.AttestationReport.Length != 0) {
+            AttestationReport = other.AttestationReport;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                AttestationCertificateChain = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                AttestationReport = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                AttestationCertificateChain = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                AttestationReport = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Single GPU Passthrough (SPT) attestation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SinglePassthroughAttestation : pb::IMessage<SinglePassthroughAttestation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SinglePassthroughAttestation> _parser = new pb::MessageParser<SinglePassthroughAttestation>(() => new SinglePassthroughAttestation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SinglePassthroughAttestation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SinglePassthroughAttestation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SinglePassthroughAttestation(SinglePassthroughAttestation other) : this() {
+          gpuQuote_ = other.gpuQuote_ != null ? other.gpuQuote_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SinglePassthroughAttestation Clone() {
+          return new SinglePassthroughAttestation(this);
+        }
+
+        /// <summary>Field number for the "gpu_quote" field.</summary>
+        public const int GpuQuoteFieldNumber = 1;
+        private global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo gpuQuote_;
+        /// <summary>
+        /// Optional. Single GPU quote.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo GpuQuote {
+          get { return gpuQuote_; }
+          set {
+            gpuQuote_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SinglePassthroughAttestation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SinglePassthroughAttestation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(GpuQuote, other.GpuQuote)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (gpuQuote_ != null) hash ^= GpuQuote.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (gpuQuote_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GpuQuote);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (gpuQuote_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GpuQuote);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (gpuQuote_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GpuQuote);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SinglePassthroughAttestation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.gpuQuote_ != null) {
+            if (gpuQuote_ == null) {
+              GpuQuote = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo();
+            }
+            GpuQuote.MergeFrom(other.GpuQuote);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (gpuQuote_ == null) {
+                  GpuQuote = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo();
+                }
+                input.ReadMessage(GpuQuote);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (gpuQuote_ == null) {
+                  GpuQuote = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo();
+                }
+                input.ReadMessage(GpuQuote);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Protected PCIe (PPCIE) attestation.
+      /// Eight Hopper GPUs with Four NVSwitch Passthrough.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ProtectedPcieAttestation : pb::IMessage<ProtectedPcieAttestation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProtectedPcieAttestation> _parser = new pb::MessageParser<ProtectedPcieAttestation>(() => new ProtectedPcieAttestation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProtectedPcieAttestation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProtectedPcieAttestation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProtectedPcieAttestation(ProtectedPcieAttestation other) : this() {
+          gpuQuotes_ = other.gpuQuotes_.Clone();
+          switchQuotes_ = other.switchQuotes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProtectedPcieAttestation Clone() {
+          return new ProtectedPcieAttestation(this);
+        }
+
+        /// <summary>Field number for the "gpu_quotes" field.</summary>
+        public const int GpuQuotesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> _repeated_gpuQuotes_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> gpuQuotes_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo>();
+        /// <summary>
+        /// Optional. A list of GPU infos.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> GpuQuotes {
+          get { return gpuQuotes_; }
+        }
+
+        /// <summary>Field number for the "switch_quotes" field.</summary>
+        public const int SwitchQuotesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo> _repeated_switchQuotes_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo> switchQuotes_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo>();
+        /// <summary>
+        /// Optional. A list of SWITCH infos.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.SwitchInfo> SwitchQuotes {
+          get { return switchQuotes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProtectedPcieAttestation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProtectedPcieAttestation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!gpuQuotes_.Equals(other.gpuQuotes_)) return false;
+          if(!switchQuotes_.Equals(other.switchQuotes_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= gpuQuotes_.GetHashCode();
+          hash ^= switchQuotes_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          gpuQuotes_.WriteTo(output, _repeated_gpuQuotes_codec);
+          switchQuotes_.WriteTo(output, _repeated_switchQuotes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          gpuQuotes_.WriteTo(ref output, _repeated_gpuQuotes_codec);
+          switchQuotes_.WriteTo(ref output, _repeated_switchQuotes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += gpuQuotes_.CalculateSize(_repeated_gpuQuotes_codec);
+          size += switchQuotes_.CalculateSize(_repeated_switchQuotes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProtectedPcieAttestation other) {
+          if (other == null) {
+            return;
+          }
+          gpuQuotes_.Add(other.gpuQuotes_);
+          switchQuotes_.Add(other.switchQuotes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                gpuQuotes_.AddEntriesFrom(input, _repeated_gpuQuotes_codec);
+                break;
+              }
+              case 18: {
+                switchQuotes_.AddEntriesFrom(input, _repeated_switchQuotes_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                gpuQuotes_.AddEntriesFrom(ref input, _repeated_gpuQuotes_codec);
+                break;
+              }
+              case 18: {
+                switchQuotes_.AddEntriesFrom(ref input, _repeated_switchQuotes_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// MultiGpuSecurePassthroughAttestation contains the attestation evidence
+      /// for a Multi-GPU Secure Passthrough (MPT) attestation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MultiGpuSecurePassthroughAttestation : pb::IMessage<MultiGpuSecurePassthroughAttestation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MultiGpuSecurePassthroughAttestation> _parser = new pb::MessageParser<MultiGpuSecurePassthroughAttestation>(() => new MultiGpuSecurePassthroughAttestation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MultiGpuSecurePassthroughAttestation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiGpuSecurePassthroughAttestation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiGpuSecurePassthroughAttestation(MultiGpuSecurePassthroughAttestation other) : this() {
+          gpuQuotes_ = other.gpuQuotes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MultiGpuSecurePassthroughAttestation Clone() {
+          return new MultiGpuSecurePassthroughAttestation(this);
+        }
+
+        /// <summary>Field number for the "gpu_quotes" field.</summary>
+        public const int GpuQuotesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> _repeated_gpuQuotes_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> gpuQuotes_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo>();
+        /// <summary>
+        /// Optional. A list of GPU quotes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation.Types.GpuInfo> GpuQuotes {
+          get { return gpuQuotes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MultiGpuSecurePassthroughAttestation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MultiGpuSecurePassthroughAttestation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!gpuQuotes_.Equals(other.gpuQuotes_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= gpuQuotes_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          gpuQuotes_.WriteTo(output, _repeated_gpuQuotes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          gpuQuotes_.WriteTo(ref output, _repeated_gpuQuotes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += gpuQuotes_.CalculateSize(_repeated_gpuQuotes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MultiGpuSecurePassthroughAttestation other) {
+          if (other == null) {
+            return;
+          }
+          gpuQuotes_.Add(other.gpuQuotes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                gpuQuotes_.AddEntriesFrom(input, _repeated_gpuQuotes_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                gpuQuotes_.AddEntriesFrom(ref input, _repeated_gpuQuotes_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1504,7 +3294,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1825,7 +3615,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2068,7 +3858,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2295,7 +4085,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2480,7 +4270,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2831,7 +4621,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3447,7 +5237,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4102,7 +5892,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4289,7 +6079,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4476,7 +6266,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4801,7 +6591,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4826,6 +6616,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       signedEntities_ = other.signedEntities_.Clone();
       gceShieldedIdentity_ = other.gceShieldedIdentity_ != null ? other.gceShieldedIdentity_.Clone() : null;
       options_ = other.options_ != null ? other.options_.Clone() : null;
+      nvidiaAttestation_ = other.nvidiaAttestation_ != null ? other.nvidiaAttestation_.Clone() : null;
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TdCcel:
           TdCcel = other.TdCcel.Clone();
@@ -4955,6 +6746,22 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    /// <summary>Field number for the "nvidia_attestation" field.</summary>
+    public const int NvidiaAttestationFieldNumber = 8;
+    private global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation nvidiaAttestation_;
+    /// <summary>
+    /// Optional. An optional Nvidia attestation report, used to populate hardware
+    /// rooted claims for Nvidia devices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation NvidiaAttestation {
+      get { return nvidiaAttestation_; }
+      set {
+        nvidiaAttestation_ = value;
+      }
+    }
+
     private object teeAttestation_;
     /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
     public enum TeeAttestationOneofCase {
@@ -4998,6 +6805,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if(!signedEntities_.Equals(other.signedEntities_)) return false;
       if (!object.Equals(GceShieldedIdentity, other.GceShieldedIdentity)) return false;
       if (!object.Equals(Options, other.Options)) return false;
+      if (!object.Equals(NvidiaAttestation, other.NvidiaAttestation)) return false;
       if (TeeAttestationCase != other.TeeAttestationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5013,6 +6821,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       hash ^= signedEntities_.GetHashCode();
       if (gceShieldedIdentity_ != null) hash ^= GceShieldedIdentity.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
+      if (nvidiaAttestation_ != null) hash ^= NvidiaAttestation.GetHashCode();
       hash ^= (int) teeAttestationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5057,6 +6866,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Options);
       }
+      if (nvidiaAttestation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(NvidiaAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5092,6 +6905,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Options);
       }
+      if (nvidiaAttestation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(NvidiaAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5120,6 +6937,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
+      if (nvidiaAttestation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NvidiaAttestation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5154,6 +6974,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions();
         }
         Options.MergeFrom(other.Options);
+      }
+      if (other.nvidiaAttestation_ != null) {
+        if (nvidiaAttestation_ == null) {
+          NvidiaAttestation = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+        }
+        NvidiaAttestation.MergeFrom(other.NvidiaAttestation);
       }
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TdCcel:
@@ -5232,6 +7058,13 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             input.ReadMessage(Options);
             break;
           }
+          case 66: {
+            if (nvidiaAttestation_ == null) {
+              NvidiaAttestation = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+            }
+            input.ReadMessage(NvidiaAttestation);
+            break;
+          }
         }
       }
     #endif
@@ -5292,6 +7125,13 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
               Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions();
             }
             input.ReadMessage(Options);
+            break;
+          }
+          case 66: {
+            if (nvidiaAttestation_ == null) {
+              NvidiaAttestation = new global::Google.Cloud.ConfidentialComputing.V1.NvidiaAttestation();
+            }
+            input.ReadMessage(NvidiaAttestation);
             break;
           }
         }
@@ -5719,7 +7559,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5948,7 +7788,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6181,7 +8021,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6202,6 +8042,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VerifyConfidentialGkeRequest(VerifyConfidentialGkeRequest other) : this() {
       challenge_ = other.challenge_;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TpmAttestation:
           TpmAttestation = other.TpmAttestation.Clone();
@@ -6250,6 +8091,21 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 3;
+    private global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions options_;
+    /// <summary>
+    /// Optional. A collection of fields that modify the token output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
     private object teeAttestation_;
     /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
     public enum TeeAttestationOneofCase {
@@ -6287,6 +8143,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
       if (Challenge != other.Challenge) return false;
+      if (!object.Equals(Options, other.Options)) return false;
       if (TeeAttestationCase != other.TeeAttestationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6297,6 +8154,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       int hash = 1;
       if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) hash ^= TpmAttestation.GetHashCode();
       if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
       hash ^= (int) teeAttestationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6324,6 +8182,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(TpmAttestation);
       }
+      if (options_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6342,6 +8204,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(TpmAttestation);
       }
+      if (options_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6358,6 +8224,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (Challenge.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Challenge);
       }
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6372,6 +8241,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (other.Challenge.Length != 0) {
         Challenge = other.Challenge;
+      }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions();
+        }
+        Options.MergeFrom(other.Options);
       }
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TpmAttestation:
@@ -6410,6 +8285,13 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             TpmAttestation = subBuilder;
             break;
           }
+          case 26: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
         }
       }
     #endif
@@ -6438,10 +8320,294 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             TpmAttestation = subBuilder;
             break;
           }
+          case 26: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VerifyConfidentialGkeRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Token options for Confidential GKE attestation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConfidentialGkeOptions : pb::IMessage<ConfidentialGkeOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConfidentialGkeOptions> _parser = new pb::MessageParser<ConfidentialGkeOptions>(() => new ConfidentialGkeOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConfidentialGkeOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialGkeOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialGkeOptions(ConfidentialGkeOptions other) : this() {
+          audience_ = other.audience_;
+          nonce_ = other.nonce_.Clone();
+          signatureType_ = other.signatureType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialGkeOptions Clone() {
+          return new ConfidentialGkeOptions(this);
+        }
+
+        /// <summary>Field number for the "audience" field.</summary>
+        public const int AudienceFieldNumber = 1;
+        private string audience_ = "";
+        /// <summary>
+        /// Optional. Optional string to issue the token with a custom audience
+        /// claim. Required if custom nonces are specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Audience {
+          get { return audience_; }
+          set {
+            audience_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "nonce" field.</summary>
+        public const int NonceFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_nonce_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> nonce_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Optional parameter to place one or more nonces in the eat_nonce
+        /// claim in the output token. The minimum size for JSON-encoded EATs is 10
+        /// bytes and the maximum size is 74 bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Nonce {
+          get { return nonce_; }
+        }
+
+        /// <summary>Field number for the "signature_type" field.</summary>
+        public const int SignatureTypeFieldNumber = 4;
+        private global::Google.Cloud.ConfidentialComputing.V1.SignatureType signatureType_ = global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified;
+        /// <summary>
+        /// Optional. Optional specification for how to sign the attestation token.
+        /// Defaults to SIGNATURE_TYPE_OIDC if unspecified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.SignatureType SignatureType {
+          get { return signatureType_; }
+          set {
+            signatureType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConfidentialGkeOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConfidentialGkeOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Audience != other.Audience) return false;
+          if(!nonce_.Equals(other.nonce_)) return false;
+          if (SignatureType != other.SignatureType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+          hash ^= nonce_.GetHashCode();
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) hash ^= SignatureType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Audience.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Audience);
+          }
+          nonce_.WriteTo(output, _repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SignatureType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Audience.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Audience);
+          }
+          nonce_.WriteTo(ref output, _repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SignatureType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Audience.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+          }
+          size += nonce_.CalculateSize(_repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignatureType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConfidentialGkeOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Audience.Length != 0) {
+            Audience = other.Audience;
+          }
+          nonce_.Add(other.nonce_);
+          if (other.SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            SignatureType = other.SignatureType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Audience = input.ReadString();
+                break;
+              }
+              case 26: {
+                nonce_.AddEntriesFrom(input, _repeated_nonce_codec);
+                break;
+              }
+              case 32: {
+                SignatureType = (global::Google.Cloud.ConfidentialComputing.V1.SignatureType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Audience = input.ReadString();
+                break;
+              }
+              case 26: {
+                nonce_.AddEntriesFrom(ref input, _repeated_nonce_codec);
+                break;
+              }
+              case 32: {
+                SignatureType = (global::Google.Cloud.ConfidentialComputing.V1.SignatureType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -6464,7 +8630,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
