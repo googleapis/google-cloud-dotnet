@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
                 TpmAttestation = new TpmAttestation(),
+                Options = new VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions(),
             };
             // Make the request
             VerifyConfidentialGkeResponse response = await confidentialComputingClient.VerifyConfidentialGkeAsync(request);
