@@ -191,6 +191,8 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        internal Mutation GetMutation() => CreateExecutableCommand().GetMutation();
+
         /// <inheritdoc />
         public override string CommandText
         {

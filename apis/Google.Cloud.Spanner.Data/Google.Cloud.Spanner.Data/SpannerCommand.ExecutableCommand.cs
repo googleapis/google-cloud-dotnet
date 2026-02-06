@@ -418,6 +418,13 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
+            internal Mutation GetMutation()
+            {
+                var mutations = GetMutations();
+                GaxPreconditions.CheckState(mutations.Count == 1, "This is a bug in the library code. SpannerCommand must represent exactly one mutation.");
+                return mutations[0];
+            }
+
             // Based on the QueryOptions set at various levels (connection, environment and command),
             // constructs the QueryOptions proto to set in the ExecuteSqlRequest.
             // Options set at the SpannerCommand-level has the highest precedence.
