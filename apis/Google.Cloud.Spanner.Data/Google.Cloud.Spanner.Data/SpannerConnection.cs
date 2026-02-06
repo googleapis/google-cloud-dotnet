@@ -22,6 +22,7 @@ using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
@@ -979,6 +980,12 @@ namespace Google.Cloud.Spanner.Data
             new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
 
         /// <summary>
+        /// Creates a new <see cref="SpannerBatchWriteCommand"/> to execute batched mutation groups with this connection.
+        /// You can add mutation groups to the batch by using <see cref="SpannerBatchWriteCommand.Add(SpannerCommand, SpannerCommand[])"/>.
+        /// </summary>
+        public SpannerBatchWriteCommand CreateBatchWriteCommand() => new SpannerBatchWriteCommand(this);
+
+        /// <summary>
         /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements with this connection, without using a transaction.
         /// You can add commands to the batch by using <see cref="SpannerBatchCommand.Add(SpannerCommand)"/>,
         /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
@@ -1003,6 +1010,28 @@ namespace Google.Cloud.Spanner.Data
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(WhenSessionPoolReady));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Executes a BatchWrite RPC.
+        /// </summary>
+        /// <param name="request">The <see cref="BatchWriteRequest"/> to execute. Must not be null.</param>
+        /// <param name="timeout">The timeout for the operation, in seconds.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>An <see cref="IAsyncEnumerable{BatchWriteResult}"/> representing the results of the operation.</returns>
+        internal async IAsyncEnumerable<SpannerBatchWriteCommand.BatchWriteResult> ExecuteBatchWriteAsync(BatchWriteRequest request, int timeout, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken)
+        {
+            await OpenAsync(cancellationToken).ConfigureAwait(false);
+            var key = GetSessionPoolSegmentKey(nameof(ExecuteBatchWriteAsync));
+            var callSettings = CreateCallSettings(settings => settings.BatchWriteSettings, timeout, cancellationToken);
+
+#pragma warning disable CS0618 // Disable the warning for the specific obsolete member
+            var responseStream = await _sessionPool.BatchWriteAsync(request, key, callSettings).ConfigureAwait(false);
+#pragma warning restore CS0618
+            await foreach (var response in responseStream.WithCancellation(cancellationToken).ConfigureAwait(false))
+            {
+                yield return new SpannerBatchWriteCommand.BatchWriteResult(response);
+            }
         }
 
         internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
