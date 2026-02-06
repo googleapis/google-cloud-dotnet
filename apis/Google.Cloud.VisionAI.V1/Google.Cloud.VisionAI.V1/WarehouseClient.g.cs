@@ -1666,10 +1666,10 @@ namespace Google.Cloud.VisionAI.V1
     public abstract partial class WarehouseClient
     {
         /// <summary>
-        /// The default endpoint for the Warehouse service, which is a host of "visionai.googleapis.com" and a port of
-        /// 443.
+        /// The default endpoint for the Warehouse service, which is a host of "warehouse-visionai.googleapis.com" and a
+        /// port of 443.
         /// </summary>
-        public static string DefaultEndpoint { get; } = "visionai.googleapis.com:443";
+        public static string DefaultEndpoint { get; } = "warehouse-visionai.googleapis.com:443";
 
         /// <summary>The default Warehouse scopes.</summary>
         /// <remarks>

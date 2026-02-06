@@ -3507,7 +3507,7 @@
             "id": "Google.Cloud.VisionAI.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastGeneratedCommit": "fe4d9b3bcaae6282d1d6ee57a42fed53b334931b",
             "apiPaths": [
                 "google/cloud/visionai/v1"
             ],
