@@ -209,7 +209,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     await UpdateValueAsync(writeConnection);
                     scope.Complete();
                 }
-            });
+            }, ex => ex is TransactionAbortedException);
         }
 
         [Fact]
@@ -224,7 +224,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     UpdateValue(writeConnection);
                     scope.Complete();
                 }
-            });
+            }, ex => ex is TransactionAbortedException);
         }
 
         [Fact]

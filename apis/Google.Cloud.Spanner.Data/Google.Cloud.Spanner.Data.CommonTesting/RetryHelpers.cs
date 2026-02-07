@@ -47,19 +47,21 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         /// <summary>
         /// Executes the given action, retrying once if the first attempt is aborted.
         /// </summary>
-        public static void ExecuteWithRetry(Action action) => ExecuteWithRetryImpl(() => { action(); return 0; });
+        public static void ExecuteWithRetry(Action action, Func<Exception, bool> shouldRetry = null) => 
+            ExecuteWithRetryImpl(() => { action(); return 0; }, shouldRetry);
 
         /// <summary>
         /// Executes the given asynchronous action, retrying once if the first attempt is aborted.
         /// </summary>
-        public static Task ExecuteWithRetryAsync(Func<Task> action) => ExecuteWithRetryAsyncImpl(async () => { await action(); return 0; });
+        public static Task ExecuteWithRetryAsync(Func<Task> action, Func<Exception, bool> shouldRetry = null) => 
+            ExecuteWithRetryAsyncImpl(async () => { await action(); return 0; }, shouldRetry);
 
         private static int _calls;
         private static int _retries;
 
         // TODO: Move this retry code into production code, so that everyone can use it.
 
-        private static T ExecuteWithRetryImpl<T>(Func<T> func)
+        private static T ExecuteWithRetryImpl<T>(Func<T> func, Func<Exception, bool> shouldRetry = null)
         {
             Interlocked.Increment(ref _calls);
 
@@ -76,7 +78,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 {
                     return func();
                 }
-                catch (SpannerException e) when (attempt.ShouldRetry(e))
+                catch (Exception e) when (attempt.ShouldRetry(e) || (shouldRetry?.Invoke(e) ?? false))
                 {
                     attempt.Backoff(default);
                 }
@@ -84,7 +86,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             throw new InvalidOperationException("Bug in GAX retry handling: finished sequence of attempts");
         }
 
-        private static async Task<T> ExecuteWithRetryAsyncImpl<T>(Func<Task<T>> func)
+        private static async Task<T> ExecuteWithRetryAsyncImpl<T>(Func<Task<T>> func, Func<Exception, bool> shouldRetry = null)
         {
             Interlocked.Increment(ref _calls);
 
@@ -101,7 +103,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 {
                     return await func();
                 }
-                catch (SpannerException e) when (attempt.ShouldRetry(e))
+                catch (Exception e) when (attempt.ShouldRetry(e) || (shouldRetry?.Invoke(e) ?? false))
                 {
                     await attempt.BackoffAsync(default);
                 }
