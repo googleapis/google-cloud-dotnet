@@ -1488,12 +1488,12 @@
         },
         {
             "id": "Google.Cloud.DocumentAI.V1Beta3",
-            "currentVersion": "2.0.0-beta28",
+            "currentVersion": "2.0.0-beta29",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T16:51:18.844532809Z",
+            "releaseTimestamp": "2026-02-09T14:10:08.846499541Z",
             "lastGeneratedCommit": "39bd091b055e331a4917143355ab7afa83b7130c",
-            "lastReleasedCommit": "50a2632056a4678661e5ee309ceb83d00f5ddbf5",
+            "lastReleasedCommit": "39bd091b055e331a4917143355ab7afa83b7130c",
             "apiPaths": [
                 "google/cloud/documentai/v1beta3"
             ],
