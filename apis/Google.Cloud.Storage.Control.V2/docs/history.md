@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.7.0, released 2026-02-09
+
+### New features
+
+- Add a DeleteFolderRecursive API definition
+
 ## Version 1.6.0, released 2025-11-06
 
 ### New features
