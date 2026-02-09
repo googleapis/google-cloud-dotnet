@@ -3172,7 +3172,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T16:43:27.440316278Z",
-            "lastGeneratedCommit": "9da837b53027792b642ef5240527217f2863c505",
+            "lastGeneratedCommit": "af8a8d56476983207ac225892b38cc9bfbe744f1",
             "lastReleasedCommit": "9da837b53027792b642ef5240527217f2863c505",
             "apiPaths": [
                 "google/storage/control/v2"

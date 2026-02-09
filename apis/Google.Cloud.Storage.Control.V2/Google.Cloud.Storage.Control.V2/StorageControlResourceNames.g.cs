@@ -1626,6 +1626,18 @@ namespace Google.Cloud.Storage.Control.V2
         }
     }
 
+    public partial class DeleteFolderRecursiveRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class StorageLayout
     {
         /// <summary>
