@@ -1,5 +1,27 @@
 # Version history
 
+## Version 2.0.0-beta29, released 2026-02-09
+
+### New features
+
+- A new field `revisions` is added to message `.google.cloud.documentai.v1beta3.Evaluation`
+- A new field `document_type` is added to message `.google.cloud.documentai.v1beta3.ImportDocumentsRequest`
+- A new field `document_prompt` is added to message `.google.cloud.documentai.v1beta3.DocumentSchema`
+- A new field `enable_table_split` is added to message `.google.cloud.documentai.v1beta3.OcrConfig.LayoutParsingParams`
+- Added new messages `Documents` and `RawDocuments` for inline document input
+- The method `ReviewDocument` in `.google.cloud.documentai.v1beta3.DocumentProcessorService` is deprecated
+- The field `skip_human_review` in messages `.google.cloud.documentai.v1beta3.ProcessRequest` and `.google.cloud.documentai.v1beta3.BatchProcessRequest` is deprecated
+
+### Bug fixes
+
+- Removed the `SpannerIndexingConfig` message and the `spanner_indexing_config` field from `.google.cloud.documentai.v1beta3.Dataset`
+
+### Documentation improvements
+
+- Updated comments for various fields and messages
+- Regenerated REST and RPC Document AI documentation to include missing changes from September 2024 to November 2025
+- Fixed language issues in multiple message field descriptions
+
 ## Version 2.0.0-beta28, released 2025-11-05
 
 ### New features
