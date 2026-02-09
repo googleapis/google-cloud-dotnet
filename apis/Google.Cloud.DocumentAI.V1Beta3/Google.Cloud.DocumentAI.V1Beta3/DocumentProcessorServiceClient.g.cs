@@ -3154,6 +3154,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> ReviewDocument(ReviewDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3164,6 +3165,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(ReviewDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3174,6 +3176,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(ReviewDocumentRequest request, st::CancellationToken cancellationToken) =>
             ReviewDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3188,6 +3191,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> PollOnceReviewDocument(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReviewDocumentOperationsClient, callSettings);
 
@@ -3200,6 +3204,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> PollOnceReviewDocumentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReviewDocumentOperationsClient, callSettings);
 
@@ -3214,6 +3219,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> ReviewDocument(string humanReviewConfig, gaxgrpc::CallSettings callSettings = null) =>
             ReviewDocument(new ReviewDocumentRequest
             {
@@ -3231,6 +3237,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(string humanReviewConfig, gaxgrpc::CallSettings callSettings = null) =>
             ReviewDocumentAsync(new ReviewDocumentRequest
             {
@@ -3248,6 +3255,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(string humanReviewConfig, st::CancellationToken cancellationToken) =>
             ReviewDocumentAsync(humanReviewConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3262,6 +3270,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> ReviewDocument(HumanReviewConfigName humanReviewConfig, gaxgrpc::CallSettings callSettings = null) =>
             ReviewDocument(new ReviewDocumentRequest
             {
@@ -3279,6 +3288,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(HumanReviewConfigName humanReviewConfig, gaxgrpc::CallSettings callSettings = null) =>
             ReviewDocumentAsync(new ReviewDocumentRequest
             {
@@ -3296,6 +3306,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(HumanReviewConfigName humanReviewConfig, st::CancellationToken cancellationToken) =>
             ReviewDocumentAsync(humanReviewConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4022,7 +4033,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             _callSetDefaultProcessorVersion = clientHelper.BuildApiCall<SetDefaultProcessorVersionRequest, lro::Operation>("SetDefaultProcessorVersion", grpcClient.SetDefaultProcessorVersionAsync, grpcClient.SetDefaultProcessorVersion, effectiveSettings.SetDefaultProcessorVersionSettings).WithGoogleRequestParam("processor", request => request.Processor);
             Modify_ApiCall(ref _callSetDefaultProcessorVersion);
             Modify_SetDefaultProcessorVersionApiCall(ref _callSetDefaultProcessorVersion);
+#pragma warning disable CS0612
             _callReviewDocument = clientHelper.BuildApiCall<ReviewDocumentRequest, lro::Operation>("ReviewDocument", grpcClient.ReviewDocumentAsync, grpcClient.ReviewDocument, effectiveSettings.ReviewDocumentSettings).WithGoogleRequestParam("human_review_config", request => request.HumanReviewConfig);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callReviewDocument);
             Modify_ReviewDocumentApiCall(ref _callReviewDocument);
             _callEvaluateProcessorVersion = clientHelper.BuildApiCall<EvaluateProcessorVersionRequest, lro::Operation>("EvaluateProcessorVersion", grpcClient.EvaluateProcessorVersionAsync, grpcClient.EvaluateProcessorVersion, effectiveSettings.EvaluateProcessorVersionSettings).WithGoogleRequestParam("processor_version", request => request.ProcessorVersion);
@@ -4645,6 +4658,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> ReviewDocument(ReviewDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReviewDocumentRequest(ref request, ref callSettings);
@@ -4658,6 +4672,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(ReviewDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReviewDocumentRequest(ref request, ref callSettings);

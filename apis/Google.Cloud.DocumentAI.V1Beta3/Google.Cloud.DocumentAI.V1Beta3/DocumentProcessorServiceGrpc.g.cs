@@ -3,7 +3,7 @@
 //     source: google/cloud/documentai/v1beta3/document_processor_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -569,6 +569,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReviewDocument(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest request, grpc::ServerCallContext context)
       {
@@ -1594,6 +1595,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReviewDocument(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1606,6 +1608,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReviewDocument(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest request, grpc::CallOptions options)
       {
@@ -1620,6 +1623,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReviewDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1632,6 +1636,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReviewDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest request, grpc::CallOptions options)
       {

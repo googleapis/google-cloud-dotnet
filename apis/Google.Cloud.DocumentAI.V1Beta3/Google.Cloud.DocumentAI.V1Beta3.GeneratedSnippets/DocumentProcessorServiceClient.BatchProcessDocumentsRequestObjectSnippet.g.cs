@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             BatchProcessRequest request = new BatchProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),

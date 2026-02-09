@@ -37,7 +37,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             HumanReviewConfigName humanReviewConfig = HumanReviewConfigName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = documentProcessorServiceClient.ReviewDocument(humanReviewConfig);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -47,7 +49,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceReviewDocument(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

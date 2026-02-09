@@ -25,50 +25,57 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50X2lv",
-            "LnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGiBnb29n",
-            "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJHCgtSYXdEb2N1bWVudBIP",
-            "Cgdjb250ZW50GAEgASgMEhEKCW1pbWVfdHlwZRgCIAEoCRIUCgxkaXNwbGF5",
-            "X25hbWUYAyABKAkiMQoLR2NzRG9jdW1lbnQSDwoHZ2NzX3VyaRgBIAEoCRIR",
-            "CgltaW1lX3R5cGUYAiABKAkiTwoMR2NzRG9jdW1lbnRzEj8KCWRvY3VtZW50",
-            "cxgBIAMoCzIsLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2Nz",
-            "RG9jdW1lbnQiIwoJR2NzUHJlZml4EhYKDmdjc191cmlfcHJlZml4GAEgASgJ",
-            "Iq8BChlCYXRjaERvY3VtZW50c0lucHV0Q29uZmlnEkAKCmdjc19wcmVmaXgY",
-            "ASABKAsyKi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkdjc1By",
-            "ZWZpeEgAEkYKDWdjc19kb2N1bWVudHMYAiABKAsyLS5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkdjc0RvY3VtZW50c0gAQggKBnNvdXJjZSKP",
-            "AwoURG9jdW1lbnRPdXRwdXRDb25maWcSYgoRZ2NzX291dHB1dF9jb25maWcY",
-            "ASABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3Vt",
-            "ZW50T3V0cHV0Q29uZmlnLkdjc091dHB1dENvbmZpZ0gAGoMCCg9HY3NPdXRw",
-            "dXRDb25maWcSDwoHZ2NzX3VyaRgBIAEoCRIuCgpmaWVsZF9tYXNrGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJtCg9zaGFyZGluZ19jb25m",
-            "aWcYAyABKAsyVC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
-            "Y3VtZW50T3V0cHV0Q29uZmlnLkdjc091dHB1dENvbmZpZy5TaGFyZGluZ0Nv",
-            "bmZpZxpACg5TaGFyZGluZ0NvbmZpZxIXCg9wYWdlc19wZXJfc2hhcmQYASAB",
-            "KAUSFQoNcGFnZXNfb3ZlcmxhcBgCIAEoBUINCgtkZXN0aW5hdGlvbiL8AwoJ",
-            "T2NyQ29uZmlnEj8KBWhpbnRzGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3Vt",
-            "ZW50YWkudjFiZXRhMy5PY3JDb25maWcuSGludHMSIQoZZW5hYmxlX25hdGl2",
-            "ZV9wZGZfcGFyc2luZxgDIAEoCBIjChtlbmFibGVfaW1hZ2VfcXVhbGl0eV9z",
-            "Y29yZXMYBCABKAgSHAoUYWR2YW5jZWRfb2NyX29wdGlvbnMYBSADKAkSFQoN",
-            "ZW5hYmxlX3N5bWJvbBgGIAEoCBIeChJjb21wdXRlX3N0eWxlX2luZm8YCCAB",
-            "KAhCAhgBEikKIWRpc2FibGVfY2hhcmFjdGVyX2JveGVzX2RldGVjdGlvbhgK",
-            "IAEoCBJUChBwcmVtaXVtX2ZlYXR1cmVzGAsgASgLMjouZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5PY3JDb25maWcuUHJlbWl1bUZlYXR1cmVz",
-            "Gh8KBUhpbnRzEhYKDmxhbmd1YWdlX2hpbnRzGAEgAygJGm8KD1ByZW1pdW1G",
-            "ZWF0dXJlcxInCh9lbmFibGVfc2VsZWN0aW9uX21hcmtfZGV0ZWN0aW9uGAMg",
-            "ASgIEhoKEmNvbXB1dGVfc3R5bGVfaW5mbxgEIAEoCBIXCg9lbmFibGVfbWF0",
-            "aF9vY3IYBSABKAhC5gEKI2NvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MWJldGEzQg9Eb2N1bWVudElvUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50",
-            "YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29n",
-            "bGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6",
-            "RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "LnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGi5nb29n",
+            "bGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50LnByb3RvGiBn",
+            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJJCglEb2N1bWVudHMS",
+            "PAoJZG9jdW1lbnRzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5Eb2N1bWVudCJHCgtSYXdEb2N1bWVudBIPCgdjb250ZW50GAEg",
+            "ASgMEhEKCW1pbWVfdHlwZRgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyABKAki",
+            "MQoLR2NzRG9jdW1lbnQSDwoHZ2NzX3VyaRgBIAEoCRIRCgltaW1lX3R5cGUY",
+            "AiABKAkiTwoMR2NzRG9jdW1lbnRzEj8KCWRvY3VtZW50cxgBIAMoCzIsLmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2NzRG9jdW1lbnQiIwoJ",
+            "R2NzUHJlZml4EhYKDmdjc191cmlfcHJlZml4GAEgASgJIk8KDFJhd0RvY3Vt",
+            "ZW50cxI/Cglkb2N1bWVudHMYASADKAsyLC5nb29nbGUuY2xvdWQuZG9jdW1l",
+            "bnRhaS52MWJldGEzLlJhd0RvY3VtZW50Iq8BChlCYXRjaERvY3VtZW50c0lu",
+            "cHV0Q29uZmlnEkAKCmdjc19wcmVmaXgYASABKAsyKi5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkdjc1ByZWZpeEgAEkYKDWdjc19kb2N1bWVu",
+            "dHMYAiABKAsyLS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkdj",
+            "c0RvY3VtZW50c0gAQggKBnNvdXJjZSKPAwoURG9jdW1lbnRPdXRwdXRDb25m",
+            "aWcSYgoRZ2NzX291dHB1dF9jb25maWcYASABKAsyRS5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50T3V0cHV0Q29uZmlnLkdjc091",
+            "dHB1dENvbmZpZ0gAGoMCCg9HY3NPdXRwdXRDb25maWcSDwoHZ2NzX3VyaRgB",
+            "IAEoCRIuCgpmaWVsZF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFzaxJtCg9zaGFyZGluZ19jb25maWcYAyABKAsyVC5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50T3V0cHV0Q29uZmlnLkdj",
+            "c091dHB1dENvbmZpZy5TaGFyZGluZ0NvbmZpZxpACg5TaGFyZGluZ0NvbmZp",
+            "ZxIXCg9wYWdlc19wZXJfc2hhcmQYASABKAUSFQoNcGFnZXNfb3ZlcmxhcBgC",
+            "IAEoBUINCgtkZXN0aW5hdGlvbiL8AwoJT2NyQ29uZmlnEj8KBWhpbnRzGAIg",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5PY3JDb25m",
+            "aWcuSGludHMSIQoZZW5hYmxlX25hdGl2ZV9wZGZfcGFyc2luZxgDIAEoCBIj",
+            "ChtlbmFibGVfaW1hZ2VfcXVhbGl0eV9zY29yZXMYBCABKAgSHAoUYWR2YW5j",
+            "ZWRfb2NyX29wdGlvbnMYBSADKAkSFQoNZW5hYmxlX3N5bWJvbBgGIAEoCBIe",
+            "ChJjb21wdXRlX3N0eWxlX2luZm8YCCABKAhCAhgBEikKIWRpc2FibGVfY2hh",
+            "cmFjdGVyX2JveGVzX2RldGVjdGlvbhgKIAEoCBJUChBwcmVtaXVtX2ZlYXR1",
+            "cmVzGAsgASgLMjouZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5P",
+            "Y3JDb25maWcuUHJlbWl1bUZlYXR1cmVzGh8KBUhpbnRzEhYKDmxhbmd1YWdl",
+            "X2hpbnRzGAEgAygJGm8KD1ByZW1pdW1GZWF0dXJlcxInCh9lbmFibGVfc2Vs",
+            "ZWN0aW9uX21hcmtfZGV0ZWN0aW9uGAMgASgIEhoKEmNvbXB1dGVfc3R5bGVf",
+            "aW5mbxgEIAEoCBIXCg9lbmFibGVfbWF0aF9vY3IYBSABKAhC5gEKI2NvbS5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzQg9Eb2N1bWVudElvUHJv",
+            "dG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0",
+            "YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5E",
+            "b2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxW",
+            "MWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Documents), global::Google.Cloud.DocumentAI.V1Beta3.Documents.Parser, new[]{ "Documents_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RawDocument), global::Google.Cloud.DocumentAI.V1Beta3.RawDocument.Parser, new[]{ "Content", "MimeType", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument.Parser, new[]{ "GcsUri", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RawDocuments), global::Google.Cloud.DocumentAI.V1Beta3.RawDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask", "ShardingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig.Parser, new[]{ "PagesPerShard", "PagesOverlap" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "Hints", "EnableNativePdfParsing", "EnableImageQualityScores", "AdvancedOcrOptions", "EnableSymbol", "ComputeStyleInfo", "DisableCharacterBoxesDetection", "PremiumFeatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints.Parser, new[]{ "LanguageHints" }, null, null, null, null),
@@ -79,6 +86,191 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
   }
   #region Messages
+  /// <summary>
+  /// A set of inline documents.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Documents : pb::IMessage<Documents>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Documents> _parser = new pb::MessageParser<Documents>(() => new Documents());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Documents> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Documents() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Documents(Documents other) : this() {
+      documents_ = other.documents_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Documents Clone() {
+      return new Documents(this);
+    }
+
+    /// <summary>Field number for the "documents" field.</summary>
+    public const int Documents_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.Document> _repeated_documents_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta3.Document.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document> documents_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document>();
+    /// <summary>
+    /// The list of documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document> Documents_ {
+      get { return documents_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Documents);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Documents other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!documents_.Equals(other.documents_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= documents_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      documents_.WriteTo(output, _repeated_documents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      documents_.WriteTo(ref output, _repeated_documents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += documents_.CalculateSize(_repeated_documents_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Documents other) {
+      if (other == null) {
+        return;
+      }
+      documents_.Add(other.documents_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            documents_.AddEntriesFrom(input, _repeated_documents_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            documents_.AddEntriesFrom(ref input, _repeated_documents_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// Payload message of raw document content (bytes).
   /// </summary>
@@ -97,7 +289,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -378,7 +570,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -614,7 +806,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -799,7 +991,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -978,6 +1170,191 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
+  /// Specifies a set of raw documents.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RawDocuments : pb::IMessage<RawDocuments>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RawDocuments> _parser = new pb::MessageParser<RawDocuments>(() => new RawDocuments());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RawDocuments> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RawDocuments() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RawDocuments(RawDocuments other) : this() {
+      documents_ = other.documents_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RawDocuments Clone() {
+      return new RawDocuments(this);
+    }
+
+    /// <summary>Field number for the "documents" field.</summary>
+    public const int DocumentsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.RawDocument> _repeated_documents_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta3.RawDocument.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.RawDocument> documents_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.RawDocument>();
+    /// <summary>
+    /// Specifies raw document content and mime type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.RawDocument> Documents {
+      get { return documents_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RawDocuments);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RawDocuments other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!documents_.Equals(other.documents_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= documents_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      documents_.WriteTo(output, _repeated_documents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      documents_.WriteTo(ref output, _repeated_documents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += documents_.CalculateSize(_repeated_documents_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RawDocuments other) {
+      if (other == null) {
+        return;
+      }
+      documents_.Add(other.documents_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            documents_.AddEntriesFrom(input, _repeated_documents_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            documents_.AddEntriesFrom(ref input, _repeated_documents_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The common config to specify a set of documents used as input.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -995,7 +1372,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1291,7 +1668,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2078,7 +2455,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

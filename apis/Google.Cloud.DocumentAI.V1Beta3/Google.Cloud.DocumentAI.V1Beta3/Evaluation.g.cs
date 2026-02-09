@@ -33,8 +33,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "bS9FdmFsdWF0aW9uEk4KEWFnZ3JlZ2F0ZV9tZXRyaWNzGAQgASgLMjMuZ29v",
             "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5FdmFsdWF0aW9uLk1ldHJp",
             "Y3MSVAoXYWdncmVnYXRlX21ldHJpY3NfZXhhY3QYBSABKAsyMy5nb29nbGUu",
-            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRpb24uTWV0cmljcyKN",
-            "DgoKRXZhbHVhdGlvbhIMCgRuYW1lGAEgASgJEi8KC2NyZWF0ZV90aW1lGAIg",
+            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRpb24uTWV0cmljcyK4",
+            "EgoKRXZhbHVhdGlvbhIMCgRuYW1lGAEgASgJEi8KC2NyZWF0ZV90aW1lGAIg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJPChFkb2N1bWVudF9j",
             "b3VudGVycxgFIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
             "YTMuRXZhbHVhdGlvbi5Db3VudGVycxJgChRhbGxfZW50aXRpZXNfbWV0cmlj",
@@ -42,52 +42,65 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "bHVhdGlvbi5NdWx0aUNvbmZpZGVuY2VNZXRyaWNzElYKDmVudGl0eV9tZXRy",
             "aWNzGAQgAygLMj4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5F",
             "dmFsdWF0aW9uLkVudGl0eU1ldHJpY3NFbnRyeRIUCgxrbXNfa2V5X25hbWUY",
-            "BiABKAkSHAoUa21zX2tleV92ZXJzaW9uX25hbWUYByABKAkajQEKCENvdW50",
-            "ZXJzEh0KFWlucHV0X2RvY3VtZW50c19jb3VudBgBIAEoBRIfChdpbnZhbGlk",
-            "X2RvY3VtZW50c19jb3VudBgCIAEoBRIeChZmYWlsZWRfZG9jdW1lbnRzX2Nv",
-            "dW50GAMgASgFEiEKGWV2YWx1YXRlZF9kb2N1bWVudHNfY291bnQYBCABKAUa",
-            "zQIKB01ldHJpY3MSEQoJcHJlY2lzaW9uGAEgASgCEg4KBnJlY2FsbBgCIAEo",
-            "AhIQCghmMV9zY29yZRgDIAEoAhIjChtwcmVkaWN0ZWRfb2NjdXJyZW5jZXNf",
-            "Y291bnQYBCABKAUSJgoeZ3JvdW5kX3RydXRoX29jY3VycmVuY2VzX2NvdW50",
-            "GAUgASgFEiAKGHByZWRpY3RlZF9kb2N1bWVudF9jb3VudBgKIAEoBRIjChtn",
-            "cm91bmRfdHJ1dGhfZG9jdW1lbnRfY291bnQYCyABKAUSHAoUdHJ1ZV9wb3Np",
-            "dGl2ZXNfY291bnQYBiABKAUSHQoVZmFsc2VfcG9zaXRpdmVzX2NvdW50GAcg",
-            "ASgFEh0KFWZhbHNlX25lZ2F0aXZlc19jb3VudBgIIAEoBRIdChV0b3RhbF9k",
-            "b2N1bWVudHNfY291bnQYCSABKAUaeAoWQ29uZmlkZW5jZUxldmVsTWV0cmlj",
-            "cxIYChBjb25maWRlbmNlX2xldmVsGAEgASgCEkQKB21ldHJpY3MYAiABKAsy",
-            "My5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRpb24u",
-            "TWV0cmljcxqABAoWTXVsdGlDb25maWRlbmNlTWV0cmljcxJkChhjb25maWRl",
-            "bmNlX2xldmVsX21ldHJpY3MYASADKAsyQi5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkV2YWx1YXRpb24uQ29uZmlkZW5jZUxldmVsTWV0cmlj",
-            "cxJqCh5jb25maWRlbmNlX2xldmVsX21ldHJpY3NfZXhhY3QYBCADKAsyQi5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRpb24uQ29u",
-            "ZmlkZW5jZUxldmVsTWV0cmljcxINCgVhdXByYxgCIAEoAhIjChtlc3RpbWF0",
-            "ZWRfY2FsaWJyYXRpb25fZXJyb3IYAyABKAISEwoLYXVwcmNfZXhhY3QYBSAB",
-            "KAISKQohZXN0aW1hdGVkX2NhbGlicmF0aW9uX2Vycm9yX2V4YWN0GAYgASgC",
-            "EmQKDG1ldHJpY3NfdHlwZRgHIAEoDjJOLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTMuRXZhbHVhdGlvbi5NdWx0aUNvbmZpZGVuY2VNZXRyaWNz",
-            "Lk1ldHJpY3NUeXBlIjoKC01ldHJpY3NUeXBlEhwKGE1FVFJJQ1NfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEg0KCUFHR1JFR0FURRABGngKEkVudGl0eU1ldHJpY3NF",
-            "bnRyeRILCgNrZXkYASABKAkSUQoFdmFsdWUYAiABKAsyQi5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRpb24uTXVsdGlDb25maWRl",
-            "bmNlTWV0cmljczoCOAE6qQHqQaUBCiRkb2N1bWVudGFpLmdvb2dsZWFwaXMu",
-            "Y29tL0V2YWx1YXRpb24SfXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L3Byb2Nlc3NvclZl",
-            "cnNpb25zL3twcm9jZXNzb3JfdmVyc2lvbn0vZXZhbHVhdGlvbnMve2V2YWx1",
-            "YXRpb259QusBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "M0IURG9jdW1lbnRBaUV2YWx1YXRpb25QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50",
-            "YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29n",
-            "bGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6",
-            "RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "BiABKAkSHAoUa21zX2tleV92ZXJzaW9uX25hbWUYByABKAkSUQoJcmV2aXNp",
+            "b25zGAkgAygLMj4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5F",
+            "dmFsdWF0aW9uLkV2YWx1YXRpb25SZXZpc2lvbhqNAQoIQ291bnRlcnMSHQoV",
+            "aW5wdXRfZG9jdW1lbnRzX2NvdW50GAEgASgFEh8KF2ludmFsaWRfZG9jdW1l",
+            "bnRzX2NvdW50GAIgASgFEh4KFmZhaWxlZF9kb2N1bWVudHNfY291bnQYAyAB",
+            "KAUSIQoZZXZhbHVhdGVkX2RvY3VtZW50c19jb3VudBgEIAEoBRrNAgoHTWV0",
+            "cmljcxIRCglwcmVjaXNpb24YASABKAISDgoGcmVjYWxsGAIgASgCEhAKCGYx",
+            "X3Njb3JlGAMgASgCEiMKG3ByZWRpY3RlZF9vY2N1cnJlbmNlc19jb3VudBgE",
+            "IAEoBRImCh5ncm91bmRfdHJ1dGhfb2NjdXJyZW5jZXNfY291bnQYBSABKAUS",
+            "IAoYcHJlZGljdGVkX2RvY3VtZW50X2NvdW50GAogASgFEiMKG2dyb3VuZF90",
+            "cnV0aF9kb2N1bWVudF9jb3VudBgLIAEoBRIcChR0cnVlX3Bvc2l0aXZlc19j",
+            "b3VudBgGIAEoBRIdChVmYWxzZV9wb3NpdGl2ZXNfY291bnQYByABKAUSHQoV",
+            "ZmFsc2VfbmVnYXRpdmVzX2NvdW50GAggASgFEh0KFXRvdGFsX2RvY3VtZW50",
+            "c19jb3VudBgJIAEoBRp4ChZDb25maWRlbmNlTGV2ZWxNZXRyaWNzEhgKEGNv",
+            "bmZpZGVuY2VfbGV2ZWwYASABKAISRAoHbWV0cmljcxgCIAEoCzIzLmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRXZhbHVhdGlvbi5NZXRyaWNz",
+            "GoAEChZNdWx0aUNvbmZpZGVuY2VNZXRyaWNzEmQKGGNvbmZpZGVuY2VfbGV2",
+            "ZWxfbWV0cmljcxgBIAMoCzJCLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRXZhbHVhdGlvbi5Db25maWRlbmNlTGV2ZWxNZXRyaWNzEmoKHmNv",
+            "bmZpZGVuY2VfbGV2ZWxfbWV0cmljc19leGFjdBgEIAMoCzJCLmdvb2dsZS5j",
+            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRXZhbHVhdGlvbi5Db25maWRlbmNl",
+            "TGV2ZWxNZXRyaWNzEg0KBWF1cHJjGAIgASgCEiMKG2VzdGltYXRlZF9jYWxp",
+            "YnJhdGlvbl9lcnJvchgDIAEoAhITCgthdXByY19leGFjdBgFIAEoAhIpCiFl",
+            "c3RpbWF0ZWRfY2FsaWJyYXRpb25fZXJyb3JfZXhhY3QYBiABKAISZAoMbWV0",
+            "cmljc190eXBlGAcgASgOMk4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5FdmFsdWF0aW9uLk11bHRpQ29uZmlkZW5jZU1ldHJpY3MuTWV0cmlj",
+            "c1R5cGUiOgoLTWV0cmljc1R5cGUSHAoYTUVUUklDU19UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJQUdHUkVHQVRFEAEa1QMKEkV2YWx1YXRpb25SZXZpc2lvbhIY",
+            "CgtyZXZpc2lvbl9pZBgBIAEoCUID4EEDElQKEWRvY3VtZW50X2NvdW50ZXJz",
+            "GAIgASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5FdmFs",
+            "dWF0aW9uLkNvdW50ZXJzQgPgQQMSZQoUYWxsX2VudGl0aWVzX21ldHJpY3MY",
+            "AyABKAsyQi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1",
+            "YXRpb24uTXVsdGlDb25maWRlbmNlTWV0cmljc0ID4EEDEm4KDmVudGl0eV9t",
+            "ZXRyaWNzGAQgAygLMlEuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
+            "My5FdmFsdWF0aW9uLkV2YWx1YXRpb25SZXZpc2lvbi5FbnRpdHlNZXRyaWNz",
+            "RW50cnlCA+BBAxp4ChJFbnRpdHlNZXRyaWNzRW50cnkSCwoDa2V5GAEgASgJ",
+            "ElEKBXZhbHVlGAIgASgLMkIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5FdmFsdWF0aW9uLk11bHRpQ29uZmlkZW5jZU1ldHJpY3M6AjgBGngK",
+            "EkVudGl0eU1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSUQoFdmFsdWUYAiAB",
+            "KAsyQi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkV2YWx1YXRp",
+            "b24uTXVsdGlDb25maWRlbmNlTWV0cmljczoCOAE6qQHqQaUBCiRkb2N1bWVu",
+            "dGFpLmdvb2dsZWFwaXMuY29tL0V2YWx1YXRpb24SfXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNz",
+            "b3J9L3Byb2Nlc3NvclZlcnNpb25zL3twcm9jZXNzb3JfdmVyc2lvbn0vZXZh",
+            "bHVhdGlvbnMve2V2YWx1YXRpb259QusBCiNjb20uZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFiZXRhM0IURG9jdW1lbnRBaUV2YWx1YXRpb25QAVpDY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1l",
+            "bnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJ",
+            "LlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIi",
+            "R29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference), global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference.Parser, new[]{ "Operation", "Evaluation", "AggregateMetrics", "AggregateMetricsExact" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Parser, new[]{ "Name", "CreateTime", "DocumentCounters", "AllEntitiesMetrics", "EntityMetrics", "KmsKeyName", "KmsKeyVersionName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters.Parser, new[]{ "InputDocumentsCount", "InvalidDocumentsCount", "FailedDocumentsCount", "EvaluatedDocumentsCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Parser, new[]{ "Name", "CreateTime", "DocumentCounters", "AllEntitiesMetrics", "EntityMetrics", "KmsKeyName", "KmsKeyVersionName", "Revisions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters.Parser, new[]{ "InputDocumentsCount", "InvalidDocumentsCount", "FailedDocumentsCount", "EvaluatedDocumentsCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Metrics), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Metrics.Parser, new[]{ "Precision", "Recall", "F1Score", "PredictedOccurrencesCount", "GroundTruthOccurrencesCount", "PredictedDocumentCount", "GroundTruthDocumentCount", "TruePositivesCount", "FalsePositivesCount", "FalseNegativesCount", "TotalDocumentsCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.ConfidenceLevelMetrics), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.ConfidenceLevelMetrics.Parser, new[]{ "ConfidenceLevel", "Metrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics.Parser, new[]{ "ConfidenceLevelMetrics", "ConfidenceLevelMetricsExact", "Auprc", "EstimatedCalibrationError", "AuprcExact", "EstimatedCalibrationErrorExact", "MetricsType" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics.Types.MetricsType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision), global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision.Parser, new[]{ "RevisionId", "DocumentCounters", "AllEntitiesMetrics", "EntityMetrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, })
           }));
     }
@@ -474,6 +487,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       entityMetrics_ = other.entityMetrics_.Clone();
       kmsKeyName_ = other.kmsKeyName_;
       kmsKeyVersionName_ = other.kmsKeyVersionName_;
+      revisions_ = other.revisions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -589,6 +603,20 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "revisions" field.</summary>
+    public const int RevisionsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision> _repeated_revisions_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision> revisions_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision>();
+    /// <summary>
+    /// Contains all revisions of the evaluation, excluding the latest one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.EvaluationRevision> Revisions {
+      get { return revisions_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -611,6 +639,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (!EntityMetrics.Equals(other.EntityMetrics)) return false;
       if (KmsKeyName != other.KmsKeyName) return false;
       if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
+      if(!revisions_.Equals(other.revisions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -625,6 +654,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       hash ^= EntityMetrics.GetHashCode();
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
       if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
+      hash ^= revisions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -668,6 +698,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(58);
         output.WriteString(KmsKeyVersionName);
       }
+      revisions_.WriteTo(output, _repeated_revisions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -703,6 +734,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(58);
         output.WriteString(KmsKeyVersionName);
       }
+      revisions_.WriteTo(ref output, _repeated_revisions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -732,6 +764,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (KmsKeyVersionName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersionName);
       }
+      size += revisions_.CalculateSize(_repeated_revisions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -772,6 +805,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (other.KmsKeyVersionName.Length != 0) {
         KmsKeyVersionName = other.KmsKeyVersionName;
       }
+      revisions_.Add(other.revisions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -824,6 +858,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             KmsKeyVersionName = input.ReadString();
             break;
           }
+          case 74: {
+            revisions_.AddEntriesFrom(input, _repeated_revisions_codec);
+            break;
+          }
         }
       }
     #endif
@@ -874,6 +912,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           case 58: {
             KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 74: {
+            revisions_.AddEntriesFrom(ref input, _repeated_revisions_codec);
             break;
           }
         }
@@ -1296,7 +1338,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int F1ScoreFieldNumber = 3;
         private float f1Score_;
         /// <summary>
-        /// The calculated f1 score.
+        /// The calculated F1 score.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2488,6 +2530,329 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// A revision of the evaluation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EvaluationRevision : pb::IMessage<EvaluationRevision>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EvaluationRevision> _parser = new pb::MessageParser<EvaluationRevision>(() => new EvaluationRevision());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EvaluationRevision> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvaluationRevision() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvaluationRevision(EvaluationRevision other) : this() {
+          revisionId_ = other.revisionId_;
+          documentCounters_ = other.documentCounters_ != null ? other.documentCounters_.Clone() : null;
+          allEntitiesMetrics_ = other.allEntitiesMetrics_ != null ? other.allEntitiesMetrics_.Clone() : null;
+          entityMetrics_ = other.entityMetrics_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvaluationRevision Clone() {
+          return new EvaluationRevision(this);
+        }
+
+        /// <summary>Field number for the "revision_id" field.</summary>
+        public const int RevisionIdFieldNumber = 1;
+        private string revisionId_ = "";
+        /// <summary>
+        /// Output only. The revision ID of the evaluation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RevisionId {
+          get { return revisionId_; }
+          set {
+            revisionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "document_counters" field.</summary>
+        public const int DocumentCountersFieldNumber = 2;
+        private global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters documentCounters_;
+        /// <summary>
+        /// Output only. Counters for the documents used in the evaluation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters DocumentCounters {
+          get { return documentCounters_; }
+          set {
+            documentCounters_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "all_entities_metrics" field.</summary>
+        public const int AllEntitiesMetricsFieldNumber = 3;
+        private global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics allEntitiesMetrics_;
+        /// <summary>
+        /// Output only. Metrics for all the entities in aggregate.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics AllEntitiesMetrics {
+          get { return allEntitiesMetrics_; }
+          set {
+            allEntitiesMetrics_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "entity_metrics" field.</summary>
+        public const int EntityMetricsFieldNumber = 4;
+        private static readonly pbc::MapField<string, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics>.Codec _map_entityMetrics_codec
+            = new pbc::MapField<string, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics.Parser), 34);
+        private readonly pbc::MapField<string, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics> entityMetrics_ = new pbc::MapField<string, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics>();
+        /// <summary>
+        /// Output only. Metrics across confidence levels, for different entities.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics> EntityMetrics {
+          get { return entityMetrics_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EvaluationRevision);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EvaluationRevision other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RevisionId != other.RevisionId) return false;
+          if (!object.Equals(DocumentCounters, other.DocumentCounters)) return false;
+          if (!object.Equals(AllEntitiesMetrics, other.AllEntitiesMetrics)) return false;
+          if (!EntityMetrics.Equals(other.EntityMetrics)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RevisionId.Length != 0) hash ^= RevisionId.GetHashCode();
+          if (documentCounters_ != null) hash ^= DocumentCounters.GetHashCode();
+          if (allEntitiesMetrics_ != null) hash ^= AllEntitiesMetrics.GetHashCode();
+          hash ^= EntityMetrics.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RevisionId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RevisionId);
+          }
+          if (documentCounters_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(DocumentCounters);
+          }
+          if (allEntitiesMetrics_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(AllEntitiesMetrics);
+          }
+          entityMetrics_.WriteTo(output, _map_entityMetrics_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RevisionId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RevisionId);
+          }
+          if (documentCounters_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(DocumentCounters);
+          }
+          if (allEntitiesMetrics_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(AllEntitiesMetrics);
+          }
+          entityMetrics_.WriteTo(ref output, _map_entityMetrics_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RevisionId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
+          }
+          if (documentCounters_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentCounters);
+          }
+          if (allEntitiesMetrics_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllEntitiesMetrics);
+          }
+          size += entityMetrics_.CalculateSize(_map_entityMetrics_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EvaluationRevision other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RevisionId.Length != 0) {
+            RevisionId = other.RevisionId;
+          }
+          if (other.documentCounters_ != null) {
+            if (documentCounters_ == null) {
+              DocumentCounters = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters();
+            }
+            DocumentCounters.MergeFrom(other.DocumentCounters);
+          }
+          if (other.allEntitiesMetrics_ != null) {
+            if (allEntitiesMetrics_ == null) {
+              AllEntitiesMetrics = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics();
+            }
+            AllEntitiesMetrics.MergeFrom(other.AllEntitiesMetrics);
+          }
+          entityMetrics_.MergeFrom(other.entityMetrics_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                RevisionId = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (documentCounters_ == null) {
+                  DocumentCounters = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters();
+                }
+                input.ReadMessage(DocumentCounters);
+                break;
+              }
+              case 26: {
+                if (allEntitiesMetrics_ == null) {
+                  AllEntitiesMetrics = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics();
+                }
+                input.ReadMessage(AllEntitiesMetrics);
+                break;
+              }
+              case 34: {
+                entityMetrics_.AddEntriesFrom(input, _map_entityMetrics_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                RevisionId = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (documentCounters_ == null) {
+                  DocumentCounters = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.Counters();
+                }
+                input.ReadMessage(DocumentCounters);
+                break;
+              }
+              case 26: {
+                if (allEntitiesMetrics_ == null) {
+                  AllEntitiesMetrics = new global::Google.Cloud.DocumentAI.V1Beta3.Evaluation.Types.MultiConfidenceMetrics();
+                }
+                input.ReadMessage(AllEntitiesMetrics);
+                break;
+              }
+              case 34: {
+                entityMetrics_.AddEntriesFrom(ref input, _map_entityMetrics_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

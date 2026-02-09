@@ -30,66 +30,62 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "cHJvdG8aLmdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9jdW1l",
             "bnQucHJvdG8aMWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9j",
             "dW1lbnRfaW8ucHJvdG8aNWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0",
-            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIpwICgdEYXRhc2V0ElwKEmdjc19t",
+            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIogHCgdEYXRhc2V0ElwKEmdjc19t",
             "YW5hZ2VkX2NvbmZpZxgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
             "LnYxYmV0YTMuRGF0YXNldC5HQ1NNYW5hZ2VkQ29uZmlnQgPgQQFIABJsChlk",
             "b2N1bWVudF93YXJlaG91c2VfY29uZmlnGAUgASgLMkAuZ29vZ2xlLmNsb3Vk",
             "LmRvY3VtZW50YWkudjFiZXRhMy5EYXRhc2V0LkRvY3VtZW50V2FyZWhvdXNl",
             "Q29uZmlnQgUYAeBBAUgAEmgKGHVubWFuYWdlZF9kYXRhc2V0X2NvbmZpZxgG",
             "IAEoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRGF0YXNl",
-            "dC5Vbm1hbmFnZWREYXRhc2V0Q29uZmlnQgPgQQFIABJmChdzcGFubmVyX2lu",
-            "ZGV4aW5nX2NvbmZpZxgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRGF0YXNldC5TcGFubmVySW5kZXhpbmdDb25maWdCA+BBAUgB",
-            "EgwKBG5hbWUYASABKAkSQgoFc3RhdGUYAiABKA4yLi5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRhdGFzZXQuU3RhdGVCA+BBAhIaCg1zYXRp",
-            "c2ZpZXNfcHpzGAggASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgJIAEoCEID",
-            "4EEDGlcKEEdDU01hbmFnZWRDb25maWcSQwoKZ2NzX3ByZWZpeBgBIAEoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2NzUHJlZml4QgPg",
-            "QQIacgoXRG9jdW1lbnRXYXJlaG91c2VDb25maWcSFwoKY29sbGVjdGlvbhgB",
-            "IAEoCUID4EEDEj4KBnNjaGVtYRgCIAEoCUIu4EED+kEoCiZjb250ZW50d2Fy",
-            "ZWhvdXNlLmdvb2dsZWFwaXMuY29tL1NjaGVtYRoYChZVbm1hbmFnZWREYXRh",
-            "c2V0Q29uZmlnGhcKFVNwYW5uZXJJbmRleGluZ0NvbmZpZyJUCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEhEKDVVOSU5JVElBTElaRUQQARIQCgxJ",
-            "TklUSUFMSVpJTkcQAhIPCgtJTklUSUFMSVpFRBADOm7qQWsKIWRvY3VtZW50",
-            "YWkuZ29vZ2xlYXBpcy5jb20vRGF0YXNldBJGcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0v",
-            "ZGF0YXNldEIQCg5zdG9yYWdlX3NvdXJjZUIRCg9pbmRleGluZ19zb3VyY2Ui",
-            "hgMKCkRvY3VtZW50SWQSXgoSZ2NzX21hbmFnZWRfZG9jX2lkGAEgASgLMkAu",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkLkdD",
-            "U01hbmFnZWREb2N1bWVudElkSAASWwoQdW5tYW5hZ2VkX2RvY19pZBgEIAEo",
-            "CzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJ",
-            "ZC5Vbm1hbmFnZWREb2N1bWVudElkSAASQgoMcmV2aXNpb25fcmVmGAMgASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJl",
-            "ZhpDChRHQ1NNYW5hZ2VkRG9jdW1lbnRJZBIUCgdnY3NfdXJpGAEgASgJQgPg",
-            "QQISFQoJY3dfZG9jX2lkGAIgASgJQgIYARoqChNVbm1hbmFnZWREb2N1bWVu",
-            "dElkEhMKBmRvY19pZBgBIAEoCUID4EECQgYKBHR5cGUiqQIKDURhdGFzZXRT",
-            "Y2hlbWESDAoEbmFtZRgBIAEoCRJNCg9kb2N1bWVudF9zY2hlbWEYAyABKAsy",
-            "Ly5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2No",
-            "ZW1hQgPgQQESGgoNc2F0aXNmaWVzX3B6cxgEIAEoCEID4EEDEhoKDXNhdGlz",
-            "Zmllc19wemkYBSABKAhCA+BBAzqCAepBfwonZG9jdW1lbnRhaS5nb29nbGVh",
-            "cGlzLmNvbS9EYXRhc2V0U2NoZW1hElRwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9kYXRh",
-            "c2V0L2RhdGFzZXRTY2hlbWEihwIKFUJhdGNoRGF0YXNldERvY3VtZW50cxJv",
-            "ChdpbmRpdmlkdWFsX2RvY3VtZW50X2lkcxgBIAEoCzJMLmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0Y2hEYXRhc2V0RG9jdW1lbnRzLklu",
-            "ZGl2aWR1YWxEb2N1bWVudElkc0gAEhAKBmZpbHRlchgCIAEoCUgAGl8KFUlu",
-            "ZGl2aWR1YWxEb2N1bWVudElkcxJGCgxkb2N1bWVudF9pZHMYASADKAsyKy5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWRCA+BB",
-            "AkIKCghjcml0ZXJpYULIAgojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTNCDERhdGFzZXRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRh",
-            "aXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2ds",
-            "ZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpE",
-            "b2N1bWVudEFJOjpWMWJldGEz6kFiCiZjb250ZW50d2FyZWhvdXNlLmdvb2ds",
-            "ZWFwaXMuY29tL1NjaGVtYRI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3NjaGVtYXMve3NjaGVtYX1iBnByb3RvMw=="));
+            "dC5Vbm1hbmFnZWREYXRhc2V0Q29uZmlnQgPgQQFIABIMCgRuYW1lGAEgASgJ",
+            "EkIKBXN0YXRlGAIgASgOMi4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5EYXRhc2V0LlN0YXRlQgPgQQISGgoNc2F0aXNmaWVzX3B6cxgIIAEo",
+            "CEID4EEDEhoKDXNhdGlzZmllc19wemkYCSABKAhCA+BBAxpXChBHQ1NNYW5h",
+            "Z2VkQ29uZmlnEkMKCmdjc19wcmVmaXgYASABKAsyKi5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkdjc1ByZWZpeEID4EECGnIKF0RvY3VtZW50",
+            "V2FyZWhvdXNlQ29uZmlnEhcKCmNvbGxlY3Rpb24YASABKAlCA+BBAxI+CgZz",
+            "Y2hlbWEYAiABKAlCLuBBA/pBKAomY29udGVudHdhcmVob3VzZS5nb29nbGVh",
+            "cGlzLmNvbS9TY2hlbWEaGAoWVW5tYW5hZ2VkRGF0YXNldENvbmZpZyJUCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhEKDVVOSU5JVElBTElaRUQQ",
+            "ARIQCgxJTklUSUFMSVpJTkcQAhIPCgtJTklUSUFMSVpFRBADOm7qQWsKIWRv",
+            "Y3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vRGF0YXNldBJGcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3Byb2Nl",
+            "c3Nvcn0vZGF0YXNldEIQCg5zdG9yYWdlX3NvdXJjZSKGAwoKRG9jdW1lbnRJ",
+            "ZBJeChJnY3NfbWFuYWdlZF9kb2NfaWQYASABKAsyQC5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWQuR0NTTWFuYWdlZERvY3Vt",
+            "ZW50SWRIABJbChB1bm1hbmFnZWRfZG9jX2lkGAQgASgLMj8uZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkLlVubWFuYWdlZERv",
+            "Y3VtZW50SWRIABJCCgxyZXZpc2lvbl9yZWYYAyABKAsyLC5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLlJldmlzaW9uUmVmGkMKFEdDU01hbmFn",
+            "ZWREb2N1bWVudElkEhQKB2djc191cmkYASABKAlCA+BBAhIVCgljd19kb2Nf",
+            "aWQYAiABKAlCAhgBGioKE1VubWFuYWdlZERvY3VtZW50SWQSEwoGZG9jX2lk",
+            "GAEgASgJQgPgQQJCBgoEdHlwZSKpAgoNRGF0YXNldFNjaGVtYRIMCgRuYW1l",
+            "GAEgASgJEk0KD2RvY3VtZW50X3NjaGVtYRgDIAEoCzIvLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWFCA+BBARIaCg1z",
+            "YXRpc2ZpZXNfcHpzGAQgASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgFIAEo",
+            "CEID4EEDOoIB6kF/Cidkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL0RhdGFz",
+            "ZXRTY2hlbWESVHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L2RhdGFzZXQvZGF0YXNldFNj",
+            "aGVtYSKHAgoVQmF0Y2hEYXRhc2V0RG9jdW1lbnRzEm8KF2luZGl2aWR1YWxf",
+            "ZG9jdW1lbnRfaWRzGAEgASgLMkwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5CYXRjaERhdGFzZXREb2N1bWVudHMuSW5kaXZpZHVhbERvY3Vt",
+            "ZW50SWRzSAASEAoGZmlsdGVyGAIgASgJSAAaXwoVSW5kaXZpZHVhbERvY3Vt",
+            "ZW50SWRzEkYKDGRvY3VtZW50X2lkcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJZEID4EECQgoKCGNyaXRlcmlh",
+            "QsgCCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0IMRGF0",
+            "YXNldFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9h",
+            "cGl2MWJldGEzL2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAh9Hb29nbGUu",
+            "Q2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3Vt",
+            "ZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYx",
+            "YmV0YTPqQWIKJmNvbnRlbnR3YXJlaG91c2UuZ29vZ2xlYXBpcy5jb20vU2No",
+            "ZW1hEjhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2NoZW1hcy97c2NoZW1hfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Parser, new[]{ "GcsManagedConfig", "DocumentWarehouseConfig", "UnmanagedDatasetConfig", "SpannerIndexingConfig", "Name", "State", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageSource", "IndexingSource" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig.Parser, new[]{ "GcsPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Parser, new[]{ "GcsManagedConfig", "DocumentWarehouseConfig", "UnmanagedDatasetConfig", "Name", "State", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageSource" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig.Parser, new[]{ "GcsPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.DocumentWarehouseConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.DocumentWarehouseConfig.Parser, new[]{ "Collection", "Schema" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Parser, new[]{ "GcsManagedDocId", "UnmanagedDocId", "RevisionRef" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.GCSManagedDocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.GCSManagedDocumentId.Parser, new[]{ "GcsUri", "CwDocId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.UnmanagedDocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.UnmanagedDocumentId.Parser, new[]{ "DocId" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema), global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema.Parser, new[]{ "Name", "DocumentSchema", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, null),
@@ -156,12 +152,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           break;
       }
 
-      switch (other.IndexingSourceCase) {
-        case IndexingSourceOneofCase.SpannerIndexingConfig:
-          SpannerIndexingConfig = other.SpannerIndexingConfig.Clone();
-          break;
-      }
-
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -219,23 +209,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       set {
         storageSource_ = value;
         storageSourceCase_ = value == null ? StorageSourceOneofCase.None : StorageSourceOneofCase.UnmanagedDatasetConfig;
-      }
-    }
-
-    /// <summary>Field number for the "spanner_indexing_config" field.</summary>
-    public const int SpannerIndexingConfigFieldNumber = 4;
-    /// <summary>
-    /// Optional. A lightweight indexing source with low latency and high
-    /// reliability, but lacking advanced features like CMEK and content-based
-    /// search.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig SpannerIndexingConfig {
-      get { return indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig ? (global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig) indexingSource_ : null; }
-      set {
-        indexingSource_ = value;
-        indexingSourceCase_ = value == null ? IndexingSourceOneofCase.None : IndexingSourceOneofCase.SpannerIndexingConfig;
       }
     }
 
@@ -323,26 +296,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       storageSource_ = null;
     }
 
-    private object indexingSource_;
-    /// <summary>Enum of possible cases for the "indexing_source" oneof.</summary>
-    public enum IndexingSourceOneofCase {
-      None = 0,
-      SpannerIndexingConfig = 4,
-    }
-    private IndexingSourceOneofCase indexingSourceCase_ = IndexingSourceOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IndexingSourceOneofCase IndexingSourceCase {
-      get { return indexingSourceCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearIndexingSource() {
-      indexingSourceCase_ = IndexingSourceOneofCase.None;
-      indexingSource_ = null;
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -361,13 +314,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (!object.Equals(GcsManagedConfig, other.GcsManagedConfig)) return false;
       if (!object.Equals(DocumentWarehouseConfig, other.DocumentWarehouseConfig)) return false;
       if (!object.Equals(UnmanagedDatasetConfig, other.UnmanagedDatasetConfig)) return false;
-      if (!object.Equals(SpannerIndexingConfig, other.SpannerIndexingConfig)) return false;
       if (Name != other.Name) return false;
       if (State != other.State) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (StorageSourceCase != other.StorageSourceCase) return false;
-      if (IndexingSourceCase != other.IndexingSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -378,13 +329,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (storageSourceCase_ == StorageSourceOneofCase.GcsManagedConfig) hash ^= GcsManagedConfig.GetHashCode();
       if (storageSourceCase_ == StorageSourceOneofCase.DocumentWarehouseConfig) hash ^= DocumentWarehouseConfig.GetHashCode();
       if (storageSourceCase_ == StorageSourceOneofCase.UnmanagedDatasetConfig) hash ^= UnmanagedDatasetConfig.GetHashCode();
-      if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) hash ^= SpannerIndexingConfig.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) storageSourceCase_;
-      hash ^= (int) indexingSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -414,10 +363,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (storageSourceCase_ == StorageSourceOneofCase.GcsManagedConfig) {
         output.WriteRawTag(26);
         output.WriteMessage(GcsManagedConfig);
-      }
-      if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SpannerIndexingConfig);
       }
       if (storageSourceCase_ == StorageSourceOneofCase.DocumentWarehouseConfig) {
         output.WriteRawTag(42);
@@ -457,10 +402,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(26);
         output.WriteMessage(GcsManagedConfig);
       }
-      if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SpannerIndexingConfig);
-      }
       if (storageSourceCase_ == StorageSourceOneofCase.DocumentWarehouseConfig) {
         output.WriteRawTag(42);
         output.WriteMessage(DocumentWarehouseConfig);
@@ -495,9 +436,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (storageSourceCase_ == StorageSourceOneofCase.UnmanagedDatasetConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnmanagedDatasetConfig);
-      }
-      if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SpannerIndexingConfig);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -556,15 +494,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           break;
       }
 
-      switch (other.IndexingSourceCase) {
-        case IndexingSourceOneofCase.SpannerIndexingConfig:
-          if (SpannerIndexingConfig == null) {
-            SpannerIndexingConfig = new global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig();
-          }
-          SpannerIndexingConfig.MergeFrom(other.SpannerIndexingConfig);
-          break;
-      }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -595,15 +524,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             }
             input.ReadMessage(subBuilder);
             GcsManagedConfig = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig subBuilder = new global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig();
-            if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) {
-              subBuilder.MergeFrom(SpannerIndexingConfig);
-            }
-            input.ReadMessage(subBuilder);
-            SpannerIndexingConfig = subBuilder;
             break;
           }
           case 42: {
@@ -662,15 +582,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             }
             input.ReadMessage(subBuilder);
             GcsManagedConfig = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig subBuilder = new global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig();
-            if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) {
-              subBuilder.MergeFrom(SpannerIndexingConfig);
-            }
-            input.ReadMessage(subBuilder);
-            SpannerIndexingConfig = subBuilder;
             break;
           }
           case 42: {
@@ -1291,162 +1202,6 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(UnmanagedDatasetConfig other) {
-          if (other == null) {
-            return;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
-      /// Configuration specific to spanner-based indexing.
-      /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-      public sealed partial class SpannerIndexingConfig : pb::IMessage<SpannerIndexingConfig>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<SpannerIndexingConfig> _parser = new pb::MessageParser<SpannerIndexingConfig>(() => new SpannerIndexingConfig());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<SpannerIndexingConfig> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Descriptor.NestedTypes[3]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public SpannerIndexingConfig() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public SpannerIndexingConfig(SpannerIndexingConfig other) : this() {
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public SpannerIndexingConfig Clone() {
-          return new SpannerIndexingConfig(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other) {
-          return Equals(other as SpannerIndexingConfig);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(SpannerIndexingConfig other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize() {
-          int size = 0;
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(SpannerIndexingConfig other) {
           if (other == null) {
             return;
           }
