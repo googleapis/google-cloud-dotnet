@@ -13,16 +13,18 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Common.V1;
-using NSubstitute;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Cloud.Spanner.V1.Tests;
 using System;
 using Xunit;
 
-namespace Google.Cloud.Spanner.V1.Tests;
+namespace Google.Cloud.Spanner.Data.Tests;
 
 public class ManagedSessionOptionsTests
 {
     private static readonly DatabaseName SampleDatabaseName = new DatabaseName("project", "instance", "database");
-    private readonly SpannerClient _mockClient = Substitute.For<SpannerClient>();
+    private readonly SpannerClient _mockClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
 
     [Fact]
     public void Create_ValidatesParameters()
