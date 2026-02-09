@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.11.0, released 2026-02-09
+
+### New features
+
+- Add Nvidia Attestation proto message with its relevant fields and ConfidentialGke options
+
 ## Version 1.10.0, released 2025-11-05
 
 ### New features

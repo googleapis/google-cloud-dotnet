@@ -1088,12 +1088,12 @@
         },
         {
             "id": "Google.Cloud.ConfidentialComputing.V1",
-            "currentVersion": "1.10.0",
+            "currentVersion": "1.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T09:09:39.927917910Z",
+            "releaseTimestamp": "2026-02-09T14:09:35.006899259Z",
             "lastGeneratedCommit": "4e434c1c1fc79b51fd68d576b337fa0ed387f54c",
-            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "4e434c1c1fc79b51fd68d576b337fa0ed387f54c",
             "apiPaths": [
                 "google/cloud/confidentialcomputing/v1"
             ],
