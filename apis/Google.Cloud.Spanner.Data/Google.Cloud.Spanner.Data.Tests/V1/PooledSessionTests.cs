@@ -35,6 +35,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static readonly TransactionOptions s_noneOptions = new TransactionOptions { };
         private static readonly ByteString s_transactionId = ByteString.CopyFromUtf8("transaction");
         private static readonly TimeSpan s_releaseWaitTime = TimeSpan.FromSeconds(1);
+        private static readonly CallSettings s_callSettings = CallSettings.FromCancellationToken(default);
 
         public static TheoryData<TransactionOptions> NoTransactionOptionsData => new TheoryData<TransactionOptions>
         {
@@ -55,7 +56,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new ResultSet()));
 
-            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
 
             await client.Received(1).ExecuteSqlAsync(
                 Arg.Do<ExecuteSqlRequest>(request =>
@@ -78,7 +79,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new ResultSet()));
 
-            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
 
             await client.Received(1).ExecuteSqlAsync(
                 Arg.Do<ExecuteSqlRequest>(request =>
@@ -100,7 +101,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new ResultSet()));
 
-            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
 
             await client.Received(1).ExecuteSqlAsync(
                 Arg.Do<ExecuteSqlRequest>(request =>
@@ -129,7 +130,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     }
                 }));
 
-            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
 
             Assert.Equal(s_transactionId, pooledSession.TransactionId);
 
@@ -140,6 +141,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Assert.Equal(s_readWriteOptions, request.Transaction.Begin);
                 }),
                 Arg.Any<CallSettings>());
+            await client.DidNotReceive().BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -157,7 +159,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // We now can't make RPCs
             await Assert.ThrowsAsync<ObjectDisposedException>(
-                () => pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default));
+                () => pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings));
 
             await client.DidNotReceive().ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>());
             await client.DidNotReceive().RollbackAsync(Arg.Any<RollbackRequest>(), Arg.Any<CallSettings>());
@@ -200,7 +202,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .CommitAsync(Arg.Any<CommitRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new CommitResponse()));
 
-            await pooledSession.CommitAsync(new CommitRequest(), null);
+            await pooledSession.CommitAsync(new CommitRequest(), s_callSettings);
             await client.Received(1).CommitAsync(
                 Arg.Do<CommitRequest>(request =>
                     Assert.Equal(s_transactionId, request.TransactionId)),
@@ -224,7 +226,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .RollbackAsync(Arg.Any<RollbackRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new CommitResponse()));
 
-            await pooledSession.RollbackAsync(new RollbackRequest(), null);
+            await pooledSession.RollbackAsync(new RollbackRequest(), s_callSettings);
             await client.Received(1).RollbackAsync(
                 Arg.Do<RollbackRequest>(request =>
                     Assert.Equal(s_transactionId, request.TransactionId)),
@@ -260,7 +262,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .RollbackAsync(Arg.Any<RollbackRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new CommitResponse()));
 
-            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), Arg.Any<CallSettings>());
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
             await client.Received(1).ExecuteSqlAsync(
                 Arg.Do<ExecuteSqlRequest>(request =>
                 {
