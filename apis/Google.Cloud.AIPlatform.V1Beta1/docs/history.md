@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta68, released 2026-02-09
+
+### New features
+
+- Add Vertex Multimodal Datasets as input and output types in `google.cloud.aiplatform.v1beta1.BatchPredictionJob`
+- Add max_concurrent_active_run_count field to Schedule message
+
 ## Version 1.0.0-beta67, released 2026-02-05
 
 ### New features
