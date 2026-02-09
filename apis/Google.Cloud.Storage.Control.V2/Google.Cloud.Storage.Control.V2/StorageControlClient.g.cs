@@ -54,6 +54,8 @@ namespace Google.Cloud.Storage.Control.V2
             ListFoldersSettings = existing.ListFoldersSettings;
             RenameFolderSettings = existing.RenameFolderSettings;
             RenameFolderOperationsSettings = existing.RenameFolderOperationsSettings.Clone();
+            DeleteFolderRecursiveSettings = existing.DeleteFolderRecursiveSettings;
+            DeleteFolderRecursiveOperationsSettings = existing.DeleteFolderRecursiveOperationsSettings.Clone();
             GetStorageLayoutSettings = existing.GetStorageLayoutSettings;
             CreateManagedFolderSettings = existing.CreateManagedFolderSettings;
             DeleteManagedFolderSettings = existing.DeleteManagedFolderSettings;
@@ -196,6 +198,47 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RenameFolderOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.DeleteFolderRecursive</c> and <c>StorageControlClient.DeleteFolderRecursiveAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFolderRecursiveSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.DeleteFolderRecursive</c> and
+        /// <c>StorageControlClient.DeleteFolderRecursiveAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteFolderRecursiveOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1594,6 +1637,159 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Folder, RenameFolderMetadata>> RenameFolderAsync(FolderName name, string destinationFolderId, st::CancellationToken cancellationToken) =>
             RenameFolderAsync(name, destinationFolderId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata> DeleteFolderRecursive(DeleteFolderRecursiveRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFolderRecursiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteFolderRecursive</c>.</summary>
+        public virtual lro::OperationsClient DeleteFolderRecursiveOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteFolderRecursive</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata> PollOnceDeleteFolderRecursive(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFolderRecursiveOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteFolderRecursive</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> PollOnceDeleteFolderRecursiveAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFolderRecursiveOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata> DeleteFolderRecursive(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderRecursive(new DeleteFolderRecursiveRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderRecursiveAsync(new DeleteFolderRecursiveRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFolderRecursiveAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata> DeleteFolderRecursive(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderRecursive(new DeleteFolderRecursiveRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderRecursiveAsync(new DeleteFolderRecursiveRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the folder being deleted, however all of its contents
+        /// will be deleted too. Format:
+        /// `projects/{project}/buckets/{bucket}/folders/{folder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(FolderName name, st::CancellationToken cancellationToken) =>
+            DeleteFolderRecursiveAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the storage layout configuration for a given bucket.
@@ -4382,6 +4578,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         private readonly gaxgrpc::ApiCall<RenameFolderRequest, lro::Operation> _callRenameFolder;
 
+        private readonly gaxgrpc::ApiCall<DeleteFolderRecursiveRequest, lro::Operation> _callDeleteFolderRecursive;
+
         private readonly gaxgrpc::ApiCall<GetStorageLayoutRequest, StorageLayout> _callGetStorageLayout;
 
         private readonly gaxgrpc::ApiCall<CreateManagedFolderRequest, ManagedFolder> _callCreateManagedFolder;
@@ -4440,6 +4638,7 @@ namespace Google.Cloud.Storage.Control.V2
                 Logger = logger,
             });
             RenameFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RenameFolderOperationsSettings, logger);
+            DeleteFolderRecursiveOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFolderRecursiveOperationsSettings, logger);
             CreateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnywhereCacheOperationsSettings, logger);
             UpdateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAnywhereCacheOperationsSettings, logger);
             _callCreateFolder = clientHelper.BuildApiCall<CreateFolderRequest, Folder>("CreateFolder", grpcClient.CreateFolderAsync, grpcClient.CreateFolder, effectiveSettings.CreateFolderSettings).WithGoogleRequestParam("bucket", request => request.Parent);
@@ -4457,6 +4656,9 @@ namespace Google.Cloud.Storage.Control.V2
             _callRenameFolder = clientHelper.BuildApiCall<RenameFolderRequest, lro::Operation>("RenameFolder", grpcClient.RenameFolderAsync, grpcClient.RenameFolder, effectiveSettings.RenameFolderSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RenameFolderRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callRenameFolder);
             Modify_RenameFolderApiCall(ref _callRenameFolder);
+            _callDeleteFolderRecursive = clientHelper.BuildApiCall<DeleteFolderRecursiveRequest, lro::Operation>("DeleteFolderRecursive", grpcClient.DeleteFolderRecursiveAsync, grpcClient.DeleteFolderRecursive, effectiveSettings.DeleteFolderRecursiveSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteFolderRecursiveRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteFolderRecursive);
+            Modify_DeleteFolderRecursiveApiCall(ref _callDeleteFolderRecursive);
             _callGetStorageLayout = clientHelper.BuildApiCall<GetStorageLayoutRequest, StorageLayout>("GetStorageLayout", grpcClient.GetStorageLayoutAsync, grpcClient.GetStorageLayout, effectiveSettings.GetStorageLayoutSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetStorageLayoutRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetStorageLayout);
             Modify_GetStorageLayoutApiCall(ref _callGetStorageLayout);
@@ -4535,6 +4737,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_RenameFolderApiCall(ref gaxgrpc::ApiCall<RenameFolderRequest, lro::Operation> call);
 
+        partial void Modify_DeleteFolderRecursiveApiCall(ref gaxgrpc::ApiCall<DeleteFolderRecursiveRequest, lro::Operation> call);
+
         partial void Modify_GetStorageLayoutApiCall(ref gaxgrpc::ApiCall<GetStorageLayoutRequest, StorageLayout> call);
 
         partial void Modify_CreateManagedFolderApiCall(ref gaxgrpc::ApiCall<CreateManagedFolderRequest, ManagedFolder> call);
@@ -4591,6 +4795,8 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_ListFoldersRequest(ref ListFoldersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RenameFolderRequest(ref RenameFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFolderRecursiveRequest(ref DeleteFolderRecursiveRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetStorageLayoutRequest(ref GetStorageLayoutRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4809,6 +5015,45 @@ namespace Google.Cloud.Storage.Control.V2
             }
             Modify_RenameFolderRequest(ref request, ref callSettings);
             return new lro::Operation<Folder, RenameFolderMetadata>(await _callRenameFolder.Async(request, callSettings).ConfigureAwait(false), RenameFolderOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteFolderRecursive</c>.</summary>
+        public override lro::OperationsClient DeleteFolderRecursiveOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata> DeleteFolderRecursive(DeleteFolderRecursiveRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_DeleteFolderRecursiveRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>(_callDeleteFolderRecursive.Sync(request, callSettings), DeleteFolderRecursiveOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a folder recursively. This operation is only applicable to a
+        /// hierarchical namespace enabled bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>> DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_DeleteFolderRecursiveRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderRecursiveMetadata>(await _callDeleteFolderRecursive.Async(request, callSettings).ConfigureAwait(false), DeleteFolderRecursiveOperationsClient);
         }
 
         /// <summary>

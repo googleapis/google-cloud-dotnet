@@ -1523,6 +1523,293 @@
       ]
     },
     {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_sync",
+      "title": "DeleteFolderRecursiveRequestObject",
+      "description": "Snippet for DeleteFolderRecursive",
+      "file": "StorageControlClient.DeleteFolderRecursiveRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursive",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursive",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_async",
+      "title": "DeleteFolderRecursiveRequestObjectAsync",
+      "description": "Snippet for DeleteFolderRecursiveAsync",
+      "file": "StorageControlClient.DeleteFolderRecursiveRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursiveAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursiveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_sync_flattened",
+      "title": "DeleteFolderRecursive",
+      "description": "Snippet for DeleteFolderRecursive",
+      "file": "StorageControlClient.DeleteFolderRecursiveSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursive",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursive",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_async_flattened",
+      "title": "DeleteFolderRecursiveAsync",
+      "description": "Snippet for DeleteFolderRecursiveAsync",
+      "file": "StorageControlClient.DeleteFolderRecursiveAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursiveAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursiveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_sync_flattened_resourceNames",
+      "title": "DeleteFolderRecursiveResourceNames",
+      "description": "Snippet for DeleteFolderRecursive",
+      "file": "StorageControlClient.DeleteFolderRecursiveResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursive",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursive",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolderRecursive_async_flattened_resourceNames",
+      "title": "DeleteFolderRecursiveResourceNamesAsync",
+      "description": "Snippet for DeleteFolderRecursiveAsync",
+      "file": "StorageControlClient.DeleteFolderRecursiveResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderRecursiveAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderRecursiveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderRecursive",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolderRecursive",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_sync",
       "title": "GetStorageLayoutRequestObject",
       "description": "Snippet for GetStorageLayout",

@@ -790,6 +790,193 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteFolderRecursive</summary>
+        public void DeleteFolderRecursiveRequestObject()
+        {
+            // Snippet: DeleteFolderRecursive(DeleteFolderRecursiveRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            DeleteFolderRecursiveRequest request = new DeleteFolderRecursiveRequest
+            {
+                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+            };
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderRecursiveAsync</summary>
+        public async Task DeleteFolderRecursiveRequestObjectAsync()
+        {
+            // Snippet: DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CallSettings)
+            // Additional: DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFolderRecursiveRequest request = new DeleteFolderRecursiveRequest
+            {
+                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+            };
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderRecursive</summary>
+        public void DeleteFolderRecursive()
+        {
+            // Snippet: DeleteFolderRecursive(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderRecursiveAsync</summary>
+        public async Task DeleteFolderRecursiveAsync()
+        {
+            // Snippet: DeleteFolderRecursiveAsync(string, CallSettings)
+            // Additional: DeleteFolderRecursiveAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderRecursive</summary>
+        public void DeleteFolderRecursiveResourceNames()
+        {
+            // Snippet: DeleteFolderRecursive(FolderName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderRecursiveAsync</summary>
+        public async Task DeleteFolderRecursiveResourceNamesAsync()
+        {
+            // Snippet: DeleteFolderRecursiveAsync(FolderName, CallSettings)
+            // Additional: DeleteFolderRecursiveAsync(FolderName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            // Make the request
+            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetStorageLayout</summary>
         public void GetStorageLayoutRequestObject()
         {

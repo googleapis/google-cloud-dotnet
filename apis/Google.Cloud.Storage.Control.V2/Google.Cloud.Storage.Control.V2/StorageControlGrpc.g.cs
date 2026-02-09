@@ -3,7 +3,7 @@
 //     source: google/storage/control/v2/storage_control.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,6 +81,8 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.RenameFolderRequest> __Marshaller_google_storage_control_v2_RenameFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.RenameFolderRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest> __Marshaller_google_storage_control_v2_DeleteFolderRecursiveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest> __Marshaller_google_storage_control_v2_GetStorageLayoutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -178,6 +180,14 @@ namespace Google.Cloud.Storage.Control.V2 {
         __ServiceName,
         "RenameFolder",
         __Marshaller_google_storage_control_v2_RenameFolderRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest, global::Google.LongRunning.Operation> __Method_DeleteFolderRecursive = new grpc::Method<global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFolderRecursive",
+        __Marshaller_google_storage_control_v2_DeleteFolderRecursiveRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -421,6 +431,19 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RenameFolder(global::Google.Cloud.Storage.Control.V2.RenameFolderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a folder recursively. This operation is only applicable to a
+      /// hierarchical namespace enabled bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteFolderRecursive(global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -991,6 +1014,58 @@ namespace Google.Cloud.Storage.Control.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RenameFolderAsync(global::Google.Cloud.Storage.Control.V2.RenameFolderRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RenameFolder, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a folder recursively. This operation is only applicable to a
+      /// hierarchical namespace enabled bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFolderRecursive(global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFolderRecursive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a folder recursively. This operation is only applicable to a
+      /// hierarchical namespace enabled bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFolderRecursive(global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFolderRecursive, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a folder recursively. This operation is only applicable to a
+      /// hierarchical namespace enabled bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFolderRecursiveAsync(global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFolderRecursiveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a folder recursively. This operation is only applicable to a
+      /// hierarchical namespace enabled bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFolderRecursiveAsync(global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFolderRecursive, null, options, request);
       }
       /// <summary>
       /// Returns the storage layout configuration for a given bucket.
@@ -2091,6 +2166,7 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_GetFolder, serviceImpl.GetFolder)
           .AddMethod(__Method_ListFolders, serviceImpl.ListFolders)
           .AddMethod(__Method_RenameFolder, serviceImpl.RenameFolder)
+          .AddMethod(__Method_DeleteFolderRecursive, serviceImpl.DeleteFolderRecursive)
           .AddMethod(__Method_GetStorageLayout, serviceImpl.GetStorageLayout)
           .AddMethod(__Method_CreateManagedFolder, serviceImpl.CreateManagedFolder)
           .AddMethod(__Method_DeleteManagedFolder, serviceImpl.DeleteManagedFolder)
@@ -2126,6 +2202,7 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_GetFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(serviceImpl.GetFolder));
       serviceBinder.AddMethod(__Method_ListFolders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListFoldersResponse>(serviceImpl.ListFolders));
       serviceBinder.AddMethod(__Method_RenameFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.RenameFolderRequest, global::Google.LongRunning.Operation>(serviceImpl.RenameFolder));
+      serviceBinder.AddMethod(__Method_DeleteFolderRecursive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DeleteFolderRecursiveRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFolderRecursive));
       serviceBinder.AddMethod(__Method_GetStorageLayout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest, global::Google.Cloud.Storage.Control.V2.StorageLayout>(serviceImpl.GetStorageLayout));
       serviceBinder.AddMethod(__Method_CreateManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(serviceImpl.CreateManagedFolder));
       serviceBinder.AddMethod(__Method_DeleteManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteManagedFolder));
