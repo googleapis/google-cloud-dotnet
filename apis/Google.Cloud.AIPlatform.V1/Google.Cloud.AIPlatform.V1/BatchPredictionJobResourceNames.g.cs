@@ -309,5 +309,21 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
             set => Model = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class OutputInfo
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="VertexMultimodalDatasetName"/> resource
+                /// name property.
+                /// </summary>
+                public DatasetName VertexMultimodalDatasetNameAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(VertexMultimodalDatasetName) ? null : DatasetName.Parse(VertexMultimodalDatasetName, allowUnparsed: true);
+                    set => VertexMultimodalDatasetName = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }
