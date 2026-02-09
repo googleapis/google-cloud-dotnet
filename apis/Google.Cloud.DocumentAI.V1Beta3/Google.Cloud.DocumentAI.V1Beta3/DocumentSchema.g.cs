@@ -25,64 +25,65 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50X3Nj",
-            "aGVtYS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMyKs",
-            "AgoOU3VtbWFyeU9wdGlvbnMSRgoGbGVuZ3RoGAEgASgOMjYuZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5TdW1tYXJ5T3B0aW9ucy5MZW5ndGgS",
-            "RgoGZm9ybWF0GAIgASgOMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5TdW1tYXJ5T3B0aW9ucy5Gb3JtYXQiTAoGTGVuZ3RoEhYKEkxFTkdU",
-            "SF9VTlNQRUNJRklFRBAAEgkKBUJSSUVGEAESDAoITU9ERVJBVEUQAhIRCg1D",
-            "T01QUkVIRU5TSVZFEAMiPAoGRm9ybWF0EhYKEkZPUk1BVF9VTlNQRUNJRklF",
-            "RBAAEg0KCVBBUkFHUkFQSBABEgsKB0JVTExFVFMQAiJjChdGaWVsZEV4dHJh",
-            "Y3Rpb25NZXRhZGF0YRJICg9zdW1tYXJ5X29wdGlvbnMYAiABKAsyLy5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLlN1bW1hcnlPcHRpb25zIoEB",
-            "ChBQcm9wZXJ0eU1ldGFkYXRhEhAKCGluYWN0aXZlGAMgASgIElsKGWZpZWxk",
-            "X2V4dHJhY3Rpb25fbWV0YWRhdGEYCSABKAsyOC5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MWJldGEzLkZpZWxkRXh0cmFjdGlvbk1ldGFkYXRhIiYKEkVu",
-            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCK4CgoORG9jdW1l",
-            "bnRTY2hlbWESFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAIgASgJElAKDGVudGl0eV90eXBlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJK",
-            "CghtZXRhZGF0YRgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEaxQcKCkVudGl0eVR5cGUS",
-            "XAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUuRW51bVZhbHVl",
-            "c0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGA8gASgJEhIKCmJhc2VfdHlwZXMYAiADKAkSVwoKcHJvcGVy",
-            "dGllcxgGIAMoCzJDLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRJRChRlbnRpdHlf",
-            "dHlwZV9tZXRhZGF0YRgLIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRW50aXR5VHlwZU1ldGFkYXRhGhwKCkVudW1WYWx1ZXMSDgoG",
-            "dmFsdWVzGAEgAygJGrEECghQcm9wZXJ0eRIMCgRuYW1lGAEgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRISCgp2YWx1",
-            "ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50",
-            "aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJaCgZtZXRob2QYCCAB",
-            "KA4ySi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
-            "U2NoZW1hLkVudGl0eVR5cGUuUHJvcGVydHkuTWV0aG9kEkwKEXByb3BlcnR5",
-            "X21ldGFkYXRhGAUgASgLMjEuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5Qcm9wZXJ0eU1ldGFkYXRhIoUBCg5PY2N1cnJlbmNlVHlwZRIfChtP",
-            "Q0NVUlJFTkNFX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1PUFRJT05BTF9PTkNF",
-            "EAESFQoRT1BUSU9OQUxfTVVMVElQTEUQAhIRCg1SRVFVSVJFRF9PTkNFEAMS",
-            "FQoRUkVRVUlSRURfTVVMVElQTEUQBCI5CgZNZXRob2QSFgoSTUVUSE9EX1VO",
-            "U1BFQ0lGSUVEEAASCwoHRVhUUkFDVBABEgoKBkRFUklWRRACQg4KDHZhbHVl",
-            "X3NvdXJjZRqUAQoITWV0YWRhdGESGQoRZG9jdW1lbnRfc3BsaXR0ZXIYASAB",
-            "KAgSJgoeZG9jdW1lbnRfYWxsb3dfbXVsdGlwbGVfbGFiZWxzGAIgASgIEiUK",
-            "HXByZWZpeGVkX25hbWluZ19vbl9wcm9wZXJ0aWVzGAYgASgIEh4KFnNraXBf",
-            "bmFtaW5nX3ZhbGlkYXRpb24YByABKAhC7wEKI2NvbS5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzQhhEb2N1bWVudEFpRG9jdW1lbnRTY2hlbWFQ",
-            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMv",
-            "ZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1",
-            "bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJl",
-            "dGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJv",
-            "dG8z"));
+            "aGVtYS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMxof",
+            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byKsAgoOU3VtbWFyeU9w",
+            "dGlvbnMSRgoGbGVuZ3RoGAEgASgOMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5TdW1tYXJ5T3B0aW9ucy5MZW5ndGgSRgoGZm9ybWF0GAIg",
+            "ASgOMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5TdW1tYXJ5",
+            "T3B0aW9ucy5Gb3JtYXQiTAoGTGVuZ3RoEhYKEkxFTkdUSF9VTlNQRUNJRklF",
+            "RBAAEgkKBUJSSUVGEAESDAoITU9ERVJBVEUQAhIRCg1DT01QUkVIRU5TSVZF",
+            "EAMiPAoGRm9ybWF0EhYKEkZPUk1BVF9VTlNQRUNJRklFRBAAEg0KCVBBUkFH",
+            "UkFQSBABEgsKB0JVTExFVFMQAiJjChdGaWVsZEV4dHJhY3Rpb25NZXRhZGF0",
+            "YRJICg9zdW1tYXJ5X29wdGlvbnMYAiABKAsyLy5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLlN1bW1hcnlPcHRpb25zIoEBChBQcm9wZXJ0eU1l",
+            "dGFkYXRhEhAKCGluYWN0aXZlGAMgASgIElsKGWZpZWxkX2V4dHJhY3Rpb25f",
+            "bWV0YWRhdGEYCSABKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLkZpZWxkRXh0cmFjdGlvbk1ldGFkYXRhIiYKEkVudGl0eVR5cGVNZXRh",
+            "ZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCLWCgoORG9jdW1lbnRTY2hlbWESFAoM",
+            "ZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJElAKDGVu",
+            "dGl0eV90eXBlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJKCghtZXRhZGF0YRgE",
+            "IAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1l",
+            "bnRTY2hlbWEuTWV0YWRhdGESHAoPZG9jdW1lbnRfcHJvbXB0GAUgASgJQgPg",
+            "QQEaxQcKCkVudGl0eVR5cGUSXAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVu",
+            "dGl0eVR5cGUuRW51bVZhbHVlc0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIM",
+            "CgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGA8gASgJEhIKCmJhc2VfdHlw",
+            "ZXMYAiADKAkSVwoKcHJvcGVydGllcxgGIAMoCzJDLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Q",
+            "cm9wZXJ0eRJRChRlbnRpdHlfdHlwZV9tZXRhZGF0YRgLIAEoCzIzLmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRW50aXR5VHlwZU1ldGFkYXRh",
+            "GhwKCkVudW1WYWx1ZXMSDgoGdmFsdWVzGAEgAygJGrEECghQcm9wZXJ0eRIM",
+            "CgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAcgASgJEhQKDGRpc3BsYXlf",
+            "bmFtZRgGIAEoCRISCgp2YWx1ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2Vf",
+            "dHlwZRgDIAEoDjJSLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
+            "RG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNl",
+            "VHlwZRJaCgZtZXRob2QYCCABKA4ySi5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUuUHJvcGVydHku",
+            "TWV0aG9kEkwKEXByb3BlcnR5X21ldGFkYXRhGAUgASgLMjEuZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Qcm9wZXJ0eU1ldGFkYXRhIoUBCg5P",
+            "Y2N1cnJlbmNlVHlwZRIfChtPQ0NVUlJFTkNFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIRCg1PUFRJT05BTF9PTkNFEAESFQoRT1BUSU9OQUxfTVVMVElQTEUQAhIR",
+            "Cg1SRVFVSVJFRF9PTkNFEAMSFQoRUkVRVUlSRURfTVVMVElQTEUQBCI5CgZN",
+            "ZXRob2QSFgoSTUVUSE9EX1VOU1BFQ0lGSUVEEAASCwoHRVhUUkFDVBABEgoK",
+            "BkRFUklWRRACQg4KDHZhbHVlX3NvdXJjZRqUAQoITWV0YWRhdGESGQoRZG9j",
+            "dW1lbnRfc3BsaXR0ZXIYASABKAgSJgoeZG9jdW1lbnRfYWxsb3dfbXVsdGlw",
+            "bGVfbGFiZWxzGAIgASgIEiUKHXByZWZpeGVkX25hbWluZ19vbl9wcm9wZXJ0",
+            "aWVzGAYgASgIEh4KFnNraXBfbmFtaW5nX3ZhbGlkYXRpb24YByABKAhC7wEK",
+            "I2NvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzQhhEb2N1bWVu",
+            "dEFpRG9jdW1lbnRTY2hlbWFQAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1",
+            "bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoC",
+            "H0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xv",
+            "dWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1l",
+            "bnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions), global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Parser, new[]{ "Length", "Format" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length), typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata), global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata.Parser, new[]{ "SummaryOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata), global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata.Parser, new[]{ "Inactive", "FieldExtractionMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata), global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata.Parser, new[]{ "Inactive" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "Description", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata", "DocumentPrompt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "Description", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "Description", "DisplayName", "ValueType", "OccurrenceType", "Method", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType), typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata.Parser, new[]{ "DocumentSplitter", "DocumentAllowMultipleLabels", "PrefixedNamingOnProperties", "SkipNamingValidation" }, null, null, null, null)})
           }));
@@ -1063,6 +1064,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       description_ = other.description_;
       entityTypes_ = other.entityTypes_.Clone();
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+      documentPrompt_ = other.documentPrompt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1076,7 +1078,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Display name to show to users.
+    /// Display name to show users.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1131,6 +1133,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "document_prompt" field.</summary>
+    public const int DocumentPromptFieldNumber = 5;
+    private string documentPrompt_ = "";
+    /// <summary>
+    /// Optional. Document level prompt provided by the user. This custom text is
+    /// injected into the AI model's prompt to provide extra, document-wide
+    /// guidance for processing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DocumentPrompt {
+      get { return documentPrompt_; }
+      set {
+        documentPrompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1150,6 +1169,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (Description != other.Description) return false;
       if(!entityTypes_.Equals(other.entityTypes_)) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (DocumentPrompt != other.DocumentPrompt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1161,6 +1181,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= entityTypes_.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (DocumentPrompt.Length != 0) hash ^= DocumentPrompt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1192,6 +1213,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(Metadata);
       }
+      if (DocumentPrompt.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DocumentPrompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1215,6 +1240,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(Metadata);
       }
+      if (DocumentPrompt.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DocumentPrompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1234,6 +1263,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       size += entityTypes_.CalculateSize(_repeated_entityTypes_codec);
       if (metadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (DocumentPrompt.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DocumentPrompt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1259,6 +1291,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           Metadata = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata();
         }
         Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.DocumentPrompt.Length != 0) {
+        DocumentPrompt = other.DocumentPrompt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1294,6 +1329,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             input.ReadMessage(Metadata);
             break;
           }
+          case 42: {
+            DocumentPrompt = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1326,6 +1365,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               Metadata = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata();
             }
             input.ReadMessage(Metadata);
+            break;
+          }
+          case 42: {
+            DocumentPrompt = input.ReadString();
             break;
           }
         }
@@ -1404,7 +1447,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// <summary>
         /// If specified, lists all the possible values for this entity.  This
         /// should not be more than a handful of values.  If the number of values
-        /// is >10 or could change frequently use the `EntityType.value_ontology`
+        /// is >10 or could change frequently, use the `EntityType.value_ontology`
         /// field and specify a list of all possible values in a value ontology
         /// file.
         /// </summary>
@@ -1445,7 +1488,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// - Maximum 64 characters.
         /// - Must start with a letter.
         /// - Allowed characters: ASCII letters `[a-z0-9_-]`.  (For backward
-        ///   compatibility internal infrastructure and tooling can handle any ascii
+        ///   compatibility, internal infrastructure and tooling can handle any ASCII
         ///   character.)
         /// - The `/` is sometimes used to denote a property of a type.  For example
         ///   `line_item/amount`.  This convention is deprecated, but will still be
@@ -2470,9 +2513,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               /// For example, a bank statement might only have one
               /// `account_number`, but this account number can be mentioned in several
               /// places on the document.  In this case, the `account_number` is
-              /// considered a `REQUIRED_ONCE` entity type. If, on the other hand, we
-              /// expect a bank statement to contain the status of multiple different
-              /// accounts for the customers, the occurrence type is set to
+              /// considered a `REQUIRED_ONCE` entity type. If, on the other hand, it's
+              /// expected that a bank statement contains the status of multiple
+              /// different accounts for the customers, the occurrence type is set to
               /// `REQUIRED_MULTIPLE`.
               /// </summary>
               public enum OccurrenceType {
@@ -2633,7 +2676,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int SkipNamingValidationFieldNumber = 7;
         private bool skipNamingValidation_;
         /// <summary>
-        /// If set, we will skip the naming format validation in the schema. So the
+        /// If set, this will skip the naming format validation in the schema. So the
         /// string values in `DocumentSchema.EntityType.name` and
         /// `DocumentSchema.EntityType.Property.name` will not be checked.
         /// </summary>

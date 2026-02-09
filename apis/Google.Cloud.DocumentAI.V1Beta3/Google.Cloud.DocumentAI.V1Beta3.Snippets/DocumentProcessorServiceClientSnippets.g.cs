@@ -37,7 +37,6 @@ namespace GoogleCSharpSnippets
             ProcessRequest request = new ProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
@@ -60,7 +59,6 @@ namespace GoogleCSharpSnippets
             ProcessRequest request = new ProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
@@ -136,7 +134,6 @@ namespace GoogleCSharpSnippets
             BatchProcessRequest request = new BatchProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),
@@ -174,7 +171,6 @@ namespace GoogleCSharpSnippets
             BatchProcessRequest request = new BatchProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),
@@ -2730,7 +2726,9 @@ namespace GoogleCSharpSnippets
                 DocumentSchema = new DocumentSchema(),
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = documentProcessorServiceClient.ReviewDocument(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2740,7 +2738,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceReviewDocument(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2767,7 +2767,9 @@ namespace GoogleCSharpSnippets
                 DocumentSchema = new DocumentSchema(),
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = await documentProcessorServiceClient.ReviewDocumentAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2777,7 +2779,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceReviewDocumentAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2796,7 +2800,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string humanReviewConfig = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/humanReviewConfig";
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = documentProcessorServiceClient.ReviewDocument(humanReviewConfig);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2806,7 +2812,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceReviewDocument(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2826,7 +2834,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string humanReviewConfig = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/humanReviewConfig";
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = await documentProcessorServiceClient.ReviewDocumentAsync(humanReviewConfig);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2836,7 +2846,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceReviewDocumentAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2855,7 +2867,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             HumanReviewConfigName humanReviewConfig = HumanReviewConfigName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = documentProcessorServiceClient.ReviewDocument(humanReviewConfig);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2865,7 +2879,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceReviewDocument(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2885,7 +2901,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             HumanReviewConfigName humanReviewConfig = HumanReviewConfigName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
             // Make the request
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = await documentProcessorServiceClient.ReviewDocumentAsync(humanReviewConfig);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2895,7 +2913,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceReviewDocumentAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

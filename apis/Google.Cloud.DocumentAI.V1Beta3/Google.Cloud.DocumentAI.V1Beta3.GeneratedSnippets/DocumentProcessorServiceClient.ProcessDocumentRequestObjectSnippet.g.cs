@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             ProcessRequest request = new ProcessRequest
             {
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
-                SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),

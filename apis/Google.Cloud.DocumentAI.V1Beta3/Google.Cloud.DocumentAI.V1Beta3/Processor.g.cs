@@ -1541,7 +1541,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int FinetuningAllowedFieldNumber = 1;
             private bool finetuningAllowed_;
             /// <summary>
-            /// Whether finetuning is allowed for this base processor version.
+            /// Whether fine tuning is allowed for this base processor version.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1557,7 +1557,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             private int minTrainLabeledDocuments_;
             /// <summary>
             /// The minimum number of labeled documents in the training dataset
-            /// required for finetuning.
+            /// required for fine tuning.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
