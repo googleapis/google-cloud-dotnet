@@ -31,7 +31,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "X21vbml0b3Jpbmdfc2VydmljZS5wcm90bxo2Z29vZ2xlL2Nsb3VkL2FpcGxh",
             "dGZvcm0vdjFiZXRhMS9ub3RlYm9va19zZXJ2aWNlLnByb3RvGjZnb29nbGUv",
             "Y2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL3BpcGVsaW5lX3NlcnZpY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i+goKCFNjaGVk",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqAsKCFNjaGVk",
             "dWxlEg4KBGNyb24YCiABKAlIABJgChtjcmVhdGVfcGlwZWxpbmVfam9iX3Jl",
             "cXVlc3QYDiABKAsyOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
             "LkNyZWF0ZVBpcGVsaW5lSm9iUmVxdWVzdEgBEm8KI2NyZWF0ZV9tb2RlbF9t",
@@ -53,26 +53,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOQoQbGFz",
             "dF9yZXN1bWVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXBCA+BBAxIlChhtYXhfY29uY3VycmVudF9ydW5fY291bnQYCyABKANCA+BB",
-            "AhIbCg5hbGxvd19xdWV1ZWluZxgMIAEoCEID4EEBEhUKCGNhdGNoX3VwGA0g",
-            "ASgIQgPgQQMSXwobbGFzdF9zY2hlZHVsZWRfcnVuX3Jlc3BvbnNlGBIgASgL",
-            "MjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TY2hlZHVsZS5S",
-            "dW5SZXNwb25zZUID4EEDGlsKC1J1blJlc3BvbnNlEjYKEnNjaGVkdWxlZF9y",
-            "dW5fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoM",
-            "cnVuX3Jlc3BvbnNlGAIgASgJIkUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASCgoGQUNUSVZFEAESCgoGUEFVU0VEEAISDQoJQ09NUExFVEVEEAM6",
-            "ZepBYgoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9TY2hlZHVsZRI8cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NjaGVkdWxl",
-            "cy97c2NoZWR1bGV9QhQKEnRpbWVfc3BlY2lmaWNhdGlvbkIJCgdyZXF1ZXN0",
-            "QuQBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUINU2No",
-            "ZWR1bGVQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "AhIsCh9tYXhfY29uY3VycmVudF9hY3RpdmVfcnVuX2NvdW50GBUgASgDQgPg",
+            "QQESGwoOYWxsb3dfcXVldWVpbmcYDCABKAhCA+BBARIVCghjYXRjaF91cBgN",
+            "IAEoCEID4EEDEl8KG2xhc3Rfc2NoZWR1bGVkX3J1bl9yZXNwb25zZRgSIAEo",
+            "CzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2NoZWR1bGUu",
+            "UnVuUmVzcG9uc2VCA+BBAxpbCgtSdW5SZXNwb25zZRI2ChJzY2hlZHVsZWRf",
+            "cnVuX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQK",
+            "DHJ1bl9yZXNwb25zZRgCIAEoCSJFCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgoKBkFDVElWRRABEgoKBlBBVVNFRBACEg0KCUNPTVBMRVRFRBAD",
+            "OmXqQWIKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vU2NoZWR1bGUSPHBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zY2hlZHVs",
+            "ZXMve3NjaGVkdWxlfUIUChJ0aW1lX3NwZWNpZmljYXRpb25CCQoHcmVxdWVz",
+            "dELkAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDVNj",
+            "aGVkdWxlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
+            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ModelMonitoringServiceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.NotebookServiceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.PipelineServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule), global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Parser, new[]{ "Cron", "CreatePipelineJobRequest", "CreateModelMonitoringJobRequest", "CreateNotebookExecutionJobRequest", "Name", "DisplayName", "StartTime", "EndTime", "MaxRunCount", "StartedRunCount", "State", "CreateTime", "UpdateTime", "NextRunTime", "LastPauseTime", "LastResumeTime", "MaxConcurrentRunCount", "AllowQueueing", "CatchUp", "LastScheduledRunResponse" }, new[]{ "TimeSpecification", "Request" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.RunResponse), global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.RunResponse.Parser, new[]{ "ScheduledRunTime", "RunResponse_" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule), global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Parser, new[]{ "Cron", "CreatePipelineJobRequest", "CreateModelMonitoringJobRequest", "CreateNotebookExecutionJobRequest", "Name", "DisplayName", "StartTime", "EndTime", "MaxRunCount", "StartedRunCount", "State", "CreateTime", "UpdateTime", "NextRunTime", "LastPauseTime", "LastResumeTime", "MaxConcurrentRunCount", "MaxConcurrentActiveRunCount", "AllowQueueing", "CatchUp", "LastScheduledRunResponse" }, new[]{ "TimeSpecification", "Request" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.RunResponse), global::Google.Cloud.AIPlatform.V1Beta1.Schedule.Types.RunResponse.Parser, new[]{ "ScheduledRunTime", "RunResponse_" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -131,6 +132,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       lastPauseTime_ = other.lastPauseTime_ != null ? other.lastPauseTime_.Clone() : null;
       lastResumeTime_ = other.lastResumeTime_ != null ? other.lastResumeTime_.Clone() : null;
       maxConcurrentRunCount_ = other.maxConcurrentRunCount_;
+      maxConcurrentActiveRunCount_ = other.maxConcurrentActiveRunCount_;
       allowQueueing_ = other.allowQueueing_;
       catchUp_ = other.catchUp_;
       lastScheduledRunResponse_ = other.lastScheduledRunResponse_ != null ? other.lastScheduledRunResponse_.Clone() : null;
@@ -459,6 +461,25 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "max_concurrent_active_run_count" field.</summary>
+    public const int MaxConcurrentActiveRunCountFieldNumber = 21;
+    private long maxConcurrentActiveRunCount_;
+    /// <summary>
+    /// Optional. Specifies the maximum number of active runs that can be executed
+    /// concurrently for this Schedule. This limits the number of runs that can be
+    /// in a non-terminal state at the same time.
+    /// Currently, this field is only supported for requests of type
+    /// CreatePipelineJobRequest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxConcurrentActiveRunCount {
+      get { return maxConcurrentActiveRunCount_; }
+      set {
+        maxConcurrentActiveRunCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "allow_queueing" field.</summary>
     public const int AllowQueueingFieldNumber = 12;
     private bool allowQueueing_;
@@ -585,6 +606,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(LastPauseTime, other.LastPauseTime)) return false;
       if (!object.Equals(LastResumeTime, other.LastResumeTime)) return false;
       if (MaxConcurrentRunCount != other.MaxConcurrentRunCount) return false;
+      if (MaxConcurrentActiveRunCount != other.MaxConcurrentActiveRunCount) return false;
       if (AllowQueueing != other.AllowQueueing) return false;
       if (CatchUp != other.CatchUp) return false;
       if (!object.Equals(LastScheduledRunResponse, other.LastScheduledRunResponse)) return false;
@@ -614,6 +636,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (lastPauseTime_ != null) hash ^= LastPauseTime.GetHashCode();
       if (lastResumeTime_ != null) hash ^= LastResumeTime.GetHashCode();
       if (MaxConcurrentRunCount != 0L) hash ^= MaxConcurrentRunCount.GetHashCode();
+      if (MaxConcurrentActiveRunCount != 0L) hash ^= MaxConcurrentActiveRunCount.GetHashCode();
       if (AllowQueueing != false) hash ^= AllowQueueing.GetHashCode();
       if (CatchUp != false) hash ^= CatchUp.GetHashCode();
       if (lastScheduledRunResponse_ != null) hash ^= LastScheduledRunResponse.GetHashCode();
@@ -717,6 +740,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(CreateNotebookExecutionJobRequest);
       }
+      if (MaxConcurrentActiveRunCount != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(MaxConcurrentActiveRunCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -807,6 +834,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(CreateNotebookExecutionJobRequest);
       }
+      if (MaxConcurrentActiveRunCount != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(MaxConcurrentActiveRunCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -867,6 +898,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (MaxConcurrentRunCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxConcurrentRunCount);
+      }
+      if (MaxConcurrentActiveRunCount != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MaxConcurrentActiveRunCount);
       }
       if (AllowQueueing != false) {
         size += 1 + 1;
@@ -948,6 +982,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.MaxConcurrentRunCount != 0L) {
         MaxConcurrentRunCount = other.MaxConcurrentRunCount;
+      }
+      if (other.MaxConcurrentActiveRunCount != 0L) {
+        MaxConcurrentActiveRunCount = other.MaxConcurrentActiveRunCount;
       }
       if (other.AllowQueueing != false) {
         AllowQueueing = other.AllowQueueing;
@@ -1122,6 +1159,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             CreateNotebookExecutionJobRequest = subBuilder;
             break;
           }
+          case 168: {
+            MaxConcurrentActiveRunCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1254,6 +1295,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             CreateNotebookExecutionJobRequest = subBuilder;
+            break;
+          }
+          case 168: {
+            MaxConcurrentActiveRunCount = input.ReadInt64();
             break;
           }
         }

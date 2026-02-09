@@ -42,7 +42,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "YWlwbGF0Zm9ybS92MWJldGExL3VubWFuYWdlZF9jb250YWluZXJfbW9kZWwu",
             "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w",
             "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
-            "b3RvIsUWChJCYXRjaFByZWRpY3Rpb25Kb2ISEQoEbmFtZRgBIAEoCUID4EED",
+            "b3RvIvwYChJCYXRjaFByZWRpY3Rpb25Kb2ISEQoEbmFtZRgBIAEoCUID4EED",
             "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjMKBW1vZGVsGAMgASgJQiT6",
             "QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHQoQbW9kZWxf",
             "dmVyc2lvbl9pZBgeIAEoCUID4EEDElsKGXVubWFuYWdlZF9jb250YWluZXJf",
@@ -87,38 +87,45 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "b3Jpbmdfc3RhdHVzGCAgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxIh",
             "ChlkaXNhYmxlX2NvbnRhaW5lcl9sb2dnaW5nGCIgASgIEhoKDXNhdGlzZmll",
             "c19wenMYJCABKAhCA+BBAxIaCg1zYXRpc2ZpZXNfcHppGCUgASgIQgPgQQMa",
-            "xAEKC0lucHV0Q29uZmlnEkAKCmdjc19zb3VyY2UYAiABKAsyKi5nb29nbGUu",
+            "sAIKC0lucHV0Q29uZmlnEkAKCmdjc19zb3VyY2UYAiABKAsyKi5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdjc1NvdXJjZUgAEkoKD2JpZ3F1",
             "ZXJ5X3NvdXJjZRgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "YmV0YTEuQmlnUXVlcnlTb3VyY2VIABIdChBpbnN0YW5jZXNfZm9ybWF0GAEg",
-            "ASgJQgPgQQJCCAoGc291cmNlGmwKDkluc3RhbmNlQ29uZmlnEhUKDWluc3Rh",
-            "bmNlX3R5cGUYASABKAkSEQoJa2V5X2ZpZWxkGAIgASgJEhcKD2luY2x1ZGVk",
-            "X2ZpZWxkcxgDIAMoCRIXCg9leGNsdWRlZF9maWVsZHMYBCADKAka4AEKDE91",
-            "dHB1dENvbmZpZxJKCg9nY3NfZGVzdGluYXRpb24YAiABKAsyLy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdjc0Rlc3RpbmF0aW9uSAASVAoU",
-            "YmlncXVlcnlfZGVzdGluYXRpb24YAyABKAsyNC5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExLkJpZ1F1ZXJ5RGVzdGluYXRpb25IABIfChJwcmVk",
-            "aWN0aW9uc19mb3JtYXQYASABKAlCA+BBAkINCgtkZXN0aW5hdGlvbhqQAQoK",
-            "T3V0cHV0SW5mbxIjChRnY3Nfb3V0cHV0X2RpcmVjdG9yeRgBIAEoCUID4EED",
-            "SAASJgoXYmlncXVlcnlfb3V0cHV0X2RhdGFzZXQYAiABKAlCA+BBA0gAEiIK",
-            "FWJpZ3F1ZXJ5X291dHB1dF90YWJsZRgEIAEoCUID4EEDQhEKD291dHB1dF9s",
-            "b2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBOoYB6kGCAQosYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9C",
-            "YXRjaFByZWRpY3Rpb25Kb2ISUnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9iYXRjaFByZWRpY3Rpb25Kb2JzL3tiYXRjaF9wcmVk",
-            "aWN0aW9uX2pvYn1C7gEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExQhdCYXRjaFByZWRpY3Rpb25Kb2JQcm90b1ABWkNjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7",
-            "YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRh",
-            "McoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "YmV0YTEuQmlnUXVlcnlTb3VyY2VIABJqCiB2ZXJ0ZXhfbXVsdGltb2RhbF9k",
+            "YXRhc2V0X3NvdXJjZRgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuVmVydGV4TXVsdGltb2RhbERhdGFzZXRTb3VyY2VIABIdChBp",
+            "bnN0YW5jZXNfZm9ybWF0GAEgASgJQgPgQQJCCAoGc291cmNlGmwKDkluc3Rh",
+            "bmNlQ29uZmlnEhUKDWluc3RhbmNlX3R5cGUYASABKAkSEQoJa2V5X2ZpZWxk",
+            "GAIgASgJEhcKD2luY2x1ZGVkX2ZpZWxkcxgDIAMoCRIXCg9leGNsdWRlZF9m",
+            "aWVsZHMYBCADKAka1gIKDE91dHB1dENvbmZpZxJKCg9nY3NfZGVzdGluYXRp",
+            "b24YAiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdj",
+            "c0Rlc3RpbmF0aW9uSAASVAoUYmlncXVlcnlfZGVzdGluYXRpb24YAyABKAsy",
+            "NC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkJpZ1F1ZXJ5RGVz",
+            "dGluYXRpb25IABJ0CiV2ZXJ0ZXhfbXVsdGltb2RhbF9kYXRhc2V0X2Rlc3Rp",
+            "bmF0aW9uGAYgASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5WZXJ0ZXhNdWx0aW1vZGFsRGF0YXNldERlc3RpbmF0aW9uSAASHwoScHJl",
+            "ZGljdGlvbnNfZm9ybWF0GAEgASgJQgPgQQJCDQoLZGVzdGluYXRpb24a5QEK",
+            "Ck91dHB1dEluZm8SIwoUZ2NzX291dHB1dF9kaXJlY3RvcnkYASABKAlCA+BB",
+            "A0gAEiYKF2JpZ3F1ZXJ5X291dHB1dF9kYXRhc2V0GAIgASgJQgPgQQNIABJT",
+            "Ch52ZXJ0ZXhfbXVsdGltb2RhbF9kYXRhc2V0X25hbWUYBSABKAlCKeBBA/pB",
+            "IwohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0SAASIgoVYmln",
+            "cXVlcnlfb3V0cHV0X3RhYmxlGAQgASgJQgPgQQNCEQoPb3V0cHV0X2xvY2F0",
+            "aW9uGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6hgHqQYIBCixhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0JhdGNo",
+            "UHJlZGljdGlvbkpvYhJScHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2JhdGNoUHJlZGljdGlvbkpvYnMve2JhdGNoX3ByZWRpY3Rp",
+            "b25fam9ifULuAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTFCF0JhdGNoUHJlZGljdGlvbkpvYlByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBs",
+            "YXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIf",
+            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.CompletionStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ManualBatchTuningParametersReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ModelDeploymentMonitoringJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ModelMonitoringReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.UnmanagedContainerModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Parser, new[]{ "Name", "DisplayName", "Model", "ModelVersionId", "UnmanagedContainerModel", "InputConfig", "InstanceConfig", "ModelParameters", "OutputConfig", "DedicatedResources", "ServiceAccount", "ManualBatchTuningParameters", "GenerateExplanation", "ExplanationSpec", "OutputInfo", "State", "Error", "PartialFailures", "ResourcesConsumed", "CompletionStats", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec", "ModelMonitoringConfig", "ModelMonitoringStatsAnomalies", "ModelMonitoringStatus", "DisableContainerLogging", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InputConfig), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InputConfig.Parser, new[]{ "GcsSource", "BigquerySource", "InstancesFormat" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Parser, new[]{ "Name", "DisplayName", "Model", "ModelVersionId", "UnmanagedContainerModel", "InputConfig", "InstanceConfig", "ModelParameters", "OutputConfig", "DedicatedResources", "ServiceAccount", "ManualBatchTuningParameters", "GenerateExplanation", "ExplanationSpec", "OutputInfo", "State", "Error", "PartialFailures", "ResourcesConsumed", "CompletionStats", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec", "ModelMonitoringConfig", "ModelMonitoringStatsAnomalies", "ModelMonitoringStatus", "DisableContainerLogging", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InputConfig), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InputConfig.Parser, new[]{ "GcsSource", "BigquerySource", "VertexMultimodalDatasetSource", "InstancesFormat" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InstanceConfig), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.InstanceConfig.Parser, new[]{ "InstanceType", "KeyField", "IncludedFields", "ExcludedFields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputConfig), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination", "PredictionsFormat" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputInfo), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputInfo.Parser, new[]{ "GcsOutputDirectory", "BigqueryOutputDataset", "BigqueryOutputTable" }, new[]{ "OutputLocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputConfig), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination", "VertexMultimodalDatasetDestination", "PredictionsFormat" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputInfo), global::Google.Cloud.AIPlatform.V1Beta1.BatchPredictionJob.Types.OutputInfo.Parser, new[]{ "GcsOutputDirectory", "BigqueryOutputDataset", "VertexMultimodalDatasetName", "BigqueryOutputTable" }, new[]{ "OutputLocation" }, null, null, null),
             null, })
           }));
     }
@@ -1868,6 +1875,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             case SourceOneofCase.BigquerySource:
               BigquerySource = other.BigquerySource.Clone();
               break;
+            case SourceOneofCase.VertexMultimodalDatasetSource:
+              VertexMultimodalDatasetSource = other.VertexMultimodalDatasetSource.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1913,6 +1923,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "vertex_multimodal_dataset_source" field.</summary>
+        public const int VertexMultimodalDatasetSourceFieldNumber = 4;
+        /// <summary>
+        /// A Vertex Managed Dataset. Currently, only datasets of type Multimodal
+        /// are supported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource VertexMultimodalDatasetSource {
+          get { return sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource ? (global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource) source_ : null; }
+          set {
+            source_ = value;
+            sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.VertexMultimodalDatasetSource;
+          }
+        }
+
         /// <summary>Field number for the "instances_format" field.</summary>
         public const int InstancesFormatFieldNumber = 1;
         private string instancesFormat_ = "";
@@ -1936,6 +1962,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           None = 0,
           GcsSource = 2,
           BigquerySource = 3,
+          VertexMultimodalDatasetSource = 4,
         }
         private SourceOneofCase sourceCase_ = SourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1968,6 +1995,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (!object.Equals(GcsSource, other.GcsSource)) return false;
           if (!object.Equals(BigquerySource, other.BigquerySource)) return false;
+          if (!object.Equals(VertexMultimodalDatasetSource, other.VertexMultimodalDatasetSource)) return false;
           if (InstancesFormat != other.InstancesFormat) return false;
           if (SourceCase != other.SourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -1979,6 +2007,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
           if (sourceCase_ == SourceOneofCase.BigquerySource) hash ^= BigquerySource.GetHashCode();
+          if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) hash ^= VertexMultimodalDatasetSource.GetHashCode();
           if (InstancesFormat.Length != 0) hash ^= InstancesFormat.GetHashCode();
           hash ^= (int) sourceCase_;
           if (_unknownFields != null) {
@@ -2011,6 +2040,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteMessage(BigquerySource);
           }
+          if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) {
+            output.WriteRawTag(34);
+            output.WriteMessage(VertexMultimodalDatasetSource);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2033,6 +2066,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteMessage(BigquerySource);
           }
+          if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) {
+            output.WriteRawTag(34);
+            output.WriteMessage(VertexMultimodalDatasetSource);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2048,6 +2085,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (sourceCase_ == SourceOneofCase.BigquerySource) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigquerySource);
+          }
+          if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexMultimodalDatasetSource);
           }
           if (InstancesFormat.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(InstancesFormat);
@@ -2079,6 +2119,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 BigquerySource = new global::Google.Cloud.AIPlatform.V1Beta1.BigQuerySource();
               }
               BigquerySource.MergeFrom(other.BigquerySource);
+              break;
+            case SourceOneofCase.VertexMultimodalDatasetSource:
+              if (VertexMultimodalDatasetSource == null) {
+                VertexMultimodalDatasetSource = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource();
+              }
+              VertexMultimodalDatasetSource.MergeFrom(other.VertexMultimodalDatasetSource);
               break;
           }
 
@@ -2119,6 +2165,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 BigquerySource = subBuilder;
                 break;
               }
+              case 34: {
+                global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource();
+                if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) {
+                  subBuilder.MergeFrom(VertexMultimodalDatasetSource);
+                }
+                input.ReadMessage(subBuilder);
+                VertexMultimodalDatasetSource = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -2154,6 +2209,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 }
                 input.ReadMessage(subBuilder);
                 BigquerySource = subBuilder;
+                break;
+              }
+              case 34: {
+                global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetSource();
+                if (sourceCase_ == SourceOneofCase.VertexMultimodalDatasetSource) {
+                  subBuilder.MergeFrom(VertexMultimodalDatasetSource);
+                }
+                input.ReadMessage(subBuilder);
+                VertexMultimodalDatasetSource = subBuilder;
                 break;
               }
             }
@@ -2591,6 +2655,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             case DestinationOneofCase.BigqueryDestination:
               BigqueryDestination = other.BigqueryDestination.Clone();
               break;
+            case DestinationOneofCase.VertexMultimodalDatasetDestination:
+              VertexMultimodalDatasetDestination = other.VertexMultimodalDatasetDestination.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2672,6 +2739,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "vertex_multimodal_dataset_destination" field.</summary>
+        public const int VertexMultimodalDatasetDestinationFieldNumber = 6;
+        /// <summary>
+        /// The details for a Vertex Multimodal Dataset that will be created for
+        /// the output.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination VertexMultimodalDatasetDestination {
+          get { return destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination ? (global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination) destination_ : null; }
+          set {
+            destination_ = value;
+            destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.VertexMultimodalDatasetDestination;
+          }
+        }
+
         /// <summary>Field number for the "predictions_format" field.</summary>
         public const int PredictionsFormatFieldNumber = 1;
         private string predictionsFormat_ = "";
@@ -2696,6 +2779,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           None = 0,
           GcsDestination = 2,
           BigqueryDestination = 3,
+          VertexMultimodalDatasetDestination = 6,
         }
         private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2728,6 +2812,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
           if (!object.Equals(BigqueryDestination, other.BigqueryDestination)) return false;
+          if (!object.Equals(VertexMultimodalDatasetDestination, other.VertexMultimodalDatasetDestination)) return false;
           if (PredictionsFormat != other.PredictionsFormat) return false;
           if (DestinationCase != other.DestinationCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -2739,6 +2824,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
           if (destinationCase_ == DestinationOneofCase.BigqueryDestination) hash ^= BigqueryDestination.GetHashCode();
+          if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) hash ^= VertexMultimodalDatasetDestination.GetHashCode();
           if (PredictionsFormat.Length != 0) hash ^= PredictionsFormat.GetHashCode();
           hash ^= (int) destinationCase_;
           if (_unknownFields != null) {
@@ -2771,6 +2857,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteMessage(BigqueryDestination);
           }
+          if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) {
+            output.WriteRawTag(50);
+            output.WriteMessage(VertexMultimodalDatasetDestination);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2793,6 +2883,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteMessage(BigqueryDestination);
           }
+          if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) {
+            output.WriteRawTag(50);
+            output.WriteMessage(VertexMultimodalDatasetDestination);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2808,6 +2902,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDestination);
+          }
+          if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexMultimodalDatasetDestination);
           }
           if (PredictionsFormat.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PredictionsFormat);
@@ -2839,6 +2936,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 BigqueryDestination = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
               }
               BigqueryDestination.MergeFrom(other.BigqueryDestination);
+              break;
+            case DestinationOneofCase.VertexMultimodalDatasetDestination:
+              if (VertexMultimodalDatasetDestination == null) {
+                VertexMultimodalDatasetDestination = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination();
+              }
+              VertexMultimodalDatasetDestination.MergeFrom(other.VertexMultimodalDatasetDestination);
               break;
           }
 
@@ -2879,6 +2982,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 BigqueryDestination = subBuilder;
                 break;
               }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination();
+                if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) {
+                  subBuilder.MergeFrom(VertexMultimodalDatasetDestination);
+                }
+                input.ReadMessage(subBuilder);
+                VertexMultimodalDatasetDestination = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -2914,6 +3026,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 }
                 input.ReadMessage(subBuilder);
                 BigqueryDestination = subBuilder;
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexMultimodalDatasetDestination();
+                if (destinationCase_ == DestinationOneofCase.VertexMultimodalDatasetDestination) {
+                  subBuilder.MergeFrom(VertexMultimodalDatasetDestination);
+                }
+                input.ReadMessage(subBuilder);
+                VertexMultimodalDatasetDestination = subBuilder;
                 break;
               }
             }
@@ -2970,6 +3091,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               break;
             case OutputLocationOneofCase.BigqueryOutputDataset:
               BigqueryOutputDataset = other.BigqueryOutputDataset;
+              break;
+            case OutputLocationOneofCase.VertexMultimodalDatasetName:
+              VertexMultimodalDatasetName = other.VertexMultimodalDatasetName;
               break;
           }
 
@@ -3043,6 +3167,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "vertex_multimodal_dataset_name" field.</summary>
+        public const int VertexMultimodalDatasetNameFieldNumber = 5;
+        /// <summary>
+        /// Output only. The resource name of the Vertex Managed Dataset created,
+        /// into which the prediction output is written. Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string VertexMultimodalDatasetName {
+          get { return HasVertexMultimodalDatasetName ? (string) outputLocation_ : ""; }
+          set {
+            outputLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            outputLocationCase_ = OutputLocationOneofCase.VertexMultimodalDatasetName;
+          }
+        }
+        /// <summary>Gets whether the "vertex_multimodal_dataset_name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasVertexMultimodalDatasetName {
+          get { return outputLocationCase_ == OutputLocationOneofCase.VertexMultimodalDatasetName; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "vertex_multimodal_dataset_name" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearVertexMultimodalDatasetName() {
+          if (HasVertexMultimodalDatasetName) {
+            ClearOutputLocation();
+          }
+        }
+
         /// <summary>Field number for the "bigquery_output_table" field.</summary>
         public const int BigqueryOutputTableFieldNumber = 4;
         private string bigqueryOutputTable_ = "";
@@ -3067,6 +3222,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           None = 0,
           GcsOutputDirectory = 1,
           BigqueryOutputDataset = 2,
+          VertexMultimodalDatasetName = 5,
         }
         private OutputLocationOneofCase outputLocationCase_ = OutputLocationOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3099,6 +3255,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (GcsOutputDirectory != other.GcsOutputDirectory) return false;
           if (BigqueryOutputDataset != other.BigqueryOutputDataset) return false;
+          if (VertexMultimodalDatasetName != other.VertexMultimodalDatasetName) return false;
           if (BigqueryOutputTable != other.BigqueryOutputTable) return false;
           if (OutputLocationCase != other.OutputLocationCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -3110,6 +3267,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (HasGcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
           if (HasBigqueryOutputDataset) hash ^= BigqueryOutputDataset.GetHashCode();
+          if (HasVertexMultimodalDatasetName) hash ^= VertexMultimodalDatasetName.GetHashCode();
           if (BigqueryOutputTable.Length != 0) hash ^= BigqueryOutputTable.GetHashCode();
           hash ^= (int) outputLocationCase_;
           if (_unknownFields != null) {
@@ -3142,6 +3300,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(34);
             output.WriteString(BigqueryOutputTable);
           }
+          if (HasVertexMultimodalDatasetName) {
+            output.WriteRawTag(42);
+            output.WriteString(VertexMultimodalDatasetName);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3164,6 +3326,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(34);
             output.WriteString(BigqueryOutputTable);
           }
+          if (HasVertexMultimodalDatasetName) {
+            output.WriteRawTag(42);
+            output.WriteString(VertexMultimodalDatasetName);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3179,6 +3345,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (HasBigqueryOutputDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(BigqueryOutputDataset);
+          }
+          if (HasVertexMultimodalDatasetName) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(VertexMultimodalDatasetName);
           }
           if (BigqueryOutputTable.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(BigqueryOutputTable);
@@ -3204,6 +3373,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               break;
             case OutputLocationOneofCase.BigqueryOutputDataset:
               BigqueryOutputDataset = other.BigqueryOutputDataset;
+              break;
+            case OutputLocationOneofCase.VertexMultimodalDatasetName:
+              VertexMultimodalDatasetName = other.VertexMultimodalDatasetName;
               break;
           }
 
@@ -3234,6 +3406,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 BigqueryOutputTable = input.ReadString();
                 break;
               }
+              case 42: {
+                VertexMultimodalDatasetName = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -3259,6 +3435,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 34: {
                 BigqueryOutputTable = input.ReadString();
+                break;
+              }
+              case 42: {
+                VertexMultimodalDatasetName = input.ReadString();
                 break;
               }
             }
