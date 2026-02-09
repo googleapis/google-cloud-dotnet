@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.13.0-beta02, released 2026-02-09
+
+### New features
+
+- Add support for BatchWrite.
+- Add support for BatchWrite.
+
 ## Version 5.13.0-beta01, released 2026-02-05
 
 ### New features
