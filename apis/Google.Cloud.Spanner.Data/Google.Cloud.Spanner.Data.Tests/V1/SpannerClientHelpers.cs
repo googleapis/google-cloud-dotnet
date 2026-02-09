@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             settings.Scheduler = fakeScheduler;
             settings.Clock = fakeScheduler.Clock;
             settings.Logger = logger;
-            var mock = Substitute.ForPartsOf<SpannerClient>();
+            var mock = Substitute.For<SpannerClient>();
             mock.Settings.Returns(settings);
             return mock;
         }
