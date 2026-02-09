@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.63.0, released 2026-02-09
+
+### New features
+
+- Add Vertex Multimodal Datasets as input and output types in `google.cloud.aiplatform.v1beta1.BatchPredictionJob`
+
 ## Version 3.62.0, released 2026-02-05
 
 ### New features
