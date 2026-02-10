@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
@@ -48,15 +49,15 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static readonly string s_retryInfoMetadataKey = RetryInfo.Descriptor.FullName + "-bin";
 
         /// <summary>
-        /// Creates a mock SpannerClient configured with settings that include a fake clock
-        /// and a fake scheduler.
+        /// Creates a mock SpannerClient configured with settings that include a clock
+        /// and a scheduler.
         /// </summary>
-        internal static SpannerClient CreateMockClient(Logger logger)
+        internal static SpannerClient CreateMockClient(Logger logger, FakeClock clock = null)
         {
-            var fakeScheduler = new FakeScheduler(new FakeClock(new DateTime(1990, 1, 1, 0, 0, 0)));
+            var actualClock = clock ?? new FakeClock(new DateTime(1990, 1, 1, 0, 0, 0));
             var settings = SpannerSettings.GetDefault();
-            settings.Scheduler = fakeScheduler;
-            settings.Clock = fakeScheduler.Clock;
+            settings.Scheduler = new FakeScheduler(actualClock);
+            settings.Clock = actualClock;
             settings.Logger = logger;
             var mock = Substitute.For<SpannerClient>();
             mock.Settings.Returns(settings);
