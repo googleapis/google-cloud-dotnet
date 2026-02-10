@@ -62,7 +62,7 @@ public sealed partial class ManagedSession
 	public async Task<AsyncResponseStream<BatchWriteResponse>> BatchWriteAsync(BatchWriteRequest request, CallSettings callSettings)
 	{
 		GaxPreconditions.CheckNotNull(request, nameof(request));
-        CancellationToken cancellationToken = callSettings.CancellationToken ?? default;
+        CancellationToken cancellationToken = callSettings?.CancellationToken ?? default;
         var session = await _lifecycleManager.GetFreshSessionAsync(cancellationToken).ConfigureAwait(false);
 
         // Populate the request with the current session name.
