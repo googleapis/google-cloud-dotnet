@@ -49,6 +49,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             AggregateFleetSettings = existing.AggregateFleetSettings;
             QueryDatabaseResourceGroupsSettings = existing.QueryDatabaseResourceGroupsSettings;
             AggregateIssueStatsSettings = existing.AggregateIssueStatsSettings;
+            QueryIssuesSettings = existing.QueryIssuesSettings;
             OnCopy(existing);
         }
 
@@ -102,6 +103,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AggregateIssueStatsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseCenterClient.QueryIssues</c> and <c>DatabaseCenterClient.QueryIssuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryIssuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseCenterSettings"/> object.</returns>
@@ -328,6 +341,112 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AggregateIssueStatsResponse> AggregateIssueStatsAsync(AggregateIssueStatsRequest request, st::CancellationToken cancellationToken) =>
             AggregateIssueStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssues(QueryIssuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssuesAsync(QueryIssuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent can be a project, a folder, or an organization. The list
+        /// is limited to the one attached to resources within the `scope` that a user
+        /// has access to.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+        /// * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssues(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryIssuesRequest request = new QueryIssuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryIssues(request, callSettings);
+        }
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent can be a project, a folder, or an organization. The list
+        /// is limited to the one attached to resources within the `scope` that a user
+        /// has access to.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+        /// * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssuesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryIssuesRequest request = new QueryIssuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryIssuesAsync(request, callSettings);
+        }
     }
 
     /// <summary>DatabaseCenter client wrapper implementation, for convenient use.</summary>
@@ -343,6 +462,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         private readonly gaxgrpc::ApiCall<QueryDatabaseResourceGroupsRequest, QueryDatabaseResourceGroupsResponse> _callQueryDatabaseResourceGroups;
 
         private readonly gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> _callAggregateIssueStats;
+
+        private readonly gaxgrpc::ApiCall<QueryIssuesRequest, QueryIssuesResponse> _callQueryIssues;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseCenter service, with the specified gRPC client and settings.
@@ -371,6 +492,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             _callAggregateIssueStats = clientHelper.BuildApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse>("AggregateIssueStats", grpcClient.AggregateIssueStatsAsync, grpcClient.AggregateIssueStats, effectiveSettings.AggregateIssueStatsSettings);
             Modify_ApiCall(ref _callAggregateIssueStats);
             Modify_AggregateIssueStatsApiCall(ref _callAggregateIssueStats);
+            _callQueryIssues = clientHelper.BuildApiCall<QueryIssuesRequest, QueryIssuesResponse>("QueryIssues", grpcClient.QueryIssuesAsync, grpcClient.QueryIssues, effectiveSettings.QueryIssuesSettings);
+            Modify_ApiCall(ref _callQueryIssues);
+            Modify_QueryIssuesApiCall(ref _callQueryIssues);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -384,6 +508,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         partial void Modify_AggregateIssueStatsApiCall(ref gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> call);
 
+        partial void Modify_QueryIssuesApiCall(ref gaxgrpc::ApiCall<QueryIssuesRequest, QueryIssuesResponse> call);
+
         partial void OnConstruction(DatabaseCenter.DatabaseCenterClient grpcClient, DatabaseCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseCenter client</summary>
@@ -396,6 +522,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         partial void Modify_QueryDatabaseResourceGroupsRequest(ref QueryDatabaseResourceGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AggregateIssueStatsRequest(ref AggregateIssueStatsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryIssuesRequest(ref QueryIssuesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// QueryProducts provides a list of all possible products which can be used to
@@ -496,6 +624,32 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             Modify_AggregateIssueStatsRequest(ref request, ref callSettings);
             return _callAggregateIssueStats.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssues(QueryIssuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryIssuesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryIssuesRequest, QueryIssuesResponse, DatabaseResourceIssue>(_callQueryIssues, request, callSettings);
+        }
+
+        /// <summary>
+        /// QueryIssues provides a list of issues and recommendations
+        /// that a user has access to and that are within the requested scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseResourceIssue"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryIssuesResponse, DatabaseResourceIssue> QueryIssuesAsync(QueryIssuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryIssuesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryIssuesRequest, QueryIssuesResponse, DatabaseResourceIssue>(_callQueryIssues, request, callSettings);
+        }
     }
 
     public partial class QueryProductsRequest : gaxgrpc::IPageRequest
@@ -507,6 +661,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     }
 
     public partial class QueryDatabaseResourceGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryIssuesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -530,6 +688,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DatabaseResourceGroup> GetEnumerator() => ResourceGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryIssuesResponse : gaxgrpc::IPageResponse<DatabaseResourceIssue>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatabaseResourceIssue> GetEnumerator() => ResourceIssues.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
