@@ -195,12 +195,12 @@ public class ManagedSessionTests
         await client.Received(2).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
 
         // Wait a little in real time to allow the failed background refresh to complete.
-        // There's a little bit of work that's done in the backgroun refresh after CreateSessinAsync has returned,
+        // There's a little bit of work that's done in the backgroun refresh after CreateSessionAsync has returned,
         // but we don't have a way to wait on that.
         // Note: Adust this number up if this is flaky.
         await Task.Delay(500);
 
-        // This should still return inmediately and without throwing because session1 is only soft expired.
+        // This should still return immediately and without throwing because session1 is only soft expired.
         // Because the previous background refresh failed, this call will trigger a new background refresh.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
 
