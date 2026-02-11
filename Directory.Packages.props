@@ -27,7 +27,7 @@
     <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
     <!-- System packages -->
-    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.2" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.3" />
 
     <!-- MS Extensions packages -->
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
@@ -37,7 +37,7 @@
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version= "8.0.1" />
-    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version= "10.1.1" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version= "10.3.0" />
 
     <!-- Misc packages (might warrant a reorganization at some point) -->
     <PackageVersion Include="xunit" Version="2.9.3" />

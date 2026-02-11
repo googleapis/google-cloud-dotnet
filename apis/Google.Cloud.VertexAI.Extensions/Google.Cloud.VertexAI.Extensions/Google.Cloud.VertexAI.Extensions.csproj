@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Cloud.AIPlatform.V1" VersionOverride="[3.54.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.AIPlatform.V1" VersionOverride="[3.61.0, 4.0.0)" />
     <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
   </ItemGroup>
 </Project>
