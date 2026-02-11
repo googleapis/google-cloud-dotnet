@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
                 SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
@@ -63,12 +64,17 @@ namespace GoogleCSharpSnippets
                 },
                 LanguageCode = "",
                 DisplaySpec = new SearchRequest.Types.DisplaySpec(),
+                CrowdingSpecs =
+                {
+                    new SearchRequest.Types.CrowdingSpec(),
+                },
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                PageCategories = { "", },
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -137,6 +143,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
                 SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
@@ -145,12 +152,17 @@ namespace GoogleCSharpSnippets
                 },
                 LanguageCode = "",
                 DisplaySpec = new SearchRequest.Types.DisplaySpec(),
+                CrowdingSpecs =
+                {
+                    new SearchRequest.Types.CrowdingSpec(),
+                },
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                PageCategories = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
@@ -219,6 +231,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
                 SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
@@ -227,12 +240,17 @@ namespace GoogleCSharpSnippets
                 },
                 LanguageCode = "",
                 DisplaySpec = new SearchRequest.Types.DisplaySpec(),
+                CrowdingSpecs =
+                {
+                    new SearchRequest.Types.CrowdingSpec(),
+                },
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                PageCategories = { "", },
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLite(request);
@@ -301,6 +319,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
                 CanonicalFilter = "",
                 SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
                 DataStoreSpecs =
@@ -309,12 +328,17 @@ namespace GoogleCSharpSnippets
                 },
                 LanguageCode = "",
                 DisplaySpec = new SearchRequest.Types.DisplaySpec(),
+                CrowdingSpecs =
+                {
+                    new SearchRequest.Types.CrowdingSpec(),
+                },
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                PageCategories = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLiteAsync(request);
