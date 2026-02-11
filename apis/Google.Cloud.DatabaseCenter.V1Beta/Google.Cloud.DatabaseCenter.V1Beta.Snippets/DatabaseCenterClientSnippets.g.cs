@@ -373,5 +373,203 @@ namespace GoogleCSharpSnippets
             AggregateIssueStatsResponse response = await databaseCenterClient.AggregateIssueStatsAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for QueryIssues</summary>
+        public void QueryIssuesRequestObject()
+        {
+            // Snippet: QueryIssues(QueryIssuesRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = DatabaseCenterClient.Create();
+            // Initialize request argument(s)
+            QueryIssuesRequest request = new QueryIssuesRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalProductsFilters =
+                {
+                    new SignalProductsFilters(),
+                },
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<QueryIssuesResponse, DatabaseResourceIssue> response = databaseCenterClient.QueryIssues(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseResourceIssue item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryIssuesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceIssue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceIssue> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceIssue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryIssuesAsync</summary>
+        public async Task QueryIssuesRequestObjectAsync()
+        {
+            // Snippet: QueryIssuesAsync(QueryIssuesRequest, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = await DatabaseCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryIssuesRequest request = new QueryIssuesRequest
+            {
+                Parent = "",
+                Filter = "",
+                SignalProductsFilters =
+                {
+                    new SignalProductsFilters(),
+                },
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<QueryIssuesResponse, DatabaseResourceIssue> response = databaseCenterClient.QueryIssuesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DatabaseResourceIssue item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (QueryIssuesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceIssue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceIssue> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceIssue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryIssues</summary>
+        public void QueryIssues()
+        {
+            // Snippet: QueryIssues(string, string, int?, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = DatabaseCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<QueryIssuesResponse, DatabaseResourceIssue> response = databaseCenterClient.QueryIssues(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseResourceIssue item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryIssuesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceIssue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceIssue> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceIssue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryIssuesAsync</summary>
+        public async Task QueryIssuesAsync()
+        {
+            // Snippet: QueryIssuesAsync(string, string, int?, CallSettings)
+            // Create client
+            DatabaseCenterClient databaseCenterClient = await DatabaseCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<QueryIssuesResponse, DatabaseResourceIssue> response = databaseCenterClient.QueryIssuesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DatabaseResourceIssue item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (QueryIssuesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseResourceIssue item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseResourceIssue> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseResourceIssue item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

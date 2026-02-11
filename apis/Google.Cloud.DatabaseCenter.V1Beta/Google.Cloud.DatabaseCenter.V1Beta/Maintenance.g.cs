@@ -42,7 +42,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             "ARJsChpkZW55X21haW50ZW5hbmNlX3NjaGVkdWxlcxgCIAMoCzJDLmdvb2ds",
             "ZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuUmVzb3VyY2VNYWludGVu",
             "YW5jZURlbnlTY2hlZHVsZUID4EEBEiAKE21haW50ZW5hbmNlX3ZlcnNpb24Y",
-            "AyABKAlCA+BBASpgCgVQaGFzZRIVChFQSEFTRV9VTlNQRUNJRklFRBAAEg8K",
+            "AyABKAlCA+BBAypgCgVQaGFzZRIVChFQSEFTRV9VTlNQRUNJRklFRBAAEg8K",
             "C1BIQVNFX1dFRUsxEAESDwoLUEhBU0VfV0VFSzIQAhIPCgtQSEFTRV9XRUVL",
             "NRADEg0KCVBIQVNFX0FOWRAEQv4BCiZjb20uZ29vZ2xlLmNsb3VkLmRhdGFi",
             "YXNlY2VudGVyLnYxYmV0YUIQTWFpbnRlbmFuY2VQcm90b1ABWk5jbG91ZC5n",
@@ -778,7 +778,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public const int MaintenanceVersionFieldNumber = 3;
     private string maintenanceVersion_ = "";
     /// <summary>
-    /// Optional. Current Maintenance version of the database resource. Example:
+    /// Output only. Current Maintenance version of the database resource. Example:
     /// "MYSQL_8_0_41.R20250531.01_15"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

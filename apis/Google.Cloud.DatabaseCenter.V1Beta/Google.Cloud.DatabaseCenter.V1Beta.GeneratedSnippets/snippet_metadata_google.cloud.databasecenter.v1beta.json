@@ -397,6 +397,214 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryIssues_sync",
+      "title": "QueryIssuesRequestObject",
+      "description": "Snippet for QueryIssues",
+      "file": "DatabaseCenterClient.QueryIssuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryIssues",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryIssues",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceIssue>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryIssues",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryIssues",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryIssues_async",
+      "title": "QueryIssuesRequestObjectAsync",
+      "description": "Snippet for QueryIssuesAsync",
+      "file": "DatabaseCenterClient.QueryIssuesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryIssuesAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceIssue>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryIssues",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryIssues",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryIssues_sync_flattened",
+      "title": "QueryIssues",
+      "description": "Snippet for QueryIssues",
+      "file": "DatabaseCenterClient.QueryIssuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryIssues",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryIssues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceIssue>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryIssues",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryIssues",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryIssues_async_flattened",
+      "title": "QueryIssuesAsync",
+      "description": "Snippet for QueryIssuesAsync",
+      "file": "DatabaseCenterClient.QueryIssuesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryIssuesAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryIssuesResponse, Google.Cloud.DatabaseCenter.V1Beta.DatabaseResourceIssue>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryIssues",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryIssues",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

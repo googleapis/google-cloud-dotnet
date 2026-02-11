@@ -28,6 +28,12 @@
                 "QueryDatabaseResourceGroupsAsync"
               ]
             },
+            "QueryIssues": {
+              "methods": [
+                "QueryIssues",
+                "QueryIssuesAsync"
+              ]
+            },
             "QueryProducts": {
               "methods": [
                 "QueryProducts",
