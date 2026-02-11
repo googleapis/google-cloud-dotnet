@@ -87,12 +87,16 @@ public class ManagedSessionTests
         var session1 = new Session { Name = "session1", CreateTime = clock.GetCurrentDateTimeUtc().ToTimestamp() };
         var session2 = new Session { Name = "session2" }; // CreateTime will be set when it's created
 
-        var refreshStartedTsc = new TaskCompletionSource<bool>();
+        var createSessionCalledTsc = new TaskCompletionSource<bool>();
         var freshSessionTsc = new TaskCompletionSource<Session>();
         client.Configure()
             .CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>())
-            .Returns(Task.FromResult(session1), CreateSessionMock(refreshStartedTsc, freshSessionTsc.Task));
+            .Returns(Task.FromResult(session1), freshSessionTsc.Task);
+        client.Configure()
+            .When(client => client.CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>()))
+            .Do(Callback.First(_ => { }).Then(_ => createSessionCalledTsc.SetResult(true)));
 
+        // This calls CreateSessionAsync for the first time and does not return until the session is acquired.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
 
         // Advance past soft expiry
@@ -100,21 +104,14 @@ public class ManagedSessionTests
         session2.CreateTime = clock.GetCurrentDateTimeUtc().ToTimestamp();
 
         // This should trigger background refresh but return immediately because session1 is only soft expired.
+        // The triggered background refresh will eventually call CreateSessionAsync for a second time.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
 
-        // Wait for the background task to be triggered
-        await refreshStartedTsc.Task;
-        
-        await client.Received(2).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
-        
-        // Make the mock return so that the background refresh can complete.
+        // Allow CreateSessionAsync to return.
         freshSessionTsc.SetResult(session2);
 
-        // Wait a little in real time to allow the background refresh to complete.
-        await Task.Delay(100);
-        
-        // Next call should return session2 (indirectly verified by no more calls to CreateSessionAsync)
-        await managedSession.EnsureFreshAsync(CancellationToken.None);
+        // And now we can wait for CreateSessionAsync to be done.
+        await createSessionCalledTsc.Task;
         await client.Received(2).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
     }
 
@@ -167,43 +164,51 @@ public class ManagedSessionTests
         var session1 = new Session { Name = "session1", CreateTime = clock.GetCurrentDateTimeUtc().ToTimestamp() };
         var session2 = new Session { Name = "session2" };
 
-        var firstRefreshStartedTcs = new TaskCompletionSource<bool>();
-        var firstFreshSessionTcs = new TaskCompletionSource<Session>();
-        var secondRefreshStartedTcs = new TaskCompletionSource<bool>();
+        var throwingCreateSessionCalledTcs = new TaskCompletionSource<bool>();
+        var throwingFreshSessionTcs = new TaskCompletionSource<Session>();
+        var createSessionCalledTcs = new TaskCompletionSource<bool>();
+        var freshSessionTcs = new TaskCompletionSource<Session>();
         client.Configure()
             .CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>())
-            .Returns(
-                Task.FromResult(session1),
-                CreateSessionMock(firstRefreshStartedTcs, firstFreshSessionTcs.Task),
-                CreateSessionMock(secondRefreshStartedTcs, Task.FromResult(session2)));
+            .Returns(Task.FromResult(session1), throwingFreshSessionTcs.Task, freshSessionTcs.Task);
+        client.Configure()
+            .When(client => client.CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>()))
+            .Do(Callback.First(_ => { }).Then(_ => throwingCreateSessionCalledTcs.SetResult(true)).Then(_ => createSessionCalledTcs.SetResult(true)));
 
+        // This calls CreateSessionAsync for the first time and does not return until the session is acquired.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
 
         // Advance past soft expiry
         clock.Advance(SoftExpiry + TimeSpan.FromMinutes(1));
         session2.CreateTime = clock.GetCurrentDateTimeUtc().ToTimestamp();
 
-        // Should return session1 and not throw
+        // This should trigger background refresh but return immediately because session1 is only soft expired.
+        // The triggered background refresh will eventually call CreateSessionAsync for a second time, which fails.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
-        
-        // Wait for the background task to be triggered
-        await firstRefreshStartedTcs.Task;
 
+        // Allow CreateSessionAsync to fail.
+        throwingFreshSessionTcs.SetException(new Exception("Soft failure"));
+
+        // And now we can wait for CreateSessionAsync to be called.
+        // It has failed but that failure is not bubbled up because the session was only soft expired.
+        await throwingCreateSessionCalledTcs.Task;
         await client.Received(2).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
 
-        // Complete with failure
-        firstFreshSessionTcs.SetException(new Exception("Soft failure"));
-
         // Wait a little in real time to allow the failed background refresh to complete.
-        await Task.Delay(100);
+        // There's a little bit of work that's done in the backgroun refresh after CreateSessinAsync has returned,
+        // but we don't have a way to wait on that.
+        // Note: Adust this number up if this is flaky.
+        await Task.Delay(500);
 
-        // Still should not throw.
-        // Note that since the previous background refresh failed, this call will trigger a new background refresh
-        // because the session is still soft-expired.
+        // This should still return inmediately and without throwing because session1 is only soft expired.
+        // Because the previous background refresh failed, this call will trigger a new background refresh.
         await managedSession.EnsureFreshAsync(CancellationToken.None);
 
-        // Wait for the background task to be triggered
-        await secondRefreshStartedTcs.Task;
+        // Allow CreateSessionAsync to return
+        freshSessionTcs.SetResult(session2);
+
+        // And now we can wait for CreateSessionAsync to be called for the third time.
+        await createSessionCalledTcs.Task;
         await client.Received(3).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
     }
 
@@ -335,11 +340,4 @@ public class ManagedSessionTests
         // Verify BatchWrite was called with the correct session
         client.Received(1).BatchWrite(Arg.Is<BatchWriteRequest>(r => r.Session == session1.Name), Arg.Any<CallSettings>());
     }
-
-    private static Task<Session> CreateSessionMock(TaskCompletionSource<bool> methodStartedTsc, Task<Session> result) =>
-        Task.Run(() =>
-        {
-            methodStartedTsc.SetResult(true);
-            return result;
-        });
 }
