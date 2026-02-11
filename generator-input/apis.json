@@ -2076,7 +2076,8 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.5.0",
-        "Google.Cloud.Location": "2.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dataform/v1beta1",
