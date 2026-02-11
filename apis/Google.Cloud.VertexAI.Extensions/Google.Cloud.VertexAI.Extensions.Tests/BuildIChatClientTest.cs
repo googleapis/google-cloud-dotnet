@@ -1255,6 +1255,129 @@ public class BuildIChatClientTest
         Assert.Equal("Response with options applied.", ((TextContent) result.Messages[0].Contents[0]).Text);
     }
 
+    [Theory]
+    [InlineData(ReasoningEffort.None)]
+    [InlineData(ReasoningEffort.Low)]
+    [InlineData(ReasoningEffort.Medium)]
+    [InlineData(ReasoningEffort.High)]
+    [InlineData(ReasoningEffort.ExtraHigh)]
+    public async Task IChatClient_GetResponseAsync_WithReasoningEffort(ReasoningEffort effort)
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.NotNull(request.GenerationConfig?.ThinkingConfig);
+
+                if (effort == ReasoningEffort.None)
+                {
+                    Assert.Equal(0, request.GenerationConfig.ThinkingConfig.ThinkingBudget);
+                }
+                else
+                {
+                    var expectedLevel = effort switch
+                    {
+                        ReasoningEffort.Low => GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Low,
+                        ReasoningEffort.Medium => GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Medium,
+                        ReasoningEffort.High => GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.High,
+                        ReasoningEffort.ExtraHigh => GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.High,
+                        _ => throw new InvalidOperationException(),
+                    };
+                    Assert.Equal(expectedLevel, request.GenerationConfig.ThinkingConfig.ThinkingLevel);
+                }
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test")];
+
+        ChatOptions options = new()
+        {
+            Reasoning = new() { Effort = effort },
+        };
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
+        Assert.NotNull(result);
+    }
+
+    [Theory]
+    [InlineData(ReasoningOutput.None, false)]
+    [InlineData(ReasoningOutput.Summary, true)]
+    [InlineData(ReasoningOutput.Full, true)]
+    public async Task IChatClient_GetResponseAsync_WithReasoningOutput(ReasoningOutput output, bool expectedIncludeThoughts)
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.NotNull(request.GenerationConfig?.ThinkingConfig);
+                Assert.Equal(expectedIncludeThoughts, request.GenerationConfig.ThinkingConfig.IncludeThoughts);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test")];
+
+        ChatOptions options = new()
+        {
+            Reasoning = new() { Output = output },
+        };
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
+        Assert.NotNull(result);
+    }
+
+    [Fact]
+    public async Task IChatClient_GetResponseAsync_WithReasoningEffortAndOutput()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.NotNull(request.GenerationConfig?.ThinkingConfig);
+                Assert.Equal(GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.High, request.GenerationConfig.ThinkingConfig.ThinkingLevel);
+                Assert.True(request.GenerationConfig.ThinkingConfig.IncludeThoughts);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test")];
+
+        ChatOptions options = new()
+        {
+            Reasoning = new() { Effort = ReasoningEffort.High, Output = ReasoningOutput.Full },
+        };
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
+        Assert.NotNull(result);
+    }
+
+    [Fact]
+    public async Task IChatClient_GetResponseAsync_WithNoReasoning_NoThinkingConfig()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.Null(request.GenerationConfig?.ThinkingConfig);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test")];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+        Assert.NotNull(result);
+    }
+
     [Fact]
     public async Task IChatClient_GetResponseAsync_WithSystemInstructions()
     {
@@ -2001,6 +2124,49 @@ public class BuildIChatClientTest
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
         Assert.Equal(["Response with", " options applied."], texts);
+    }
+
+    [Fact]
+    public async Task IChatClient_GetStreamingResponseAsync_WithReasoningOptions()
+    {
+        GenerateContentResponse[] responses =
+        [
+            new()
+            {
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "OK" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
+                ModelVersion = "test-model",
+                ResponseId = "response-1"
+            }
+        ];
+
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequestStreaming = request =>
+            {
+                Assert.NotNull(request.GenerationConfig?.ThinkingConfig);
+                Assert.Equal(GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Medium, request.GenerationConfig.ThinkingConfig.ThinkingLevel);
+                Assert.True(request.GenerationConfig.ThinkingConfig.IncludeThoughts);
+
+                return responses;
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test")];
+
+        ChatOptions options = new()
+        {
+            Reasoning = new() { Effort = ReasoningEffort.Medium, Output = ReasoningOutput.Full },
+        };
+
+        List<ChatResponseUpdate> updates = [];
+        await foreach (ChatResponseUpdate update in chatClient.GetStreamingResponseAsync(messages, options))
+        {
+            updates.Add(update);
+        }
+
+        Assert.Single(updates);
     }
 
     [Fact]

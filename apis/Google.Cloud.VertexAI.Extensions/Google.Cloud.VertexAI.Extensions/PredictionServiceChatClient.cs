@@ -225,6 +225,38 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 request.GenerationConfig.TopK = topK;
             }
 
+            if (options.Reasoning is { } reasoning)
+            {
+                if (reasoning.Effort is { } effort)
+                {
+                    request.GenerationConfig.ThinkingConfig ??= new();
+                    switch (effort)
+                    {
+                        case ReasoningEffort.None:
+                            request.GenerationConfig.ThinkingConfig.ThinkingBudget = 0;
+                            break;
+
+                        case ReasoningEffort.Low:
+                            request.GenerationConfig.ThinkingConfig.ThinkingLevel = GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Low;
+                            break;
+
+                        case ReasoningEffort.Medium:
+                            request.GenerationConfig.ThinkingConfig.ThinkingLevel = GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.Medium;
+                            break;
+
+                        default:
+                            request.GenerationConfig.ThinkingConfig.ThinkingLevel = GenerationConfig.Types.ThinkingConfig.Types.ThinkingLevel.High;
+                            break;
+                    }
+                }
+
+                if (reasoning.Output is { } output)
+                {
+                    request.GenerationConfig.ThinkingConfig ??= new();
+                    request.GenerationConfig.ThinkingConfig.IncludeThoughts = output is not ReasoningOutput.None;
+                }
+            }
+
             // Populate tools. Each kind of tool is added on its own, except for function declarations,
             // which are grouped into a single FunctionDeclaration.
             List<FunctionDeclaration>? functionDeclarations = null;
