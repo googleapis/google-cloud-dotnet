@@ -117,7 +117,7 @@ namespace Google.Cloud.Tools.VersionCompat
             
             Regex pattern = new Regex($@"lib/([a-z0-9.]+)/{Regex.Escape(assemblyName)}\.dll");
             var tfms = new List<string>();
-            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+            using (var zip = ZipArchive.OpenArchive(new MemoryStream(bytes)))
             {
                 foreach (var entry in zip.Entries)
                 {
@@ -143,7 +143,7 @@ namespace Google.Cloud.Tools.VersionCompat
             }
             string expectedPath = $"lib/{tfm}/{assemblyName}.dll";
 
-            using (var zip = ZipArchive.Open(new MemoryStream(bytes)))
+            using (var zip = ZipArchive.OpenArchive(new MemoryStream(bytes)))
             {
                 foreach (var entry in zip.Entries)
                 {
