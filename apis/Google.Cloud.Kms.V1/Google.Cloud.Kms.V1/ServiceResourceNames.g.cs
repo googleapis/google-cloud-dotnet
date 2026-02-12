@@ -69,6 +69,18 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class ListRetiredResourcesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetKeyRingRequest
     {
         /// <summary>
@@ -129,6 +141,18 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class GetRetiredResourceRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::RetiredResourceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::RetiredResourceName RetiredResourceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::RetiredResourceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateKeyRingRequest
     {
         /// <summary>
@@ -162,6 +186,30 @@ namespace Google.Cloud.Kms.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCryptoKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyName CryptoKeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCryptoKeyVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -316,6 +364,18 @@ namespace Google.Cloud.Kms.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCryptoKeyMetadata
+    {
+        /// <summary>
+        /// <see cref="RetiredResourceName"/>-typed view over the <see cref="RetiredResource"/> resource name property.
+        /// </summary>
+        public RetiredResourceName RetiredResourceAsRetiredResourceName
+        {
+            get => string.IsNullOrEmpty(RetiredResource) ? null : RetiredResourceName.Parse(RetiredResource, allowUnparsed: true);
+            set => RetiredResource = value?.ToString() ?? "";
         }
     }
 }

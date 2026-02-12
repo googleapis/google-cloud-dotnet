@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Kms.V1;
+    using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1151,6 +1152,282 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListRetiredResources</summary>
+        public void ListRetiredResourcesRequestObject()
+        {
+            // Snippet: ListRetiredResources(ListRetiredResourcesRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRetiredResourcesAsync</summary>
+        public async Task ListRetiredResourcesRequestObjectAsync()
+        {
+            // Snippet: ListRetiredResourcesAsync(ListRetiredResourcesRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRetiredResources</summary>
+        public void ListRetiredResources()
+        {
+            // Snippet: ListRetiredResources(string, string, int?, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRetiredResourcesAsync</summary>
+        public async Task ListRetiredResourcesAsync()
+        {
+            // Snippet: ListRetiredResourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRetiredResources</summary>
+        public void ListRetiredResourcesResourceNames()
+        {
+            // Snippet: ListRetiredResources(LocationName, string, int?, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRetiredResourcesAsync</summary>
+        public async Task ListRetiredResourcesResourceNamesAsync()
+        {
+            // Snippet: ListRetiredResourcesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> response = keyManagementServiceClient.ListRetiredResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RetiredResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRetiredResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RetiredResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RetiredResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RetiredResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetKeyRing</summary>
         public void GetKeyRingRequestObject()
         {
@@ -1588,6 +1865,93 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetRetiredResource</summary>
+        public void GetRetiredResourceRequestObject()
+        {
+            // Snippet: GetRetiredResource(GetRetiredResourceRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            GetRetiredResourceRequest request = new GetRetiredResourceRequest
+            {
+                RetiredResourceName = RetiredResourceName.FromProjectLocationRetiredResource("[PROJECT]", "[LOCATION]", "[RETIRED_RESOURCE]"),
+            };
+            // Make the request
+            RetiredResource response = keyManagementServiceClient.GetRetiredResource(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRetiredResourceAsync</summary>
+        public async Task GetRetiredResourceRequestObjectAsync()
+        {
+            // Snippet: GetRetiredResourceAsync(GetRetiredResourceRequest, CallSettings)
+            // Additional: GetRetiredResourceAsync(GetRetiredResourceRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRetiredResourceRequest request = new GetRetiredResourceRequest
+            {
+                RetiredResourceName = RetiredResourceName.FromProjectLocationRetiredResource("[PROJECT]", "[LOCATION]", "[RETIRED_RESOURCE]"),
+            };
+            // Make the request
+            RetiredResource response = await keyManagementServiceClient.GetRetiredResourceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRetiredResource</summary>
+        public void GetRetiredResource()
+        {
+            // Snippet: GetRetiredResource(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/retiredResources/[RETIRED_RESOURCE]";
+            // Make the request
+            RetiredResource response = keyManagementServiceClient.GetRetiredResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRetiredResourceAsync</summary>
+        public async Task GetRetiredResourceAsync()
+        {
+            // Snippet: GetRetiredResourceAsync(string, CallSettings)
+            // Additional: GetRetiredResourceAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/retiredResources/[RETIRED_RESOURCE]";
+            // Make the request
+            RetiredResource response = await keyManagementServiceClient.GetRetiredResourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRetiredResource</summary>
+        public void GetRetiredResourceResourceNames()
+        {
+            // Snippet: GetRetiredResource(RetiredResourceName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            RetiredResourceName name = RetiredResourceName.FromProjectLocationRetiredResource("[PROJECT]", "[LOCATION]", "[RETIRED_RESOURCE]");
+            // Make the request
+            RetiredResource response = keyManagementServiceClient.GetRetiredResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRetiredResourceAsync</summary>
+        public async Task GetRetiredResourceResourceNamesAsync()
+        {
+            // Snippet: GetRetiredResourceAsync(RetiredResourceName, CallSettings)
+            // Additional: GetRetiredResourceAsync(RetiredResourceName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RetiredResourceName name = RetiredResourceName.FromProjectLocationRetiredResource("[PROJECT]", "[LOCATION]", "[RETIRED_RESOURCE]");
+            // Make the request
+            RetiredResource response = await keyManagementServiceClient.GetRetiredResourceAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateKeyRing</summary>
         public void CreateKeyRingRequestObject()
         {
@@ -1878,6 +2242,372 @@ namespace GoogleCSharpSnippets
             CryptoKeyVersion cryptoKeyVersion = new CryptoKeyVersion();
             // Make the request
             CryptoKeyVersion response = await keyManagementServiceClient.CreateCryptoKeyVersionAsync(parent, cryptoKeyVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKey</summary>
+        public void DeleteCryptoKeyRequestObject()
+        {
+            // Snippet: DeleteCryptoKey(DeleteCryptoKeyRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCryptoKeyRequest request = new DeleteCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = keyManagementServiceClient.DeleteCryptoKey(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyAsync</summary>
+        public async Task DeleteCryptoKeyRequestObjectAsync()
+        {
+            // Snippet: DeleteCryptoKeyAsync(DeleteCryptoKeyRequest, CallSettings)
+            // Additional: DeleteCryptoKeyAsync(DeleteCryptoKeyRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCryptoKeyRequest request = new DeleteCryptoKeyRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKey</summary>
+        public void DeleteCryptoKey()
+        {
+            // Snippet: DeleteCryptoKey(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = keyManagementServiceClient.DeleteCryptoKey(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyAsync</summary>
+        public async Task DeleteCryptoKeyAsync()
+        {
+            // Snippet: DeleteCryptoKeyAsync(string, CallSettings)
+            // Additional: DeleteCryptoKeyAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKey</summary>
+        public void DeleteCryptoKeyResourceNames()
+        {
+            // Snippet: DeleteCryptoKey(CryptoKeyName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = keyManagementServiceClient.DeleteCryptoKey(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyAsync</summary>
+        public async Task DeleteCryptoKeyResourceNamesAsync()
+        {
+            // Snippet: DeleteCryptoKeyAsync(CryptoKeyName, CallSettings)
+            // Additional: DeleteCryptoKeyAsync(CryptoKeyName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersion</summary>
+        public void DeleteCryptoKeyVersionRequestObject()
+        {
+            // Snippet: DeleteCryptoKeyVersion(DeleteCryptoKeyVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCryptoKeyVersionRequest request = new DeleteCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = keyManagementServiceClient.DeleteCryptoKeyVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKeyVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersionAsync</summary>
+        public async Task DeleteCryptoKeyVersionRequestObjectAsync()
+        {
+            // Snippet: DeleteCryptoKeyVersionAsync(DeleteCryptoKeyVersionRequest, CallSettings)
+            // Additional: DeleteCryptoKeyVersionAsync(DeleteCryptoKeyVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCryptoKeyVersionRequest request = new DeleteCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersion</summary>
+        public void DeleteCryptoKeyVersion()
+        {
+            // Snippet: DeleteCryptoKeyVersion(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = keyManagementServiceClient.DeleteCryptoKeyVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKeyVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersionAsync</summary>
+        public async Task DeleteCryptoKeyVersionAsync()
+        {
+            // Snippet: DeleteCryptoKeyVersionAsync(string, CallSettings)
+            // Additional: DeleteCryptoKeyVersionAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersion</summary>
+        public void DeleteCryptoKeyVersionResourceNames()
+        {
+            // Snippet: DeleteCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = keyManagementServiceClient.DeleteCryptoKeyVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = keyManagementServiceClient.PollOnceDeleteCryptoKeyVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCryptoKeyVersionAsync</summary>
+        public async Task DeleteCryptoKeyVersionResourceNamesAsync()
+        {
+            // Snippet: DeleteCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
+            // Additional: DeleteCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> response = await keyManagementServiceClient.DeleteCryptoKeyVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteCryptoKeyVersionMetadata> retrievedResponse = await keyManagementServiceClient.PollOnceDeleteCryptoKeyVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

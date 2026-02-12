@@ -226,6 +226,18 @@
                 "DecryptAsync"
               ]
             },
+            "DeleteCryptoKey": {
+              "methods": [
+                "DeleteCryptoKey",
+                "DeleteCryptoKeyAsync"
+              ]
+            },
+            "DeleteCryptoKeyVersion": {
+              "methods": [
+                "DeleteCryptoKeyVersion",
+                "DeleteCryptoKeyVersionAsync"
+              ]
+            },
             "DestroyCryptoKeyVersion": {
               "methods": [
                 "DestroyCryptoKeyVersion",
@@ -274,6 +286,12 @@
                 "GetPublicKeyAsync"
               ]
             },
+            "GetRetiredResource": {
+              "methods": [
+                "GetRetiredResource",
+                "GetRetiredResourceAsync"
+              ]
+            },
             "ImportCryptoKeyVersion": {
               "methods": [
                 "ImportCryptoKeyVersion",
@@ -302,6 +320,12 @@
               "methods": [
                 "ListKeyRings",
                 "ListKeyRingsAsync"
+              ]
+            },
+            "ListRetiredResources": {
+              "methods": [
+                "ListRetiredResources",
+                "ListRetiredResourcesAsync"
               ]
             },
             "MacSign": {
