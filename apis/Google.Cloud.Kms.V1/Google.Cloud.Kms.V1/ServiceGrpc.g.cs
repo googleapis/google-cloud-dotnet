@@ -91,6 +91,10 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Marshaller_google_cloud_kms_v1_ListImportJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest> __Marshaller_google_cloud_kms_v1_ListRetiredResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse> __Marshaller_google_cloud_kms_v1_ListRetiredResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetKeyRingRequest> __Marshaller_google_cloud_kms_v1_GetKeyRingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.KeyRing> __Marshaller_google_cloud_kms_v1_KeyRing = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.KeyRing.Parser));
@@ -111,11 +115,21 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportJob> __Marshaller_google_cloud_kms_v1_ImportJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportJob.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetRetiredResourceRequest> __Marshaller_google_cloud_kms_v1_GetRetiredResourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetRetiredResourceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RetiredResource> __Marshaller_google_cloud_kms_v1_RetiredResource = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RetiredResource.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateKeyRingRequest> __Marshaller_google_cloud_kms_v1_CreateKeyRingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_DeleteCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_DeleteCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -204,6 +218,14 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ListImportJobsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest, global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse> __Method_ListRetiredResources = new grpc::Method<global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest, global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRetiredResources",
+        __Marshaller_google_cloud_kms_v1_ListRetiredResourcesRequest,
+        __Marshaller_google_cloud_kms_v1_ListRetiredResourcesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_GetKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -244,6 +266,14 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ImportJob);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetRetiredResourceRequest, global::Google.Cloud.Kms.V1.RetiredResource> __Method_GetRetiredResource = new grpc::Method<global::Google.Cloud.Kms.V1.GetRetiredResourceRequest, global::Google.Cloud.Kms.V1.RetiredResource>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRetiredResource",
+        __Marshaller_google_cloud_kms_v1_GetRetiredResourceRequest,
+        __Marshaller_google_cloud_kms_v1_RetiredResource);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_CreateKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -266,6 +296,22 @@ namespace Google.Cloud.Kms.V1 {
         "CreateCryptoKeyVersion",
         __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest, global::Google.LongRunning.Operation> __Method_DeleteCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCryptoKey",
+        __Marshaller_google_cloud_kms_v1_DeleteCryptoKeyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest, global::Google.LongRunning.Operation> __Method_DeleteCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCryptoKeyVersion",
+        __Marshaller_google_cloud_kms_v1_DeleteCryptoKeyVersionRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_ImportCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
@@ -462,6 +508,20 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
+      /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+      /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+      /// RetiredResources prevent the reuse of these resource names after deletion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse> ListRetiredResources(global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Returns metadata for a given [KeyRing][google.cloud.kms.v1.KeyRing].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -530,6 +590,20 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
+      /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+      /// resource, which represents the record of a deleted
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.RetiredResource> GetRetiredResource(global::Google.Cloud.Kms.V1.GetRetiredResourceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and
       /// Location.
       /// </summary>
@@ -572,6 +646,45 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> CreateCryptoKeyVersion(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+      /// have been previously deleted using
+      /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+      /// The specified crypto key will be immediately and permanently deleted upon
+      /// calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCryptoKey(global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Permanently deletes the given
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+      /// the version has not been previously imported and if its
+      /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+      /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+      /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+      /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+      /// Successfully imported
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+      /// at this time. The specified version will be immediately and permanently
+      /// deleted upon calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCryptoKeyVersion(global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1089,6 +1202,62 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListImportJobs, null, options, request);
       }
       /// <summary>
+      /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+      /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+      /// RetiredResources prevent the reuse of these resource names after deletion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse ListRetiredResources(global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRetiredResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+      /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+      /// RetiredResources prevent the reuse of these resource names after deletion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse ListRetiredResources(global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRetiredResources, null, options, request);
+      }
+      /// <summary>
+      /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+      /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+      /// RetiredResources prevent the reuse of these resource names after deletion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse> ListRetiredResourcesAsync(global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRetiredResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+      /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+      /// RetiredResources prevent the reuse of these resource names after deletion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse> ListRetiredResourcesAsync(global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRetiredResources, null, options, request);
+      }
+      /// <summary>
       /// Returns metadata for a given [KeyRing][google.cloud.kms.v1.KeyRing].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1361,6 +1530,62 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetImportJob, null, options, request);
       }
       /// <summary>
+      /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+      /// resource, which represents the record of a deleted
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RetiredResource GetRetiredResource(global::Google.Cloud.Kms.V1.GetRetiredResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRetiredResource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+      /// resource, which represents the record of a deleted
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RetiredResource GetRetiredResource(global::Google.Cloud.Kms.V1.GetRetiredResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRetiredResource, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+      /// resource, which represents the record of a deleted
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RetiredResource> GetRetiredResourceAsync(global::Google.Cloud.Kms.V1.GetRetiredResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRetiredResourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+      /// resource, which represents the record of a deleted
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RetiredResource> GetRetiredResourceAsync(global::Google.Cloud.Kms.V1.GetRetiredResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRetiredResource, null, options, request);
+      }
+      /// <summary>
       /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and
       /// Location.
       /// </summary>
@@ -1547,6 +1772,162 @@ namespace Google.Cloud.Kms.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> CreateCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+      /// have been previously deleted using
+      /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+      /// The specified crypto key will be immediately and permanently deleted upon
+      /// calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCryptoKey(global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCryptoKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+      /// have been previously deleted using
+      /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+      /// The specified crypto key will be immediately and permanently deleted upon
+      /// calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCryptoKey(global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCryptoKey, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+      /// have been previously deleted using
+      /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+      /// The specified crypto key will be immediately and permanently deleted upon
+      /// calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCryptoKeyAsync(global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCryptoKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+      /// have been previously deleted using
+      /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+      /// The specified crypto key will be immediately and permanently deleted upon
+      /// calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCryptoKeyAsync(global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCryptoKey, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes the given
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+      /// the version has not been previously imported and if its
+      /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+      /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+      /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+      /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+      /// Successfully imported
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+      /// at this time. The specified version will be immediately and permanently
+      /// deleted upon calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCryptoKeyVersion(global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes the given
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+      /// the version has not been previously imported and if its
+      /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+      /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+      /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+      /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+      /// Successfully imported
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+      /// at this time. The specified version will be immediately and permanently
+      /// deleted upon calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteCryptoKeyVersion(global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes the given
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+      /// the version has not been previously imported and if its
+      /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+      /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+      /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+      /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+      /// Successfully imported
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+      /// at this time. The specified version will be immediately and permanently
+      /// deleted upon calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes the given
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+      /// the version has not been previously imported and if its
+      /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+      /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+      /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+      /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+      /// Successfully imported
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+      /// at this time. The specified version will be immediately and permanently
+      /// deleted upon calling this method. This action cannot be undone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCryptoKeyVersion, null, options, request);
       }
       /// <summary>
       /// Import wrapped key material into a
@@ -2730,14 +3111,18 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_ListCryptoKeys, serviceImpl.ListCryptoKeys)
           .AddMethod(__Method_ListCryptoKeyVersions, serviceImpl.ListCryptoKeyVersions)
           .AddMethod(__Method_ListImportJobs, serviceImpl.ListImportJobs)
+          .AddMethod(__Method_ListRetiredResources, serviceImpl.ListRetiredResources)
           .AddMethod(__Method_GetKeyRing, serviceImpl.GetKeyRing)
           .AddMethod(__Method_GetCryptoKey, serviceImpl.GetCryptoKey)
           .AddMethod(__Method_GetCryptoKeyVersion, serviceImpl.GetCryptoKeyVersion)
           .AddMethod(__Method_GetPublicKey, serviceImpl.GetPublicKey)
           .AddMethod(__Method_GetImportJob, serviceImpl.GetImportJob)
+          .AddMethod(__Method_GetRetiredResource, serviceImpl.GetRetiredResource)
           .AddMethod(__Method_CreateKeyRing, serviceImpl.CreateKeyRing)
           .AddMethod(__Method_CreateCryptoKey, serviceImpl.CreateCryptoKey)
           .AddMethod(__Method_CreateCryptoKeyVersion, serviceImpl.CreateCryptoKeyVersion)
+          .AddMethod(__Method_DeleteCryptoKey, serviceImpl.DeleteCryptoKey)
+          .AddMethod(__Method_DeleteCryptoKeyVersion, serviceImpl.DeleteCryptoKeyVersion)
           .AddMethod(__Method_ImportCryptoKeyVersion, serviceImpl.ImportCryptoKeyVersion)
           .AddMethod(__Method_CreateImportJob, serviceImpl.CreateImportJob)
           .AddMethod(__Method_UpdateCryptoKey, serviceImpl.UpdateCryptoKey)
@@ -2768,14 +3153,18 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_ListCryptoKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse>(serviceImpl.ListCryptoKeys));
       serviceBinder.AddMethod(__Method_ListCryptoKeyVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse>(serviceImpl.ListCryptoKeyVersions));
       serviceBinder.AddMethod(__Method_ListImportJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse>(serviceImpl.ListImportJobs));
+      serviceBinder.AddMethod(__Method_ListRetiredResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListRetiredResourcesRequest, global::Google.Cloud.Kms.V1.ListRetiredResourcesResponse>(serviceImpl.ListRetiredResources));
       serviceBinder.AddMethod(__Method_GetKeyRing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(serviceImpl.GetKeyRing));
       serviceBinder.AddMethod(__Method_GetCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.GetCryptoKey));
       serviceBinder.AddMethod(__Method_GetCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.GetCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_GetPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey>(serviceImpl.GetPublicKey));
       serviceBinder.AddMethod(__Method_GetImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(serviceImpl.GetImportJob));
+      serviceBinder.AddMethod(__Method_GetRetiredResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetRetiredResourceRequest, global::Google.Cloud.Kms.V1.RetiredResource>(serviceImpl.GetRetiredResource));
       serviceBinder.AddMethod(__Method_CreateKeyRing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(serviceImpl.CreateKeyRing));
       serviceBinder.AddMethod(__Method_CreateCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.CreateCryptoKey));
       serviceBinder.AddMethod(__Method_CreateCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.CreateCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_DeleteCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCryptoKey));
+      serviceBinder.AddMethod(__Method_DeleteCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_ImportCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.ImportCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_CreateImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(serviceImpl.CreateImportJob));
       serviceBinder.AddMethod(__Method_UpdateCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.UpdateCryptoKey));

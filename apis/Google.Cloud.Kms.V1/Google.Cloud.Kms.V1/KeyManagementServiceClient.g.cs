@@ -22,6 +22,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -53,14 +54,20 @@ namespace Google.Cloud.Kms.V1
             ListCryptoKeysSettings = existing.ListCryptoKeysSettings;
             ListCryptoKeyVersionsSettings = existing.ListCryptoKeyVersionsSettings;
             ListImportJobsSettings = existing.ListImportJobsSettings;
+            ListRetiredResourcesSettings = existing.ListRetiredResourcesSettings;
             GetKeyRingSettings = existing.GetKeyRingSettings;
             GetCryptoKeySettings = existing.GetCryptoKeySettings;
             GetCryptoKeyVersionSettings = existing.GetCryptoKeyVersionSettings;
             GetPublicKeySettings = existing.GetPublicKeySettings;
             GetImportJobSettings = existing.GetImportJobSettings;
+            GetRetiredResourceSettings = existing.GetRetiredResourceSettings;
             CreateKeyRingSettings = existing.CreateKeyRingSettings;
             CreateCryptoKeySettings = existing.CreateCryptoKeySettings;
             CreateCryptoKeyVersionSettings = existing.CreateCryptoKeyVersionSettings;
+            DeleteCryptoKeySettings = existing.DeleteCryptoKeySettings;
+            DeleteCryptoKeyOperationsSettings = existing.DeleteCryptoKeyOperationsSettings.Clone();
+            DeleteCryptoKeyVersionSettings = existing.DeleteCryptoKeyVersionSettings;
+            DeleteCryptoKeyVersionOperationsSettings = existing.DeleteCryptoKeyVersionOperationsSettings.Clone();
             ImportCryptoKeyVersionSettings = existing.ImportCryptoKeyVersionSettings;
             CreateImportJobSettings = existing.CreateImportJobSettings;
             UpdateCryptoKeySettings = existing.UpdateCryptoKeySettings;
@@ -172,6 +179,28 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.ListRetiredResources</c> and
+        /// <c>KeyManagementServiceClient.ListRetiredResourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRetiredResourcesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>KeyManagementServiceClient.GetKeyRing</c> and <c>KeyManagementServiceClient.GetKeyRingAsync</c>.
         /// </summary>
         /// <remarks>
@@ -278,6 +307,28 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.GetRetiredResource</c> and
+        /// <c>KeyManagementServiceClient.GetRetiredResourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRetiredResourceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>KeyManagementServiceClient.CreateKeyRing</c> and <c>KeyManagementServiceClient.CreateKeyRingAsync</c>.
         /// </summary>
         /// <remarks>
@@ -331,6 +382,86 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.DeleteCryptoKey</c> and <c>KeyManagementServiceClient.DeleteCryptoKeyAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCryptoKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>KeyManagementServiceClient.DeleteCryptoKey</c> and
+        /// <c>KeyManagementServiceClient.DeleteCryptoKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteCryptoKeyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.DeleteCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.DeleteCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>KeyManagementServiceClient.DeleteCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.DeleteCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteCryptoKeyVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1460,6 +1591,176 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResources(ListRetiredResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResourcesAsync(ListRetiredResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project-specific location holding the
+        /// [RetiredResources][google.cloud.kms.v1.RetiredResource], in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRetiredResources(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project-specific location holding the
+        /// [RetiredResources][google.cloud.kms.v1.RetiredResource], in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRetiredResourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project-specific location holding the
+        /// [RetiredResources][google.cloud.kms.v1.RetiredResource], in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRetiredResources(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project-specific location holding the
+        /// [RetiredResources][google.cloud.kms.v1.RetiredResource], in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RetiredResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRetiredResourcesRequest request = new ListRetiredResourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRetiredResourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Returns metadata for a given [KeyRing][google.cloud.kms.v1.KeyRing].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2087,6 +2388,135 @@ namespace Google.Cloud.Kms.V1
             GetImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetiredResource GetRetiredResource(GetRetiredResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(GetRetiredResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(GetRetiredResourceRequest request, st::CancellationToken cancellationToken) =>
+            GetRetiredResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetiredResource GetRetiredResource(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRetiredResource(new GetRetiredResourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRetiredResourceAsync(new GetRetiredResourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRetiredResourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetiredResource GetRetiredResource(RetiredResourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRetiredResource(new GetRetiredResourceRequest
+            {
+                RetiredResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(RetiredResourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRetiredResourceAsync(new GetRetiredResourceRequest
+            {
+                RetiredResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.RetiredResource.name] of the
+        /// [RetiredResource][google.cloud.kms.v1.RetiredResource] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetiredResource> GetRetiredResourceAsync(RetiredResourceName name, st::CancellationToken cancellationToken) =>
+            GetRetiredResourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and
         /// Location.
         /// </summary>
@@ -2669,6 +3099,416 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CryptoKeyVersion> CreateCryptoKeyVersionAsync(CryptoKeyName parent, CryptoKeyVersion cryptoKeyVersion, st::CancellationToken cancellationToken) =>
             CreateCryptoKeyVersionAsync(parent, cryptoKeyVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata> DeleteCryptoKey(DeleteCryptoKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(DeleteCryptoKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(DeleteCryptoKeyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteCryptoKey</c>.</summary>
+        public virtual lro::OperationsClient DeleteCryptoKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteCryptoKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata> PollOnceDeleteCryptoKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCryptoKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCryptoKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> PollOnceDeleteCryptoKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCryptoKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata> DeleteCryptoKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKey(new DeleteCryptoKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyAsync(new DeleteCryptoKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata> DeleteCryptoKey(CryptoKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKey(new DeleteCryptoKeyRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(CryptoKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyAsync(new DeleteCryptoKeyRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(CryptoKeyName name, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata> DeleteCryptoKeyVersion(DeleteCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(DeleteCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(DeleteCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteCryptoKeyVersion</c>.</summary>
+        public virtual lro::OperationsClient DeleteCryptoKeyVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCryptoKeyVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata> PollOnceDeleteCryptoKeyVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCryptoKeyVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCryptoKeyVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> PollOnceDeleteCryptoKeyVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCryptoKeyVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata> DeleteCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyVersion(new DeleteCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyVersionAsync(new DeleteCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata> DeleteCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyVersion(new DeleteCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCryptoKeyVersionAsync(new DeleteCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
+            DeleteCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Import wrapped key material into a
@@ -5243,6 +6083,8 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<ListImportJobsRequest, ListImportJobsResponse> _callListImportJobs;
 
+        private readonly gaxgrpc::ApiCall<ListRetiredResourcesRequest, ListRetiredResourcesResponse> _callListRetiredResources;
+
         private readonly gaxgrpc::ApiCall<GetKeyRingRequest, KeyRing> _callGetKeyRing;
 
         private readonly gaxgrpc::ApiCall<GetCryptoKeyRequest, CryptoKey> _callGetCryptoKey;
@@ -5253,11 +6095,17 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<GetImportJobRequest, ImportJob> _callGetImportJob;
 
+        private readonly gaxgrpc::ApiCall<GetRetiredResourceRequest, RetiredResource> _callGetRetiredResource;
+
         private readonly gaxgrpc::ApiCall<CreateKeyRingRequest, KeyRing> _callCreateKeyRing;
 
         private readonly gaxgrpc::ApiCall<CreateCryptoKeyRequest, CryptoKey> _callCreateCryptoKey;
 
         private readonly gaxgrpc::ApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion> _callCreateCryptoKeyVersion;
+
+        private readonly gaxgrpc::ApiCall<DeleteCryptoKeyRequest, lro::Operation> _callDeleteCryptoKey;
+
+        private readonly gaxgrpc::ApiCall<DeleteCryptoKeyVersionRequest, lro::Operation> _callDeleteCryptoKeyVersion;
 
         private readonly gaxgrpc::ApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion> _callImportCryptoKeyVersion;
 
@@ -5309,6 +6157,8 @@ namespace Google.Cloud.Kms.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            DeleteCryptoKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCryptoKeyOperationsSettings, logger);
+            DeleteCryptoKeyVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCryptoKeyVersionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>("ListKeyRings", grpcClient.ListKeyRingsAsync, grpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -5323,6 +6173,9 @@ namespace Google.Cloud.Kms.V1
             _callListImportJobs = clientHelper.BuildApiCall<ListImportJobsRequest, ListImportJobsResponse>("ListImportJobs", grpcClient.ListImportJobsAsync, grpcClient.ListImportJobs, effectiveSettings.ListImportJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListImportJobs);
             Modify_ListImportJobsApiCall(ref _callListImportJobs);
+            _callListRetiredResources = clientHelper.BuildApiCall<ListRetiredResourcesRequest, ListRetiredResourcesResponse>("ListRetiredResources", grpcClient.ListRetiredResourcesAsync, grpcClient.ListRetiredResources, effectiveSettings.ListRetiredResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRetiredResources);
+            Modify_ListRetiredResourcesApiCall(ref _callListRetiredResources);
             _callGetKeyRing = clientHelper.BuildApiCall<GetKeyRingRequest, KeyRing>("GetKeyRing", grpcClient.GetKeyRingAsync, grpcClient.GetKeyRing, effectiveSettings.GetKeyRingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetKeyRing);
             Modify_GetKeyRingApiCall(ref _callGetKeyRing);
@@ -5338,6 +6191,9 @@ namespace Google.Cloud.Kms.V1
             _callGetImportJob = clientHelper.BuildApiCall<GetImportJobRequest, ImportJob>("GetImportJob", grpcClient.GetImportJobAsync, grpcClient.GetImportJob, effectiveSettings.GetImportJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetImportJob);
             Modify_GetImportJobApiCall(ref _callGetImportJob);
+            _callGetRetiredResource = clientHelper.BuildApiCall<GetRetiredResourceRequest, RetiredResource>("GetRetiredResource", grpcClient.GetRetiredResourceAsync, grpcClient.GetRetiredResource, effectiveSettings.GetRetiredResourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRetiredResource);
+            Modify_GetRetiredResourceApiCall(ref _callGetRetiredResource);
             _callCreateKeyRing = clientHelper.BuildApiCall<CreateKeyRingRequest, KeyRing>("CreateKeyRing", grpcClient.CreateKeyRingAsync, grpcClient.CreateKeyRing, effectiveSettings.CreateKeyRingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateKeyRing);
             Modify_CreateKeyRingApiCall(ref _callCreateKeyRing);
@@ -5347,6 +6203,12 @@ namespace Google.Cloud.Kms.V1
             _callCreateCryptoKeyVersion = clientHelper.BuildApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion>("CreateCryptoKeyVersion", grpcClient.CreateCryptoKeyVersionAsync, grpcClient.CreateCryptoKeyVersion, effectiveSettings.CreateCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCryptoKeyVersion);
             Modify_CreateCryptoKeyVersionApiCall(ref _callCreateCryptoKeyVersion);
+            _callDeleteCryptoKey = clientHelper.BuildApiCall<DeleteCryptoKeyRequest, lro::Operation>("DeleteCryptoKey", grpcClient.DeleteCryptoKeyAsync, grpcClient.DeleteCryptoKey, effectiveSettings.DeleteCryptoKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCryptoKey);
+            Modify_DeleteCryptoKeyApiCall(ref _callDeleteCryptoKey);
+            _callDeleteCryptoKeyVersion = clientHelper.BuildApiCall<DeleteCryptoKeyVersionRequest, lro::Operation>("DeleteCryptoKeyVersion", grpcClient.DeleteCryptoKeyVersionAsync, grpcClient.DeleteCryptoKeyVersion, effectiveSettings.DeleteCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCryptoKeyVersion);
+            Modify_DeleteCryptoKeyVersionApiCall(ref _callDeleteCryptoKeyVersion);
             _callImportCryptoKeyVersion = clientHelper.BuildApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion>("ImportCryptoKeyVersion", grpcClient.ImportCryptoKeyVersionAsync, grpcClient.ImportCryptoKeyVersion, effectiveSettings.ImportCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportCryptoKeyVersion);
             Modify_ImportCryptoKeyVersionApiCall(ref _callImportCryptoKeyVersion);
@@ -5411,6 +6273,8 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_ListImportJobsApiCall(ref gaxgrpc::ApiCall<ListImportJobsRequest, ListImportJobsResponse> call);
 
+        partial void Modify_ListRetiredResourcesApiCall(ref gaxgrpc::ApiCall<ListRetiredResourcesRequest, ListRetiredResourcesResponse> call);
+
         partial void Modify_GetKeyRingApiCall(ref gaxgrpc::ApiCall<GetKeyRingRequest, KeyRing> call);
 
         partial void Modify_GetCryptoKeyApiCall(ref gaxgrpc::ApiCall<GetCryptoKeyRequest, CryptoKey> call);
@@ -5421,11 +6285,17 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_GetImportJobApiCall(ref gaxgrpc::ApiCall<GetImportJobRequest, ImportJob> call);
 
+        partial void Modify_GetRetiredResourceApiCall(ref gaxgrpc::ApiCall<GetRetiredResourceRequest, RetiredResource> call);
+
         partial void Modify_CreateKeyRingApiCall(ref gaxgrpc::ApiCall<CreateKeyRingRequest, KeyRing> call);
 
         partial void Modify_CreateCryptoKeyApiCall(ref gaxgrpc::ApiCall<CreateCryptoKeyRequest, CryptoKey> call);
 
         partial void Modify_CreateCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion> call);
+
+        partial void Modify_DeleteCryptoKeyApiCall(ref gaxgrpc::ApiCall<DeleteCryptoKeyRequest, lro::Operation> call);
+
+        partial void Modify_DeleteCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<DeleteCryptoKeyVersionRequest, lro::Operation> call);
 
         partial void Modify_ImportCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion> call);
 
@@ -5480,6 +6350,8 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_ListImportJobsRequest(ref ListImportJobsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListRetiredResourcesRequest(ref ListRetiredResourcesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetKeyRingRequest(ref GetKeyRingRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetCryptoKeyRequest(ref GetCryptoKeyRequest request, ref gaxgrpc::CallSettings settings);
@@ -5490,11 +6362,17 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_GetImportJobRequest(ref GetImportJobRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetRetiredResourceRequest(ref GetRetiredResourceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateKeyRingRequest(ref CreateKeyRingRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCryptoKeyRequest(ref CreateCryptoKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCryptoKeyVersionRequest(ref CreateCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCryptoKeyRequest(ref DeleteCryptoKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCryptoKeyVersionRequest(ref DeleteCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportCryptoKeyVersionRequest(ref ImportCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5624,6 +6502,34 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_ListImportJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListImportJobsRequest, ListImportJobsResponse, ImportJob>(_callListImportJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RetiredResource"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResources(ListRetiredResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRetiredResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRetiredResourcesRequest, ListRetiredResourcesResponse, RetiredResource>(_callListRetiredResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the [RetiredResources][google.cloud.kms.v1.RetiredResource] which are
+        /// the records of deleted [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+        /// RetiredResources prevent the reuse of these resource names after deletion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RetiredResource"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRetiredResourcesResponse, RetiredResource> ListRetiredResourcesAsync(ListRetiredResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRetiredResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRetiredResourcesRequest, ListRetiredResourcesResponse, RetiredResource>(_callListRetiredResources, request, callSettings);
         }
 
         /// <summary>
@@ -5763,6 +6669,34 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RetiredResource GetRetiredResource(GetRetiredResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRetiredResourceRequest(ref request, ref callSettings);
+            return _callGetRetiredResource.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a specific [RetiredResource][google.cloud.kms.v1.RetiredResource]
+        /// resource, which represents the record of a deleted
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RetiredResource> GetRetiredResourceAsync(GetRetiredResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRetiredResourceRequest(ref request, ref callSettings);
+            return _callGetRetiredResource.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and
         /// Location.
         /// </summary>
@@ -5854,6 +6788,90 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_CreateCryptoKeyVersionRequest(ref request, ref callSettings);
             return _callCreateCryptoKeyVersion.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteCryptoKey</c>.</summary>
+        public override lro::OperationsClient DeleteCryptoKeyOperationsClient { get; }
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata> DeleteCryptoKey(DeleteCryptoKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCryptoKeyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>(_callDeleteCryptoKey.Sync(request, callSettings), DeleteCryptoKeyOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes the given [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// All child [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] must
+        /// have been previously deleted using
+        /// [KeyManagementService.DeleteCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion].
+        /// The specified crypto key will be immediately and permanently deleted upon
+        /// calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>> DeleteCryptoKeyAsync(DeleteCryptoKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCryptoKeyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteCryptoKeyMetadata>(await _callDeleteCryptoKey.Async(request, callSettings).ConfigureAwait(false), DeleteCryptoKeyOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteCryptoKeyVersion</c>.</summary>
+        public override lro::OperationsClient DeleteCryptoKeyVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata> DeleteCryptoKeyVersion(DeleteCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCryptoKeyVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>(_callDeleteCryptoKeyVersion.Sync(request, callSettings), DeleteCryptoKeyVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes the given
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Only possible if
+        /// the version has not been previously imported and if its
+        /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is one of
+        /// [DESTROYED][CryptoKeyVersionState.DESTROYED],
+        /// [IMPORT_FAILED][CryptoKeyVersionState.IMPORT_FAILED], or
+        /// [GENERATION_FAILED][CryptoKeyVersionState.GENERATION_FAILED].
+        /// Successfully imported
+        /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] cannot be deleted
+        /// at this time. The specified version will be immediately and permanently
+        /// deleted upon calling this method. This action cannot be undone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>> DeleteCryptoKeyVersionAsync(DeleteCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCryptoKeyVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteCryptoKeyVersionMetadata>(await _callDeleteCryptoKeyVersion.Async(request, callSettings).ConfigureAwait(false), DeleteCryptoKeyVersionOperationsClient);
         }
 
         /// <summary>
@@ -6455,6 +7473,10 @@ namespace Google.Cloud.Kms.V1
     {
     }
 
+    public partial class ListRetiredResourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListKeyRingsResponse : gaxgrpc::IPageResponse<KeyRing>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -6485,6 +7507,28 @@ namespace Google.Cloud.Kms.V1
         public scg::IEnumerator<ImportJob> GetEnumerator() => ImportJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRetiredResourcesResponse : gaxgrpc::IPageResponse<RetiredResource>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RetiredResource> GetEnumerator() => RetiredResources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class KeyManagementService
+    {
+        public partial class KeyManagementServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class KeyManagementService

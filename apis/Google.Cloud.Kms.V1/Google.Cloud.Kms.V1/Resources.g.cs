@@ -173,22 +173,29 @@ namespace Google.Cloud.Kms.V1 {
             "IAEoCRIfChdla21fY29ubmVjdGlvbl9rZXlfcGF0aBgCIAEoCSJiCh1LZXlB",
             "Y2Nlc3NKdXN0aWZpY2F0aW9uc1BvbGljeRJBChZhbGxvd2VkX2FjY2Vzc19y",
             "ZWFzb25zGAEgAygOMiEuZ29vZ2xlLmNsb3VkLmttcy52MS5BY2Nlc3NSZWFz",
-            "b24qgQEKD1Byb3RlY3Rpb25MZXZlbBIgChxQUk9URUNUSU9OX0xFVkVMX1VO",
-            "U1BFQ0lGSUVEEAASDAoIU09GVFdBUkUQARIHCgNIU00QAhIMCghFWFRFUk5B",
-            "TBADEhAKDEVYVEVSTkFMX1ZQQxAEEhUKEUhTTV9TSU5HTEVfVEVOQU5UEAUq",
-            "swMKDEFjY2Vzc1JlYXNvbhIWChJSRUFTT05fVU5TUEVDSUZJRUQQABIeChpD",
-            "VVNUT01FUl9JTklUSUFURURfU1VQUE9SVBABEhwKGEdPT0dMRV9JTklUSUFU",
-            "RURfU0VSVklDRRACEhwKGFRISVJEX1BBUlRZX0RBVEFfUkVRVUVTVBADEhsK",
-            "F0dPT0dMRV9JTklUSUFURURfUkVWSUVXEAQSHQoZQ1VTVE9NRVJfSU5JVElB",
-            "VEVEX0FDQ0VTUxAFEiUKIUdPT0dMRV9JTklUSUFURURfU1lTVEVNX09QRVJB",
-            "VElPThAGEhcKE1JFQVNPTl9OT1RfRVhQRUNURUQQBxIqCiJNT0RJRklFRF9D",
-            "VVNUT01FUl9JTklUSUFURURfQUNDRVNTEAgaAggBEjIKKk1PRElGSUVEX0dP",
-            "T0dMRV9JTklUSUFURURfU1lTVEVNX09QRVJBVElPThAJGgIIARInCiNHT09H",
-            "TEVfUkVTUE9OU0VfVE9fUFJPRFVDVElPTl9BTEVSVBAKEioKJkNVU1RPTUVS",
-            "X0FVVEhPUklaRURfV09SS0ZMT1dfU0VSVklDSU5HEAtChQEKF2NvbS5nb29n",
-            "bGUuY2xvdWQua21zLnYxQhFLbXNSZXNvdXJjZXNQcm90b1ABWiljbG91ZC5n",
-            "b29nbGUuY29tL2dvL2ttcy9hcGl2MS9rbXNwYjtrbXNwYqoCE0dvb2dsZS5D",
-            "bG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xvdWRcS21zXFYxYgZwcm90bzM="));
+            "b24iuQIKD1JldGlyZWRSZXNvdXJjZRIUCgRuYW1lGAEgASgJQgbgQQPgQQgS",
+            "HgoRb3JpZ2luYWxfcmVzb3VyY2UYAiABKAlCA+BBAxIaCg1yZXNvdXJjZV90",
+            "eXBlGAMgASgJQgPgQQMSNAoLZGVsZXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQM6nQHqQZkBCidjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9SZXRpcmVkUmVzb3VyY2USS3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXRpcmVkUmVzb3VyY2VzL3tyZXRp",
+            "cmVkX3Jlc291cmNlfSoQcmV0aXJlZFJlc291cmNlczIPcmV0aXJlZFJlc291",
+            "cmNlKoEBCg9Qcm90ZWN0aW9uTGV2ZWwSIAocUFJPVEVDVElPTl9MRVZFTF9V",
+            "TlNQRUNJRklFRBAAEgwKCFNPRlRXQVJFEAESBwoDSFNNEAISDAoIRVhURVJO",
+            "QUwQAxIQCgxFWFRFUk5BTF9WUEMQBBIVChFIU01fU0lOR0xFX1RFTkFOVBAF",
+            "KrMDCgxBY2Nlc3NSZWFzb24SFgoSUkVBU09OX1VOU1BFQ0lGSUVEEAASHgoa",
+            "Q1VTVE9NRVJfSU5JVElBVEVEX1NVUFBPUlQQARIcChhHT09HTEVfSU5JVElB",
+            "VEVEX1NFUlZJQ0UQAhIcChhUSElSRF9QQVJUWV9EQVRBX1JFUVVFU1QQAxIb",
+            "ChdHT09HTEVfSU5JVElBVEVEX1JFVklFVxAEEh0KGUNVU1RPTUVSX0lOSVRJ",
+            "QVRFRF9BQ0NFU1MQBRIlCiFHT09HTEVfSU5JVElBVEVEX1NZU1RFTV9PUEVS",
+            "QVRJT04QBhIXChNSRUFTT05fTk9UX0VYUEVDVEVEEAcSKgoiTU9ESUZJRURf",
+            "Q1VTVE9NRVJfSU5JVElBVEVEX0FDQ0VTUxAIGgIIARIyCipNT0RJRklFRF9H",
+            "T09HTEVfSU5JVElBVEVEX1NZU1RFTV9PUEVSQVRJT04QCRoCCAESJwojR09P",
+            "R0xFX1JFU1BPTlNFX1RPX1BST0RVQ1RJT05fQUxFUlQQChIqCiZDVVNUT01F",
+            "Ul9BVVRIT1JJWkVEX1dPUktGTE9XX1NFUlZJQ0lORxALQoUBChdjb20uZ29v",
+            "Z2xlLmNsb3VkLmttcy52MUIRS21zUmVzb3VyY2VzUHJvdG9QAVopY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9rbXMvYXBpdjEva21zcGI7a21zcGKqAhNHb29nbGUu",
+            "Q2xvdWQuS21zLlYxygITR29vZ2xlXENsb3VkXEttc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), typeof(global::Google.Cloud.Kms.V1.AccessReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -201,7 +208,8 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm", "PemCrc32C", "Name", "ProtectionLevel", "PublicKeyFormat", "PublicKey_" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.PublicKey.Types.PublicKeyFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob), global::Google.Cloud.Kms.V1.ImportJob.Parser, new[]{ "Name", "ImportMethod", "ProtectionLevel", "CreateTime", "GenerateTime", "ExpireTime", "ExpireEventTime", "State", "PublicKey", "Attestation", "CryptoKeyBackend" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportMethod), typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportJobState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey), global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey.Parser, new[]{ "Pem" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions), global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions.Parser, new[]{ "ExternalKeyUri", "EkmConnectionKeyPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy), global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy.Parser, new[]{ "AllowedAccessReasons" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy), global::Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy.Parser, new[]{ "AllowedAccessReasons" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.RetiredResource), global::Google.Cloud.Kms.V1.RetiredResource.Parser, new[]{ "Name", "OriginalResource", "ResourceType", "DeleteTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5757,6 +5765,339 @@ namespace Google.Cloud.Kms.V1 {
           case 10:
           case 8: {
             allowedAccessReasons_.AddEntriesFrom(ref input, _repeated_allowedAccessReasons_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A RetiredResource resource represents the record of a deleted
+  /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. Its purpose is to provide
+  /// visibility into retained user data and to prevent reuse of these names for
+  /// new [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RetiredResource : pb::IMessage<RetiredResource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetiredResource> _parser = new pb::MessageParser<RetiredResource>(() => new RetiredResource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RetiredResource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetiredResource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetiredResource(RetiredResource other) : this() {
+      name_ = other.name_;
+      originalResource_ = other.originalResource_;
+      resourceType_ = other.resourceType_;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetiredResource Clone() {
+      return new RetiredResource(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Identifier. The resource name for this
+    /// [RetiredResource][google.cloud.kms.v1.RetiredResource] in the format
+    /// `projects/*/locations/*/retiredResources/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "original_resource" field.</summary>
+    public const int OriginalResourceFieldNumber = 2;
+    private string originalResource_ = "";
+    /// <summary>
+    /// Output only. The full resource name of the original
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] that was deleted in the format
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OriginalResource {
+      get { return originalResource_; }
+      set {
+        originalResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource_type" field.</summary>
+    public const int ResourceTypeFieldNumber = 3;
+    private string resourceType_ = "";
+    /// <summary>
+    /// Output only. The resource type of the original deleted resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResourceType {
+      get { return resourceType_; }
+      set {
+        resourceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// Output only. The time at which the original resource was deleted and this
+    /// RetiredResource record was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RetiredResource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RetiredResource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (OriginalResource != other.OriginalResource) return false;
+      if (ResourceType != other.ResourceType) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (OriginalResource.Length != 0) hash ^= OriginalResource.GetHashCode();
+      if (ResourceType.Length != 0) hash ^= ResourceType.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (OriginalResource.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OriginalResource);
+      }
+      if (ResourceType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ResourceType);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (OriginalResource.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OriginalResource);
+      }
+      if (ResourceType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ResourceType);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (OriginalResource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OriginalResource);
+      }
+      if (ResourceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceType);
+      }
+      if (deleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RetiredResource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.OriginalResource.Length != 0) {
+        OriginalResource = other.OriginalResource;
+      }
+      if (other.ResourceType.Length != 0) {
+        ResourceType = other.ResourceType;
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            OriginalResource = input.ReadString();
+            break;
+          }
+          case 26: {
+            ResourceType = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            OriginalResource = input.ReadString();
+            break;
+          }
+          case 26: {
+            ResourceType = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
             break;
           }
         }

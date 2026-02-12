@@ -7609,6 +7609,325 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_sync",
+      "title": "ListRetiredResourcesRequestObject",
+      "description": "Snippet for ListRetiredResources",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResources",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListRetiredResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_async",
+      "title": "ListRetiredResourcesRequestObjectAsync",
+      "description": "Snippet for ListRetiredResourcesAsync",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResourcesAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListRetiredResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_sync_flattened",
+      "title": "ListRetiredResources",
+      "description": "Snippet for ListRetiredResources",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResources",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_async_flattened",
+      "title": "ListRetiredResourcesAsync",
+      "description": "Snippet for ListRetiredResourcesAsync",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResourcesAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_sync_flattened_resourceNames",
+      "title": "ListRetiredResourcesResourceNames",
+      "description": "Snippet for ListRetiredResources",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResources",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_ListRetiredResources_async_flattened_resourceNames",
+      "title": "ListRetiredResourcesResourceNamesAsync",
+      "description": "Snippet for ListRetiredResourcesAsync",
+      "file": "KeyManagementServiceClient.ListRetiredResourcesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRetiredResourcesAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListRetiredResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListRetiredResourcesResponse, Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "ListRetiredResources",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.ListRetiredResources",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_GetKeyRing_sync",
       "title": "GetKeyRingRequestObject",
       "description": "Snippet for GetKeyRing",
@@ -9044,6 +9363,293 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_sync",
+      "title": "GetRetiredResourceRequestObject",
+      "description": "Snippet for GetRetiredResource",
+      "file": "KeyManagementServiceClient.GetRetiredResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResource",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetRetiredResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.RetiredResource",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_async",
+      "title": "GetRetiredResourceRequestObjectAsync",
+      "description": "Snippet for GetRetiredResourceAsync",
+      "file": "KeyManagementServiceClient.GetRetiredResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResourceAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetRetiredResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_sync_flattened",
+      "title": "GetRetiredResource",
+      "description": "Snippet for GetRetiredResource",
+      "file": "KeyManagementServiceClient.GetRetiredResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResource",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.RetiredResource",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_async_flattened",
+      "title": "GetRetiredResourceAsync",
+      "description": "Snippet for GetRetiredResourceAsync",
+      "file": "KeyManagementServiceClient.GetRetiredResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResourceAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_sync_flattened_resourceNames",
+      "title": "GetRetiredResourceResourceNames",
+      "description": "Snippet for GetRetiredResource",
+      "file": "KeyManagementServiceClient.GetRetiredResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResource",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RetiredResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.RetiredResource",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_GetRetiredResource_async_flattened_resourceNames",
+      "title": "GetRetiredResourceResourceNamesAsync",
+      "description": "Snippet for GetRetiredResourceAsync",
+      "file": "KeyManagementServiceClient.GetRetiredResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRetiredResourceAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetRetiredResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RetiredResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.RetiredResource>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetRetiredResource",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.GetRetiredResource",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_CreateKeyRing_sync",
       "title": "CreateKeyRingRequestObject",
       "description": "Snippet for CreateKeyRing",
@@ -9980,6 +10586,580 @@
         {
           "start": 35,
           "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_sync",
+      "title": "DeleteCryptoKeyRequestObject",
+      "description": "Snippet for DeleteCryptoKey",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKey",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_async",
+      "title": "DeleteCryptoKeyRequestObjectAsync",
+      "description": "Snippet for DeleteCryptoKeyAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_sync_flattened",
+      "title": "DeleteCryptoKey",
+      "description": "Snippet for DeleteCryptoKey",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKey",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_async_flattened",
+      "title": "DeleteCryptoKeyAsync",
+      "description": "Snippet for DeleteCryptoKeyAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_sync_flattened_resourceNames",
+      "title": "DeleteCryptoKeyResourceNames",
+      "description": "Snippet for DeleteCryptoKey",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKey",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKey_async_flattened_resourceNames",
+      "title": "DeleteCryptoKeyResourceNamesAsync",
+      "description": "Snippet for DeleteCryptoKeyAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKey",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKey",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_sync",
+      "title": "DeleteCryptoKeyVersionRequestObject",
+      "description": "Snippet for DeleteCryptoKeyVersion",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersion",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_async",
+      "title": "DeleteCryptoKeyVersionRequestObjectAsync",
+      "description": "Snippet for DeleteCryptoKeyVersionAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersionAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_sync_flattened",
+      "title": "DeleteCryptoKeyVersion",
+      "description": "Snippet for DeleteCryptoKeyVersion",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersion",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_async_flattened",
+      "title": "DeleteCryptoKeyVersionAsync",
+      "description": "Snippet for DeleteCryptoKeyVersionAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersionAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_sync_flattened_resourceNames",
+      "title": "DeleteCryptoKeyVersionResourceNames",
+      "description": "Snippet for DeleteCryptoKeyVersion",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersion",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_DeleteCryptoKeyVersion_async_flattened_resourceNames",
+      "title": "DeleteCryptoKeyVersionResourceNamesAsync",
+      "description": "Snippet for DeleteCryptoKeyVersionAsync",
+      "file": "KeyManagementServiceClient.DeleteCryptoKeyVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCryptoKeyVersionAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DeleteCryptoKeyVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Kms.V1.DeleteCryptoKeyVersionMetadata>>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCryptoKeyVersion",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.DeleteCryptoKeyVersion",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]
