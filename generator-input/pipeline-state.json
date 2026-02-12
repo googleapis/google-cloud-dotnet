@@ -3082,7 +3082,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T16:37:34.165577708Z",
-            "lastGeneratedCommit": "733b332962ae41f1a93cca2137096c05e0ef8fd4",
+            "lastGeneratedCommit": "5b2aa2c08c23f26d6e8abe65377077c624878d12",
             "lastReleasedCommit": "733b332962ae41f1a93cca2137096c05e0ef8fd4",
             "apiPaths": [
                 "google/api/servicemanagement/v1"
