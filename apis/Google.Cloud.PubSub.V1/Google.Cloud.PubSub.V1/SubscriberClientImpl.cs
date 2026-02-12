@@ -87,10 +87,14 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private readonly FlowControlSettings _flowControlSettings;
     private readonly bool _useLegacyFlowControl;
     private readonly TimeSpan _disposeTimeout;
+    private static readonly TimeSpan s_nackGracePeriod = TimeSpan.FromSeconds(30);
+    private bool _isStopInitiated => _globalWaitForProcessingCts.IsCancellationRequested || _globalSoftStopCts.IsCancellationRequested;
 
     private TaskCompletionSource<int> _mainTcs;
     private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
     private CancellationTokenSource _globalHardStopCts;
+    private CancellationTokenSource _globalWaitForProcessingCts;
+    private CancellationTokenSource _globalNackImmediatelyCts;
 
     // This property only exists for testing.
     // This is the delay between obtaining a lease on a message and then further extending the lease on that message
@@ -120,8 +124,15 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         {
             GaxPreconditions.CheckState(_mainTcs == null, "Can only start an instance once.");
             _mainTcs = new TaskCompletionSource<int>();
-            _globalSoftStopCts = new CancellationTokenSource();
             _globalHardStopCts = new CancellationTokenSource();
+            _globalNackImmediatelyCts = new CancellationTokenSource();
+            _globalWaitForProcessingCts = new CancellationTokenSource();
+            _globalNackImmediatelyCts.Token.Register(() => _globalWaitForProcessingCts.Cancel());
+
+            _globalSoftStopCts = new CancellationTokenSource();
+            // Wait for processing stops streaming new messages. This is a required step for soft stop and doing this
+            // allows us to simplify logic while soft stop is being deprecated.
+            _globalSoftStopCts.Token.Register(() => _globalWaitForProcessingCts.Cancel());
         }
         var registeredTasks = new HashSet<Task>();
         Action<Task> registerTask = task =>
@@ -203,7 +214,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         lock (_lock)
         {
             // Note: If multiple stop requests are made, only the first cancellation token is observed.
-            if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
+            if (_mainTcs is not null && _isStopInitiated)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
                 return _mainTcs.Task;
@@ -218,5 +229,78 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _taskHelper.Run(async () =>
             await _taskHelper.ConfigureAwaitWithFinally(() => _mainTcs.Task, () => registration.Dispose()));
         return _mainTcs.Task;
+    }
+
+    /// <inheritdoc />
+    public override Task StopAsync(SubscriberShutdownSetting shutdownSetting, TimeSpan? timeout = null, CancellationToken cancellationToken = default)
+    {
+        lock (_lock)
+        {
+            GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
+            // Only the first call to StopAsync is observed
+            if (_isStopInitiated)
+            {
+                // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
+                return _mainTcs.Task;
+            }
+            // Signal to stop retrieving new messages immediately.
+            _globalWaitForProcessingCts.Cancel();
+        }
+
+        TimeSpan shutdownTimeout = timeout ?? DefaultMaxTotalAckExtension;
+
+        if (shutdownTimeout <= TimeSpan.Zero)
+        {
+            Logger?.LogWarning("Shutdown timeout is 0! Stopping {Client} immediately; work may be dropped.", nameof(SubscriberClient));
+        }
+
+        // Schedule the transition to "Nack Immediately" phase.
+        // This will actively Nack any remaining messages to release them for other subscribers.
+        CancelAfterDelay(_globalNackImmediatelyCts, CalculateNackDelay());
+
+        // Schedule the final "Hard Stop".
+        // This aborts all outstanding tasks and closes connections either at the timeout or if the cancellationToken is
+        // cancelled.
+        CancelAfterDelay(_globalHardStopCts, shutdownTimeout);
+        var registration = cancellationToken.Register(() => _globalHardStopCts.Cancel());
+
+        _taskHelper.Run(async () =>
+            await _taskHelper.ConfigureAwaitWithFinally(() => _mainTcs.Task, () => registration.Dispose()));
+
+        return _mainTcs.Task;
+
+        // Triggers cancellation after provided delay. This is used instead of .CancelAfterDelay to integrate with
+        // IScheduler, allowing this shutdown method to be tested.
+        void CancelAfterDelay(CancellationTokenSource cts, TimeSpan delay)
+        {
+            _taskHelper.Run(async () =>
+            {
+                await _taskHelper.ConfigureAwait(_scheduler.Delay(delay, CancellationToken.None));
+                cts.Cancel();
+            });
+        }
+
+        // Calculates the time until we switch to NackImmediately mode.
+        TimeSpan CalculateNackDelay()
+        {
+            switch (shutdownSetting)
+            {
+                case SubscriberShutdownSetting.NackImmediately:
+                    return TimeSpan.Zero;
+                case SubscriberShutdownSetting.WaitForProcessing:
+                    // WaitForProcessing enters a Nack grace period before final shutdown if it was unable to finish
+                    // handling all received messages.
+                    TimeSpan delay = shutdownTimeout > s_nackGracePeriod ? shutdownTimeout - s_nackGracePeriod : TimeSpan.Zero;
+
+                    if (delay == TimeSpan.Zero && shutdownTimeout > TimeSpan.Zero)
+                    {
+                        Logger?.LogWarning("Shutdown timeout ({Timeout}) <= GracePeriod ({GracePeriod}). Nacking immediately.",
+                            shutdownTimeout, s_nackGracePeriod);
+                    }
+                    return delay;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(shutdownSetting), shutdownSetting, null);
+            }
+        }
     }
 }
