@@ -6121,7 +6121,7 @@
         "AI Extensions"
       ],
       "dependencies": {
-        "Google.Cloud.AIPlatform.V1": "3.54.0",
+        "Google.Cloud.AIPlatform.V1": "3.63.0",
         "Microsoft.Extensions.AI.Abstractions": "default"
       },
       "testDependencies": {
