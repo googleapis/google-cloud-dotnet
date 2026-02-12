@@ -74,7 +74,7 @@ public class DockerCommandTest
             // within a .tar.gz file...
             var path = Path.Combine(outputDirectory, archiveAssertion.File);
             var data = File.ReadAllBytes(path);
-            using var reader = ReaderFactory.Open(new MemoryStream(data));
+            using var reader = ReaderFactory.OpenReader(new MemoryStream(data));
             var archivePaths = new List<string>();
             while (reader.MoveToNextEntry())
             {

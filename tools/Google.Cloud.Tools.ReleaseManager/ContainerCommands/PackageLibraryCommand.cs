@@ -150,7 +150,7 @@ internal class PackageLibraryCommand : IContainerCommand
             throw new InvalidOperationException($"The documentation path `{directory}` is empty");
         }
 
-        using var archive = TarArchive.Create();
+        using var archive = TarArchive.CreateArchive();
         archive.AddAllFromDirectory(directory);
         var writerOptions = new TarWriterOptions(CompressionType.GZip, finalizeArchiveOnClose: true);
         archive.SaveTo(output, writerOptions);
