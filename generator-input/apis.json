@@ -1479,6 +1479,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Ces.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Gemini Enterprise for Customer Experience",
+      "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/ces/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "ces",
+      "serviceConfigFile": "ces_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Channel.V1",
       "version": "2.17.0",
       "type": "grpc",

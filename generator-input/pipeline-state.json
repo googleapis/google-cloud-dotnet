@@ -4853,6 +4853,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.AuditManager.V1/Google.Cloud.AuditManager.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Ces.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/ces/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Ces.V1/Google.Cloud.Ces.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
