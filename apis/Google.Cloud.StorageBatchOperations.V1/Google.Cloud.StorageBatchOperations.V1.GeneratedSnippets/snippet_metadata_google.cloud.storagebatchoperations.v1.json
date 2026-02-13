@@ -972,12 +972,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -1021,12 +1021,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -1486,6 +1486,612 @@
         "method": {
           "shortName": "CancelJob",
           "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_sync",
+      "title": "ListBucketOperationsRequestObject",
+      "description": "Snippet for ListBucketOperations",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperations",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_async",
+      "title": "ListBucketOperationsRequestObjectAsync",
+      "description": "Snippet for ListBucketOperationsAsync",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperationsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_sync_flattened",
+      "title": "ListBucketOperations",
+      "description": "Snippet for ListBucketOperations",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperations",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_async_flattened",
+      "title": "ListBucketOperationsAsync",
+      "description": "Snippet for ListBucketOperationsAsync",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperationsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_sync_flattened_resourceNames",
+      "title": "ListBucketOperationsResourceNames",
+      "description": "Snippet for ListBucketOperations",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperations",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListBucketOperations_async_flattened_resourceNames",
+      "title": "ListBucketOperationsResourceNamesAsync",
+      "description": "Snippet for ListBucketOperationsAsync",
+      "file": "StorageBatchOperationsClient.ListBucketOperationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBucketOperationsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListBucketOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse, Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListBucketOperations",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListBucketOperations",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_sync",
+      "title": "GetBucketOperationRequestObject",
+      "description": "Snippet for GetBucketOperation",
+      "file": "StorageBatchOperationsClient.GetBucketOperationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperation",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.BucketOperation",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_async",
+      "title": "GetBucketOperationRequestObjectAsync",
+      "description": "Snippet for GetBucketOperationAsync",
+      "file": "StorageBatchOperationsClient.GetBucketOperationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperationAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_sync_flattened",
+      "title": "GetBucketOperation",
+      "description": "Snippet for GetBucketOperation",
+      "file": "StorageBatchOperationsClient.GetBucketOperationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperation",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.BucketOperation",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_async_flattened",
+      "title": "GetBucketOperationAsync",
+      "description": "Snippet for GetBucketOperationAsync",
+      "file": "StorageBatchOperationsClient.GetBucketOperationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperationAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_sync_flattened_resourceNames",
+      "title": "GetBucketOperationResourceNames",
+      "description": "Snippet for GetBucketOperation",
+      "file": "StorageBatchOperationsClient.GetBucketOperationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperation",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.BucketOperationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.BucketOperation",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_async_flattened_resourceNames",
+      "title": "GetBucketOperationResourceNamesAsync",
+      "description": "Snippet for GetBucketOperationAsync",
+      "file": "StorageBatchOperationsClient.GetBucketOperationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBucketOperationAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetBucketOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.BucketOperationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.BucketOperation>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetBucketOperation",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetBucketOperation",
           "service": {
             "shortName": "StorageBatchOperations",
             "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"

@@ -28,10 +28,22 @@
                 "DeleteJobAsync"
               ]
             },
+            "GetBucketOperation": {
+              "methods": [
+                "GetBucketOperation",
+                "GetBucketOperationAsync"
+              ]
+            },
             "GetJob": {
               "methods": [
                 "GetJob",
                 "GetJobAsync"
+              ]
+            },
+            "ListBucketOperations": {
+              "methods": [
+                "ListBucketOperations",
+                "ListBucketOperationsAsync"
               ]
             },
             "ListJobs": {

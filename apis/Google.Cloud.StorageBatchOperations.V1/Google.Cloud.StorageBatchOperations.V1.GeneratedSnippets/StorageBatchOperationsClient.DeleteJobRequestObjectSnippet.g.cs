@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             storageBatchOperationsClient.DeleteJob(request);
