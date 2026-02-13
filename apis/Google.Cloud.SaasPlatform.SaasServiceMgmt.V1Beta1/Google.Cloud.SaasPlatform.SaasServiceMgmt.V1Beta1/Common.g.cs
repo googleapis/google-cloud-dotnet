@@ -45,7 +45,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "UEVDSUZJRUQQABISCg5TVEFUVVNfVU5LTk9XThABEg8KC1NUQVRVU19UUlVF",
             "EAISEAoMU1RBVFVTX0ZBTFNFEAMibwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
             "SUVEEAASDgoKVFlQRV9SRUFEWRABEhEKDVRZUEVfVVBEQVRJTkcQAhIUChBU",
-            "WVBFX1BST1ZJU0lPTkVEEAMSGAoUVFlQRV9PUEVSQVRJT05fRVJST1IQBCKR",
+            "WVBFX1BST1ZJU0lPTkVEEAMSGAoUVFlQRV9PUEVSQVRJT05fRVJST1IQBCLM",
             "BAoWVW5pdE9wZXJhdGlvbkNvbmRpdGlvbhJlCgZzdGF0dXMYASABKA4yUC5n",
             "b29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJl",
             "dGExLlVuaXRPcGVyYXRpb25Db25kaXRpb24uU3RhdHVzQgPgQQISYQoEdHlw",
@@ -55,21 +55,23 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "dG9idWYuVGltZXN0YW1wQgPgQQISFAoHbWVzc2FnZRgEIAEoCUID4EECEhMK",
             "BnJlYXNvbhgFIAEoCUID4EECIlcKBlN0YXR1cxIWChJTVEFUVVNfVU5TUEVD",
             "SUZJRUQQABISCg5TVEFUVVNfVU5LTk9XThABEg8KC1NUQVRVU19UUlVFEAIS",
-            "EAoMU1RBVFVTX0ZBTFNFEAMiagoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVE",
-            "EAASEgoOVFlQRV9TQ0hFRFVMRUQQAhIQCgxUWVBFX1JVTk5JTkcQAxISCg5U",
-            "WVBFX1NVQ0NFRURFRBAEEhIKDlRZUEVfQ0FOQ0VMTEVEEAUiMwoJQWdncmVn",
-            "YXRlEhIKBWdyb3VwGAEgASgJQgPgQQISEgoFY291bnQYAiABKAVCA+BBAiqW",
-            "AQoaVW5pdE9wZXJhdGlvbkVycm9yQ2F0ZWdvcnkSLQopVU5JVF9PUEVSQVRJ",
-            "T05fRVJST1JfQ0FURUdPUllfVU5TUEVDSUZJRUQQABISCg5OT1RfQVBQTElD",
-            "QUJMRRABEgkKBUZBVEFMEAISDQoJUkVUUklBQkxFEAMSDQoJSUdOT1JBQkxF",
-            "EAQSDAoIU1RBTkRBUkQQBULHAgo1Y29tLmdvb2dsZS5jbG91ZC5zYWFzcGxh",
-            "dGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTFCC0NvbW1vblByb3RvUAFa",
-            "X2Nsb3VkLmdvb2dsZS5jb20vZ28vc2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNl",
-            "bWdtdC9hcGl2MWJldGExL3NhYXNzZXJ2aWNlbWdtdHBiO3NhYXNzZXJ2aWNl",
-            "bWdtdHBiqgIxR29vZ2xlLkNsb3VkLlNhYXNQbGF0Zm9ybS5TYWFzU2Vydmlj",
-            "ZU1nbXQuVjFCZXRhMcoCMUdvb2dsZVxDbG91ZFxTYWFzUGxhdGZvcm1cU2Fh",
-            "c1NlcnZpY2VNZ210XFYxYmV0YTHqAjVHb29nbGU6OkNsb3VkOjpTYWFzUGxh",
-            "dGZvcm06OlNhYXNTZXJ2aWNlTWdtdDo6VjFiZXRhMWIGcHJvdG8z"));
+            "EAoMU1RBVFVTX0ZBTFNFEAMipAEKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhIKDlRZUEVfU0NIRURVTEVEEAISEAoMVFlQRV9SVU5OSU5HEAMSEgoO",
+            "VFlQRV9TVUNDRUVERUQQBBISCg5UWVBFX0NBTkNFTExFRBAFEhQKEFRZUEVf",
+            "QVBQX0NSRUFURUQQBhIiCh5UWVBFX0FQUF9DT01QT05FTlRTX1JFR0lTVEVS",
+            "RUQQByIzCglBZ2dyZWdhdGUSEgoFZ3JvdXAYASABKAlCA+BBAhISCgVjb3Vu",
+            "dBgCIAEoBUID4EECKpYBChpVbml0T3BlcmF0aW9uRXJyb3JDYXRlZ29yeRIt",
+            "CilVTklUX09QRVJBVElPTl9FUlJPUl9DQVRFR09SWV9VTlNQRUNJRklFRBAA",
+            "EhIKDk5PVF9BUFBMSUNBQkxFEAESCQoFRkFUQUwQAhINCglSRVRSSUFCTEUQ",
+            "AxINCglJR05PUkFCTEUQBBIMCghTVEFOREFSRBAFQscCCjVjb20uZ29vZ2xl",
+            "LmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMUIL",
+            "Q29tbW9uUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9zYWFzcGxhdGZv",
+            "cm0vc2Fhc3NlcnZpY2VtZ210L2FwaXYxYmV0YTEvc2Fhc3NlcnZpY2VtZ210",
+            "cGI7c2Fhc3NlcnZpY2VtZ210cGKqAjFHb29nbGUuQ2xvdWQuU2Fhc1BsYXRm",
+            "b3JtLlNhYXNTZXJ2aWNlTWdtdC5WMUJldGExygIxR29vZ2xlXENsb3VkXFNh",
+            "YXNQbGF0Zm9ybVxTYWFzU2VydmljZU1nbXRcVjFiZXRhMeoCNUdvb2dsZTo6",
+            "Q2xvdWQ6OlNhYXNQbGF0Zm9ybTo6U2Fhc1NlcnZpY2VNZ210OjpWMWJldGEx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationErrorCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1549,6 +1551,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         /// Condition type is cancelled.
         /// </summary>
         [pbr::OriginalName("TYPE_CANCELLED")] Cancelled = 5,
+        /// <summary>
+        /// Indicates if AppHub app has been created.
+        /// </summary>
+        [pbr::OriginalName("TYPE_APP_CREATED")] AppCreated = 6,
+        /// <summary>
+        /// Indicates if services and workloads have been registered with AppHub.
+        /// </summary>
+        [pbr::OriginalName("TYPE_APP_COMPONENTS_REGISTERED")] AppComponentsRegistered = 7,
       }
 
     }
