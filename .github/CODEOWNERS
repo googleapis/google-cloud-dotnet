@@ -7,10 +7,10 @@
 
 # The cloud-libraries-dotnet is the default owner for anything not
 # explicitly taken by someone else.
-*                                   @googleapis/cloud-libraries-dotnet
+*                                   @googleapis/cloud-sdk-dotnet-team
 
-/apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/cloud-libraries-dotnet
-/apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/cloud-libraries-dotnet
-/apis/Google.Cloud.Storage*/        @googleapis/gcs-sdk-team @googleapis/cloud-libraries-dotnet
-/apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/cloud-libraries-dotnet
-/apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/cloud-sdk-dotnet-team
+/apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/cloud-sdk-dotnet-team
+/apis/Google.Cloud.Storage*/        @googleapis/gcs-sdk-team @googleapis/cloud-sdk-dotnet-team
+/apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/cloud-sdk-dotnet-team
+/apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/cloud-sdk-dotnet-team
