@@ -40,6 +40,12 @@
                 "CreateCompilationResultAsync"
               ]
             },
+            "CreateFolder": {
+              "methods": [
+                "CreateFolder",
+                "CreateFolderAsync"
+              ]
+            },
             "CreateReleaseConfig": {
               "methods": [
                 "CreateReleaseConfig",
@@ -50,6 +56,12 @@
               "methods": [
                 "CreateRepository",
                 "CreateRepositoryAsync"
+              ]
+            },
+            "CreateTeamFolder": {
+              "methods": [
+                "CreateTeamFolder",
+                "CreateTeamFolderAsync"
               ]
             },
             "CreateWorkflowConfig": {
@@ -70,6 +82,12 @@
                 "CreateWorkspaceAsync"
               ]
             },
+            "DeleteFolder": {
+              "methods": [
+                "DeleteFolder",
+                "DeleteFolderAsync"
+              ]
+            },
             "DeleteReleaseConfig": {
               "methods": [
                 "DeleteReleaseConfig",
@@ -80,6 +98,12 @@
               "methods": [
                 "DeleteRepository",
                 "DeleteRepositoryAsync"
+              ]
+            },
+            "DeleteTeamFolder": {
+              "methods": [
+                "DeleteTeamFolder",
+                "DeleteTeamFolderAsync"
               ]
             },
             "DeleteWorkflowConfig": {
@@ -142,6 +166,18 @@
                 "GetConfigAsync"
               ]
             },
+            "GetFolder": {
+              "methods": [
+                "GetFolder",
+                "GetFolderAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "GetReleaseConfig": {
               "methods": [
                 "GetReleaseConfig",
@@ -152,6 +188,12 @@
               "methods": [
                 "GetRepository",
                 "GetRepositoryAsync"
+              ]
+            },
+            "GetTeamFolder": {
+              "methods": [
+                "GetTeamFolder",
+                "GetTeamFolderAsync"
               ]
             },
             "GetWorkflowConfig": {
@@ -232,6 +274,18 @@
                 "MoveFileAsync"
               ]
             },
+            "MoveFolder": {
+              "methods": [
+                "MoveFolder",
+                "MoveFolderAsync"
+              ]
+            },
+            "MoveRepository": {
+              "methods": [
+                "MoveRepository",
+                "MoveRepositoryAsync"
+              ]
+            },
             "PullGitCommits": {
               "methods": [
                 "PullGitCommits",
@@ -256,10 +310,28 @@
                 "QueryDirectoryContentsAsync"
               ]
             },
+            "QueryFolderContents": {
+              "methods": [
+                "QueryFolderContents",
+                "QueryFolderContentsAsync"
+              ]
+            },
             "QueryRepositoryDirectoryContents": {
               "methods": [
                 "QueryRepositoryDirectoryContents",
                 "QueryRepositoryDirectoryContentsAsync"
+              ]
+            },
+            "QueryTeamFolderContents": {
+              "methods": [
+                "QueryTeamFolderContents",
+                "QueryTeamFolderContentsAsync"
+              ]
+            },
+            "QueryUserRootContents": {
+              "methods": [
+                "QueryUserRootContents",
+                "QueryUserRootContentsAsync"
               ]
             },
             "QueryWorkflowInvocationActions": {
@@ -304,10 +376,34 @@
                 "SearchFilesAsync"
               ]
             },
+            "SearchTeamFolders": {
+              "methods": [
+                "SearchTeamFolders",
+                "SearchTeamFoldersAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
             "UpdateConfig": {
               "methods": [
                 "UpdateConfig",
                 "UpdateConfigAsync"
+              ]
+            },
+            "UpdateFolder": {
+              "methods": [
+                "UpdateFolder",
+                "UpdateFolderAsync"
               ]
             },
             "UpdateReleaseConfig": {
@@ -320,6 +416,12 @@
               "methods": [
                 "UpdateRepository",
                 "UpdateRepositoryAsync"
+              ]
+            },
+            "UpdateTeamFolder": {
+              "methods": [
+                "UpdateTeamFolder",
+                "UpdateTeamFolderAsync"
               ]
             },
             "UpdateWorkflowConfig": {

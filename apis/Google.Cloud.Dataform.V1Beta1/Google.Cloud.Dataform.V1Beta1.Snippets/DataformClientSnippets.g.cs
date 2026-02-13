@@ -14,48 +14,385 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
-    using Google.Cloud.Dataform.V1Beta1;
+    using Google.Cloud.Iam.V1;
+    using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
+    using gcdv = Google.Cloud.Dataform.V1Beta1;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedDataformClientSnippets
     {
-        /// <summary>Snippet for ListRepositories</summary>
-        public void ListRepositoriesRequestObject()
+        /// <summary>Snippet for GetTeamFolder</summary>
+        public void GetTeamFolderRequestObject()
         {
-            // Snippet: ListRepositories(ListRepositoriesRequest, CallSettings)
+            // Snippet: GetTeamFolder(GetTeamFolderRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest
+            gcdv::GetTeamFolderRequest request = new gcdv::GetTeamFolderRequest
+            {
+                TeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
+            };
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.GetTeamFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTeamFolderAsync</summary>
+        public async Task GetTeamFolderRequestObjectAsync()
+        {
+            // Snippet: GetTeamFolderAsync(GetTeamFolderRequest, CallSettings)
+            // Additional: GetTeamFolderAsync(GetTeamFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GetTeamFolderRequest request = new gcdv::GetTeamFolderRequest
+            {
+                TeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
+            };
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.GetTeamFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTeamFolder</summary>
+        public void GetTeamFolder()
+        {
+            // Snippet: GetTeamFolder(string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.GetTeamFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTeamFolderAsync</summary>
+        public async Task GetTeamFolderAsync()
+        {
+            // Snippet: GetTeamFolderAsync(string, CallSettings)
+            // Additional: GetTeamFolderAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.GetTeamFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTeamFolder</summary>
+        public void GetTeamFolderResourceNames()
+        {
+            // Snippet: GetTeamFolder(TeamFolderName, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName name = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.GetTeamFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTeamFolderAsync</summary>
+        public async Task GetTeamFolderResourceNamesAsync()
+        {
+            // Snippet: GetTeamFolderAsync(TeamFolderName, CallSettings)
+            // Additional: GetTeamFolderAsync(TeamFolderName, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName name = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.GetTeamFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolder</summary>
+        public void CreateTeamFolderRequestObject()
+        {
+            // Snippet: CreateTeamFolder(CreateTeamFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateTeamFolderRequest request = new gcdv::CreateTeamFolderRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TeamFolder = new gcdv::TeamFolder(),
+                TeamFolderId = "",
+            };
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.CreateTeamFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolderAsync</summary>
+        public async Task CreateTeamFolderRequestObjectAsync()
+        {
+            // Snippet: CreateTeamFolderAsync(CreateTeamFolderRequest, CallSettings)
+            // Additional: CreateTeamFolderAsync(CreateTeamFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateTeamFolderRequest request = new gcdv::CreateTeamFolderRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TeamFolder = new gcdv::TeamFolder(),
+                TeamFolderId = "",
+            };
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.CreateTeamFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolder</summary>
+        public void CreateTeamFolder()
+        {
+            // Snippet: CreateTeamFolder(string, TeamFolder, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.CreateTeamFolder(parent, teamFolder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolderAsync</summary>
+        public async Task CreateTeamFolderAsync()
+        {
+            // Snippet: CreateTeamFolderAsync(string, TeamFolder, CallSettings)
+            // Additional: CreateTeamFolderAsync(string, TeamFolder, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.CreateTeamFolderAsync(parent, teamFolder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolder</summary>
+        public void CreateTeamFolderResourceNames()
+        {
+            // Snippet: CreateTeamFolder(LocationName, TeamFolder, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.CreateTeamFolder(parent, teamFolder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTeamFolderAsync</summary>
+        public async Task CreateTeamFolderResourceNamesAsync()
+        {
+            // Snippet: CreateTeamFolderAsync(LocationName, TeamFolder, CallSettings)
+            // Additional: CreateTeamFolderAsync(LocationName, TeamFolder, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.CreateTeamFolderAsync(parent, teamFolder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTeamFolder</summary>
+        public void UpdateTeamFolderRequestObject()
+        {
+            // Snippet: UpdateTeamFolder(UpdateTeamFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::UpdateTeamFolderRequest request = new gcdv::UpdateTeamFolderRequest
+            {
+                UpdateMask = new FieldMask(),
+                TeamFolder = new gcdv::TeamFolder(),
+            };
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.UpdateTeamFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTeamFolderAsync</summary>
+        public async Task UpdateTeamFolderRequestObjectAsync()
+        {
+            // Snippet: UpdateTeamFolderAsync(UpdateTeamFolderRequest, CallSettings)
+            // Additional: UpdateTeamFolderAsync(UpdateTeamFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::UpdateTeamFolderRequest request = new gcdv::UpdateTeamFolderRequest
+            {
+                UpdateMask = new FieldMask(),
+                TeamFolder = new gcdv::TeamFolder(),
+            };
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.UpdateTeamFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTeamFolder</summary>
+        public void UpdateTeamFolder()
+        {
+            // Snippet: UpdateTeamFolder(TeamFolder, FieldMask, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcdv::TeamFolder response = dataformClient.UpdateTeamFolder(teamFolder, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTeamFolderAsync</summary>
+        public async Task UpdateTeamFolderAsync()
+        {
+            // Snippet: UpdateTeamFolderAsync(TeamFolder, FieldMask, CallSettings)
+            // Additional: UpdateTeamFolderAsync(TeamFolder, FieldMask, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::TeamFolder teamFolder = new gcdv::TeamFolder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcdv::TeamFolder response = await dataformClient.UpdateTeamFolderAsync(teamFolder, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolder</summary>
+        public void DeleteTeamFolderRequestObject()
+        {
+            // Snippet: DeleteTeamFolder(DeleteTeamFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::DeleteTeamFolderRequest request = new gcdv::DeleteTeamFolderRequest
+            {
+                TeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
+            };
+            // Make the request
+            dataformClient.DeleteTeamFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolderAsync</summary>
+        public async Task DeleteTeamFolderRequestObjectAsync()
+        {
+            // Snippet: DeleteTeamFolderAsync(DeleteTeamFolderRequest, CallSettings)
+            // Additional: DeleteTeamFolderAsync(DeleteTeamFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DeleteTeamFolderRequest request = new gcdv::DeleteTeamFolderRequest
+            {
+                TeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
+            };
+            // Make the request
+            await dataformClient.DeleteTeamFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolder</summary>
+        public void DeleteTeamFolder()
+        {
+            // Snippet: DeleteTeamFolder(string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            dataformClient.DeleteTeamFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolderAsync</summary>
+        public async Task DeleteTeamFolderAsync()
+        {
+            // Snippet: DeleteTeamFolderAsync(string, CallSettings)
+            // Additional: DeleteTeamFolderAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            await dataformClient.DeleteTeamFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolder</summary>
+        public void DeleteTeamFolderResourceNames()
+        {
+            // Snippet: DeleteTeamFolder(TeamFolderName, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName name = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            dataformClient.DeleteTeamFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTeamFolderAsync</summary>
+        public async Task DeleteTeamFolderResourceNamesAsync()
+        {
+            // Snippet: DeleteTeamFolderAsync(TeamFolderName, CallSettings)
+            // Additional: DeleteTeamFolderAsync(TeamFolderName, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName name = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            await dataformClient.DeleteTeamFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContents</summary>
+        public void QueryTeamFolderContentsRequestObject()
+        {
+            // Snippet: QueryTeamFolderContents(QueryTeamFolderContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::QueryTeamFolderContentsRequest request = new gcdv::QueryTeamFolderContentsRequest
+            {
+                TeamFolderAsTeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositories(request);
+            PagedEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -64,10 +401,1472 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContentsAsync</summary>
+        public async Task QueryTeamFolderContentsRequestObjectAsync()
+        {
+            // Snippet: QueryTeamFolderContentsAsync(QueryTeamFolderContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::QueryTeamFolderContentsRequest request = new gcdv::QueryTeamFolderContentsRequest
+            {
+                TeamFolderAsTeamFolderName = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContents</summary>
+        public void QueryTeamFolderContents()
+        {
+            // Snippet: QueryTeamFolderContents(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string teamFolder = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            PagedEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContents(teamFolder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContentsAsync</summary>
+        public async Task QueryTeamFolderContentsAsync()
+        {
+            // Snippet: QueryTeamFolderContentsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string teamFolder = "projects/[PROJECT]/locations/[LOCATION]/teamFolders/[TEAM_FOLDER]";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContentsAsync(teamFolder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContents</summary>
+        public void QueryTeamFolderContentsResourceNames()
+        {
+            // Snippet: QueryTeamFolderContents(TeamFolderName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName teamFolder = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            PagedEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContents(teamFolder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryTeamFolderContentsAsync</summary>
+        public async Task QueryTeamFolderContentsResourceNamesAsync()
+        {
+            // Snippet: QueryTeamFolderContentsAsync(TeamFolderName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::TeamFolderName teamFolder = gcdv::TeamFolderName.FromProjectLocationTeamFolder("[PROJECT]", "[LOCATION]", "[TEAM_FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryTeamFolderContentsResponse, gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> response = dataformClient.QueryTeamFolderContentsAsync(teamFolder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryTeamFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchTeamFolders</summary>
+        public void SearchTeamFoldersRequestObject()
+        {
+            // Snippet: SearchTeamFolders(SearchTeamFoldersRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::SearchTeamFoldersRequest request = new gcdv::SearchTeamFoldersRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::SearchTeamFoldersResponse, gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult> response = dataformClient.SearchTeamFolders(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::SearchTeamFoldersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchTeamFoldersAsync</summary>
+        public async Task SearchTeamFoldersRequestObjectAsync()
+        {
+            // Snippet: SearchTeamFoldersAsync(SearchTeamFoldersRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::SearchTeamFoldersRequest request = new gcdv::SearchTeamFoldersRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::SearchTeamFoldersResponse, gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult> response = dataformClient.SearchTeamFoldersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::SearchTeamFoldersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::SearchTeamFoldersResponse.Types.TeamFolderSearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolder</summary>
+        public void GetFolderRequestObject()
+        {
+            // Snippet: GetFolder(GetFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::GetFolderRequest request = new gcdv::GetFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+            };
+            // Make the request
+            gcdv::Folder response = dataformClient.GetFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderAsync</summary>
+        public async Task GetFolderRequestObjectAsync()
+        {
+            // Snippet: GetFolderAsync(GetFolderRequest, CallSettings)
+            // Additional: GetFolderAsync(GetFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GetFolderRequest request = new gcdv::GetFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+            };
+            // Make the request
+            gcdv::Folder response = await dataformClient.GetFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolder</summary>
+        public void GetFolder()
+        {
+            // Snippet: GetFolder(string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            gcdv::Folder response = dataformClient.GetFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderAsync</summary>
+        public async Task GetFolderAsync()
+        {
+            // Snippet: GetFolderAsync(string, CallSettings)
+            // Additional: GetFolderAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            gcdv::Folder response = await dataformClient.GetFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolder</summary>
+        public void GetFolderResourceNames()
+        {
+            // Snippet: GetFolder(FolderName, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            gcdv::Folder response = dataformClient.GetFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderAsync</summary>
+        public async Task GetFolderResourceNamesAsync()
+        {
+            // Snippet: GetFolderAsync(FolderName, CallSettings)
+            // Additional: GetFolderAsync(FolderName, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            gcdv::Folder response = await dataformClient.GetFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolder</summary>
+        public void CreateFolderRequestObject()
+        {
+            // Snippet: CreateFolder(CreateFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateFolderRequest request = new gcdv::CreateFolderRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Folder = new gcdv::Folder(),
+                FolderId = "",
+            };
+            // Make the request
+            gcdv::Folder response = dataformClient.CreateFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolderAsync</summary>
+        public async Task CreateFolderRequestObjectAsync()
+        {
+            // Snippet: CreateFolderAsync(CreateFolderRequest, CallSettings)
+            // Additional: CreateFolderAsync(CreateFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateFolderRequest request = new gcdv::CreateFolderRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Folder = new gcdv::Folder(),
+                FolderId = "",
+            };
+            // Make the request
+            gcdv::Folder response = await dataformClient.CreateFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolder</summary>
+        public void CreateFolder()
+        {
+            // Snippet: CreateFolder(string, Folder, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::Folder folder = new gcdv::Folder();
+            // Make the request
+            gcdv::Folder response = dataformClient.CreateFolder(parent, folder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolderAsync</summary>
+        public async Task CreateFolderAsync()
+        {
+            // Snippet: CreateFolderAsync(string, Folder, CallSettings)
+            // Additional: CreateFolderAsync(string, Folder, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::Folder folder = new gcdv::Folder();
+            // Make the request
+            gcdv::Folder response = await dataformClient.CreateFolderAsync(parent, folder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolder</summary>
+        public void CreateFolderResourceNames()
+        {
+            // Snippet: CreateFolder(LocationName, Folder, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::Folder folder = new gcdv::Folder();
+            // Make the request
+            gcdv::Folder response = dataformClient.CreateFolder(parent, folder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFolderAsync</summary>
+        public async Task CreateFolderResourceNamesAsync()
+        {
+            // Snippet: CreateFolderAsync(LocationName, Folder, CallSettings)
+            // Additional: CreateFolderAsync(LocationName, Folder, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::Folder folder = new gcdv::Folder();
+            // Make the request
+            gcdv::Folder response = await dataformClient.CreateFolderAsync(parent, folder);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolder</summary>
+        public void UpdateFolderRequestObject()
+        {
+            // Snippet: UpdateFolder(UpdateFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::UpdateFolderRequest request = new gcdv::UpdateFolderRequest
+            {
+                UpdateMask = new FieldMask(),
+                Folder = new gcdv::Folder(),
+            };
+            // Make the request
+            gcdv::Folder response = dataformClient.UpdateFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderAsync</summary>
+        public async Task UpdateFolderRequestObjectAsync()
+        {
+            // Snippet: UpdateFolderAsync(UpdateFolderRequest, CallSettings)
+            // Additional: UpdateFolderAsync(UpdateFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::UpdateFolderRequest request = new gcdv::UpdateFolderRequest
+            {
+                UpdateMask = new FieldMask(),
+                Folder = new gcdv::Folder(),
+            };
+            // Make the request
+            gcdv::Folder response = await dataformClient.UpdateFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolder</summary>
+        public void UpdateFolder()
+        {
+            // Snippet: UpdateFolder(Folder, FieldMask, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::Folder folder = new gcdv::Folder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcdv::Folder response = dataformClient.UpdateFolder(folder, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderAsync</summary>
+        public async Task UpdateFolderAsync()
+        {
+            // Snippet: UpdateFolderAsync(Folder, FieldMask, CallSettings)
+            // Additional: UpdateFolderAsync(Folder, FieldMask, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::Folder folder = new gcdv::Folder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcdv::Folder response = await dataformClient.UpdateFolderAsync(folder, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolder</summary>
+        public void DeleteFolderRequestObject()
+        {
+            // Snippet: DeleteFolder(DeleteFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::DeleteFolderRequest request = new gcdv::DeleteFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+            };
+            // Make the request
+            dataformClient.DeleteFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderAsync</summary>
+        public async Task DeleteFolderRequestObjectAsync()
+        {
+            // Snippet: DeleteFolderAsync(DeleteFolderRequest, CallSettings)
+            // Additional: DeleteFolderAsync(DeleteFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DeleteFolderRequest request = new gcdv::DeleteFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+            };
+            // Make the request
+            await dataformClient.DeleteFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolder</summary>
+        public void DeleteFolder()
+        {
+            // Snippet: DeleteFolder(string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            dataformClient.DeleteFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderAsync</summary>
+        public async Task DeleteFolderAsync()
+        {
+            // Snippet: DeleteFolderAsync(string, CallSettings)
+            // Additional: DeleteFolderAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            await dataformClient.DeleteFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolder</summary>
+        public void DeleteFolderResourceNames()
+        {
+            // Snippet: DeleteFolder(FolderName, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            dataformClient.DeleteFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFolderAsync</summary>
+        public async Task DeleteFolderResourceNamesAsync()
+        {
+            // Snippet: DeleteFolderAsync(FolderName, CallSettings)
+            // Additional: DeleteFolderAsync(FolderName, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            await dataformClient.DeleteFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContents</summary>
+        public void QueryFolderContentsRequestObject()
+        {
+            // Snippet: QueryFolderContents(QueryFolderContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::QueryFolderContentsRequest request = new gcdv::QueryFolderContentsRequest
+            {
+                FolderAsFolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContentsAsync</summary>
+        public async Task QueryFolderContentsRequestObjectAsync()
+        {
+            // Snippet: QueryFolderContentsAsync(QueryFolderContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::QueryFolderContentsRequest request = new gcdv::QueryFolderContentsRequest
+            {
+                FolderAsFolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContents</summary>
+        public void QueryFolderContents()
+        {
+            // Snippet: QueryFolderContents(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string folder = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            PagedEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContents(folder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContentsAsync</summary>
+        public async Task QueryFolderContentsAsync()
+        {
+            // Snippet: QueryFolderContentsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string folder = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContentsAsync(folder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContents</summary>
+        public void QueryFolderContentsResourceNames()
+        {
+            // Snippet: QueryFolderContents(FolderName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FolderName folder = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            PagedEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContents(folder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryFolderContentsAsync</summary>
+        public async Task QueryFolderContentsResourceNamesAsync()
+        {
+            // Snippet: QueryFolderContentsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FolderName folder = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryFolderContentsResponse, gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> response = dataformClient.QueryFolderContentsAsync(folder);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryFolderContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryFolderContentsResponse.Types.FolderContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContents</summary>
+        public void QueryUserRootContentsRequestObject()
+        {
+            // Snippet: QueryUserRootContents(QueryUserRootContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::QueryUserRootContentsRequest request = new gcdv::QueryUserRootContentsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContentsAsync</summary>
+        public async Task QueryUserRootContentsRequestObjectAsync()
+        {
+            // Snippet: QueryUserRootContentsAsync(QueryUserRootContentsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::QueryUserRootContentsRequest request = new gcdv::QueryUserRootContentsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContents</summary>
+        public void QueryUserRootContents()
+        {
+            // Snippet: QueryUserRootContents(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string location = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContents(location);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContentsAsync</summary>
+        public async Task QueryUserRootContentsAsync()
+        {
+            // Snippet: QueryUserRootContentsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string location = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContentsAsync(location);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContents</summary>
+        public void QueryUserRootContentsResourceNames()
+        {
+            // Snippet: QueryUserRootContents(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            LocationName location = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContents(location);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryUserRootContentsAsync</summary>
+        public async Task QueryUserRootContentsResourceNamesAsync()
+        {
+            // Snippet: QueryUserRootContentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName location = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<gcdv::QueryUserRootContentsResponse, gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> response = dataformClient.QueryUserRootContentsAsync(location);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::QueryUserRootContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::QueryUserRootContentsResponse.Types.RootContentsEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolder</summary>
+        public void MoveFolderRequestObject()
+        {
+            // Snippet: MoveFolder(MoveFolderRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::MoveFolderRequest request = new gcdv::MoveFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+                DestinationContainingFolder = "",
+            };
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = dataformClient.MoveFolder(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = dataformClient.PollOnceMoveFolder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolderAsync</summary>
+        public async Task MoveFolderRequestObjectAsync()
+        {
+            // Snippet: MoveFolderAsync(MoveFolderRequest, CallSettings)
+            // Additional: MoveFolderAsync(MoveFolderRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MoveFolderRequest request = new gcdv::MoveFolderRequest
+            {
+                FolderName = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]"),
+                DestinationContainingFolder = "",
+            };
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = await dataformClient.MoveFolderAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = await dataformClient.PollOnceMoveFolderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolder</summary>
+        public void MoveFolder()
+        {
+            // Snippet: MoveFolder(string, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = dataformClient.MoveFolder(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = dataformClient.PollOnceMoveFolder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolderAsync</summary>
+        public async Task MoveFolderAsync()
+        {
+            // Snippet: MoveFolderAsync(string, string, CallSettings)
+            // Additional: MoveFolderAsync(string, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = await dataformClient.MoveFolderAsync(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = await dataformClient.PollOnceMoveFolderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolder</summary>
+        public void MoveFolderResourceNames()
+        {
+            // Snippet: MoveFolder(FolderName, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = dataformClient.MoveFolder(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = dataformClient.PollOnceMoveFolder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveFolderAsync</summary>
+        public async Task MoveFolderResourceNamesAsync()
+        {
+            // Snippet: MoveFolderAsync(FolderName, string, CallSettings)
+            // Additional: MoveFolderAsync(FolderName, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FolderName name = gcdv::FolderName.FromProjectLocationFolder("[PROJECT]", "[LOCATION]", "[FOLDER]");
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveFolderMetadata> response = await dataformClient.MoveFolderAsync(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveFolderMetadata> retrievedResponse = await dataformClient.PollOnceMoveFolderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRepositories</summary>
+        public void ListRepositoriesRequestObject()
+        {
+            // Snippet: ListRepositories(ListRepositoriesRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::ListRepositoriesRequest request = new gcdv::ListRepositoriesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositories(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::Repository item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::Repository item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::Repository> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -82,30 +1881,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRepositoriesAsync(ListRepositoriesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest
+            gcdv::ListRepositoriesRequest request = new gcdv::ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositoriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Repository item in response)
+            await foreach (gcdv::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -114,10 +1913,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -132,25 +1931,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRepositories(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositories(parent);
+            PagedEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositories(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcdv::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -159,10 +1958,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Repository> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -177,25 +1976,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRepositoriesAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Repository item in response)
+            await foreach (gcdv::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -204,10 +2003,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -222,25 +2021,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRepositories(LocationName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositories(parent);
+            PagedEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositories(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcdv::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -249,10 +2048,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Repository> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -267,25 +2066,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRepositoriesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = dataformClient.ListRepositoriesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListRepositoriesResponse, gcdv::Repository> response = dataformClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Repository item in response)
+            await foreach (gcdv::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcdv::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -294,10 +2093,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcdv::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -312,14 +2111,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetRepository(GetRepositoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest
+            gcdv::GetRepositoryRequest request = new gcdv::GetRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Repository response = dataformClient.GetRepository(request);
+            gcdv::Repository response = dataformClient.GetRepository(request);
             // End snippet
         }
 
@@ -329,14 +2128,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetRepositoryAsync(GetRepositoryRequest, CallSettings)
             // Additional: GetRepositoryAsync(GetRepositoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest
+            gcdv::GetRepositoryRequest request = new gcdv::GetRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Repository response = await dataformClient.GetRepositoryAsync(request);
+            gcdv::Repository response = await dataformClient.GetRepositoryAsync(request);
             // End snippet
         }
 
@@ -345,11 +2144,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetRepository(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Repository response = dataformClient.GetRepository(name);
+            gcdv::Repository response = dataformClient.GetRepository(name);
             // End snippet
         }
 
@@ -359,11 +2158,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetRepositoryAsync(string, CallSettings)
             // Additional: GetRepositoryAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Repository response = await dataformClient.GetRepositoryAsync(name);
+            gcdv::Repository response = await dataformClient.GetRepositoryAsync(name);
             // End snippet
         }
 
@@ -372,11 +2171,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetRepository(RepositoryName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Repository response = dataformClient.GetRepository(name);
+            gcdv::Repository response = dataformClient.GetRepository(name);
             // End snippet
         }
 
@@ -386,11 +2185,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetRepositoryAsync(RepositoryName, CallSettings)
             // Additional: GetRepositoryAsync(RepositoryName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Repository response = await dataformClient.GetRepositoryAsync(name);
+            gcdv::Repository response = await dataformClient.GetRepositoryAsync(name);
             // End snippet
         }
 
@@ -399,16 +2198,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateRepository(CreateRepositoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateRepositoryRequest request = new CreateRepositoryRequest
+            gcdv::CreateRepositoryRequest request = new gcdv::CreateRepositoryRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Repository = new Repository(),
+                Repository = new gcdv::Repository(),
                 RepositoryId = "",
             };
             // Make the request
-            Repository response = dataformClient.CreateRepository(request);
+            gcdv::Repository response = dataformClient.CreateRepository(request);
             // End snippet
         }
 
@@ -418,16 +2217,16 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateRepositoryAsync(CreateRepositoryRequest, CallSettings)
             // Additional: CreateRepositoryAsync(CreateRepositoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateRepositoryRequest request = new CreateRepositoryRequest
+            gcdv::CreateRepositoryRequest request = new gcdv::CreateRepositoryRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Repository = new Repository(),
+                Repository = new gcdv::Repository(),
                 RepositoryId = "",
             };
             // Make the request
-            Repository response = await dataformClient.CreateRepositoryAsync(request);
+            gcdv::Repository response = await dataformClient.CreateRepositoryAsync(request);
             // End snippet
         }
 
@@ -436,13 +2235,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateRepository(string, Repository, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             string repositoryId = "";
             // Make the request
-            Repository response = dataformClient.CreateRepository(parent, repository, repositoryId);
+            gcdv::Repository response = dataformClient.CreateRepository(parent, repository, repositoryId);
             // End snippet
         }
 
@@ -452,13 +2251,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateRepositoryAsync(string, Repository, string, CallSettings)
             // Additional: CreateRepositoryAsync(string, Repository, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             string repositoryId = "";
             // Make the request
-            Repository response = await dataformClient.CreateRepositoryAsync(parent, repository, repositoryId);
+            gcdv::Repository response = await dataformClient.CreateRepositoryAsync(parent, repository, repositoryId);
             // End snippet
         }
 
@@ -467,13 +2266,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateRepository(LocationName, Repository, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             string repositoryId = "";
             // Make the request
-            Repository response = dataformClient.CreateRepository(parent, repository, repositoryId);
+            gcdv::Repository response = dataformClient.CreateRepository(parent, repository, repositoryId);
             // End snippet
         }
 
@@ -483,13 +2282,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateRepositoryAsync(LocationName, Repository, string, CallSettings)
             // Additional: CreateRepositoryAsync(LocationName, Repository, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             string repositoryId = "";
             // Make the request
-            Repository response = await dataformClient.CreateRepositoryAsync(parent, repository, repositoryId);
+            gcdv::Repository response = await dataformClient.CreateRepositoryAsync(parent, repository, repositoryId);
             // End snippet
         }
 
@@ -498,15 +2297,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateRepository(UpdateRepositoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            UpdateRepositoryRequest request = new UpdateRepositoryRequest
+            gcdv::UpdateRepositoryRequest request = new gcdv::UpdateRepositoryRequest
             {
                 UpdateMask = new FieldMask(),
-                Repository = new Repository(),
+                Repository = new gcdv::Repository(),
             };
             // Make the request
-            Repository response = dataformClient.UpdateRepository(request);
+            gcdv::Repository response = dataformClient.UpdateRepository(request);
             // End snippet
         }
 
@@ -516,15 +2315,15 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateRepositoryAsync(UpdateRepositoryRequest, CallSettings)
             // Additional: UpdateRepositoryAsync(UpdateRepositoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateRepositoryRequest request = new UpdateRepositoryRequest
+            gcdv::UpdateRepositoryRequest request = new gcdv::UpdateRepositoryRequest
             {
                 UpdateMask = new FieldMask(),
-                Repository = new Repository(),
+                Repository = new gcdv::Repository(),
             };
             // Make the request
-            Repository response = await dataformClient.UpdateRepositoryAsync(request);
+            gcdv::Repository response = await dataformClient.UpdateRepositoryAsync(request);
             // End snippet
         }
 
@@ -533,12 +2332,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateRepository(Repository, FieldMask, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Repository response = dataformClient.UpdateRepository(repository, updateMask);
+            gcdv::Repository response = dataformClient.UpdateRepository(repository, updateMask);
             // End snippet
         }
 
@@ -548,12 +2347,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateRepositoryAsync(Repository, FieldMask, CallSettings)
             // Additional: UpdateRepositoryAsync(Repository, FieldMask, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            Repository repository = new Repository();
+            gcdv::Repository repository = new gcdv::Repository();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Repository response = await dataformClient.UpdateRepositoryAsync(repository, updateMask);
+            gcdv::Repository response = await dataformClient.UpdateRepositoryAsync(repository, updateMask);
             // End snippet
         }
 
@@ -562,11 +2361,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteRepository(DeleteRepositoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            gcdv::DeleteRepositoryRequest request = new gcdv::DeleteRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Force = false,
             };
             // Make the request
@@ -580,11 +2379,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteRepositoryAsync(DeleteRepositoryRequest, CallSettings)
             // Additional: DeleteRepositoryAsync(DeleteRepositoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            gcdv::DeleteRepositoryRequest request = new gcdv::DeleteRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Force = false,
             };
             // Make the request
@@ -597,7 +2396,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteRepository(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
@@ -611,7 +2410,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteRepositoryAsync(string, CallSettings)
             // Additional: DeleteRepositoryAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
@@ -624,9 +2423,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteRepository(RepositoryName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             dataformClient.DeleteRepository(name);
             // End snippet
@@ -638,11 +2437,200 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteRepositoryAsync(RepositoryName, CallSettings)
             // Additional: DeleteRepositoryAsync(RepositoryName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             await dataformClient.DeleteRepositoryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepository</summary>
+        public void MoveRepositoryRequestObject()
+        {
+            // Snippet: MoveRepository(MoveRepositoryRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::MoveRepositoryRequest request = new gcdv::MoveRepositoryRequest
+            {
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DestinationContainingFolder = "",
+            };
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = dataformClient.MoveRepository(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = dataformClient.PollOnceMoveRepository(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepositoryAsync</summary>
+        public async Task MoveRepositoryRequestObjectAsync()
+        {
+            // Snippet: MoveRepositoryAsync(MoveRepositoryRequest, CallSettings)
+            // Additional: MoveRepositoryAsync(MoveRepositoryRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MoveRepositoryRequest request = new gcdv::MoveRepositoryRequest
+            {
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                DestinationContainingFolder = "",
+            };
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = await dataformClient.MoveRepositoryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = await dataformClient.PollOnceMoveRepositoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepository</summary>
+        public void MoveRepository()
+        {
+            // Snippet: MoveRepository(string, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = dataformClient.MoveRepository(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = dataformClient.PollOnceMoveRepository(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepositoryAsync</summary>
+        public async Task MoveRepositoryAsync()
+        {
+            // Snippet: MoveRepositoryAsync(string, string, CallSettings)
+            // Additional: MoveRepositoryAsync(string, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = await dataformClient.MoveRepositoryAsync(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = await dataformClient.PollOnceMoveRepositoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepository</summary>
+        public void MoveRepositoryResourceNames()
+        {
+            // Snippet: MoveRepository(RepositoryName, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = dataformClient.MoveRepository(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = dataformClient.PollOnceMoveRepository(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveRepositoryAsync</summary>
+        public async Task MoveRepositoryResourceNamesAsync()
+        {
+            // Snippet: MoveRepositoryAsync(RepositoryName, string, CallSettings)
+            // Additional: MoveRepositoryAsync(RepositoryName, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::RepositoryName name = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            string destinationContainingFolder = "";
+            // Make the request
+            Operation<Empty, gcdv::MoveRepositoryMetadata> response = await dataformClient.MoveRepositoryAsync(name, destinationContainingFolder);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::MoveRepositoryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::MoveRepositoryMetadata> retrievedResponse = await dataformClient.PollOnceMoveRepositoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -651,23 +2639,23 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CommitRepositoryChanges(CommitRepositoryChangesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CommitRepositoryChangesRequest request = new CommitRepositoryChangesRequest
+            gcdv::CommitRepositoryChangesRequest request = new gcdv::CommitRepositoryChangesRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                CommitMetadata = new CommitMetadata(),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitMetadata = new gcdv::CommitMetadata(),
                 FileOperations =
                 {
                     {
                         "",
-                        new CommitRepositoryChangesRequest.Types.FileOperation()
+                        new gcdv::CommitRepositoryChangesRequest.Types.FileOperation()
                     },
                 },
                 RequiredHeadCommitSha = "",
             };
             // Make the request
-            CommitRepositoryChangesResponse response = dataformClient.CommitRepositoryChanges(request);
+            gcdv::CommitRepositoryChangesResponse response = dataformClient.CommitRepositoryChanges(request);
             // End snippet
         }
 
@@ -677,23 +2665,23 @@ namespace GoogleCSharpSnippets
             // Snippet: CommitRepositoryChangesAsync(CommitRepositoryChangesRequest, CallSettings)
             // Additional: CommitRepositoryChangesAsync(CommitRepositoryChangesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CommitRepositoryChangesRequest request = new CommitRepositoryChangesRequest
+            gcdv::CommitRepositoryChangesRequest request = new gcdv::CommitRepositoryChangesRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                CommitMetadata = new CommitMetadata(),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitMetadata = new gcdv::CommitMetadata(),
                 FileOperations =
                 {
                     {
                         "",
-                        new CommitRepositoryChangesRequest.Types.FileOperation()
+                        new gcdv::CommitRepositoryChangesRequest.Types.FileOperation()
                     },
                 },
                 RequiredHeadCommitSha = "",
             };
             // Make the request
-            CommitRepositoryChangesResponse response = await dataformClient.CommitRepositoryChangesAsync(request);
+            gcdv::CommitRepositoryChangesResponse response = await dataformClient.CommitRepositoryChangesAsync(request);
             // End snippet
         }
 
@@ -702,16 +2690,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadRepositoryFile(ReadRepositoryFileRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ReadRepositoryFileRequest request = new ReadRepositoryFileRequest
+            gcdv::ReadRepositoryFileRequest request = new gcdv::ReadRepositoryFileRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 CommitSha = "",
                 Path = "",
             };
             // Make the request
-            ReadRepositoryFileResponse response = dataformClient.ReadRepositoryFile(request);
+            gcdv::ReadRepositoryFileResponse response = dataformClient.ReadRepositoryFile(request);
             // End snippet
         }
 
@@ -721,16 +2709,16 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadRepositoryFileAsync(ReadRepositoryFileRequest, CallSettings)
             // Additional: ReadRepositoryFileAsync(ReadRepositoryFileRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ReadRepositoryFileRequest request = new ReadRepositoryFileRequest
+            gcdv::ReadRepositoryFileRequest request = new gcdv::ReadRepositoryFileRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 CommitSha = "",
                 Path = "",
             };
             // Make the request
-            ReadRepositoryFileResponse response = await dataformClient.ReadRepositoryFileAsync(request);
+            gcdv::ReadRepositoryFileResponse response = await dataformClient.ReadRepositoryFileAsync(request);
             // End snippet
         }
 
@@ -739,30 +2727,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryRepositoryDirectoryContents(QueryRepositoryDirectoryContentsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            QueryRepositoryDirectoryContentsRequest request = new QueryRepositoryDirectoryContentsRequest
+            gcdv::QueryRepositoryDirectoryContentsRequest request = new gcdv::QueryRepositoryDirectoryContentsRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 CommitSha = "",
                 Path = "",
             };
             // Make the request
-            PagedEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContents(request);
+            PagedEnumerable<gcdv::QueryRepositoryDirectoryContentsResponse, gcdv::DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DirectoryEntry item in response)
+            foreach (gcdv::DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
+            foreach (gcdv::QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DirectoryEntry item in page)
+                foreach (gcdv::DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -771,10 +2759,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DirectoryEntry> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DirectoryEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DirectoryEntry item in singlePage)
+            foreach (gcdv::DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -789,30 +2777,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryRepositoryDirectoryContentsAsync(QueryRepositoryDirectoryContentsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            QueryRepositoryDirectoryContentsRequest request = new QueryRepositoryDirectoryContentsRequest
+            gcdv::QueryRepositoryDirectoryContentsRequest request = new gcdv::QueryRepositoryDirectoryContentsRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 CommitSha = "",
                 Path = "",
             };
             // Make the request
-            PagedAsyncEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContentsAsync(request);
+            PagedAsyncEnumerable<gcdv::QueryRepositoryDirectoryContentsResponse, gcdv::DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (DirectoryEntry item in response)
+            await foreach (gcdv::DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
+            await foreach (gcdv::QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DirectoryEntry item in page)
+                foreach (gcdv::DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -821,10 +2809,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DirectoryEntry item in singlePage)
+            foreach (gcdv::DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -839,28 +2827,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchRepositoryHistory(FetchRepositoryHistoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            FetchRepositoryHistoryRequest request = new FetchRepositoryHistoryRequest
+            gcdv::FetchRepositoryHistoryRequest request = new gcdv::FetchRepositoryHistoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> response = dataformClient.FetchRepositoryHistory(request);
+            PagedEnumerable<gcdv::FetchRepositoryHistoryResponse, gcdv::CommitLogEntry> response = dataformClient.FetchRepositoryHistory(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CommitLogEntry item in response)
+            foreach (gcdv::CommitLogEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (FetchRepositoryHistoryResponse page in response.AsRawResponses())
+            foreach (gcdv::FetchRepositoryHistoryResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CommitLogEntry item in page)
+                foreach (gcdv::CommitLogEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -869,10 +2857,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CommitLogEntry> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::CommitLogEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CommitLogEntry item in singlePage)
+            foreach (gcdv::CommitLogEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -887,28 +2875,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchRepositoryHistoryAsync(FetchRepositoryHistoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            FetchRepositoryHistoryRequest request = new FetchRepositoryHistoryRequest
+            gcdv::FetchRepositoryHistoryRequest request = new gcdv::FetchRepositoryHistoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> response = dataformClient.FetchRepositoryHistoryAsync(request);
+            PagedAsyncEnumerable<gcdv::FetchRepositoryHistoryResponse, gcdv::CommitLogEntry> response = dataformClient.FetchRepositoryHistoryAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CommitLogEntry item in response)
+            await foreach (gcdv::CommitLogEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (FetchRepositoryHistoryResponse page in response.AsRawResponses())
+            await foreach (gcdv::FetchRepositoryHistoryResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CommitLogEntry item in page)
+                foreach (gcdv::CommitLogEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -917,10 +2905,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CommitLogEntry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::CommitLogEntry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CommitLogEntry item in singlePage)
+            foreach (gcdv::CommitLogEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -935,14 +2923,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ComputeRepositoryAccessTokenStatus(ComputeRepositoryAccessTokenStatusRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ComputeRepositoryAccessTokenStatusRequest request = new ComputeRepositoryAccessTokenStatusRequest
+            gcdv::ComputeRepositoryAccessTokenStatusRequest request = new gcdv::ComputeRepositoryAccessTokenStatusRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            ComputeRepositoryAccessTokenStatusResponse response = dataformClient.ComputeRepositoryAccessTokenStatus(request);
+            gcdv::ComputeRepositoryAccessTokenStatusResponse response = dataformClient.ComputeRepositoryAccessTokenStatus(request);
             // End snippet
         }
 
@@ -952,14 +2940,14 @@ namespace GoogleCSharpSnippets
             // Snippet: ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest, CallSettings)
             // Additional: ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ComputeRepositoryAccessTokenStatusRequest request = new ComputeRepositoryAccessTokenStatusRequest
+            gcdv::ComputeRepositoryAccessTokenStatusRequest request = new gcdv::ComputeRepositoryAccessTokenStatusRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            ComputeRepositoryAccessTokenStatusResponse response = await dataformClient.ComputeRepositoryAccessTokenStatusAsync(request);
+            gcdv::ComputeRepositoryAccessTokenStatusResponse response = await dataformClient.ComputeRepositoryAccessTokenStatusAsync(request);
             // End snippet
         }
 
@@ -968,14 +2956,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchRemoteBranches(FetchRemoteBranchesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            FetchRemoteBranchesRequest request = new FetchRemoteBranchesRequest
+            gcdv::FetchRemoteBranchesRequest request = new gcdv::FetchRemoteBranchesRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            FetchRemoteBranchesResponse response = dataformClient.FetchRemoteBranches(request);
+            gcdv::FetchRemoteBranchesResponse response = dataformClient.FetchRemoteBranches(request);
             // End snippet
         }
 
@@ -985,14 +2973,14 @@ namespace GoogleCSharpSnippets
             // Snippet: FetchRemoteBranchesAsync(FetchRemoteBranchesRequest, CallSettings)
             // Additional: FetchRemoteBranchesAsync(FetchRemoteBranchesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            FetchRemoteBranchesRequest request = new FetchRemoteBranchesRequest
+            gcdv::FetchRemoteBranchesRequest request = new gcdv::FetchRemoteBranchesRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            FetchRemoteBranchesResponse response = await dataformClient.FetchRemoteBranchesAsync(request);
+            gcdv::FetchRemoteBranchesResponse response = await dataformClient.FetchRemoteBranchesAsync(request);
             // End snippet
         }
 
@@ -1001,30 +2989,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspaces(ListWorkspacesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListWorkspacesRequest request = new ListWorkspacesRequest
+            gcdv::ListWorkspacesRequest request = new gcdv::ListWorkspacesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspaces(request);
+            PagedEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspaces(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Workspace item in response)
+            foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1033,10 +3021,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Workspace> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1051,30 +3039,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspacesAsync(ListWorkspacesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListWorkspacesRequest request = new ListWorkspacesRequest
+            gcdv::ListWorkspacesRequest request = new gcdv::ListWorkspacesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspacesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Workspace item in response)
+            await foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1083,10 +3071,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Workspace> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1101,25 +3089,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspaces(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspaces(parent);
+            PagedEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspaces(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Workspace item in response)
+            foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1128,10 +3116,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Workspace> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1146,25 +3134,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspacesAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Workspace item in response)
+            await foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1173,10 +3161,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Workspace> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1191,25 +3179,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspaces(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspaces(parent);
+            PagedEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspaces(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Workspace item in response)
+            foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1218,10 +3206,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Workspace> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1236,25 +3224,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkspacesAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = dataformClient.ListWorkspacesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkspacesResponse, gcdv::Workspace> response = dataformClient.ListWorkspacesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Workspace item in response)
+            await foreach (gcdv::Workspace item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkspacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Workspace item in page)
+                foreach (gcdv::Workspace item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1263,10 +3251,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Workspace> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Workspace> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Workspace item in singlePage)
+            foreach (gcdv::Workspace item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1281,14 +3269,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkspace(GetWorkspaceRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetWorkspaceRequest request = new GetWorkspaceRequest
+            gcdv::GetWorkspaceRequest request = new gcdv::GetWorkspaceRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            Workspace response = dataformClient.GetWorkspace(request);
+            gcdv::Workspace response = dataformClient.GetWorkspace(request);
             // End snippet
         }
 
@@ -1298,14 +3286,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkspaceAsync(GetWorkspaceRequest, CallSettings)
             // Additional: GetWorkspaceAsync(GetWorkspaceRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetWorkspaceRequest request = new GetWorkspaceRequest
+            gcdv::GetWorkspaceRequest request = new gcdv::GetWorkspaceRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            Workspace response = await dataformClient.GetWorkspaceAsync(request);
+            gcdv::Workspace response = await dataformClient.GetWorkspaceAsync(request);
             // End snippet
         }
 
@@ -1314,11 +3302,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkspace(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workspaces/[WORKSPACE]";
             // Make the request
-            Workspace response = dataformClient.GetWorkspace(name);
+            gcdv::Workspace response = dataformClient.GetWorkspace(name);
             // End snippet
         }
 
@@ -1328,11 +3316,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkspaceAsync(string, CallSettings)
             // Additional: GetWorkspaceAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workspaces/[WORKSPACE]";
             // Make the request
-            Workspace response = await dataformClient.GetWorkspaceAsync(name);
+            gcdv::Workspace response = await dataformClient.GetWorkspaceAsync(name);
             // End snippet
         }
 
@@ -1341,11 +3329,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkspace(WorkspaceName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkspaceName name = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
+            gcdv::WorkspaceName name = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
             // Make the request
-            Workspace response = dataformClient.GetWorkspace(name);
+            gcdv::Workspace response = dataformClient.GetWorkspace(name);
             // End snippet
         }
 
@@ -1355,11 +3343,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkspaceAsync(WorkspaceName, CallSettings)
             // Additional: GetWorkspaceAsync(WorkspaceName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkspaceName name = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
+            gcdv::WorkspaceName name = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
             // Make the request
-            Workspace response = await dataformClient.GetWorkspaceAsync(name);
+            gcdv::Workspace response = await dataformClient.GetWorkspaceAsync(name);
             // End snippet
         }
 
@@ -1368,16 +3356,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkspace(CreateWorkspaceRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateWorkspaceRequest request = new CreateWorkspaceRequest
+            gcdv::CreateWorkspaceRequest request = new gcdv::CreateWorkspaceRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                Workspace = new Workspace(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Workspace = new gcdv::Workspace(),
                 WorkspaceId = "",
             };
             // Make the request
-            Workspace response = dataformClient.CreateWorkspace(request);
+            gcdv::Workspace response = dataformClient.CreateWorkspace(request);
             // End snippet
         }
 
@@ -1387,16 +3375,16 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkspaceAsync(CreateWorkspaceRequest, CallSettings)
             // Additional: CreateWorkspaceAsync(CreateWorkspaceRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateWorkspaceRequest request = new CreateWorkspaceRequest
+            gcdv::CreateWorkspaceRequest request = new gcdv::CreateWorkspaceRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                Workspace = new Workspace(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Workspace = new gcdv::Workspace(),
                 WorkspaceId = "",
             };
             // Make the request
-            Workspace response = await dataformClient.CreateWorkspaceAsync(request);
+            gcdv::Workspace response = await dataformClient.CreateWorkspaceAsync(request);
             // End snippet
         }
 
@@ -1405,13 +3393,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkspace(string, Workspace, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            Workspace workspace = new Workspace();
+            gcdv::Workspace workspace = new gcdv::Workspace();
             string workspaceId = "";
             // Make the request
-            Workspace response = dataformClient.CreateWorkspace(parent, workspace, workspaceId);
+            gcdv::Workspace response = dataformClient.CreateWorkspace(parent, workspace, workspaceId);
             // End snippet
         }
 
@@ -1421,13 +3409,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkspaceAsync(string, Workspace, string, CallSettings)
             // Additional: CreateWorkspaceAsync(string, Workspace, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            Workspace workspace = new Workspace();
+            gcdv::Workspace workspace = new gcdv::Workspace();
             string workspaceId = "";
             // Make the request
-            Workspace response = await dataformClient.CreateWorkspaceAsync(parent, workspace, workspaceId);
+            gcdv::Workspace response = await dataformClient.CreateWorkspaceAsync(parent, workspace, workspaceId);
             // End snippet
         }
 
@@ -1436,13 +3424,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkspace(RepositoryName, Workspace, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            Workspace workspace = new Workspace();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::Workspace workspace = new gcdv::Workspace();
             string workspaceId = "";
             // Make the request
-            Workspace response = dataformClient.CreateWorkspace(parent, workspace, workspaceId);
+            gcdv::Workspace response = dataformClient.CreateWorkspace(parent, workspace, workspaceId);
             // End snippet
         }
 
@@ -1452,13 +3440,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkspaceAsync(RepositoryName, Workspace, string, CallSettings)
             // Additional: CreateWorkspaceAsync(RepositoryName, Workspace, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            Workspace workspace = new Workspace();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::Workspace workspace = new gcdv::Workspace();
             string workspaceId = "";
             // Make the request
-            Workspace response = await dataformClient.CreateWorkspaceAsync(parent, workspace, workspaceId);
+            gcdv::Workspace response = await dataformClient.CreateWorkspaceAsync(parent, workspace, workspaceId);
             // End snippet
         }
 
@@ -1467,11 +3455,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkspace(DeleteWorkspaceRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            DeleteWorkspaceRequest request = new DeleteWorkspaceRequest
+            gcdv::DeleteWorkspaceRequest request = new gcdv::DeleteWorkspaceRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
             dataformClient.DeleteWorkspace(request);
@@ -1484,11 +3472,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkspaceAsync(DeleteWorkspaceRequest, CallSettings)
             // Additional: DeleteWorkspaceAsync(DeleteWorkspaceRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteWorkspaceRequest request = new DeleteWorkspaceRequest
+            gcdv::DeleteWorkspaceRequest request = new gcdv::DeleteWorkspaceRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
             await dataformClient.DeleteWorkspaceAsync(request);
@@ -1500,7 +3488,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkspace(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workspaces/[WORKSPACE]";
             // Make the request
@@ -1514,7 +3502,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkspaceAsync(string, CallSettings)
             // Additional: DeleteWorkspaceAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workspaces/[WORKSPACE]";
             // Make the request
@@ -1527,9 +3515,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkspace(WorkspaceName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkspaceName name = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
+            gcdv::WorkspaceName name = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
             // Make the request
             dataformClient.DeleteWorkspace(name);
             // End snippet
@@ -1541,9 +3529,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkspaceAsync(WorkspaceName, CallSettings)
             // Additional: DeleteWorkspaceAsync(WorkspaceName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkspaceName name = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
+            gcdv::WorkspaceName name = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]");
             // Make the request
             await dataformClient.DeleteWorkspaceAsync(name);
             // End snippet
@@ -1554,14 +3542,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: InstallNpmPackages(InstallNpmPackagesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            InstallNpmPackagesRequest request = new InstallNpmPackagesRequest
+            gcdv::InstallNpmPackagesRequest request = new gcdv::InstallNpmPackagesRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            InstallNpmPackagesResponse response = dataformClient.InstallNpmPackages(request);
+            gcdv::InstallNpmPackagesResponse response = dataformClient.InstallNpmPackages(request);
             // End snippet
         }
 
@@ -1571,14 +3559,14 @@ namespace GoogleCSharpSnippets
             // Snippet: InstallNpmPackagesAsync(InstallNpmPackagesRequest, CallSettings)
             // Additional: InstallNpmPackagesAsync(InstallNpmPackagesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            InstallNpmPackagesRequest request = new InstallNpmPackagesRequest
+            gcdv::InstallNpmPackagesRequest request = new gcdv::InstallNpmPackagesRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            InstallNpmPackagesResponse response = await dataformClient.InstallNpmPackagesAsync(request);
+            gcdv::InstallNpmPackagesResponse response = await dataformClient.InstallNpmPackagesAsync(request);
             // End snippet
         }
 
@@ -1587,16 +3575,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PullGitCommits(PullGitCommitsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            PullGitCommitsRequest request = new PullGitCommitsRequest
+            gcdv::PullGitCommitsRequest request = new gcdv::PullGitCommitsRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
-                Author = new CommitAuthor(),
+                Author = new gcdv::CommitAuthor(),
             };
             // Make the request
-            PullGitCommitsResponse response = dataformClient.PullGitCommits(request);
+            gcdv::PullGitCommitsResponse response = dataformClient.PullGitCommits(request);
             // End snippet
         }
 
@@ -1606,16 +3594,16 @@ namespace GoogleCSharpSnippets
             // Snippet: PullGitCommitsAsync(PullGitCommitsRequest, CallSettings)
             // Additional: PullGitCommitsAsync(PullGitCommitsRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            PullGitCommitsRequest request = new PullGitCommitsRequest
+            gcdv::PullGitCommitsRequest request = new gcdv::PullGitCommitsRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
-                Author = new CommitAuthor(),
+                Author = new gcdv::CommitAuthor(),
             };
             // Make the request
-            PullGitCommitsResponse response = await dataformClient.PullGitCommitsAsync(request);
+            gcdv::PullGitCommitsResponse response = await dataformClient.PullGitCommitsAsync(request);
             // End snippet
         }
 
@@ -1624,15 +3612,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PushGitCommits(PushGitCommitsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            PushGitCommitsRequest request = new PushGitCommitsRequest
+            gcdv::PushGitCommitsRequest request = new gcdv::PushGitCommitsRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
             };
             // Make the request
-            PushGitCommitsResponse response = dataformClient.PushGitCommits(request);
+            gcdv::PushGitCommitsResponse response = dataformClient.PushGitCommits(request);
             // End snippet
         }
 
@@ -1642,15 +3630,15 @@ namespace GoogleCSharpSnippets
             // Snippet: PushGitCommitsAsync(PushGitCommitsRequest, CallSettings)
             // Additional: PushGitCommitsAsync(PushGitCommitsRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            PushGitCommitsRequest request = new PushGitCommitsRequest
+            gcdv::PushGitCommitsRequest request = new gcdv::PushGitCommitsRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
             };
             // Make the request
-            PushGitCommitsResponse response = await dataformClient.PushGitCommitsAsync(request);
+            gcdv::PushGitCommitsResponse response = await dataformClient.PushGitCommitsAsync(request);
             // End snippet
         }
 
@@ -1659,14 +3647,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchFileGitStatuses(FetchFileGitStatusesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            FetchFileGitStatusesRequest request = new FetchFileGitStatusesRequest
+            gcdv::FetchFileGitStatusesRequest request = new gcdv::FetchFileGitStatusesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            FetchFileGitStatusesResponse response = dataformClient.FetchFileGitStatuses(request);
+            gcdv::FetchFileGitStatusesResponse response = dataformClient.FetchFileGitStatuses(request);
             // End snippet
         }
 
@@ -1676,14 +3664,14 @@ namespace GoogleCSharpSnippets
             // Snippet: FetchFileGitStatusesAsync(FetchFileGitStatusesRequest, CallSettings)
             // Additional: FetchFileGitStatusesAsync(FetchFileGitStatusesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            FetchFileGitStatusesRequest request = new FetchFileGitStatusesRequest
+            gcdv::FetchFileGitStatusesRequest request = new gcdv::FetchFileGitStatusesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
             };
             // Make the request
-            FetchFileGitStatusesResponse response = await dataformClient.FetchFileGitStatusesAsync(request);
+            gcdv::FetchFileGitStatusesResponse response = await dataformClient.FetchFileGitStatusesAsync(request);
             // End snippet
         }
 
@@ -1692,15 +3680,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchGitAheadBehind(FetchGitAheadBehindRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            FetchGitAheadBehindRequest request = new FetchGitAheadBehindRequest
+            gcdv::FetchGitAheadBehindRequest request = new gcdv::FetchGitAheadBehindRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
             };
             // Make the request
-            FetchGitAheadBehindResponse response = dataformClient.FetchGitAheadBehind(request);
+            gcdv::FetchGitAheadBehindResponse response = dataformClient.FetchGitAheadBehind(request);
             // End snippet
         }
 
@@ -1710,15 +3698,15 @@ namespace GoogleCSharpSnippets
             // Snippet: FetchGitAheadBehindAsync(FetchGitAheadBehindRequest, CallSettings)
             // Additional: FetchGitAheadBehindAsync(FetchGitAheadBehindRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            FetchGitAheadBehindRequest request = new FetchGitAheadBehindRequest
+            gcdv::FetchGitAheadBehindRequest request = new gcdv::FetchGitAheadBehindRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 RemoteBranch = "",
             };
             // Make the request
-            FetchGitAheadBehindResponse response = await dataformClient.FetchGitAheadBehindAsync(request);
+            gcdv::FetchGitAheadBehindResponse response = await dataformClient.FetchGitAheadBehindAsync(request);
             // End snippet
         }
 
@@ -1727,17 +3715,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CommitWorkspaceChanges(CommitWorkspaceChangesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CommitWorkspaceChangesRequest request = new CommitWorkspaceChangesRequest
+            gcdv::CommitWorkspaceChangesRequest request = new gcdv::CommitWorkspaceChangesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 CommitMessage = "",
                 Paths = { "", },
-                Author = new CommitAuthor(),
+                Author = new gcdv::CommitAuthor(),
             };
             // Make the request
-            CommitWorkspaceChangesResponse response = dataformClient.CommitWorkspaceChanges(request);
+            gcdv::CommitWorkspaceChangesResponse response = dataformClient.CommitWorkspaceChanges(request);
             // End snippet
         }
 
@@ -1747,17 +3735,17 @@ namespace GoogleCSharpSnippets
             // Snippet: CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest, CallSettings)
             // Additional: CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CommitWorkspaceChangesRequest request = new CommitWorkspaceChangesRequest
+            gcdv::CommitWorkspaceChangesRequest request = new gcdv::CommitWorkspaceChangesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 CommitMessage = "",
                 Paths = { "", },
-                Author = new CommitAuthor(),
+                Author = new gcdv::CommitAuthor(),
             };
             // Make the request
-            CommitWorkspaceChangesResponse response = await dataformClient.CommitWorkspaceChangesAsync(request);
+            gcdv::CommitWorkspaceChangesResponse response = await dataformClient.CommitWorkspaceChangesAsync(request);
             // End snippet
         }
 
@@ -1766,16 +3754,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ResetWorkspaceChanges(ResetWorkspaceChangesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ResetWorkspaceChangesRequest request = new ResetWorkspaceChangesRequest
+            gcdv::ResetWorkspaceChangesRequest request = new gcdv::ResetWorkspaceChangesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Paths = { "", },
                 Clean = false,
             };
             // Make the request
-            ResetWorkspaceChangesResponse response = dataformClient.ResetWorkspaceChanges(request);
+            gcdv::ResetWorkspaceChangesResponse response = dataformClient.ResetWorkspaceChanges(request);
             // End snippet
         }
 
@@ -1785,16 +3773,16 @@ namespace GoogleCSharpSnippets
             // Snippet: ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest, CallSettings)
             // Additional: ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ResetWorkspaceChangesRequest request = new ResetWorkspaceChangesRequest
+            gcdv::ResetWorkspaceChangesRequest request = new gcdv::ResetWorkspaceChangesRequest
             {
-                WorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Paths = { "", },
                 Clean = false,
             };
             // Make the request
-            ResetWorkspaceChangesResponse response = await dataformClient.ResetWorkspaceChangesAsync(request);
+            gcdv::ResetWorkspaceChangesResponse response = await dataformClient.ResetWorkspaceChangesAsync(request);
             // End snippet
         }
 
@@ -1803,15 +3791,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: FetchFileDiff(FetchFileDiffRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            FetchFileDiffRequest request = new FetchFileDiffRequest
+            gcdv::FetchFileDiffRequest request = new gcdv::FetchFileDiffRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            FetchFileDiffResponse response = dataformClient.FetchFileDiff(request);
+            gcdv::FetchFileDiffResponse response = dataformClient.FetchFileDiff(request);
             // End snippet
         }
 
@@ -1821,15 +3809,15 @@ namespace GoogleCSharpSnippets
             // Snippet: FetchFileDiffAsync(FetchFileDiffRequest, CallSettings)
             // Additional: FetchFileDiffAsync(FetchFileDiffRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            FetchFileDiffRequest request = new FetchFileDiffRequest
+            gcdv::FetchFileDiffRequest request = new gcdv::FetchFileDiffRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            FetchFileDiffResponse response = await dataformClient.FetchFileDiffAsync(request);
+            gcdv::FetchFileDiffResponse response = await dataformClient.FetchFileDiffAsync(request);
             // End snippet
         }
 
@@ -1838,29 +3826,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryDirectoryContents(QueryDirectoryContentsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            QueryDirectoryContentsRequest request = new QueryDirectoryContentsRequest
+            gcdv::QueryDirectoryContentsRequest request = new gcdv::QueryDirectoryContentsRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
+            PagedEnumerable<gcdv::QueryDirectoryContentsResponse, gcdv::DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DirectoryEntry item in response)
+            foreach (gcdv::DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (QueryDirectoryContentsResponse page in response.AsRawResponses())
+            foreach (gcdv::QueryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DirectoryEntry item in page)
+                foreach (gcdv::DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1869,10 +3857,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DirectoryEntry> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DirectoryEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DirectoryEntry item in singlePage)
+            foreach (gcdv::DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1887,29 +3875,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryDirectoryContentsAsync(QueryDirectoryContentsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            QueryDirectoryContentsRequest request = new QueryDirectoryContentsRequest
+            gcdv::QueryDirectoryContentsRequest request = new gcdv::QueryDirectoryContentsRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
+            PagedAsyncEnumerable<gcdv::QueryDirectoryContentsResponse, gcdv::DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (DirectoryEntry item in response)
+            await foreach (gcdv::DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (QueryDirectoryContentsResponse page in response.AsRawResponses())
+            await foreach (gcdv::QueryDirectoryContentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DirectoryEntry item in page)
+                foreach (gcdv::DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1918,10 +3906,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DirectoryEntry item in singlePage)
+            foreach (gcdv::DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1936,29 +3924,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SearchFiles(SearchFilesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            SearchFilesRequest request = new SearchFilesRequest
+            gcdv::SearchFilesRequest request = new gcdv::SearchFilesRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFiles(request);
+            PagedEnumerable<gcdv::SearchFilesResponse, gcdv::SearchResult> response = dataformClient.SearchFiles(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (SearchResult item in response)
+            foreach (gcdv::SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchFilesResponse page in response.AsRawResponses())
+            foreach (gcdv::SearchFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SearchResult item in page)
+                foreach (gcdv::SearchResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1967,10 +3955,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SearchResult> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::SearchResult> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchResult item in singlePage)
+            foreach (gcdv::SearchResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1985,29 +3973,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SearchFilesAsync(SearchFilesRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            SearchFilesRequest request = new SearchFilesRequest
+            gcdv::SearchFilesRequest request = new gcdv::SearchFilesRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFilesAsync(request);
+            PagedAsyncEnumerable<gcdv::SearchFilesResponse, gcdv::SearchResult> response = dataformClient.SearchFilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (SearchResult item in response)
+            await foreach (gcdv::SearchResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (SearchFilesResponse page in response.AsRawResponses())
+            await foreach (gcdv::SearchFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SearchResult item in page)
+                foreach (gcdv::SearchResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2016,10 +4004,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SearchResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::SearchResult> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchResult item in singlePage)
+            foreach (gcdv::SearchResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2034,15 +4022,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MakeDirectory(MakeDirectoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            MakeDirectoryRequest request = new MakeDirectoryRequest
+            gcdv::MakeDirectoryRequest request = new gcdv::MakeDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            MakeDirectoryResponse response = dataformClient.MakeDirectory(request);
+            gcdv::MakeDirectoryResponse response = dataformClient.MakeDirectory(request);
             // End snippet
         }
 
@@ -2052,15 +4040,15 @@ namespace GoogleCSharpSnippets
             // Snippet: MakeDirectoryAsync(MakeDirectoryRequest, CallSettings)
             // Additional: MakeDirectoryAsync(MakeDirectoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            MakeDirectoryRequest request = new MakeDirectoryRequest
+            gcdv::MakeDirectoryRequest request = new gcdv::MakeDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            MakeDirectoryResponse response = await dataformClient.MakeDirectoryAsync(request);
+            gcdv::MakeDirectoryResponse response = await dataformClient.MakeDirectoryAsync(request);
             // End snippet
         }
 
@@ -2069,15 +4057,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: RemoveDirectory(RemoveDirectoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RemoveDirectoryRequest request = new RemoveDirectoryRequest
+            gcdv::RemoveDirectoryRequest request = new gcdv::RemoveDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            RemoveDirectoryResponse response = dataformClient.RemoveDirectory(request);
+            gcdv::RemoveDirectoryResponse response = dataformClient.RemoveDirectory(request);
             // End snippet
         }
 
@@ -2087,15 +4075,15 @@ namespace GoogleCSharpSnippets
             // Snippet: RemoveDirectoryAsync(RemoveDirectoryRequest, CallSettings)
             // Additional: RemoveDirectoryAsync(RemoveDirectoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RemoveDirectoryRequest request = new RemoveDirectoryRequest
+            gcdv::RemoveDirectoryRequest request = new gcdv::RemoveDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            RemoveDirectoryResponse response = await dataformClient.RemoveDirectoryAsync(request);
+            gcdv::RemoveDirectoryResponse response = await dataformClient.RemoveDirectoryAsync(request);
             // End snippet
         }
 
@@ -2104,16 +4092,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MoveDirectory(MoveDirectoryRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            MoveDirectoryRequest request = new MoveDirectoryRequest
+            gcdv::MoveDirectoryRequest request = new gcdv::MoveDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 NewPath = "",
             };
             // Make the request
-            MoveDirectoryResponse response = dataformClient.MoveDirectory(request);
+            gcdv::MoveDirectoryResponse response = dataformClient.MoveDirectory(request);
             // End snippet
         }
 
@@ -2123,16 +4111,16 @@ namespace GoogleCSharpSnippets
             // Snippet: MoveDirectoryAsync(MoveDirectoryRequest, CallSettings)
             // Additional: MoveDirectoryAsync(MoveDirectoryRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            MoveDirectoryRequest request = new MoveDirectoryRequest
+            gcdv::MoveDirectoryRequest request = new gcdv::MoveDirectoryRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 NewPath = "",
             };
             // Make the request
-            MoveDirectoryResponse response = await dataformClient.MoveDirectoryAsync(request);
+            gcdv::MoveDirectoryResponse response = await dataformClient.MoveDirectoryAsync(request);
             // End snippet
         }
 
@@ -2141,16 +4129,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ReadFile(ReadFileRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ReadFileRequest request = new ReadFileRequest
+            gcdv::ReadFileRequest request = new gcdv::ReadFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 Revision = "",
             };
             // Make the request
-            ReadFileResponse response = dataformClient.ReadFile(request);
+            gcdv::ReadFileResponse response = dataformClient.ReadFile(request);
             // End snippet
         }
 
@@ -2160,16 +4148,16 @@ namespace GoogleCSharpSnippets
             // Snippet: ReadFileAsync(ReadFileRequest, CallSettings)
             // Additional: ReadFileAsync(ReadFileRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ReadFileRequest request = new ReadFileRequest
+            gcdv::ReadFileRequest request = new gcdv::ReadFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 Revision = "",
             };
             // Make the request
-            ReadFileResponse response = await dataformClient.ReadFileAsync(request);
+            gcdv::ReadFileResponse response = await dataformClient.ReadFileAsync(request);
             // End snippet
         }
 
@@ -2178,15 +4166,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: RemoveFile(RemoveFileRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RemoveFileRequest request = new RemoveFileRequest
+            gcdv::RemoveFileRequest request = new gcdv::RemoveFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            RemoveFileResponse response = dataformClient.RemoveFile(request);
+            gcdv::RemoveFileResponse response = dataformClient.RemoveFile(request);
             // End snippet
         }
 
@@ -2196,15 +4184,15 @@ namespace GoogleCSharpSnippets
             // Snippet: RemoveFileAsync(RemoveFileRequest, CallSettings)
             // Additional: RemoveFileAsync(RemoveFileRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RemoveFileRequest request = new RemoveFileRequest
+            gcdv::RemoveFileRequest request = new gcdv::RemoveFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
             };
             // Make the request
-            RemoveFileResponse response = await dataformClient.RemoveFileAsync(request);
+            gcdv::RemoveFileResponse response = await dataformClient.RemoveFileAsync(request);
             // End snippet
         }
 
@@ -2213,16 +4201,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: MoveFile(MoveFileRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            MoveFileRequest request = new MoveFileRequest
+            gcdv::MoveFileRequest request = new gcdv::MoveFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 NewPath = "",
             };
             // Make the request
-            MoveFileResponse response = dataformClient.MoveFile(request);
+            gcdv::MoveFileResponse response = dataformClient.MoveFile(request);
             // End snippet
         }
 
@@ -2232,16 +4220,16 @@ namespace GoogleCSharpSnippets
             // Snippet: MoveFileAsync(MoveFileRequest, CallSettings)
             // Additional: MoveFileAsync(MoveFileRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            MoveFileRequest request = new MoveFileRequest
+            gcdv::MoveFileRequest request = new gcdv::MoveFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 NewPath = "",
             };
             // Make the request
-            MoveFileResponse response = await dataformClient.MoveFileAsync(request);
+            gcdv::MoveFileResponse response = await dataformClient.MoveFileAsync(request);
             // End snippet
         }
 
@@ -2250,16 +4238,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: WriteFile(WriteFileRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WriteFileRequest request = new WriteFileRequest
+            gcdv::WriteFileRequest request = new gcdv::WriteFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 Contents = ByteString.Empty,
             };
             // Make the request
-            WriteFileResponse response = dataformClient.WriteFile(request);
+            gcdv::WriteFileResponse response = dataformClient.WriteFile(request);
             // End snippet
         }
 
@@ -2269,16 +4257,16 @@ namespace GoogleCSharpSnippets
             // Snippet: WriteFileAsync(WriteFileRequest, CallSettings)
             // Additional: WriteFileAsync(WriteFileRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WriteFileRequest request = new WriteFileRequest
+            gcdv::WriteFileRequest request = new gcdv::WriteFileRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
                 Contents = ByteString.Empty,
             };
             // Make the request
-            WriteFileResponse response = await dataformClient.WriteFileAsync(request);
+            gcdv::WriteFileResponse response = await dataformClient.WriteFileAsync(request);
             // End snippet
         }
 
@@ -2287,28 +4275,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigs(ListReleaseConfigsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            gcdv::ListReleaseConfigsRequest request = new gcdv::ListReleaseConfigsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(request);
+            PagedEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ReleaseConfig item in response)
+            foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2317,10 +4305,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2335,28 +4323,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigsAsync(ListReleaseConfigsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            gcdv::ListReleaseConfigsRequest request = new gcdv::ListReleaseConfigsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ReleaseConfig item in response)
+            await foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2365,10 +4353,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2383,25 +4371,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigs(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
+            PagedEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ReleaseConfig item in response)
+            foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2410,10 +4398,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2428,25 +4416,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigsAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ReleaseConfig item in response)
+            await foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2455,10 +4443,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2473,25 +4461,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigs(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
+            PagedEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ReleaseConfig item in response)
+            foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2500,10 +4488,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2518,25 +4506,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListReleaseConfigsAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListReleaseConfigsResponse, gcdv::ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ReleaseConfig item in response)
+            await foreach (gcdv::ReleaseConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListReleaseConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ReleaseConfig item in page)
+                foreach (gcdv::ReleaseConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2545,10 +4533,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ReleaseConfig item in singlePage)
+            foreach (gcdv::ReleaseConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2563,14 +4551,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetReleaseConfig(GetReleaseConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetReleaseConfigRequest request = new GetReleaseConfigRequest
+            gcdv::GetReleaseConfigRequest request = new gcdv::GetReleaseConfigRequest
             {
-                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+                ReleaseConfigName = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
             };
             // Make the request
-            ReleaseConfig response = dataformClient.GetReleaseConfig(request);
+            gcdv::ReleaseConfig response = dataformClient.GetReleaseConfig(request);
             // End snippet
         }
 
@@ -2580,14 +4568,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetReleaseConfigAsync(GetReleaseConfigRequest, CallSettings)
             // Additional: GetReleaseConfigAsync(GetReleaseConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetReleaseConfigRequest request = new GetReleaseConfigRequest
+            gcdv::GetReleaseConfigRequest request = new gcdv::GetReleaseConfigRequest
             {
-                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+                ReleaseConfigName = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
             };
             // Make the request
-            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(request);
+            gcdv::ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(request);
             // End snippet
         }
 
@@ -2596,11 +4584,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetReleaseConfig(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
             // Make the request
-            ReleaseConfig response = dataformClient.GetReleaseConfig(name);
+            gcdv::ReleaseConfig response = dataformClient.GetReleaseConfig(name);
             // End snippet
         }
 
@@ -2610,11 +4598,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetReleaseConfigAsync(string, CallSettings)
             // Additional: GetReleaseConfigAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
             // Make the request
-            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
+            gcdv::ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
             // End snippet
         }
 
@@ -2623,11 +4611,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetReleaseConfig(ReleaseConfigName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            gcdv::ReleaseConfigName name = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
             // Make the request
-            ReleaseConfig response = dataformClient.GetReleaseConfig(name);
+            gcdv::ReleaseConfig response = dataformClient.GetReleaseConfig(name);
             // End snippet
         }
 
@@ -2637,11 +4625,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetReleaseConfigAsync(ReleaseConfigName, CallSettings)
             // Additional: GetReleaseConfigAsync(ReleaseConfigName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            gcdv::ReleaseConfigName name = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
             // Make the request
-            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
+            gcdv::ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
             // End snippet
         }
 
@@ -2650,16 +4638,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateReleaseConfig(CreateReleaseConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateReleaseConfigRequest request = new CreateReleaseConfigRequest
+            gcdv::CreateReleaseConfigRequest request = new gcdv::CreateReleaseConfigRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                ReleaseConfig = new ReleaseConfig(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ReleaseConfig = new gcdv::ReleaseConfig(),
                 ReleaseConfigId = "",
             };
             // Make the request
-            ReleaseConfig response = dataformClient.CreateReleaseConfig(request);
+            gcdv::ReleaseConfig response = dataformClient.CreateReleaseConfig(request);
             // End snippet
         }
 
@@ -2669,16 +4657,16 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateReleaseConfigAsync(CreateReleaseConfigRequest, CallSettings)
             // Additional: CreateReleaseConfigAsync(CreateReleaseConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateReleaseConfigRequest request = new CreateReleaseConfigRequest
+            gcdv::CreateReleaseConfigRequest request = new gcdv::CreateReleaseConfigRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                ReleaseConfig = new ReleaseConfig(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ReleaseConfig = new gcdv::ReleaseConfig(),
                 ReleaseConfigId = "",
             };
             // Make the request
-            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(request);
+            gcdv::ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(request);
             // End snippet
         }
 
@@ -2687,13 +4675,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateReleaseConfig(string, ReleaseConfig, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             string releaseConfigId = "";
             // Make the request
-            ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
+            gcdv::ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
             // End snippet
         }
 
@@ -2703,13 +4691,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateReleaseConfigAsync(string, ReleaseConfig, string, CallSettings)
             // Additional: CreateReleaseConfigAsync(string, ReleaseConfig, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             string releaseConfigId = "";
             // Make the request
-            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
+            gcdv::ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
             // End snippet
         }
 
@@ -2718,13 +4706,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateReleaseConfig(RepositoryName, ReleaseConfig, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             string releaseConfigId = "";
             // Make the request
-            ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
+            gcdv::ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
             // End snippet
         }
 
@@ -2734,13 +4722,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateReleaseConfigAsync(RepositoryName, ReleaseConfig, string, CallSettings)
             // Additional: CreateReleaseConfigAsync(RepositoryName, ReleaseConfig, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             string releaseConfigId = "";
             // Make the request
-            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
+            gcdv::ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
             // End snippet
         }
 
@@ -2749,15 +4737,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateReleaseConfig(UpdateReleaseConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            UpdateReleaseConfigRequest request = new UpdateReleaseConfigRequest
+            gcdv::UpdateReleaseConfigRequest request = new gcdv::UpdateReleaseConfigRequest
             {
                 UpdateMask = new FieldMask(),
-                ReleaseConfig = new ReleaseConfig(),
+                ReleaseConfig = new gcdv::ReleaseConfig(),
             };
             // Make the request
-            ReleaseConfig response = dataformClient.UpdateReleaseConfig(request);
+            gcdv::ReleaseConfig response = dataformClient.UpdateReleaseConfig(request);
             // End snippet
         }
 
@@ -2767,15 +4755,15 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateReleaseConfigAsync(UpdateReleaseConfigRequest, CallSettings)
             // Additional: UpdateReleaseConfigAsync(UpdateReleaseConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateReleaseConfigRequest request = new UpdateReleaseConfigRequest
+            gcdv::UpdateReleaseConfigRequest request = new gcdv::UpdateReleaseConfigRequest
             {
                 UpdateMask = new FieldMask(),
-                ReleaseConfig = new ReleaseConfig(),
+                ReleaseConfig = new gcdv::ReleaseConfig(),
             };
             // Make the request
-            ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(request);
+            gcdv::ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(request);
             // End snippet
         }
 
@@ -2784,12 +4772,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateReleaseConfig(ReleaseConfig, FieldMask, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ReleaseConfig response = dataformClient.UpdateReleaseConfig(releaseConfig, updateMask);
+            gcdv::ReleaseConfig response = dataformClient.UpdateReleaseConfig(releaseConfig, updateMask);
             // End snippet
         }
 
@@ -2799,12 +4787,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateReleaseConfigAsync(ReleaseConfig, FieldMask, CallSettings)
             // Additional: UpdateReleaseConfigAsync(ReleaseConfig, FieldMask, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ReleaseConfig releaseConfig = new ReleaseConfig();
+            gcdv::ReleaseConfig releaseConfig = new gcdv::ReleaseConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(releaseConfig, updateMask);
+            gcdv::ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(releaseConfig, updateMask);
             // End snippet
         }
 
@@ -2813,11 +4801,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteReleaseConfig(DeleteReleaseConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            DeleteReleaseConfigRequest request = new DeleteReleaseConfigRequest
+            gcdv::DeleteReleaseConfigRequest request = new gcdv::DeleteReleaseConfigRequest
             {
-                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+                ReleaseConfigName = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
             };
             // Make the request
             dataformClient.DeleteReleaseConfig(request);
@@ -2830,11 +4818,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteReleaseConfigAsync(DeleteReleaseConfigRequest, CallSettings)
             // Additional: DeleteReleaseConfigAsync(DeleteReleaseConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteReleaseConfigRequest request = new DeleteReleaseConfigRequest
+            gcdv::DeleteReleaseConfigRequest request = new gcdv::DeleteReleaseConfigRequest
             {
-                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+                ReleaseConfigName = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
             };
             // Make the request
             await dataformClient.DeleteReleaseConfigAsync(request);
@@ -2846,7 +4834,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteReleaseConfig(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
             // Make the request
@@ -2860,7 +4848,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteReleaseConfigAsync(string, CallSettings)
             // Additional: DeleteReleaseConfigAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
             // Make the request
@@ -2873,9 +4861,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteReleaseConfig(ReleaseConfigName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            gcdv::ReleaseConfigName name = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
             // Make the request
             dataformClient.DeleteReleaseConfig(name);
             // End snippet
@@ -2887,9 +4875,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteReleaseConfigAsync(ReleaseConfigName, CallSettings)
             // Additional: DeleteReleaseConfigAsync(ReleaseConfigName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            gcdv::ReleaseConfigName name = gcdv::ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
             // Make the request
             await dataformClient.DeleteReleaseConfigAsync(name);
             // End snippet
@@ -2900,30 +4888,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResults(ListCompilationResultsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListCompilationResultsRequest request = new ListCompilationResultsRequest
+            gcdv::ListCompilationResultsRequest request = new gcdv::ListCompilationResultsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResults(request);
+            PagedEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResults(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CompilationResult item in response)
+            foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2932,10 +4920,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::CompilationResult> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2950,30 +4938,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResultsAsync(ListCompilationResultsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListCompilationResultsRequest request = new ListCompilationResultsRequest
+            gcdv::ListCompilationResultsRequest request = new gcdv::ListCompilationResultsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResultsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CompilationResult item in response)
+            await foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2982,10 +4970,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3000,25 +4988,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResults(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResults(parent);
+            PagedEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResults(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CompilationResult item in response)
+            foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3027,10 +5015,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::CompilationResult> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3045,25 +5033,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResultsAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CompilationResult item in response)
+            await foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3072,10 +5060,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3090,25 +5078,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResults(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResults(parent);
+            PagedEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResults(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CompilationResult item in response)
+            foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3117,10 +5105,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::CompilationResult> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3135,25 +5123,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListCompilationResultsAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListCompilationResultsResponse, gcdv::CompilationResult> response = dataformClient.ListCompilationResultsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CompilationResult item in response)
+            await foreach (gcdv::CompilationResult item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListCompilationResultsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (gcdv::CompilationResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3162,10 +5150,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::CompilationResult> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (gcdv::CompilationResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3180,14 +5168,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetCompilationResult(GetCompilationResultRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetCompilationResultRequest request = new GetCompilationResultRequest
+            gcdv::GetCompilationResultRequest request = new gcdv::GetCompilationResultRequest
             {
-                CompilationResultName = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
+                CompilationResultName = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
             };
             // Make the request
-            CompilationResult response = dataformClient.GetCompilationResult(request);
+            gcdv::CompilationResult response = dataformClient.GetCompilationResult(request);
             // End snippet
         }
 
@@ -3197,14 +5185,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetCompilationResultAsync(GetCompilationResultRequest, CallSettings)
             // Additional: GetCompilationResultAsync(GetCompilationResultRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetCompilationResultRequest request = new GetCompilationResultRequest
+            gcdv::GetCompilationResultRequest request = new gcdv::GetCompilationResultRequest
             {
-                CompilationResultName = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
+                CompilationResultName = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
             };
             // Make the request
-            CompilationResult response = await dataformClient.GetCompilationResultAsync(request);
+            gcdv::CompilationResult response = await dataformClient.GetCompilationResultAsync(request);
             // End snippet
         }
 
@@ -3213,11 +5201,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetCompilationResult(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/compilationResults/[COMPILATION_RESULT]";
             // Make the request
-            CompilationResult response = dataformClient.GetCompilationResult(name);
+            gcdv::CompilationResult response = dataformClient.GetCompilationResult(name);
             // End snippet
         }
 
@@ -3227,11 +5215,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetCompilationResultAsync(string, CallSettings)
             // Additional: GetCompilationResultAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/compilationResults/[COMPILATION_RESULT]";
             // Make the request
-            CompilationResult response = await dataformClient.GetCompilationResultAsync(name);
+            gcdv::CompilationResult response = await dataformClient.GetCompilationResultAsync(name);
             // End snippet
         }
 
@@ -3240,11 +5228,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetCompilationResult(CompilationResultName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CompilationResultName name = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]");
+            gcdv::CompilationResultName name = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]");
             // Make the request
-            CompilationResult response = dataformClient.GetCompilationResult(name);
+            gcdv::CompilationResult response = dataformClient.GetCompilationResult(name);
             // End snippet
         }
 
@@ -3254,11 +5242,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetCompilationResultAsync(CompilationResultName, CallSettings)
             // Additional: GetCompilationResultAsync(CompilationResultName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CompilationResultName name = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]");
+            gcdv::CompilationResultName name = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]");
             // Make the request
-            CompilationResult response = await dataformClient.GetCompilationResultAsync(name);
+            gcdv::CompilationResult response = await dataformClient.GetCompilationResultAsync(name);
             // End snippet
         }
 
@@ -3267,15 +5255,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateCompilationResult(CreateCompilationResultRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateCompilationResultRequest request = new CreateCompilationResultRequest
+            gcdv::CreateCompilationResultRequest request = new gcdv::CreateCompilationResultRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                CompilationResult = new CompilationResult(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CompilationResult = new gcdv::CompilationResult(),
             };
             // Make the request
-            CompilationResult response = dataformClient.CreateCompilationResult(request);
+            gcdv::CompilationResult response = dataformClient.CreateCompilationResult(request);
             // End snippet
         }
 
@@ -3285,15 +5273,15 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateCompilationResultAsync(CreateCompilationResultRequest, CallSettings)
             // Additional: CreateCompilationResultAsync(CreateCompilationResultRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateCompilationResultRequest request = new CreateCompilationResultRequest
+            gcdv::CreateCompilationResultRequest request = new gcdv::CreateCompilationResultRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                CompilationResult = new CompilationResult(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CompilationResult = new gcdv::CompilationResult(),
             };
             // Make the request
-            CompilationResult response = await dataformClient.CreateCompilationResultAsync(request);
+            gcdv::CompilationResult response = await dataformClient.CreateCompilationResultAsync(request);
             // End snippet
         }
 
@@ -3302,12 +5290,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateCompilationResult(string, CompilationResult, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            CompilationResult compilationResult = new CompilationResult();
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
             // Make the request
-            CompilationResult response = dataformClient.CreateCompilationResult(parent, compilationResult);
+            gcdv::CompilationResult response = dataformClient.CreateCompilationResult(parent, compilationResult);
             // End snippet
         }
 
@@ -3317,12 +5305,12 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateCompilationResultAsync(string, CompilationResult, CallSettings)
             // Additional: CreateCompilationResultAsync(string, CompilationResult, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            CompilationResult compilationResult = new CompilationResult();
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
             // Make the request
-            CompilationResult response = await dataformClient.CreateCompilationResultAsync(parent, compilationResult);
+            gcdv::CompilationResult response = await dataformClient.CreateCompilationResultAsync(parent, compilationResult);
             // End snippet
         }
 
@@ -3331,12 +5319,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateCompilationResult(RepositoryName, CompilationResult, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            CompilationResult compilationResult = new CompilationResult();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
             // Make the request
-            CompilationResult response = dataformClient.CreateCompilationResult(parent, compilationResult);
+            gcdv::CompilationResult response = dataformClient.CreateCompilationResult(parent, compilationResult);
             // End snippet
         }
 
@@ -3346,12 +5334,12 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateCompilationResultAsync(RepositoryName, CompilationResult, CallSettings)
             // Additional: CreateCompilationResultAsync(RepositoryName, CompilationResult, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            CompilationResult compilationResult = new CompilationResult();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
             // Make the request
-            CompilationResult response = await dataformClient.CreateCompilationResultAsync(parent, compilationResult);
+            gcdv::CompilationResult response = await dataformClient.CreateCompilationResultAsync(parent, compilationResult);
             // End snippet
         }
 
@@ -3360,29 +5348,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryCompilationResultActions(QueryCompilationResultActionsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            QueryCompilationResultActionsRequest request = new QueryCompilationResultActionsRequest
+            gcdv::QueryCompilationResultActionsRequest request = new gcdv::QueryCompilationResultActionsRequest
             {
-                CompilationResultName = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
+                CompilationResultName = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<QueryCompilationResultActionsResponse, CompilationResultAction> response = dataformClient.QueryCompilationResultActions(request);
+            PagedEnumerable<gcdv::QueryCompilationResultActionsResponse, gcdv::CompilationResultAction> response = dataformClient.QueryCompilationResultActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CompilationResultAction item in response)
+            foreach (gcdv::CompilationResultAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (QueryCompilationResultActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::QueryCompilationResultActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResultAction item in page)
+                foreach (gcdv::CompilationResultAction item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3391,10 +5379,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResultAction> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::CompilationResultAction> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResultAction item in singlePage)
+            foreach (gcdv::CompilationResultAction item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3409,29 +5397,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryCompilationResultActionsAsync(QueryCompilationResultActionsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            QueryCompilationResultActionsRequest request = new QueryCompilationResultActionsRequest
+            gcdv::QueryCompilationResultActionsRequest request = new gcdv::QueryCompilationResultActionsRequest
             {
-                CompilationResultName = CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
+                CompilationResultName = gcdv::CompilationResultName.FromProjectLocationRepositoryCompilationResult("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[COMPILATION_RESULT]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<QueryCompilationResultActionsResponse, CompilationResultAction> response = dataformClient.QueryCompilationResultActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::QueryCompilationResultActionsResponse, gcdv::CompilationResultAction> response = dataformClient.QueryCompilationResultActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CompilationResultAction item in response)
+            await foreach (gcdv::CompilationResultAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (QueryCompilationResultActionsResponse page in response.AsRawResponses())
+            await foreach (gcdv::QueryCompilationResultActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResultAction item in page)
+                foreach (gcdv::CompilationResultAction item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3440,10 +5428,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResultAction> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::CompilationResultAction> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResultAction item in singlePage)
+            foreach (gcdv::CompilationResultAction item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3458,28 +5446,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigs(ListWorkflowConfigsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            gcdv::ListWorkflowConfigsRequest request = new gcdv::ListWorkflowConfigsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(request);
+            PagedEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowConfig item in response)
+            foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3488,10 +5476,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3506,28 +5494,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigsAsync(ListWorkflowConfigsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            gcdv::ListWorkflowConfigsRequest request = new gcdv::ListWorkflowConfigsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowConfig item in response)
+            await foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3536,10 +5524,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3554,25 +5542,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigs(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
+            PagedEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowConfig item in response)
+            foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3581,10 +5569,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3599,25 +5587,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigsAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowConfig item in response)
+            await foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3626,10 +5614,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3644,25 +5632,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigs(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
+            PagedEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowConfig item in response)
+            foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3671,10 +5659,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3689,25 +5677,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowConfigsAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkflowConfigsResponse, gcdv::WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowConfig item in response)
+            await foreach (gcdv::WorkflowConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowConfig item in page)
+                foreach (gcdv::WorkflowConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3716,10 +5704,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowConfig item in singlePage)
+            foreach (gcdv::WorkflowConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3734,14 +5722,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowConfig(GetWorkflowConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetWorkflowConfigRequest request = new GetWorkflowConfigRequest
+            gcdv::GetWorkflowConfigRequest request = new gcdv::GetWorkflowConfigRequest
             {
-                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+                WorkflowConfigName = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
             };
             // Make the request
-            WorkflowConfig response = dataformClient.GetWorkflowConfig(request);
+            gcdv::WorkflowConfig response = dataformClient.GetWorkflowConfig(request);
             // End snippet
         }
 
@@ -3751,14 +5739,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowConfigAsync(GetWorkflowConfigRequest, CallSettings)
             // Additional: GetWorkflowConfigAsync(GetWorkflowConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetWorkflowConfigRequest request = new GetWorkflowConfigRequest
+            gcdv::GetWorkflowConfigRequest request = new gcdv::GetWorkflowConfigRequest
             {
-                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+                WorkflowConfigName = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
             };
             // Make the request
-            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(request);
+            gcdv::WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(request);
             // End snippet
         }
 
@@ -3767,11 +5755,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowConfig(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
             // Make the request
-            WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
+            gcdv::WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
             // End snippet
         }
 
@@ -3781,11 +5769,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowConfigAsync(string, CallSettings)
             // Additional: GetWorkflowConfigAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
             // Make the request
-            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
+            gcdv::WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
             // End snippet
         }
 
@@ -3794,11 +5782,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowConfig(WorkflowConfigName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            gcdv::WorkflowConfigName name = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
             // Make the request
-            WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
+            gcdv::WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
             // End snippet
         }
 
@@ -3808,11 +5796,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowConfigAsync(WorkflowConfigName, CallSettings)
             // Additional: GetWorkflowConfigAsync(WorkflowConfigName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            gcdv::WorkflowConfigName name = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
             // Make the request
-            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
+            gcdv::WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
             // End snippet
         }
 
@@ -3821,16 +5809,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowConfig(CreateWorkflowConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateWorkflowConfigRequest request = new CreateWorkflowConfigRequest
+            gcdv::CreateWorkflowConfigRequest request = new gcdv::CreateWorkflowConfigRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                WorkflowConfig = new WorkflowConfig(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowConfig = new gcdv::WorkflowConfig(),
                 WorkflowConfigId = "",
             };
             // Make the request
-            WorkflowConfig response = dataformClient.CreateWorkflowConfig(request);
+            gcdv::WorkflowConfig response = dataformClient.CreateWorkflowConfig(request);
             // End snippet
         }
 
@@ -3840,16 +5828,16 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowConfigAsync(CreateWorkflowConfigRequest, CallSettings)
             // Additional: CreateWorkflowConfigAsync(CreateWorkflowConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateWorkflowConfigRequest request = new CreateWorkflowConfigRequest
+            gcdv::CreateWorkflowConfigRequest request = new gcdv::CreateWorkflowConfigRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                WorkflowConfig = new WorkflowConfig(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowConfig = new gcdv::WorkflowConfig(),
                 WorkflowConfigId = "",
             };
             // Make the request
-            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(request);
+            gcdv::WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(request);
             // End snippet
         }
 
@@ -3858,13 +5846,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowConfig(string, WorkflowConfig, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             string workflowConfigId = "";
             // Make the request
-            WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
+            gcdv::WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
             // End snippet
         }
 
@@ -3874,13 +5862,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowConfigAsync(string, WorkflowConfig, string, CallSettings)
             // Additional: CreateWorkflowConfigAsync(string, WorkflowConfig, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             string workflowConfigId = "";
             // Make the request
-            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
+            gcdv::WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
             // End snippet
         }
 
@@ -3889,13 +5877,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowConfig(RepositoryName, WorkflowConfig, string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             string workflowConfigId = "";
             // Make the request
-            WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
+            gcdv::WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
             // End snippet
         }
 
@@ -3905,13 +5893,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowConfigAsync(RepositoryName, WorkflowConfig, string, CallSettings)
             // Additional: CreateWorkflowConfigAsync(RepositoryName, WorkflowConfig, string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             string workflowConfigId = "";
             // Make the request
-            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
+            gcdv::WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
             // End snippet
         }
 
@@ -3920,15 +5908,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateWorkflowConfig(UpdateWorkflowConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            UpdateWorkflowConfigRequest request = new UpdateWorkflowConfigRequest
+            gcdv::UpdateWorkflowConfigRequest request = new gcdv::UpdateWorkflowConfigRequest
             {
                 UpdateMask = new FieldMask(),
-                WorkflowConfig = new WorkflowConfig(),
+                WorkflowConfig = new gcdv::WorkflowConfig(),
             };
             // Make the request
-            WorkflowConfig response = dataformClient.UpdateWorkflowConfig(request);
+            gcdv::WorkflowConfig response = dataformClient.UpdateWorkflowConfig(request);
             // End snippet
         }
 
@@ -3938,15 +5926,15 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest, CallSettings)
             // Additional: UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateWorkflowConfigRequest request = new UpdateWorkflowConfigRequest
+            gcdv::UpdateWorkflowConfigRequest request = new gcdv::UpdateWorkflowConfigRequest
             {
                 UpdateMask = new FieldMask(),
-                WorkflowConfig = new WorkflowConfig(),
+                WorkflowConfig = new gcdv::WorkflowConfig(),
             };
             // Make the request
-            WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(request);
+            gcdv::WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(request);
             // End snippet
         }
 
@@ -3955,12 +5943,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateWorkflowConfig(WorkflowConfig, FieldMask, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            WorkflowConfig response = dataformClient.UpdateWorkflowConfig(workflowConfig, updateMask);
+            gcdv::WorkflowConfig response = dataformClient.UpdateWorkflowConfig(workflowConfig, updateMask);
             // End snippet
         }
 
@@ -3970,12 +5958,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateWorkflowConfigAsync(WorkflowConfig, FieldMask, CallSettings)
             // Additional: UpdateWorkflowConfigAsync(WorkflowConfig, FieldMask, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowConfig workflowConfig = new WorkflowConfig();
+            gcdv::WorkflowConfig workflowConfig = new gcdv::WorkflowConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(workflowConfig, updateMask);
+            gcdv::WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(workflowConfig, updateMask);
             // End snippet
         }
 
@@ -3984,11 +5972,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowConfig(DeleteWorkflowConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            DeleteWorkflowConfigRequest request = new DeleteWorkflowConfigRequest
+            gcdv::DeleteWorkflowConfigRequest request = new gcdv::DeleteWorkflowConfigRequest
             {
-                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+                WorkflowConfigName = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
             };
             // Make the request
             dataformClient.DeleteWorkflowConfig(request);
@@ -4001,11 +5989,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest, CallSettings)
             // Additional: DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteWorkflowConfigRequest request = new DeleteWorkflowConfigRequest
+            gcdv::DeleteWorkflowConfigRequest request = new gcdv::DeleteWorkflowConfigRequest
             {
-                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+                WorkflowConfigName = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
             };
             // Make the request
             await dataformClient.DeleteWorkflowConfigAsync(request);
@@ -4017,7 +6005,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowConfig(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
             // Make the request
@@ -4031,7 +6019,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowConfigAsync(string, CallSettings)
             // Additional: DeleteWorkflowConfigAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
             // Make the request
@@ -4044,9 +6032,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowConfig(WorkflowConfigName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            gcdv::WorkflowConfigName name = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
             // Make the request
             dataformClient.DeleteWorkflowConfig(name);
             // End snippet
@@ -4058,9 +6046,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowConfigAsync(WorkflowConfigName, CallSettings)
             // Additional: DeleteWorkflowConfigAsync(WorkflowConfigName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            gcdv::WorkflowConfigName name = gcdv::WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
             // Make the request
             await dataformClient.DeleteWorkflowConfigAsync(name);
             // End snippet
@@ -4071,30 +6059,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocations(ListWorkflowInvocationsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
+            gcdv::ListWorkflowInvocationsRequest request = new gcdv::ListWorkflowInvocationsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(request);
+            PagedEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowInvocation item in response)
+            foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4103,10 +6091,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4121,30 +6109,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocationsAsync(ListWorkflowInvocationsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
+            gcdv::ListWorkflowInvocationsRequest request = new gcdv::ListWorkflowInvocationsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 OrderBy = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowInvocation item in response)
+            await foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4153,10 +6141,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4171,25 +6159,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocations(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(parent);
+            PagedEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowInvocation item in response)
+            foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4198,10 +6186,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4216,25 +6204,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocationsAsync(string, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowInvocation item in response)
+            await foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4243,10 +6231,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4261,25 +6249,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocations(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(parent);
+            PagedEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowInvocation item in response)
+            foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4288,10 +6276,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4306,25 +6294,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListWorkflowInvocationsAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListWorkflowInvocationsResponse, gcdv::WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowInvocation item in response)
+            await foreach (gcdv::WorkflowInvocation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListWorkflowInvocationsResponse page in response.AsRawResponses())
+            await foreach (gcdv::ListWorkflowInvocationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocation item in page)
+                foreach (gcdv::WorkflowInvocation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4333,10 +6321,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowInvocation> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocation item in singlePage)
+            foreach (gcdv::WorkflowInvocation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4351,14 +6339,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowInvocation(GetWorkflowInvocationRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetWorkflowInvocationRequest request = new GetWorkflowInvocationRequest
+            gcdv::GetWorkflowInvocationRequest request = new gcdv::GetWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            WorkflowInvocation response = dataformClient.GetWorkflowInvocation(request);
+            gcdv::WorkflowInvocation response = dataformClient.GetWorkflowInvocation(request);
             // End snippet
         }
 
@@ -4368,14 +6356,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowInvocationAsync(GetWorkflowInvocationRequest, CallSettings)
             // Additional: GetWorkflowInvocationAsync(GetWorkflowInvocationRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetWorkflowInvocationRequest request = new GetWorkflowInvocationRequest
+            gcdv::GetWorkflowInvocationRequest request = new gcdv::GetWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(request);
+            gcdv::WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(request);
             // End snippet
         }
 
@@ -4384,11 +6372,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowInvocation(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowInvocations/[WORKFLOW_INVOCATION]";
             // Make the request
-            WorkflowInvocation response = dataformClient.GetWorkflowInvocation(name);
+            gcdv::WorkflowInvocation response = dataformClient.GetWorkflowInvocation(name);
             // End snippet
         }
 
@@ -4398,11 +6386,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowInvocationAsync(string, CallSettings)
             // Additional: GetWorkflowInvocationAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowInvocations/[WORKFLOW_INVOCATION]";
             // Make the request
-            WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(name);
+            gcdv::WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(name);
             // End snippet
         }
 
@@ -4411,11 +6399,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetWorkflowInvocation(WorkflowInvocationName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkflowInvocationName name = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
+            gcdv::WorkflowInvocationName name = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
             // Make the request
-            WorkflowInvocation response = dataformClient.GetWorkflowInvocation(name);
+            gcdv::WorkflowInvocation response = dataformClient.GetWorkflowInvocation(name);
             // End snippet
         }
 
@@ -4425,11 +6413,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetWorkflowInvocationAsync(WorkflowInvocationName, CallSettings)
             // Additional: GetWorkflowInvocationAsync(WorkflowInvocationName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowInvocationName name = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
+            gcdv::WorkflowInvocationName name = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
             // Make the request
-            WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(name);
+            gcdv::WorkflowInvocation response = await dataformClient.GetWorkflowInvocationAsync(name);
             // End snippet
         }
 
@@ -4438,15 +6426,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowInvocation(CreateWorkflowInvocationRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CreateWorkflowInvocationRequest request = new CreateWorkflowInvocationRequest
+            gcdv::CreateWorkflowInvocationRequest request = new gcdv::CreateWorkflowInvocationRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                WorkflowInvocation = new WorkflowInvocation(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowInvocation = new gcdv::WorkflowInvocation(),
             };
             // Make the request
-            WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(request);
+            gcdv::WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(request);
             // End snippet
         }
 
@@ -4456,15 +6444,15 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowInvocationAsync(CreateWorkflowInvocationRequest, CallSettings)
             // Additional: CreateWorkflowInvocationAsync(CreateWorkflowInvocationRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CreateWorkflowInvocationRequest request = new CreateWorkflowInvocationRequest
+            gcdv::CreateWorkflowInvocationRequest request = new gcdv::CreateWorkflowInvocationRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                WorkflowInvocation = new WorkflowInvocation(),
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowInvocation = new gcdv::WorkflowInvocation(),
             };
             // Make the request
-            WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(request);
+            gcdv::WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(request);
             // End snippet
         }
 
@@ -4473,12 +6461,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowInvocation(string, WorkflowInvocation, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            WorkflowInvocation workflowInvocation = new WorkflowInvocation();
+            gcdv::WorkflowInvocation workflowInvocation = new gcdv::WorkflowInvocation();
             // Make the request
-            WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(parent, workflowInvocation);
+            gcdv::WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(parent, workflowInvocation);
             // End snippet
         }
 
@@ -4488,12 +6476,12 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowInvocationAsync(string, WorkflowInvocation, CallSettings)
             // Additional: CreateWorkflowInvocationAsync(string, WorkflowInvocation, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
-            WorkflowInvocation workflowInvocation = new WorkflowInvocation();
+            gcdv::WorkflowInvocation workflowInvocation = new gcdv::WorkflowInvocation();
             // Make the request
-            WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(parent, workflowInvocation);
+            gcdv::WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(parent, workflowInvocation);
             // End snippet
         }
 
@@ -4502,12 +6490,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateWorkflowInvocation(RepositoryName, WorkflowInvocation, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            WorkflowInvocation workflowInvocation = new WorkflowInvocation();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::WorkflowInvocation workflowInvocation = new gcdv::WorkflowInvocation();
             // Make the request
-            WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(parent, workflowInvocation);
+            gcdv::WorkflowInvocation response = dataformClient.CreateWorkflowInvocation(parent, workflowInvocation);
             // End snippet
         }
 
@@ -4517,12 +6505,12 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateWorkflowInvocationAsync(RepositoryName, WorkflowInvocation, CallSettings)
             // Additional: CreateWorkflowInvocationAsync(RepositoryName, WorkflowInvocation, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
-            WorkflowInvocation workflowInvocation = new WorkflowInvocation();
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::WorkflowInvocation workflowInvocation = new gcdv::WorkflowInvocation();
             // Make the request
-            WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(parent, workflowInvocation);
+            gcdv::WorkflowInvocation response = await dataformClient.CreateWorkflowInvocationAsync(parent, workflowInvocation);
             // End snippet
         }
 
@@ -4531,11 +6519,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowInvocation(DeleteWorkflowInvocationRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            DeleteWorkflowInvocationRequest request = new DeleteWorkflowInvocationRequest
+            gcdv::DeleteWorkflowInvocationRequest request = new gcdv::DeleteWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
             dataformClient.DeleteWorkflowInvocation(request);
@@ -4548,11 +6536,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowInvocationAsync(DeleteWorkflowInvocationRequest, CallSettings)
             // Additional: DeleteWorkflowInvocationAsync(DeleteWorkflowInvocationRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteWorkflowInvocationRequest request = new DeleteWorkflowInvocationRequest
+            gcdv::DeleteWorkflowInvocationRequest request = new gcdv::DeleteWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
             await dataformClient.DeleteWorkflowInvocationAsync(request);
@@ -4564,7 +6552,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowInvocation(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowInvocations/[WORKFLOW_INVOCATION]";
             // Make the request
@@ -4578,7 +6566,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowInvocationAsync(string, CallSettings)
             // Additional: DeleteWorkflowInvocationAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowInvocations/[WORKFLOW_INVOCATION]";
             // Make the request
@@ -4591,9 +6579,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteWorkflowInvocation(WorkflowInvocationName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            WorkflowInvocationName name = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
+            gcdv::WorkflowInvocationName name = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
             // Make the request
             dataformClient.DeleteWorkflowInvocation(name);
             // End snippet
@@ -4605,9 +6593,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteWorkflowInvocationAsync(WorkflowInvocationName, CallSettings)
             // Additional: DeleteWorkflowInvocationAsync(WorkflowInvocationName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            WorkflowInvocationName name = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
+            gcdv::WorkflowInvocationName name = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]");
             // Make the request
             await dataformClient.DeleteWorkflowInvocationAsync(name);
             // End snippet
@@ -4618,14 +6606,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CancelWorkflowInvocation(CancelWorkflowInvocationRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            CancelWorkflowInvocationRequest request = new CancelWorkflowInvocationRequest
+            gcdv::CancelWorkflowInvocationRequest request = new gcdv::CancelWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            CancelWorkflowInvocationResponse response = dataformClient.CancelWorkflowInvocation(request);
+            gcdv::CancelWorkflowInvocationResponse response = dataformClient.CancelWorkflowInvocation(request);
             // End snippet
         }
 
@@ -4635,14 +6623,14 @@ namespace GoogleCSharpSnippets
             // Snippet: CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest, CallSettings)
             // Additional: CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            CancelWorkflowInvocationRequest request = new CancelWorkflowInvocationRequest
+            gcdv::CancelWorkflowInvocationRequest request = new gcdv::CancelWorkflowInvocationRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            CancelWorkflowInvocationResponse response = await dataformClient.CancelWorkflowInvocationAsync(request);
+            gcdv::CancelWorkflowInvocationResponse response = await dataformClient.CancelWorkflowInvocationAsync(request);
             // End snippet
         }
 
@@ -4651,28 +6639,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryWorkflowInvocationActions(QueryWorkflowInvocationActionsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            QueryWorkflowInvocationActionsRequest request = new QueryWorkflowInvocationActionsRequest
+            gcdv::QueryWorkflowInvocationActionsRequest request = new gcdv::QueryWorkflowInvocationActionsRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            PagedEnumerable<QueryWorkflowInvocationActionsResponse, WorkflowInvocationAction> response = dataformClient.QueryWorkflowInvocationActions(request);
+            PagedEnumerable<gcdv::QueryWorkflowInvocationActionsResponse, gcdv::WorkflowInvocationAction> response = dataformClient.QueryWorkflowInvocationActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (WorkflowInvocationAction item in response)
+            foreach (gcdv::WorkflowInvocationAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (QueryWorkflowInvocationActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::QueryWorkflowInvocationActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocationAction item in page)
+                foreach (gcdv::WorkflowInvocationAction item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4681,10 +6669,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocationAction> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::WorkflowInvocationAction> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocationAction item in singlePage)
+            foreach (gcdv::WorkflowInvocationAction item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4699,28 +6687,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: QueryWorkflowInvocationActionsAsync(QueryWorkflowInvocationActionsRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            QueryWorkflowInvocationActionsRequest request = new QueryWorkflowInvocationActionsRequest
+            gcdv::QueryWorkflowInvocationActionsRequest request = new gcdv::QueryWorkflowInvocationActionsRequest
             {
-                WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
+                WorkflowInvocationName = gcdv::WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            PagedAsyncEnumerable<QueryWorkflowInvocationActionsResponse, WorkflowInvocationAction> response = dataformClient.QueryWorkflowInvocationActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::QueryWorkflowInvocationActionsResponse, gcdv::WorkflowInvocationAction> response = dataformClient.QueryWorkflowInvocationActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (WorkflowInvocationAction item in response)
+            await foreach (gcdv::WorkflowInvocationAction item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (QueryWorkflowInvocationActionsResponse page in response.AsRawResponses())
+            await foreach (gcdv::QueryWorkflowInvocationActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (WorkflowInvocationAction item in page)
+                foreach (gcdv::WorkflowInvocationAction item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4729,10 +6717,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<WorkflowInvocationAction> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::WorkflowInvocationAction> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (WorkflowInvocationAction item in singlePage)
+            foreach (gcdv::WorkflowInvocationAction item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4747,14 +6735,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetConfig(GetConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            GetConfigRequest request = new GetConfigRequest
+            gcdv::GetConfigRequest request = new gcdv::GetConfigRequest
             {
-                ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ConfigName = gcdv::ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            Config response = dataformClient.GetConfig(request);
+            gcdv::Config response = dataformClient.GetConfig(request);
             // End snippet
         }
 
@@ -4764,14 +6752,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetConfigAsync(GetConfigRequest, CallSettings)
             // Additional: GetConfigAsync(GetConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            GetConfigRequest request = new GetConfigRequest
+            gcdv::GetConfigRequest request = new gcdv::GetConfigRequest
             {
-                ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ConfigName = gcdv::ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            Config response = await dataformClient.GetConfigAsync(request);
+            gcdv::Config response = await dataformClient.GetConfigAsync(request);
             // End snippet
         }
 
@@ -4780,11 +6768,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetConfig(string, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/config";
             // Make the request
-            Config response = dataformClient.GetConfig(name);
+            gcdv::Config response = dataformClient.GetConfig(name);
             // End snippet
         }
 
@@ -4794,11 +6782,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetConfigAsync(string, CallSettings)
             // Additional: GetConfigAsync(string, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/config";
             // Make the request
-            Config response = await dataformClient.GetConfigAsync(name);
+            gcdv::Config response = await dataformClient.GetConfigAsync(name);
             // End snippet
         }
 
@@ -4807,11 +6795,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetConfig(ConfigName, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            ConfigName name = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::ConfigName name = gcdv::ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            Config response = dataformClient.GetConfig(name);
+            gcdv::Config response = dataformClient.GetConfig(name);
             // End snippet
         }
 
@@ -4821,11 +6809,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetConfigAsync(ConfigName, CallSettings)
             // Additional: GetConfigAsync(ConfigName, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ConfigName name = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::ConfigName name = gcdv::ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            Config response = await dataformClient.GetConfigAsync(name);
+            gcdv::Config response = await dataformClient.GetConfigAsync(name);
             // End snippet
         }
 
@@ -4834,15 +6822,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateConfig(UpdateConfigRequest, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            UpdateConfigRequest request = new UpdateConfigRequest
+            gcdv::UpdateConfigRequest request = new gcdv::UpdateConfigRequest
             {
-                Config = new Config(),
+                Config = new gcdv::Config(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Config response = dataformClient.UpdateConfig(request);
+            gcdv::Config response = dataformClient.UpdateConfig(request);
             // End snippet
         }
 
@@ -4852,15 +6840,15 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateConfigAsync(UpdateConfigRequest, CallSettings)
             // Additional: UpdateConfigAsync(UpdateConfigRequest, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateConfigRequest request = new UpdateConfigRequest
+            gcdv::UpdateConfigRequest request = new gcdv::UpdateConfigRequest
             {
-                Config = new Config(),
+                Config = new gcdv::Config(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Config response = await dataformClient.UpdateConfigAsync(request);
+            gcdv::Config response = await dataformClient.UpdateConfigAsync(request);
             // End snippet
         }
 
@@ -4869,12 +6857,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateConfig(Config, FieldMask, CallSettings)
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
             // Initialize request argument(s)
-            Config config = new Config();
+            gcdv::Config config = new gcdv::Config();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Config response = dataformClient.UpdateConfig(config, updateMask);
+            gcdv::Config response = dataformClient.UpdateConfig(config, updateMask);
             // End snippet
         }
 
@@ -4884,12 +6872,173 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateConfigAsync(Config, FieldMask, CallSettings)
             // Additional: UpdateConfigAsync(Config, FieldMask, CancellationToken)
             // Create client
-            DataformClient dataformClient = await DataformClient.CreateAsync();
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
             // Initialize request argument(s)
-            Config config = new Config();
+            gcdv::Config config = new gcdv::Config();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Config response = await dataformClient.UpdateConfigAsync(config, updateMask);
+            gcdv::Config response = await dataformClient.UpdateConfigAsync(config, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = dataformClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = await dataformClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = dataformClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = await dataformClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = dataformClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await dataformClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = dataformClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await dataformClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = dataformClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await dataformClient.TestIamPermissionsAsync(request);
             // End snippet
         }
     }

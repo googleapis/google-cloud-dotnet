@@ -11,6 +11,3511 @@
   },
   "snippets": [
     {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_sync",
+      "title": "GetTeamFolderRequestObject",
+      "description": "Snippet for GetTeamFolder",
+      "file": "DataformClient.GetTeamFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_async",
+      "title": "GetTeamFolderRequestObjectAsync",
+      "description": "Snippet for GetTeamFolderAsync",
+      "file": "DataformClient.GetTeamFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_sync_flattened",
+      "title": "GetTeamFolder",
+      "description": "Snippet for GetTeamFolder",
+      "file": "DataformClient.GetTeamFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_async_flattened",
+      "title": "GetTeamFolderAsync",
+      "description": "Snippet for GetTeamFolderAsync",
+      "file": "DataformClient.GetTeamFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_sync_flattened_resourceNames",
+      "title": "GetTeamFolderResourceNames",
+      "description": "Snippet for GetTeamFolder",
+      "file": "DataformClient.GetTeamFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetTeamFolder_async_flattened_resourceNames",
+      "title": "GetTeamFolderResourceNamesAsync",
+      "description": "Snippet for GetTeamFolderAsync",
+      "file": "DataformClient.GetTeamFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_sync",
+      "title": "CreateTeamFolderRequestObject",
+      "description": "Snippet for CreateTeamFolder",
+      "file": "DataformClient.CreateTeamFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_async",
+      "title": "CreateTeamFolderRequestObjectAsync",
+      "description": "Snippet for CreateTeamFolderAsync",
+      "file": "DataformClient.CreateTeamFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_sync_flattened",
+      "title": "CreateTeamFolder",
+      "description": "Snippet for CreateTeamFolder",
+      "file": "DataformClient.CreateTeamFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_async_flattened",
+      "title": "CreateTeamFolderAsync",
+      "description": "Snippet for CreateTeamFolderAsync",
+      "file": "DataformClient.CreateTeamFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_sync_flattened_resourceNames",
+      "title": "CreateTeamFolderResourceNames",
+      "description": "Snippet for CreateTeamFolder",
+      "file": "DataformClient.CreateTeamFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateTeamFolder_async_flattened_resourceNames",
+      "title": "CreateTeamFolderResourceNamesAsync",
+      "description": "Snippet for CreateTeamFolderAsync",
+      "file": "DataformClient.CreateTeamFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateTeamFolder_sync",
+      "title": "UpdateTeamFolderRequestObject",
+      "description": "Snippet for UpdateTeamFolder",
+      "file": "DataformClient.UpdateTeamFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateTeamFolder_async",
+      "title": "UpdateTeamFolderRequestObjectAsync",
+      "description": "Snippet for UpdateTeamFolderAsync",
+      "file": "DataformClient.UpdateTeamFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateTeamFolder_sync_flattened",
+      "title": "UpdateTeamFolder",
+      "description": "Snippet for UpdateTeamFolder",
+      "file": "DataformClient.UpdateTeamFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateTeamFolder_async_flattened",
+      "title": "UpdateTeamFolderAsync",
+      "description": "Snippet for UpdateTeamFolderAsync",
+      "file": "DataformClient.UpdateTeamFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolder",
+            "name": "teamFolder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.TeamFolder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_sync",
+      "title": "DeleteTeamFolderRequestObject",
+      "description": "Snippet for DeleteTeamFolder",
+      "file": "DataformClient.DeleteTeamFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_async",
+      "title": "DeleteTeamFolderRequestObjectAsync",
+      "description": "Snippet for DeleteTeamFolderAsync",
+      "file": "DataformClient.DeleteTeamFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_sync_flattened",
+      "title": "DeleteTeamFolder",
+      "description": "Snippet for DeleteTeamFolder",
+      "file": "DataformClient.DeleteTeamFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_async_flattened",
+      "title": "DeleteTeamFolderAsync",
+      "description": "Snippet for DeleteTeamFolderAsync",
+      "file": "DataformClient.DeleteTeamFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_sync_flattened_resourceNames",
+      "title": "DeleteTeamFolderResourceNames",
+      "description": "Snippet for DeleteTeamFolder",
+      "file": "DataformClient.DeleteTeamFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolder_async_flattened_resourceNames",
+      "title": "DeleteTeamFolderResourceNamesAsync",
+      "description": "Snippet for DeleteTeamFolderAsync",
+      "file": "DataformClient.DeleteTeamFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_sync",
+      "title": "QueryTeamFolderContentsRequestObject",
+      "description": "Snippet for QueryTeamFolderContents",
+      "file": "DataformClient.QueryTeamFolderContentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_async",
+      "title": "QueryTeamFolderContentsRequestObjectAsync",
+      "description": "Snippet for QueryTeamFolderContentsAsync",
+      "file": "DataformClient.QueryTeamFolderContentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_sync_flattened",
+      "title": "QueryTeamFolderContents",
+      "description": "Snippet for QueryTeamFolderContents",
+      "file": "DataformClient.QueryTeamFolderContentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "teamFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_async_flattened",
+      "title": "QueryTeamFolderContentsAsync",
+      "description": "Snippet for QueryTeamFolderContentsAsync",
+      "file": "DataformClient.QueryTeamFolderContentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "teamFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_sync_flattened_resourceNames",
+      "title": "QueryTeamFolderContentsResourceNames",
+      "description": "Snippet for QueryTeamFolderContents",
+      "file": "DataformClient.QueryTeamFolderContentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "teamFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryTeamFolderContents_async_flattened_resourceNames",
+      "title": "QueryTeamFolderContentsResourceNamesAsync",
+      "description": "Snippet for QueryTeamFolderContentsAsync",
+      "file": "DataformClient.QueryTeamFolderContentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryTeamFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryTeamFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "teamFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse+Types+TeamFolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryTeamFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryTeamFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SearchTeamFolders_sync",
+      "title": "SearchTeamFoldersRequestObject",
+      "description": "Snippet for SearchTeamFolders",
+      "file": "DataformClient.SearchTeamFoldersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTeamFolders",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SearchTeamFolders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersResponse, Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersResponse+Types+TeamFolderSearchResult>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SearchTeamFolders",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SearchTeamFolders",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SearchTeamFolders_async",
+      "title": "SearchTeamFoldersRequestObjectAsync",
+      "description": "Snippet for SearchTeamFoldersAsync",
+      "file": "DataformClient.SearchTeamFoldersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTeamFoldersAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SearchTeamFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersResponse, Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersResponse+Types+TeamFolderSearchResult>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SearchTeamFolders",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SearchTeamFolders",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_sync",
+      "title": "GetFolderRequestObject",
+      "description": "Snippet for GetFolder",
+      "file": "DataformClient.GetFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_async",
+      "title": "GetFolderRequestObjectAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "DataformClient.GetFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_sync_flattened",
+      "title": "GetFolder",
+      "description": "Snippet for GetFolder",
+      "file": "DataformClient.GetFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_async_flattened",
+      "title": "GetFolderAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "DataformClient.GetFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_sync_flattened_resourceNames",
+      "title": "GetFolderResourceNames",
+      "description": "Snippet for GetFolder",
+      "file": "DataformClient.GetFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetFolder_async_flattened_resourceNames",
+      "title": "GetFolderResourceNamesAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "DataformClient.GetFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_sync",
+      "title": "CreateFolderRequestObject",
+      "description": "Snippet for CreateFolder",
+      "file": "DataformClient.CreateFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_async",
+      "title": "CreateFolderRequestObjectAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "DataformClient.CreateFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_sync_flattened",
+      "title": "CreateFolder",
+      "description": "Snippet for CreateFolder",
+      "file": "DataformClient.CreateFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_async_flattened",
+      "title": "CreateFolderAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "DataformClient.CreateFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_sync_flattened_resourceNames",
+      "title": "CreateFolderResourceNames",
+      "description": "Snippet for CreateFolder",
+      "file": "DataformClient.CreateFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateFolder_async_flattened_resourceNames",
+      "title": "CreateFolderResourceNamesAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "DataformClient.CreateFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateFolder_sync",
+      "title": "UpdateFolderRequestObject",
+      "description": "Snippet for UpdateFolder",
+      "file": "DataformClient.UpdateFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateFolder_async",
+      "title": "UpdateFolderRequestObjectAsync",
+      "description": "Snippet for UpdateFolderAsync",
+      "file": "DataformClient.UpdateFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateFolder_sync_flattened",
+      "title": "UpdateFolder",
+      "description": "Snippet for UpdateFolder",
+      "file": "DataformClient.UpdateFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Folder",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateFolder_async_flattened",
+      "title": "UpdateFolderAsync",
+      "description": "Snippet for UpdateFolderAsync",
+      "file": "DataformClient.UpdateFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Folder>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_sync",
+      "title": "DeleteFolderRequestObject",
+      "description": "Snippet for DeleteFolder",
+      "file": "DataformClient.DeleteFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_async",
+      "title": "DeleteFolderRequestObjectAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "DataformClient.DeleteFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_sync_flattened",
+      "title": "DeleteFolder",
+      "description": "Snippet for DeleteFolder",
+      "file": "DataformClient.DeleteFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_async_flattened",
+      "title": "DeleteFolderAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "DataformClient.DeleteFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_sync_flattened_resourceNames",
+      "title": "DeleteFolderResourceNames",
+      "description": "Snippet for DeleteFolder",
+      "file": "DataformClient.DeleteFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolder_async_flattened_resourceNames",
+      "title": "DeleteFolderResourceNamesAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "DataformClient.DeleteFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_sync",
+      "title": "QueryFolderContentsRequestObject",
+      "description": "Snippet for QueryFolderContents",
+      "file": "DataformClient.QueryFolderContentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_async",
+      "title": "QueryFolderContentsRequestObjectAsync",
+      "description": "Snippet for QueryFolderContentsAsync",
+      "file": "DataformClient.QueryFolderContentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_sync_flattened",
+      "title": "QueryFolderContents",
+      "description": "Snippet for QueryFolderContents",
+      "file": "DataformClient.QueryFolderContentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_async_flattened",
+      "title": "QueryFolderContentsAsync",
+      "description": "Snippet for QueryFolderContentsAsync",
+      "file": "DataformClient.QueryFolderContentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_sync_flattened_resourceNames",
+      "title": "QueryFolderContentsResourceNames",
+      "description": "Snippet for QueryFolderContents",
+      "file": "DataformClient.QueryFolderContentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryFolderContents_async_flattened_resourceNames",
+      "title": "QueryFolderContentsResourceNamesAsync",
+      "description": "Snippet for QueryFolderContentsAsync",
+      "file": "DataformClient.QueryFolderContentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryFolderContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryFolderContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse+Types+FolderContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryFolderContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryFolderContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_sync",
+      "title": "QueryUserRootContentsRequestObject",
+      "description": "Snippet for QueryUserRootContents",
+      "file": "DataformClient.QueryUserRootContentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_async",
+      "title": "QueryUserRootContentsRequestObjectAsync",
+      "description": "Snippet for QueryUserRootContentsAsync",
+      "file": "DataformClient.QueryUserRootContentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_sync_flattened",
+      "title": "QueryUserRootContents",
+      "description": "Snippet for QueryUserRootContents",
+      "file": "DataformClient.QueryUserRootContentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_async_flattened",
+      "title": "QueryUserRootContentsAsync",
+      "description": "Snippet for QueryUserRootContentsAsync",
+      "file": "DataformClient.QueryUserRootContentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_sync_flattened_resourceNames",
+      "title": "QueryUserRootContentsResourceNames",
+      "description": "Snippet for QueryUserRootContents",
+      "file": "DataformClient.QueryUserRootContentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContents",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_QueryUserRootContents_async_flattened_resourceNames",
+      "title": "QueryUserRootContentsResourceNamesAsync",
+      "description": "Snippet for QueryUserRootContentsAsync",
+      "file": "DataformClient.QueryUserRootContentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUserRootContentsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryUserRootContentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse+Types+RootContentsEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "QueryUserRootContents",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.QueryUserRootContents",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_sync",
+      "title": "MoveFolderRequestObject",
+      "description": "Snippet for MoveFolder",
+      "file": "DataformClient.MoveFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_async",
+      "title": "MoveFolderRequestObjectAsync",
+      "description": "Snippet for MoveFolderAsync",
+      "file": "DataformClient.MoveFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_sync_flattened",
+      "title": "MoveFolder",
+      "description": "Snippet for MoveFolder",
+      "file": "DataformClient.MoveFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_async_flattened",
+      "title": "MoveFolderAsync",
+      "description": "Snippet for MoveFolderAsync",
+      "file": "DataformClient.MoveFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_sync_flattened_resourceNames",
+      "title": "MoveFolderResourceNames",
+      "description": "Snippet for MoveFolder",
+      "file": "DataformClient.MoveFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolder",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveFolder_async_flattened_resourceNames",
+      "title": "MoveFolderResourceNamesAsync",
+      "description": "Snippet for MoveFolderAsync",
+      "file": "DataformClient.MoveFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveFolderAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveFolderMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveFolder",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveFolder",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataform_v1beta1_generated_Dataform_ListRepositories_sync",
       "title": "ListRepositoriesRequestObject",
       "description": "Snippet for ListRepositories",
@@ -1415,6 +4920,309 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_sync",
+      "title": "MoveRepositoryRequestObject",
+      "description": "Snippet for MoveRepository",
+      "file": "DataformClient.MoveRepositoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepository",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_async",
+      "title": "MoveRepositoryRequestObjectAsync",
+      "description": "Snippet for MoveRepositoryAsync",
+      "file": "DataformClient.MoveRepositoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepositoryAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_sync_flattened",
+      "title": "MoveRepository",
+      "description": "Snippet for MoveRepository",
+      "file": "DataformClient.MoveRepositorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepository",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_async_flattened",
+      "title": "MoveRepositoryAsync",
+      "description": "Snippet for MoveRepositoryAsync",
+      "file": "DataformClient.MoveRepositoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepositoryAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_sync_flattened_resourceNames",
+      "title": "MoveRepositoryResourceNames",
+      "description": "Snippet for MoveRepository",
+      "file": "DataformClient.MoveRepositoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepository",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_MoveRepository_async_flattened_resourceNames",
+      "title": "MoveRepositoryResourceNamesAsync",
+      "description": "Snippet for MoveRepositoryAsync",
+      "file": "DataformClient.MoveRepositoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveRepositoryAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationContainingFolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.MoveRepositoryMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "MoveRepository",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.MoveRepository",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -10553,6 +14361,487 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "DataformClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "DataformClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "DataformClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "DataformClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_sync_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNames",
+      "description": "Snippet for GetIamPolicy",
+      "file": "DataformClient.GetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetIamPolicy_async_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNamesAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "DataformClient.GetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "DataformClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "DataformClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SetIamPolicy",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "DataformClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.TestIamPermissions",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "DataformClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.TestIamPermissions",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
           "type": "SHORT"
         }
       ]

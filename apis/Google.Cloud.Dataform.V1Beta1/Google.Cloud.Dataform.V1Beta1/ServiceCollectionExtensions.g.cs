@@ -20,6 +20,7 @@ using gcdv = Google.Cloud.Dataform.V1Beta1;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sys = System;
