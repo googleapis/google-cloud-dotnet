@@ -25,19 +25,19 @@ namespace Google.Maps.Places.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvbWFwcy9wbGFjZXMvdjEvY29udGVudF9ibG9jay5wcm90bxIV",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxGiVnb29nbGUvbWFwcy9wbGFjZXMvdjEv",
-            "cmVmZXJlbmNlLnByb3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5w",
-            "cm90byKBAQoMQ29udGVudEJsb2NrEg0KBXRvcGljGAEgASgJEisKB2NvbnRl",
-            "bnQYAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EjUKCnJlZmVy",
-            "ZW5jZXMYAyABKAsyIS5nb29nbGUubWFwcy5wbGFjZXMudjEuUmVmZXJlbmNl",
-            "c0KiAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIRQ29udGVudEJsb2Nr",
-            "UHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3BsYWNlcy9hcGl2",
-            "MS9wbGFjZXNwYjtwbGFjZXNwYqICBkdNUFNWMaoCFUdvb2dsZS5NYXBzLlBs",
-            "YWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
+            "b3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byJ4CgxDb250",
+            "ZW50QmxvY2sSKwoHY29udGVudBgCIAEoCzIaLmdvb2dsZS50eXBlLkxvY2Fs",
+            "aXplZFRleHQSOwoRcmVmZXJlbmNlZF9wbGFjZXMYBCADKAlCIPpBHQobcGxh",
+            "Y2VzLmdvb2dsZWFwaXMuY29tL1BsYWNlQqIBChljb20uZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxQhFDb250ZW50QmxvY2tQcm90b1ABWjdjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIG",
+            "R01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNc",
+            "UGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Maps.Places.V1.ReferenceReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.ContentBlock), global::Google.Maps.Places.V1.ContentBlock.Parser, new[]{ "Topic", "Content", "References" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.ContentBlock), global::Google.Maps.Places.V1.ContentBlock.Parser, new[]{ "Content", "ReferencedPlaces" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,9 +82,8 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContentBlock(ContentBlock other) : this() {
-      topic_ = other.topic_;
       content_ = other.content_ != null ? other.content_.Clone() : null;
-      references_ = other.references_ != null ? other.references_.Clone() : null;
+      referencedPlaces_ = other.referencedPlaces_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,21 +91,6 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContentBlock Clone() {
       return new ContentBlock(this);
-    }
-
-    /// <summary>Field number for the "topic" field.</summary>
-    public const int TopicFieldNumber = 1;
-    private string topic_ = "";
-    /// <summary>
-    /// The topic of the content, for example "overview" or "restaurant".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Topic {
-      get { return topic_; }
-      set {
-        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "content" field.</summary>
@@ -124,23 +108,19 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
-    /// <summary>Field number for the "references" field.</summary>
-    public const int ReferencesFieldNumber = 3;
-    private global::Google.Maps.Places.V1.References references_;
+    /// <summary>Field number for the "referenced_places" field.</summary>
+    public const int ReferencedPlacesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_referencedPlaces_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> referencedPlaces_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Experimental: See
-    /// https://developers.google.com/maps/documentation/places/web-service/experimental/places-generative
-    /// for more details.
-    ///
-    /// References that are related to this block of content.
+    /// The list of resource names of the referenced places. This name can be used
+    /// in other APIs that accept Place resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Maps.Places.V1.References References {
-      get { return references_; }
-      set {
-        references_ = value;
-      }
+    public pbc::RepeatedField<string> ReferencedPlaces {
+      get { return referencedPlaces_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -158,9 +138,8 @@ namespace Google.Maps.Places.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Topic != other.Topic) return false;
       if (!object.Equals(Content, other.Content)) return false;
-      if (!object.Equals(References, other.References)) return false;
+      if(!referencedPlaces_.Equals(other.referencedPlaces_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -168,9 +147,8 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       if (content_ != null) hash ^= Content.GetHashCode();
-      if (references_ != null) hash ^= References.GetHashCode();
+      hash ^= referencedPlaces_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -189,18 +167,11 @@ namespace Google.Maps.Places.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Topic.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Topic);
-      }
       if (content_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Content);
       }
-      if (references_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(References);
-      }
+      referencedPlaces_.WriteTo(output, _repeated_referencedPlaces_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -211,18 +182,11 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Topic.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Topic);
-      }
       if (content_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Content);
       }
-      if (references_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(References);
-      }
+      referencedPlaces_.WriteTo(ref output, _repeated_referencedPlaces_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -233,15 +197,10 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Topic.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
-      }
       if (content_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Content);
       }
-      if (references_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(References);
-      }
+      size += referencedPlaces_.CalculateSize(_repeated_referencedPlaces_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -254,21 +213,13 @@ namespace Google.Maps.Places.V1 {
       if (other == null) {
         return;
       }
-      if (other.Topic.Length != 0) {
-        Topic = other.Topic;
-      }
       if (other.content_ != null) {
         if (content_ == null) {
           Content = new global::Google.Type.LocalizedText();
         }
         Content.MergeFrom(other.Content);
       }
-      if (other.references_ != null) {
-        if (references_ == null) {
-          References = new global::Google.Maps.Places.V1.References();
-        }
-        References.MergeFrom(other.References);
-      }
+      referencedPlaces_.Add(other.referencedPlaces_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -284,10 +235,6 @@ namespace Google.Maps.Places.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Topic = input.ReadString();
-            break;
-          }
           case 18: {
             if (content_ == null) {
               Content = new global::Google.Type.LocalizedText();
@@ -295,11 +242,8 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(Content);
             break;
           }
-          case 26: {
-            if (references_ == null) {
-              References = new global::Google.Maps.Places.V1.References();
-            }
-            input.ReadMessage(References);
+          case 34: {
+            referencedPlaces_.AddEntriesFrom(input, _repeated_referencedPlaces_codec);
             break;
           }
         }
@@ -317,10 +261,6 @@ namespace Google.Maps.Places.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Topic = input.ReadString();
-            break;
-          }
           case 18: {
             if (content_ == null) {
               Content = new global::Google.Type.LocalizedText();
@@ -328,11 +268,8 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(Content);
             break;
           }
-          case 26: {
-            if (references_ == null) {
-              References = new global::Google.Maps.Places.V1.References();
-            }
-            input.ReadMessage(References);
+          case 34: {
+            referencedPlaces_.AddEntriesFrom(ref input, _repeated_referencedPlaces_codec);
             break;
           }
         }

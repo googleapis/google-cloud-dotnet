@@ -36,185 +36,191 @@ namespace Google.Maps.Places.V1 {
             "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUv",
             "ZGF0ZS5wcm90bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aGGdvb2ds",
             "ZS90eXBlL2xhdGxuZy5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3Rl",
-            "eHQucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIrQ6",
+            "eHQucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIr08",
             "CgVQbGFjZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIgASgJEjAKDGRpc3BsYXlf",
             "bmFtZRgfIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSDQoFdHlw",
             "ZXMYBSADKAkSFAoMcHJpbWFyeV90eXBlGDIgASgJEj0KGXByaW1hcnlfdHlw",
             "ZV9kaXNwbGF5X25hbWUYICABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRU",
-            "ZXh0Eh0KFW5hdGlvbmFsX3Bob25lX251bWJlchgHIAEoCRIiChppbnRlcm5h",
-            "dGlvbmFsX3Bob25lX251bWJlchgIIAEoCRIZChFmb3JtYXR0ZWRfYWRkcmVz",
-            "cxgJIAEoCRIfChdzaG9ydF9mb3JtYXR0ZWRfYWRkcmVzcxgzIAEoCRIyCg5w",
-            "b3N0YWxfYWRkcmVzcxhaIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJl",
-            "c3MSSQoSYWRkcmVzc19jb21wb25lbnRzGAogAygLMi0uZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLlBsYWNlLkFkZHJlc3NDb21wb25lbnQSOAoJcGx1c19jb2Rl",
-            "GAsgASgLMiUuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2Rl",
-            "EiUKCGxvY2F0aW9uGAwgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEisKCHZp",
-            "ZXdwb3J0GA0gASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0Eg4KBnJh",
-            "dGluZxgOIAEoARIXCg9nb29nbGVfbWFwc191cmkYDyABKAkSEwoLd2Vic2l0",
-            "ZV91cmkYECABKAkSLgoHcmV2aWV3cxg1IAMoCzIdLmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5SZXZpZXcSSAoVcmVndWxhcl9vcGVuaW5nX2hvdXJzGBUgASgL",
-            "MikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3VycxIf",
-            "ChJ1dGNfb2Zmc2V0X21pbnV0ZXMYFiABKAVIAIgBARIoCgl0aW1lX3pvbmUY",
-            "WCABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZRIsCgZwaG90b3MYNiADKAsy",
-            "HC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGhvdG8SGgoSYWRyX2Zvcm1hdF9h",
-            "ZGRyZXNzGBggASgJEkQKD2J1c2luZXNzX3N0YXR1cxgZIAEoDjIrLmdvb2ds",
-            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5CdXNpbmVzc1N0YXR1cxI2Cgtwcmlj",
-            "ZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QcmljZUxl",
-            "dmVsEj4KDGF0dHJpYnV0aW9ucxgbIAMoCzIoLmdvb2dsZS5tYXBzLnBsYWNl",
-            "cy52MS5QbGFjZS5BdHRyaWJ1dGlvbhIeChF1c2VyX3JhdGluZ19jb3VudBgc",
-            "IAEoBUgBiAEBEhoKEmljb25fbWFza19iYXNlX3VyaRgdIAEoCRIdChVpY29u",
-            "X2JhY2tncm91bmRfY29sb3IYHiABKAkSFAoHdGFrZW91dBghIAEoCEgCiAEB",
-            "EhUKCGRlbGl2ZXJ5GCIgASgISAOIAQESFAoHZGluZV9pbhgjIAEoCEgEiAEB",
-            "EhwKD2N1cmJzaWRlX3BpY2t1cBgkIAEoCEgFiAEBEhcKCnJlc2VydmFibGUY",
-            "JiABKAhIBogBARIdChBzZXJ2ZXNfYnJlYWtmYXN0GCcgASgISAeIAQESGQoM",
-            "c2VydmVzX2x1bmNoGCggASgISAiIAQESGgoNc2VydmVzX2Rpbm5lchgpIAEo",
-            "CEgJiAEBEhgKC3NlcnZlc19iZWVyGCogASgISAqIAQESGAoLc2VydmVzX3dp",
-            "bmUYKyABKAhIC4gBARIaCg1zZXJ2ZXNfYnJ1bmNoGCwgASgISAyIAQESIwoW",
-            "c2VydmVzX3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgNiAEBEkgKFWN1cnJlbnRf",
-            "b3BlbmluZ19ob3VycxguIAEoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
-            "bGFjZS5PcGVuaW5nSG91cnMSUgofY3VycmVudF9zZWNvbmRhcnlfb3Blbmlu",
-            "Z19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
-            "cGVuaW5nSG91cnMSUgofcmVndWxhcl9zZWNvbmRhcnlfb3BlbmluZ19ob3Vy",
-            "cxgxIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
-            "SG91cnMSNQoRZWRpdG9yaWFsX3N1bW1hcnkYNCABKAsyGi5nb29nbGUudHlw",
-            "ZS5Mb2NhbGl6ZWRUZXh0EhwKD291dGRvb3Jfc2VhdGluZxg3IAEoCEgOiAEB",
-            "EhcKCmxpdmVfbXVzaWMYOCABKAhID4gBARIeChFtZW51X2Zvcl9jaGlsZHJl",
-            "bhg5IAEoCEgQiAEBEh0KEHNlcnZlc19jb2NrdGFpbHMYOiABKAhIEYgBARIb",
-            "Cg5zZXJ2ZXNfZGVzc2VydBg7IAEoCEgSiAEBEhoKDXNlcnZlc19jb2ZmZWUY",
-            "PCABKAhIE4gBARIeChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEoCEgUiAEBEhgK",
-            "C2FsbG93c19kb2dzGD8gASgISBWIAQESFQoIcmVzdHJvb20YQCABKAhIFogB",
-            "ARIcCg9nb29kX2Zvcl9ncm91cHMYQSABKAhIF4gBARIlChhnb29kX2Zvcl93",
-            "YXRjaGluZ19zcG9ydHMYQiABKAhIGIgBARJECg9wYXltZW50X29wdGlvbnMY",
-            "QyABKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuUGF5bWVudE9w",
-            "dGlvbnMSRAoPcGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLlBsYWNlLlBhcmtpbmdPcHRpb25zEkUKEHN1Yl9kZXN0aW5h",
-            "dGlvbnMYRyADKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuU3Vi",
-            "RGVzdGluYXRpb24SVQoVYWNjZXNzaWJpbGl0eV9vcHRpb25zGEggASgLMjEu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFjY2Vzc2liaWxpdHlPcHRp",
-            "b25zSBmIAQESOAoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLkZ1ZWxPcHRpb25zEkEKEWV2X2NoYXJnZV9vcHRpb25zGE8g",
-            "ASgLMiYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkVWQ2hhcmdlT3B0aW9ucxJK",
-            "ChJnZW5lcmF0aXZlX3N1bW1hcnkYUCABKAsyLi5nb29nbGUubWFwcy5wbGFj",
-            "ZXMudjEuUGxhY2UuR2VuZXJhdGl2ZVN1bW1hcnkSRwoRY29udGFpbmluZ19w",
-            "bGFjZXMYUiADKAsyLC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuQ29u",
-            "dGFpbmluZ1BsYWNlEicKGnB1cmVfc2VydmljZV9hcmVhX2J1c2luZXNzGFMg",
-            "ASgISBqIAQESRAoSYWRkcmVzc19kZXNjcmlwdG9yGFQgASgLMiguZ29vZ2xl",
-            "Lm1hcHMucGxhY2VzLnYxLkFkZHJlc3NEZXNjcmlwdG9yEjYKC3ByaWNlX3Jh",
-            "bmdlGFYgASgLMiEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlByaWNlUmFuZ2US",
-            "QgoOcmV2aWV3X3N1bW1hcnkYVyABKAsyKi5nb29nbGUubWFwcy5wbGFjZXMu",
-            "djEuUGxhY2UuUmV2aWV3U3VtbWFyeRJWChlldl9jaGFyZ2VfYW1lbml0eV9z",
-            "dW1tYXJ5GFkgASgLMjMuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkV2",
-            "Q2hhcmdlQW1lbml0eVN1bW1hcnkSTgoUbmVpZ2hib3Job29kX3N1bW1hcnkY",
-            "WyABKAsyMC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuTmVpZ2hib3Jo",
-            "b29kU3VtbWFyeRJCCg5jb25zdW1lcl9hbGVydBhcIAEoCzIqLmdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MS5QbGFjZS5Db25zdW1lckFsZXJ0EjUKC21vdmVkX3Bs",
-            "YWNlGF0gASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIW",
-            "Cg5tb3ZlZF9wbGFjZV9pZBheIAEoCRpfChBBZGRyZXNzQ29tcG9uZW50EhEK",
-            "CWxvbmdfdGV4dBgBIAEoCRISCgpzaG9ydF90ZXh0GAIgASgJEg0KBXR5cGVz",
-            "GAMgAygJEhUKDWxhbmd1YWdlX2NvZGUYBCABKAkaNgoIUGx1c0NvZGUSEwoL",
-            "Z2xvYmFsX2NvZGUYASABKAkSFQoNY29tcG91bmRfY29kZRgCIAEoCRr9BwoM",
-            "T3BlbmluZ0hvdXJzEhUKCG9wZW5fbm93GAEgASgISACIAQESQQoHcGVyaW9k",
-            "cxgCIAMoCzIwLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
-            "SG91cnMuUGVyaW9kEhwKFHdlZWtkYXlfZGVzY3JpcHRpb25zGAMgAygJEloK",
-            "FHNlY29uZGFyeV9ob3Vyc190eXBlGAQgASgOMjwuZ29vZ2xlLm1hcHMucGxh",
-            "Y2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5TZWNvbmRhcnlIb3Vyc1R5cGUS",
-            "SgoMc3BlY2lhbF9kYXlzGAUgAygLMjQuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLk9wZW5pbmdIb3Vycy5TcGVjaWFsRGF5EjIKDm5leHRfb3Blbl90",
-            "aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCg9uZXh0",
-            "X2Nsb3NlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "GqkCCgZQZXJpb2QSRAoEb3BlbhgBIAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNl",
-            "cy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kLlBvaW50EkUKBWNsb3Nl",
-            "GAIgASgLMjYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdI",
-            "b3Vycy5QZXJpb2QuUG9pbnQakQEKBVBvaW50EhAKA2RheRgBIAEoBUgAiAEB",
-            "EhEKBGhvdXIYAiABKAVIAYgBARITCgZtaW51dGUYAyABKAVIAogBARIfCgRk",
-            "YXRlGAYgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIRCgl0cnVuY2F0ZWQYBSAB",
-            "KAhCBgoEX2RheUIHCgVfaG91ckIJCgdfbWludXRlGi0KClNwZWNpYWxEYXkS",
-            "HwoEZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUi+wEKElNlY29uZGFy",
-            "eUhvdXJzVHlwZRIkCiBTRUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEhEKDURSSVZFX1RIUk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVM",
-            "SVZFUlkQAxILCgdUQUtFT1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFT",
-            "VBAGEgkKBUxVTkNIEAcSCgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElD",
-            "S1VQEAoSCgoGQUNDRVNTEAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5F",
-            "X1NFUlZJQ0VfSE9VUlMQDUILCglfb3Blbl9ub3caNQoLQXR0cmlidXRpb24S",
-            "EAoIcHJvdmlkZXIYASABKAkSFAoMcHJvdmlkZXJfdXJpGAIgASgJGuYBCg5Q",
-            "YXltZW50T3B0aW9ucxIhChRhY2NlcHRzX2NyZWRpdF9jYXJkcxgBIAEoCEgA",
-            "iAEBEiAKE2FjY2VwdHNfZGViaXRfY2FyZHMYAiABKAhIAYgBARIeChFhY2Nl",
-            "cHRzX2Nhc2hfb25seRgDIAEoCEgCiAEBEhgKC2FjY2VwdHNfbmZjGAQgASgI",
-            "SAOIAQFCFwoVX2FjY2VwdHNfY3JlZGl0X2NhcmRzQhYKFF9hY2NlcHRzX2Rl",
-            "Yml0X2NhcmRzQhQKEl9hY2NlcHRzX2Nhc2hfb25seUIOCgxfYWNjZXB0c19u",
-            "ZmMajgMKDlBhcmtpbmdPcHRpb25zEh0KEGZyZWVfcGFya2luZ19sb3QYASAB",
-            "KAhIAIgBARIdChBwYWlkX3BhcmtpbmdfbG90GAIgASgISAGIAQESIAoTZnJl",
-            "ZV9zdHJlZXRfcGFya2luZxgDIAEoCEgCiAEBEiAKE3BhaWRfc3RyZWV0X3Bh",
-            "cmtpbmcYBCABKAhIA4gBARIaCg12YWxldF9wYXJraW5nGAUgASgISASIAQES",
-            "IAoTZnJlZV9nYXJhZ2VfcGFya2luZxgGIAEoCEgFiAEBEiAKE3BhaWRfZ2Fy",
-            "YWdlX3BhcmtpbmcYByABKAhIBogBAUITChFfZnJlZV9wYXJraW5nX2xvdEIT",
-            "ChFfcGFpZF9wYXJraW5nX2xvdEIWChRfZnJlZV9zdHJlZXRfcGFya2luZ0IW",
-            "ChRfcGFpZF9zdHJlZXRfcGFya2luZ0IQCg5fdmFsZXRfcGFya2luZ0IWChRf",
-            "ZnJlZV9nYXJhZ2VfcGFya2luZ0IWChRfcGFpZF9nYXJhZ2VfcGFya2luZxpM",
-            "Cg5TdWJEZXN0aW5hdGlvbhIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5n",
-            "b29nbGVhcGlzLmNvbS9QbGFjZRIKCgJpZBgCIAEoCRrSAgoUQWNjZXNzaWJp",
-            "bGl0eU9wdGlvbnMSKgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmcY",
-            "ASABKAhIAIgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfZW50cmFuY2UY",
-            "AiABKAhIAYgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfcmVzdHJvb20Y",
-            "AyABKAhIAogBARIqCh13aGVlbGNoYWlyX2FjY2Vzc2libGVfc2VhdGluZxgE",
-            "IAEoCEgDiAEBQiAKHl93aGVlbGNoYWlyX2FjY2Vzc2libGVfcGFya2luZ0Ih",
-            "Ch9fd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlQiEKH193aGVlbGNo",
-            "YWlyX2FjY2Vzc2libGVfcmVzdHJvb21CIAoeX3doZWVsY2hhaXJfYWNjZXNz",
-            "aWJsZV9zZWF0aW5nGpkBChFHZW5lcmF0aXZlU3VtbWFyeRIsCghvdmVydmll",
-            "dxgBIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSIQoZb3ZlcnZp",
-            "ZXdfZmxhZ19jb250ZW50X3VyaRgEIAEoCRIzCg9kaXNjbG9zdXJlX3RleHQY",
-            "BiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0Gk0KD0NvbnRhaW5p",
-            "bmdQbGFjZRIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9QbGFjZRIKCgJpZBgCIAEoCRqdAQoNUmV2aWV3U3VtbWFyeRIoCgR0",
-            "ZXh0GAEgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBIYChBmbGFn",
-            "X2NvbnRlbnRfdXJpGAIgASgJEjMKD2Rpc2Nsb3N1cmVfdGV4dBgDIAEoCzIa",
-            "Lmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSEwoLcmV2aWV3c191cmkYBCAB",
-            "KAkawAIKFkV2Q2hhcmdlQW1lbml0eVN1bW1hcnkSNQoIb3ZlcnZpZXcYASAB",
-            "KAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVudEJsb2NrEjMKBmNv",
-            "ZmZlZRgCIAEoCzIjLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Db250ZW50Qmxv",
-            "Y2sSNwoKcmVzdGF1cmFudBgDIAEoCzIjLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5Db250ZW50QmxvY2sSMgoFc3RvcmUYBCABKAsyIy5nb29nbGUubWFwcy5w",
-            "bGFjZXMudjEuQ29udGVudEJsb2NrEhgKEGZsYWdfY29udGVudF91cmkYBSAB",
-            "KAkSMwoPZGlzY2xvc3VyZV90ZXh0GAYgASgLMhouZ29vZ2xlLnR5cGUuTG9j",
-            "YWxpemVkVGV4dBrVAQoTTmVpZ2hib3Job29kU3VtbWFyeRI1CghvdmVydmll",
-            "dxgBIAEoCzIjLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Db250ZW50QmxvY2sS",
-            "OAoLZGVzY3JpcHRpb24YAiABKAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEu",
-            "Q29udGVudEJsb2NrEhgKEGZsYWdfY29udGVudF91cmkYAyABKAkSMwoPZGlz",
-            "Y2xvc3VyZV90ZXh0GAQgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4",
-            "dBqeAgoNQ29uc3VtZXJBbGVydBIQCghvdmVydmlldxgBIAEoCRJDCgdkZXRh",
-            "aWxzGAIgASgLMjIuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkNvbnN1",
-            "bWVyQWxlcnQuRGV0YWlscxIVCg1sYW5ndWFnZV9jb2RlGAMgASgJGp4BCgdE",
-            "ZXRhaWxzEg0KBXRpdGxlGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEksK",
-            "CmFib3V0X2xpbmsYAyABKAsyNy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxh",
-            "Y2UuQ29uc3VtZXJBbGVydC5EZXRhaWxzLkxpbmsaIgoETGluaxINCgV0aXRs",
-            "ZRgBIAEoCRILCgN1cmkYAiABKAkicgoOQnVzaW5lc3NTdGF0dXMSHwobQlVT",
-            "SU5FU1NfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDwoLT1BFUkFUSU9OQUwQARIW",
-            "ChJDTE9TRURfVEVNUE9SQVJJTFkQAhIWChJDTE9TRURfUEVSTUFORU5UTFkQ",
-            "AzpC6kE/ChtwbGFjZXMuZ29vZ2xlYXBpcy5jb20vUGxhY2USEXBsYWNlcy97",
-            "cGxhY2VfaWR9KgZwbGFjZXMyBXBsYWNlQhUKE191dGNfb2Zmc2V0X21pbnV0",
-            "ZXNCFAoSX3VzZXJfcmF0aW5nX2NvdW50QgoKCF90YWtlb3V0QgsKCV9kZWxp",
-            "dmVyeUIKCghfZGluZV9pbkISChBfY3VyYnNpZGVfcGlja3VwQg0KC19yZXNl",
-            "cnZhYmxlQhMKEV9zZXJ2ZXNfYnJlYWtmYXN0Qg8KDV9zZXJ2ZXNfbHVuY2hC",
-            "EAoOX3NlcnZlc19kaW5uZXJCDgoMX3NlcnZlc19iZWVyQg4KDF9zZXJ2ZXNf",
-            "d2luZUIQCg5fc2VydmVzX2JydW5jaEIZChdfc2VydmVzX3ZlZ2V0YXJpYW5f",
-            "Zm9vZEISChBfb3V0ZG9vcl9zZWF0aW5nQg0KC19saXZlX211c2ljQhQKEl9t",
-            "ZW51X2Zvcl9jaGlsZHJlbkITChFfc2VydmVzX2NvY2t0YWlsc0IRCg9fc2Vy",
-            "dmVzX2Rlc3NlcnRCEAoOX3NlcnZlc19jb2ZmZWVCFAoSX2dvb2RfZm9yX2No",
-            "aWxkcmVuQg4KDF9hbGxvd3NfZG9nc0ILCglfcmVzdHJvb21CEgoQX2dvb2Rf",
-            "Zm9yX2dyb3Vwc0IbChlfZ29vZF9mb3Jfd2F0Y2hpbmdfc3BvcnRzQhgKFl9h",
-            "Y2Nlc3NpYmlsaXR5X29wdGlvbnNCHQobX3B1cmVfc2VydmljZV9hcmVhX2J1",
-            "c2luZXNzKrEBCgpQcmljZUxldmVsEhsKF1BSSUNFX0xFVkVMX1VOU1BFQ0lG",
-            "SUVEEAASFAoQUFJJQ0VfTEVWRUxfRlJFRRABEhsKF1BSSUNFX0xFVkVMX0lO",
-            "RVhQRU5TSVZFEAISGAoUUFJJQ0VfTEVWRUxfTU9ERVJBVEUQAxIZChVQUklD",
-            "RV9MRVZFTF9FWFBFTlNJVkUQBBIeChpQUklDRV9MRVZFTF9WRVJZX0VYUEVO",
-            "U0lWRRAFQpsBChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYxQgpQbGFjZVBy",
-            "b3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9wbGFjZXMvYXBpdjEv",
-            "cGxhY2VzcGI7cGxhY2VzcGKiAgZHTVBTVjGqAhVHb29nbGUuTWFwcy5QbGFj",
-            "ZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFjZXNcVjFiBnByb3RvMw=="));
+            "ZXh0EjoKFmdvb2dsZV9tYXBzX3R5cGVfbGFiZWwYYCABKAsyGi5nb29nbGUu",
+            "dHlwZS5Mb2NhbGl6ZWRUZXh0Eh0KFW5hdGlvbmFsX3Bob25lX251bWJlchgH",
+            "IAEoCRIiChppbnRlcm5hdGlvbmFsX3Bob25lX251bWJlchgIIAEoCRIZChFm",
+            "b3JtYXR0ZWRfYWRkcmVzcxgJIAEoCRIfChdzaG9ydF9mb3JtYXR0ZWRfYWRk",
+            "cmVzcxgzIAEoCRIyCg5wb3N0YWxfYWRkcmVzcxhaIAEoCzIaLmdvb2dsZS50",
+            "eXBlLlBvc3RhbEFkZHJlc3MSSQoSYWRkcmVzc19jb21wb25lbnRzGAogAygL",
+            "Mi0uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFkZHJlc3NDb21wb25l",
+            "bnQSOAoJcGx1c19jb2RlGAsgASgLMiUuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLlBsdXNDb2RlEiUKCGxvY2F0aW9uGAwgASgLMhMuZ29vZ2xlLnR5",
+            "cGUuTGF0TG5nEisKCHZpZXdwb3J0GA0gASgLMhkuZ29vZ2xlLmdlby50eXBl",
+            "LlZpZXdwb3J0Eg4KBnJhdGluZxgOIAEoARIXCg9nb29nbGVfbWFwc191cmkY",
+            "DyABKAkSEwoLd2Vic2l0ZV91cmkYECABKAkSLgoHcmV2aWV3cxg1IAMoCzId",
+            "Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5SZXZpZXcSSAoVcmVndWxhcl9vcGVu",
+            "aW5nX2hvdXJzGBUgASgLMikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNl",
+            "Lk9wZW5pbmdIb3VycxIfChJ1dGNfb2Zmc2V0X21pbnV0ZXMYFiABKAVIAIgB",
+            "ARIoCgl0aW1lX3pvbmUYWCABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZRIs",
+            "CgZwaG90b3MYNiADKAsyHC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGhvdG8S",
+            "GgoSYWRyX2Zvcm1hdF9hZGRyZXNzGBggASgJEkQKD2J1c2luZXNzX3N0YXR1",
+            "cxgZIAEoDjIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5CdXNpbmVz",
+            "c1N0YXR1cxI2CgtwcmljZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5QcmljZUxldmVsEj4KDGF0dHJpYnV0aW9ucxgbIAMoCzIoLmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BdHRyaWJ1dGlvbhIeChF1c2Vy",
+            "X3JhdGluZ19jb3VudBgcIAEoBUgBiAEBEhoKEmljb25fbWFza19iYXNlX3Vy",
+            "aRgdIAEoCRIdChVpY29uX2JhY2tncm91bmRfY29sb3IYHiABKAkSFAoHdGFr",
+            "ZW91dBghIAEoCEgCiAEBEhUKCGRlbGl2ZXJ5GCIgASgISAOIAQESFAoHZGlu",
+            "ZV9pbhgjIAEoCEgEiAEBEhwKD2N1cmJzaWRlX3BpY2t1cBgkIAEoCEgFiAEB",
+            "EhcKCnJlc2VydmFibGUYJiABKAhIBogBARIdChBzZXJ2ZXNfYnJlYWtmYXN0",
+            "GCcgASgISAeIAQESGQoMc2VydmVzX2x1bmNoGCggASgISAiIAQESGgoNc2Vy",
+            "dmVzX2Rpbm5lchgpIAEoCEgJiAEBEhgKC3NlcnZlc19iZWVyGCogASgISAqI",
+            "AQESGAoLc2VydmVzX3dpbmUYKyABKAhIC4gBARIaCg1zZXJ2ZXNfYnJ1bmNo",
+            "GCwgASgISAyIAQESIwoWc2VydmVzX3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgN",
+            "iAEBEkgKFWN1cnJlbnRfb3BlbmluZ19ob3VycxguIAEoCzIpLmdvb2dsZS5t",
+            "YXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSUgofY3VycmVudF9z",
+            "ZWNvbmRhcnlfb3BlbmluZ19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSUgofcmVndWxhcl9zZWNvbmRh",
+            "cnlfb3BlbmluZ19ob3VycxgxIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5QbGFjZS5PcGVuaW5nSG91cnMSNQoRZWRpdG9yaWFsX3N1bW1hcnkYNCAB",
+            "KAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EhwKD291dGRvb3Jfc2Vh",
+            "dGluZxg3IAEoCEgOiAEBEhcKCmxpdmVfbXVzaWMYOCABKAhID4gBARIeChFt",
+            "ZW51X2Zvcl9jaGlsZHJlbhg5IAEoCEgQiAEBEh0KEHNlcnZlc19jb2NrdGFp",
+            "bHMYOiABKAhIEYgBARIbCg5zZXJ2ZXNfZGVzc2VydBg7IAEoCEgSiAEBEhoK",
+            "DXNlcnZlc19jb2ZmZWUYPCABKAhIE4gBARIeChFnb29kX2Zvcl9jaGlsZHJl",
+            "bhg+IAEoCEgUiAEBEhgKC2FsbG93c19kb2dzGD8gASgISBWIAQESFQoIcmVz",
+            "dHJvb20YQCABKAhIFogBARIcCg9nb29kX2Zvcl9ncm91cHMYQSABKAhIF4gB",
+            "ARIlChhnb29kX2Zvcl93YXRjaGluZ19zcG9ydHMYQiABKAhIGIgBARJECg9w",
+            "YXltZW50X29wdGlvbnMYQyABKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEu",
+            "UGxhY2UuUGF5bWVudE9wdGlvbnMSRAoPcGFya2luZ19vcHRpb25zGEYgASgL",
+            "MisuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBhcmtpbmdPcHRpb25z",
+            "EkUKEHN1Yl9kZXN0aW5hdGlvbnMYRyADKAsyKy5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuUGxhY2UuU3ViRGVzdGluYXRpb24SVQoVYWNjZXNzaWJpbGl0eV9v",
+            "cHRpb25zGEggASgLMjEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFj",
+            "Y2Vzc2liaWxpdHlPcHRpb25zSBmIAQESOAoMZnVlbF9vcHRpb25zGE4gASgL",
+            "MiIuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkZ1ZWxPcHRpb25zEkEKEWV2X2No",
+            "YXJnZV9vcHRpb25zGE8gASgLMiYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkVW",
+            "Q2hhcmdlT3B0aW9ucxJKChJnZW5lcmF0aXZlX3N1bW1hcnkYUCABKAsyLi5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuR2VuZXJhdGl2ZVN1bW1hcnkS",
+            "RwoRY29udGFpbmluZ19wbGFjZXMYUiADKAsyLC5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuUGxhY2UuQ29udGFpbmluZ1BsYWNlEicKGnB1cmVfc2VydmljZV9h",
+            "cmVhX2J1c2luZXNzGFMgASgISBqIAQESRAoSYWRkcmVzc19kZXNjcmlwdG9y",
+            "GFQgASgLMiguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkFkZHJlc3NEZXNjcmlw",
+            "dG9yEkcKEWdvb2dsZV9tYXBzX2xpbmtzGFUgASgLMiwuZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLlBsYWNlLkdvb2dsZU1hcHNMaW5rcxI2CgtwcmljZV9yYW5n",
+            "ZRhWIAEoCzIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QcmljZVJhbmdlEkIK",
+            "DnJldmlld19zdW1tYXJ5GFcgASgLMiouZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLlJldmlld1N1bW1hcnkSVgoZZXZfY2hhcmdlX2FtZW5pdHlfc3Vt",
+            "bWFyeRhZIAEoCzIzLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5FdkNo",
+            "YXJnZUFtZW5pdHlTdW1tYXJ5Ek4KFG5laWdoYm9yaG9vZF9zdW1tYXJ5GFsg",
+            "ASgLMjAuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk5laWdoYm9yaG9v",
+            "ZFN1bW1hcnkSQgoOY29uc3VtZXJfYWxlcnQYXCABKAsyKi5nb29nbGUubWFw",
+            "cy5wbGFjZXMudjEuUGxhY2UuQ29uc3VtZXJBbGVydBI1Cgttb3ZlZF9wbGFj",
+            "ZRhdIAEoCUIg+kEdChtwbGFjZXMuZ29vZ2xlYXBpcy5jb20vUGxhY2USFgoO",
+            "bW92ZWRfcGxhY2VfaWQYXiABKAkaXwoQQWRkcmVzc0NvbXBvbmVudBIRCgls",
+            "b25nX3RleHQYASABKAkSEgoKc2hvcnRfdGV4dBgCIAEoCRINCgV0eXBlcxgD",
+            "IAMoCRIVCg1sYW5ndWFnZV9jb2RlGAQgASgJGjYKCFBsdXNDb2RlEhMKC2ds",
+            "b2JhbF9jb2RlGAEgASgJEhUKDWNvbXBvdW5kX2NvZGUYAiABKAka/QcKDE9w",
+            "ZW5pbmdIb3VycxIVCghvcGVuX25vdxgBIAEoCEgAiAEBEkEKB3BlcmlvZHMY",
+            "AiADKAsyMC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hv",
+            "dXJzLlBlcmlvZBIcChR3ZWVrZGF5X2Rlc2NyaXB0aW9ucxgDIAMoCRJaChRz",
+            "ZWNvbmRhcnlfaG91cnNfdHlwZRgEIAEoDjI8Lmdvb2dsZS5tYXBzLnBsYWNl",
+            "cy52MS5QbGFjZS5PcGVuaW5nSG91cnMuU2Vjb25kYXJ5SG91cnNUeXBlEkoK",
+            "DHNwZWNpYWxfZGF5cxgFIAMoCzI0Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
+            "bGFjZS5PcGVuaW5nSG91cnMuU3BlY2lhbERheRIyCg5uZXh0X29wZW5fdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMwoPbmV4dF9j",
+            "bG9zZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBqp",
+            "AgoGUGVyaW9kEkQKBG9wZW4YASABKAsyNi5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuUGxhY2UuT3BlbmluZ0hvdXJzLlBlcmlvZC5Qb2ludBJFCgVjbG9zZRgC",
+            "IAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91",
+            "cnMuUGVyaW9kLlBvaW50GpEBCgVQb2ludBIQCgNkYXkYASABKAVIAIgBARIR",
+            "CgRob3VyGAIgASgFSAGIAQESEwoGbWludXRlGAMgASgFSAKIAQESHwoEZGF0",
+            "ZRgGIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSEQoJdHJ1bmNhdGVkGAUgASgI",
+            "QgYKBF9kYXlCBwoFX2hvdXJCCQoHX21pbnV0ZRotCgpTcGVjaWFsRGF5Eh8K",
+            "BGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlIvsBChJTZWNvbmRhcnlI",
+            "b3Vyc1R5cGUSJAogU0VDT05EQVJZX0hPVVJTX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIRCg1EUklWRV9USFJPVUdIEAESDgoKSEFQUFlfSE9VUhACEgwKCERFTElW",
+            "RVJZEAMSCwoHVEFLRU9VVBAEEgsKB0tJVENIRU4QBRINCglCUkVBS0ZBU1QQ",
+            "BhIJCgVMVU5DSBAHEgoKBkRJTk5FUhAIEgoKBkJSVU5DSBAJEgoKBlBJQ0tV",
+            "UBAKEgoKBkFDQ0VTUxALEhAKDFNFTklPUl9IT1VSUxAMEhgKFE9OTElORV9T",
+            "RVJWSUNFX0hPVVJTEA1CCwoJX29wZW5fbm93GjUKC0F0dHJpYnV0aW9uEhAK",
+            "CHByb3ZpZGVyGAEgASgJEhQKDHByb3ZpZGVyX3VyaRgCIAEoCRrmAQoOUGF5",
+            "bWVudE9wdGlvbnMSIQoUYWNjZXB0c19jcmVkaXRfY2FyZHMYASABKAhIAIgB",
+            "ARIgChNhY2NlcHRzX2RlYml0X2NhcmRzGAIgASgISAGIAQESHgoRYWNjZXB0",
+            "c19jYXNoX29ubHkYAyABKAhIAogBARIYCgthY2NlcHRzX25mYxgEIAEoCEgD",
+            "iAEBQhcKFV9hY2NlcHRzX2NyZWRpdF9jYXJkc0IWChRfYWNjZXB0c19kZWJp",
+            "dF9jYXJkc0IUChJfYWNjZXB0c19jYXNoX29ubHlCDgoMX2FjY2VwdHNfbmZj",
+            "Go4DCg5QYXJraW5nT3B0aW9ucxIdChBmcmVlX3BhcmtpbmdfbG90GAEgASgI",
+            "SACIAQESHQoQcGFpZF9wYXJraW5nX2xvdBgCIAEoCEgBiAEBEiAKE2ZyZWVf",
+            "c3RyZWV0X3BhcmtpbmcYAyABKAhIAogBARIgChNwYWlkX3N0cmVldF9wYXJr",
+            "aW5nGAQgASgISAOIAQESGgoNdmFsZXRfcGFya2luZxgFIAEoCEgEiAEBEiAK",
+            "E2ZyZWVfZ2FyYWdlX3BhcmtpbmcYBiABKAhIBYgBARIgChNwYWlkX2dhcmFn",
+            "ZV9wYXJraW5nGAcgASgISAaIAQFCEwoRX2ZyZWVfcGFya2luZ19sb3RCEwoR",
+            "X3BhaWRfcGFya2luZ19sb3RCFgoUX2ZyZWVfc3RyZWV0X3BhcmtpbmdCFgoU",
+            "X3BhaWRfc3RyZWV0X3BhcmtpbmdCEAoOX3ZhbGV0X3BhcmtpbmdCFgoUX2Zy",
+            "ZWVfZ2FyYWdlX3BhcmtpbmdCFgoUX3BhaWRfZ2FyYWdlX3BhcmtpbmcaTAoO",
+            "U3ViRGVzdGluYXRpb24SLgoEbmFtZRgBIAEoCUIg+kEdChtwbGFjZXMuZ29v",
+            "Z2xlYXBpcy5jb20vUGxhY2USCgoCaWQYAiABKAka0gIKFEFjY2Vzc2liaWxp",
+            "dHlPcHRpb25zEioKHXdoZWVsY2hhaXJfYWNjZXNzaWJsZV9wYXJraW5nGAEg",
+            "ASgISACIAQESKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlGAIg",
+            "ASgISAGIAQESKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Jlc3Ryb29tGAMg",
+            "ASgISAKIAQESKgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3NlYXRpbmcYBCAB",
+            "KAhIA4gBAUIgCh5fd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmdCIQof",
+            "X3doZWVsY2hhaXJfYWNjZXNzaWJsZV9lbnRyYW5jZUIhCh9fd2hlZWxjaGFp",
+            "cl9hY2Nlc3NpYmxlX3Jlc3Ryb29tQiAKHl93aGVlbGNoYWlyX2FjY2Vzc2li",
+            "bGVfc2VhdGluZxqZAQoRR2VuZXJhdGl2ZVN1bW1hcnkSLAoIb3ZlcnZpZXcY",
+            "ASABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EiEKGW92ZXJ2aWV3",
+            "X2ZsYWdfY29udGVudF91cmkYBCABKAkSMwoPZGlzY2xvc3VyZV90ZXh0GAYg",
+            "ASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBpNCg9Db250YWluaW5n",
+            "UGxhY2USLgoEbmFtZRgBIAEoCUIg+kEdChtwbGFjZXMuZ29vZ2xlYXBpcy5j",
+            "b20vUGxhY2USCgoCaWQYAiABKAkagQEKD0dvb2dsZU1hcHNMaW5rcxIWCg5k",
+            "aXJlY3Rpb25zX3VyaRgBIAEoCRIRCglwbGFjZV91cmkYAiABKAkSGgoSd3Jp",
+            "dGVfYV9yZXZpZXdfdXJpGAMgASgJEhMKC3Jldmlld3NfdXJpGAQgASgJEhIK",
+            "CnBob3Rvc191cmkYBSABKAkanQEKDVJldmlld1N1bW1hcnkSKAoEdGV4dBgB",
+            "IAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSGAoQZmxhZ19jb250",
+            "ZW50X3VyaRgCIAEoCRIzCg9kaXNjbG9zdXJlX3RleHQYAyABKAsyGi5nb29n",
+            "bGUudHlwZS5Mb2NhbGl6ZWRUZXh0EhMKC3Jldmlld3NfdXJpGAQgASgJGsAC",
+            "ChZFdkNoYXJnZUFtZW5pdHlTdW1tYXJ5EjUKCG92ZXJ2aWV3GAEgASgLMiMu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLkNvbnRlbnRCbG9jaxIzCgZjb2ZmZWUY",
+            "AiABKAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVudEJsb2NrEjcK",
+            "CnJlc3RhdXJhbnQYAyABKAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29u",
+            "dGVudEJsb2NrEjIKBXN0b3JlGAQgASgLMiMuZ29vZ2xlLm1hcHMucGxhY2Vz",
+            "LnYxLkNvbnRlbnRCbG9jaxIYChBmbGFnX2NvbnRlbnRfdXJpGAUgASgJEjMK",
+            "D2Rpc2Nsb3N1cmVfdGV4dBgGIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXpl",
+            "ZFRleHQa1QEKE05laWdoYm9yaG9vZFN1bW1hcnkSNQoIb3ZlcnZpZXcYASAB",
+            "KAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVudEJsb2NrEjgKC2Rl",
+            "c2NyaXB0aW9uGAIgASgLMiMuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkNvbnRl",
+            "bnRCbG9jaxIYChBmbGFnX2NvbnRlbnRfdXJpGAMgASgJEjMKD2Rpc2Nsb3N1",
+            "cmVfdGV4dBgEIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQangIK",
+            "DUNvbnN1bWVyQWxlcnQSEAoIb3ZlcnZpZXcYASABKAkSQwoHZGV0YWlscxgC",
+            "IAEoCzIyLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5Db25zdW1lckFs",
+            "ZXJ0LkRldGFpbHMSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCRqeAQoHRGV0YWls",
+            "cxINCgV0aXRsZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRJLCgphYm91",
+            "dF9saW5rGAMgASgLMjcuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkNv",
+            "bnN1bWVyQWxlcnQuRGV0YWlscy5MaW5rGiIKBExpbmsSDQoFdGl0bGUYASAB",
+            "KAkSCwoDdXJpGAIgASgJInIKDkJ1c2luZXNzU3RhdHVzEh8KG0JVU0lORVNT",
+            "X1NUQVRVU19VTlNQRUNJRklFRBAAEg8KC09QRVJBVElPTkFMEAESFgoSQ0xP",
+            "U0VEX1RFTVBPUkFSSUxZEAISFgoSQ0xPU0VEX1BFUk1BTkVOVExZEAM6QupB",
+            "PwobcGxhY2VzLmdvb2dsZWFwaXMuY29tL1BsYWNlEhFwbGFjZXMve3BsYWNl",
+            "X2lkfSoGcGxhY2VzMgVwbGFjZUIVChNfdXRjX29mZnNldF9taW51dGVzQhQK",
+            "El91c2VyX3JhdGluZ19jb3VudEIKCghfdGFrZW91dEILCglfZGVsaXZlcnlC",
+            "CgoIX2RpbmVfaW5CEgoQX2N1cmJzaWRlX3BpY2t1cEINCgtfcmVzZXJ2YWJs",
+            "ZUITChFfc2VydmVzX2JyZWFrZmFzdEIPCg1fc2VydmVzX2x1bmNoQhAKDl9z",
+            "ZXJ2ZXNfZGlubmVyQg4KDF9zZXJ2ZXNfYmVlckIOCgxfc2VydmVzX3dpbmVC",
+            "EAoOX3NlcnZlc19icnVuY2hCGQoXX3NlcnZlc192ZWdldGFyaWFuX2Zvb2RC",
+            "EgoQX291dGRvb3Jfc2VhdGluZ0INCgtfbGl2ZV9tdXNpY0IUChJfbWVudV9m",
+            "b3JfY2hpbGRyZW5CEwoRX3NlcnZlc19jb2NrdGFpbHNCEQoPX3NlcnZlc19k",
+            "ZXNzZXJ0QhAKDl9zZXJ2ZXNfY29mZmVlQhQKEl9nb29kX2Zvcl9jaGlsZHJl",
+            "bkIOCgxfYWxsb3dzX2RvZ3NCCwoJX3Jlc3Ryb29tQhIKEF9nb29kX2Zvcl9n",
+            "cm91cHNCGwoZX2dvb2RfZm9yX3dhdGNoaW5nX3Nwb3J0c0IYChZfYWNjZXNz",
+            "aWJpbGl0eV9vcHRpb25zQh0KG19wdXJlX3NlcnZpY2VfYXJlYV9idXNpbmVz",
+            "cyqxAQoKUHJpY2VMZXZlbBIbChdQUklDRV9MRVZFTF9VTlNQRUNJRklFRBAA",
+            "EhQKEFBSSUNFX0xFVkVMX0ZSRUUQARIbChdQUklDRV9MRVZFTF9JTkVYUEVO",
+            "U0lWRRACEhgKFFBSSUNFX0xFVkVMX01PREVSQVRFEAMSGQoVUFJJQ0VfTEVW",
+            "RUxfRVhQRU5TSVZFEAQSHgoaUFJJQ0VfTEVWRUxfVkVSWV9FWFBFTlNJVkUQ",
+            "BUKbAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIKUGxhY2VQcm90b1AB",
+            "WjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNl",
+            "c3BiO3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYx",
+            "ygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.AddressDescriptorReflection.Descriptor, global::Google.Maps.Places.V1.ContentBlockReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.PriceRangeReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.PriceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "PostalAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "TimeZone", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "ContainingPlaces", "PureServiceAreaBusiness", "AddressDescriptor", "PriceRange", "ReviewSummary", "EvChargeAmenitySummary", "NeighborhoodSummary", "ConsumerAlert", "MovedPlace", "MovedPlaceId" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions", "PureServiceAreaBusiness" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "GoogleMapsTypeLabel", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "PostalAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "TimeZone", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "ContainingPlaces", "PureServiceAreaBusiness", "AddressDescriptor", "GoogleMapsLinks", "PriceRange", "ReviewSummary", "EvChargeAmenitySummary", "NeighborhoodSummary", "ConsumerAlert", "MovedPlace", "MovedPlaceId" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions", "PureServiceAreaBusiness" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PlusCode), global::Google.Maps.Places.V1.Place.Types.PlusCode.Parser, new[]{ "GlobalCode", "CompoundCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays", "NextOpenTime", "NextCloseTime" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser, new[]{ "Date" }, null, null, null, null)}),
@@ -225,6 +231,7 @@ namespace Google.Maps.Places.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.GenerativeSummary), global::Google.Maps.Places.V1.Place.Types.GenerativeSummary.Parser, new[]{ "Overview", "OverviewFlagContentUri", "DisclosureText" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ContainingPlace), global::Google.Maps.Places.V1.Place.Types.ContainingPlace.Parser, new[]{ "Name", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks), global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks.Parser, new[]{ "DirectionsUri", "PlaceUri", "WriteAReviewUri", "ReviewsUri", "PhotosUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ReviewSummary), global::Google.Maps.Places.V1.Place.Types.ReviewSummary.Parser, new[]{ "Text", "FlagContentUri", "DisclosureText", "ReviewsUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary), global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary.Parser, new[]{ "Overview", "Coffee", "Restaurant", "Store", "FlagContentUri", "DisclosureText" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary), global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary.Parser, new[]{ "Overview", "Description", "FlagContentUri", "DisclosureText" }, null, null, null, null),
@@ -314,6 +321,7 @@ namespace Google.Maps.Places.V1 {
       types_ = other.types_.Clone();
       primaryType_ = other.primaryType_;
       primaryTypeDisplayName_ = other.primaryTypeDisplayName_ != null ? other.primaryTypeDisplayName_.Clone() : null;
+      googleMapsTypeLabel_ = other.googleMapsTypeLabel_ != null ? other.googleMapsTypeLabel_.Clone() : null;
       nationalPhoneNumber_ = other.nationalPhoneNumber_;
       internationalPhoneNumber_ = other.internationalPhoneNumber_;
       formattedAddress_ = other.formattedAddress_;
@@ -375,6 +383,7 @@ namespace Google.Maps.Places.V1 {
       containingPlaces_ = other.containingPlaces_.Clone();
       pureServiceAreaBusiness_ = other.pureServiceAreaBusiness_;
       addressDescriptor_ = other.addressDescriptor_ != null ? other.addressDescriptor_.Clone() : null;
+      googleMapsLinks_ = other.googleMapsLinks_ != null ? other.googleMapsLinks_.Clone() : null;
       priceRange_ = other.priceRange_ != null ? other.priceRange_.Clone() : null;
       reviewSummary_ = other.reviewSummary_ != null ? other.reviewSummary_.Clone() : null;
       evChargeAmenitySummary_ = other.evChargeAmenitySummary_ != null ? other.evChargeAmenitySummary_.Clone() : null;
@@ -494,6 +503,25 @@ namespace Google.Maps.Places.V1 {
       get { return primaryTypeDisplayName_; }
       set {
         primaryTypeDisplayName_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "google_maps_type_label" field.</summary>
+    public const int GoogleMapsTypeLabelFieldNumber = 96;
+    private global::Google.Type.LocalizedText googleMapsTypeLabel_;
+    /// <summary>
+    /// The type label of the place on Google Maps, localized to the request
+    /// language if applicable, for example, "Restaurant", "Cafe", "Airport", etc.
+    /// The type label may be different from the primary type display name and may
+    /// not be a supported type in [Places API Place Types
+    /// table](https://developers.google.com/maps/documentation/places/web-service/place-types).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LocalizedText GoogleMapsTypeLabel {
+      get { return googleMapsTypeLabel_; }
+      set {
+        googleMapsTypeLabel_ = value;
       }
     }
 
@@ -1853,6 +1881,21 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "google_maps_links" field.</summary>
+    public const int GoogleMapsLinksFieldNumber = 85;
+    private global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks googleMapsLinks_;
+    /// <summary>
+    /// Links to trigger different Google Maps actions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks GoogleMapsLinks {
+      get { return googleMapsLinks_; }
+      set {
+        googleMapsLinks_ = value;
+      }
+    }
+
     /// <summary>Field number for the "price_range" field.</summary>
     public const int PriceRangeFieldNumber = 86;
     private global::Google.Maps.Places.V1.PriceRange priceRange_;
@@ -1987,6 +2030,7 @@ namespace Google.Maps.Places.V1 {
       if(!types_.Equals(other.types_)) return false;
       if (PrimaryType != other.PrimaryType) return false;
       if (!object.Equals(PrimaryTypeDisplayName, other.PrimaryTypeDisplayName)) return false;
+      if (!object.Equals(GoogleMapsTypeLabel, other.GoogleMapsTypeLabel)) return false;
       if (NationalPhoneNumber != other.NationalPhoneNumber) return false;
       if (InternationalPhoneNumber != other.InternationalPhoneNumber) return false;
       if (FormattedAddress != other.FormattedAddress) return false;
@@ -2048,6 +2092,7 @@ namespace Google.Maps.Places.V1 {
       if(!containingPlaces_.Equals(other.containingPlaces_)) return false;
       if (PureServiceAreaBusiness != other.PureServiceAreaBusiness) return false;
       if (!object.Equals(AddressDescriptor, other.AddressDescriptor)) return false;
+      if (!object.Equals(GoogleMapsLinks, other.GoogleMapsLinks)) return false;
       if (!object.Equals(PriceRange, other.PriceRange)) return false;
       if (!object.Equals(ReviewSummary, other.ReviewSummary)) return false;
       if (!object.Equals(EvChargeAmenitySummary, other.EvChargeAmenitySummary)) return false;
@@ -2068,6 +2113,7 @@ namespace Google.Maps.Places.V1 {
       hash ^= types_.GetHashCode();
       if (PrimaryType.Length != 0) hash ^= PrimaryType.GetHashCode();
       if (primaryTypeDisplayName_ != null) hash ^= PrimaryTypeDisplayName.GetHashCode();
+      if (googleMapsTypeLabel_ != null) hash ^= GoogleMapsTypeLabel.GetHashCode();
       if (NationalPhoneNumber.Length != 0) hash ^= NationalPhoneNumber.GetHashCode();
       if (InternationalPhoneNumber.Length != 0) hash ^= InternationalPhoneNumber.GetHashCode();
       if (FormattedAddress.Length != 0) hash ^= FormattedAddress.GetHashCode();
@@ -2129,6 +2175,7 @@ namespace Google.Maps.Places.V1 {
       hash ^= containingPlaces_.GetHashCode();
       if (HasPureServiceAreaBusiness) hash ^= PureServiceAreaBusiness.GetHashCode();
       if (addressDescriptor_ != null) hash ^= AddressDescriptor.GetHashCode();
+      if (googleMapsLinks_ != null) hash ^= GoogleMapsLinks.GetHashCode();
       if (priceRange_ != null) hash ^= PriceRange.GetHashCode();
       if (reviewSummary_ != null) hash ^= ReviewSummary.GetHashCode();
       if (evChargeAmenitySummary_ != null) hash ^= EvChargeAmenitySummary.GetHashCode();
@@ -2387,6 +2434,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(162, 5);
         output.WriteMessage(AddressDescriptor);
       }
+      if (googleMapsLinks_ != null) {
+        output.WriteRawTag(170, 5);
+        output.WriteMessage(GoogleMapsLinks);
+      }
       if (priceRange_ != null) {
         output.WriteRawTag(178, 5);
         output.WriteMessage(PriceRange);
@@ -2422,6 +2473,10 @@ namespace Google.Maps.Places.V1 {
       if (MovedPlaceId.Length != 0) {
         output.WriteRawTag(242, 5);
         output.WriteString(MovedPlaceId);
+      }
+      if (googleMapsTypeLabel_ != null) {
+        output.WriteRawTag(130, 6);
+        output.WriteMessage(GoogleMapsTypeLabel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2666,6 +2721,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(162, 5);
         output.WriteMessage(AddressDescriptor);
       }
+      if (googleMapsLinks_ != null) {
+        output.WriteRawTag(170, 5);
+        output.WriteMessage(GoogleMapsLinks);
+      }
       if (priceRange_ != null) {
         output.WriteRawTag(178, 5);
         output.WriteMessage(PriceRange);
@@ -2702,6 +2761,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(242, 5);
         output.WriteString(MovedPlaceId);
       }
+      if (googleMapsTypeLabel_ != null) {
+        output.WriteRawTag(130, 6);
+        output.WriteMessage(GoogleMapsTypeLabel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2727,6 +2790,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (primaryTypeDisplayName_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrimaryTypeDisplayName);
+      }
+      if (googleMapsTypeLabel_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GoogleMapsTypeLabel);
       }
       if (NationalPhoneNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NationalPhoneNumber);
@@ -2895,6 +2961,9 @@ namespace Google.Maps.Places.V1 {
       if (addressDescriptor_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AddressDescriptor);
       }
+      if (googleMapsLinks_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GoogleMapsLinks);
+      }
       if (priceRange_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PriceRange);
       }
@@ -2949,6 +3018,12 @@ namespace Google.Maps.Places.V1 {
           PrimaryTypeDisplayName = new global::Google.Type.LocalizedText();
         }
         PrimaryTypeDisplayName.MergeFrom(other.PrimaryTypeDisplayName);
+      }
+      if (other.googleMapsTypeLabel_ != null) {
+        if (googleMapsTypeLabel_ == null) {
+          GoogleMapsTypeLabel = new global::Google.Type.LocalizedText();
+        }
+        GoogleMapsTypeLabel.MergeFrom(other.GoogleMapsTypeLabel);
       }
       if (other.NationalPhoneNumber.Length != 0) {
         NationalPhoneNumber = other.NationalPhoneNumber;
@@ -3161,6 +3236,12 @@ namespace Google.Maps.Places.V1 {
           AddressDescriptor = new global::Google.Maps.Places.V1.AddressDescriptor();
         }
         AddressDescriptor.MergeFrom(other.AddressDescriptor);
+      }
+      if (other.googleMapsLinks_ != null) {
+        if (googleMapsLinks_ == null) {
+          GoogleMapsLinks = new global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks();
+        }
+        GoogleMapsLinks.MergeFrom(other.GoogleMapsLinks);
       }
       if (other.priceRange_ != null) {
         if (priceRange_ == null) {
@@ -3518,6 +3599,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(AddressDescriptor);
             break;
           }
+          case 682: {
+            if (googleMapsLinks_ == null) {
+              GoogleMapsLinks = new global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks();
+            }
+            input.ReadMessage(GoogleMapsLinks);
+            break;
+          }
           case 690: {
             if (priceRange_ == null) {
               PriceRange = new global::Google.Maps.Places.V1.PriceRange();
@@ -3573,6 +3661,13 @@ namespace Google.Maps.Places.V1 {
           }
           case 754: {
             MovedPlaceId = input.ReadString();
+            break;
+          }
+          case 770: {
+            if (googleMapsTypeLabel_ == null) {
+              GoogleMapsTypeLabel = new global::Google.Type.LocalizedText();
+            }
+            input.ReadMessage(GoogleMapsTypeLabel);
             break;
           }
         }
@@ -3895,6 +3990,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(AddressDescriptor);
             break;
           }
+          case 682: {
+            if (googleMapsLinks_ == null) {
+              GoogleMapsLinks = new global::Google.Maps.Places.V1.Place.Types.GoogleMapsLinks();
+            }
+            input.ReadMessage(GoogleMapsLinks);
+            break;
+          }
           case 690: {
             if (priceRange_ == null) {
               PriceRange = new global::Google.Maps.Places.V1.PriceRange();
@@ -3950,6 +4052,13 @@ namespace Google.Maps.Places.V1 {
           }
           case 754: {
             MovedPlaceId = input.ReadString();
+            break;
+          }
+          case 770: {
+            if (googleMapsTypeLabel_ == null) {
+              GoogleMapsTypeLabel = new global::Google.Type.LocalizedText();
+            }
+            input.ReadMessage(GoogleMapsTypeLabel);
             break;
           }
         }
@@ -8275,6 +8384,363 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
+      /// Links to trigger different Google Maps actions.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GoogleMapsLinks : pb::IMessage<GoogleMapsLinks>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GoogleMapsLinks> _parser = new pb::MessageParser<GoogleMapsLinks>(() => new GoogleMapsLinks());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GoogleMapsLinks> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GoogleMapsLinks() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GoogleMapsLinks(GoogleMapsLinks other) : this() {
+          directionsUri_ = other.directionsUri_;
+          placeUri_ = other.placeUri_;
+          writeAReviewUri_ = other.writeAReviewUri_;
+          reviewsUri_ = other.reviewsUri_;
+          photosUri_ = other.photosUri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GoogleMapsLinks Clone() {
+          return new GoogleMapsLinks(this);
+        }
+
+        /// <summary>Field number for the "directions_uri" field.</summary>
+        public const int DirectionsUriFieldNumber = 1;
+        private string directionsUri_ = "";
+        /// <summary>
+        /// A link to show the directions to the place. The link only populates the
+        /// destination location and uses the default travel mode `DRIVE`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DirectionsUri {
+          get { return directionsUri_; }
+          set {
+            directionsUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "place_uri" field.</summary>
+        public const int PlaceUriFieldNumber = 2;
+        private string placeUri_ = "";
+        /// <summary>
+        /// A link to show this place.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PlaceUri {
+          get { return placeUri_; }
+          set {
+            placeUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "write_a_review_uri" field.</summary>
+        public const int WriteAReviewUriFieldNumber = 3;
+        private string writeAReviewUri_ = "";
+        /// <summary>
+        /// A link to write a review for this place on Google Maps.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string WriteAReviewUri {
+          get { return writeAReviewUri_; }
+          set {
+            writeAReviewUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "reviews_uri" field.</summary>
+        public const int ReviewsUriFieldNumber = 4;
+        private string reviewsUri_ = "";
+        /// <summary>
+        /// A link to show reviews of this place on Google Maps.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ReviewsUri {
+          get { return reviewsUri_; }
+          set {
+            reviewsUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "photos_uri" field.</summary>
+        public const int PhotosUriFieldNumber = 5;
+        private string photosUri_ = "";
+        /// <summary>
+        /// A link to show photos of this place on Google Maps.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PhotosUri {
+          get { return photosUri_; }
+          set {
+            photosUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GoogleMapsLinks);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GoogleMapsLinks other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DirectionsUri != other.DirectionsUri) return false;
+          if (PlaceUri != other.PlaceUri) return false;
+          if (WriteAReviewUri != other.WriteAReviewUri) return false;
+          if (ReviewsUri != other.ReviewsUri) return false;
+          if (PhotosUri != other.PhotosUri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DirectionsUri.Length != 0) hash ^= DirectionsUri.GetHashCode();
+          if (PlaceUri.Length != 0) hash ^= PlaceUri.GetHashCode();
+          if (WriteAReviewUri.Length != 0) hash ^= WriteAReviewUri.GetHashCode();
+          if (ReviewsUri.Length != 0) hash ^= ReviewsUri.GetHashCode();
+          if (PhotosUri.Length != 0) hash ^= PhotosUri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DirectionsUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DirectionsUri);
+          }
+          if (PlaceUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PlaceUri);
+          }
+          if (WriteAReviewUri.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(WriteAReviewUri);
+          }
+          if (ReviewsUri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ReviewsUri);
+          }
+          if (PhotosUri.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PhotosUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DirectionsUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DirectionsUri);
+          }
+          if (PlaceUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PlaceUri);
+          }
+          if (WriteAReviewUri.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(WriteAReviewUri);
+          }
+          if (ReviewsUri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ReviewsUri);
+          }
+          if (PhotosUri.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PhotosUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DirectionsUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DirectionsUri);
+          }
+          if (PlaceUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceUri);
+          }
+          if (WriteAReviewUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(WriteAReviewUri);
+          }
+          if (ReviewsUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ReviewsUri);
+          }
+          if (PhotosUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PhotosUri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GoogleMapsLinks other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DirectionsUri.Length != 0) {
+            DirectionsUri = other.DirectionsUri;
+          }
+          if (other.PlaceUri.Length != 0) {
+            PlaceUri = other.PlaceUri;
+          }
+          if (other.WriteAReviewUri.Length != 0) {
+            WriteAReviewUri = other.WriteAReviewUri;
+          }
+          if (other.ReviewsUri.Length != 0) {
+            ReviewsUri = other.ReviewsUri;
+          }
+          if (other.PhotosUri.Length != 0) {
+            PhotosUri = other.PhotosUri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                DirectionsUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                PlaceUri = input.ReadString();
+                break;
+              }
+              case 26: {
+                WriteAReviewUri = input.ReadString();
+                break;
+              }
+              case 34: {
+                ReviewsUri = input.ReadString();
+                break;
+              }
+              case 42: {
+                PhotosUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DirectionsUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                PlaceUri = input.ReadString();
+                break;
+              }
+              case 26: {
+                WriteAReviewUri = input.ReadString();
+                break;
+              }
+              case 34: {
+                ReviewsUri = input.ReadString();
+                break;
+              }
+              case 42: {
+                PhotosUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// AI-generated summary of the place using user reviews.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -8292,7 +8758,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[10]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8630,7 +9096,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[11]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[12]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9074,7 +9540,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[12]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[13]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9420,7 +9886,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[13]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[14]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
