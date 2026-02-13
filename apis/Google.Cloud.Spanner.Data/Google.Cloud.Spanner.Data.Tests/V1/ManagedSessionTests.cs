@@ -269,6 +269,25 @@ public class ManagedSessionTests
     }
 
     [Fact]
+    public async Task BeginTransactionAsync_AcquiresFreshSession()
+    {
+        var clock = new FakeClock(new DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc));
+        var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger, clock);
+
+        var options = ManagedSessionOptions.Create(SampleDatabaseName, client);
+        var managedSession = new ManagedSession(options);
+
+        var session1 = new Session { Name = "session1", CreateTime = clock.GetCurrentDateTimeUtc().ToTimestamp() };
+        client.Configure()
+            .CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>())
+            .Returns(Task.FromResult(session1));
+
+        await managedSession.BeginTransactionAsync(new TransactionOptions(), false, false, CancellationToken.None);
+
+        await client.Received(1).CreateSessionAsync(Arg.Any<CreateSessionRequest>(), Arg.Any<CallSettings>());
+    }
+
+    [Fact]
     public async Task BeginTransactionAsync_ConcurrentCalls()
     {
         var clock = new FakeClock(new DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc));
