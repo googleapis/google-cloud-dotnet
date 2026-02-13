@@ -299,6 +299,96 @@ public class ManagedTransactionTests
     }
 
     [Fact]
+    public async Task FreshAfterAbort_Success_Inlined()
+    {
+        var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        var sessionOptions = ManagedSessionOptions.Create(s_databaseName, client);
+        var transaction = ManagedTransaction.FromTransactionOptions(sessionOptions, s_sampleSession, s_readWriteOptions, false, false);
+
+        // Establish a transaction ID first
+        client.Configure()
+            .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+            .Returns(
+                Task.FromResult(new ResultSet { Metadata = new ResultSetMetadata { Transaction = new Transaction { Id = s_transactionId } } }),
+                Task.FromResult(new ResultSet { Metadata = new ResultSetMetadata { Transaction = new Transaction { Id = ByteString.CopyFromUtf8("new-id") } } }));
+        await transaction.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
+
+        var freshTransaction = transaction.FreshAfterAbort();
+
+        // The first command on the fresh transaction should attempt inlining and include the previous transaction ID
+        await freshTransaction.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
+
+        Received.InOrder(() =>
+        {
+            client.ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(req => Assert.Null(req.Transaction.Begin.ReadWrite.MultiplexedSessionPreviousTransactionId)),
+                Arg.Any<CallSettings>());
+            client.ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(req => Assert.Equal(s_transactionId, req.Transaction.Begin.ReadWrite.MultiplexedSessionPreviousTransactionId)),
+                Arg.Any<CallSettings>());
+        });
+    }
+
+    [Fact]
+    public async Task FreshAfterAbort_Success_Explicit()
+    {
+        var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        var sessionOptions = ManagedSessionOptions.Create(s_databaseName, client);
+        var transaction = ManagedTransaction.FromTransactionOptions(sessionOptions, s_sampleSession, s_readWriteOptions, false, false);
+
+        // Establish a transaction ID first
+        client.Configure()
+            .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+            .Returns(Task.FromResult(new ResultSet { Metadata = new ResultSetMetadata { Transaction = new Transaction { Id = s_transactionId } } }));
+        await transaction.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
+
+        var freshTransaction = transaction.FreshAfterAbort();
+
+        Assert.NotSame(transaction, freshTransaction);
+        Assert.Null(freshTransaction.TransactionId);
+        Assert.Equal(s_sampleSessionName, freshTransaction.SessionName);
+
+        // Successful request on the fresh transaction should include the previous transaction ID in the BeginTransactionRequest
+        client.Configure()
+            .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
+            .Returns(Task.FromResult(new Transaction { Id = ByteString.CopyFromUtf8("new-transaction") }));
+        client.Configure()
+            .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+            .Returns(Task.FromResult(new ResultSet()));
+
+        await freshTransaction.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
+
+        await client.Received(1).BeginTransactionAsync(
+            Arg.Do<BeginTransactionRequest>(req => Assert.Equal(s_transactionId, req.Options.ReadWrite.MultiplexedSessionPreviousTransactionId)),
+            Arg.Any<CallSettings>());
+    }
+
+    [Fact]
+    public void FreshAfterAbort_FailsForShared()
+    {
+        var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        var sharedTx = ManagedTransaction.FromTransaction(client, s_sampleSession, s_transactionId, s_readWriteOptions, null);
+
+        Assert.Throws<InvalidOperationException>(() => sharedTx.FreshAfterAbort());
+    }
+
+    [Fact]
+    public async Task FreshAfterAbort_FailsForNonReadWrite()
+    {
+        var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        var sessionOptions = ManagedSessionOptions.Create(s_databaseName, client);
+        var readOnlyTx = ManagedTransaction.FromTransactionOptions(sessionOptions, s_sampleSession, s_readOnlyOptions, false, false);
+
+        // Establish a transaction ID first
+        client.Configure()
+            .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+            .Returns(Task.FromResult(new ResultSet { Metadata = new ResultSetMetadata { Transaction = new Transaction { Id = s_transactionId } } }));
+        await readOnlyTx.ExecuteSqlAsync(new ExecuteSqlRequest(), s_callSettings);
+
+        Assert.Throws<InvalidOperationException>(() => readOnlyTx.FreshAfterAbort());
+    }
+
+    [Fact]
     public async Task ExecuteSqlAsync_UpdatesPrecommitToken()
     {
         var client = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
