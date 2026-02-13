@@ -2018,7 +2018,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void NackMessagesOnShutdown()
+        public void Shutdown_NackMessages()
         {
             var msgs = new[] { new[] {
                 ServerAction.Data(TimeSpan.Zero, ["msg0"]),
@@ -2049,7 +2049,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     // Wait for "msg0" and "msg2" to start being handled. "msg1" will also be handled, but not hold onto
                     // flow control, releasing it so "msg2" can begin being handled.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
-                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs);
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs, strict: true);
 
                     // Stop the subscriber. This should ensure pulled messages that haven't entered the user handler yet
                     // will be NAck'ed. Specifically for messages already in flow control, they will have to wait for pending
@@ -2058,8 +2058,248 @@ namespace Google.Cloud.PubSub.V1.Tests
 
                     // Verify that "msg0", "msg1" and "msg2" completed handling normally, while the rest were
                     // automatically Nacked during shutdown.
-                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, fake.Subscribers[0].Acks.Select(x => x.Id));
-                    Assert.Equivalent(new [] {"msg3", "msg4", "msg5"}, fake.Subscribers[0].Nacks.Select(x => x.Id));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                    Assert.Equivalent(new [] {"msg3", "msg4", "msg5"}, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopNackImmediately_Success()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            } };
+            // Set flowMaxElements to 2 to ensure that "msg0" and "msg2" block flow control preventing
+            // "msg3","msg4","msg5" from being processed.
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        handledMsgs.Locked(() => handledMsgs.Add(data));
+                        if (data == "msg1" || data == "msg2")
+                        {
+                            // Delay handling so that StopAsync is called while the rest
+                            // are still pulled but waiting for a flow control slot.
+                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(30), ct));
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    // Wait for "msg0", "msg1" and "msg2" to start being handled. "msg0" will not hold onto flow control,
+                    // releasing it so "msg2" can begin being handled.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs, strict: true);
+
+                    // Stop the subscriber with WaitForProcessing. This should continue processing messages until the timeout
+                    // is reached. Since the timeout (20s) is less than the grace period (30s), it will switch to NackImmediately
+                    // effectively immediately, Nacking pending messages.
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(60)));
+
+                    // Verify that "msg0", "msg1" and "msg2" completed handling normally, while "msg3" was
+                    // automatically Nacked during shutdown due to timeout.
+                    Assert.Equivalent(new [] {"msg0"}, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                    Assert.Equivalent(new [] {"msg1", "msg2", "msg3", "msg4"}, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopWaitForProcessing_CompletesBeforeNack()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            } };
+            // Set flowMaxElements to 2 to ensure that "msg0" and "msg2" block flow control preventing
+            // "msg3","msg4","msg5" from being processed.
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        handledMsgs.Locked(() => handledMsgs.Add(data));
+                        if (data == "msg1" || data == "msg2")
+                        {
+                            // Delay handling so that StopAsync is called while the rest
+                            // are still pulled but waiting for a flow control slot.
+                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), ct));
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    // Wait for "msg0", "msg1" and "msg2" to start being handled. "msg0" will not hold onto flow control,
+                    // releasing it so "msg2" can begin being handled.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs, strict: true);
+
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(60)));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(60), CancellationToken.None));
+
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2", "msg3", "msg4"}, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                    Assert.Empty(fake.Subscribers[0].Nacks.Select(x => x.Id));
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopWaitForProcessing_NacksOnTimeout()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            } };
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var receivedMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        receivedMsgs.Locked(() => receivedMsgs.Add(data));
+                        if (data != "msg0")
+                        {
+                            // Delay handling so that StopAsync is called while the rest
+                            // are still pulled but waiting for a flow control slot.
+                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), ct));
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, receivedMsgs, strict: true);
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(45)));
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(40), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2", "msg3", "msg4"}, receivedMsgs, strict: true);
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                    Assert.Equivalent(new [] {"msg3", "msg4"}, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopWaitForProcessing_NacksWhenTimeoutLessThanMinimum()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            } };
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var receivedMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        receivedMsgs.Locked(() => receivedMsgs.Add(data));
+                        if (data != "msg0")
+                        {
+                            // Delay handling so that StopAsync is called while the rest
+                            // are still pulled but waiting for a flow control slot.
+                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(6), ct));
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, receivedMsgs, strict: true);
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(15)));
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), CancellationToken.None));
+                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, receivedMsgs, strict: true);
+                    Assert.Equivalent(new [] {"msg0"}, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                    Assert.Equivalent(new [] {"msg1", "msg2", "msg3", "msg4"}, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopNackImmediately_ExactlyOnceDelivery_AckWins()
+        {
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Inf()
+            } };
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10), isExactlyOnceDelivery: true))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        handledMsgs.Locked(() => handledMsgs.Add(data));
+                        // Delay handling so that StopAsync is called while the handler is running
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    // Wait for start
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    Assert.Single(handledMsgs);
+
+                    // Stop NackImmediately.
+                    var stopTask = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(60));
+
+                    // Advance time to allow handler to complete (at T+10s).
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), CancellationToken.None));
+                    
+                    // msg0 should be in Acks because it is Exactly-Once Delivery.
+                    Assert.Contains("msg0", fake.Subscribers[0].Acks.Select(x => x.Id));
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_Stop_ZeroTimeout_NoWaits()
+        {
+             var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Inf()
+            } };
+            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var data = msg.Data.ToStringUtf8();
+                        handledMsgs.Locked(() => handledMsgs.Add(data));
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                        return SubscriberClient.Reply.Ack;
+                    });
+
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    
+                    // Stop with Zero timeout
+                    var stopTask = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.Zero);
+                    
+                    // It should return effectively immediately (async), not waiting for the 10s handler.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(2), CancellationToken.None));
+                    Assert.True(stopTask.IsCompleted);
                 });
             }
         }

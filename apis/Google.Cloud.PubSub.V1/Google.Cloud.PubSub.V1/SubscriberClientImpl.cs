@@ -87,10 +87,15 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private readonly FlowControlSettings _flowControlSettings;
     private readonly bool _useLegacyFlowControl;
     private readonly TimeSpan _disposeTimeout;
+    private readonly TimeSpan _defaultShutdownTime = TimeSpan.FromHours(1);
+    private readonly TimeSpan _nackGracePeriod = TimeSpan.FromSeconds(30);
+    private bool _isStopInitiated => _globalWaitForProcessingCts.IsCancellationRequested || _globalSoftStopCts.IsCancellationRequested;
 
     private TaskCompletionSource<int> _mainTcs;
     private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
     private CancellationTokenSource _globalHardStopCts;
+    private CancellationTokenSource _globalWaitForProcessingCts;
+    private CancellationTokenSource _globalNackImmediatelyCts;
 
     // This property only exists for testing.
     // This is the delay between obtaining a lease on a message and then further extending the lease on that message
@@ -122,6 +127,11 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
             _mainTcs = new TaskCompletionSource<int>();
             _globalSoftStopCts = new CancellationTokenSource();
             _globalHardStopCts = new CancellationTokenSource();
+            _globalNackImmediatelyCts = new CancellationTokenSource();
+            _globalWaitForProcessingCts = new CancellationTokenSource();
+
+            _globalSoftStopCts.Token.Register(() => _globalWaitForProcessingCts.Cancel());
+            _globalNackImmediatelyCts.Token.Register(() => _globalWaitForProcessingCts.Cancel());
         }
         var registeredTasks = new HashSet<Task>();
         Action<Task> registerTask = task =>
@@ -203,7 +213,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         lock (_lock)
         {
             // Note: If multiple stop requests are made, only the first cancellation token is observed.
-            if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
+            if (_mainTcs is not null && _isStopInitiated)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
                 return _mainTcs.Task;
@@ -218,5 +228,70 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _taskHelper.Run(async () =>
             await _taskHelper.ConfigureAwaitWithFinally(() => _mainTcs.Task, () => registration.Dispose()));
         return _mainTcs.Task;
+    }
+
+    /// <inheritdoc />
+    public override Task StopAsync(SubscriberShutdownSetting shutdownSetting, TimeSpan? timeout = null)
+    {
+        lock (_lock)
+        {
+            GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
+            // Only the first call to StopAsync is observed
+            if (_isStopInitiated)
+            {
+                // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
+                return _mainTcs.Task;
+            }
+            _globalWaitForProcessingCts.Cancel();
+        }
+
+        TimeSpan shutdownTimeout = timeout ?? _defaultShutdownTime;
+
+        if (shutdownTimeout <= TimeSpan.Zero)
+        {
+            Logger?.LogWarning("Shutdown timeout is 0! Stopping {Client} immediately; work may be dropped.", nameof(SubscriberClient));
+        }
+
+        CancelAfterDelay(_globalNackImmediatelyCts, CalculateNackDelay());
+        CancelAfterDelay(_globalHardStopCts, shutdownTimeout);
+
+        return _mainTcs.Task;
+
+        void CancelAfterDelay(CancellationTokenSource cts, TimeSpan delay)
+        {
+            _taskHelper.Run(async () =>
+            {
+                try
+                {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(delay, CancellationToken.None));
+                    cts.Cancel();
+                }
+                catch (Exception e)
+                {
+                    Logger?.LogDebug(e, "Error during scheduled cancellation.");
+                }
+            });
+        }
+
+        // Helper to calculate time remaining before we must start Nacking messages
+        TimeSpan CalculateNackDelay()
+        {
+            switch (shutdownSetting)
+            {
+                case SubscriberShutdownSetting.NackImmediately:
+                    return TimeSpan.Zero;
+                case SubscriberShutdownSetting.WaitForProcessing:
+                    TimeSpan delay = shutdownTimeout > _nackGracePeriod ? shutdownTimeout - _nackGracePeriod : TimeSpan.Zero;
+
+                    if (delay == TimeSpan.Zero && shutdownTimeout > TimeSpan.Zero)
+                    {
+                        Logger?.LogWarning("Shutdown timeout ({Timeout}) <= GracePeriod ({GracePeriod}). Nacking immediately.",
+                            shutdownTimeout, _nackGracePeriod);
+                    }
+                    return delay;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(shutdownSetting), shutdownSetting, null);
+            }
+        }
     }
 }
