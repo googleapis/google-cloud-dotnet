@@ -1896,6 +1896,498 @@ namespace Google.Cloud.Dataform.V1Beta1
         public static bool operator !=(ConfigName a, ConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Folder</c> resource.</summary>
+    public sealed partial class FolderName : gax::IResourceName, sys::IEquatable<FolderName>
+    {
+        /// <summary>The possible contents of <see cref="FolderName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+            /// </summary>
+            ProjectLocationFolder = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationFolder = new gax::PathTemplate("projects/{project}/locations/{location}/folders/{folder}");
+
+        /// <summary>Creates a <see cref="FolderName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="FolderName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static FolderName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FolderName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="FolderName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FolderName"/> constructed from the provided ids.</returns>
+        public static FolderName FromProjectLocationFolder(string projectId, string locationId, string folderId) =>
+            new FolderName(ResourceNameType.ProjectLocationFolder, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string folderId) =>
+            FormatProjectLocationFolder(projectId, locationId, folderId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>.
+        /// </returns>
+        public static string FormatProjectLocationFolder(string projectId, string locationId, string folderId) =>
+            s_projectLocationFolder.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="FolderName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/folders/{folder}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="folderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderName"/> if successful.</returns>
+        public static FolderName Parse(string folderName) => Parse(folderName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FolderName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/folders/{folder}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="folderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FolderName"/> if successful.</returns>
+        public static FolderName Parse(string folderName, bool allowUnparsed) =>
+            TryParse(folderName, allowUnparsed, out FolderName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FolderName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/folders/{folder}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="folderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FolderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderName, out FolderName result) => TryParse(folderName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FolderName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/folders/{folder}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="folderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FolderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderName, bool allowUnparsed, out FolderName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationFolder.TryParseName(folderName, out resourceName))
+            {
+                result = FromProjectLocationFolder(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(folderName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private FolderName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="FolderName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/folders/{folder}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        public FolderName(string projectId, string locationId, string folderId) : this(ResourceNameType.ProjectLocationFolder, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationFolder: return s_projectLocationFolder.Expand(ProjectId, LocationId, FolderId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as FolderName);
+
+        /// <inheritdoc/>
+        public bool Equals(FolderName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(FolderName a, FolderName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(FolderName a, FolderName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>TeamFolder</c> resource.</summary>
+    public sealed partial class TeamFolderName : gax::IResourceName, sys::IEquatable<TeamFolderName>
+    {
+        /// <summary>The possible contents of <see cref="TeamFolderName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+            /// </summary>
+            ProjectLocationTeamFolder = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTeamFolder = new gax::PathTemplate("projects/{project}/locations/{location}/teamFolders/{team_folder}");
+
+        /// <summary>Creates a <see cref="TeamFolderName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TeamFolderName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TeamFolderName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TeamFolderName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TeamFolderName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="teamFolderId">The <c>TeamFolder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TeamFolderName"/> constructed from the provided ids.</returns>
+        public static TeamFolderName FromProjectLocationTeamFolder(string projectId, string locationId, string teamFolderId) =>
+            new TeamFolderName(ResourceNameType.ProjectLocationTeamFolder, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), teamFolderId: gax::GaxPreconditions.CheckNotNullOrEmpty(teamFolderId, nameof(teamFolderId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TeamFolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="teamFolderId">The <c>TeamFolder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TeamFolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string teamFolderId) =>
+            FormatProjectLocationTeamFolder(projectId, locationId, teamFolderId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TeamFolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="teamFolderId">The <c>TeamFolder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TeamFolderName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTeamFolder(string projectId, string locationId, string teamFolderId) =>
+            s_projectLocationTeamFolder.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(teamFolderId, nameof(teamFolderId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="TeamFolderName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="teamFolderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TeamFolderName"/> if successful.</returns>
+        public static TeamFolderName Parse(string teamFolderName) => Parse(teamFolderName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TeamFolderName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="teamFolderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TeamFolderName"/> if successful.</returns>
+        public static TeamFolderName Parse(string teamFolderName, bool allowUnparsed) =>
+            TryParse(teamFolderName, allowUnparsed, out TeamFolderName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TeamFolderName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="teamFolderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TeamFolderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string teamFolderName, out TeamFolderName result) =>
+            TryParse(teamFolderName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TeamFolderName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="teamFolderName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TeamFolderName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string teamFolderName, bool allowUnparsed, out TeamFolderName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(teamFolderName, nameof(teamFolderName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTeamFolder.TryParseName(teamFolderName, out resourceName))
+            {
+                result = FromProjectLocationTeamFolder(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(teamFolderName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TeamFolderName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string teamFolderId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TeamFolderId = teamFolderId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TeamFolderName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/teamFolders/{team_folder}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="teamFolderId">The <c>TeamFolder</c> ID. Must not be <c>null</c> or empty.</param>
+        public TeamFolderName(string projectId, string locationId, string teamFolderId) : this(ResourceNameType.ProjectLocationTeamFolder, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), teamFolderId: gax::GaxPreconditions.CheckNotNullOrEmpty(teamFolderId, nameof(teamFolderId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TeamFolder</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string TeamFolderId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTeamFolder: return s_projectLocationTeamFolder.Expand(ProjectId, LocationId, TeamFolderId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TeamFolderName);
+
+        /// <inheritdoc/>
+        public bool Equals(TeamFolderName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TeamFolderName a, TeamFolderName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TeamFolderName a, TeamFolderName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>SecretVersion</c> resource.</summary>
     public sealed partial class SecretVersionName : gax::IResourceName, sys::IEquatable<SecretVersionName>
     {
@@ -3074,6 +3566,18 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
     }
 
+    public partial class MoveRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetRepositoryRequest
     {
         /// <summary>
@@ -3851,6 +4355,160 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Folder
+    {
+        /// <summary>
+        /// <see cref="gcdv::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MoveFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryFolderContentsRequest
+    {
+        /// <summary><see cref="FolderName"/>-typed view over the <see cref="Folder"/> resource name property.</summary>
+        public FolderName FolderAsFolderName
+        {
+            get => string.IsNullOrEmpty(Folder) ? null : FolderName.Parse(Folder, allowUnparsed: true);
+            set => Folder = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryUserRootContentsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TeamFolder
+    {
+        /// <summary>
+        /// <see cref="gcdv::TeamFolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TeamFolderName TeamFolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TeamFolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateTeamFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTeamFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TeamFolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TeamFolderName TeamFolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TeamFolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTeamFolderRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TeamFolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TeamFolderName TeamFolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TeamFolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryTeamFolderContentsRequest
+    {
+        /// <summary>
+        /// <see cref="TeamFolderName"/>-typed view over the <see cref="TeamFolder"/> resource name property.
+        /// </summary>
+        public TeamFolderName TeamFolderAsTeamFolderName
+        {
+            get => string.IsNullOrEmpty(TeamFolder) ? null : TeamFolderName.Parse(TeamFolder, allowUnparsed: true);
+            set => TeamFolder = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchTeamFoldersRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
         }
     }
 }

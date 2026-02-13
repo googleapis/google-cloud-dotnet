@@ -22,6 +22,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -49,11 +50,27 @@ namespace Google.Cloud.Dataform.V1Beta1
         private DataformSettings(DataformSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            GetTeamFolderSettings = existing.GetTeamFolderSettings;
+            CreateTeamFolderSettings = existing.CreateTeamFolderSettings;
+            UpdateTeamFolderSettings = existing.UpdateTeamFolderSettings;
+            DeleteTeamFolderSettings = existing.DeleteTeamFolderSettings;
+            QueryTeamFolderContentsSettings = existing.QueryTeamFolderContentsSettings;
+            SearchTeamFoldersSettings = existing.SearchTeamFoldersSettings;
+            GetFolderSettings = existing.GetFolderSettings;
+            CreateFolderSettings = existing.CreateFolderSettings;
+            UpdateFolderSettings = existing.UpdateFolderSettings;
+            DeleteFolderSettings = existing.DeleteFolderSettings;
+            QueryFolderContentsSettings = existing.QueryFolderContentsSettings;
+            QueryUserRootContentsSettings = existing.QueryUserRootContentsSettings;
+            MoveFolderSettings = existing.MoveFolderSettings;
+            MoveFolderOperationsSettings = existing.MoveFolderOperationsSettings.Clone();
             ListRepositoriesSettings = existing.ListRepositoriesSettings;
             GetRepositorySettings = existing.GetRepositorySettings;
             CreateRepositorySettings = existing.CreateRepositorySettings;
             UpdateRepositorySettings = existing.UpdateRepositorySettings;
             DeleteRepositorySettings = existing.DeleteRepositorySettings;
+            MoveRepositorySettings = existing.MoveRepositorySettings;
+            MoveRepositoryOperationsSettings = existing.MoveRepositoryOperationsSettings.Clone();
             CommitRepositoryChangesSettings = existing.CommitRepositoryChangesSettings;
             ReadRepositoryFileSettings = existing.ReadRepositoryFileSettings;
             QueryRepositoryDirectoryContentsSettings = existing.QueryRepositoryDirectoryContentsSettings;
@@ -103,12 +120,189 @@ namespace Google.Cloud.Dataform.V1Beta1
             QueryWorkflowInvocationActionsSettings = existing.QueryWorkflowInvocationActionsSettings;
             GetConfigSettings = existing.GetConfigSettings;
             UpdateConfigSettings = existing.UpdateConfigSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(DataformSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.GetTeamFolder</c> and <c>DataformClient.GetTeamFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTeamFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CreateTeamFolder</c> and <c>DataformClient.CreateTeamFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateTeamFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.UpdateTeamFolder</c> and <c>DataformClient.UpdateTeamFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTeamFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteTeamFolder</c> and <c>DataformClient.DeleteTeamFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTeamFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.QueryTeamFolderContents</c> and <c>DataformClient.QueryTeamFolderContentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryTeamFolderContentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.SearchTeamFolders</c> and <c>DataformClient.SearchTeamFoldersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchTeamFoldersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.GetFolder</c>
+        ///  and <c>DataformClient.GetFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.CreateFolder</c>
+        ///  and <c>DataformClient.CreateFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.UpdateFolder</c>
+        ///  and <c>DataformClient.UpdateFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.DeleteFolder</c>
+        ///  and <c>DataformClient.DeleteFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.QueryFolderContents</c> and <c>DataformClient.QueryFolderContentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryFolderContentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.QueryUserRootContents</c> and <c>DataformClient.QueryUserRootContentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryUserRootContentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.MoveFolder</c>
+        ///  and <c>DataformClient.MoveFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.MoveFolder</c> and
+        /// <c>DataformClient.MoveFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveFolderOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -169,6 +363,36 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRepositorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.MoveRepository</c> and <c>DataformClient.MoveRepositoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveRepositorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.MoveRepository</c> and
+        /// <c>DataformClient.MoveRepositoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveRepositoryOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -763,6 +987,42 @@ namespace Google.Cloud.Dataform.V1Beta1
         public gaxgrpc::CallSettings UpdateConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.GetIamPolicy</c>
+        ///  and <c>DataformClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.SetIamPolicy</c>
+        ///  and <c>DataformClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.TestIamPermissions</c> and <c>DataformClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -920,6 +1180,1570 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder GetTeamFolder(GetTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(GetTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(GetTeamFolderRequest request, st::CancellationToken cancellationToken) =>
+            GetTeamFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder GetTeamFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTeamFolder(new GetTeamFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTeamFolderAsync(new GetTeamFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTeamFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder GetTeamFolder(TeamFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTeamFolder(new GetTeamFolderRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(TeamFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTeamFolderAsync(new GetTeamFolderRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> GetTeamFolderAsync(TeamFolderName name, st::CancellationToken cancellationToken) =>
+            GetTeamFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder CreateTeamFolder(CreateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(CreateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(CreateTeamFolderRequest request, st::CancellationToken cancellationToken) =>
+            CreateTeamFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder CreateTeamFolder(string parent, TeamFolder teamFolder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTeamFolder(new CreateTeamFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(string parent, TeamFolder teamFolder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTeamFolderAsync(new CreateTeamFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(string parent, TeamFolder teamFolder, st::CancellationToken cancellationToken) =>
+            CreateTeamFolderAsync(parent, teamFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder CreateTeamFolder(gagr::LocationName parent, TeamFolder teamFolder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTeamFolder(new CreateTeamFolderRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(gagr::LocationName parent, TeamFolder teamFolder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTeamFolderAsync(new CreateTeamFolderRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the TeamFolder. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="teamFolder">
+        /// Required. The TeamFolder to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> CreateTeamFolderAsync(gagr::LocationName parent, TeamFolder teamFolder, st::CancellationToken cancellationToken) =>
+            CreateTeamFolderAsync(parent, teamFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder UpdateTeamFolder(UpdateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> UpdateTeamFolderAsync(UpdateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> UpdateTeamFolderAsync(UpdateTeamFolderRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTeamFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. The updated TeamFolder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TeamFolder UpdateTeamFolder(TeamFolder teamFolder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTeamFolder(new UpdateTeamFolderRequest
+            {
+                UpdateMask = updateMask,
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. The updated TeamFolder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> UpdateTeamFolderAsync(TeamFolder teamFolder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTeamFolderAsync(new UpdateTeamFolderRequest
+            {
+                UpdateMask = updateMask,
+                TeamFolder = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. The updated TeamFolder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TeamFolder> UpdateTeamFolderAsync(TeamFolder teamFolder, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTeamFolderAsync(teamFolder, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTeamFolder(DeleteTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(DeleteTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(DeleteTeamFolderRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTeamFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolder(new DeleteTeamFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderAsync(new DeleteTeamFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTeamFolder(TeamFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolder(new DeleteTeamFolderRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(TeamFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderAsync(new DeleteTeamFolderRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTeamFolderAsync(TeamFolderName name, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContents(QueryTeamFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of
+        /// <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContentsAsync(QueryTeamFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. Name of the team_folder whose contents to list.
+        /// Format: `projects/*/locations/*/teamFolders/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContents(string teamFolder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryTeamFolderContentsRequest request = new QueryTeamFolderContentsRequest
+            {
+                TeamFolder = gax::GaxPreconditions.CheckNotNullOrEmpty(teamFolder, nameof(teamFolder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryTeamFolderContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. Name of the team_folder whose contents to list.
+        /// Format: `projects/*/locations/*/teamFolders/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of
+        /// <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContentsAsync(string teamFolder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryTeamFolderContentsRequest request = new QueryTeamFolderContentsRequest
+            {
+                TeamFolder = gax::GaxPreconditions.CheckNotNullOrEmpty(teamFolder, nameof(teamFolder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryTeamFolderContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. Name of the team_folder whose contents to list.
+        /// Format: `projects/*/locations/*/teamFolders/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContents(TeamFolderName teamFolder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryTeamFolderContentsRequest request = new QueryTeamFolderContentsRequest
+            {
+                TeamFolderAsTeamFolderName = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryTeamFolderContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="teamFolder">
+        /// Required. Name of the team_folder whose contents to list.
+        /// Format: `projects/*/locations/*/teamFolders/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of
+        /// <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContentsAsync(TeamFolderName teamFolder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryTeamFolderContentsRequest request = new QueryTeamFolderContentsRequest
+            {
+                TeamFolderAsTeamFolderName = gax::GaxPreconditions.CheckNotNull(teamFolder, nameof(teamFolder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryTeamFolderContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns all TeamFolders in a given location that the caller has access to
+        /// and match the provided filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="SearchTeamFoldersResponse.Types.TeamFolderSearchResult"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult> SearchTeamFolders(SearchTeamFoldersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns all TeamFolders in a given location that the caller has access to
+        /// and match the provided filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SearchTeamFoldersResponse.Types.TeamFolderSearchResult"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult> SearchTeamFoldersAsync(SearchTeamFoldersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder GetFolder(GetFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(GetFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(GetFolderRequest request, st::CancellationToken cancellationToken) =>
+            GetFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder GetFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolder(new GetFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderAsync(new GetFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder GetFolder(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolder(new GetFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderAsync(new GetFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> GetFolderAsync(FolderName name, st::CancellationToken cancellationToken) =>
+            GetFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder CreateFolder(CreateFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(CreateFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(CreateFolderRequest request, st::CancellationToken cancellationToken) =>
+            CreateFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder CreateFolder(string parent, Folder folder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFolder(new CreateFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(string parent, Folder folder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFolderAsync(new CreateFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(string parent, Folder folder, st::CancellationToken cancellationToken) =>
+            CreateFolderAsync(parent, folder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder CreateFolder(gagr::LocationName parent, Folder folder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFolder(new CreateFolderRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(gagr::LocationName parent, Folder folder, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFolderAsync(new CreateFolderRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location in which to create the Folder. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="folder">
+        /// Required. The Folder to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> CreateFolderAsync(gagr::LocationName parent, Folder folder, st::CancellationToken cancellationToken) =>
+            CreateFolderAsync(parent, folder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder UpdateFolder(UpdateFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> UpdateFolderAsync(UpdateFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> UpdateFolderAsync(UpdateFolderRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. The updated Folder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields that can be updated, will be updated. A few fields cannot be
+        /// updated and will be ignored if specified in the update_mask (e.g.
+        /// parent_name, team_folder_name).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Folder UpdateFolder(Folder folder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFolder(new UpdateFolderRequest
+            {
+                UpdateMask = updateMask,
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. The updated Folder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields that can be updated, will be updated. A few fields cannot be
+        /// updated and will be ignored if specified in the update_mask (e.g.
+        /// parent_name, team_folder_name).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> UpdateFolderAsync(Folder folder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFolderAsync(new UpdateFolderRequest
+            {
+                UpdateMask = updateMask,
+                Folder = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. The updated Folder.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the Folder. If left unset,
+        /// all fields that can be updated, will be updated. A few fields cannot be
+        /// updated and will be ignored if specified in the update_mask (e.g.
+        /// parent_name, team_folder_name).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Folder> UpdateFolderAsync(Folder folder, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFolderAsync(folder, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFolder(DeleteFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(DeleteFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(DeleteFolderRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolder(new DeleteFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderAsync(new DeleteFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFolder(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolder(new DeleteFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(FolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderAsync(new DeleteFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFolderAsync(FolderName name, st::CancellationToken cancellationToken) =>
+            DeleteFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContents(QueryFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContentsAsync(QueryFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. Name of the folder whose contents to list.
+        /// Format: projects/*/locations/*/folders/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContents(string folder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryFolderContentsRequest request = new QueryFolderContentsRequest
+            {
+                Folder = gax::GaxPreconditions.CheckNotNullOrEmpty(folder, nameof(folder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryFolderContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. Name of the folder whose contents to list.
+        /// Format: projects/*/locations/*/folders/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContentsAsync(string folder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryFolderContentsRequest request = new QueryFolderContentsRequest
+            {
+                Folder = gax::GaxPreconditions.CheckNotNullOrEmpty(folder, nameof(folder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryFolderContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. Name of the folder whose contents to list.
+        /// Format: projects/*/locations/*/folders/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContents(FolderName folder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryFolderContentsRequest request = new QueryFolderContentsRequest
+            {
+                FolderAsFolderName = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryFolderContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="folder">
+        /// Required. Name of the folder whose contents to list.
+        /// Format: projects/*/locations/*/folders/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContentsAsync(FolderName folder, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryFolderContentsRequest request = new QueryFolderContentsRequest
+            {
+                FolderAsFolderName = gax::GaxPreconditions.CheckNotNull(folder, nameof(folder)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryFolderContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContents(QueryUserRootContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContentsAsync(QueryUserRootContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="location">
+        /// Required. Location of the user root folder whose contents to list.
+        /// Format: projects/*/locations/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContents(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryUserRootContentsRequest request = new QueryUserRootContentsRequest
+            {
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryUserRootContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="location">
+        /// Required. Location of the user root folder whose contents to list.
+        /// Format: projects/*/locations/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContentsAsync(string location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryUserRootContentsRequest request = new QueryUserRootContentsRequest
+            {
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryUserRootContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="location">
+        /// Required. Location of the user root folder whose contents to list.
+        /// Format: projects/*/locations/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContents(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryUserRootContentsRequest request = new QueryUserRootContentsRequest
+            {
+                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryUserRootContents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="location">
+        /// Required. Location of the user root folder whose contents to list.
+        /// Format: projects/*/locations/*
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContentsAsync(gagr::LocationName location, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryUserRootContentsRequest request = new QueryUserRootContentsRequest
+            {
+                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryUserRootContentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveFolderMetadata> MoveFolder(MoveFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(MoveFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(MoveFolderRequest request, st::CancellationToken cancellationToken) =>
+            MoveFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MoveFolder</c>.</summary>
+        public virtual lro::OperationsClient MoveFolderOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MoveFolder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveFolderMetadata> PollOnceMoveFolder(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, MoveFolderMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveFolderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MoveFolder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> PollOnceMoveFolderAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, MoveFolderMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveFolderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveFolderMetadata> MoveFolder(string name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveFolder(new MoveFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(string name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveFolderAsync(new MoveFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(string name, string destinationContainingFolder, st::CancellationToken cancellationToken) =>
+            MoveFolderAsync(name, destinationContainingFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveFolderMetadata> MoveFolder(FolderName name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveFolder(new MoveFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(FolderName name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveFolderAsync(new MoveFolderRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the Folder to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// Folder to. Can be in the format of: "" to move into the root User folder,
+        /// `projects/*/locations/*/folders/*`, `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(FolderName name, string destinationContainingFolder, st::CancellationToken cancellationToken) =>
+            MoveFolderAsync(name, destinationContainingFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -1573,6 +3397,177 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteRepositoryAsync(RepositoryName name, st::CancellationToken cancellationToken) =>
             DeleteRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveRepositoryMetadata> MoveRepository(MoveRepositoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(MoveRepositoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(MoveRepositoryRequest request, st::CancellationToken cancellationToken) =>
+            MoveRepositoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MoveRepository</c>.</summary>
+        public virtual lro::OperationsClient MoveRepositoryOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MoveRepository</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveRepositoryMetadata> PollOnceMoveRepository(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, MoveRepositoryMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveRepositoryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MoveRepository</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> PollOnceMoveRepositoryAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, MoveRepositoryMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveRepositoryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveRepositoryMetadata> MoveRepository(string name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveRepository(new MoveRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(string name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveRepositoryAsync(new MoveRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(string name, string destinationContainingFolder, st::CancellationToken cancellationToken) =>
+            MoveRepositoryAsync(name, destinationContainingFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, MoveRepositoryMetadata> MoveRepository(RepositoryName name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveRepository(new MoveRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(RepositoryName name, string destinationContainingFolder, gaxgrpc::CallSettings callSettings = null) =>
+            MoveRepositoryAsync(new MoveRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DestinationContainingFolder = destinationContainingFolder ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the repository to move.
+        /// </param>
+        /// <param name="destinationContainingFolder">
+        /// Optional. The name of the Folder, TeamFolder, or root location to move the
+        /// repository to. Can be in the format of: "" to move into the root User
+        /// folder, `projects/*/locations/*/folders/*`,
+        /// `projects/*/locations/*/teamFolders/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(RepositoryName name, string destinationContainingFolder, st::CancellationToken cancellationToken) =>
+            MoveRepositoryAsync(name, destinationContainingFolder, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Applies a Git commit to a Repository. The Repository must not have a value
@@ -5130,6 +7125,216 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Config> UpdateConfigAsync(Config config, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateConfigAsync(config, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a `NOT_FOUND` error.
+        /// 
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a `NOT_FOUND` error.
+        /// 
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a `NOT_FOUND` error.
+        /// 
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Dataform client wrapper implementation, for convenient use.</summary>
@@ -5139,6 +7344,32 @@ namespace Google.Cloud.Dataform.V1Beta1
     /// </remarks>
     public sealed partial class DataformClientImpl : DataformClient
     {
+        private readonly gaxgrpc::ApiCall<GetTeamFolderRequest, TeamFolder> _callGetTeamFolder;
+
+        private readonly gaxgrpc::ApiCall<CreateTeamFolderRequest, TeamFolder> _callCreateTeamFolder;
+
+        private readonly gaxgrpc::ApiCall<UpdateTeamFolderRequest, TeamFolder> _callUpdateTeamFolder;
+
+        private readonly gaxgrpc::ApiCall<DeleteTeamFolderRequest, wkt::Empty> _callDeleteTeamFolder;
+
+        private readonly gaxgrpc::ApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse> _callQueryTeamFolderContents;
+
+        private readonly gaxgrpc::ApiCall<SearchTeamFoldersRequest, SearchTeamFoldersResponse> _callSearchTeamFolders;
+
+        private readonly gaxgrpc::ApiCall<GetFolderRequest, Folder> _callGetFolder;
+
+        private readonly gaxgrpc::ApiCall<CreateFolderRequest, Folder> _callCreateFolder;
+
+        private readonly gaxgrpc::ApiCall<UpdateFolderRequest, Folder> _callUpdateFolder;
+
+        private readonly gaxgrpc::ApiCall<DeleteFolderRequest, wkt::Empty> _callDeleteFolder;
+
+        private readonly gaxgrpc::ApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse> _callQueryFolderContents;
+
+        private readonly gaxgrpc::ApiCall<QueryUserRootContentsRequest, QueryUserRootContentsResponse> _callQueryUserRootContents;
+
+        private readonly gaxgrpc::ApiCall<MoveFolderRequest, lro::Operation> _callMoveFolder;
+
         private readonly gaxgrpc::ApiCall<ListRepositoriesRequest, ListRepositoriesResponse> _callListRepositories;
 
         private readonly gaxgrpc::ApiCall<GetRepositoryRequest, Repository> _callGetRepository;
@@ -5148,6 +7379,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         private readonly gaxgrpc::ApiCall<UpdateRepositoryRequest, Repository> _callUpdateRepository;
 
         private readonly gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> _callDeleteRepository;
+
+        private readonly gaxgrpc::ApiCall<MoveRepositoryRequest, lro::Operation> _callMoveRepository;
 
         private readonly gaxgrpc::ApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse> _callCommitRepositoryChanges;
 
@@ -5247,6 +7480,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<UpdateConfigRequest, Config> _callUpdateConfig;
 
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
         /// <summary>
         /// Constructs a client wrapper for the Dataform service, with the specified gRPC client and settings.
         /// </summary>
@@ -5262,8 +7501,49 @@ namespace Google.Cloud.Dataform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            MoveFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveFolderOperationsSettings, logger);
+            MoveRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveRepositoryOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+            _callGetTeamFolder = clientHelper.BuildApiCall<GetTeamFolderRequest, TeamFolder>("GetTeamFolder", grpcClient.GetTeamFolderAsync, grpcClient.GetTeamFolder, effectiveSettings.GetTeamFolderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTeamFolder);
+            Modify_GetTeamFolderApiCall(ref _callGetTeamFolder);
+            _callCreateTeamFolder = clientHelper.BuildApiCall<CreateTeamFolderRequest, TeamFolder>("CreateTeamFolder", grpcClient.CreateTeamFolderAsync, grpcClient.CreateTeamFolder, effectiveSettings.CreateTeamFolderSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateTeamFolder);
+            Modify_CreateTeamFolderApiCall(ref _callCreateTeamFolder);
+            _callUpdateTeamFolder = clientHelper.BuildApiCall<UpdateTeamFolderRequest, TeamFolder>("UpdateTeamFolder", grpcClient.UpdateTeamFolderAsync, grpcClient.UpdateTeamFolder, effectiveSettings.UpdateTeamFolderSettings).WithGoogleRequestParam("team_folder.name", request => request.TeamFolder?.Name);
+            Modify_ApiCall(ref _callUpdateTeamFolder);
+            Modify_UpdateTeamFolderApiCall(ref _callUpdateTeamFolder);
+            _callDeleteTeamFolder = clientHelper.BuildApiCall<DeleteTeamFolderRequest, wkt::Empty>("DeleteTeamFolder", grpcClient.DeleteTeamFolderAsync, grpcClient.DeleteTeamFolder, effectiveSettings.DeleteTeamFolderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTeamFolder);
+            Modify_DeleteTeamFolderApiCall(ref _callDeleteTeamFolder);
+            _callQueryTeamFolderContents = clientHelper.BuildApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse>("QueryTeamFolderContents", grpcClient.QueryTeamFolderContentsAsync, grpcClient.QueryTeamFolderContents, effectiveSettings.QueryTeamFolderContentsSettings).WithGoogleRequestParam("team_folder", request => request.TeamFolder);
+            Modify_ApiCall(ref _callQueryTeamFolderContents);
+            Modify_QueryTeamFolderContentsApiCall(ref _callQueryTeamFolderContents);
+            _callSearchTeamFolders = clientHelper.BuildApiCall<SearchTeamFoldersRequest, SearchTeamFoldersResponse>("SearchTeamFolders", grpcClient.SearchTeamFoldersAsync, grpcClient.SearchTeamFolders, effectiveSettings.SearchTeamFoldersSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callSearchTeamFolders);
+            Modify_SearchTeamFoldersApiCall(ref _callSearchTeamFolders);
+            _callGetFolder = clientHelper.BuildApiCall<GetFolderRequest, Folder>("GetFolder", grpcClient.GetFolderAsync, grpcClient.GetFolder, effectiveSettings.GetFolderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFolder);
+            Modify_GetFolderApiCall(ref _callGetFolder);
+            _callCreateFolder = clientHelper.BuildApiCall<CreateFolderRequest, Folder>("CreateFolder", grpcClient.CreateFolderAsync, grpcClient.CreateFolder, effectiveSettings.CreateFolderSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateFolder);
+            Modify_CreateFolderApiCall(ref _callCreateFolder);
+            _callUpdateFolder = clientHelper.BuildApiCall<UpdateFolderRequest, Folder>("UpdateFolder", grpcClient.UpdateFolderAsync, grpcClient.UpdateFolder, effectiveSettings.UpdateFolderSettings).WithGoogleRequestParam("folder.name", request => request.Folder?.Name);
+            Modify_ApiCall(ref _callUpdateFolder);
+            Modify_UpdateFolderApiCall(ref _callUpdateFolder);
+            _callDeleteFolder = clientHelper.BuildApiCall<DeleteFolderRequest, wkt::Empty>("DeleteFolder", grpcClient.DeleteFolderAsync, grpcClient.DeleteFolder, effectiveSettings.DeleteFolderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFolder);
+            Modify_DeleteFolderApiCall(ref _callDeleteFolder);
+            _callQueryFolderContents = clientHelper.BuildApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse>("QueryFolderContents", grpcClient.QueryFolderContentsAsync, grpcClient.QueryFolderContents, effectiveSettings.QueryFolderContentsSettings).WithGoogleRequestParam("folder", request => request.Folder);
+            Modify_ApiCall(ref _callQueryFolderContents);
+            Modify_QueryFolderContentsApiCall(ref _callQueryFolderContents);
+            _callQueryUserRootContents = clientHelper.BuildApiCall<QueryUserRootContentsRequest, QueryUserRootContentsResponse>("QueryUserRootContents", grpcClient.QueryUserRootContentsAsync, grpcClient.QueryUserRootContents, effectiveSettings.QueryUserRootContentsSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callQueryUserRootContents);
+            Modify_QueryUserRootContentsApiCall(ref _callQueryUserRootContents);
+            _callMoveFolder = clientHelper.BuildApiCall<MoveFolderRequest, lro::Operation>("MoveFolder", grpcClient.MoveFolderAsync, grpcClient.MoveFolder, effectiveSettings.MoveFolderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMoveFolder);
+            Modify_MoveFolderApiCall(ref _callMoveFolder);
             _callListRepositories = clientHelper.BuildApiCall<ListRepositoriesRequest, ListRepositoriesResponse>("ListRepositories", grpcClient.ListRepositoriesAsync, grpcClient.ListRepositories, effectiveSettings.ListRepositoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRepositories);
             Modify_ListRepositoriesApiCall(ref _callListRepositories);
@@ -5279,6 +7559,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteRepository = clientHelper.BuildApiCall<DeleteRepositoryRequest, wkt::Empty>("DeleteRepository", grpcClient.DeleteRepositoryAsync, grpcClient.DeleteRepository, effectiveSettings.DeleteRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRepository);
             Modify_DeleteRepositoryApiCall(ref _callDeleteRepository);
+            _callMoveRepository = clientHelper.BuildApiCall<MoveRepositoryRequest, lro::Operation>("MoveRepository", grpcClient.MoveRepositoryAsync, grpcClient.MoveRepository, effectiveSettings.MoveRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMoveRepository);
+            Modify_MoveRepositoryApiCall(ref _callMoveRepository);
             _callCommitRepositoryChanges = clientHelper.BuildApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse>("CommitRepositoryChanges", grpcClient.CommitRepositoryChangesAsync, grpcClient.CommitRepositoryChanges, effectiveSettings.CommitRepositoryChangesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCommitRepositoryChanges);
             Modify_CommitRepositoryChangesApiCall(ref _callCommitRepositoryChanges);
@@ -5426,10 +7709,45 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callUpdateConfig = clientHelper.BuildApiCall<UpdateConfigRequest, Config>("UpdateConfig", grpcClient.UpdateConfigAsync, grpcClient.UpdateConfig, effectiveSettings.UpdateConfigSettings).WithGoogleRequestParam("config.name", request => request.Config?.Name);
             Modify_ApiCall(ref _callUpdateConfig);
             Modify_UpdateConfigApiCall(ref _callUpdateConfig);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_GetTeamFolderApiCall(ref gaxgrpc::ApiCall<GetTeamFolderRequest, TeamFolder> call);
+
+        partial void Modify_CreateTeamFolderApiCall(ref gaxgrpc::ApiCall<CreateTeamFolderRequest, TeamFolder> call);
+
+        partial void Modify_UpdateTeamFolderApiCall(ref gaxgrpc::ApiCall<UpdateTeamFolderRequest, TeamFolder> call);
+
+        partial void Modify_DeleteTeamFolderApiCall(ref gaxgrpc::ApiCall<DeleteTeamFolderRequest, wkt::Empty> call);
+
+        partial void Modify_QueryTeamFolderContentsApiCall(ref gaxgrpc::ApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse> call);
+
+        partial void Modify_SearchTeamFoldersApiCall(ref gaxgrpc::ApiCall<SearchTeamFoldersRequest, SearchTeamFoldersResponse> call);
+
+        partial void Modify_GetFolderApiCall(ref gaxgrpc::ApiCall<GetFolderRequest, Folder> call);
+
+        partial void Modify_CreateFolderApiCall(ref gaxgrpc::ApiCall<CreateFolderRequest, Folder> call);
+
+        partial void Modify_UpdateFolderApiCall(ref gaxgrpc::ApiCall<UpdateFolderRequest, Folder> call);
+
+        partial void Modify_DeleteFolderApiCall(ref gaxgrpc::ApiCall<DeleteFolderRequest, wkt::Empty> call);
+
+        partial void Modify_QueryFolderContentsApiCall(ref gaxgrpc::ApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse> call);
+
+        partial void Modify_QueryUserRootContentsApiCall(ref gaxgrpc::ApiCall<QueryUserRootContentsRequest, QueryUserRootContentsResponse> call);
+
+        partial void Modify_MoveFolderApiCall(ref gaxgrpc::ApiCall<MoveFolderRequest, lro::Operation> call);
 
         partial void Modify_ListRepositoriesApiCall(ref gaxgrpc::ApiCall<ListRepositoriesRequest, ListRepositoriesResponse> call);
 
@@ -5440,6 +7758,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryApiCall(ref gaxgrpc::ApiCall<UpdateRepositoryRequest, Repository> call);
 
         partial void Modify_DeleteRepositoryApiCall(ref gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> call);
+
+        partial void Modify_MoveRepositoryApiCall(ref gaxgrpc::ApiCall<MoveRepositoryRequest, lro::Operation> call);
 
         partial void Modify_CommitRepositoryChangesApiCall(ref gaxgrpc::ApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse> call);
 
@@ -5539,6 +7859,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_UpdateConfigApiCall(ref gaxgrpc::ApiCall<UpdateConfigRequest, Config> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
         partial void OnConstruction(Dataform.DataformClient grpcClient, DataformSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Dataform client</summary>
@@ -5550,6 +7876,32 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
+        partial void Modify_GetTeamFolderRequest(ref GetTeamFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateTeamFolderRequest(ref CreateTeamFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTeamFolderRequest(ref UpdateTeamFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTeamFolderRequest(ref DeleteTeamFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryTeamFolderContentsRequest(ref QueryTeamFolderContentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchTeamFoldersRequest(ref SearchTeamFoldersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFolderRequest(ref GetFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateFolderRequest(ref CreateFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFolderRequest(ref UpdateFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFolderRequest(ref DeleteFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryFolderContentsRequest(ref QueryFolderContentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryUserRootContentsRequest(ref QueryUserRootContentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveFolderRequest(ref MoveFolderRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListRepositoriesRequest(ref ListRepositoriesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRepositoryRequest(ref GetRepositoryRequest request, ref gaxgrpc::CallSettings settings);
@@ -5559,6 +7911,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryRequest(ref UpdateRepositoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRepositoryRequest(ref DeleteRepositoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveRepositoryRequest(ref MoveRepositoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CommitRepositoryChangesRequest(ref CommitRepositoryChangesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5657,6 +8011,354 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_GetConfigRequest(ref GetConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateConfigRequest(ref UpdateConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TeamFolder GetTeamFolder(GetTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTeamFolderRequest(ref request, ref callSettings);
+            return _callGetTeamFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TeamFolder> GetTeamFolderAsync(GetTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTeamFolderRequest(ref request, ref callSettings);
+            return _callGetTeamFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TeamFolder CreateTeamFolder(CreateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTeamFolderRequest(ref request, ref callSettings);
+            return _callCreateTeamFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new TeamFolder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TeamFolder> CreateTeamFolderAsync(CreateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTeamFolderRequest(ref request, ref callSettings);
+            return _callCreateTeamFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TeamFolder UpdateTeamFolder(UpdateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTeamFolderRequest(ref request, ref callSettings);
+            return _callUpdateTeamFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TeamFolder> UpdateTeamFolderAsync(UpdateTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTeamFolderRequest(ref request, ref callSettings);
+            return _callUpdateTeamFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTeamFolder(DeleteTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTeamFolderRequest(ref request, ref callSettings);
+            _callDeleteTeamFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTeamFolderAsync(DeleteTeamFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTeamFolderRequest(ref request, ref callSettings);
+            return _callDeleteTeamFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContents(QueryTeamFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryTeamFolderContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry>(_callQueryTeamFolderContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given TeamFolder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of
+        /// <see cref="QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry> QueryTeamFolderContentsAsync(QueryTeamFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryTeamFolderContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse, QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry>(_callQueryTeamFolderContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns all TeamFolders in a given location that the caller has access to
+        /// and match the provided filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="SearchTeamFoldersResponse.Types.TeamFolderSearchResult"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult> SearchTeamFolders(SearchTeamFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchTeamFoldersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchTeamFoldersRequest, SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult>(_callSearchTeamFolders, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns all TeamFolders in a given location that the caller has access to
+        /// and match the provided filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SearchTeamFoldersResponse.Types.TeamFolderSearchResult"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult> SearchTeamFoldersAsync(SearchTeamFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchTeamFoldersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchTeamFoldersRequest, SearchTeamFoldersResponse, SearchTeamFoldersResponse.Types.TeamFolderSearchResult>(_callSearchTeamFolders, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Folder GetFolder(GetFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFolderRequest(ref request, ref callSettings);
+            return _callGetFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Folder> GetFolderAsync(GetFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFolderRequest(ref request, ref callSettings);
+            return _callGetFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Folder CreateFolder(CreateFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFolderRequest(ref request, ref callSettings);
+            return _callCreateFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new Folder in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Folder> CreateFolderAsync(CreateFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFolderRequest(ref request, ref callSettings);
+            return _callCreateFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Folder UpdateFolder(UpdateFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFolderRequest(ref request, ref callSettings);
+            return _callUpdateFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Folder> UpdateFolderAsync(UpdateFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFolderRequest(ref request, ref callSettings);
+            return _callUpdateFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteFolder(DeleteFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFolderRequest(ref request, ref callSettings);
+            _callDeleteFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteFolderAsync(DeleteFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFolderRequest(ref request, ref callSettings);
+            return _callDeleteFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContents(QueryFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryFolderContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryFolderContentsRequest, QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry>(_callQueryFolderContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryFolderContentsResponse.Types.FolderContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry> QueryFolderContentsAsync(QueryFolderContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryFolderContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryFolderContentsRequest, QueryFolderContentsResponse, QueryFolderContentsResponse.Types.FolderContentsEntry>(_callQueryFolderContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContents(QueryUserRootContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryUserRootContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryUserRootContentsRequest, QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry>(_callQueryUserRootContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a caller's root folder in a given location.
+        /// The root folder contains all resources that are created by the user and not
+        /// contained in any other folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="QueryUserRootContentsResponse.Types.RootContentsEntry"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry> QueryUserRootContentsAsync(QueryUserRootContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryUserRootContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryUserRootContentsRequest, QueryUserRootContentsResponse, QueryUserRootContentsResponse.Types.RootContentsEntry>(_callQueryUserRootContents, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>MoveFolder</c>.</summary>
+        public override lro::OperationsClient MoveFolderOperationsClient { get; }
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, MoveFolderMetadata> MoveFolder(MoveFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveFolderRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, MoveFolderMetadata>(_callMoveFolder.Sync(request, callSettings), MoveFolderOperationsClient);
+        }
+
+        /// <summary>
+        /// Moves a Folder to a new Folder, TeamFolder, or the root location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, MoveFolderMetadata>> MoveFolderAsync(MoveFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveFolderRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, MoveFolderMetadata>(await _callMoveFolder.Async(request, callSettings).ConfigureAwait(false), MoveFolderOperationsClient);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -5792,6 +8494,33 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_DeleteRepositoryRequest(ref request, ref callSettings);
             return _callDeleteRepository.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>MoveRepository</c>.</summary>
+        public override lro::OperationsClient MoveRepositoryOperationsClient { get; }
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, MoveRepositoryMetadata> MoveRepository(MoveRepositoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveRepositoryRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, MoveRepositoryMetadata>(_callMoveRepository.Sync(request, callSettings), MoveRepositoryOperationsClient);
+        }
+
+        /// <summary>
+        /// Moves a Repository to a new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, MoveRepositoryMetadata>> MoveRepositoryAsync(MoveRepositoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveRepositoryRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, MoveRepositoryMetadata>(await _callMoveRepository.Async(request, callSettings).ConfigureAwait(false), MoveRepositoryOperationsClient);
         }
 
         /// <summary>
@@ -7009,6 +9738,116 @@ namespace Google.Cloud.Dataform.V1Beta1
             Modify_UpdateConfigRequest(ref request, ref callSettings);
             return _callUpdateConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// 
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a `NOT_FOUND` error.
+        /// 
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a `NOT_FOUND` error.
+        /// 
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
+    }
+
+    public partial class QueryTeamFolderContentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchTeamFoldersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryFolderContentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryUserRootContentsRequest : gaxgrpc::IPageRequest
+    {
     }
 
     public partial class ListRepositoriesRequest : gaxgrpc::IPageRequest
@@ -7057,6 +9896,38 @@ namespace Google.Cloud.Dataform.V1Beta1
 
     public partial class QueryWorkflowInvocationActionsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class QueryTeamFolderContentsResponse : gaxgrpc::IPageResponse<QueryTeamFolderContentsResponse.Types.TeamFolderContentsEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Types.TeamFolderContentsEntry> GetEnumerator() => Entries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchTeamFoldersResponse : gaxgrpc::IPageResponse<SearchTeamFoldersResponse.Types.TeamFolderSearchResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Types.TeamFolderSearchResult> GetEnumerator() => Results.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryFolderContentsResponse : gaxgrpc::IPageResponse<QueryFolderContentsResponse.Types.FolderContentsEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Types.FolderContentsEntry> GetEnumerator() => Entries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryUserRootContentsResponse : gaxgrpc::IPageResponse<QueryUserRootContentsResponse.Types.RootContentsEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Types.RootContentsEntry> GetEnumerator() => Entries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListRepositoriesResponse : gaxgrpc::IPageResponse<Repository>
@@ -7153,6 +10024,20 @@ namespace Google.Cloud.Dataform.V1Beta1
         public scg::IEnumerator<WorkflowInvocationAction> GetEnumerator() => WorkflowInvocationActions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Dataform
+    {
+        public partial class DataformClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class Dataform
