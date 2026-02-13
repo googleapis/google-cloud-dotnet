@@ -4866,6 +4866,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Ces.V1/Google.Cloud.Ces.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.WorkloadManager.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/workloadmanager/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.WorkloadManager.V1/Google.Cloud.WorkloadManager.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
