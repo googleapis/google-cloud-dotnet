@@ -126,7 +126,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.Places.V1.Review.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Review> reviews_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Review>();
     /// <summary>
-    /// List of reviews about this place, contexual to the place query.
+    /// List of reviews about this place, contextual to the place query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,8 +140,8 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.Photo.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Photo> photos_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Photo>();
     /// <summary>
-    /// Information (including references) about photos of this place, contexual to
-    /// the place query.
+    /// Information (including references) about photos of this place, contextual
+    /// to the place query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

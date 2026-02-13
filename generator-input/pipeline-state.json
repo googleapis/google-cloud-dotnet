@@ -3829,7 +3829,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:39:39.306623617Z",
-            "lastGeneratedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
+            "lastGeneratedCommit": "6eead6ed94bddc12fe22189880a0b8f722c70478",
             "lastReleasedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
             "apiPaths": [
                 "google/maps/places/v1"
