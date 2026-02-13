@@ -29,7 +29,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "aS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8a",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIqUFChFBdXRvc2NhbGlu",
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIsQGChFBdXRvc2NhbGlu",
             "Z1BvbGljeRIKCgJpZBgBIAEoCRIRCgRuYW1lGAIgASgJQgPgQQMSUwoPYmFz",
             "aWNfYWxnb3JpdGhtGAMgASgLMjMuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
             "LkJhc2ljQXV0b3NjYWxpbmdBbGdvcml0aG1CA+BBAkgAEloKDXdvcmtlcl9j",
@@ -38,83 +38,86 @@ namespace Google.Cloud.Dataproc.V1 {
             "YXJ5X3dvcmtlcl9jb25maWcYBSABKAsyPi5nb29nbGUuY2xvdWQuZGF0YXBy",
             "b2MudjEuSW5zdGFuY2VHcm91cEF1dG9zY2FsaW5nUG9saWN5Q29uZmlnQgPg",
             "QQESTAoGbGFiZWxzGAYgAygLMjcuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "LkF1dG9zY2FsaW5nUG9saWN5LkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATrPAepBywEK",
-            "KWRhdGFwcm9jLmdvb2dsZWFwaXMuY29tL0F1dG9zY2FsaW5nUG9saWN5ElBw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0b3Nj",
-            "YWxpbmdQb2xpY2llcy97YXV0b3NjYWxpbmdfcG9saWN5fRJMcHJvamVjdHMv",
-            "e3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vYXV0b3NjYWxpbmdQb2xpY2ll",
-            "cy97YXV0b3NjYWxpbmdfcG9saWN5fUILCglhbGdvcml0aG0isAEKGUJhc2lj",
-            "QXV0b3NjYWxpbmdBbGdvcml0aG0SUAoLeWFybl9jb25maWcYASABKAsyNC5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQmFzaWNZYXJuQXV0b3NjYWxpbmdD",
-            "b25maWdCA+BBAkgAEjcKD2Nvb2xkb3duX3BlcmlvZBgCIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBQggKBmNvbmZpZyL5AQoaQmFzaWNZ",
-            "YXJuQXV0b3NjYWxpbmdDb25maWcSRQodZ3JhY2VmdWxfZGVjb21taXNzaW9u",
-            "X3RpbWVvdXQYBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
-            "AhIcCg9zY2FsZV91cF9mYWN0b3IYASABKAFCA+BBAhIeChFzY2FsZV9kb3du",
-            "X2ZhY3RvchgCIAEoAUID4EECEikKHHNjYWxlX3VwX21pbl93b3JrZXJfZnJh",
-            "Y3Rpb24YAyABKAFCA+BBARIrCh5zY2FsZV9kb3duX21pbl93b3JrZXJfZnJh",
-            "Y3Rpb24YBCABKAFCA+BBASJzCiRJbnN0YW5jZUdyb3VwQXV0b3NjYWxpbmdQ",
-            "b2xpY3lDb25maWcSGgoNbWluX2luc3RhbmNlcxgBIAEoBUID4EEBEhoKDW1h",
-            "eF9pbnN0YW5jZXMYAiABKAVCA+BBAhITCgZ3ZWlnaHQYAyABKAVCA+BBASKl",
-            "AQoeQ3JlYXRlQXV0b3NjYWxpbmdQb2xpY3lSZXF1ZXN0EkEKBnBhcmVudBgB",
-            "IAEoCUIx4EEC+kErEilkYXRhcHJvYy5nb29nbGVhcGlzLmNvbS9BdXRvc2Nh",
-            "bGluZ1BvbGljeRJACgZwb2xpY3kYAiABKAsyKy5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuQXV0b3NjYWxpbmdQb2xpY3lCA+BBAiJeChtHZXRBdXRvc2Nh",
-            "bGluZ1BvbGljeVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kErCilkYXRh",
-            "cHJvYy5nb29nbGVhcGlzLmNvbS9BdXRvc2NhbGluZ1BvbGljeSJiCh5VcGRh",
-            "dGVBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QSQAoGcG9saWN5GAEgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkF1dG9zY2FsaW5nUG9saWN5QgPg",
-            "QQIiYQoeRGVsZXRlQXV0b3NjYWxpbmdQb2xpY3lSZXF1ZXN0Ej8KBG5hbWUY",
-            "ASABKAlCMeBBAvpBKwopZGF0YXByb2MuZ29vZ2xlYXBpcy5jb20vQXV0b3Nj",
-            "YWxpbmdQb2xpY3kilAEKHkxpc3RBdXRvc2NhbGluZ1BvbGljaWVzUmVxdWVz",
-            "dBJBCgZwYXJlbnQYASABKAlCMeBBAvpBKxIpZGF0YXByb2MuZ29vZ2xlYXBp",
-            "cy5jb20vQXV0b3NjYWxpbmdQb2xpY3kSFgoJcGFnZV9zaXplGAIgASgFQgPg",
-            "QQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIoMBCh9MaXN0QXV0b3NjYWxp",
-            "bmdQb2xpY2llc1Jlc3BvbnNlEkIKCHBvbGljaWVzGAEgAygLMisuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwcm9jLnYxLkF1dG9zY2FsaW5nUG9saWN5QgPgQQMSHAoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMyrgsKGEF1dG9zY2FsaW5nUG9s",
-            "aWN5U2VydmljZRKcAgoXQ3JlYXRlQXV0b3NjYWxpbmdQb2xpY3kSOC5nb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuQ3JlYXRlQXV0b3NjYWxpbmdQb2xpY3lS",
-            "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkF1dG9zY2FsaW5n",
-            "UG9saWN5IpkB2kENcGFyZW50LHBvbGljeYLT5JMCggEiNy92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2F1dG9zY2FsaW5nUG9saWNpZXM6",
-            "BnBvbGljeVo/IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL3JlZ2lvbnMvKn0v",
-            "YXV0b3NjYWxpbmdQb2xpY2llczoGcG9saWN5EqMCChdVcGRhdGVBdXRvc2Nh",
-            "bGluZ1BvbGljeRI4Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5VcGRhdGVB",
-            "dXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaKy5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuQXV0b3NjYWxpbmdQb2xpY3kioAHaQQZwb2xpY3mC0+STApABGj4v",
-            "djEve3BvbGljeS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXV0b3Nj",
-            "YWxpbmdQb2xpY2llcy8qfToGcG9saWN5WkYaPC92MS97cG9saWN5Lm5hbWU9",
-            "cHJvamVjdHMvKi9yZWdpb25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfToG",
-            "cG9saWN5EvsBChRHZXRBdXRvc2NhbGluZ1BvbGljeRI1Lmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5HZXRBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaKy5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdQb2xpY3kif9pB",
-            "BG5hbWWC0+STAnISNy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2F1dG9zY2FsaW5nUG9saWNpZXMvKn1aNxI1L3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovcmVnaW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMvKn0SkgIKF0xpc3RB",
-            "dXRvc2NhbGluZ1BvbGljaWVzEjguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "Lkxpc3RBdXRvc2NhbGluZ1BvbGljaWVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5MaXN0QXV0b3NjYWxpbmdQb2xpY2llc1Jlc3BvbnNl",
-            "IoEB2kEGcGFyZW50gtPkkwJyEjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9hdXRvc2NhbGluZ1BvbGljaWVzWjcSNS92MS97cGFyZW50",
-            "PXByb2plY3RzLyovcmVnaW9ucy8qfS9hdXRvc2NhbGluZ1BvbGljaWVzEuwB",
-            "ChdEZWxldGVBdXRvc2NhbGluZ1BvbGljeRI4Lmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5EZWxldGVBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkif9pBBG5hbWWC0+STAnIqNy92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMvKn1a",
-            "Nyo1L3YxL3tuYW1lPXByb2plY3RzLyovcmVnaW9ucy8qL2F1dG9zY2FsaW5n",
-            "UG9saWNpZXMvKn0aS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK/",
-            "AQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUIYQXV0b3NjYWxpbmdQ",
-            "b2xpY2llc1Byb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2Mv",
-            "djIvYXBpdjEvZGF0YXByb2NwYjtkYXRhcHJvY3Bi6kFFCh5kYXRhcHJvYy5n",
-            "b29nbGVhcGlzLmNvbS9SZWdpb24SI3Byb2plY3RzL3twcm9qZWN0fS9yZWdp",
-            "b25zL3tyZWdpb259YgZwcm90bzM="));
+            "LkF1dG9zY2FsaW5nUG9saWN5LkxhYmVsc0VudHJ5QgPgQQESUgoMY2x1c3Rl",
+            "cl90eXBlGAcgASgOMjcuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkF1dG9z",
+            "Y2FsaW5nUG9saWN5LkNsdXN0ZXJUeXBlQgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJJCgtDbHVzdGVyVHlw",
+            "ZRIcChhDTFVTVEVSX1RZUEVfVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBAB",
+            "Eg4KClpFUk9fU0NBTEUQAjrPAepBywEKKWRhdGFwcm9jLmdvb2dsZWFwaXMu",
+            "Y29tL0F1dG9zY2FsaW5nUG9saWN5ElBwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vYXV0b3NjYWxpbmdQb2xpY2llcy97YXV0b3Nj",
+            "YWxpbmdfcG9saWN5fRJMcHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMve3Jl",
+            "Z2lvbn0vYXV0b3NjYWxpbmdQb2xpY2llcy97YXV0b3NjYWxpbmdfcG9saWN5",
+            "fUILCglhbGdvcml0aG0isAEKGUJhc2ljQXV0b3NjYWxpbmdBbGdvcml0aG0S",
+            "UAoLeWFybl9jb25maWcYASABKAsyNC5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuQmFzaWNZYXJuQXV0b3NjYWxpbmdDb25maWdCA+BBAkgAEjcKD2Nvb2xk",
+            "b3duX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
+            "4EEBQggKBmNvbmZpZyL5AQoaQmFzaWNZYXJuQXV0b3NjYWxpbmdDb25maWcS",
+            "RQodZ3JhY2VmdWxfZGVjb21taXNzaW9uX3RpbWVvdXQYBSABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIcCg9zY2FsZV91cF9mYWN0b3IY",
+            "ASABKAFCA+BBAhIeChFzY2FsZV9kb3duX2ZhY3RvchgCIAEoAUID4EECEikK",
+            "HHNjYWxlX3VwX21pbl93b3JrZXJfZnJhY3Rpb24YAyABKAFCA+BBARIrCh5z",
+            "Y2FsZV9kb3duX21pbl93b3JrZXJfZnJhY3Rpb24YBCABKAFCA+BBASJzCiRJ",
+            "bnN0YW5jZUdyb3VwQXV0b3NjYWxpbmdQb2xpY3lDb25maWcSGgoNbWluX2lu",
+            "c3RhbmNlcxgBIAEoBUID4EEBEhoKDW1heF9pbnN0YW5jZXMYAiABKAVCA+BB",
+            "AhITCgZ3ZWlnaHQYAyABKAVCA+BBASKlAQoeQ3JlYXRlQXV0b3NjYWxpbmdQ",
+            "b2xpY3lSZXF1ZXN0EkEKBnBhcmVudBgBIAEoCUIx4EEC+kErEilkYXRhcHJv",
+            "Yy5nb29nbGVhcGlzLmNvbS9BdXRvc2NhbGluZ1BvbGljeRJACgZwb2xpY3kY",
+            "AiABKAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdQ",
+            "b2xpY3lCA+BBAiJeChtHZXRBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QSPwoE",
+            "bmFtZRgBIAEoCUIx4EEC+kErCilkYXRhcHJvYy5nb29nbGVhcGlzLmNvbS9B",
+            "dXRvc2NhbGluZ1BvbGljeSJiCh5VcGRhdGVBdXRvc2NhbGluZ1BvbGljeVJl",
+            "cXVlc3QSQAoGcG9saWN5GAEgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkF1dG9zY2FsaW5nUG9saWN5QgPgQQIiYQoeRGVsZXRlQXV0b3NjYWxp",
+            "bmdQb2xpY3lSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopZGF0YXBy",
+            "b2MuZ29vZ2xlYXBpcy5jb20vQXV0b3NjYWxpbmdQb2xpY3kilAEKHkxpc3RB",
+            "dXRvc2NhbGluZ1BvbGljaWVzUmVxdWVzdBJBCgZwYXJlbnQYASABKAlCMeBB",
+            "AvpBKxIpZGF0YXByb2MuZ29vZ2xlYXBpcy5jb20vQXV0b3NjYWxpbmdQb2xp",
+            "Y3kSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEo",
+            "CUID4EEBIoMBCh9MaXN0QXV0b3NjYWxpbmdQb2xpY2llc1Jlc3BvbnNlEkIK",
+            "CHBvbGljaWVzGAEgAygLMisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkF1",
+            "dG9zY2FsaW5nUG9saWN5QgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "QgPgQQMyrgsKGEF1dG9zY2FsaW5nUG9saWN5U2VydmljZRKcAgoXQ3JlYXRl",
+            "QXV0b3NjYWxpbmdQb2xpY3kSOC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "Q3JlYXRlQXV0b3NjYWxpbmdQb2xpY3lSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkF1dG9zY2FsaW5nUG9saWN5IpkB2kENcGFyZW50LHBv",
+            "bGljeYLT5JMCggEiNy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L2F1dG9zY2FsaW5nUG9saWNpZXM6BnBvbGljeVo/IjUvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL3JlZ2lvbnMvKn0vYXV0b3NjYWxpbmdQb2xpY2llczoG",
+            "cG9saWN5EqMCChdVcGRhdGVBdXRvc2NhbGluZ1BvbGljeRI4Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5VcGRhdGVBdXRvc2NhbGluZ1BvbGljeVJlcXVl",
+            "c3QaKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdQb2xp",
+            "Y3kioAHaQQZwb2xpY3mC0+STApABGj4vdjEve3BvbGljeS5uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfToGcG9s",
+            "aWN5WkYaPC92MS97cG9saWN5Lm5hbWU9cHJvamVjdHMvKi9yZWdpb25zLyov",
+            "YXV0b3NjYWxpbmdQb2xpY2llcy8qfToGcG9saWN5EvsBChRHZXRBdXRvc2Nh",
+            "bGluZ1BvbGljeRI1Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5HZXRBdXRv",
+            "c2NhbGluZ1BvbGljeVJlcXVlc3QaKy5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuQXV0b3NjYWxpbmdQb2xpY3kif9pBBG5hbWWC0+STAnISNy92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMv",
+            "Kn1aNxI1L3YxL3tuYW1lPXByb2plY3RzLyovcmVnaW9ucy8qL2F1dG9zY2Fs",
+            "aW5nUG9saWNpZXMvKn0SkgIKF0xpc3RBdXRvc2NhbGluZ1BvbGljaWVzEjgu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RBdXRvc2NhbGluZ1BvbGlj",
+            "aWVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0QXV0",
+            "b3NjYWxpbmdQb2xpY2llc1Jlc3BvbnNlIoEB2kEGcGFyZW50gtPkkwJyEjcv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hdXRvc2NhbGlu",
+            "Z1BvbGljaWVzWjcSNS92MS97cGFyZW50PXByb2plY3RzLyovcmVnaW9ucy8q",
+            "fS9hdXRvc2NhbGluZ1BvbGljaWVzEuwBChdEZWxldGVBdXRvc2NhbGluZ1Bv",
+            "bGljeRI4Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVBdXRvc2Nh",
+            "bGluZ1BvbGljeVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkif9pB",
+            "BG5hbWWC0+STAnIqNy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2F1dG9zY2FsaW5nUG9saWNpZXMvKn1aNyo1L3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovcmVnaW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMvKn0aS8pBF2RhdGFw",
+            "cm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK/AQocY29tLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MUIYQXV0b3NjYWxpbmdQb2xpY2llc1Byb3RvUAFaO2Nsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZGF0YXByb2MvdjIvYXBpdjEvZGF0YXByb2NwYjtk",
+            "YXRhcHJvY3Bi6kFFCh5kYXRhcHJvYy5nb29nbGVhcGlzLmNvbS9SZWdpb24S",
+            "I3Byb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AutoscalingPolicy), global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Parser, new[]{ "Id", "Name", "BasicAlgorithm", "WorkerConfig", "SecondaryWorkerConfig", "Labels" }, new[]{ "Algorithm" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AutoscalingPolicy), global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Parser, new[]{ "Id", "Name", "BasicAlgorithm", "WorkerConfig", "SecondaryWorkerConfig", "Labels", "ClusterType" }, new[]{ "Algorithm" }, new[]{ typeof(global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.BasicAutoscalingAlgorithm), global::Google.Cloud.Dataproc.V1.BasicAutoscalingAlgorithm.Parser, new[]{ "YarnConfig", "CooldownPeriod" }, new[]{ "Config" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.BasicYarnAutoscalingConfig), global::Google.Cloud.Dataproc.V1.BasicYarnAutoscalingConfig.Parser, new[]{ "GracefulDecommissionTimeout", "ScaleUpFactor", "ScaleDownFactor", "ScaleUpMinWorkerFraction", "ScaleDownMinWorkerFraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstanceGroupAutoscalingPolicyConfig), global::Google.Cloud.Dataproc.V1.InstanceGroupAutoscalingPolicyConfig.Parser, new[]{ "MinInstances", "MaxInstances", "Weight" }, null, null, null, null),
@@ -173,6 +176,7 @@ namespace Google.Cloud.Dataproc.V1 {
       workerConfig_ = other.workerConfig_ != null ? other.workerConfig_.Clone() : null;
       secondaryWorkerConfig_ = other.secondaryWorkerConfig_ != null ? other.secondaryWorkerConfig_.Clone() : null;
       labels_ = other.labels_.Clone();
+      clusterType_ = other.clusterType_;
       switch (other.AlgorithmCase) {
         case AlgorithmOneofCase.BasicAlgorithm:
           BasicAlgorithm = other.BasicAlgorithm.Clone();
@@ -293,6 +297,22 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "cluster_type" field.</summary>
+    public const int ClusterTypeFieldNumber = 7;
+    private global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType clusterType_ = global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified;
+    /// <summary>
+    /// Optional. The type of the clusters for which this autoscaling policy is to
+    /// be configured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType ClusterType {
+      get { return clusterType_; }
+      set {
+        clusterType_ = value;
+      }
+    }
+
     private object algorithm_;
     /// <summary>Enum of possible cases for the "algorithm" oneof.</summary>
     public enum AlgorithmOneofCase {
@@ -334,6 +354,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(WorkerConfig, other.WorkerConfig)) return false;
       if (!object.Equals(SecondaryWorkerConfig, other.SecondaryWorkerConfig)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (ClusterType != other.ClusterType) return false;
       if (AlgorithmCase != other.AlgorithmCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -348,6 +369,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (workerConfig_ != null) hash ^= WorkerConfig.GetHashCode();
       if (secondaryWorkerConfig_ != null) hash ^= SecondaryWorkerConfig.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (ClusterType != global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified) hash ^= ClusterType.GetHashCode();
       hash ^= (int) algorithmCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -388,6 +410,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteMessage(SecondaryWorkerConfig);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (ClusterType != global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ClusterType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -419,6 +445,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteMessage(SecondaryWorkerConfig);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (ClusterType != global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ClusterType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -445,6 +475,9 @@ namespace Google.Cloud.Dataproc.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SecondaryWorkerConfig);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (ClusterType != global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ClusterType);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -476,6 +509,9 @@ namespace Google.Cloud.Dataproc.V1 {
         SecondaryWorkerConfig.MergeFrom(other.SecondaryWorkerConfig);
       }
       labels_.MergeFrom(other.labels_);
+      if (other.ClusterType != global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType.Unspecified) {
+        ClusterType = other.ClusterType;
+      }
       switch (other.AlgorithmCase) {
         case AlgorithmOneofCase.BasicAlgorithm:
           if (BasicAlgorithm == null) {
@@ -535,6 +571,10 @@ namespace Google.Cloud.Dataproc.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 56: {
+            ClusterType = (global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -585,10 +625,42 @@ namespace Google.Cloud.Dataproc.V1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 56: {
+            ClusterType = (global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Types.ClusterType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutoscalingPolicy message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of the clusters for which this autoscaling policy is to be
+      /// configured.
+      /// </summary>
+      public enum ClusterType {
+        /// <summary>
+        /// Not set.
+        /// </summary>
+        [pbr::OriginalName("CLUSTER_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Standard dataproc cluster with a minimum of two primary workers.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Clusters that can use only secondary workers and be scaled down to zero
+        /// secondary worker nodes.
+        /// </summary>
+        [pbr::OriginalName("ZERO_SCALE")] ZeroScale = 2,
+      }
+
+    }
+    #endregion
 
   }
 
