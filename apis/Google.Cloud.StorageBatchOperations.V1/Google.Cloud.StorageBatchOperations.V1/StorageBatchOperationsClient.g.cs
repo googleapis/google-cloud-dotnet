@@ -57,6 +57,8 @@ namespace Google.Cloud.StorageBatchOperations.V1
             CreateJobOperationsSettings = existing.CreateJobOperationsSettings.Clone();
             DeleteJobSettings = existing.DeleteJobSettings;
             CancelJobSettings = existing.CancelJobSettings;
+            ListBucketOperationsSettings = existing.ListBucketOperationsSettings;
+            GetBucketOperationSettings = existing.GetBucketOperationSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -158,6 +160,32 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CancelJobSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageBatchOperationsClient.ListBucketOperations</c> and
+        /// <c>StorageBatchOperationsClient.ListBucketOperationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBucketOperationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageBatchOperationsClient.GetBucketOperation</c> and
+        /// <c>StorageBatchOperationsClient.GetBucketOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBucketOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -989,6 +1017,273 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CancelJobResponse> CancelJobAsync(JobName name, st::CancellationToken cancellationToken) =>
             CancelJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperations(ListBucketOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperationsAsync(ListBucketOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketOperations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketOperationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperations(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketOperations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BucketOperation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperationsAsync(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketOperationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BucketOperation GetBucketOperation(GetBucketOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(GetBucketOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(GetBucketOperationRequest request, st::CancellationToken cancellationToken) =>
+            GetBucketOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BucketOperation GetBucketOperation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBucketOperation(new GetBucketOperationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBucketOperationAsync(new GetBucketOperationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBucketOperationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BucketOperation GetBucketOperation(BucketOperationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBucketOperation(new GetBucketOperationRequest
+            {
+                BucketOperationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(BucketOperationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBucketOperationAsync(new GetBucketOperationRequest
+            {
+                BucketOperationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `name` of the bucket operation to retrieve.
+        /// Format:
+        /// projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BucketOperation> GetBucketOperationAsync(BucketOperationName name, st::CancellationToken cancellationToken) =>
+            GetBucketOperationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageBatchOperations client wrapper implementation, for convenient use.</summary>
@@ -1009,6 +1304,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         private readonly gaxgrpc::ApiCall<DeleteJobRequest, wkt::Empty> _callDeleteJob;
 
         private readonly gaxgrpc::ApiCall<CancelJobRequest, CancelJobResponse> _callCancelJob;
+
+        private readonly gaxgrpc::ApiCall<ListBucketOperationsRequest, ListBucketOperationsResponse> _callListBucketOperations;
+
+        private readonly gaxgrpc::ApiCall<GetBucketOperationRequest, BucketOperation> _callGetBucketOperation;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageBatchOperations service, with the specified gRPC client and
@@ -1045,6 +1344,12 @@ namespace Google.Cloud.StorageBatchOperations.V1
             _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, CancelJobResponse>("CancelJob", grpcClient.CancelJobAsync, grpcClient.CancelJob, effectiveSettings.CancelJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelJob);
             Modify_CancelJobApiCall(ref _callCancelJob);
+            _callListBucketOperations = clientHelper.BuildApiCall<ListBucketOperationsRequest, ListBucketOperationsResponse>("ListBucketOperations", grpcClient.ListBucketOperationsAsync, grpcClient.ListBucketOperations, effectiveSettings.ListBucketOperationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBucketOperations);
+            Modify_ListBucketOperationsApiCall(ref _callListBucketOperations);
+            _callGetBucketOperation = clientHelper.BuildApiCall<GetBucketOperationRequest, BucketOperation>("GetBucketOperation", grpcClient.GetBucketOperationAsync, grpcClient.GetBucketOperation, effectiveSettings.GetBucketOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBucketOperation);
+            Modify_GetBucketOperationApiCall(ref _callGetBucketOperation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1059,6 +1364,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         partial void Modify_DeleteJobApiCall(ref gaxgrpc::ApiCall<DeleteJobRequest, wkt::Empty> call);
 
         partial void Modify_CancelJobApiCall(ref gaxgrpc::ApiCall<CancelJobRequest, CancelJobResponse> call);
+
+        partial void Modify_ListBucketOperationsApiCall(ref gaxgrpc::ApiCall<ListBucketOperationsRequest, ListBucketOperationsResponse> call);
+
+        partial void Modify_GetBucketOperationApiCall(ref gaxgrpc::ApiCall<GetBucketOperationRequest, BucketOperation> call);
 
         partial void OnConstruction(StorageBatchOperations.StorageBatchOperationsClient grpcClient, StorageBatchOperationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1077,6 +1386,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBucketOperationsRequest(ref ListBucketOperationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBucketOperationRequest(ref GetBucketOperationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Jobs in a given project.
@@ -1200,9 +1513,61 @@ namespace Google.Cloud.StorageBatchOperations.V1
             Modify_CancelJobRequest(ref request, ref callSettings);
             return _callCancelJob.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BucketOperation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperations(ListBucketOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBucketOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBucketOperationsRequest, ListBucketOperationsResponse, BucketOperation>(_callListBucketOperations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BucketOperations in a given project and job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BucketOperation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> ListBucketOperationsAsync(ListBucketOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBucketOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBucketOperationsRequest, ListBucketOperationsResponse, BucketOperation>(_callListBucketOperations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BucketOperation GetBucketOperation(GetBucketOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBucketOperationRequest(ref request, ref callSettings);
+            return _callGetBucketOperation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a BucketOperation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BucketOperation> GetBucketOperationAsync(GetBucketOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBucketOperationRequest(ref request, ref callSettings);
+            return _callGetBucketOperation.Async(request, callSettings);
+        }
     }
 
     public partial class ListJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBucketOperationsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1210,6 +1575,14 @@ namespace Google.Cloud.StorageBatchOperations.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBucketOperationsResponse : gaxgrpc::IPageResponse<BucketOperation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BucketOperation> GetEnumerator() => BucketOperations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

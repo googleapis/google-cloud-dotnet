@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_async]
+    // [START storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_async_flattened_resourceNames]
     using Google.Cloud.StorageBatchOperations.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedStorageBatchOperationsClientSnippets
     {
-        /// <summary>Snippet for DeleteJobAsync</summary>
+        /// <summary>Snippet for GetBucketOperationAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task DeleteJobRequestObjectAsync()
+        public async Task GetBucketOperationResourceNamesAsync()
         {
             // Create client
             StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
-            {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
-                RequestId = "",
-                Force = false,
-            };
+            BucketOperationName name = BucketOperationName.FromProjectLocationJobBucketOperation("[PROJECT]", "[LOCATION]", "[JOB]", "[BUCKET_OPERATION]");
             // Make the request
-            await storageBatchOperationsClient.DeleteJobAsync(request);
+            BucketOperation response = await storageBatchOperationsClient.GetBucketOperationAsync(name);
         }
     }
-    // [END storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_async]
+    // [END storagebatchoperations_v1_generated_StorageBatchOperations_GetBucketOperation_async_flattened_resourceNames]
 }

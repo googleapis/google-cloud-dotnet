@@ -79,4 +79,26 @@ namespace Google.Cloud.StorageBatchOperations.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListBucketOperationsRequest
+    {
+        /// <summary><see cref="JobName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public JobName ParentAsJobName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : JobName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBucketOperationRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::BucketOperationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::BucketOperationName BucketOperationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::BucketOperationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

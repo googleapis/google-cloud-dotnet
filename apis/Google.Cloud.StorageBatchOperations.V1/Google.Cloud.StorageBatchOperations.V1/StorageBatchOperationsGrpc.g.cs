@@ -3,7 +3,7 @@
 //     source: google/cloud/storagebatchoperations/v1/storage_batch_operations.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,6 +86,14 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.CancelJobRequest> __Marshaller_google_cloud_storagebatchoperations_v1_CancelJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.CancelJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.CancelJobResponse> __Marshaller_google_cloud_storagebatchoperations_v1_CancelJobResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.CancelJobResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest> __Marshaller_google_cloud_storagebatchoperations_v1_ListBucketOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse> __Marshaller_google_cloud_storagebatchoperations_v1_ListBucketOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest> __Marshaller_google_cloud_storagebatchoperations_v1_GetBucketOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageBatchOperations.V1.BucketOperation> __Marshaller_google_cloud_storagebatchoperations_v1_BucketOperation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageBatchOperations.V1.BucketOperation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.ListJobsRequest, global::Google.Cloud.StorageBatchOperations.V1.ListJobsResponse> __Method_ListJobs = new grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.ListJobsRequest, global::Google.Cloud.StorageBatchOperations.V1.ListJobsResponse>(
@@ -126,6 +134,22 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
         "CancelJob",
         __Marshaller_google_cloud_storagebatchoperations_v1_CancelJobRequest,
         __Marshaller_google_cloud_storagebatchoperations_v1_CancelJobResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest, global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse> __Method_ListBucketOperations = new grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest, global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBucketOperations",
+        __Marshaller_google_cloud_storagebatchoperations_v1_ListBucketOperationsRequest,
+        __Marshaller_google_cloud_storagebatchoperations_v1_ListBucketOperationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest, global::Google.Cloud.StorageBatchOperations.V1.BucketOperation> __Method_GetBucketOperation = new grpc::Method<global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest, global::Google.Cloud.StorageBatchOperations.V1.BucketOperation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBucketOperation",
+        __Marshaller_google_cloud_storagebatchoperations_v1_GetBucketOperationRequest,
+        __Marshaller_google_cloud_storagebatchoperations_v1_BucketOperation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -193,6 +217,30 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageBatchOperations.V1.CancelJobResponse> CancelJob(global::Google.Cloud.StorageBatchOperations.V1.CancelJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BucketOperations in a given project and job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse> ListBucketOperations(global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a BucketOperation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageBatchOperations.V1.BucketOperation> GetBucketOperation(global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -466,6 +514,102 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelJob, null, options, request);
       }
+      /// <summary>
+      /// Lists BucketOperations in a given project and job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse ListBucketOperations(global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBucketOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BucketOperations in a given project and job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse ListBucketOperations(global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBucketOperations, null, options, request);
+      }
+      /// <summary>
+      /// Lists BucketOperations in a given project and job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse> ListBucketOperationsAsync(global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBucketOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BucketOperations in a given project and job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse> ListBucketOperationsAsync(global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBucketOperations, null, options, request);
+      }
+      /// <summary>
+      /// Gets a BucketOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageBatchOperations.V1.BucketOperation GetBucketOperation(global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBucketOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a BucketOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageBatchOperations.V1.BucketOperation GetBucketOperation(global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBucketOperation, null, options, request);
+      }
+      /// <summary>
+      /// Gets a BucketOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageBatchOperations.V1.BucketOperation> GetBucketOperationAsync(global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBucketOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a BucketOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageBatchOperations.V1.BucketOperation> GetBucketOperationAsync(global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBucketOperation, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageBatchOperationsClient NewInstance(ClientBaseConfiguration configuration)
@@ -484,7 +628,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
           .AddMethod(__Method_GetJob, serviceImpl.GetJob)
           .AddMethod(__Method_CreateJob, serviceImpl.CreateJob)
           .AddMethod(__Method_DeleteJob, serviceImpl.DeleteJob)
-          .AddMethod(__Method_CancelJob, serviceImpl.CancelJob).Build();
+          .AddMethod(__Method_CancelJob, serviceImpl.CancelJob)
+          .AddMethod(__Method_ListBucketOperations, serviceImpl.ListBucketOperations)
+          .AddMethod(__Method_GetBucketOperation, serviceImpl.GetBucketOperation).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -499,6 +645,8 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       serviceBinder.AddMethod(__Method_CreateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageBatchOperations.V1.CreateJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateJob));
       serviceBinder.AddMethod(__Method_DeleteJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageBatchOperations.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJob));
       serviceBinder.AddMethod(__Method_CancelJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageBatchOperations.V1.CancelJobRequest, global::Google.Cloud.StorageBatchOperations.V1.CancelJobResponse>(serviceImpl.CancelJob));
+      serviceBinder.AddMethod(__Method_ListBucketOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsRequest, global::Google.Cloud.StorageBatchOperations.V1.ListBucketOperationsResponse>(serviceImpl.ListBucketOperations));
+      serviceBinder.AddMethod(__Method_GetBucketOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageBatchOperations.V1.GetBucketOperationRequest, global::Google.Cloud.StorageBatchOperations.V1.BucketOperation>(serviceImpl.GetBucketOperation));
     }
 
   }

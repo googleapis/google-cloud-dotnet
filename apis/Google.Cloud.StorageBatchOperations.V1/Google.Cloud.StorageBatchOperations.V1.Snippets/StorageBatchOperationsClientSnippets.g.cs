@@ -601,6 +601,7 @@ namespace GoogleCSharpSnippets
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             storageBatchOperationsClient.DeleteJob(request);
@@ -619,6 +620,7 @@ namespace GoogleCSharpSnippets
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             await storageBatchOperationsClient.DeleteJobAsync(request);
@@ -765,6 +767,373 @@ namespace GoogleCSharpSnippets
             JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
             CancelJobResponse response = await storageBatchOperationsClient.CancelJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperations</summary>
+        public void ListBucketOperationsRequestObject()
+        {
+            // Snippet: ListBucketOperations(ListBucketOperationsRequest, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                ParentAsJobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperationsAsync</summary>
+        public async Task ListBucketOperationsRequestObjectAsync()
+        {
+            // Snippet: ListBucketOperationsAsync(ListBucketOperationsRequest, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBucketOperationsRequest request = new ListBucketOperationsRequest
+            {
+                ParentAsJobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperations</summary>
+        public void ListBucketOperations()
+        {
+            // Snippet: ListBucketOperations(string, string, int?, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
+            // Make the request
+            PagedEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperationsAsync</summary>
+        public async Task ListBucketOperationsAsync()
+        {
+            // Snippet: ListBucketOperationsAsync(string, string, int?, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
+            // Make the request
+            PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperations</summary>
+        public void ListBucketOperationsResourceNames()
+        {
+            // Snippet: ListBucketOperations(JobName, string, int?, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            JobName parent = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            PagedEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBucketOperationsAsync</summary>
+        public async Task ListBucketOperationsResourceNamesAsync()
+        {
+            // Snippet: ListBucketOperationsAsync(JobName, string, int?, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            JobName parent = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            PagedAsyncEnumerable<ListBucketOperationsResponse, BucketOperation> response = storageBatchOperationsClient.ListBucketOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BucketOperation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBucketOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BucketOperation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BucketOperation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BucketOperation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperation</summary>
+        public void GetBucketOperationRequestObject()
+        {
+            // Snippet: GetBucketOperation(GetBucketOperationRequest, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            GetBucketOperationRequest request = new GetBucketOperationRequest
+            {
+                BucketOperationName = BucketOperationName.FromProjectLocationJobBucketOperation("[PROJECT]", "[LOCATION]", "[JOB]", "[BUCKET_OPERATION]"),
+            };
+            // Make the request
+            BucketOperation response = storageBatchOperationsClient.GetBucketOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperationAsync</summary>
+        public async Task GetBucketOperationRequestObjectAsync()
+        {
+            // Snippet: GetBucketOperationAsync(GetBucketOperationRequest, CallSettings)
+            // Additional: GetBucketOperationAsync(GetBucketOperationRequest, CancellationToken)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBucketOperationRequest request = new GetBucketOperationRequest
+            {
+                BucketOperationName = BucketOperationName.FromProjectLocationJobBucketOperation("[PROJECT]", "[LOCATION]", "[JOB]", "[BUCKET_OPERATION]"),
+            };
+            // Make the request
+            BucketOperation response = await storageBatchOperationsClient.GetBucketOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperation</summary>
+        public void GetBucketOperation()
+        {
+            // Snippet: GetBucketOperation(string, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/bucketOperations/[BUCKET_OPERATION]";
+            // Make the request
+            BucketOperation response = storageBatchOperationsClient.GetBucketOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperationAsync</summary>
+        public async Task GetBucketOperationAsync()
+        {
+            // Snippet: GetBucketOperationAsync(string, CallSettings)
+            // Additional: GetBucketOperationAsync(string, CancellationToken)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/bucketOperations/[BUCKET_OPERATION]";
+            // Make the request
+            BucketOperation response = await storageBatchOperationsClient.GetBucketOperationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperation</summary>
+        public void GetBucketOperationResourceNames()
+        {
+            // Snippet: GetBucketOperation(BucketOperationName, CallSettings)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = StorageBatchOperationsClient.Create();
+            // Initialize request argument(s)
+            BucketOperationName name = BucketOperationName.FromProjectLocationJobBucketOperation("[PROJECT]", "[LOCATION]", "[JOB]", "[BUCKET_OPERATION]");
+            // Make the request
+            BucketOperation response = storageBatchOperationsClient.GetBucketOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBucketOperationAsync</summary>
+        public async Task GetBucketOperationResourceNamesAsync()
+        {
+            // Snippet: GetBucketOperationAsync(BucketOperationName, CallSettings)
+            // Additional: GetBucketOperationAsync(BucketOperationName, CancellationToken)
+            // Create client
+            StorageBatchOperationsClient storageBatchOperationsClient = await StorageBatchOperationsClient.CreateAsync();
+            // Initialize request argument(s)
+            BucketOperationName name = BucketOperationName.FromProjectLocationJobBucketOperation("[PROJECT]", "[LOCATION]", "[JOB]", "[BUCKET_OPERATION]");
+            // Make the request
+            BucketOperation response = await storageBatchOperationsClient.GetBucketOperationAsync(name);
             // End snippet
         }
     }
