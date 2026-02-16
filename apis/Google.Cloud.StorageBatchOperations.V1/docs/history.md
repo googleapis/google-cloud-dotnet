@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-02-16
+
+### New features
+
+- Add QUEUED state to Storage Batch Operations API
+- Add bucket operations
+- Add `is_multi_bucket_job` output field added to StorageBatchOperations Job
+
 ## Version 1.0.0-beta03, released 2025-12-15
 
 ### New features
