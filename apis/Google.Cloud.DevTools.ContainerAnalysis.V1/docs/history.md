@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.14.0, released 2026-02-16
+
+### New features
+
+- A new field `registry` is added to message `.grafeas.v1.BaseImage`
+- A new field `advisory_publish_time` is added to message `.grafeas.v1.VulnerabilityNote`
+
 ## Version 3.13.0, released 2026-01-29
 
 ### New features
