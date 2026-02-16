@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.13.0, released 2026-02-16
+
+### New features
+
+- Add Natural Language Query Understanding fields and messages to DiscoveryEngine request, response, and datastore messages
+- Add CrowdingSpec to SearchRequest to set crowding settings
+- Add output-only field SemanticState to SearchResponse.
+
+### Documentation improvements
+
+- Update documentation for search and data store NLQ features
+- Other misc documentation updates
+
 ## Version 1.12.0, released 2025-11-05
 
 ### New features
