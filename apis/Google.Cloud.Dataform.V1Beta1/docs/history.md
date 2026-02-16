@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2026-02-16
+
+### New features
+
+- Update GCP Client Libraries in v1beta1 to support Folders, TeamFolders, and other relevant APIs
+
+### Documentation improvements
+
+- A comment for field `force` in message `.google.cloud.dataform.v1beta1.DeleteRepositoryRequest` is changed
+
 ## Version 1.0.0-beta10, released 2025-11-05
 
 ### New features
