@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.23.0, released 2026-02-16
+
+### New features
+
+- Add `ClusterType` to support creating Zero-Scale clusters
+
 ## Version 5.22.0, released 2025-11-05
 
 ### New features
