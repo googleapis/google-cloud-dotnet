@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-02-16
+
+### New features
+
+- Update Microsoft.Extensions.AI.Abstractions to 10.3.0 and add reasoning
+
 ## Version 1.0.0-beta04, released 2026-01-08
 
 ### Bug fixes
