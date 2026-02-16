@@ -4130,12 +4130,12 @@
         },
         {
             "id": "Google.Cloud.StorageBatchOperations.V1",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-12-15T14:11:45.544042765Z",
+            "releaseTimestamp": "2026-02-16T14:48:12.144188039Z",
             "lastGeneratedCommit": "fb371addb34b049d340ac5801c387237b415a810",
-            "lastReleasedCommit": "8f3e57f09707aeea497c82ba9fa96092c4d67d1c",
+            "lastReleasedCommit": "fb371addb34b049d340ac5801c387237b415a810",
             "apiPaths": [
                 "google/cloud/storagebatchoperations/v1"
             ],
