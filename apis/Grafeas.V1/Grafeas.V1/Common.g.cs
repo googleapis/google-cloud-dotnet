@@ -32,21 +32,21 @@ namespace Grafeas.V1 {
             "cGVTaWduYXR1cmUiLwoRRW52ZWxvcGVTaWduYXR1cmUSCwoDc2lnGAEgASgM",
             "Eg0KBWtleWlkGAIgASgJIlIKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
             "ASABKAkSLwoNbGF5ZXJfZGV0YWlscxgCIAEoCzIYLmdyYWZlYXMudjEuTGF5",
-            "ZXJEZXRhaWxzIkIKCUJhc2VJbWFnZRIMCgRuYW1lGAEgASgJEhIKCnJlcG9z",
-            "aXRvcnkYAiABKAkSEwoLbGF5ZXJfY291bnQYAyABKAUifQoMTGF5ZXJEZXRh",
-            "aWxzEg0KBWluZGV4GAEgASgFEg8KB2RpZmZfaWQYAiABKAkSEAoIY2hhaW5f",
-            "aWQYBSABKAkSDwoHY29tbWFuZBgDIAEoCRIqCgtiYXNlX2ltYWdlcxgEIAMo",
-            "CzIVLmdyYWZlYXMudjEuQmFzZUltYWdlIi8KB0xpY2Vuc2USEgoKZXhwcmVz",
-            "c2lvbhgBIAEoCRIQCghjb21tZW50cxgCIAEoCSIsCgZEaWdlc3QSDAoEYWxn",
-            "bxgBIAEoCRIUCgxkaWdlc3RfYnl0ZXMYAiABKAwq/AEKCE5vdGVLaW5kEhkK",
-            "FU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZVTE5FUkFCSUxJVFkQARIJ",
-            "CgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFDS0FHRRAEEg4KCkRFUExPWU1F",
-            "TlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRFU1RBVElPThAHEgsKB1VQR1JB",
-            "REUQCBIOCgpDT01QTElBTkNFEAkSFAoQRFNTRV9BVFRFU1RBVElPThAKEhwK",
-            "GFZVTE5FUkFCSUxJVFlfQVNTRVNTTUVOVBALEhIKDlNCT01fUkVGRVJFTkNF",
-            "EAwSCgoGU0VDUkVUEA1CUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVh",
-            "c6ICA0dSQWIGcHJvdG8z"));
+            "ZXJEZXRhaWxzIlQKCUJhc2VJbWFnZRIMCgRuYW1lGAEgASgJEhIKCnJlcG9z",
+            "aXRvcnkYAiABKAkSEwoLbGF5ZXJfY291bnQYAyABKAUSEAoIcmVnaXN0cnkY",
+            "BCABKAkifQoMTGF5ZXJEZXRhaWxzEg0KBWluZGV4GAEgASgFEg8KB2RpZmZf",
+            "aWQYAiABKAkSEAoIY2hhaW5faWQYBSABKAkSDwoHY29tbWFuZBgDIAEoCRIq",
+            "CgtiYXNlX2ltYWdlcxgEIAMoCzIVLmdyYWZlYXMudjEuQmFzZUltYWdlIi8K",
+            "B0xpY2Vuc2USEgoKZXhwcmVzc2lvbhgBIAEoCRIQCghjb21tZW50cxgCIAEo",
+            "CSIsCgZEaWdlc3QSDAoEYWxnbxgBIAEoCRIUCgxkaWdlc3RfYnl0ZXMYAiAB",
+            "KAwq/AEKCE5vdGVLaW5kEhkKFU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEK",
+            "DVZVTE5FUkFCSUxJVFkQARIJCgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFD",
+            "S0FHRRAEEg4KCkRFUExPWU1FTlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRF",
+            "U1RBVElPThAHEgsKB1VQR1JBREUQCBIOCgpDT01QTElBTkNFEAkSFAoQRFNT",
+            "RV9BVFRFU1RBVElPThAKEhwKGFZVTE5FUkFCSUxJVFlfQVNTRVNTTUVOVBAL",
+            "EhIKDlNCT01fUkVGRVJFTkNFEAwSCgoGU0VDUkVUEA1CUQoNaW8uZ3JhZmVh",
+            "cy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -55,7 +55,7 @@ namespace Grafeas.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Envelope), global::Grafeas.V1.Envelope.Parser, new[]{ "Payload", "PayloadType", "Signatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.EnvelopeSignature), global::Grafeas.V1.EnvelopeSignature.Parser, new[]{ "Sig", "Keyid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileLocation), global::Grafeas.V1.FileLocation.Parser, new[]{ "FilePath", "LayerDetails" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BaseImage), global::Grafeas.V1.BaseImage.Parser, new[]{ "Name", "Repository", "LayerCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BaseImage), global::Grafeas.V1.BaseImage.Parser, new[]{ "Name", "Repository", "LayerCount", "Registry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.LayerDetails), global::Grafeas.V1.LayerDetails.Parser, new[]{ "Index", "DiffId", "ChainId", "Command", "BaseImages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.License), global::Grafeas.V1.License.Parser, new[]{ "Expression", "Comments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Digest), global::Grafeas.V1.Digest.Parser, new[]{ "Algo", "DigestBytes" }, null, null, null, null)
@@ -1417,6 +1417,7 @@ namespace Grafeas.V1 {
       name_ = other.name_;
       repository_ = other.repository_;
       layerCount_ = other.layerCount_;
+      registry_ = other.registry_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1471,6 +1472,21 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "registry" field.</summary>
+    public const int RegistryFieldNumber = 4;
+    private string registry_ = "";
+    /// <summary>
+    /// The registry in which the base image is from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Registry {
+      get { return registry_; }
+      set {
+        registry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1489,6 +1505,7 @@ namespace Grafeas.V1 {
       if (Name != other.Name) return false;
       if (Repository != other.Repository) return false;
       if (LayerCount != other.LayerCount) return false;
+      if (Registry != other.Registry) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1499,6 +1516,7 @@ namespace Grafeas.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Repository.Length != 0) hash ^= Repository.GetHashCode();
       if (LayerCount != 0) hash ^= LayerCount.GetHashCode();
+      if (Registry.Length != 0) hash ^= Registry.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1529,6 +1547,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(LayerCount);
       }
+      if (Registry.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Registry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1551,6 +1573,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(LayerCount);
       }
+      if (Registry.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Registry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1569,6 +1595,9 @@ namespace Grafeas.V1 {
       }
       if (LayerCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(LayerCount);
+      }
+      if (Registry.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Registry);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1590,6 +1619,9 @@ namespace Grafeas.V1 {
       }
       if (other.LayerCount != 0) {
         LayerCount = other.LayerCount;
+      }
+      if (other.Registry.Length != 0) {
+        Registry = other.Registry;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1618,6 +1650,10 @@ namespace Grafeas.V1 {
             LayerCount = input.ReadInt32();
             break;
           }
+          case 34: {
+            Registry = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1643,6 +1679,10 @@ namespace Grafeas.V1 {
           }
           case 24: {
             LayerCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Registry = input.ReadString();
             break;
           }
         }
