@@ -1,0 +1,90 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.workloadmanager.v1",
+  "libraryPackage": "Google.Cloud.WorkloadManager.V1",
+  "services": {
+    "WorkloadManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WorkloadManagerClient",
+          "rpcs": {
+            "CreateEvaluation": {
+              "methods": [
+                "CreateEvaluation",
+                "CreateEvaluationAsync"
+              ]
+            },
+            "DeleteEvaluation": {
+              "methods": [
+                "DeleteEvaluation",
+                "DeleteEvaluationAsync"
+              ]
+            },
+            "DeleteExecution": {
+              "methods": [
+                "DeleteExecution",
+                "DeleteExecutionAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
+              ]
+            },
+            "GetExecution": {
+              "methods": [
+                "GetExecution",
+                "GetExecutionAsync"
+              ]
+            },
+            "ListEvaluations": {
+              "methods": [
+                "ListEvaluations",
+                "ListEvaluationsAsync"
+              ]
+            },
+            "ListExecutionResults": {
+              "methods": [
+                "ListExecutionResults",
+                "ListExecutionResultsAsync"
+              ]
+            },
+            "ListExecutions": {
+              "methods": [
+                "ListExecutions",
+                "ListExecutionsAsync"
+              ]
+            },
+            "ListRules": {
+              "methods": [
+                "ListRules",
+                "ListRulesAsync"
+              ]
+            },
+            "ListScannedResources": {
+              "methods": [
+                "ListScannedResources",
+                "ListScannedResourcesAsync"
+              ]
+            },
+            "RunEvaluation": {
+              "methods": [
+                "RunEvaluation",
+                "RunEvaluationAsync"
+              ]
+            },
+            "UpdateEvaluation": {
+              "methods": [
+                "UpdateEvaluation",
+                "UpdateEvaluationAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

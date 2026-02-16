@@ -1,0 +1,3341 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.WorkloadManager.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.workloadmanager.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_sync",
+      "title": "ListEvaluationsRequestObject",
+      "description": "Snippet for ListEvaluations",
+      "file": "WorkloadManagerClient.ListEvaluationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_async",
+      "title": "ListEvaluationsRequestObjectAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "WorkloadManagerClient.ListEvaluationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_sync_flattened",
+      "title": "ListEvaluations",
+      "description": "Snippet for ListEvaluations",
+      "file": "WorkloadManagerClient.ListEvaluationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_async_flattened",
+      "title": "ListEvaluationsAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "WorkloadManagerClient.ListEvaluationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_sync_flattened_resourceNames",
+      "title": "ListEvaluationsResourceNames",
+      "description": "Snippet for ListEvaluations",
+      "file": "WorkloadManagerClient.ListEvaluationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluations",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListEvaluations_async_flattened_resourceNames",
+      "title": "ListEvaluationsResourceNamesAsync",
+      "description": "Snippet for ListEvaluationsAsync",
+      "file": "WorkloadManagerClient.ListEvaluationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvaluationsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListEvaluationsResponse, Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListEvaluations",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListEvaluations",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_sync",
+      "title": "GetEvaluationRequestObject",
+      "description": "Snippet for GetEvaluation",
+      "file": "WorkloadManagerClient.GetEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Evaluation",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_async",
+      "title": "GetEvaluationRequestObjectAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "WorkloadManagerClient.GetEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_sync_flattened",
+      "title": "GetEvaluation",
+      "description": "Snippet for GetEvaluation",
+      "file": "WorkloadManagerClient.GetEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Evaluation",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_async_flattened",
+      "title": "GetEvaluationAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "WorkloadManagerClient.GetEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_sync_flattened_resourceNames",
+      "title": "GetEvaluationResourceNames",
+      "description": "Snippet for GetEvaluation",
+      "file": "WorkloadManagerClient.GetEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Evaluation",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetEvaluation_async_flattened_resourceNames",
+      "title": "GetEvaluationResourceNamesAsync",
+      "description": "Snippet for GetEvaluationAsync",
+      "file": "WorkloadManagerClient.GetEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Evaluation>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_sync",
+      "title": "CreateEvaluationRequestObject",
+      "description": "Snippet for CreateEvaluation",
+      "file": "WorkloadManagerClient.CreateEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.CreateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_async",
+      "title": "CreateEvaluationRequestObjectAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "WorkloadManagerClient.CreateEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.CreateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_sync_flattened",
+      "title": "CreateEvaluation",
+      "description": "Snippet for CreateEvaluation",
+      "file": "WorkloadManagerClient.CreateEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "evaluationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_async_flattened",
+      "title": "CreateEvaluationAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "WorkloadManagerClient.CreateEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "evaluationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_sync_flattened_resourceNames",
+      "title": "CreateEvaluationResourceNames",
+      "description": "Snippet for CreateEvaluation",
+      "file": "WorkloadManagerClient.CreateEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "evaluationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_CreateEvaluation_async_flattened_resourceNames",
+      "title": "CreateEvaluationResourceNamesAsync",
+      "description": "Snippet for CreateEvaluationAsync",
+      "file": "WorkloadManagerClient.CreateEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.CreateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "System.String",
+            "name": "evaluationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "CreateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.CreateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_UpdateEvaluation_sync",
+      "title": "UpdateEvaluationRequestObject",
+      "description": "Snippet for UpdateEvaluation",
+      "file": "WorkloadManagerClient.UpdateEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.UpdateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.UpdateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.UpdateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_UpdateEvaluation_async",
+      "title": "UpdateEvaluationRequestObjectAsync",
+      "description": "Snippet for UpdateEvaluationAsync",
+      "file": "WorkloadManagerClient.UpdateEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.UpdateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.UpdateEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.UpdateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_UpdateEvaluation_sync_flattened",
+      "title": "UpdateEvaluation",
+      "description": "Snippet for UpdateEvaluation",
+      "file": "WorkloadManagerClient.UpdateEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.UpdateEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.UpdateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_UpdateEvaluation_async_flattened",
+      "title": "UpdateEvaluationAsync",
+      "description": "Snippet for UpdateEvaluationAsync",
+      "file": "WorkloadManagerClient.UpdateEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.UpdateEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Evaluation",
+            "name": "evaluation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Evaluation, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.UpdateEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_sync",
+      "title": "DeleteEvaluationRequestObject",
+      "description": "Snippet for DeleteEvaluation",
+      "file": "WorkloadManagerClient.DeleteEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.DeleteEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_async",
+      "title": "DeleteEvaluationRequestObjectAsync",
+      "description": "Snippet for DeleteEvaluationAsync",
+      "file": "WorkloadManagerClient.DeleteEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.DeleteEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_sync_flattened",
+      "title": "DeleteEvaluation",
+      "description": "Snippet for DeleteEvaluation",
+      "file": "WorkloadManagerClient.DeleteEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_async_flattened",
+      "title": "DeleteEvaluationAsync",
+      "description": "Snippet for DeleteEvaluationAsync",
+      "file": "WorkloadManagerClient.DeleteEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_sync_flattened_resourceNames",
+      "title": "DeleteEvaluationResourceNames",
+      "description": "Snippet for DeleteEvaluation",
+      "file": "WorkloadManagerClient.DeleteEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteEvaluation_async_flattened_resourceNames",
+      "title": "DeleteEvaluationResourceNamesAsync",
+      "description": "Snippet for DeleteEvaluationAsync",
+      "file": "WorkloadManagerClient.DeleteEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_sync",
+      "title": "ListExecutionsRequestObject",
+      "description": "Snippet for ListExecutions",
+      "file": "WorkloadManagerClient.ListExecutionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_async",
+      "title": "ListExecutionsRequestObjectAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "WorkloadManagerClient.ListExecutionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_sync_flattened",
+      "title": "ListExecutions",
+      "description": "Snippet for ListExecutions",
+      "file": "WorkloadManagerClient.ListExecutionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_async_flattened",
+      "title": "ListExecutionsAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "WorkloadManagerClient.ListExecutionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_sync_flattened_resourceNames",
+      "title": "ListExecutionsResourceNames",
+      "description": "Snippet for ListExecutions",
+      "file": "WorkloadManagerClient.ListExecutionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutions_async_flattened_resourceNames",
+      "title": "ListExecutionsResourceNamesAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "WorkloadManagerClient.ListExecutionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionsResponse, Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutions",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_sync",
+      "title": "GetExecutionRequestObject",
+      "description": "Snippet for GetExecution",
+      "file": "WorkloadManagerClient.GetExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Execution",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_async",
+      "title": "GetExecutionRequestObjectAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "WorkloadManagerClient.GetExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_sync_flattened",
+      "title": "GetExecution",
+      "description": "Snippet for GetExecution",
+      "file": "WorkloadManagerClient.GetExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Execution",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_async_flattened",
+      "title": "GetExecutionAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "WorkloadManagerClient.GetExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_sync_flattened_resourceNames",
+      "title": "GetExecutionResourceNames",
+      "description": "Snippet for GetExecution",
+      "file": "WorkloadManagerClient.GetExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.Execution",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_GetExecution_async_flattened_resourceNames",
+      "title": "GetExecutionResourceNamesAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "WorkloadManagerClient.GetExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.Execution>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.GetExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_sync",
+      "title": "RunEvaluationRequestObject",
+      "description": "Snippet for RunEvaluation",
+      "file": "WorkloadManagerClient.RunEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.RunEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_async",
+      "title": "RunEvaluationRequestObjectAsync",
+      "description": "Snippet for RunEvaluationAsync",
+      "file": "WorkloadManagerClient.RunEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.RunEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_sync_flattened",
+      "title": "RunEvaluation",
+      "description": "Snippet for RunEvaluation",
+      "file": "WorkloadManagerClient.RunEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_async_flattened",
+      "title": "RunEvaluationAsync",
+      "description": "Snippet for RunEvaluationAsync",
+      "file": "WorkloadManagerClient.RunEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_sync_flattened_resourceNames",
+      "title": "RunEvaluationResourceNames",
+      "description": "Snippet for RunEvaluation",
+      "file": "WorkloadManagerClient.RunEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluation",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_RunEvaluation_async_flattened_resourceNames",
+      "title": "RunEvaluationResourceNamesAsync",
+      "description": "Snippet for RunEvaluationAsync",
+      "file": "WorkloadManagerClient.RunEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.RunEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadManager.V1.Execution, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "RunEvaluation",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.RunEvaluation",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_sync",
+      "title": "DeleteExecutionRequestObject",
+      "description": "Snippet for DeleteExecution",
+      "file": "WorkloadManagerClient.DeleteExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.DeleteExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_async",
+      "title": "DeleteExecutionRequestObjectAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "WorkloadManagerClient.DeleteExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.DeleteExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_sync_flattened",
+      "title": "DeleteExecution",
+      "description": "Snippet for DeleteExecution",
+      "file": "WorkloadManagerClient.DeleteExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_async_flattened",
+      "title": "DeleteExecutionAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "WorkloadManagerClient.DeleteExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_sync_flattened_resourceNames",
+      "title": "DeleteExecutionResourceNames",
+      "description": "Snippet for DeleteExecution",
+      "file": "WorkloadManagerClient.DeleteExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecution",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_DeleteExecution_async_flattened_resourceNames",
+      "title": "DeleteExecutionResourceNamesAsync",
+      "description": "Snippet for DeleteExecutionAsync",
+      "file": "WorkloadManagerClient.DeleteExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExecutionAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.DeleteExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.WorkloadManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteExecution",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.DeleteExecution",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutionResults_sync",
+      "title": "ListExecutionResultsRequestObject",
+      "description": "Snippet for ListExecutionResults",
+      "file": "WorkloadManagerClient.ListExecutionResultsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionResults",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListExecutionResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionResultsResponse, Google.Cloud.WorkloadManager.V1.ExecutionResult>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutionResults",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutionResults",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutionResults_async",
+      "title": "ListExecutionResultsRequestObjectAsync",
+      "description": "Snippet for ListExecutionResultsAsync",
+      "file": "WorkloadManagerClient.ListExecutionResultsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionResultsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListExecutionResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionResultsResponse, Google.Cloud.WorkloadManager.V1.ExecutionResult>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutionResults",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutionResults",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutionResults_sync_flattened",
+      "title": "ListExecutionResults",
+      "description": "Snippet for ListExecutionResults",
+      "file": "WorkloadManagerClient.ListExecutionResultsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionResults",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionResults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionResultsResponse, Google.Cloud.WorkloadManager.V1.ExecutionResult>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutionResults",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutionResults",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListExecutionResults_async_flattened",
+      "title": "ListExecutionResultsAsync",
+      "description": "Snippet for ListExecutionResultsAsync",
+      "file": "WorkloadManagerClient.ListExecutionResultsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionResultsAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListExecutionResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListExecutionResultsResponse, Google.Cloud.WorkloadManager.V1.ExecutionResult>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListExecutionResults",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListExecutionResults",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_sync",
+      "title": "ListRulesRequestObject",
+      "description": "Snippet for ListRules",
+      "file": "WorkloadManagerClient.ListRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.ListRulesResponse",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_async",
+      "title": "ListRulesRequestObjectAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "WorkloadManagerClient.ListRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.ListRulesResponse>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_sync_flattened",
+      "title": "ListRules",
+      "description": "Snippet for ListRules",
+      "file": "WorkloadManagerClient.ListRulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.ListRulesResponse",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_async_flattened",
+      "title": "ListRulesAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "WorkloadManagerClient.ListRulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.ListRulesResponse>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_sync_flattened_resourceNames",
+      "title": "ListRulesResourceNames",
+      "description": "Snippet for ListRules",
+      "file": "WorkloadManagerClient.ListRulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRules",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WorkloadManager.V1.ListRulesResponse",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListRules_async_flattened_resourceNames",
+      "title": "ListRulesResourceNamesAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "WorkloadManagerClient.ListRulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WorkloadManager.V1.ListRulesResponse>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListRules",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListScannedResources_sync",
+      "title": "ListScannedResourcesRequestObject",
+      "description": "Snippet for ListScannedResources",
+      "file": "WorkloadManagerClient.ListScannedResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListScannedResources",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListScannedResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListScannedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListScannedResourcesResponse, Google.Cloud.WorkloadManager.V1.ScannedResource>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListScannedResources",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListScannedResources",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListScannedResources_async",
+      "title": "ListScannedResourcesRequestObjectAsync",
+      "description": "Snippet for ListScannedResourcesAsync",
+      "file": "WorkloadManagerClient.ListScannedResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListScannedResourcesAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListScannedResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadManager.V1.ListScannedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListScannedResourcesResponse, Google.Cloud.WorkloadManager.V1.ScannedResource>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListScannedResources",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListScannedResources",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListScannedResources_sync_flattened",
+      "title": "ListScannedResources",
+      "description": "Snippet for ListScannedResources",
+      "file": "WorkloadManagerClient.ListScannedResourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListScannedResources",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListScannedResources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WorkloadManager.V1.ListScannedResourcesResponse, Google.Cloud.WorkloadManager.V1.ScannedResource>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListScannedResources",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListScannedResources",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadmanager_v1_generated_WorkloadManager_ListScannedResources_async_flattened",
+      "title": "ListScannedResourcesAsync",
+      "description": "Snippet for ListScannedResourcesAsync",
+      "file": "WorkloadManagerClient.ListScannedResourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListScannedResourcesAsync",
+        "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient.ListScannedResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WorkloadManager.V1.ListScannedResourcesResponse, Google.Cloud.WorkloadManager.V1.ScannedResource>",
+        "client": {
+          "shortName": "WorkloadManagerClient",
+          "fullName": "Google.Cloud.WorkloadManager.V1.WorkloadManagerClient"
+        },
+        "method": {
+          "shortName": "ListScannedResources",
+          "fullName": "google.cloud.workloadmanager.v1.WorkloadManager.ListScannedResources",
+          "service": {
+            "shortName": "WorkloadManager",
+            "fullName": "google.cloud.workloadmanager.v1.WorkloadManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

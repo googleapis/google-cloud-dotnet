@@ -4872,6 +4872,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "df13ea51961ff225a825beab9ca112188de367a3",
             "apiPaths": [
                 "google/cloud/workloadmanager/v1"
             ],
