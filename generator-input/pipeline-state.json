@@ -4841,12 +4841,12 @@
         },
         {
             "id": "Google.Cloud.AuditManager.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-29T19:10:52.926648672Z",
+            "releaseTimestamp": "2026-02-16T14:53:45.772151908Z",
             "lastGeneratedCommit": "3b4ba526fe31b50e697eb1f388496ea15a5361f2",
-            "lastReleasedCommit": "cfe62b3c5ceb9f81879c61480f26707980534462",
+            "lastReleasedCommit": "3b4ba526fe31b50e697eb1f388496ea15a5361f2",
             "apiPaths": [
                 "google/cloud/auditmanager/v1"
             ],
