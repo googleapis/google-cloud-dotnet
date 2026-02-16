@@ -4858,7 +4858,7 @@
             "id": "Google.Cloud.Ces.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "c99e8a29e1b568d183445adccde5bf9d6437cf00",
             "apiPaths": [
                 "google/cloud/ces/v1"
