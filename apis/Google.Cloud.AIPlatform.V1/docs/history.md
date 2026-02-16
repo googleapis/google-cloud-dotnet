@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.64.0, released 2026-02-16
+
+### New features
+
+- Add max_concurrent_active_run_count field to Schedule message
+
 ## Version 3.63.0, released 2026-02-09
 
 ### New features
