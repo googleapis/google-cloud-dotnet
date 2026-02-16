@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-02-16
+
+### New features
+
+- Adding Method QueryIssues of Database Center API v1beta
+
+### Documentation improvements
+
+- A comment for field `maintenance_version` in message `.google.cloud.databasecenter.v1beta.MaintenanceInfo` is changed
+- A comment for field `filter` in message `.google.cloud.databasecenter.v1beta.QueryDatabaseResourceGroupsRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.databasecenter.v1beta.QueryDatabaseResourceGroupsRequest` is changed
+- A comment for field `filter` in message `.google.cloud.databasecenter.v1beta.AggregateIssueStatsRequest` is changed
+- A comment for field `filter` in message `.google.cloud.databasecenter.v1beta.AggregateFleetRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.databasecenter.v1beta.AggregateFleetRequest` is changed
+- A comment for message `AggregateFleetResponse` is changed
+
 ## Version 1.0.0-beta04, released 2026-01-19
 
 ### New features
