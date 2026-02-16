@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta19, released 2026-02-16
+
+### New features
+
+- Add `googleMapsTypeLabel` field to show type information on Google Maps
+- Add `googleMapsLinks` field for links to different actions on Google Maps
+
+### Bug fixes
+
+- An existing field `topic` is removed from message `.google.maps.places.v1.ContentBlock`
+- An existing field `references` is removed from message `.google.maps.places.v1.ContentBlock`
+
+### Documentation improvements
+
+- A comment for field `reviews` in message `.google.maps.places.v1.ContextualContent` is changed
+- A comment for field `photos` in message `.google.maps.places.v1.ContextualContent` is changed
+
 ## Version 1.0.0-beta18, released 2025-11-06
 
 ### New features
