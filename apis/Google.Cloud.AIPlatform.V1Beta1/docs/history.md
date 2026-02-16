@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.0.0-beta69, released 2026-02-16
+
+### New features
+
+- Add model_armor_config to GeminiExample
+- A new field `predefined_metric_spec` is added to message `.google.cloud.aiplatform.v1beta1.Metric`
+- A new field `computation_based_metric_spec` is added to message `.google.cloud.aiplatform.v1beta1.Metric`
+- A new field `llm_based_metric_spec` is added to message `.google.cloud.aiplatform.v1beta1.Metric`
+- A new field `metric_results` is added to message `.google.cloud.aiplatform.v1beta1.EvaluateInstancesResponse`
+- A new message `MetricResult` is added
+- A new message `PredefinedMetricSpec` is added
+- A new message `ComputationBasedMetricSpec` is added
+- A new message `LLMBasedMetricSpec` is added
+
+### Documentation improvements
+
+- A comment for message `EvaluateDatasetResponse` is changed
+- A comment for field `aggregation_output` in message `.google.cloud.aiplatform.v1beta1.EvaluateDatasetResponse` is changed
+- A comment for field `output_info` in message `.google.cloud.aiplatform.v1beta1.EvaluateDatasetResponse` is changed
+- A comment for message `OutputInfo` is changed
+- A comment for message `Metric` is changed
+- A comment for enum `AggregationMetric` is changed
+
 ## Version 1.0.0-beta68, released 2026-02-09
 
 ### New features
