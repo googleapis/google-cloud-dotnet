@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.22.0, released 2026-02-16
+
+### New features
+
+- Added DeleteCryptoKey and DeleteCryptoKeyVersion RPCs to permanently remove resources
+- Introduced the RetiredResource resource to track records of deleted keys and prevent the reuse of their resource names
+- Added ListRetiredResources and GetRetiredResource RPCs to manage and view these records
+
 ## Version 3.21.0, released 2026-01-26
 
 ### New features
