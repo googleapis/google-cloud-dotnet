@@ -34,42 +34,51 @@ namespace Google.Cloud.Kms.V1 {
             "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
             "AiJWChdHZXRBdXRva2V5Q29uZmlnUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3g",
             "QQL6QScKJWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0F1dG9rZXlDb25maWci",
-            "0AIKDUF1dG9rZXlDb25maWcSEQoEbmFtZRgBIAEoCUID4EEIEhgKC2tleV9w",
+            "hwUKDUF1dG9rZXlDb25maWcSEQoEbmFtZRgBIAEoCUID4EEIEhgKC2tleV9w",
             "cm9qZWN0GAIgASgJQgPgQQESPAoFc3RhdGUYBCABKA4yKC5nb29nbGUuY2xv",
             "dWQua21zLnYxLkF1dG9rZXlDb25maWcuU3RhdGVCA+BBAxIRCgRldGFnGAYg",
-            "ASgJQgPgQQEiVgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZB",
-            "Q1RJVkUQARIXChNLRVlfUFJPSkVDVF9ERUxFVEVEEAISEQoNVU5JTklUSUFM",
-            "SVpFRBADOmnqQWYKJWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0F1dG9rZXlD",
-            "b25maWcSHmZvbGRlcnMve2ZvbGRlcn0vYXV0b2tleUNvbmZpZyoOYXV0b2tl",
-            "eUNvbmZpZ3MyDWF1dG9rZXlDb25maWciaAohU2hvd0VmZmVjdGl2ZUF1dG9r",
-            "ZXlDb25maWdSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91",
-            "ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0IjkKIlNo",
-            "b3dFZmZlY3RpdmVBdXRva2V5Q29uZmlnUmVzcG9uc2USEwoLa2V5X3Byb2pl",
-            "Y3QYASABKAkyyAUKDEF1dG9rZXlBZG1pbhLSAQoTVXBkYXRlQXV0b2tleUNv",
-            "bmZpZxIvLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQXV0b2tleUNvbmZp",
-            "Z1JlcXVlc3QaIi5nb29nbGUuY2xvdWQua21zLnYxLkF1dG9rZXlDb25maWci",
-            "ZtpBGmF1dG9rZXlfY29uZmlnLHVwZGF0ZV9tYXNrgtPkkwJDMjEvdjEve2F1",
-            "dG9rZXlfY29uZmlnLm5hbWU9Zm9sZGVycy8qL2F1dG9rZXlDb25maWd9Og5h",
-            "dXRva2V5X2NvbmZpZxKXAQoQR2V0QXV0b2tleUNvbmZpZxIsLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuR2V0QXV0b2tleUNvbmZpZ1JlcXVlc3QaIi5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkF1dG9rZXlDb25maWciMdpBBG5hbWWC0+STAiQSIi92",
-            "MS97bmFtZT1mb2xkZXJzLyovYXV0b2tleUNvbmZpZ30S0gEKGlNob3dFZmZl",
-            "Y3RpdmVBdXRva2V5Q29uZmlnEjYuZ29vZ2xlLmNsb3VkLmttcy52MS5TaG93",
-            "RWZmZWN0aXZlQXV0b2tleUNvbmZpZ1JlcXVlc3QaNy5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLlNob3dFZmZlY3RpdmVBdXRva2V5Q29uZmlnUmVzcG9uc2UiQ9pB",
-            "BnBhcmVudILT5JMCNBIyL3YxL3twYXJlbnQ9cHJvamVjdHMvKn06c2hvd0Vm",
-            "ZmVjdGl2ZUF1dG9rZXlDb25maWcadMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMu",
-            "Y29t0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "a21zQlkKF2NvbS5nb29nbGUuY2xvdWQua21zLnYxQhFBdXRva2V5QWRtaW5Q",
-            "cm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2ttcy9hcGl2MS9rbXNwYjtr",
-            "bXNwYmIGcHJvdG8z"));
+            "ASgJQgPgQQESZQoba2V5X3Byb2plY3RfcmVzb2x1dGlvbl9tb2RlGAggASgO",
+            "MjsuZ29vZ2xlLmNsb3VkLmttcy52MS5BdXRva2V5Q29uZmlnLktleVByb2pl",
+            "Y3RSZXNvbHV0aW9uTW9kZUID4EEBInkKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGQUNUSVZFEAESFwoTS0VZX1BST0pFQ1RfREVMRVRFRBAC",
+            "EhEKDVVOSU5JVElBTElaRUQQAxIhCh1LRVlfUFJPSkVDVF9QRVJNSVNTSU9O",
+            "X0RFTklFRBAEIoYBChhLZXlQcm9qZWN0UmVzb2x1dGlvbk1vZGUSKwonS0VZ",
+            "X1BST0pFQ1RfUkVTT0xVVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASGQoVREVE",
+            "SUNBVEVEX0tFWV9QUk9KRUNUEAESFAoQUkVTT1VSQ0VfUFJPSkVDVBACEgwK",
+            "CERJU0FCTEVEEAM6jAHqQYgBCiVjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9B",
+            "dXRva2V5Q29uZmlnEh5mb2xkZXJzL3tmb2xkZXJ9L2F1dG9rZXlDb25maWcS",
+            "IHByb2plY3RzL3twcm9qZWN0fS9hdXRva2V5Q29uZmlnKg5hdXRva2V5Q29u",
+            "ZmlnczINYXV0b2tleUNvbmZpZyJoCiFTaG93RWZmZWN0aXZlQXV0b2tleUNv",
+            "bmZpZ1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVz",
+            "b3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QiOQoiU2hvd0Vm",
+            "ZmVjdGl2ZUF1dG9rZXlDb25maWdSZXNwb25zZRITCgtrZXlfcHJvamVjdBgB",
+            "IAEoCTK3BgoMQXV0b2tleUFkbWluEpoCChNVcGRhdGVBdXRva2V5Q29uZmln",
+            "Ei8uZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRhdGVBdXRva2V5Q29uZmlnUmVx",
+            "dWVzdBoiLmdvb2dsZS5jbG91ZC5rbXMudjEuQXV0b2tleUNvbmZpZyKtAdpB",
+            "GmF1dG9rZXlfY29uZmlnLHVwZGF0ZV9tYXNrgtPkkwKJATIxL3YxL3thdXRv",
+            "a2V5X2NvbmZpZy5uYW1lPWZvbGRlcnMvKi9hdXRva2V5Q29uZmlnfToOYXV0",
+            "b2tleV9jb25maWdaRDIyL3YxL3thdXRva2V5X2NvbmZpZy5uYW1lPXByb2pl",
+            "Y3RzLyovYXV0b2tleUNvbmZpZ306DmF1dG9rZXlfY29uZmlnEr4BChBHZXRB",
+            "dXRva2V5Q29uZmlnEiwuZ29vZ2xlLmNsb3VkLmttcy52MS5HZXRBdXRva2V5",
+            "Q29uZmlnUmVxdWVzdBoiLmdvb2dsZS5jbG91ZC5rbXMudjEuQXV0b2tleUNv",
+            "bmZpZyJY2kEEbmFtZYLT5JMCSxIiL3YxL3tuYW1lPWZvbGRlcnMvKi9hdXRv",
+            "a2V5Q29uZmlnfVolEiMvdjEve25hbWU9cHJvamVjdHMvKi9hdXRva2V5Q29u",
+            "ZmlnfRLSAQoaU2hvd0VmZmVjdGl2ZUF1dG9rZXlDb25maWcSNi5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLlNob3dFZmZlY3RpdmVBdXRva2V5Q29uZmlnUmVxdWVz",
+            "dBo3Lmdvb2dsZS5jbG91ZC5rbXMudjEuU2hvd0VmZmVjdGl2ZUF1dG9rZXlD",
+            "b25maWdSZXNwb25zZSJD2kEGcGFyZW50gtPkkwI0EjIvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfTpzaG93RWZmZWN0aXZlQXV0b2tleUNvbmZpZxp0ykEXY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb23SQVdodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWRrbXNCWQoXY29tLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djFCEUF1dG9rZXlBZG1pblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "a21zL2FwaXYxL2ttc3BiO2ttc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateAutokeyConfigRequest), global::Google.Cloud.Kms.V1.UpdateAutokeyConfigRequest.Parser, new[]{ "AutokeyConfig", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetAutokeyConfigRequest), global::Google.Cloud.Kms.V1.GetAutokeyConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AutokeyConfig), global::Google.Cloud.Kms.V1.AutokeyConfig.Parser, new[]{ "Name", "KeyProject", "State", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.AutokeyConfig.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AutokeyConfig), global::Google.Cloud.Kms.V1.AutokeyConfig.Parser, new[]{ "Name", "KeyProject", "State", "Etag", "KeyProjectResolutionMode" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.AutokeyConfig.Types.State), typeof(global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigRequest), global::Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigRequest.Parser, new[]{ "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse), global::Google.Cloud.Kms.V1.ShowEffectiveAutokeyConfigResponse.Parser, new[]{ "KeyProject" }, null, null, null, null)
           }));
@@ -390,7 +399,8 @@ namespace Google.Cloud.Kms.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-    /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+    /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+    /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -576,6 +586,7 @@ namespace Google.Cloud.Kms.V1 {
       keyProject_ = other.keyProject_;
       state_ = other.state_;
       etag_ = other.etag_;
+      keyProjectResolutionMode_ = other.keyProjectResolutionMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -590,7 +601,8 @@ namespace Google.Cloud.Kms.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-    /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+    /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+    /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -659,6 +671,23 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "key_project_resolution_mode" field.</summary>
+    public const int KeyProjectResolutionModeFieldNumber = 8;
+    private global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode keyProjectResolutionMode_ = global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified;
+    /// <summary>
+    /// Optional. KeyProjectResolutionMode for the AutokeyConfig.
+    /// Valid values are `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or
+    /// `DISABLED`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode KeyProjectResolutionMode {
+      get { return keyProjectResolutionMode_; }
+      set {
+        keyProjectResolutionMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -678,6 +707,7 @@ namespace Google.Cloud.Kms.V1 {
       if (KeyProject != other.KeyProject) return false;
       if (State != other.State) return false;
       if (Etag != other.Etag) return false;
+      if (KeyProjectResolutionMode != other.KeyProjectResolutionMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -689,6 +719,7 @@ namespace Google.Cloud.Kms.V1 {
       if (KeyProject.Length != 0) hash ^= KeyProject.GetHashCode();
       if (State != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (KeyProjectResolutionMode != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified) hash ^= KeyProjectResolutionMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -723,6 +754,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (KeyProjectResolutionMode != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) KeyProjectResolutionMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -749,6 +784,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (KeyProjectResolutionMode != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) KeyProjectResolutionMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -770,6 +809,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (KeyProjectResolutionMode != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KeyProjectResolutionMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -794,6 +836,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.KeyProjectResolutionMode != global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode.Unspecified) {
+        KeyProjectResolutionMode = other.KeyProjectResolutionMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -826,6 +871,10 @@ namespace Google.Cloud.Kms.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 64: {
+            KeyProjectResolutionMode = (global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -855,6 +904,10 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 50: {
             Etag = input.ReadString();
+            break;
+          }
+          case 64: {
+            KeyProjectResolutionMode = (global::Google.Cloud.Kms.V1.AutokeyConfig.Types.KeyProjectResolutionMode) input.ReadEnum();
             break;
           }
         }
@@ -889,6 +942,48 @@ namespace Google.Cloud.Kms.V1 {
         /// uninitialized state.
         /// </summary>
         [pbr::OriginalName("UNINITIALIZED")] Uninitialized = 3,
+        /// <summary>
+        /// The service account lacks the necessary permissions in the key project to
+        /// configure Autokey.
+        /// </summary>
+        [pbr::OriginalName("KEY_PROJECT_PERMISSION_DENIED")] KeyProjectPermissionDenied = 4,
+      }
+
+      /// <summary>
+      /// Defines the resolution mode enum for the key project.
+      /// The
+      /// [KeyProjectResolutionMode][google.cloud.kms.v1.AutokeyConfig.KeyProjectResolutionMode]
+      /// determines the mechanism by which
+      /// [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] identifies a
+      /// [key_project][google.cloud.kms.v1.AutokeyConfig.key_project] at its
+      /// specific configuration node. This parameter also determines if Autokey can
+      /// be used within this project or folder.
+      /// </summary>
+      public enum KeyProjectResolutionMode {
+        /// <summary>
+        /// Default value. KeyProjectResolutionMode when not specified will act as
+        /// `DEDICATED_KEY_PROJECT`.
+        /// </summary>
+        [pbr::OriginalName("KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Keys are created in a dedicated project specified by `key_project`.
+        /// </summary>
+        [pbr::OriginalName("DEDICATED_KEY_PROJECT")] DedicatedKeyProject = 1,
+        /// <summary>
+        /// Keys are created in the same project as the resource requesting the key.
+        /// The `key_project` must not be set when this mode is used.
+        /// </summary>
+        [pbr::OriginalName("RESOURCE_PROJECT")] ResourceProject = 2,
+        /// <summary>
+        /// Disables the AutokeyConfig. When this mode is set, any AutokeyConfig
+        /// from higher levels in the resource hierarchy are ignored for this
+        /// resource and its descendants. This setting can be overridden
+        /// by a more specific configuration at a lower level. For example,
+        /// if Autokey is disabled on a folder, it can be re-enabled on a sub-folder
+        /// or project within that folder by setting a different mode (e.g.,
+        /// DEDICATED_KEY_PROJECT or RESOURCE_PROJECT).
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 3,
       }
 
     }
