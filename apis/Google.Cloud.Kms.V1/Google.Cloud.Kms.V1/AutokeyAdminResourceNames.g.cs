@@ -33,9 +33,14 @@ namespace Google.Cloud.Kms.V1
 
             /// <summary>A resource name with pattern <c>folders/{folder}/autokeyConfig</c>.</summary>
             Folder = 1,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/autokeyConfig</c>.</summary>
+            Project = 2,
         }
 
         private static gax::PathTemplate s_folder = new gax::PathTemplate("folders/{folder}/autokeyConfig");
+
+        private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/autokeyConfig");
 
         /// <summary>Creates a <see cref="AutokeyConfigName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -53,6 +58,14 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A new instance of <see cref="AutokeyConfigName"/> constructed from the provided ids.</returns>
         public static AutokeyConfigName FromFolder(string folderId) =>
             new AutokeyConfigName(ResourceNameType.Folder, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
+
+        /// <summary>
+        /// Creates a <see cref="AutokeyConfigName"/> with the pattern <c>projects/{project}/autokeyConfig</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AutokeyConfigName"/> constructed from the provided ids.</returns>
+        public static AutokeyConfigName FromProject(string projectId) =>
+            new AutokeyConfigName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AutokeyConfigName"/> with pattern
@@ -78,11 +91,26 @@ namespace Google.Cloud.Kms.V1
             s_folder.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AutokeyConfigName"/> with pattern
+        /// <c>projects/{project}/autokeyConfig</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AutokeyConfigName"/> with pattern
+        /// <c>projects/{project}/autokeyConfig</c>.
+        /// </returns>
+        public static string FormatProject(string projectId) =>
+            s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="AutokeyConfigName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>folders/{folder}/autokeyConfig</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>folders/{folder}/autokeyConfig</c></description></item>
+        /// <item><description><c>projects/{project}/autokeyConfig</c></description></item>
+        /// </list>
         /// </remarks>
         /// <param name="autokeyConfigName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="AutokeyConfigName"/> if successful.</returns>
@@ -94,7 +122,10 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>folders/{folder}/autokeyConfig</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>folders/{folder}/autokeyConfig</c></description></item>
+        /// <item><description><c>projects/{project}/autokeyConfig</c></description></item>
+        /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
         /// <param name="autokeyConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -112,7 +143,10 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>folders/{folder}/autokeyConfig</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>folders/{folder}/autokeyConfig</c></description></item>
+        /// <item><description><c>projects/{project}/autokeyConfig</c></description></item>
+        /// </list>
         /// </remarks>
         /// <param name="autokeyConfigName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
@@ -128,7 +162,10 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>folders/{folder}/autokeyConfig</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>folders/{folder}/autokeyConfig</c></description></item>
+        /// <item><description><c>projects/{project}/autokeyConfig</c></description></item>
+        /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
         /// <param name="autokeyConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -150,6 +187,11 @@ namespace Google.Cloud.Kms.V1
                 result = FromFolder(resourceName[0]);
                 return true;
             }
+            if (s_project.TryParseName(autokeyConfigName, out resourceName))
+            {
+                result = FromProject(resourceName[0]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(autokeyConfigName, out gax::UnparsedResourceName unparsedResourceName))
@@ -162,11 +204,12 @@ namespace Google.Cloud.Kms.V1
             return false;
         }
 
-        private AutokeyConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null)
+        private AutokeyConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             FolderId = folderId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -188,9 +231,14 @@ namespace Google.Cloud.Kms.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Folder</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -203,6 +251,7 @@ namespace Google.Cloud.Kms.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.Folder: return s_folder.Expand(FolderId);
+                case ResourceNameType.Project: return s_project.Expand(ProjectId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

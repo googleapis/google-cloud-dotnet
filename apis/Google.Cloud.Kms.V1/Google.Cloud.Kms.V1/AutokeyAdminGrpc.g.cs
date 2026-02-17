@@ -3,7 +3,7 @@
 //     source: google/cloud/kms/v1/autokey_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,13 +25,15 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Kms.V1 {
   /// <summary>
   /// Provides interfaces for managing [Cloud KMS
-  /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level
-  /// configurations. A configuration is inherited by all descendent projects. A
-  /// configuration at one folder overrides any other configurations in its
-  /// ancestry. Setting a configuration on a folder is a prerequisite for Cloud KMS
-  /// Autokey, so that users working in a descendant project can request
-  /// provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey], ready for Customer
-  /// Managed Encryption Key (CMEK) use, on-demand.
+  /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level or
+  /// project-level configurations. A configuration is inherited by all descendent
+  /// folders and projects. A configuration at a folder or project overrides any
+  /// other configurations in its ancestry. Setting a configuration on a folder is
+  /// a prerequisite for Cloud KMS Autokey, so that users working in a descendant
+  /// project can request provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey],
+  /// ready for Customer Managed Encryption Key (CMEK) use, on-demand when using
+  /// the dedicated key project mode. This is not required when using the delegated
+  /// key management mode for same-project keys.
   /// </summary>
   public static partial class AutokeyAdmin
   {
@@ -116,8 +118,8 @@ namespace Google.Cloud.Kms.V1 {
     public abstract partial class AutokeyAdminBase
     {
       /// <summary>
-      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
       /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
       /// permission on the provided key project. A
       /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -134,8 +136,8 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
-      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder.
+      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -188,8 +190,8 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
-      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
       /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
       /// permission on the provided key project. A
       /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -207,8 +209,8 @@ namespace Google.Cloud.Kms.V1 {
         return UpdateAutokeyConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
       /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
       /// permission on the provided key project. A
       /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -224,8 +226,8 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAutokeyConfig, null, options, request);
       }
       /// <summary>
-      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
       /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
       /// permission on the provided key project. A
       /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -243,8 +245,8 @@ namespace Google.Cloud.Kms.V1 {
         return UpdateAutokeyConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+      /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
       /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
       /// permission on the provided key project. A
       /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -260,8 +262,8 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAutokeyConfig, null, options, request);
       }
       /// <summary>
-      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder.
+      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -274,8 +276,8 @@ namespace Google.Cloud.Kms.V1 {
         return GetAutokeyConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder.
+      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -286,8 +288,8 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAutokeyConfig, null, options, request);
       }
       /// <summary>
-      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder.
+      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -300,8 +302,8 @@ namespace Google.Cloud.Kms.V1 {
         return GetAutokeyConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-      /// folder.
+      /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+      /// or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

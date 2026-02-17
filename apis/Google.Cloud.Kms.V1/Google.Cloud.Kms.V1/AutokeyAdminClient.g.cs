@@ -191,13 +191,15 @@ namespace Google.Cloud.Kms.V1
     /// <summary>AutokeyAdmin client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Provides interfaces for managing [Cloud KMS
-    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level
-    /// configurations. A configuration is inherited by all descendent projects. A
-    /// configuration at one folder overrides any other configurations in its
-    /// ancestry. Setting a configuration on a folder is a prerequisite for Cloud KMS
-    /// Autokey, so that users working in a descendant project can request
-    /// provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey], ready for Customer
-    /// Managed Encryption Key (CMEK) use, on-demand.
+    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level or
+    /// project-level configurations. A configuration is inherited by all descendent
+    /// folders and projects. A configuration at a folder or project overrides any
+    /// other configurations in its ancestry. Setting a configuration on a folder is
+    /// a prerequisite for Cloud KMS Autokey, so that users working in a descendant
+    /// project can request provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey],
+    /// ready for Customer Managed Encryption Key (CMEK) use, on-demand when using
+    /// the dedicated key project mode. This is not required when using the delegated
+    /// key management mode for same-project keys.
     /// </remarks>
     public abstract partial class AutokeyAdminClient
     {
@@ -288,8 +290,8 @@ namespace Google.Cloud.Kms.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -303,8 +305,8 @@ namespace Google.Cloud.Kms.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -318,8 +320,8 @@ namespace Google.Cloud.Kms.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -333,8 +335,8 @@ namespace Google.Cloud.Kms.V1
             UpdateAutokeyConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -360,8 +362,8 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -387,8 +389,8 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -410,8 +412,8 @@ namespace Google.Cloud.Kms.V1
             UpdateAutokeyConfigAsync(autokeyConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -420,8 +422,8 @@ namespace Google.Cloud.Kms.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -430,8 +432,8 @@ namespace Google.Cloud.Kms.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -440,12 +442,13 @@ namespace Google.Cloud.Kms.V1
             GetAutokeyConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -456,12 +459,13 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -472,12 +476,13 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -485,12 +490,13 @@ namespace Google.Cloud.Kms.V1
             GetAutokeyConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -501,12 +507,13 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -517,12 +524,13 @@ namespace Google.Cloud.Kms.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig]
-        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+        /// resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+        /// `projects/{PROJECT_NUMBER}/autokeyConfig`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -650,13 +658,15 @@ namespace Google.Cloud.Kms.V1
     /// <summary>AutokeyAdmin client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Provides interfaces for managing [Cloud KMS
-    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level
-    /// configurations. A configuration is inherited by all descendent projects. A
-    /// configuration at one folder overrides any other configurations in its
-    /// ancestry. Setting a configuration on a folder is a prerequisite for Cloud KMS
-    /// Autokey, so that users working in a descendant project can request
-    /// provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey], ready for Customer
-    /// Managed Encryption Key (CMEK) use, on-demand.
+    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level or
+    /// project-level configurations. A configuration is inherited by all descendent
+    /// folders and projects. A configuration at a folder or project overrides any
+    /// other configurations in its ancestry. Setting a configuration on a folder is
+    /// a prerequisite for Cloud KMS Autokey, so that users working in a descendant
+    /// project can request provisioned [CryptoKeys][google.cloud.kms.v1.CryptoKey],
+    /// ready for Customer Managed Encryption Key (CMEK) use, on-demand when using
+    /// the dedicated key project mode. This is not required when using the delegated
+    /// key management mode for same-project keys.
     /// </remarks>
     public sealed partial class AutokeyAdminClientImpl : AutokeyAdminClient
     {
@@ -721,8 +731,8 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_ShowEffectiveAutokeyConfigRequest(ref ShowEffectiveAutokeyConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -739,8 +749,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder. The caller must have both `cloudkms.autokeyConfigs.update`
+        /// Updates the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or a project. The caller must have both `cloudkms.autokeyConfigs.update`
         /// permission on the parent folder and `cloudkms.cryptoKeys.setIamPolicy`
         /// permission on the provided key project. A
         /// [KeyHandle][google.cloud.kms.v1.KeyHandle] creation in the folder's
@@ -757,8 +767,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -770,8 +780,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a
-        /// folder.
+        /// Returns the [AutokeyConfig][google.cloud.kms.v1.AutokeyConfig] for a folder
+        /// or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
