@@ -351,6 +351,13 @@ public sealed partial class SubscriberClientImpl
         /// </summary>
         private void RestartPullOrThrow(Exception e)
         {
+//            if (_waitForProcessingCts.IsCancellationRequested && (e.IsCancellation() || e.IsRpcCancellation()))
+//            {
+//                StopStreamingPull();
+//                _pullComplete = true;
+//                return;
+//            }
+
             if (_retryState.RecordFailureAndCheckForRetry(e))
             {
                 RestartPullAfterRetriableFailure(e);
@@ -377,6 +384,12 @@ public sealed partial class SubscriberClientImpl
         // Pull-stream is ready; call MoveNext to wait for messages.
         private void HandlePullMoveNext(Task initTask)
         {
+//            if (_waitForProcessingCts.IsCancellationRequested)
+//            {
+//                StopStreamingPull();
+//                _pullComplete = true;
+//                return;
+//            }
             // Check if the init write failed.
             if (initTask?.Exception is Exception ex)
             {
