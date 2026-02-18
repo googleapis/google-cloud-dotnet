@@ -1897,7 +1897,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T21:40:43.269663568Z",
-            "lastGeneratedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
+            "lastGeneratedCommit": "1133adb136f742df62864f1d9d307df25d451880",
             "lastReleasedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
             "apiPaths": [
                 "google/cloud/kms/inventory/v1"

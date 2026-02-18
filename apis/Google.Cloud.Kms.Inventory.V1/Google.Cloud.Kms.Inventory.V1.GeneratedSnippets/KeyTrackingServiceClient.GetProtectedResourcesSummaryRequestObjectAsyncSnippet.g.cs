@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetProtectedResourcesSummaryRequest request = new GetProtectedResourcesSummaryRequest
             {
                 ProtectedResourcesSummaryName = ProtectedResourcesSummaryName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                FallbackScope = FallbackScope.Unspecified,
             };
             // Make the request
             ProtectedResourcesSummary response = await keyTrackingServiceClient.GetProtectedResourcesSummaryAsync(request);

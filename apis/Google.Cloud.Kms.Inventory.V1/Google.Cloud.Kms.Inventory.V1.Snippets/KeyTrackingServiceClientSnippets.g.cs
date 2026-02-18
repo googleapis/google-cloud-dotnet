@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
             GetProtectedResourcesSummaryRequest request = new GetProtectedResourcesSummaryRequest
             {
                 ProtectedResourcesSummaryName = ProtectedResourcesSummaryName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                FallbackScope = FallbackScope.Unspecified,
             };
             // Make the request
             ProtectedResourcesSummary response = keyTrackingServiceClient.GetProtectedResourcesSummary(request);
@@ -52,6 +53,7 @@ namespace GoogleCSharpSnippets
             GetProtectedResourcesSummaryRequest request = new GetProtectedResourcesSummaryRequest
             {
                 ProtectedResourcesSummaryName = ProtectedResourcesSummaryName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                FallbackScope = FallbackScope.Unspecified,
             };
             // Make the request
             ProtectedResourcesSummary response = await keyTrackingServiceClient.GetProtectedResourcesSummaryAsync(request);
@@ -305,7 +307,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for SearchProtectedResources</summary>
-        public void SearchProtectedResourcesResourceNames()
+        public void SearchProtectedResourcesResourceNames1()
         {
             // Snippet: SearchProtectedResources(OrganizationName, IResourceName, string, int?, CallSettings)
             // Create client
@@ -351,13 +353,105 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for SearchProtectedResourcesAsync</summary>
-        public async Task SearchProtectedResourcesResourceNamesAsync()
+        public async Task SearchProtectedResourcesResourceNames1Async()
         {
             // Snippet: SearchProtectedResourcesAsync(OrganizationName, IResourceName, string, int?, CallSettings)
             // Create client
             KeyTrackingServiceClient keyTrackingServiceClient = await KeyTrackingServiceClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationName scope = OrganizationName.FromOrganization("[ORGANIZATION]");
+            IResourceName cryptoKey = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResourcesAsync(scope, cryptoKey);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ProtectedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (SearchProtectedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProtectedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProtectedResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProtectedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchProtectedResources</summary>
+        public void SearchProtectedResourcesResourceNames2()
+        {
+            // Snippet: SearchProtectedResources(ProjectName, IResourceName, string, int?, CallSettings)
+            // Create client
+            KeyTrackingServiceClient keyTrackingServiceClient = KeyTrackingServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName scope = ProjectName.FromProject("[PROJECT]");
+            IResourceName cryptoKey = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResources(scope, cryptoKey);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProtectedResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchProtectedResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProtectedResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProtectedResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProtectedResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchProtectedResourcesAsync</summary>
+        public async Task SearchProtectedResourcesResourceNames2Async()
+        {
+            // Snippet: SearchProtectedResourcesAsync(ProjectName, IResourceName, string, int?, CallSettings)
+            // Create client
+            KeyTrackingServiceClient keyTrackingServiceClient = await KeyTrackingServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName scope = ProjectName.FromProject("[PROJECT]");
             IResourceName cryptoKey = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResourcesAsync(scope, cryptoKey);
