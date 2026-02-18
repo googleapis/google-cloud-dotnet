@@ -10,7 +10,6 @@
 *                                   @googleapis/cloud-sdk-dotnet-team
 
 /apis/Google.Cloud.Bigtable*/       @googleapis/bigtable-team @googleapis/cloud-sdk-dotnet-team
-/apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/cloud-sdk-dotnet-team
 /apis/Google.Cloud.Storage*/        @googleapis/gcs-team @googleapis/cloud-sdk-dotnet-team
 /apis/Google.Cloud.BigQuery*/.      @googleapis/bigquery-team @googleapis/cloud-sdk-dotnet-team
 /apis/Google.Cloud.PubSub*/.        @googleapis/pubsub-team @googleapis/cloud-sdk-dotnet-team
