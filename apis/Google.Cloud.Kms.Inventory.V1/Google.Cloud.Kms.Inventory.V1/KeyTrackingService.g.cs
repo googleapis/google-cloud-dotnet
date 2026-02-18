@@ -29,79 +29,115 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xp",
             "ZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
             "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
-            "ZXN0YW1wLnByb3RvInIKI0dldFByb3RlY3RlZFJlc291cmNlc1N1bW1hcnlS",
-            "ZXF1ZXN0EksKBG5hbWUYASABKAlCPeBBAvpBNwo1a21zaW52ZW50b3J5Lmdv",
-            "b2dsZWFwaXMuY29tL1Byb3RlY3RlZFJlc291cmNlc1N1bW1hcnki4AYKGVBy",
-            "b3RlY3RlZFJlc291cmNlc1N1bW1hcnkSDAoEbmFtZRgFIAEoCRIWCg5yZXNv",
-            "dXJjZV9jb3VudBgBIAEoAxIVCg1wcm9qZWN0X2NvdW50GAIgASgFEmMKDnJl",
-            "c291cmNlX3R5cGVzGAMgAygLMksuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRv",
-            "cnkudjEuUHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeS5SZXNvdXJjZVR5cGVz",
-            "RW50cnkSYwoOY2xvdWRfcHJvZHVjdHMYBiADKAsySy5nb29nbGUuY2xvdWQu",
-            "a21zLmludmVudG9yeS52MS5Qcm90ZWN0ZWRSZXNvdXJjZXNTdW1tYXJ5LkNs",
-            "b3VkUHJvZHVjdHNFbnRyeRJaCglsb2NhdGlvbnMYBCADKAsyRy5nb29nbGUu",
-            "Y2xvdWQua21zLmludmVudG9yeS52MS5Qcm90ZWN0ZWRSZXNvdXJjZXNTdW1t",
-            "YXJ5LkxvY2F0aW9uc0VudHJ5GjQKElJlc291cmNlVHlwZXNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgBGjQKEkNsb3VkUHJvZHVjdHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgBGjAKDkxvY2F0",
-            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAE6wQLq",
-            "Qb0CCjVrbXNpbnZlbnRvcnkuZ29vZ2xlYXBpcy5jb20vUHJvdGVjdGVkUmVz",
-            "b3VyY2VzU3VtbWFyeRJtcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5",
-            "cHRvX2tleX0vcHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeRKUAXByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
-            "X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNp",
-            "b25zL3tjcnlwdG9fa2V5X3ZlcnNpb259L3Byb3RlY3RlZFJlc291cmNlc1N1",
-            "bW1hcnkizQEKH1NlYXJjaFByb3RlY3RlZFJlc291cmNlc1JlcXVlc3QSRwoF",
-            "c2NvcGUYAiABKAlCOOBBAvpBMgowY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29v",
-            "Z2xlYXBpcy5jb20vT3JnYW5pemF0aW9uEh0KCmNyeXB0b19rZXkYASABKAlC",
-            "CeBBAvpBAwoBKhIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgE",
-            "IAEoCRIbCg5yZXNvdXJjZV90eXBlcxgFIAMoCUID4EEBIooBCiBTZWFyY2hQ",
-            "cm90ZWN0ZWRSZXNvdXJjZXNSZXNwb25zZRJNChNwcm90ZWN0ZWRfcmVzb3Vy",
-            "Y2VzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEuUHJv",
-            "dGVjdGVkUmVzb3VyY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIvkDChFQ",
-            "cm90ZWN0ZWRSZXNvdXJjZRIMCgRuYW1lGAEgASgJEg8KB3Byb2plY3QYAiAB",
-            "KAkSEgoKcHJvamVjdF9pZBgJIAEoCRIVCg1jbG91ZF9wcm9kdWN0GAggASgJ",
-            "EhUKDXJlc291cmNlX3R5cGUYAyABKAkSEAoIbG9jYXRpb24YBCABKAkSTAoG",
-            "bGFiZWxzGAUgAygLMjwuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEu",
-            "UHJvdGVjdGVkUmVzb3VyY2UuTGFiZWxzRW50cnkSSQoSY3J5cHRvX2tleV92",
-            "ZXJzaW9uGAYgASgJQi36QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
-            "eXB0b0tleVZlcnNpb24SSgoTY3J5cHRvX2tleV92ZXJzaW9ucxgKIAMoCUIt",
-            "+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9u",
-            "EjQKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAE6J+pBJAofY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9B",
-            "c3NldBIBKjLaBAoSS2V5VHJhY2tpbmdTZXJ2aWNlEoECChxHZXRQcm90ZWN0",
-            "ZWRSZXNvdXJjZXNTdW1tYXJ5EkIuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRv",
-            "cnkudjEuR2V0UHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeVJlcXVlc3QaOC5n",
-            "b29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5Qcm90ZWN0ZWRSZXNvdXJj",
-            "ZXNTdW1tYXJ5ImPaQQRuYW1lgtPkkwJWElQvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKip9L3Byb3Rl",
-            "Y3RlZFJlc291cmNlc1N1bW1hcnkS7gEKGFNlYXJjaFByb3RlY3RlZFJlc291",
-            "cmNlcxI+Lmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYxLlNlYXJjaFBy",
-            "b3RlY3RlZFJlc291cmNlc1JlcXVlc3QaPy5nb29nbGUuY2xvdWQua21zLmlu",
-            "dmVudG9yeS52MS5TZWFyY2hQcm90ZWN0ZWRSZXNvdXJjZXNSZXNwb25zZSJR",
-            "2kERc2NvcGUsIGNyeXB0b19rZXmC0+STAjcSNS92MS97c2NvcGU9b3JnYW5p",
-            "emF0aW9ucy8qfS9wcm90ZWN0ZWRSZXNvdXJjZXM6c2VhcmNoGk/KQRtrbXNp",
-            "bnZlbnRvcnkuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBCiFjb20uZ29vZ2xlLmNs",
-            "b3VkLmttcy5pbnZlbnRvcnkudjFCF0tleVRyYWNraW5nU2VydmljZVByb3Rv",
-            "UAFaP2Nsb3VkLmdvb2dsZS5jb20vZ28va21zL2ludmVudG9yeS9hcGl2MS9p",
-            "bnZlbnRvcnlwYjtpbnZlbnRvcnlwYvgBAaoCHUdvb2dsZS5DbG91ZC5LbXMu",
-            "SW52ZW50b3J5LlYxygIdR29vZ2xlXENsb3VkXEttc1xJbnZlbnRvcnlcVjFi",
-            "BnByb3RvMw=="));
+            "ZXN0YW1wLnByb3RvIr0BCiNHZXRQcm90ZWN0ZWRSZXNvdXJjZXNTdW1tYXJ5",
+            "UmVxdWVzdBJLCgRuYW1lGAEgASgJQj3gQQL6QTcKNWttc2ludmVudG9yeS5n",
+            "b29nbGVhcGlzLmNvbS9Qcm90ZWN0ZWRSZXNvdXJjZXNTdW1tYXJ5EkkKDmZh",
+            "bGxiYWNrX3Njb3BlGAIgASgOMiwuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRv",
+            "cnkudjEuRmFsbGJhY2tTY29wZUID4EEBIpoHChlQcm90ZWN0ZWRSZXNvdXJj",
+            "ZXNTdW1tYXJ5EgwKBG5hbWUYBSABKAkSFgoOcmVzb3VyY2VfY291bnQYASAB",
+            "KAMSFQoNcHJvamVjdF9jb3VudBgCIAEoBRJjCg5yZXNvdXJjZV90eXBlcxgD",
+            "IAMoCzJLLmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYxLlByb3RlY3Rl",
+            "ZFJlc291cmNlc1N1bW1hcnkuUmVzb3VyY2VUeXBlc0VudHJ5EmMKDmNsb3Vk",
+            "X3Byb2R1Y3RzGAYgAygLMksuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnku",
+            "djEuUHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeS5DbG91ZFByb2R1Y3RzRW50",
+            "cnkSWgoJbG9jYXRpb25zGAQgAygLMkcuZ29vZ2xlLmNsb3VkLmttcy5pbnZl",
+            "bnRvcnkudjEuUHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeS5Mb2NhdGlvbnNF",
+            "bnRyeRI4Cgh3YXJuaW5ncxgHIAMoCzImLmdvb2dsZS5jbG91ZC5rbXMuaW52",
+            "ZW50b3J5LnYxLldhcm5pbmcaNAoSUmVzb3VyY2VUeXBlc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEaNAoSQ2xvdWRQcm9kdWN0c0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEaMAoOTG9jYXRp",
+            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ATrBAupB",
+            "vQIKNWttc2ludmVudG9yeS5nb29nbGVhcGlzLmNvbS9Qcm90ZWN0ZWRSZXNv",
+            "dXJjZXNTdW1tYXJ5Em1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlw",
+            "dG9fa2V5fS9wcm90ZWN0ZWRSZXNvdXJjZXNTdW1tYXJ5EpQBcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlf",
+            "cmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX0vY3J5cHRvS2V5VmVyc2lv",
+            "bnMve2NyeXB0b19rZXlfdmVyc2lvbn0vcHJvdGVjdGVkUmVzb3VyY2VzU3Vt",
+            "bWFyeSLPAQofU2VhcmNoUHJvdGVjdGVkUmVzb3VyY2VzUmVxdWVzdBJJCgVz",
+            "Y29wZRgCIAEoCUI64EEC+kE0EjJrbXNpbnZlbnRvcnkuZ29vZ2xlYXBpcy5j",
+            "b20vUHJvdGVjdGVkUmVzb3VyY2VTY29wZRIdCgpjcnlwdG9fa2V5GAEgASgJ",
+            "QgngQQL6QQMKASoSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "BCABKAkSGwoOcmVzb3VyY2VfdHlwZXMYBSADKAlCA+BBASKKAQogU2VhcmNo",
+            "UHJvdGVjdGVkUmVzb3VyY2VzUmVzcG9uc2USTQoTcHJvdGVjdGVkX3Jlc291",
+            "cmNlcxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYxLlBy",
+            "b3RlY3RlZFJlc291cmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSL5AwoR",
+            "UHJvdGVjdGVkUmVzb3VyY2USDAoEbmFtZRgBIAEoCRIPCgdwcm9qZWN0GAIg",
+            "ASgJEhIKCnByb2plY3RfaWQYCSABKAkSFQoNY2xvdWRfcHJvZHVjdBgIIAEo",
+            "CRIVCg1yZXNvdXJjZV90eXBlGAMgASgJEhAKCGxvY2F0aW9uGAQgASgJEkwK",
+            "BmxhYmVscxgFIAMoCzI8Lmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYx",
+            "LlByb3RlY3RlZFJlc291cmNlLkxhYmVsc0VudHJ5EkkKEmNyeXB0b19rZXlf",
+            "dmVyc2lvbhgGIAEoCUIt+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
+            "cnlwdG9LZXlWZXJzaW9uEkoKE2NyeXB0b19rZXlfdmVyc2lvbnMYCiADKAlC",
+            "LfpBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lv",
+            "bhI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBOifqQSQKH2Nsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20v",
+            "QXNzZXQSASoikgIKB1dhcm5pbmcSSAoMd2FybmluZ19jb2RlGAEgASgOMjIu",
+            "Z29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEuV2FybmluZy5XYXJuaW5n",
+            "Q29kZRIXCg9kaXNwbGF5X21lc3NhZ2UYAiABKAkiowEKC1dhcm5pbmdDb2Rl",
+            "EhwKGFdBUk5JTkdfQ09ERV9VTlNQRUNJRklFRBAAEikKJUlOU1VGRklDSUVO",
+            "VF9QRVJNSVNTSU9OU19QQVJUSUFMX0RBVEEQARIoCiRSRVNPVVJDRV9MSU1J",
+            "VF9FWENFRURFRF9QQVJUSUFMX0RBVEEQAhIhCh1PUkdfTEVTU19QUk9KRUNU",
+            "X1BBUlRJQUxfREFUQRADKksKDUZhbGxiYWNrU2NvcGUSHgoaRkFMTEJBQ0tf",
+            "U0NPUEVfVU5TUEVDSUZJRUQQABIaChZGQUxMQkFDS19TQ09QRV9QUk9KRUNU",
+            "EAEyjwUKEktleVRyYWNraW5nU2VydmljZRKBAgocR2V0UHJvdGVjdGVkUmVz",
+            "b3VyY2VzU3VtbWFyeRJCLmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYx",
+            "LkdldFByb3RlY3RlZFJlc291cmNlc1N1bW1hcnlSZXF1ZXN0GjguZ29vZ2xl",
+            "LmNsb3VkLmttcy5pbnZlbnRvcnkudjEuUHJvdGVjdGVkUmVzb3VyY2VzU3Vt",
+            "bWFyeSJj2kEEbmFtZYLT5JMCVhJUL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyoqfS9wcm90ZWN0ZWRS",
+            "ZXNvdXJjZXNTdW1tYXJ5EqMCChhTZWFyY2hQcm90ZWN0ZWRSZXNvdXJjZXMS",
+            "Pi5nb29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5TZWFyY2hQcm90ZWN0",
+            "ZWRSZXNvdXJjZXNSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRv",
+            "cnkudjEuU2VhcmNoUHJvdGVjdGVkUmVzb3VyY2VzUmVzcG9uc2UihQHaQRFz",
+            "Y29wZSwgY3J5cHRvX2tleYLT5JMCaxI1L3YxL3tzY29wZT1vcmdhbml6YXRp",
+            "b25zLyp9L3Byb3RlY3RlZFJlc291cmNlczpzZWFyY2haMhIwL3YxL3tzY29w",
+            "ZT1wcm9qZWN0cy8qfS9wcm90ZWN0ZWRSZXNvdXJjZXM6c2VhcmNoGk/KQRtr",
+            "bXNpbnZlbnRvcnkuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtcCCiFjb20uZ29vZ2xl",
+            "LmNsb3VkLmttcy5pbnZlbnRvcnkudjFCF0tleVRyYWNraW5nU2VydmljZVBy",
+            "b3RvUAFaP2Nsb3VkLmdvb2dsZS5jb20vZ28va21zL2ludmVudG9yeS9hcGl2",
+            "MS9pbnZlbnRvcnlwYjtpbnZlbnRvcnlwYqoCHUdvb2dsZS5DbG91ZC5LbXMu",
+            "SW52ZW50b3J5LlYxygIdR29vZ2xlXENsb3VkXEttc1xJbnZlbnRvcnlcVjHq",
+            "QZQBCjJrbXNpbnZlbnRvcnkuZ29vZ2xlYXBpcy5jb20vUHJvdGVjdGVkUmVz",
+            "b3VyY2VTY29wZRIzb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9wcm90",
+            "ZWN0ZWRSZXNvdXJjZVNjb3BlEilwcm9qZWN0cy97cHJvamVjdH0vcHJvdGVj",
+            "dGVkUmVzb3VyY2VTY29wZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest), global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary), global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary.Parser, new[]{ "Name", "ResourceCount", "ProjectCount", "ResourceTypes", "CloudProducts", "Locations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.Inventory.V1.FallbackScope), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest), global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest.Parser, new[]{ "Name", "FallbackScope" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary), global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary.Parser, new[]{ "Name", "ResourceCount", "ProjectCount", "ResourceTypes", "CloudProducts", "Locations", "Warnings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest), global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest.Parser, new[]{ "Scope", "CryptoKey", "PageSize", "PageToken", "ResourceTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse), global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse.Parser, new[]{ "ProtectedResources", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResource), global::Google.Cloud.Kms.Inventory.V1.ProtectedResource.Parser, new[]{ "Name", "Project", "ProjectId", "CloudProduct", "ResourceType", "Location", "Labels", "CryptoKeyVersion", "CryptoKeyVersions", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResource), global::Google.Cloud.Kms.Inventory.V1.ProtectedResource.Parser, new[]{ "Name", "Project", "ProjectId", "CloudProduct", "ResourceType", "Location", "Labels", "CryptoKeyVersion", "CryptoKeyVersions", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.Warning), global::Google.Cloud.Kms.Inventory.V1.Warning.Parser, new[]{ "WarningCode", "DisplayMessage" }, null, new[]{ typeof(global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode) }, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Specifies the scope to use if the organization service agent is not
+  /// configured.
+  /// </summary>
+  public enum FallbackScope {
+    /// <summary>
+    /// Unspecified scope type.
+    /// </summary>
+    [pbr::OriginalName("FALLBACK_SCOPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// If set to `FALLBACK_SCOPE_PROJECT`, the API will fall back to using key's
+    /// project as request scope if the kms organization service account is not
+    /// configured.
+    /// </summary>
+    [pbr::OriginalName("FALLBACK_SCOPE_PROJECT")] Project = 1,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Request message for
@@ -143,6 +179,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetProtectedResourcesSummaryRequest(GetProtectedResourcesSummaryRequest other) : this() {
       name_ = other.name_;
+      fallbackScope_ = other.fallbackScope_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -168,6 +205,22 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
     }
 
+    /// <summary>Field number for the "fallback_scope" field.</summary>
+    public const int FallbackScopeFieldNumber = 2;
+    private global::Google.Cloud.Kms.Inventory.V1.FallbackScope fallbackScope_ = global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified;
+    /// <summary>
+    /// Optional. The scope to use if the kms organization service account is not
+    /// configured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.Inventory.V1.FallbackScope FallbackScope {
+      get { return fallbackScope_; }
+      set {
+        fallbackScope_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -184,6 +237,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (FallbackScope != other.FallbackScope) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -192,6 +246,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (FallbackScope != global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified) hash ^= FallbackScope.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,6 +269,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (FallbackScope != global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) FallbackScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -228,6 +287,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (FallbackScope != global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) FallbackScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -240,6 +303,9 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (FallbackScope != global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FallbackScope);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -255,6 +321,9 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.FallbackScope != global::Google.Cloud.Kms.Inventory.V1.FallbackScope.Unspecified) {
+        FallbackScope = other.FallbackScope;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -273,6 +342,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            FallbackScope = (global::Google.Cloud.Kms.Inventory.V1.FallbackScope) input.ReadEnum();
             break;
           }
         }
@@ -294,6 +367,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            FallbackScope = (global::Google.Cloud.Kms.Inventory.V1.FallbackScope) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -303,7 +380,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
 
   /// <summary>
   /// Aggregate information about the resources protected by a Cloud KMS key in the
-  /// same Cloud organization as the key.
+  /// same Cloud organization/project as the key.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProtectedResourcesSummary : pb::IMessage<ProtectedResourcesSummary>
@@ -346,6 +423,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       resourceTypes_ = other.resourceTypes_.Clone();
       cloudProducts_ = other.cloudProducts_.Clone();
       locations_ = other.locations_.Clone();
+      warnings_ = other.warnings_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -446,6 +524,23 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       get { return locations_; }
     }
 
+    /// <summary>Field number for the "warnings" field.</summary>
+    public const int WarningsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Kms.Inventory.V1.Warning> _repeated_warnings_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Kms.Inventory.V1.Warning.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Kms.Inventory.V1.Warning> warnings_ = new pbc::RepeatedField<global::Google.Cloud.Kms.Inventory.V1.Warning>();
+    /// <summary>
+    /// Warning messages for the state of response
+    /// [ProtectedResourcesSummary][google.cloud.kms.inventory.v1.ProtectedResourcesSummary]
+    /// For example, if the organization service account is not configured,
+    /// INSUFFICIENT_PERMISSIONS_PARTIAL_DATA warning will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Kms.Inventory.V1.Warning> Warnings {
+      get { return warnings_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -467,6 +562,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (!ResourceTypes.Equals(other.ResourceTypes)) return false;
       if (!CloudProducts.Equals(other.CloudProducts)) return false;
       if (!Locations.Equals(other.Locations)) return false;
+      if(!warnings_.Equals(other.warnings_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -480,6 +576,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       hash ^= ResourceTypes.GetHashCode();
       hash ^= CloudProducts.GetHashCode();
       hash ^= Locations.GetHashCode();
+      hash ^= warnings_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -513,6 +610,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteString(Name);
       }
       cloudProducts_.WriteTo(output, _map_cloudProducts_codec);
+      warnings_.WriteTo(output, _repeated_warnings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -538,6 +636,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteString(Name);
       }
       cloudProducts_.WriteTo(ref output, _map_cloudProducts_codec);
+      warnings_.WriteTo(ref output, _repeated_warnings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -560,6 +659,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       size += resourceTypes_.CalculateSize(_map_resourceTypes_codec);
       size += cloudProducts_.CalculateSize(_map_cloudProducts_codec);
       size += locations_.CalculateSize(_map_locations_codec);
+      size += warnings_.CalculateSize(_repeated_warnings_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -584,6 +684,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       resourceTypes_.MergeFrom(other.resourceTypes_);
       cloudProducts_.MergeFrom(other.cloudProducts_);
       locations_.MergeFrom(other.locations_);
+      warnings_.Add(other.warnings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -623,6 +724,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             cloudProducts_.AddEntriesFrom(input, _map_cloudProducts_codec);
             break;
           }
+          case 58: {
+            warnings_.AddEntriesFrom(input, _repeated_warnings_codec);
+            break;
+          }
         }
       }
     #endif
@@ -660,6 +765,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
           }
           case 50: {
             cloudProducts_.AddEntriesFrom(ref input, _map_cloudProducts_codec);
+            break;
+          }
+          case 58: {
+            warnings_.AddEntriesFrom(ref input, _repeated_warnings_codec);
             break;
           }
         }
@@ -726,8 +835,14 @@ namespace Google.Cloud.Kms.Inventory.V1 {
     public const int ScopeFieldNumber = 2;
     private string scope_ = "";
     /// <summary>
-    /// Required. Resource name of the organization.
-    /// Example: organizations/123
+    /// Required. A scope can be an organization or a project. Resources protected
+    /// by the crypto key in provided scope will be returned.
+    ///
+    /// The following values are allowed:
+    ///
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+    /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+    /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1822,6 +1937,283 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// A warning message that indicates potential problems with the response data.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Warning : pb::IMessage<Warning>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Warning> _parser = new pb::MessageParser<Warning>(() => new Warning());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Warning> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.Inventory.V1.KeyTrackingServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Warning() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Warning(Warning other) : this() {
+      warningCode_ = other.warningCode_;
+      displayMessage_ = other.displayMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Warning Clone() {
+      return new Warning(this);
+    }
+
+    /// <summary>Field number for the "warning_code" field.</summary>
+    public const int WarningCodeFieldNumber = 1;
+    private global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode warningCode_ = global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified;
+    /// <summary>
+    /// The specific warning code for the displayed message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode WarningCode {
+      get { return warningCode_; }
+      set {
+        warningCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_message" field.</summary>
+    public const int DisplayMessageFieldNumber = 2;
+    private string displayMessage_ = "";
+    /// <summary>
+    /// The literal message providing context and details about the warnings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayMessage {
+      get { return displayMessage_; }
+      set {
+        displayMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Warning);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Warning other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WarningCode != other.WarningCode) return false;
+      if (DisplayMessage != other.DisplayMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WarningCode != global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified) hash ^= WarningCode.GetHashCode();
+      if (DisplayMessage.Length != 0) hash ^= DisplayMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WarningCode != global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WarningCode);
+      }
+      if (DisplayMessage.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WarningCode != global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WarningCode);
+      }
+      if (DisplayMessage.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (WarningCode != global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WarningCode);
+      }
+      if (DisplayMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Warning other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WarningCode != global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode.Unspecified) {
+        WarningCode = other.WarningCode;
+      }
+      if (other.DisplayMessage.Length != 0) {
+        DisplayMessage = other.DisplayMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            WarningCode = (global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            DisplayMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            WarningCode = (global::Google.Cloud.Kms.Inventory.V1.Warning.Types.WarningCode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            DisplayMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Warning message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Different types of warnings that can be returned to the user.
+      /// The display_message contains detailed information regarding the
+      /// warning_code.
+      /// </summary>
+      public enum WarningCode {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("WARNING_CODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that the caller or service agent lacks necessary permissions
+        /// to view some of the requested data. The response may be partial.
+        /// Example:
+        /// - KMS organization service agent {service_agent_name} lacks the
+        ///   `cloudasset.assets.searchAllResources` permission on the scope.
+        /// </summary>
+        [pbr::OriginalName("INSUFFICIENT_PERMISSIONS_PARTIAL_DATA")] InsufficientPermissionsPartialData = 1,
+        /// <summary>
+        /// Indicates that a resource limit has been exceeded, resulting in partial
+        /// data. Example:
+        /// - The project has more than 10,000 assets (resources,
+        ///   crypto keys, key handles, IAM policies, etc).
+        /// </summary>
+        [pbr::OriginalName("RESOURCE_LIMIT_EXCEEDED_PARTIAL_DATA")] ResourceLimitExceededPartialData = 2,
+        /// <summary>
+        /// Indicates that the project exists outside of an organization resource.
+        /// Thus the analysis is only done for the project level data and results
+        /// might be partial.
+        /// </summary>
+        [pbr::OriginalName("ORG_LESS_PROJECT_PARTIAL_DATA")] OrgLessProjectPartialData = 3,
+      }
+
+    }
+    #endregion
 
   }
 

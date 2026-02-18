@@ -416,6 +416,280 @@ namespace Google.Cloud.Kms.Inventory.V1
         public static bool operator !=(ProtectedResourcesSummaryName a, ProtectedResourcesSummaryName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>ProtectedResourceScope</c> resource.</summary>
+    public sealed partial class ProtectedResourceScopeName : gax::IResourceName, sys::IEquatable<ProtectedResourceScopeName>
+    {
+        /// <summary>The possible contents of <see cref="ProtectedResourceScopeName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/protectedResourceScope</c>.
+            /// </summary>
+            Organization = 1,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/protectedResourceScope</c>.</summary>
+            Project = 2,
+        }
+
+        private static gax::PathTemplate s_organization = new gax::PathTemplate("organizations/{organization}/protectedResourceScope");
+
+        private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/protectedResourceScope");
+
+        /// <summary>Creates a <see cref="ProtectedResourceScopeName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ProtectedResourceScopeName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ProtectedResourceScopeName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ProtectedResourceScopeName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ProtectedResourceScopeName"/> with the pattern
+        /// <c>organizations/{organization}/protectedResourceScope</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="ProtectedResourceScopeName"/> constructed from the provided ids.
+        /// </returns>
+        public static ProtectedResourceScopeName FromOrganization(string organizationId) =>
+            new ProtectedResourceScopeName(ResourceNameType.Organization, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>
+        /// Creates a <see cref="ProtectedResourceScopeName"/> with the pattern
+        /// <c>projects/{project}/protectedResourceScope</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="ProtectedResourceScopeName"/> constructed from the provided ids.
+        /// </returns>
+        public static ProtectedResourceScopeName FromProject(string projectId) =>
+            new ProtectedResourceScopeName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>organizations/{organization}/protectedResourceScope</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>organizations/{organization}/protectedResourceScope</c>.
+        /// </returns>
+        public static string Format(string organizationId) => FormatOrganization(organizationId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>organizations/{organization}/protectedResourceScope</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>organizations/{organization}/protectedResourceScope</c>.
+        /// </returns>
+        public static string FormatOrganization(string organizationId) =>
+            s_organization.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>projects/{project}/protectedResourceScope</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProtectedResourceScopeName"/> with pattern
+        /// <c>projects/{project}/protectedResourceScope</c>.
+        /// </returns>
+        public static string FormatProject(string projectId) =>
+            s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProtectedResourceScopeName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/protectedResourceScope</c></description></item>
+        /// <item><description><c>projects/{project}/protectedResourceScope</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="protectedResourceScopeName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProtectedResourceScopeName"/> if successful.</returns>
+        public static ProtectedResourceScopeName Parse(string protectedResourceScopeName) =>
+            Parse(protectedResourceScopeName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProtectedResourceScopeName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/protectedResourceScope</c></description></item>
+        /// <item><description><c>projects/{project}/protectedResourceScope</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="protectedResourceScopeName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ProtectedResourceScopeName"/> if successful.</returns>
+        public static ProtectedResourceScopeName Parse(string protectedResourceScopeName, bool allowUnparsed) =>
+            TryParse(protectedResourceScopeName, allowUnparsed, out ProtectedResourceScopeName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProtectedResourceScopeName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/protectedResourceScope</c></description></item>
+        /// <item><description><c>projects/{project}/protectedResourceScope</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="protectedResourceScopeName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProtectedResourceScopeName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string protectedResourceScopeName, out ProtectedResourceScopeName result) =>
+            TryParse(protectedResourceScopeName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProtectedResourceScopeName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/protectedResourceScope</c></description></item>
+        /// <item><description><c>projects/{project}/protectedResourceScope</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="protectedResourceScopeName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProtectedResourceScopeName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string protectedResourceScopeName, bool allowUnparsed, out ProtectedResourceScopeName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(protectedResourceScopeName, nameof(protectedResourceScopeName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organization.TryParseName(protectedResourceScopeName, out resourceName))
+            {
+                result = FromOrganization(resourceName[0]);
+                return true;
+            }
+            if (s_project.TryParseName(protectedResourceScopeName, out resourceName))
+            {
+                result = FromProject(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(protectedResourceScopeName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ProtectedResourceScopeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string organizationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ProtectedResourceScopeName"/> class from the component parts of
+        /// pattern <c>organizations/{organization}/protectedResourceScope</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        public ProtectedResourceScopeName(string organizationId) : this(ResourceNameType.Organization, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Organization: return s_organization.Expand(OrganizationId);
+                case ResourceNameType.Project: return s_project.Expand(ProjectId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ProtectedResourceScopeName);
+
+        /// <inheritdoc/>
+        public bool Equals(ProtectedResourceScopeName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(ProtectedResourceScopeName a, ProtectedResourceScopeName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(ProtectedResourceScopeName a, ProtectedResourceScopeName b) => !(a == b);
+    }
+
     public partial class GetProtectedResourcesSummaryRequest
     {
         /// <summary>
@@ -459,6 +733,39 @@ namespace Google.Cloud.Kms.Inventory.V1
         public gagr::OrganizationName ScopeAsOrganizationName
         {
             get => string.IsNullOrEmpty(Scope) ? null : gagr::OrganizationName.Parse(Scope, allowUnparsed: true);
+            set => Scope = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Scope"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ScopeAsProjectName
+        {
+            get => string.IsNullOrEmpty(Scope) ? null : gagr::ProjectName.Parse(Scope, allowUnparsed: true);
+            set => Scope = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Scope"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ScopeAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Scope))
+                {
+                    return null;
+                }
+                if (gagr::OrganizationName.TryParse(Scope, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (gagr::ProjectName.TryParse(Scope, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                return gax::UnparsedResourceName.Parse(Scope);
+            }
             set => Scope = value?.ToString() ?? "";
         }
     }

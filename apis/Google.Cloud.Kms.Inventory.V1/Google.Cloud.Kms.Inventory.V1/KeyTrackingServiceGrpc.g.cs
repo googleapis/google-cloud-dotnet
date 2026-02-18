@@ -3,7 +3,7 @@
 //     source: google/cloud/kms/inventory/v1/key_tracking_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -101,10 +101,16 @@ namespace Google.Cloud.Kms.Inventory.V1 {
     {
       /// <summary>
       /// Returns aggregate information about the resources protected by the given
-      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-      /// the same Cloud organization as the key will be returned. The project that
-      /// holds the key must be part of an organization in order for this call to
-      /// succeed.
+      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+      /// summary of resources within the same Cloud organization as the key will be
+      /// returned, which requires the KMS organization service account to be
+      /// configured(refer
+      /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+      /// If the KMS organization service account is not configured or key's project
+      /// is not part of an organization, set
+      /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+      /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+      /// within the key's project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -117,7 +123,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
 
       /// <summary>
       /// Returns metadata about the resources protected by the given Cloud KMS
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+      /// organization/project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -159,10 +166,16 @@ namespace Google.Cloud.Kms.Inventory.V1 {
 
       /// <summary>
       /// Returns aggregate information about the resources protected by the given
-      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-      /// the same Cloud organization as the key will be returned. The project that
-      /// holds the key must be part of an organization in order for this call to
-      /// succeed.
+      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+      /// summary of resources within the same Cloud organization as the key will be
+      /// returned, which requires the KMS organization service account to be
+      /// configured(refer
+      /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+      /// If the KMS organization service account is not configured or key's project
+      /// is not part of an organization, set
+      /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+      /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+      /// within the key's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -176,10 +189,16 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns aggregate information about the resources protected by the given
-      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-      /// the same Cloud organization as the key will be returned. The project that
-      /// holds the key must be part of an organization in order for this call to
-      /// succeed.
+      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+      /// summary of resources within the same Cloud organization as the key will be
+      /// returned, which requires the KMS organization service account to be
+      /// configured(refer
+      /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+      /// If the KMS organization service account is not configured or key's project
+      /// is not part of an organization, set
+      /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+      /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+      /// within the key's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -191,10 +210,16 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns aggregate information about the resources protected by the given
-      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-      /// the same Cloud organization as the key will be returned. The project that
-      /// holds the key must be part of an organization in order for this call to
-      /// succeed.
+      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+      /// summary of resources within the same Cloud organization as the key will be
+      /// returned, which requires the KMS organization service account to be
+      /// configured(refer
+      /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+      /// If the KMS organization service account is not configured or key's project
+      /// is not part of an organization, set
+      /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+      /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+      /// within the key's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -208,10 +233,16 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns aggregate information about the resources protected by the given
-      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-      /// the same Cloud organization as the key will be returned. The project that
-      /// holds the key must be part of an organization in order for this call to
-      /// succeed.
+      /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+      /// summary of resources within the same Cloud organization as the key will be
+      /// returned, which requires the KMS organization service account to be
+      /// configured(refer
+      /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+      /// If the KMS organization service account is not configured or key's project
+      /// is not part of an organization, set
+      /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+      /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+      /// within the key's project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -223,7 +254,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns metadata about the resources protected by the given Cloud KMS
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+      /// organization/project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +269,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns metadata about the resources protected by the given Cloud KMS
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+      /// organization/project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -249,7 +282,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns metadata about the resources protected by the given Cloud KMS
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+      /// organization/project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -263,7 +297,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
       /// <summary>
       /// Returns metadata about the resources protected by the given Cloud KMS
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+      /// organization/project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

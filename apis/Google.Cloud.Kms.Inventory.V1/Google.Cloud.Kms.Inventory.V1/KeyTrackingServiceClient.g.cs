@@ -226,10 +226,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -239,10 +245,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -252,10 +264,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -265,10 +283,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -284,10 +308,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -303,10 +333,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -319,10 +355,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -338,10 +380,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -357,10 +405,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the
@@ -373,7 +427,8 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -383,7 +438,8 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -393,11 +449,18 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="scope">
-        /// Required. Resource name of the organization.
-        /// Example: organizations/123
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
         /// </param>
         /// <param name="cryptoKey">
         /// Required. The resource name of the
@@ -433,11 +496,18 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="scope">
-        /// Required. Resource name of the organization.
-        /// Example: organizations/123
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
         /// </param>
         /// <param name="cryptoKey">
         /// Required. The resource name of the
@@ -473,11 +543,18 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="scope">
-        /// Required. Resource name of the organization.
-        /// Example: organizations/123
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
         /// </param>
         /// <param name="cryptoKey">
         /// Required. The resource name of the
@@ -513,11 +590,18 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="scope">
-        /// Required. Resource name of the organization.
-        /// Example: organizations/123
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
         /// </param>
         /// <param name="cryptoKey">
         /// Required. The resource name of the
@@ -538,6 +622,100 @@ namespace Google.Cloud.Kms.Inventory.V1
             SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
             {
                 ScopeAsOrganizationName = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
+                CryptoKeyAsResourceName = gax::GaxPreconditions.CheckNotNull(cryptoKey, nameof(cryptoKey)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata about the resources protected by the given Cloud KMS
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+        /// </param>
+        /// <param name="cryptoKey">
+        /// Required. The resource name of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ProtectedResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResources(gagr::ProjectName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
+            {
+                ScopeAsProjectName = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
+                CryptoKeyAsResourceName = gax::GaxPreconditions.CheckNotNull(cryptoKey, nameof(cryptoKey)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProtectedResources(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata about the resources protected by the given Cloud KMS
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be an organization or a project. Resources protected
+        /// by the crypto key in provided scope will be returned.
+        /// 
+        /// The following values are allowed:
+        /// 
+        /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678")
+        /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+        /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+        /// </param>
+        /// <param name="cryptoKey">
+        /// Required. The resource name of the
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ProtectedResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> SearchProtectedResourcesAsync(gagr::ProjectName scope, gax::IResourceName cryptoKey, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProtectedResourcesRequest request = new SearchProtectedResourcesRequest
+            {
+                ScopeAsProjectName = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
                 CryptoKeyAsResourceName = gax::GaxPreconditions.CheckNotNull(cryptoKey, nameof(cryptoKey)),
             };
             if (pageToken != null)
@@ -604,10 +782,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -620,10 +804,16 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns aggregate information about the resources protected by the given
-        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. Only resources within
-        /// the same Cloud organization as the key will be returned. The project that
-        /// holds the key must be part of an organization in order for this call to
-        /// succeed.
+        /// Cloud KMS [CryptoKey][google.cloud.kms.v1.CryptoKey]. By default,
+        /// summary of resources within the same Cloud organization as the key will be
+        /// returned, which requires the KMS organization service account to be
+        /// configured(refer
+        /// https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles).
+        /// If the KMS organization service account is not configured or key's project
+        /// is not part of an organization, set
+        /// [fallback_scope][google.cloud.kms.inventory.v1.GetProtectedResourcesSummaryRequest.fallback_scope]
+        /// to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources
+        /// within the key's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -636,7 +826,8 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -649,7 +840,8 @@ namespace Google.Cloud.Kms.Inventory.V1
 
         /// <summary>
         /// Returns metadata about the resources protected by the given Cloud KMS
-        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud organization.
+        /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the given Cloud
+        /// organization/project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

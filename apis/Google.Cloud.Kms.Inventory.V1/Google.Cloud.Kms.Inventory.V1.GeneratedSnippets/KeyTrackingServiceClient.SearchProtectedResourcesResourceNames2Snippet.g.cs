@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames]
+    // [START kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Kms.Inventory.V1;
@@ -32,12 +32,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void SearchProtectedResourcesResourceNames()
+        public void SearchProtectedResourcesResourceNames2()
         {
             // Create client
             KeyTrackingServiceClient keyTrackingServiceClient = KeyTrackingServiceClient.Create();
             // Initialize request argument(s)
-            OrganizationName scope = OrganizationName.FromOrganization("[ORGANIZATION]");
+            ProjectName scope = ProjectName.FromProject("[PROJECT]");
             IResourceName cryptoKey = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResources(scope, cryptoKey);
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames]
+    // [END kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames2]
 }

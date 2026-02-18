@@ -367,12 +367,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -416,12 +416,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -833,10 +833,10 @@
       ]
     },
     {
-      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames",
-      "title": "SearchProtectedResourcesResourceNames",
+      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames1",
+      "title": "SearchProtectedResourcesResourceNames1",
       "description": "Snippet for SearchProtectedResources",
-      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNamesSnippet.g.cs",
+      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SearchProtectedResources",
@@ -892,10 +892,10 @@
       ]
     },
     {
-      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_async_flattened_resourceNames",
-      "title": "SearchProtectedResourcesResourceNamesAsync",
+      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_async_flattened_resourceNames1",
+      "title": "SearchProtectedResourcesResourceNames1Async",
       "description": "Snippet for SearchProtectedResourcesAsync",
-      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNamesAsyncSnippet.g.cs",
+      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SearchProtectedResourcesAsync",
@@ -904,6 +904,125 @@
         "parameters": [
           {
             "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "scope"
+          },
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse, Google.Cloud.Kms.Inventory.V1.ProtectedResource>",
+        "client": {
+          "shortName": "KeyTrackingServiceClient",
+          "fullName": "Google.Cloud.Kms.Inventory.V1.KeyTrackingServiceClient"
+        },
+        "method": {
+          "shortName": "SearchProtectedResources",
+          "fullName": "google.cloud.kms.inventory.v1.KeyTrackingService.SearchProtectedResources",
+          "service": {
+            "shortName": "KeyTrackingService",
+            "fullName": "google.cloud.kms.inventory.v1.KeyTrackingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames2",
+      "title": "SearchProtectedResourcesResourceNames2",
+      "description": "Snippet for SearchProtectedResources",
+      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchProtectedResources",
+        "fullName": "Google.Cloud.Kms.Inventory.V1.KeyTrackingServiceClient.SearchProtectedResources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "scope"
+          },
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse, Google.Cloud.Kms.Inventory.V1.ProtectedResource>",
+        "client": {
+          "shortName": "KeyTrackingServiceClient",
+          "fullName": "Google.Cloud.Kms.Inventory.V1.KeyTrackingServiceClient"
+        },
+        "method": {
+          "shortName": "SearchProtectedResources",
+          "fullName": "google.cloud.kms.inventory.v1.KeyTrackingService.SearchProtectedResources",
+          "service": {
+            "shortName": "KeyTrackingService",
+            "fullName": "google.cloud.kms.inventory.v1.KeyTrackingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_async_flattened_resourceNames2",
+      "title": "SearchProtectedResourcesResourceNames2Async",
+      "description": "Snippet for SearchProtectedResourcesAsync",
+      "file": "KeyTrackingServiceClient.SearchProtectedResourcesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchProtectedResourcesAsync",
+        "fullName": "Google.Cloud.Kms.Inventory.V1.KeyTrackingServiceClient.SearchProtectedResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
             "name": "scope"
           },
           {
