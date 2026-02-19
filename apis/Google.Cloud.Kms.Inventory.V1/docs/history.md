@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.6.0, released 2026-02-19
+
+### New features
+
+- Add support for project level key usage tracking
+
+### Documentation improvements
+
+- Add support for project level key usage tracking
+
 ## Version 1.5.0, released 2025-11-05
 
 ### New features
