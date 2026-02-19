@@ -1857,7 +1857,6 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
   /// <summary>
   /// DatabaseResource represents every individually configured database unit
   /// representing compute and/or storage.
-  /// NextId: 20
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatabaseResource : pb::IMessage<DatabaseResource>
@@ -1962,8 +1961,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public const int ContainerFieldNumber = 4;
     private string container_ = "";
     /// <summary>
-    /// Specifies where the resource is created. For GCP, it is the full name of
-    /// the project.
+    /// Specifies where the resource is created. For Google Cloud resources, it is
+    /// the full name of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1994,8 +1993,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     private string location_ = "";
     /// <summary>
     /// The location of the resources. It supports returning only regional
-    /// locations in GCP. These are of the form: "us-central1", "us-east1", etc.
-    /// See https://cloud.google.com/about/locations for a list of such regions.
+    /// locations in Google Cloud. These are of the form: "us-central1",
+    /// "us-east1", etc. See https://cloud.google.com/about/locations for a list of
+    /// such regions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5645,8 +5645,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// <summary>Field number for the "container" field.</summary>
     public const int ContainerFieldNumber = 2;
     /// <summary>
-    /// Specifies where the resource is created. For GCP, it is the full name of
-    /// the project.
+    /// Specifies where the resource is created. For Google Cloud resources, it
+    /// is the full name of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5763,7 +5763,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public const int LocationFieldNumber = 6;
     /// <summary>
     /// The location of the resources. It supports returning only regional
-    /// locations in GCP.
+    /// locations in Google Cloud.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8578,8 +8578,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public const int ContainerFieldNumber = 2;
     private string container_ = "";
     /// <summary>
-    /// Specifies where the resource is created. For GCP, it is the full name of
-    /// the project.
+    /// Specifies where the resource is created. For Google Cloud resources, it is
+    /// the full name of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
