@@ -1480,7 +1480,7 @@
     },
     {
       "id": "Google.Cloud.Ces.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
