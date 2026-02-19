@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.65.0, released 2026-02-19
+
+### New features
+
+- Add `traffic_type, tool_use_prompt_tokens_details` to message `GenerateContentResponse.UsageMetadata`
+
 ## Version 3.64.0, released 2026-02-16
 
 ### New features
