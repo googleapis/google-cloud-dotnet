@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.23.0, released 2026-02-19
+
+### New features
+
+- Add KeyProjectResolutionMode to AutokeyConfig to support project-level configurations
+- Add more post-quantum (PQ) signature algorithms to CryptoKeyVersion
+
+### Documentation improvements
+
+- Update documentation for AutokeyAdmin service and messages to support folder and project-level configurations
+- Clarify supported resources for the crypto_key_backend field in ImportJob
+
 ## Version 3.22.0, released 2026-02-16
 
 ### New features
