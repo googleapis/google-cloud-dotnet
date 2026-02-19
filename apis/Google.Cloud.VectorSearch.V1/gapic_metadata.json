@@ -1,0 +1,162 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.vectorsearch.v1",
+  "libraryPackage": "Google.Cloud.VectorSearch.V1",
+  "services": {
+    "DataObjectSearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataObjectSearchServiceClient",
+          "rpcs": {
+            "AggregateDataObjects": {
+              "methods": [
+                "AggregateDataObjects",
+                "AggregateDataObjectsAsync"
+              ]
+            },
+            "BatchSearchDataObjects": {
+              "methods": [
+                "BatchSearchDataObjects",
+                "BatchSearchDataObjectsAsync"
+              ]
+            },
+            "QueryDataObjects": {
+              "methods": [
+                "QueryDataObjects",
+                "QueryDataObjectsAsync"
+              ]
+            },
+            "SearchDataObjects": {
+              "methods": [
+                "SearchDataObjects",
+                "SearchDataObjectsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataObjectService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataObjectServiceClient",
+          "rpcs": {
+            "BatchCreateDataObjects": {
+              "methods": [
+                "BatchCreateDataObjects",
+                "BatchCreateDataObjectsAsync"
+              ]
+            },
+            "BatchDeleteDataObjects": {
+              "methods": [
+                "BatchDeleteDataObjects",
+                "BatchDeleteDataObjectsAsync"
+              ]
+            },
+            "BatchUpdateDataObjects": {
+              "methods": [
+                "BatchUpdateDataObjects",
+                "BatchUpdateDataObjectsAsync"
+              ]
+            },
+            "CreateDataObject": {
+              "methods": [
+                "CreateDataObject",
+                "CreateDataObjectAsync"
+              ]
+            },
+            "DeleteDataObject": {
+              "methods": [
+                "DeleteDataObject",
+                "DeleteDataObjectAsync"
+              ]
+            },
+            "GetDataObject": {
+              "methods": [
+                "GetDataObject",
+                "GetDataObjectAsync"
+              ]
+            },
+            "UpdateDataObject": {
+              "methods": [
+                "UpdateDataObject",
+                "UpdateDataObjectAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "VectorSearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VectorSearchServiceClient",
+          "rpcs": {
+            "CreateCollection": {
+              "methods": [
+                "CreateCollection",
+                "CreateCollectionAsync"
+              ]
+            },
+            "CreateIndex": {
+              "methods": [
+                "CreateIndex",
+                "CreateIndexAsync"
+              ]
+            },
+            "DeleteCollection": {
+              "methods": [
+                "DeleteCollection",
+                "DeleteCollectionAsync"
+              ]
+            },
+            "DeleteIndex": {
+              "methods": [
+                "DeleteIndex",
+                "DeleteIndexAsync"
+              ]
+            },
+            "GetCollection": {
+              "methods": [
+                "GetCollection",
+                "GetCollectionAsync"
+              ]
+            },
+            "GetIndex": {
+              "methods": [
+                "GetIndex",
+                "GetIndexAsync"
+              ]
+            },
+            "ImportDataObjects": {
+              "methods": [
+                "ImportDataObjects",
+                "ImportDataObjectsAsync"
+              ]
+            },
+            "ListCollections": {
+              "methods": [
+                "ListCollections",
+                "ListCollectionsAsync"
+              ]
+            },
+            "ListIndexes": {
+              "methods": [
+                "ListIndexes",
+                "ListIndexesAsync"
+              ]
+            },
+            "UpdateCollection": {
+              "methods": [
+                "UpdateCollection",
+                "UpdateCollectionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

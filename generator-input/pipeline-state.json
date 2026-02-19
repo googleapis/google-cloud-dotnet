@@ -4887,6 +4887,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "27ffde22e73154260f8eaa6115420b7bd895db2f",
             "apiPaths": [
                 "google/cloud/vectorsearch/v1"
             ],
