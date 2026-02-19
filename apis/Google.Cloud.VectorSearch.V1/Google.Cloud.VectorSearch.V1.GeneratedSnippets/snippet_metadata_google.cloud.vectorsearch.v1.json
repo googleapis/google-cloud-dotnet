@@ -1,0 +1,4913 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.VectorSearch.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.vectorsearch.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_SearchDataObjects_sync",
+      "title": "SearchDataObjectsRequestObject",
+      "description": "Snippet for SearchDataObjects",
+      "file": "DataObjectSearchServiceClient.SearchDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.SearchDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.SearchDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.SearchDataObjectsResponse, Google.Cloud.VectorSearch.V1.SearchResult>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.SearchDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_SearchDataObjects_async",
+      "title": "SearchDataObjectsRequestObjectAsync",
+      "description": "Snippet for SearchDataObjectsAsync",
+      "file": "DataObjectSearchServiceClient.SearchDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.SearchDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.SearchDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.SearchDataObjectsResponse, Google.Cloud.VectorSearch.V1.SearchResult>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.SearchDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_QueryDataObjects_sync",
+      "title": "QueryDataObjectsRequestObject",
+      "description": "Snippet for QueryDataObjects",
+      "file": "DataObjectSearchServiceClient.QueryDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.QueryDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.QueryDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.QueryDataObjectsResponse, Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "QueryDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.QueryDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_QueryDataObjects_async",
+      "title": "QueryDataObjectsRequestObjectAsync",
+      "description": "Snippet for QueryDataObjectsAsync",
+      "file": "DataObjectSearchServiceClient.QueryDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.QueryDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.QueryDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.QueryDataObjectsResponse, Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "QueryDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.QueryDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_AggregateDataObjects_sync",
+      "title": "AggregateDataObjectsRequestObject",
+      "description": "Snippet for AggregateDataObjects",
+      "file": "DataObjectSearchServiceClient.AggregateDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.AggregateDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.AggregateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.AggregateDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.AggregateDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_AggregateDataObjects_async",
+      "title": "AggregateDataObjectsRequestObjectAsync",
+      "description": "Snippet for AggregateDataObjectsAsync",
+      "file": "DataObjectSearchServiceClient.AggregateDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.AggregateDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.AggregateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.AggregateDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.AggregateDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_BatchSearchDataObjects_sync",
+      "title": "BatchSearchDataObjectsRequestObject",
+      "description": "Snippet for BatchSearchDataObjects",
+      "file": "DataObjectSearchServiceClient.BatchSearchDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchSearchDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.BatchSearchDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "BatchSearchDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.BatchSearchDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectSearchService_BatchSearchDataObjects_async",
+      "title": "BatchSearchDataObjectsRequestObjectAsync",
+      "description": "Snippet for BatchSearchDataObjectsAsync",
+      "file": "DataObjectSearchServiceClient.BatchSearchDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchSearchDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient.BatchSearchDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectSearchServiceClient"
+        },
+        "method": {
+          "shortName": "BatchSearchDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService.BatchSearchDataObjects",
+          "service": {
+            "shortName": "DataObjectSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_sync",
+      "title": "CreateDataObjectRequestObject",
+      "description": "Snippet for CreateDataObject",
+      "file": "DataObjectServiceClient.CreateDataObjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_async",
+      "title": "CreateDataObjectRequestObjectAsync",
+      "description": "Snippet for CreateDataObjectAsync",
+      "file": "DataObjectServiceClient.CreateDataObjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_sync_flattened",
+      "title": "CreateDataObject",
+      "description": "Snippet for CreateDataObject",
+      "file": "DataObjectServiceClient.CreateDataObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "System.String",
+            "name": "dataObjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_async_flattened",
+      "title": "CreateDataObjectAsync",
+      "description": "Snippet for CreateDataObjectAsync",
+      "file": "DataObjectServiceClient.CreateDataObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "System.String",
+            "name": "dataObjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_sync_flattened_resourceNames",
+      "title": "CreateDataObjectResourceNames",
+      "description": "Snippet for CreateDataObject",
+      "file": "DataObjectServiceClient.CreateDataObjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "System.String",
+            "name": "dataObjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_CreateDataObject_async_flattened_resourceNames",
+      "title": "CreateDataObjectResourceNamesAsync",
+      "description": "Snippet for CreateDataObjectAsync",
+      "file": "DataObjectServiceClient.CreateDataObjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.CreateDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "System.String",
+            "name": "dataObjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.CreateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchCreateDataObjects_sync",
+      "title": "BatchCreateDataObjectsRequestObject",
+      "description": "Snippet for BatchCreateDataObjects",
+      "file": "DataObjectServiceClient.BatchCreateDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchCreateDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchCreateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.BatchCreateDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchCreateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchCreateDataObjects_async",
+      "title": "BatchCreateDataObjectsRequestObjectAsync",
+      "description": "Snippet for BatchCreateDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchCreateDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchCreateDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchCreateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.BatchCreateDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchCreateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_sync",
+      "title": "GetDataObjectRequestObject",
+      "description": "Snippet for GetDataObject",
+      "file": "DataObjectServiceClient.GetDataObjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_async",
+      "title": "GetDataObjectRequestObjectAsync",
+      "description": "Snippet for GetDataObjectAsync",
+      "file": "DataObjectServiceClient.GetDataObjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_sync_flattened",
+      "title": "GetDataObject",
+      "description": "Snippet for GetDataObject",
+      "file": "DataObjectServiceClient.GetDataObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_async_flattened",
+      "title": "GetDataObjectAsync",
+      "description": "Snippet for GetDataObjectAsync",
+      "file": "DataObjectServiceClient.GetDataObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_sync_flattened_resourceNames",
+      "title": "GetDataObjectResourceNames",
+      "description": "Snippet for GetDataObject",
+      "file": "DataObjectServiceClient.GetDataObjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_GetDataObject_async_flattened_resourceNames",
+      "title": "GetDataObjectResourceNamesAsync",
+      "description": "Snippet for GetDataObjectAsync",
+      "file": "DataObjectServiceClient.GetDataObjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.GetDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.GetDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_UpdateDataObject_sync",
+      "title": "UpdateDataObjectRequestObject",
+      "description": "Snippet for UpdateDataObject",
+      "file": "DataObjectServiceClient.UpdateDataObjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.UpdateDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.UpdateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_UpdateDataObject_async",
+      "title": "UpdateDataObjectRequestObjectAsync",
+      "description": "Snippet for UpdateDataObjectAsync",
+      "file": "DataObjectServiceClient.UpdateDataObjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.UpdateDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.UpdateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_UpdateDataObject_sync_flattened",
+      "title": "UpdateDataObject",
+      "description": "Snippet for UpdateDataObject",
+      "file": "DataObjectServiceClient.UpdateDataObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.UpdateDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.DataObject",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.UpdateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_UpdateDataObject_async_flattened",
+      "title": "UpdateDataObjectAsync",
+      "description": "Snippet for UpdateDataObjectAsync",
+      "file": "DataObjectServiceClient.UpdateDataObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.UpdateDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObject",
+            "name": "dataObject"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.DataObject>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.UpdateDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_sync",
+      "title": "BatchUpdateDataObjectsRequestObject",
+      "description": "Snippet for BatchUpdateDataObjects",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_async",
+      "title": "BatchUpdateDataObjectsRequestObjectAsync",
+      "description": "Snippet for BatchUpdateDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_sync_flattened",
+      "title": "BatchUpdateDataObjects",
+      "description": "Snippet for BatchUpdateDataObjects",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjects",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_async_flattened",
+      "title": "BatchUpdateDataObjectsAsync",
+      "description": "Snippet for BatchUpdateDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_sync_flattened_resourceNames",
+      "title": "BatchUpdateDataObjectsResourceNames",
+      "description": "Snippet for BatchUpdateDataObjects",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchUpdateDataObjects_async_flattened_resourceNames",
+      "title": "BatchUpdateDataObjectsResourceNamesAsync",
+      "description": "Snippet for BatchUpdateDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchUpdateDataObjectsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchUpdateDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.UpdateDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.BatchUpdateDataObjectsResponse>",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchUpdateDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_sync",
+      "title": "DeleteDataObjectRequestObject",
+      "description": "Snippet for DeleteDataObject",
+      "file": "DataObjectServiceClient.DeleteDataObjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_async",
+      "title": "DeleteDataObjectRequestObjectAsync",
+      "description": "Snippet for DeleteDataObjectAsync",
+      "file": "DataObjectServiceClient.DeleteDataObjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_sync_flattened",
+      "title": "DeleteDataObject",
+      "description": "Snippet for DeleteDataObject",
+      "file": "DataObjectServiceClient.DeleteDataObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_async_flattened",
+      "title": "DeleteDataObjectAsync",
+      "description": "Snippet for DeleteDataObjectAsync",
+      "file": "DataObjectServiceClient.DeleteDataObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_sync_flattened_resourceNames",
+      "title": "DeleteDataObjectResourceNames",
+      "description": "Snippet for DeleteDataObject",
+      "file": "DataObjectServiceClient.DeleteDataObjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObject",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_DeleteDataObject_async_flattened_resourceNames",
+      "title": "DeleteDataObjectResourceNamesAsync",
+      "description": "Snippet for DeleteDataObjectAsync",
+      "file": "DataObjectServiceClient.DeleteDataObjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataObjectAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.DeleteDataObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DataObjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataObject",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.DeleteDataObject",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_sync",
+      "title": "BatchDeleteDataObjectsRequestObject",
+      "description": "Snippet for BatchDeleteDataObjects",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchDeleteDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_async",
+      "title": "BatchDeleteDataObjectsRequestObjectAsync",
+      "description": "Snippet for BatchDeleteDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.BatchDeleteDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_sync_flattened",
+      "title": "BatchDeleteDataObjects",
+      "description": "Snippet for BatchDeleteDataObjects",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjects",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_async_flattened",
+      "title": "BatchDeleteDataObjectsAsync",
+      "description": "Snippet for BatchDeleteDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_sync_flattened_resourceNames",
+      "title": "BatchDeleteDataObjectsResourceNames",
+      "description": "Snippet for BatchDeleteDataObjects",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_DataObjectService_BatchDeleteDataObjects_async_flattened_resourceNames",
+      "title": "BatchDeleteDataObjectsResourceNamesAsync",
+      "description": "Snippet for BatchDeleteDataObjectsAsync",
+      "file": "DataObjectServiceClient.BatchDeleteDataObjectsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient.BatchDeleteDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VectorSearch.V1.DeleteDataObjectRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataObjectServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.DataObjectServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.DataObjectService.BatchDeleteDataObjects",
+          "service": {
+            "shortName": "DataObjectService",
+            "fullName": "google.cloud.vectorsearch.v1.DataObjectService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_sync",
+      "title": "ListCollectionsRequestObject",
+      "description": "Snippet for ListCollections",
+      "file": "VectorSearchServiceClient.ListCollectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollections",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ListCollectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_async",
+      "title": "ListCollectionsRequestObjectAsync",
+      "description": "Snippet for ListCollectionsAsync",
+      "file": "VectorSearchServiceClient.ListCollectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ListCollectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_sync_flattened",
+      "title": "ListCollections",
+      "description": "Snippet for ListCollections",
+      "file": "VectorSearchServiceClient.ListCollectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollections",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_async_flattened",
+      "title": "ListCollectionsAsync",
+      "description": "Snippet for ListCollectionsAsync",
+      "file": "VectorSearchServiceClient.ListCollectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_sync_flattened_resourceNames",
+      "title": "ListCollectionsResourceNames",
+      "description": "Snippet for ListCollections",
+      "file": "VectorSearchServiceClient.ListCollectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollections",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListCollections_async_flattened_resourceNames",
+      "title": "ListCollectionsResourceNamesAsync",
+      "description": "Snippet for ListCollectionsAsync",
+      "file": "VectorSearchServiceClient.ListCollectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListCollectionsResponse, Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListCollections",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListCollections",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_sync",
+      "title": "GetCollectionRequestObject",
+      "description": "Snippet for GetCollection",
+      "file": "VectorSearchServiceClient.GetCollectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Collection",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_async",
+      "title": "GetCollectionRequestObjectAsync",
+      "description": "Snippet for GetCollectionAsync",
+      "file": "VectorSearchServiceClient.GetCollectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_sync_flattened",
+      "title": "GetCollection",
+      "description": "Snippet for GetCollection",
+      "file": "VectorSearchServiceClient.GetCollectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Collection",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_async_flattened",
+      "title": "GetCollectionAsync",
+      "description": "Snippet for GetCollectionAsync",
+      "file": "VectorSearchServiceClient.GetCollectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_sync_flattened_resourceNames",
+      "title": "GetCollectionResourceNames",
+      "description": "Snippet for GetCollection",
+      "file": "VectorSearchServiceClient.GetCollectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Collection",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetCollection_async_flattened_resourceNames",
+      "title": "GetCollectionResourceNamesAsync",
+      "description": "Snippet for GetCollectionAsync",
+      "file": "VectorSearchServiceClient.GetCollectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Collection>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_sync",
+      "title": "CreateCollectionRequestObject",
+      "description": "Snippet for CreateCollection",
+      "file": "VectorSearchServiceClient.CreateCollectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_async",
+      "title": "CreateCollectionRequestObjectAsync",
+      "description": "Snippet for CreateCollectionAsync",
+      "file": "VectorSearchServiceClient.CreateCollectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_sync_flattened",
+      "title": "CreateCollection",
+      "description": "Snippet for CreateCollection",
+      "file": "VectorSearchServiceClient.CreateCollectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "System.String",
+            "name": "collectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_async_flattened",
+      "title": "CreateCollectionAsync",
+      "description": "Snippet for CreateCollectionAsync",
+      "file": "VectorSearchServiceClient.CreateCollectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "System.String",
+            "name": "collectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_sync_flattened_resourceNames",
+      "title": "CreateCollectionResourceNames",
+      "description": "Snippet for CreateCollection",
+      "file": "VectorSearchServiceClient.CreateCollectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "System.String",
+            "name": "collectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateCollection_async_flattened_resourceNames",
+      "title": "CreateCollectionResourceNamesAsync",
+      "description": "Snippet for CreateCollectionAsync",
+      "file": "VectorSearchServiceClient.CreateCollectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "System.String",
+            "name": "collectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateCollection_sync",
+      "title": "UpdateCollectionRequestObject",
+      "description": "Snippet for UpdateCollection",
+      "file": "VectorSearchServiceClient.UpdateCollectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateCollection_async",
+      "title": "UpdateCollectionRequestObjectAsync",
+      "description": "Snippet for UpdateCollectionAsync",
+      "file": "VectorSearchServiceClient.UpdateCollectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateCollection_sync_flattened",
+      "title": "UpdateCollection",
+      "description": "Snippet for UpdateCollection",
+      "file": "VectorSearchServiceClient.UpdateCollectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateCollection_async_flattened",
+      "title": "UpdateCollectionAsync",
+      "description": "Snippet for UpdateCollectionAsync",
+      "file": "VectorSearchServiceClient.UpdateCollectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Collection",
+            "name": "collection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Collection, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_sync",
+      "title": "DeleteCollectionRequestObject",
+      "description": "Snippet for DeleteCollection",
+      "file": "VectorSearchServiceClient.DeleteCollectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_async",
+      "title": "DeleteCollectionRequestObjectAsync",
+      "description": "Snippet for DeleteCollectionAsync",
+      "file": "VectorSearchServiceClient.DeleteCollectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_sync_flattened",
+      "title": "DeleteCollection",
+      "description": "Snippet for DeleteCollection",
+      "file": "VectorSearchServiceClient.DeleteCollectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_async_flattened",
+      "title": "DeleteCollectionAsync",
+      "description": "Snippet for DeleteCollectionAsync",
+      "file": "VectorSearchServiceClient.DeleteCollectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_sync_flattened_resourceNames",
+      "title": "DeleteCollectionResourceNames",
+      "description": "Snippet for DeleteCollection",
+      "file": "VectorSearchServiceClient.DeleteCollectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollection",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteCollection_async_flattened_resourceNames",
+      "title": "DeleteCollectionResourceNamesAsync",
+      "description": "Snippet for DeleteCollectionAsync",
+      "file": "VectorSearchServiceClient.DeleteCollectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCollectionAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCollection",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteCollection",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_sync",
+      "title": "ListIndexesRequestObject",
+      "description": "Snippet for ListIndexes",
+      "file": "VectorSearchServiceClient.ListIndexesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexes",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_async",
+      "title": "ListIndexesRequestObjectAsync",
+      "description": "Snippet for ListIndexesAsync",
+      "file": "VectorSearchServiceClient.ListIndexesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexesAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_sync_flattened",
+      "title": "ListIndexes",
+      "description": "Snippet for ListIndexes",
+      "file": "VectorSearchServiceClient.ListIndexesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexes",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_async_flattened",
+      "title": "ListIndexesAsync",
+      "description": "Snippet for ListIndexesAsync",
+      "file": "VectorSearchServiceClient.ListIndexesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexesAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_sync_flattened_resourceNames",
+      "title": "ListIndexesResourceNames",
+      "description": "Snippet for ListIndexes",
+      "file": "VectorSearchServiceClient.ListIndexesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexes",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ListIndexes_async_flattened_resourceNames",
+      "title": "ListIndexesResourceNamesAsync",
+      "description": "Snippet for ListIndexesAsync",
+      "file": "VectorSearchServiceClient.ListIndexesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexesAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ListIndexesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VectorSearch.V1.ListIndexesResponse, Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ListIndexes",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_sync",
+      "title": "GetIndexRequestObject",
+      "description": "Snippet for GetIndex",
+      "file": "VectorSearchServiceClient.GetIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Index",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_async",
+      "title": "GetIndexRequestObjectAsync",
+      "description": "Snippet for GetIndexAsync",
+      "file": "VectorSearchServiceClient.GetIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_sync_flattened",
+      "title": "GetIndex",
+      "description": "Snippet for GetIndex",
+      "file": "VectorSearchServiceClient.GetIndexSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Index",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_async_flattened",
+      "title": "GetIndexAsync",
+      "description": "Snippet for GetIndexAsync",
+      "file": "VectorSearchServiceClient.GetIndexAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_sync_flattened_resourceNames",
+      "title": "GetIndexResourceNames",
+      "description": "Snippet for GetIndex",
+      "file": "VectorSearchServiceClient.GetIndexResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VectorSearch.V1.Index",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_GetIndex_async_flattened_resourceNames",
+      "title": "GetIndexResourceNamesAsync",
+      "description": "Snippet for GetIndexAsync",
+      "file": "VectorSearchServiceClient.GetIndexResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.GetIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VectorSearch.V1.Index>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.GetIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_sync",
+      "title": "CreateIndexRequestObject",
+      "description": "Snippet for CreateIndex",
+      "file": "VectorSearchServiceClient.CreateIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_async",
+      "title": "CreateIndexRequestObjectAsync",
+      "description": "Snippet for CreateIndexAsync",
+      "file": "VectorSearchServiceClient.CreateIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_sync_flattened",
+      "title": "CreateIndex",
+      "description": "Snippet for CreateIndex",
+      "file": "VectorSearchServiceClient.CreateIndexSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "System.String",
+            "name": "indexId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_async_flattened",
+      "title": "CreateIndexAsync",
+      "description": "Snippet for CreateIndexAsync",
+      "file": "VectorSearchServiceClient.CreateIndexAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "System.String",
+            "name": "indexId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_sync_flattened_resourceNames",
+      "title": "CreateIndexResourceNames",
+      "description": "Snippet for CreateIndex",
+      "file": "VectorSearchServiceClient.CreateIndexResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "System.String",
+            "name": "indexId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_CreateIndex_async_flattened_resourceNames",
+      "title": "CreateIndexResourceNamesAsync",
+      "description": "Snippet for CreateIndexAsync",
+      "file": "VectorSearchServiceClient.CreateIndexResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.CreateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "System.String",
+            "name": "indexId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.CreateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_sync",
+      "title": "DeleteIndexRequestObject",
+      "description": "Snippet for DeleteIndex",
+      "file": "VectorSearchServiceClient.DeleteIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_async",
+      "title": "DeleteIndexRequestObjectAsync",
+      "description": "Snippet for DeleteIndexAsync",
+      "file": "VectorSearchServiceClient.DeleteIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_sync_flattened",
+      "title": "DeleteIndex",
+      "description": "Snippet for DeleteIndex",
+      "file": "VectorSearchServiceClient.DeleteIndexSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_async_flattened",
+      "title": "DeleteIndexAsync",
+      "description": "Snippet for DeleteIndexAsync",
+      "file": "VectorSearchServiceClient.DeleteIndexAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_sync_flattened_resourceNames",
+      "title": "DeleteIndexResourceNames",
+      "description": "Snippet for DeleteIndex",
+      "file": "VectorSearchServiceClient.DeleteIndexResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_async_flattened_resourceNames",
+      "title": "DeleteIndexResourceNamesAsync",
+      "description": "Snippet for DeleteIndexAsync",
+      "file": "VectorSearchServiceClient.DeleteIndexResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.DeleteIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.DeleteIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ImportDataObjects_sync",
+      "title": "ImportDataObjectsRequestObject",
+      "description": "Snippet for ImportDataObjects",
+      "file": "VectorSearchServiceClient.ImportDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ImportDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ImportDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.ImportDataObjectsResponse, Google.Cloud.VectorSearch.V1.ImportDataObjectsMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ImportDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ImportDataObjects",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ImportDataObjects_async",
+      "title": "ImportDataObjectsRequestObjectAsync",
+      "description": "Snippet for ImportDataObjectsAsync",
+      "file": "VectorSearchServiceClient.ImportDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ImportDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ImportDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.ImportDataObjectsResponse, Google.Cloud.VectorSearch.V1.ImportDataObjectsMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ImportDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ImportDataObjects",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
