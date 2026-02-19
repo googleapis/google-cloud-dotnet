@@ -436,7 +436,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "3.64.0",
+      "version": "3.65.0",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
