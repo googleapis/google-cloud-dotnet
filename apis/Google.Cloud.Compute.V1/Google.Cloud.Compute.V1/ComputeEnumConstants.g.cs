@@ -6923,6 +6923,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment.Types.Bandwidth.Bps400G"/>.
+                /// </summary>
+                public const string Bps400G = "BPS_400G";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment.Types.Bandwidth.Bps400M"/>.
                 /// </summary>
                 public const string Bps400M = "BPS_400M";
