@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.8.0, released 2026-02-19
+
+### New features
+
+- Adds endpointing sensitivity to streaming recognition features
+
 ## Version 1.7.0, released 2026-01-08
 
 ### New features
