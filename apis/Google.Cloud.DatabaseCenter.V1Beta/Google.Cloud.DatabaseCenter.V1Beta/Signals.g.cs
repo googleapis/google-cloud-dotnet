@@ -383,23 +383,23 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_LAST_BACKUP_OLD")] LastBackupOld = 7,
     /// <summary>
-    /// Represents if a resource violates CIS GCP Foundation 2.0.
+    /// Represents if a resource violates CIS Google Cloud Platform Foundation 2.0.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_2_0")] ViolatesCisGcpFoundation20 = 8,
     /// <summary>
-    /// Represents if a resource violates CIS GCP Foundation 1.3.
+    /// Represents if a resource violates CIS Google Cloud Platform Foundation 1.3.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_3")] ViolatesCisGcpFoundation13 = 9,
     /// <summary>
-    /// Represents if a resource violates CIS GCP Foundation 1.2.
+    /// Represents if a resource violates CIS Google Cloud Platform Foundation 1.2.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_2")] ViolatesCisGcpFoundation12 = 10,
     /// <summary>
-    /// Represents if a resource violates CIS GCP Foundation 1.1.
+    /// Represents if a resource violates CIS Google Cloud Platform Foundation 1.1.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_1")] ViolatesCisGcpFoundation11 = 11,
     /// <summary>
-    /// Represents if a resource violates CIS GCP Foundation 1.0.
+    /// Represents if a resource violates CIS Google Cloud Platform Foundation 1.0.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_0")] ViolatesCisGcpFoundation10 = 12,
     /// <summary>
@@ -2788,8 +2788,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     public const int ContainerFieldNumber = 4;
     private string container_ = "";
     /// <summary>
-    /// Specifies where the resource is created. For GCP, it is the full name of
-    /// the project.
+    /// Specifies where the resource is created. For Google Cloud resources, it is
+    /// the full name of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

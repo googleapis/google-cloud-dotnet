@@ -135,27 +135,27 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Cloud SQL product area in GCP
+    /// Cloud SQL product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_CLOUD_SQL")] CloudSql = 1,
     /// <summary>
-    /// AlloyDB product area in GCP
+    /// AlloyDB product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_ALLOYDB")] Alloydb = 2,
     /// <summary>
-    /// Spanner product area in GCP
+    /// Spanner product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_SPANNER")] Spanner = 3,
     /// <summary>
-    /// Bigtable product area in GCP
+    /// Bigtable product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_BIGTABLE")] Bigtable = 6,
     /// <summary>
-    /// Memorystore product area in GCP
+    /// Memorystore product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_MEMORYSTORE")] Memorystore = 7,
     /// <summary>
-    /// Firestore product area in GCP
+    /// Firestore product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_FIRESTORE")] Firestore = 8,
     /// <summary>
@@ -163,11 +163,11 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_COMPUTE_ENGINE")] ComputeEngine = 9,
     /// <summary>
-    /// Oracle product area in GCP
+    /// Oracle product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_ORACLE_ON_GCP")] OracleOnGcp = 10,
     /// <summary>
-    /// BigQuery product area in GCP
+    /// BigQuery product area in Google Cloud
     /// </summary>
     [pbr::OriginalName("PRODUCT_TYPE_BIGQUERY")] Bigquery = 11,
     /// <summary>
