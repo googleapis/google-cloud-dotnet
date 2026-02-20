@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -88,6 +89,33 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(destination.ContentType, result.ContentType);
             Assert.Equal(destination.ContentDisposition, result.ContentDisposition);
             Assert.Equal(destination.Metadata, result.Metadata);
+            ValidateData(_fixture.MultiVersionBucket, destination.Name, source);
+        }
+
+        [Fact]
+        public void UploadObjectWithObjectContexts()
+        {
+            string contextKey = "A\u00F1\u03A9\U0001F680";
+            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            var result = _fixture.Client.UploadObject(destination, source);
+            Assert.Equal(destination.Name, result.Name);
+            Assert.Equal(destination.Bucket, result.Bucket);
+            var resultEntry = Assert.Single(result.Contexts.Custom);
+            Assert.Equal(contextKey, resultEntry.Key);
+            Assert.Equal(contextValue, resultEntry.Value.Value);
+            Assert.NotNull(resultEntry.Value.CreateTimeRaw);
+            Assert.NotNull(resultEntry.Value.UpdateTimeRaw);
             ValidateData(_fixture.MultiVersionBucket, destination.Name, source);
         }
 

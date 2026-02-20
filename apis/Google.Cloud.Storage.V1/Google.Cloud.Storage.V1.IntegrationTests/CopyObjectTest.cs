@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -119,6 +121,37 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 new CopyObjectOptions { ExtraMetadata = new Object { ContentType = "text/html" } });
             Object fetched = _fixture.Client.GetObject(_fixture.SingleVersionBucket, destName);
             Assert.Equal("text/html", fetched.ContentType);
+        }
+
+        [Fact]
+        public void CopyObjectWithObjectContexts()
+        {
+            string contextKey = "A\u00F1\u03A9\U0001F680";
+            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            var result = _fixture.Client.UploadObject(destination, source);
+            _fixture.Client.CopyObject(
+                _fixture.SingleVersionBucket, destination.Name,
+                _fixture.MultiVersionBucket, destination.Name);
+            Object fetched = _fixture.Client.GetObject(_fixture.MultiVersionBucket, destination.Name);
+            Assert.Equal(result.Contexts.Custom.Count, fetched.Contexts.Custom.Count);
+            var fetchedEntry = Assert.Single(fetched.Contexts.Custom);
+            Assert.Equal(contextKey, fetchedEntry.Key);
+            Assert.Equal(contextValue, fetchedEntry.Value.Value);
         }
     }
 }

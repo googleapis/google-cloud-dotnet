@@ -107,6 +107,12 @@ namespace Google.Cloud.Storage.V1
         public string EndOffset { get; set; }
 
         /// <summary>
+        /// If set, filters results to include only objects to which the specified context is attached.
+        /// If delimiter is set, the returned prefixes are exempt from this filter.
+        /// </summary>
+        public string Filter { get; set; }
+
+        /// <summary>
         /// Options to pass custom retry configuration for each API request.
         /// </summary>
         public RetryOptions RetryOptions { get; set; }
@@ -168,6 +174,10 @@ namespace Google.Cloud.Storage.V1
             if (MatchGlob != null)
             {
                 request.MatchGlob = MatchGlob;
+            }
+            if (Filter != null)
+            {
+                request.Filter = Filter;
             }
         }
     }

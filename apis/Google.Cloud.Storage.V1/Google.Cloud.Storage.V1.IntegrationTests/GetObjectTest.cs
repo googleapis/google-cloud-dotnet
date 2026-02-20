@@ -12,11 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -86,6 +90,38 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(uploaded.Name, softDeleted.Name);
             Assert.Equal((ulong) _fixture.SmallContent.Length, softDeleted.Size);
             Assert.NotNull(softDeleted.SoftDeleteTimeDateTimeOffset);
+        }
+
+        [Fact]
+        public void GetObjectContexts()
+        {
+            string contextKey = "A\u00F1\u03A9\U0001F680";
+            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            var result = _fixture.Client.UploadObject(destination, source);
+
+
+            var obj = _fixture.Client.GetObject(_fixture.MultiVersionBucket, destination.Name);
+            Assert.Equal(_fixture.MultiVersionBucket, obj.Bucket);
+            Assert.NotNull(obj.Contexts);
+            Assert.Equal(obj.Contexts.Custom.Count, result.Contexts.Custom.Count);
+            var resultEntry = Assert.Single(obj.Contexts.Custom);
+            Assert.Equal(contextKey, resultEntry.Key);
+            Assert.Equal(contextValue, resultEntry.Value.Value);
         }
     }
 }
