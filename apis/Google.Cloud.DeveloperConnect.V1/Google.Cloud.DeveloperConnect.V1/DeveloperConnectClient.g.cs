@@ -83,6 +83,8 @@ namespace Google.Cloud.DeveloperConnect.V1
             FetchSelfSettings = existing.FetchSelfSettings;
             DeleteSelfSettings = existing.DeleteSelfSettings;
             DeleteSelfOperationsSettings = existing.DeleteSelfOperationsSettings.Clone();
+            StartOAuthSettings = existing.StartOAuthSettings;
+            FinishOAuthSettings = existing.FinishOAuthSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -640,6 +642,30 @@ namespace Google.Cloud.DeveloperConnect.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.StartOAuth</c> and <c>DeveloperConnectClient.StartOAuthAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartOAuthSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FinishOAuth</c> and <c>DeveloperConnectClient.FinishOAuthAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FinishOAuthSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1482,8 +1508,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1495,8 +1522,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1508,8 +1536,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1548,8 +1577,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -1577,8 +1607,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -1606,8 +1637,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -1630,8 +1662,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -1659,8 +1692,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -1688,8 +1722,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="parent">
         /// Required. Value for parent.
@@ -4097,6 +4132,228 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(AccountConnectorName name, st::CancellationToken cancellationToken) =>
             DeleteSelfAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StartOAuthResponse StartOAuth(StartOAuthRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(StartOAuthRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(StartOAuthRequest request, st::CancellationToken cancellationToken) =>
+            StartOAuthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StartOAuthResponse StartOAuth(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            StartOAuth(new StartOAuthRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            StartOAuthAsync(new StartOAuthRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(string accountConnector, st::CancellationToken cancellationToken) =>
+            StartOAuthAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StartOAuthResponse StartOAuth(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            StartOAuth(new StartOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            StartOAuthAsync(new StartOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StartOAuthResponse> StartOAuthAsync(AccountConnectorName accountConnector, st::CancellationToken cancellationToken) =>
+            StartOAuthAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FinishOAuthResponse FinishOAuth(FinishOAuthRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(FinishOAuthRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(FinishOAuthRequest request, st::CancellationToken cancellationToken) =>
+            FinishOAuthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FinishOAuthResponse FinishOAuth(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FinishOAuth(new FinishOAuthRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FinishOAuthAsync(new FinishOAuthRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(string accountConnector, st::CancellationToken cancellationToken) =>
+            FinishOAuthAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FinishOAuthResponse FinishOAuth(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FinishOAuth(new FinishOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FinishOAuthAsync(new FinishOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FinishOAuthResponse> FinishOAuthAsync(AccountConnectorName accountConnector, st::CancellationToken cancellationToken) =>
+            FinishOAuthAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DeveloperConnect client wrapper implementation, for convenient use.</summary>
@@ -4152,6 +4409,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         private readonly gaxgrpc::ApiCall<FetchSelfRequest, User> _callFetchSelf;
 
         private readonly gaxgrpc::ApiCall<DeleteSelfRequest, lro::Operation> _callDeleteSelf;
+
+        private readonly gaxgrpc::ApiCall<StartOAuthRequest, StartOAuthResponse> _callStartOAuth;
+
+        private readonly gaxgrpc::ApiCall<FinishOAuthRequest, FinishOAuthResponse> _callFinishOAuth;
 
         /// <summary>
         /// Constructs a client wrapper for the DeveloperConnect service, with the specified gRPC client and settings.
@@ -4251,6 +4512,12 @@ namespace Google.Cloud.DeveloperConnect.V1
             _callDeleteSelf = clientHelper.BuildApiCall<DeleteSelfRequest, lro::Operation>("DeleteSelf", grpcClient.DeleteSelfAsync, grpcClient.DeleteSelf, effectiveSettings.DeleteSelfSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSelf);
             Modify_DeleteSelfApiCall(ref _callDeleteSelf);
+            _callStartOAuth = clientHelper.BuildApiCall<StartOAuthRequest, StartOAuthResponse>("StartOAuth", grpcClient.StartOAuthAsync, grpcClient.StartOAuth, effectiveSettings.StartOAuthSettings).WithGoogleRequestParam("account_connector", request => request.AccountConnector);
+            Modify_ApiCall(ref _callStartOAuth);
+            Modify_StartOAuthApiCall(ref _callStartOAuth);
+            _callFinishOAuth = clientHelper.BuildApiCall<FinishOAuthRequest, FinishOAuthResponse>("FinishOAuth", grpcClient.FinishOAuthAsync, grpcClient.FinishOAuth, effectiveSettings.FinishOAuthSettings).WithGoogleRequestParam("account_connector", request => request.AccountConnector);
+            Modify_ApiCall(ref _callFinishOAuth);
+            Modify_FinishOAuthApiCall(ref _callFinishOAuth);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4303,6 +4570,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_FetchSelfApiCall(ref gaxgrpc::ApiCall<FetchSelfRequest, User> call);
 
         partial void Modify_DeleteSelfApiCall(ref gaxgrpc::ApiCall<DeleteSelfRequest, lro::Operation> call);
+
+        partial void Modify_StartOAuthApiCall(ref gaxgrpc::ApiCall<StartOAuthRequest, StartOAuthResponse> call);
+
+        partial void Modify_FinishOAuthApiCall(ref gaxgrpc::ApiCall<FinishOAuthRequest, FinishOAuthResponse> call);
 
         partial void OnConstruction(DeveloperConnect.DeveloperConnectClient grpcClient, DeveloperConnectSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4359,6 +4630,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_FetchSelfRequest(ref FetchSelfRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSelfRequest(ref DeleteSelfRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartOAuthRequest(ref StartOAuthRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FinishOAuthRequest(ref FinishOAuthRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -4496,8 +4771,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4512,8 +4788,9 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
         /// Connect will configure the Git Repository to send webhook events to
         /// Developer Connect. Connections that use Firebase GitHub Application will
-        /// have events forwarded to the Firebase service. All other Connections will
-        /// have events forwarded to Cloud Build.
+        /// have events forwarded to the Firebase service. Connections that use Gemini
+        /// Code Assist will have events forwarded to Gemini Code Assist service. All
+        /// other Connections will have events forwarded to Cloud Build.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4980,6 +5257,54 @@ namespace Google.Cloud.DeveloperConnect.V1
         {
             Modify_DeleteSelfRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteSelf.Async(request, callSettings).ConfigureAwait(false), DeleteSelfOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override StartOAuthResponse StartOAuth(StartOAuthRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartOAuthRequest(ref request, ref callSettings);
+            return _callStartOAuth.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Starts OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<StartOAuthResponse> StartOAuthAsync(StartOAuthRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartOAuthRequest(ref request, ref callSettings);
+            return _callStartOAuth.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FinishOAuthResponse FinishOAuth(FinishOAuthRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishOAuthRequest(ref request, ref callSettings);
+            return _callFinishOAuth.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finishes OAuth flow for an account connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FinishOAuthResponse> FinishOAuthAsync(FinishOAuthRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishOAuthRequest(ref request, ref callSettings);
+            return _callFinishOAuth.Async(request, callSettings);
         }
     }
 

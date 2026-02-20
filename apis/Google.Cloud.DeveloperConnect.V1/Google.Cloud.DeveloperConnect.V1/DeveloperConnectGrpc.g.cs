@@ -3,7 +3,7 @@
 //     source: google/cloud/developerconnect/v1/developer_connect.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -141,6 +141,14 @@ namespace Google.Cloud.DeveloperConnect.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.User> __Marshaller_google_cloud_developerconnect_v1_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.User.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest> __Marshaller_google_cloud_developerconnect_v1_DeleteSelfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest> __Marshaller_google_cloud_developerconnect_v1_StartOAuthRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse> __Marshaller_google_cloud_developerconnect_v1_StartOAuthResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest> __Marshaller_google_cloud_developerconnect_v1_FinishOAuthRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse> __Marshaller_google_cloud_developerconnect_v1_FinishOAuthResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest, global::Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse> __Method_ListConnections = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest, global::Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse>(
@@ -334,6 +342,22 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         __Marshaller_google_cloud_developerconnect_v1_DeleteSelfRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse> __Method_StartOAuth = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StartOAuth",
+        __Marshaller_google_cloud_developerconnect_v1_StartOAuthRequest,
+        __Marshaller_google_cloud_developerconnect_v1_StartOAuthResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse> __Method_FinishOAuth = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FinishOAuth",
+        __Marshaller_google_cloud_developerconnect_v1_FinishOAuthRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FinishOAuthResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -408,8 +432,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
       /// Connect will configure the Git Repository to send webhook events to
       /// Developer Connect. Connections that use Firebase GitHub Application will
-      /// have events forwarded to the Firebase service. All other Connections will
-      /// have events forwarded to Cloud Build.
+      /// have events forwarded to the Firebase service. Connections that use Gemini
+      /// Code Assist will have events forwarded to Gemini Code Assist service. All
+      /// other Connections will have events forwarded to Cloud Build.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -636,6 +661,30 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSelf(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Starts OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse> StartOAuth(global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finishes OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse> FinishOAuth(global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -913,8 +962,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
       /// Connect will configure the Git Repository to send webhook events to
       /// Developer Connect. Connections that use Firebase GitHub Application will
-      /// have events forwarded to the Firebase service. All other Connections will
-      /// have events forwarded to Cloud Build.
+      /// have events forwarded to the Firebase service. Connections that use Gemini
+      /// Code Assist will have events forwarded to Gemini Code Assist service. All
+      /// other Connections will have events forwarded to Cloud Build.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -930,8 +980,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
       /// Connect will configure the Git Repository to send webhook events to
       /// Developer Connect. Connections that use Firebase GitHub Application will
-      /// have events forwarded to the Firebase service. All other Connections will
-      /// have events forwarded to Cloud Build.
+      /// have events forwarded to the Firebase service. Connections that use Gemini
+      /// Code Assist will have events forwarded to Gemini Code Assist service. All
+      /// other Connections will have events forwarded to Cloud Build.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -945,8 +996,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
       /// Connect will configure the Git Repository to send webhook events to
       /// Developer Connect. Connections that use Firebase GitHub Application will
-      /// have events forwarded to the Firebase service. All other Connections will
-      /// have events forwarded to Cloud Build.
+      /// have events forwarded to the Firebase service. Connections that use Gemini
+      /// Code Assist will have events forwarded to Gemini Code Assist service. All
+      /// other Connections will have events forwarded to Cloud Build.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -962,8 +1014,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// Creates a GitRepositoryLink. Upon linking a Git Repository, Developer
       /// Connect will configure the Git Repository to send webhook events to
       /// Developer Connect. Connections that use Firebase GitHub Application will
-      /// have events forwarded to the Firebase service. All other Connections will
-      /// have events forwarded to Cloud Build.
+      /// have events forwarded to the Firebase service. Connections that use Gemini
+      /// Code Assist will have events forwarded to Gemini Code Assist service. All
+      /// other Connections will have events forwarded to Cloud Build.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1853,6 +1906,102 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSelf, null, options, request);
       }
+      /// <summary>
+      /// Starts OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse StartOAuth(global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartOAuth(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse StartOAuth(global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StartOAuth, null, options, request);
+      }
+      /// <summary>
+      /// Starts OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse> StartOAuthAsync(global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartOAuthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse> StartOAuthAsync(global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StartOAuth, null, options, request);
+      }
+      /// <summary>
+      /// Finishes OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse FinishOAuth(global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishOAuth(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finishes OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse FinishOAuth(global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FinishOAuth, null, options, request);
+      }
+      /// <summary>
+      /// Finishes OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse> FinishOAuthAsync(global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishOAuthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finishes OAuth flow for an account connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse> FinishOAuthAsync(global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FinishOAuth, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DeveloperConnectClient NewInstance(ClientBaseConfiguration configuration)
@@ -1890,7 +2039,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
           .AddMethod(__Method_ListUsers, serviceImpl.ListUsers)
           .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser)
           .AddMethod(__Method_FetchSelf, serviceImpl.FetchSelf)
-          .AddMethod(__Method_DeleteSelf, serviceImpl.DeleteSelf).Build();
+          .AddMethod(__Method_DeleteSelf, serviceImpl.DeleteSelf)
+          .AddMethod(__Method_StartOAuth, serviceImpl.StartOAuth)
+          .AddMethod(__Method_FinishOAuth, serviceImpl.FinishOAuth).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1924,6 +2075,8 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteUser));
       serviceBinder.AddMethod(__Method_FetchSelf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest, global::Google.Cloud.DeveloperConnect.V1.User>(serviceImpl.FetchSelf));
       serviceBinder.AddMethod(__Method_DeleteSelf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSelf));
+      serviceBinder.AddMethod(__Method_StartOAuth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.StartOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.StartOAuthResponse>(serviceImpl.StartOAuth));
+      serviceBinder.AddMethod(__Method_FinishOAuth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest, global::Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse>(serviceImpl.FinishOAuth));
     }
 
   }

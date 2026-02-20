@@ -4206,5 +4206,181 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for StartOAuth</summary>
+        public void StartOAuthRequestObject()
+        {
+            // Snippet: StartOAuth(StartOAuthRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            StartOAuthRequest request = new StartOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            StartOAuthResponse response = developerConnectClient.StartOAuth(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartOAuthAsync</summary>
+        public async Task StartOAuthRequestObjectAsync()
+        {
+            // Snippet: StartOAuthAsync(StartOAuthRequest, CallSettings)
+            // Additional: StartOAuthAsync(StartOAuthRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            StartOAuthRequest request = new StartOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            StartOAuthResponse response = await developerConnectClient.StartOAuthAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartOAuth</summary>
+        public void StartOAuth()
+        {
+            // Snippet: StartOAuth(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            StartOAuthResponse response = developerConnectClient.StartOAuth(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartOAuthAsync</summary>
+        public async Task StartOAuthAsync()
+        {
+            // Snippet: StartOAuthAsync(string, CallSettings)
+            // Additional: StartOAuthAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            StartOAuthResponse response = await developerConnectClient.StartOAuthAsync(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartOAuth</summary>
+        public void StartOAuthResourceNames()
+        {
+            // Snippet: StartOAuth(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            StartOAuthResponse response = developerConnectClient.StartOAuth(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartOAuthAsync</summary>
+        public async Task StartOAuthResourceNamesAsync()
+        {
+            // Snippet: StartOAuthAsync(AccountConnectorName, CallSettings)
+            // Additional: StartOAuthAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            StartOAuthResponse response = await developerConnectClient.StartOAuthAsync(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuth</summary>
+        public void FinishOAuthRequestObject()
+        {
+            // Snippet: FinishOAuth(FinishOAuthRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            FinishOAuthRequest request = new FinishOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                OauthParams = new FinishOAuthRequest.Types.OAuthParams(),
+            };
+            // Make the request
+            FinishOAuthResponse response = developerConnectClient.FinishOAuth(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuthAsync</summary>
+        public async Task FinishOAuthRequestObjectAsync()
+        {
+            // Snippet: FinishOAuthAsync(FinishOAuthRequest, CallSettings)
+            // Additional: FinishOAuthAsync(FinishOAuthRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            FinishOAuthRequest request = new FinishOAuthRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                OauthParams = new FinishOAuthRequest.Types.OAuthParams(),
+            };
+            // Make the request
+            FinishOAuthResponse response = await developerConnectClient.FinishOAuthAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuth</summary>
+        public void FinishOAuth()
+        {
+            // Snippet: FinishOAuth(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            FinishOAuthResponse response = developerConnectClient.FinishOAuth(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuthAsync</summary>
+        public async Task FinishOAuthAsync()
+        {
+            // Snippet: FinishOAuthAsync(string, CallSettings)
+            // Additional: FinishOAuthAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            FinishOAuthResponse response = await developerConnectClient.FinishOAuthAsync(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuth</summary>
+        public void FinishOAuthResourceNames()
+        {
+            // Snippet: FinishOAuth(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            FinishOAuthResponse response = developerConnectClient.FinishOAuth(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishOAuthAsync</summary>
+        public async Task FinishOAuthResourceNamesAsync()
+        {
+            // Snippet: FinishOAuthAsync(AccountConnectorName, CallSettings)
+            // Additional: FinishOAuthAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            FinishOAuthResponse response = await developerConnectClient.FinishOAuthAsync(accountConnector);
+            // End snippet
+        }
     }
 }

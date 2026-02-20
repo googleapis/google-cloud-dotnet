@@ -100,6 +100,12 @@
                 "FetchSelfAsync"
               ]
             },
+            "FinishOAuth": {
+              "methods": [
+                "FinishOAuth",
+                "FinishOAuthAsync"
+              ]
+            },
             "GetAccountConnector": {
               "methods": [
                 "GetAccountConnector",
@@ -142,6 +148,12 @@
                 "ListUsersAsync"
               ]
             },
+            "StartOAuth": {
+              "methods": [
+                "StartOAuth",
+                "StartOAuthAsync"
+              ]
+            },
             "UpdateAccountConnector": {
               "methods": [
                 "UpdateAccountConnector",
@@ -175,10 +187,22 @@
                 "DeleteInsightsConfigAsync"
               ]
             },
+            "GetDeploymentEvent": {
+              "methods": [
+                "GetDeploymentEvent",
+                "GetDeploymentEventAsync"
+              ]
+            },
             "GetInsightsConfig": {
               "methods": [
                 "GetInsightsConfig",
                 "GetInsightsConfigAsync"
+              ]
+            },
+            "ListDeploymentEvents": {
+              "methods": [
+                "ListDeploymentEvents",
+                "ListDeploymentEventsAsync"
               ]
             },
             "ListInsightsConfigs": {

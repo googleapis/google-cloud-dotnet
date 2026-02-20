@@ -7029,6 +7029,580 @@
       ]
     },
     {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_sync",
+      "title": "StartOAuthRequestObject",
+      "description": "Snippet for StartOAuth",
+      "file": "DeveloperConnectClient.StartOAuthRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.StartOAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.StartOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_async",
+      "title": "StartOAuthRequestObjectAsync",
+      "description": "Snippet for StartOAuthAsync",
+      "file": "DeveloperConnectClient.StartOAuthRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.StartOAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.StartOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_sync_flattened",
+      "title": "StartOAuth",
+      "description": "Snippet for StartOAuth",
+      "file": "DeveloperConnectClient.StartOAuthSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuth",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.StartOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_async_flattened",
+      "title": "StartOAuthAsync",
+      "description": "Snippet for StartOAuthAsync",
+      "file": "DeveloperConnectClient.StartOAuthAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.StartOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_sync_flattened_resourceNames",
+      "title": "StartOAuthResourceNames",
+      "description": "Snippet for StartOAuth",
+      "file": "DeveloperConnectClient.StartOAuthResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.StartOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_StartOAuth_async_flattened_resourceNames",
+      "title": "StartOAuthResourceNamesAsync",
+      "description": "Snippet for StartOAuthAsync",
+      "file": "DeveloperConnectClient.StartOAuthResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.StartOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.StartOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "StartOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.StartOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_sync",
+      "title": "FinishOAuthRequestObject",
+      "description": "Snippet for FinishOAuth",
+      "file": "DeveloperConnectClient.FinishOAuthRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_async",
+      "title": "FinishOAuthRequestObjectAsync",
+      "description": "Snippet for FinishOAuthAsync",
+      "file": "DeveloperConnectClient.FinishOAuthRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FinishOAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_sync_flattened",
+      "title": "FinishOAuth",
+      "description": "Snippet for FinishOAuth",
+      "file": "DeveloperConnectClient.FinishOAuthSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuth",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_async_flattened",
+      "title": "FinishOAuthAsync",
+      "description": "Snippet for FinishOAuthAsync",
+      "file": "DeveloperConnectClient.FinishOAuthAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_sync_flattened_resourceNames",
+      "title": "FinishOAuthResourceNames",
+      "description": "Snippet for FinishOAuth",
+      "file": "DeveloperConnectClient.FinishOAuthResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuth",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FinishOAuth_async_flattened_resourceNames",
+      "title": "FinishOAuthResourceNamesAsync",
+      "description": "Snippet for FinishOAuthAsync",
+      "file": "DeveloperConnectClient.FinishOAuthResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishOAuthAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FinishOAuthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FinishOAuthResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FinishOAuth",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FinishOAuth",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_sync",
       "title": "ListInsightsConfigsRequestObject",
       "description": "Snippet for ListInsightsConfigs",
@@ -8333,6 +8907,612 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_sync",
+      "title": "GetDeploymentEventRequestObject",
+      "description": "Snippet for GetDeploymentEvent",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEvent",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.DeploymentEvent",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_async",
+      "title": "GetDeploymentEventRequestObjectAsync",
+      "description": "Snippet for GetDeploymentEventAsync",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEventAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_sync_flattened",
+      "title": "GetDeploymentEvent",
+      "description": "Snippet for GetDeploymentEvent",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEvent",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.DeploymentEvent",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_async_flattened",
+      "title": "GetDeploymentEventAsync",
+      "description": "Snippet for GetDeploymentEventAsync",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEventAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_sync_flattened_resourceNames",
+      "title": "GetDeploymentEventResourceNames",
+      "description": "Snippet for GetDeploymentEvent",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEvent",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeploymentEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.DeploymentEvent",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetDeploymentEvent_async_flattened_resourceNames",
+      "title": "GetDeploymentEventResourceNamesAsync",
+      "description": "Snippet for GetDeploymentEventAsync",
+      "file": "InsightsConfigServiceClient.GetDeploymentEventResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentEventAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetDeploymentEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeploymentEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentEvent",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetDeploymentEvent",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_sync",
+      "title": "ListDeploymentEventsRequestObject",
+      "description": "Snippet for ListDeploymentEvents",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEvents",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_async",
+      "title": "ListDeploymentEventsRequestObjectAsync",
+      "description": "Snippet for ListDeploymentEventsAsync",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEventsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_sync_flattened",
+      "title": "ListDeploymentEvents",
+      "description": "Snippet for ListDeploymentEvents",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEvents",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_async_flattened",
+      "title": "ListDeploymentEventsAsync",
+      "description": "Snippet for ListDeploymentEventsAsync",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEventsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_sync_flattened_resourceNames",
+      "title": "ListDeploymentEventsResourceNames",
+      "description": "Snippet for ListDeploymentEvents",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEvents",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListDeploymentEvents_async_flattened_resourceNames",
+      "title": "ListDeploymentEventsResourceNamesAsync",
+      "description": "Snippet for ListDeploymentEventsAsync",
+      "file": "InsightsConfigServiceClient.ListDeploymentEventsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentEventsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListDeploymentEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse, Google.Cloud.DeveloperConnect.V1.DeploymentEvent>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentEvents",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListDeploymentEvents",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]
