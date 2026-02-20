@@ -3,7 +3,7 @@
 //     source: google/cloud/developerconnect/v1/insights_config.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.DeveloperConnect.V1 {
   ///
   /// The InsightsConfig resource is the core configuration object to capture
   /// events from your Software Development Lifecycle. It acts as the central hub
-  /// for managing how Developer connect understands your application, its runtime
+  /// for managing how Developer Connect understands your application, its runtime
   /// environments, and the artifacts deployed within them.
   /// A user can create an InsightsConfig, list previously-requested
   /// InsightsConfigs or get InsightsConfigs by their ID to determine the status of
@@ -87,6 +87,14 @@ namespace Google.Cloud.DeveloperConnect.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.UpdateInsightsConfigRequest> __Marshaller_google_cloud_developerconnect_v1_UpdateInsightsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.UpdateInsightsConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest> __Marshaller_google_cloud_developerconnect_v1_DeleteInsightsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest> __Marshaller_google_cloud_developerconnect_v1_GetDeploymentEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent> __Marshaller_google_cloud_developerconnect_v1_DeploymentEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest> __Marshaller_google_cloud_developerconnect_v1_ListDeploymentEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse> __Marshaller_google_cloud_developerconnect_v1_ListDeploymentEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsRequest, global::Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse> __Method_ListInsightsConfigs = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsRequest, global::Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse>(
@@ -127,6 +135,22 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         "DeleteInsightsConfig",
         __Marshaller_google_cloud_developerconnect_v1_DeleteInsightsConfigRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest, global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent> __Method_GetDeploymentEvent = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest, global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDeploymentEvent",
+        __Marshaller_google_cloud_developerconnect_v1_GetDeploymentEventRequest,
+        __Marshaller_google_cloud_developerconnect_v1_DeploymentEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest, global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse> __Method_ListDeploymentEvents = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest, global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDeploymentEvents",
+        __Marshaller_google_cloud_developerconnect_v1_ListDeploymentEventsRequest,
+        __Marshaller_google_cloud_developerconnect_v1_ListDeploymentEventsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -187,13 +211,37 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       }
 
       /// <summary>
-      /// Delete a single Insight.
+      /// Deletes a single Insight.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInsightsConfig(global::Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a single Deployment Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent> GetDeploymentEvent(global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Deployment Events in a given insights config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse> ListDeploymentEvents(global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -420,7 +468,7 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInsightsConfig, null, options, request);
       }
       /// <summary>
-      /// Delete a single Insight.
+      /// Deletes a single Insight.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -433,7 +481,7 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         return DeleteInsightsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a single Insight.
+      /// Deletes a single Insight.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -444,7 +492,7 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInsightsConfig, null, options, request);
       }
       /// <summary>
-      /// Delete a single Insight.
+      /// Deletes a single Insight.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -457,7 +505,7 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         return DeleteInsightsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a single Insight.
+      /// Deletes a single Insight.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -466,6 +514,102 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInsightsConfigAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInsightsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a single Deployment Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent GetDeploymentEvent(global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a single Deployment Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent GetDeploymentEvent(global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDeploymentEvent, null, options, request);
+      }
+      /// <summary>
+      /// Gets a single Deployment Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent> GetDeploymentEventAsync(global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a single Deployment Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent> GetDeploymentEventAsync(global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDeploymentEvent, null, options, request);
+      }
+      /// <summary>
+      /// Lists Deployment Events in a given insights config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse ListDeploymentEvents(global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Deployment Events in a given insights config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse ListDeploymentEvents(global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDeploymentEvents, null, options, request);
+      }
+      /// <summary>
+      /// Lists Deployment Events in a given insights config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse> ListDeploymentEventsAsync(global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Deployment Events in a given insights config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse> ListDeploymentEventsAsync(global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDeploymentEvents, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -485,7 +629,9 @@ namespace Google.Cloud.DeveloperConnect.V1 {
           .AddMethod(__Method_CreateInsightsConfig, serviceImpl.CreateInsightsConfig)
           .AddMethod(__Method_GetInsightsConfig, serviceImpl.GetInsightsConfig)
           .AddMethod(__Method_UpdateInsightsConfig, serviceImpl.UpdateInsightsConfig)
-          .AddMethod(__Method_DeleteInsightsConfig, serviceImpl.DeleteInsightsConfig).Build();
+          .AddMethod(__Method_DeleteInsightsConfig, serviceImpl.DeleteInsightsConfig)
+          .AddMethod(__Method_GetDeploymentEvent, serviceImpl.GetDeploymentEvent)
+          .AddMethod(__Method_ListDeploymentEvents, serviceImpl.ListDeploymentEvents).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -500,6 +646,8 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       serviceBinder.AddMethod(__Method_GetInsightsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.GetInsightsConfigRequest, global::Google.Cloud.DeveloperConnect.V1.InsightsConfig>(serviceImpl.GetInsightsConfig));
       serviceBinder.AddMethod(__Method_UpdateInsightsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.UpdateInsightsConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInsightsConfig));
       serviceBinder.AddMethod(__Method_DeleteInsightsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInsightsConfig));
+      serviceBinder.AddMethod(__Method_GetDeploymentEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.GetDeploymentEventRequest, global::Google.Cloud.DeveloperConnect.V1.DeploymentEvent>(serviceImpl.GetDeploymentEvent));
+      serviceBinder.AddMethod(__Method_ListDeploymentEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsRequest, global::Google.Cloud.DeveloperConnect.V1.ListDeploymentEventsResponse>(serviceImpl.ListDeploymentEvents));
     }
 
   }

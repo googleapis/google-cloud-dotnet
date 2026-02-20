@@ -850,5 +850,370 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetDeploymentEvent</summary>
+        public void GetDeploymentEventRequestObject()
+        {
+            // Snippet: GetDeploymentEvent(GetDeploymentEventRequest, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            GetDeploymentEventRequest request = new GetDeploymentEventRequest
+            {
+                DeploymentEventName = DeploymentEventName.FromProjectLocationInsightsConfigDeploymentEvent("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]", "[DEPLOYMENT_EVENT]"),
+            };
+            // Make the request
+            DeploymentEvent response = insightsConfigServiceClient.GetDeploymentEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentEventAsync</summary>
+        public async Task GetDeploymentEventRequestObjectAsync()
+        {
+            // Snippet: GetDeploymentEventAsync(GetDeploymentEventRequest, CallSettings)
+            // Additional: GetDeploymentEventAsync(GetDeploymentEventRequest, CancellationToken)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDeploymentEventRequest request = new GetDeploymentEventRequest
+            {
+                DeploymentEventName = DeploymentEventName.FromProjectLocationInsightsConfigDeploymentEvent("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]", "[DEPLOYMENT_EVENT]"),
+            };
+            // Make the request
+            DeploymentEvent response = await insightsConfigServiceClient.GetDeploymentEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentEvent</summary>
+        public void GetDeploymentEvent()
+        {
+            // Snippet: GetDeploymentEvent(string, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightsConfigs/[INSIGHTS_CONFIG]/deploymentEvents/[DEPLOYMENT_EVENT]";
+            // Make the request
+            DeploymentEvent response = insightsConfigServiceClient.GetDeploymentEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentEventAsync</summary>
+        public async Task GetDeploymentEventAsync()
+        {
+            // Snippet: GetDeploymentEventAsync(string, CallSettings)
+            // Additional: GetDeploymentEventAsync(string, CancellationToken)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightsConfigs/[INSIGHTS_CONFIG]/deploymentEvents/[DEPLOYMENT_EVENT]";
+            // Make the request
+            DeploymentEvent response = await insightsConfigServiceClient.GetDeploymentEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentEvent</summary>
+        public void GetDeploymentEventResourceNames()
+        {
+            // Snippet: GetDeploymentEvent(DeploymentEventName, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            DeploymentEventName name = DeploymentEventName.FromProjectLocationInsightsConfigDeploymentEvent("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]", "[DEPLOYMENT_EVENT]");
+            // Make the request
+            DeploymentEvent response = insightsConfigServiceClient.GetDeploymentEvent(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentEventAsync</summary>
+        public async Task GetDeploymentEventResourceNamesAsync()
+        {
+            // Snippet: GetDeploymentEventAsync(DeploymentEventName, CallSettings)
+            // Additional: GetDeploymentEventAsync(DeploymentEventName, CancellationToken)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentEventName name = DeploymentEventName.FromProjectLocationInsightsConfigDeploymentEvent("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]", "[DEPLOYMENT_EVENT]");
+            // Make the request
+            DeploymentEvent response = await insightsConfigServiceClient.GetDeploymentEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEvents</summary>
+        public void ListDeploymentEventsRequestObject()
+        {
+            // Snippet: ListDeploymentEvents(ListDeploymentEventsRequest, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                ParentAsInsightsConfigName = InsightsConfigName.FromProjectLocationInsightsConfig("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEvents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEventsAsync</summary>
+        public async Task ListDeploymentEventsRequestObjectAsync()
+        {
+            // Snippet: ListDeploymentEventsAsync(ListDeploymentEventsRequest, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                ParentAsInsightsConfigName = InsightsConfigName.FromProjectLocationInsightsConfig("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEventsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEvents</summary>
+        public void ListDeploymentEvents()
+        {
+            // Snippet: ListDeploymentEvents(string, string, int?, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/insightsConfigs/[INSIGHTS_CONFIG]";
+            // Make the request
+            PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEvents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEventsAsync</summary>
+        public async Task ListDeploymentEventsAsync()
+        {
+            // Snippet: ListDeploymentEventsAsync(string, string, int?, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/insightsConfigs/[INSIGHTS_CONFIG]";
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEventsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEvents</summary>
+        public void ListDeploymentEventsResourceNames()
+        {
+            // Snippet: ListDeploymentEvents(InsightsConfigName, string, int?, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = InsightsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            InsightsConfigName parent = InsightsConfigName.FromProjectLocationInsightsConfig("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]");
+            // Make the request
+            PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEvents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentEventsAsync</summary>
+        public async Task ListDeploymentEventsResourceNamesAsync()
+        {
+            // Snippet: ListDeploymentEventsAsync(InsightsConfigName, string, int?, CallSettings)
+            // Create client
+            InsightsConfigServiceClient insightsConfigServiceClient = await InsightsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightsConfigName parent = InsightsConfigName.FromProjectLocationInsightsConfig("[PROJECT]", "[LOCATION]", "[INSIGHTS_CONFIG]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> response = insightsConfigServiceClient.ListDeploymentEventsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentEvent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentEventsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentEvent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentEvent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

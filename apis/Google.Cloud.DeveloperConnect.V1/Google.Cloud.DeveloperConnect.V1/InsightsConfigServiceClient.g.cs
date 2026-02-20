@@ -59,6 +59,8 @@ namespace Google.Cloud.DeveloperConnect.V1
             UpdateInsightsConfigOperationsSettings = existing.UpdateInsightsConfigOperationsSettings.Clone();
             DeleteInsightsConfigSettings = existing.DeleteInsightsConfigSettings;
             DeleteInsightsConfigOperationsSettings = existing.DeleteInsightsConfigOperationsSettings.Clone();
+            GetDeploymentEventSettings = existing.GetDeploymentEventSettings;
+            ListDeploymentEventsSettings = existing.ListDeploymentEventsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -185,6 +187,32 @@ namespace Google.Cloud.DeveloperConnect.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InsightsConfigServiceClient.GetDeploymentEvent</c> and
+        /// <c>InsightsConfigServiceClient.GetDeploymentEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDeploymentEventSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InsightsConfigServiceClient.ListDeploymentEvents</c> and
+        /// <c>InsightsConfigServiceClient.ListDeploymentEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDeploymentEventsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -252,7 +280,7 @@ namespace Google.Cloud.DeveloperConnect.V1
     /// 
     /// The InsightsConfig resource is the core configuration object to capture
     /// events from your Software Development Lifecycle. It acts as the central hub
-    /// for managing how Developer connect understands your application, its runtime
+    /// for managing how Developer Connect understands your application, its runtime
     /// environments, and the artifacts deployed within them.
     /// A user can create an InsightsConfig, list previously-requested
     /// InsightsConfigs or get InsightsConfigs by their ID to determine the status of
@@ -830,7 +858,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             lro::Operation<InsightsConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInsightsConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -839,7 +867,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -848,7 +876,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -884,7 +912,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteInsightsConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -898,7 +926,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -912,7 +940,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -923,7 +951,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             DeleteInsightsConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -937,7 +965,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -951,7 +979,7 @@ namespace Google.Cloud.DeveloperConnect.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="name">
         /// Required. Value for parent.
@@ -960,6 +988,281 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInsightsConfigAsync(InsightsConfigName name, st::CancellationToken cancellationToken) =>
             DeleteInsightsConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentEvent GetDeploymentEvent(GetDeploymentEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(GetDeploymentEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(GetDeploymentEventRequest request, st::CancellationToken cancellationToken) =>
+            GetDeploymentEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentEvent GetDeploymentEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentEvent(new GetDeploymentEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentEventAsync(new GetDeploymentEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDeploymentEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentEvent GetDeploymentEvent(DeploymentEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentEvent(new GetDeploymentEventRequest
+            {
+                DeploymentEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(DeploymentEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentEventAsync(new GetDeploymentEventRequest
+            {
+                DeploymentEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment event to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentEvent> GetDeploymentEventAsync(DeploymentEventName name, st::CancellationToken cancellationToken) =>
+            GetDeploymentEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEvents(ListDeploymentEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEventsAsync(ListDeploymentEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent insights config that owns this collection of
+        /// deployment events. Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentEvents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent insights config that owns this collection of
+        /// deployment events. Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentEventsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent insights config that owns this collection of
+        /// deployment events. Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEvents(InsightsConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                ParentAsInsightsConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentEvents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent insights config that owns this collection of
+        /// deployment events. Format:
+        /// projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEventsAsync(InsightsConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentEventsRequest request = new ListDeploymentEventsRequest
+            {
+                ParentAsInsightsConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentEventsAsync(request, callSettings);
+        }
     }
 
     /// <summary>InsightsConfigService client wrapper implementation, for convenient use.</summary>
@@ -968,7 +1271,7 @@ namespace Google.Cloud.DeveloperConnect.V1
     /// 
     /// The InsightsConfig resource is the core configuration object to capture
     /// events from your Software Development Lifecycle. It acts as the central hub
-    /// for managing how Developer connect understands your application, its runtime
+    /// for managing how Developer Connect understands your application, its runtime
     /// environments, and the artifacts deployed within them.
     /// A user can create an InsightsConfig, list previously-requested
     /// InsightsConfigs or get InsightsConfigs by their ID to determine the status of
@@ -985,6 +1288,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         private readonly gaxgrpc::ApiCall<UpdateInsightsConfigRequest, lro::Operation> _callUpdateInsightsConfig;
 
         private readonly gaxgrpc::ApiCall<DeleteInsightsConfigRequest, lro::Operation> _callDeleteInsightsConfig;
+
+        private readonly gaxgrpc::ApiCall<GetDeploymentEventRequest, DeploymentEvent> _callGetDeploymentEvent;
+
+        private readonly gaxgrpc::ApiCall<ListDeploymentEventsRequest, ListDeploymentEventsResponse> _callListDeploymentEvents;
 
         /// <summary>
         /// Constructs a client wrapper for the InsightsConfigService service, with the specified gRPC client and
@@ -1021,6 +1328,12 @@ namespace Google.Cloud.DeveloperConnect.V1
             _callDeleteInsightsConfig = clientHelper.BuildApiCall<DeleteInsightsConfigRequest, lro::Operation>("DeleteInsightsConfig", grpcClient.DeleteInsightsConfigAsync, grpcClient.DeleteInsightsConfig, effectiveSettings.DeleteInsightsConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInsightsConfig);
             Modify_DeleteInsightsConfigApiCall(ref _callDeleteInsightsConfig);
+            _callGetDeploymentEvent = clientHelper.BuildApiCall<GetDeploymentEventRequest, DeploymentEvent>("GetDeploymentEvent", grpcClient.GetDeploymentEventAsync, grpcClient.GetDeploymentEvent, effectiveSettings.GetDeploymentEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDeploymentEvent);
+            Modify_GetDeploymentEventApiCall(ref _callGetDeploymentEvent);
+            _callListDeploymentEvents = clientHelper.BuildApiCall<ListDeploymentEventsRequest, ListDeploymentEventsResponse>("ListDeploymentEvents", grpcClient.ListDeploymentEventsAsync, grpcClient.ListDeploymentEvents, effectiveSettings.ListDeploymentEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDeploymentEvents);
+            Modify_ListDeploymentEventsApiCall(ref _callListDeploymentEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1035,6 +1348,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_UpdateInsightsConfigApiCall(ref gaxgrpc::ApiCall<UpdateInsightsConfigRequest, lro::Operation> call);
 
         partial void Modify_DeleteInsightsConfigApiCall(ref gaxgrpc::ApiCall<DeleteInsightsConfigRequest, lro::Operation> call);
+
+        partial void Modify_GetDeploymentEventApiCall(ref gaxgrpc::ApiCall<GetDeploymentEventRequest, DeploymentEvent> call);
+
+        partial void Modify_ListDeploymentEventsApiCall(ref gaxgrpc::ApiCall<ListDeploymentEventsRequest, ListDeploymentEventsResponse> call);
 
         partial void OnConstruction(InsightsConfigService.InsightsConfigServiceClient grpcClient, InsightsConfigServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1053,6 +1370,10 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_UpdateInsightsConfigRequest(ref UpdateInsightsConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInsightsConfigRequest(ref DeleteInsightsConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDeploymentEventRequest(ref GetDeploymentEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDeploymentEventsRequest(ref ListDeploymentEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists InsightsConfigs in a given project and location.
@@ -1160,7 +1481,7 @@ namespace Google.Cloud.DeveloperConnect.V1
         public override lro::OperationsClient DeleteInsightsConfigOperationsClient { get; }
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1172,7 +1493,7 @@ namespace Google.Cloud.DeveloperConnect.V1
         }
 
         /// <summary>
-        /// Delete a single Insight.
+        /// Deletes a single Insight.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1182,9 +1503,61 @@ namespace Google.Cloud.DeveloperConnect.V1
             Modify_DeleteInsightsConfigRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteInsightsConfig.Async(request, callSettings).ConfigureAwait(false), DeleteInsightsConfigOperationsClient);
         }
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DeploymentEvent GetDeploymentEvent(GetDeploymentEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentEventRequest(ref request, ref callSettings);
+            return _callGetDeploymentEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a single Deployment Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DeploymentEvent> GetDeploymentEventAsync(GetDeploymentEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentEventRequest(ref request, ref callSettings);
+            return _callGetDeploymentEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEvents(ListDeploymentEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDeploymentEventsRequest, ListDeploymentEventsResponse, DeploymentEvent>(_callListDeploymentEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Deployment Events in a given insights config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentEvent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDeploymentEventsResponse, DeploymentEvent> ListDeploymentEventsAsync(ListDeploymentEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDeploymentEventsRequest, ListDeploymentEventsResponse, DeploymentEvent>(_callListDeploymentEvents, request, callSettings);
+        }
     }
 
     public partial class ListInsightsConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDeploymentEventsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1192,6 +1565,14 @@ namespace Google.Cloud.DeveloperConnect.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<InsightsConfig> GetEnumerator() => InsightsConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDeploymentEventsResponse : gaxgrpc::IPageResponse<DeploymentEvent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DeploymentEvent> GetEnumerator() => DeploymentEvents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
