@@ -172,6 +172,15 @@ Below is an example implementation of a console application that utilizes the de
 
 {{sample:SubscriberClient.UseSubscriberServiceInConsoleApp}}
 
+## Subscriber shutdown
+
+When shutting down a `SubscriberClient`, two different shutdown flows are available via the `StopAsync(SubscriberShutdownSetting, TimeSpan?, CancellationToken)` method:
+
+- **WaitForProcessing**: This is the default and most graceful shutdown flow. It immediately stops streaming new messages from the server but continues to process all messages that have already been received. If processing does not complete within the specified timeout, the client will switch to an aggressive shutdown to release any remaining messages.
+- **NackImmediately**: This is a more aggressive shutdown flow. It immediately stops streaming new messages and then actively sends "Nack" (Negative Acknowledgement) responses for any messages that have been received but have not yet started being handled. This allows those messages to be quickly redelivered to other active subscribers. Messages already being handled are allowed to finish and will be acknowledged.
+
+By default, a 1-hour timeout is used for the shutdown process, which can be customized as needed. A `CancellationToken` can also be provided to trigger an immediate hard stop, aborting all outstanding tasks.
+
 ## Disposing of the publisher and subscriber clients
 
 Both `PublisherClient` and `SubscriberClient` implement the `IAsyncDisposable` interface,

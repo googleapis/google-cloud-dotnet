@@ -185,6 +185,11 @@ namespace Google.Cloud.PubSub.V1.Tests
                         // TODO: This is not correct. The real server cancels the entire call if this cancellationtoken is cancelled.
                         using (var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken))
                         {
+//                            if (cts.Token.IsCancellationRequested)
+//                            {
+//                                // This mimics behaviour of a real server
+//                                throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
+//                            }
                             var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
                                 () => _scheduler.Delay(_msgsEn.Current.Action.PreInterval, cts.Token));
                             if (isCancelled)
@@ -596,8 +601,38 @@ namespace Google.Cloud.PubSub.V1.Tests
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
-                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                        () => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, cancellationToken: new CancellationToken(hardStop)));
                     Assert.Equal(hardStop, isCancelled);
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Theory, CombinatorialData]
+        public void Shutdown_ImmediateStop(
+            [CombinatorialValues(0, 1)] int timeoutSeconds)
+        {
+            // Verify that a very short timeout stops the subscriber before any messages are processed.
+            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        throw new Exception("Should never get here");
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+
+                    // Request shutdown with a minimal timeout.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(timeoutSeconds)));
+
+                    // Verify the subscriber stopped cleanly with no message activity.
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
                     Assert.Empty(fake.Subscribers[0].Nacks);
@@ -618,7 +653,35 @@ namespace Google.Cloud.PubSub.V1.Tests
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
                     var exception = await Assert.ThrowsAsync<InvalidOperationException>(
                         async () => await fake.TaskHelper.ConfigureAwaitHideCancellation(
+#pragma warning disable CS0618
                             () => fake.Subscriber.StopAsync(TimeSpan.FromHours(1))));
+#pragma warning restore CS0618
+                    Assert.Equal("Can only stop a started instance.", exception.Message);
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_StopBeforeStart()
+        {
+            // Ensure StopAsync cannot be called before the subscriber has started.
+            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+
+                    // Attempting to stop an unstarted subscriber should throw InvalidOperationException.
+                    var exception = await Assert.ThrowsAsync<InvalidOperationException>(
+                        async () => await fake.TaskHelper.ConfigureAwait(
+                            fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromHours(1))));
+
                     Assert.Equal("Can only stop a started instance.", exception.Message);
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
@@ -652,8 +715,43 @@ namespace Google.Cloud.PubSub.V1.Tests
                        () => fake.Subscriber.DisposeAsync().AsTask());
                     // Call StopAsync. It shouldn't throw an exception.
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(
+#pragma warning disable CS0618
                        () => fake.Subscriber.StopAsync(CancellationToken.None));
+#pragma warning restore CS0618
 
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_Dispose()
+        {
+            // Ensure StopAsync is idempotent and safe to call after disposal.
+            using (var fake = Fake.CreateClientForSingleResponseStream(new[] { ServerAction.Inf() }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        throw new Exception("Should never get here");
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+
+                    // Perform disposal then multiple StopAsync calls.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.DisposeAsync().AsTask());
+                    await fake.TaskHelper.ConfigureAwait(
+                       fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromHours(1)));
+                    await fake.TaskHelper.ConfigureAwait(
+                       fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromHours(1)));
+
+                    // Verify the client shutdown correctly without exceptions.
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
                     Assert.Empty(fake.Subscribers[0].Nacks);
@@ -729,7 +827,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
-                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                        () => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, cancellationToken: new CancellationToken(hardStop)));
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(clientCount, fake.Subscribers.Count);
                     Assert.Equal(expectedMsgCount, handledMsgs.Locked(() => handledMsgs.Count));
@@ -783,7 +881,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                             recvedMsgs.Add(msgString);
                             if (recvedMsgs.Count == totalMsgCount)
                             {
-                                Task unused = fake.Subscriber.StopAsync(CancellationToken.None);
+                                Task unused = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing);
                             }
                         }
                         return SubscriberClient.Reply.Ack;
@@ -842,7 +940,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwaitHideCancellation(() => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately,
+                                cancellationToken: new CancellationToken(hardStop)));
                     Assert.Equal(expectedMsgCount, handledMsgs.Count);
                 });
             }
@@ -869,7 +968,41 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
+                    Assert.Equal(Enumerable.Repeat("m", 5), handledMsgs);
+                    Assert.Equal(5, fake.Subscribers[0].Acks.Count);
+                    Assert.Equal(5, fake.Subscribers[0].Nacks.Count);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_UserHandlerFaults()
+        {
+            // Verify that handler faults don't prevent a graceful shutdown.
+            var msgs = Enumerable.Repeat(ServerAction.Data(TimeSpan.Zero, new[] { "m" }), 10).Concat(new[] { ServerAction.Inf() });
+            using (var fake = Fake.Create(new[] { msgs }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    int count = 0;
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        if (Interlocked.Increment(ref count) % 2 == 0)
+                        {
+                            throw new NotSupportedException("User handler fault!");
+                        }
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
+                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+
+                    // Trigger shutdown after some handlers have faulted.
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing));
+
+                    // Verify that all messages were either Acked or Nacked appropriately.
                     Assert.Equal(Enumerable.Repeat("m", 5), handledMsgs);
                     Assert.Equal(5, fake.Subscribers[0].Acks.Count);
                     Assert.Equal(5, fake.Subscribers[0].Nacks.Count);
@@ -901,7 +1034,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     Assert.Equal(new[] { "1", "2", "3" }, handledMsgs);
                     Assert.Equal(3, fake.Subscribers[0].Acks.Count);
                 });
@@ -936,10 +1069,43 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     Assert.Equal(unrecoverableEx, ex.AllExceptions().FirstOrDefault());
                     Assert.NotEmpty(handledMsgs);
                     Assert.True(handledMsgs[0] == "1" || handledMsgs[0] == "2");
+                    Assert.Equal(1, fake.ClientShutdowns.Count);
+                });
+            }
+        }
+
+        [Fact]
+        public void Shutdown_ServerFaultsUnrecoverable()
+        {
+            // Ensure StopAsync propagates unrecoverable server errors.
+            var zero = TimeSpan.Zero;
+            var unrecoverableEx = new RpcException(new Status(StatusCode.Unimplemented, ""), "");
+            var failure = ServerAction.BadMoveNext(zero, unrecoverableEx);
+            var msgs = new[] { new[] { ServerAction.Data(zero, new[] { "1", "2" }), failure } };
+
+            using (var fake = Fake.Create(msgs, flowMaxElements: 1))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var handledMsgs = new List<string>();
+                    var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+
+                    // Stop the subscriber after a server failure has occurred.
+                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing));
+
+                    // The resulting task should fault with the original server exception.
+                    Assert.Equal(unrecoverableEx, ex.AllExceptions().FirstOrDefault());
+                    Assert.NotEmpty(handledMsgs);
                     Assert.Equal(1, fake.ClientShutdowns.Count);
                 });
             }
@@ -982,7 +1148,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     await fake.TaskHelper.ConfigureAwait(doneTask);
                     Assert.Equal(1, fake.Subscribers.Count);
                     DateTime S(int seconds) => fake.Time0 + TimeSpan.FromSeconds(seconds);
@@ -1010,7 +1176,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(12), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromHours(24)));
                     await fake.TaskHelper.ConfigureAwait(doneTask);
                     Assert.Equal(1, fake.Subscribers.Count);
                     // Check that the lease was extended for 60 minutes only.
@@ -1037,7 +1203,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     var subTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SubscriberClient.Reply.Ack));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1000), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     await fake.TaskHelper.ConfigureAwait(subTask);
                     var sub = fake.Subscribers[0];
                     Assert.True(sub.Extends.Count <= msgCount); // Difficult to predict, must be <= total message count
@@ -1070,7 +1236,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     // Wait a bit longer, to check no more pings happen.
                     await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * 4), CancellationToken.None));
                     // Stop subscriber.
-                    await th.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await th.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     await th.ConfigureAwait(subTask);
                     var expectedPings = Enumerable.Range(0, pingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * (i + 1)));
                     Assert.Equal(expectedPings, fake.Subscribers[0].StreamPings);
@@ -1099,14 +1265,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
                         var delay = TimeSpan.FromMilliseconds(rnd.Next(1000));
-                        await th.ConfigureAwait(fake.Scheduler.Delay(delay, default));
+                        await th.ConfigureAwait(fake.Scheduler.Delay(delay, ct));
                         lock (recvedMsgs)
                         {
                             recvedMsgs.Add(msg.Data.ToStringUtf8());
                             recvCount += 1;
                             if (recvCount == msgCount)
                             {
-                                var dummyTask = fake.Subscriber.StopAsync(CancellationToken.None);
+                                var dummyTask = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromHours(24));
                             }
                         }
                         return SubscriberClient.Reply.Ack;
@@ -1315,7 +1481,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return Task.FromResult(SubscriberClient.Reply.Ack);
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                     Assert.Equal(new int?[] { null, 2 }, deliveryAttempts);
                 });
             }
@@ -1356,7 +1522,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Despite RpcException being thrown, all 4 messages should be handled.
                 Assert.Equal(new[] { "1", "2", "3", "4" }, handledMsgs);
             });
@@ -1394,7 +1560,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 Assert.Equal(exception, ex.AllExceptions().FirstOrDefault());
                 Assert.Equal(1, fake.ClientShutdowns.Count);
             });
@@ -1429,7 +1595,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 var doneTask = fake.Subscriber.StartAsync(testSubscriptionHandler);
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // All the 4 test messages have encountered a recoverable RpcException, but their status should be success.
                 Assert.Equal(4, testSubscriptionHandler.Responses.Count(j => j.Status == AcknowledgementStatus.Success));
             });
@@ -1473,7 +1639,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return ackNackOrExtends == false ? SubscriberClient.Reply.Nack : SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Despite temporary failures, all 4 messages should be handled.
                 Assert.Equal(new[] { "1", "2", "3", "4" }, handledMsgs);
             });
@@ -1504,7 +1670,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 var doneTask = fake.Subscriber.StartAsync(testSubscriptionHandler);
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Exception should not be thrown.
                 Assert.Null(ex);
                 Assert.Equal(new[] { "1", "2", "3", "4" }, testSubscriptionHandler.Responses.Where(j => j.Status == AcknowledgementStatus.FailedPrecondition).Select(j => j.MessageId));
@@ -1538,7 +1704,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Exception shouldn't be thrown in case of permanent failure.
                 Assert.Null(ex);
             });
@@ -1573,7 +1739,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 var doneTask = fake.Subscriber.StartAsync(testHandler);
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 Assert.Null(ex);
                 // "1" is success and "3" is permanent failure.
                 Assert.Equal("1", testHandler.Responses.First(j => j.Status == AcknowledgementStatus.Success).MessageId);
@@ -1609,7 +1775,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
+                Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Permanent exception shouldn't be thrown.
                 // Extends are not user initiated, so we can't get the success and temporary failed status from the client.
                 Assert.Null(ex);
@@ -1645,7 +1811,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // All 4 messages are handled.
                 Assert.Equal(4, handledMsgs.Count);
                 Assert.Equal(new[] { "1", "2", "3", "4" }, handledMsgs);
@@ -1685,7 +1851,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Permanently failed receipt ModAcks won't be passed to the user handler, so 3 is not handled.
                 // Temporary failed ModAck for message 2 becomes successful or permanent failure based on succeedOnRetry flag.
                 Assert.Equal(succeedOnRetry ? new[] { "1", "2", "4" } : new[] { "1", "4" }, handledMsgs);
@@ -1736,7 +1902,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Permanently failed receipt ModAcks won't be passed to the user handler, so all 4 messages are not handled.
                 Assert.Equal(0, handledMsgs.Count);
             });
@@ -1787,7 +1953,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 // Temporary failed receipt ModAcks can succeed after 1 retry or stay failed, so based on the succeedOnRetry flag, 4 or 0 messages are handled.
                 Assert.Equal(succeedOnRetry ? 4 : 0, handledMsgs.Count);
                 Assert.Equal(succeedOnRetry ? new[] { "1", "2", "3", "4" } : Array.Empty<string>(), handledMsgs);
@@ -1927,7 +2093,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Assert.False(subscriberTask.IsCompleted);
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 await subscriberTask;
             });
         }
@@ -1967,7 +2133,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
                 Assert.False(subscriberTask.IsCompleted);
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 await subscriberTask;
 
                 // Check the pull times indicate a backoff.
@@ -2007,7 +2173,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
                 Assert.False(subscriberTask.IsCompleted);
-                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
                 await subscriberTask;
 
                 // Check the pull times indicate no backoff.
@@ -2018,48 +2184,304 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void NackMessagesOnShutdown()
+        public void Shutdown_SoftStop_NacksMessages()
         {
-            var msgs = new[] { new[] {
+            var msgs = new[] {
                 ServerAction.Data(TimeSpan.Zero, ["msg0"]),
                 ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2", "msg3"]),
                 ServerAction.Data(TimeSpan.Zero, ["msg4", "msg5"]),
+                ServerAction.Data(TimeSpan.FromSeconds(1), ["msg6", "msg7"]),
+                ServerAction.Inf()
+            };
+            // flowMaxElements=2: msg0 and msg2 block flow control; msg1 is processed quickly.
+            // msg3-5 wait for flow control and should be Nacked on shutdown.
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    var data = msg.Data.ToStringUtf8();
+                    handled.Locked(() => handled.Add(data));
+                    if (data == "msg0" || data == "msg2")
+                    {
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(1), ct));
+                    }
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(30), CancellationToken.None));
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+
+#pragma warning disable CS0618
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+#pragma warning restore CS0618
+
+                // msg0-2 were handled/acked; msg3-5 were pulled but nacked on shutdown; msg6-7 where not pulled.
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                Assert.Equivalent(new[] { "msg3", "msg4", "msg5" }, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_NackImmediately_Success()
+        {
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            };
+            // flowMaxElements=2: msg1 and msg2 block flow control.
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    var data = msg.Data.ToStringUtf8();
+                    handled.Locked(() => handled.Add(data));
+                    if (data == "msg1" || data == "msg2")
+                    {
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(30), ct));
+                    }
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+
+                // NackImmediately: Nacks pending messages (msg3, msg4) and messages currently being handled (msg1, msg2).
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(60)));
+
+                Assert.Equivalent(new[] { "msg0" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                Assert.Equivalent(new[] { "msg1", "msg2", "msg3", "msg4" }, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_WaitForProcessing_CompletesBeforeNack()
+        {
+            // Ensure WaitForProcessing allows all received messages to finish if time permits.
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            };
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    var data = msg.Data.ToStringUtf8();
+                    handled.Locked(() => handled.Add(data));
+                    if (data == "msg1" || data == "msg2")
+                    {
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), ct));
+                    }
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+
+                // Stop and wait for processing with a generous timeout.
+                // It waits for msg1, msg2 to finish and allows msg3, msg4 to be processed.
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(60)));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(60), CancellationToken.None));
+
+                // All messages should be Acked and none Nacked.
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2", "msg3", "msg4" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                Assert.Empty(fake.Subscribers[0].Nacks);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_WaitForProcessing_NacksOnTimeout()
+        {
+            // Verify that remaining messages are Nacked if the WaitForProcessing timeout is reached.
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            };
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    var data = msg.Data.ToStringUtf8();
+                    handled.Locked(() => handled.Add(data));
+                    if (data != "msg0")
+                    {
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), ct));
+                    }
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+
+                // Stop with a timeout that expires before processing completes.
+                // Timeout=45s: NackDelay=15s. At T=5+15=20s, NackImmediately is triggered.
+                // msg1, msg2 finish at T=20s. msg3, msg4 start at T=20s but are Nacked as shutdown is in progress.
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(45)));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(40), CancellationToken.None));
+
+                // Verify the switch to Nacking for the remaining messages.
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2", "msg3", "msg4" }, handled, strict: true);
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                Assert.Equivalent(new[] { "msg3", "msg4" }, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_CancellationToken_AbortsGracefulShutdown()
+        {
+            // Verify that cancelling the CancellationToken passed to StopAsync
+            // immediately triggers a Hard Stop, aborting any graceful shutdown.
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Inf()
+            };
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var givenToMessageHandler = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    givenToMessageHandler.Locked(() => givenToMessageHandler.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(60), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                Assert.Single(givenToMessageHandler);
+
+                // Request graceful shutdown with a long timeout.
+                var cts = new CancellationTokenSource();
+                var stopTask = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromHours(1), cts.Token);
+                Assert.Empty(fake.Subscribers[0].Acks);
+                Assert.Empty(fake.Subscribers[0].Nacks);
+
+                // Cancel the token after 5 seconds of "graceful" shutdown.
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                Assert.Empty(fake.Subscribers[0].Acks);
+                Assert.Empty(fake.Subscribers[0].Nacks);
+                cts.Cancel();
+
+                await fake.TaskHelper.ConfigureAwaitHideCancellation(() => stopTask);
+
+                // No ack response will be provided, all work should be dropped
+                Assert.Empty(fake.Subscribers[0].Acks);
+                Assert.Empty(fake.Subscribers[0].Nacks);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_WaitForProcessing_NacksWhenTimeoutLessThanMinimum()
+        {
+            // Ensure immediate Nacking if the requested timeout is shorter than the 30s grace period.
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg1", "msg2"]),
+                ServerAction.Data(TimeSpan.Zero, ["msg3", "msg4"]),
+                ServerAction.Inf()
+            };
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    var data = msg.Data.ToStringUtf8();
+                    handled.Locked(() => handled.Add(data));
+                    if (data != "msg0")
+                    {
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(6), ct));
+                    }
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+
+                // Request shutdown with a short timeout.
+                // Timeout=15s: NackDelay=0s (since 15 < GracePeriod=30). NackImmediately triggered at T=5s.
+                // msg1, msg2 are already being handled and will be Nacked upon completion.
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.WaitForProcessing, TimeSpan.FromSeconds(15)));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), CancellationToken.None));
+
+                // All unhandled messages should be Nacked immediately.
+                Assert.Equivalent(new[] { "msg0", "msg1", "msg2" }, handled, strict: true);
+                Assert.Equivalent(new[] { "msg0" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);
+                Assert.Equivalent(new[] { "msg1", "msg2", "msg3", "msg4" }, fake.Subscribers[0].Nacks.Select(x => x.Id), strict: true);
+            });
+        }
+
+        [Fact]
+        public void Shutdown_NackImmediately_ExactlyOnceDelivery_AcksForwarded()
+        {
+            // Verify that Exactly-Once Acks are still forwarded during an immediate shutdown.
+            var msgs = new[] {
+                ServerAction.Data(TimeSpan.Zero, ["msg0"]),
+                ServerAction.Inf()
+            };
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 2, useMsgAsId: true, isExactlyOnceDelivery: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handled.Locked(() => handled.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                Assert.Single(handled);
+
+                // Trigger an immediate shutdown while a handler is in progress.
+                var stopTask = fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(60));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(15), CancellationToken.None));
+
+                // The message was not handled before shutdown, but we will still attempt to send an Ack response
+                // even if NAck was already provided, to ensure Exactly-Once requirements are met.
+                Assert.Contains("msg0", fake.Subscribers[0].Acks.Select(x => x.Id));
+            });
+        }
+
+        [Fact]
+        public void Shutdown_NackImmediately_LeaseExtensionStops()
+        {
+            // Ensure lease extensions stop and current leases are Nacked during immediate shutdown.
+            var msgs = new[] { new[] {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Inf()
             } };
-            // Set flowMaxElements to 2 to ensure that "msg0" and "msg2" block flow control preventing
-            // "msg3","msg4","msg5" from being processed.
-            using (var fake = Fake.Create(msgs, flowMaxElements: 2, useMsgAsId: true, disposeTimeout: TimeSpan.FromSeconds(10)))
+            using (var fake = Fake.Create(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
             {
                 fake.Scheduler.Run(async () =>
                 {
-                    var handledMsgs = new List<string>();
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
-                        var data = msg.Data.ToStringUtf8();
-                        handledMsgs.Locked(() => handledMsgs.Add(data));
-                        if (data == "msg0" || data == "msg2")
-                        {
-                            // Delay handling so that StopAsync is called while the rest
-                            // are still pulled but waiting for a flow control slot.
-                            await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), ct));
-                        }
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(120), ct));
                         return SubscriberClient.Reply.Ack;
                     });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
 
-                    // Wait for "msg0" and "msg2" to start being handled. "msg1" will also be handled, but not hold onto
-                    // flow control, releasing it so "msg2" can begin being handled.
-                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
-                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, handledMsgs);
+                    int numExtensionsBeforeShutdown = fake.Subscribers[0].Extends.Count();
 
-                    // Stop the subscriber. This should ensure pulled messages that haven't entered the user handler yet
-                    // will be NAck'ed. Specifically for messages already in flow control, they will have to wait for pending
-                    // messages to be processed before they are NAck'ed.
-                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    // Request immediate shutdown.
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately));
+                    int numExtensionsAfterShutdown = fake.Subscribers[0].Extends.Count();
 
-                    // Verify that "msg0", "msg1" and "msg2" completed handling normally, while the rest were
-                    // automatically Nacked during shutdown.
-                    Assert.Equivalent(new [] {"msg0", "msg1", "msg2"}, fake.Subscribers[0].Acks.Select(x => x.Id));
-                    Assert.Equivalent(new [] {"msg3", "msg4", "msg5"}, fake.Subscribers[0].Nacks.Select(x => x.Id));
+                    // Verify no more lease extensions occurred after shutdown was initiated.
+                    Assert.Equal(numExtensionsAfterShutdown, numExtensionsBeforeShutdown);
                 });
             }
         }
