@@ -38,6 +38,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.StartOffset);
             Assert.Null(request.EndOffset);
             Assert.Null(request.MatchGlob);
+            Assert.Null(request.Filter);
         }
 
         [Fact]
@@ -58,7 +59,8 @@ namespace Google.Cloud.Storage.V1.Tests
                 Fields = "items(name),nextPageToken",
                 StartOffset = "start",
                 EndOffset = "end",
-                MatchGlob = "a/*.txt"
+                MatchGlob = "a/*.txt",
+                Filter = "contexts.\"key\":*\""
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
@@ -74,6 +76,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal("start", request.StartOffset);
             Assert.Equal("end", request.EndOffset);
             Assert.Equal("a/*.txt", request.MatchGlob);
+            Assert.Equal("contexts.\"key\":*\"", request.Filter);
         }
     }
 }

@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.IO;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -38,6 +40,51 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             obj.Metadata = new Dictionary<string, string> { { "key", "value" } };
             var updated = client.UpdateObject(obj);
             Assert.Equal("value", updated.Metadata["key"]);
+        }
+
+        [Fact]
+        public void UpdateObjectWithObjectContexts()
+        {
+            var client = _fixture.Client;
+            var source = GenerateData(100);
+            string contextKey = "A\u00F1\u03A9\U0001F680";
+            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var result = client.UploadObject(destination, source);
+            string modifiedContextValue = "AAb\u00F1\u03A9\U0001F680";
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { contextKey, new ObjectCustomContextPayload { Value = modifiedContextValue } }
+
+            };
+
+            var modifiedDestination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = destination.Name,
+                Contexts = new Object.ContextsData { Custom = modifiedCustom }
+            };
+            var updated = client.UpdateObject(modifiedDestination);
+            Assert.NotNull(updated.Contexts.Custom);
+            Assert.Equal(modifiedCustom.Count, updated.Contexts.Custom.Count);
+            var resultEntry = Assert.Single(result.Contexts.Custom);
+            var updatedEntry = Assert.Single(updated.Contexts.Custom);
+            Assert.Equal(modifiedContextValue, updatedEntry.Value.Value);
+            Assert.NotEqual(updatedEntry.Value.UpdateTimeRaw, resultEntry.Value.UpdateTimeRaw);
         }
     }
 }

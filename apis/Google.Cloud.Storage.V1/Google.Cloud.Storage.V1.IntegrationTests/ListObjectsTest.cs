@@ -12,12 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
@@ -119,6 +123,34 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 Assert.Null(obj.ContentEncoding);
                 Assert.Null(obj.ContentDisposition);
             }
+        }
+
+        [Fact]
+        public void ListObjectsMatchingContextKeyValuePair()
+        {
+            string contextKey = "A\u00F1\u03A9\U0001F680";
+            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
+
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            string filter = $@"contexts.""{contextKey}""=""{contextValue}""";
+            var options = new ListObjectsOptions { Filter = filter };
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, options: options).ToList();
+            var obj = Assert.Single(objects);
+            var fetchedContext = Assert.Single(obj.Contexts.Custom);
+            Assert.Equal(contextKey, fetchedContext.Key);
+            Assert.Equal(contextValue, fetchedContext.Value.Value);
         }
 
         private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)
