@@ -4860,7 +4860,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-19T08:33:14.931493188Z",
-            "lastGeneratedCommit": "c99e8a29e1b568d183445adccde5bf9d6437cf00",
+            "lastGeneratedCommit": "3be416e51c2610e96dcc1915c8c2640be72c7be6",
             "lastReleasedCommit": "c99e8a29e1b568d183445adccde5bf9d6437cf00",
             "apiPaths": [
                 "google/cloud/ces/v1"
