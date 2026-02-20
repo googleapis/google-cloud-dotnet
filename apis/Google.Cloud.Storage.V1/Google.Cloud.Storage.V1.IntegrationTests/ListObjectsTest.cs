@@ -12,12 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
@@ -119,6 +123,126 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 Assert.Null(obj.ContentEncoding);
                 Assert.Null(obj.ContentDisposition);
             }
+        }
+
+        [Fact]
+        public void ListObjectsIncludingContexts()
+        {
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix: destination.Name).ToList();
+            var obj = Assert.Single(objects);
+            Assert.NotNull(obj.Contexts);
+            Assert.True(obj.Contexts.Custom.ContainsKey(custom.Keys.Single()));
+            Assert.Equal(custom.Values.Single().Value, obj.Contexts.Custom[custom.Keys.Single()].Value);
+        }
+
+        [Fact]
+        public void ListObjectsMatchingContextKeyValuePair()
+        {
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            string filter = $@"contexts.""{custom.Keys.Single()}""=""{custom.Values.Single().Value}""";
+            var options = new ListObjectsOptions { Filter = filter };
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, options: options).ToList();
+            var obj = Assert.Single(objects);
+            var fetchedContext = Assert.Single(obj.Contexts.Custom);
+            Assert.Equal(custom.Keys.Single(), fetchedContext.Key);
+            Assert.Equal(custom.Values.Single().Value, fetchedContext.Value.Value);
+        }
+
+        [Fact]
+        public void ListObjectsMatchingContextKey()
+        {
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            string filter = $@"contexts.""{custom.Keys.Single()}"":*";
+            var options = new ListObjectsOptions { Filter = filter };
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, options: options).ToList();
+            var obj = Assert.Single(objects);
+            var fetchedContext = Assert.Single(obj.Contexts.Custom);
+            Assert.Equal(custom.Keys.Single(), fetchedContext.Key);
+            Assert.Equal(custom.Values.Single().Value, fetchedContext.Value.Value);
+        }
+
+        [Fact]
+        public void ListObjectsNotMatchingContextKeyValuePair()
+        {
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            string filter = $@"-contexts.""{custom.Keys.Single()}""=""{custom.Values.Single().Value}""";
+            var options = new ListObjectsOptions { Filter = filter };
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, options: options).ToList();
+            Assert.DoesNotContain(objects, o => o.Name == destination.Name);
+        }
+
+        [Fact]
+        public void ListObjectsNotMatchingContextKey()
+        {
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+
+            };
+            var destination = new Object
+            {
+                Bucket = _fixture.ReadBucket,
+                Name = IdGenerator.FromGuid(),
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            string filter = $@"-contexts.""{custom.Keys.Single()}"":*";
+            var options = new ListObjectsOptions { Filter = filter };
+            var objects = _fixture.Client.ListObjects(_fixture.ReadBucket, options: options).ToList();
+            Assert.DoesNotContain(objects, obj => obj.Name == destination.Name);
         }
 
         private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)

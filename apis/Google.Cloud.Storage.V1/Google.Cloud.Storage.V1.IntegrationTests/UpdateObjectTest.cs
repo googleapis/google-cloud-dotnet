@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.IO;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -38,6 +40,59 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             obj.Metadata = new Dictionary<string, string> { { "key", "value" } };
             var updated = client.UpdateObject(obj);
             Assert.Equal("value", updated.Metadata["key"]);
+        }
+
+        [Fact]
+        public void UpdateObjectWithObjectContexts()
+        {
+            var client = _fixture.Client;
+            var source = GenerateData(100);
+
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } },
+
+                  { "CA\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "A\u00F1\u03A9\U0001F680" } },
+
+                  { "CB\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "B\u00F1\u03A9\U0001F680" } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+
+            client.UploadObject(destination, source);
+
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "AAb\u00F1\u03A9\U0001F680" } },
+
+                  { "CA\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "AC\u00F1\u03A9\U0001F680" } },
+
+                  { "CB\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "BC\u00F1\u03A9\U0001F680" } }
+            };
+
+            var modifiedDestination = new Object
+            {
+                Bucket = _fixture.MultiVersionBucket,
+                Name = destination.Name,
+                Contexts = new Object.ContextsData { Custom = modifiedCustom }
+            };
+            var updated = client.UpdateObject(modifiedDestination);
+            Assert.NotNull(updated.Contexts.Custom);
+            Assert.Equal(modifiedCustom.Count, updated.Contexts.Custom.Count);
+            foreach (var expectedContext in modifiedCustom)
+            {
+                Assert.Equal(expectedContext.Value.Value, updated.Contexts.Custom[expectedContext.Key].Value);
+                Assert.NotNull(updated.Contexts.Custom[expectedContext.Key].CreateTimeRaw);
+                Assert.NotNull(updated.Contexts.Custom[expectedContext.Key].UpdateTimeRaw);
+            }
         }
     }
 }

@@ -12,10 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
@@ -49,6 +53,132 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             Assert.Throws<ArgumentException>(() => client.PatchObject(new Object { Bucket = _fixture.SingleVersionBucket }));
             Assert.Throws<ArgumentException>(() => client.PatchObject(new Object { Name = IdGenerator.FromGuid() }));
+        }
+
+        [Fact]
+        public void ClearAllObjectContexts()
+        {
+            var client = _fixture.Client;
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } },
+
+                  { "CA\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "A\u00F1\u03A9\U0001F680" } },
+
+                  { "CB\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "B\u00F1\u03A9\U0001F680" } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+            };
+
+            Object obj = new Object { Name = destination.Name, Bucket = destination.Bucket, ContentType = "text/plain", Contexts = new Object.ContextsData { Custom = modifiedCustom } };
+            var updated = client.PatchObject(obj);
+            Assert.Null(updated.Contexts);
+        }
+
+        [Fact]
+        public void RemoveIndividualObjectContext()
+        {
+            var client = _fixture.Client;
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                    { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = null } }
+            };
+
+            Object obj = new Object { Name = destination.Name, Bucket = destination.Bucket, ContentType = "text/plain", Contexts = new Object.ContextsData { Custom = modifiedCustom } };
+            var updated = client.PatchObject(obj);
+            Assert.Null(updated.Contexts);
+        }
+
+        [Fact]
+        public void ModifyIndividualObjectContext()
+        {
+            var client = _fixture.Client;
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Abc\u00F1\u03A9\U0001F680" } }
+            };
+
+            Object obj = new Object { Name = destination.Name, Bucket = _fixture.SingleVersionBucket, ContentType = "text/plain", Contexts = new Object.ContextsData { Custom = modifiedCustom } };
+            var updated = client.PatchObject(obj);
+            Assert.Equal(modifiedCustom[modifiedCustom.Keys.Single()].Value, updated.Contexts.Custom[modifiedCustom.Keys.Single()].Value);
+        }
+
+        [Fact]
+        public void AddObjectContexts()
+        {
+            var client = _fixture.Client;
+            var custom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+            };
+
+            var destination = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = IdGenerator.FromGuid(),
+                ContentType = "test/type",
+                ContentDisposition = "attachment",
+                Metadata = new Dictionary<string, string> { { "x", "y" } },
+                Contexts = new Object.ContextsData { Custom = custom }
+            };
+            var source = GenerateData(100);
+            _fixture.Client.UploadObject(destination, source);
+            var modifiedCustom = new Dictionary<string, ObjectCustomContextPayload>
+            {
+                  { "Ab\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Abb\u00F1\u03A9\U0001F680" } }
+            };
+
+            Object obj = new Object { Name = destination.Name, Bucket = _fixture.SingleVersionBucket, ContentType = "text/plain", Contexts = new Object.ContextsData { Custom = modifiedCustom } };
+            var updated = client.PatchObject(obj);
+            Assert.Equal(2, updated.Contexts.Custom.Keys.Count);
+            Assert.True(destination.Contexts.Custom.All(pair => updated.Contexts.Custom.ContainsKey(pair.Key) && updated.Contexts.Custom[pair.Key].Value == pair.Value.Value));
+            Assert.True(obj.Contexts.Custom.All(pair => updated.Contexts.Custom.ContainsKey(pair.Key) && updated.Contexts.Custom[pair.Key].Value == pair.Value.Value));
         }
     }
 }
