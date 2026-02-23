@@ -1,5 +1,40 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-02-23
+
+### New features
+
+- Add `UserListService` for creating and managing user lists
+- Add `UserListDirectLicenseService` for creating and managing direct user list licenses
+- Add `UserListGlobalLicenseService` for creating and managing global user list licenses
+- Add `MarketingDataInsightsService` for retrieving marketing data insights for a given user list
+- Add `PartnerLinkService` for creating and managing links between advertiser and data partner accounts
+- Add `UserList` resource
+- Add `UserListDirectLicense` resource
+- Add `UserListGlobalLicense` resource
+- Add `UserListGlobalLicenseCustomerInfo` resource
+- Add `PartnerLink` resource
+- Add `UserIdData` to `AudienceMember` to support User ID in audience member ingestion
+- Add `PpidData` to `AudienceMember` to support Publisher Provided ID (PPID) in audience member ingestion
+- Add `IngestUserIdDataStatus` to `IngestAudienceMembersStatus` to report the status of user ID data ingestion
+- Add `IngestPpidDataStatus` to `IngestAudienceMembersStatus` to report the status of PPID data ingestion
+- Add `RemoveUserIdDataStatus` to `RemoveAudienceMembersStatus` to report the status of user ID data removal
+- Add `RemovePpidDataStatus` to `RemoveAudienceMembersStatus` to report the status of PPID data removal
+- Add `GOOGLE_AD_MANAGER_AUDIENCE_LINK` to the `AccountType` enum
+- Add `AgeRange` and `Gender` enums to support demographic breakdown in marketing insights
+- Add new `ErrorReason` values for licensing, user list operations, and permission checks
+
+### Bug fixes
+
+- Changed `conversion_value` field to be optional in message `Event`
+
+### Documentation improvements
+
+- Add comments to resources and methods to clarify which are available only to data partners
+- A comment for enum `ErrorReason` is changed to clarify that it is subject to future additions
+- A comment for field `pair_data` in message `AudienceMember` is changed to clarify it is only available to data partners
+- A comment for message `PairData` is changed to clarify it is only available to data partners
+
 ## Version 1.0.0-beta03, released 2026-02-02
 
 ### Bug fixes
