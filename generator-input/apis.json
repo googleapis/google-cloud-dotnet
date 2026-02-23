@@ -3213,6 +3213,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.HypercomputeCluster.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cluster Director",
+      "productUrl": "https://cloud.google.com/cluster-director/docs",
+      "description": "The Cluster Director API allows you to deploy, manage, and monitor clusters that run AI, ML, or HPC workloads.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/hypercomputecluster/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "hypercomputecluster",
+      "serviceConfigFile": "hypercomputecluster_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.HypercomputeCluster.V1Beta",
       "version": "1.0.0-beta01",
       "type": "grpc",
