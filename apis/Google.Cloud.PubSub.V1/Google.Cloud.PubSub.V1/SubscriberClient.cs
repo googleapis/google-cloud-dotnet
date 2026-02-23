@@ -217,6 +217,7 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort handlers and acknowledgement.</param>
     /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="hardStopToken"/> is cancelled.</returns>
+    [Obsolete("Use StopAsync(ShutdownOption, TimeSpan?, CancellationToken) instead.")]
     public virtual Task StopAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
     /// <summary>
@@ -229,6 +230,7 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// <param name="timeout">After this period, abort handling and acknowledging messages.</param>
     /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="timeout"/> expires.</returns>
+    [Obsolete("Use StopAsync(ShutdownOption, TimeSpan?, CancellationToken) instead.")]
     public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
 
     /// <summary>

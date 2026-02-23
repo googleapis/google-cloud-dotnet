@@ -23,6 +23,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.PubSub.V1.SubscriberClient;
 
 // Tests create quite a few tasks that don't need awaiting.
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
@@ -159,7 +160,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     {
                         // Test finished, so stop subscriber
                         Console.WriteLine("All msgs received, stopping subscriber.");
-                        Task unused = subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                        var shutdownOptions = new ShutdownOptions
+                        {
+                            Mode = ShutdownMode.NackImmediately,
+                            Timeout = TimeSpan.FromSeconds(15)
+                        };
+                        Task unused = subscriber.StopAsync(shutdownOptions);
                     }
                 }
                 else
@@ -194,11 +200,15 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     {
                         if (noProgressCount > 60)
                         {
-                            // Deadlock, shutdown subscriber, and cancel
-                            Console.WriteLine("Deadlock detected. Cancelling test");
-                            subscriber.StopAsync(new CancellationToken(true));
-                            watchdogCts.Cancel();
-                            break;
+                             // Deadlock, shutdown subscriber, and cancel
+                             Console.WriteLine("Deadlock detected. Cancelling test");
+                             var shutdownOptions = new ShutdownOptions
+                             {
+                                Mode = ShutdownMode.NackImmediately
+                             };
+                             subscriber.StopAsync(shutdownOptions, cancellationToken: new CancellationToken(true));
+                             watchdogCts.Cancel();
+                             break;
                         }
                         noProgressCount += 1;
                     }
@@ -431,7 +441,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     });
                     await Task.Delay(subscriberLifetime);
                     Console.WriteLine("Stopping subscriber");
-                    Task stopTask = subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    var shutdownOptions = new ShutdownOptions
+                    {
+                        Mode = ShutdownMode.NackImmediately,
+                        Timeout = TimeSpan.FromSeconds(15)
+                    };
+                    Task stopTask = subscriber.StopAsync(shutdownOptions);
                     // If shutdown times-out then stopTask, and also Task.WhenAll will cancel, causing the test to fail.
                     await Task.WhenAll(subscribeTask, stopTask);
                     int recvCount = recvedMsgs.Locked(() => recvedMsgs.Count);
@@ -538,8 +553,13 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             {
                 result.Add((msg.GetDeliveryAttempt(), true));
                 // Received DLQ message, so stop test.
-                sub.StopAsync(TimeSpan.FromSeconds(10));
-                dlqSub.StopAsync(TimeSpan.FromSeconds(10));
+                var shutdownOptions = new ShutdownOptions
+                {
+                    Mode = ShutdownMode.NackImmediately,
+                    Timeout = TimeSpan.FromSeconds(10)
+                };
+                sub.StopAsync(shutdownOptions);
+                dlqSub.StopAsync(shutdownOptions);
                 return Task.FromResult(SubscriberClient.Reply.Ack);
             });
 
