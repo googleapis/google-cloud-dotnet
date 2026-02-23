@@ -129,7 +129,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine($"Text: '{msg.Data.ToStringUtf8()}'");
                 // Stop this subscriber after one message is received.
                 // This is non-blocking, and the returned Task may be awaited.
-                subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(15));
                 // Return Reply.Ack to indicate this message has been handled.
                 return Task.FromResult(SubscriberClient.Reply.Ack);
             });
