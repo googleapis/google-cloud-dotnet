@@ -509,12 +509,13 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     };
                     break;
 
-                case TextReasoningContent reasoningContent:
-                    part = new Part()
+                case TextReasoningContent reasoningContent when !string.IsNullOrEmpty(reasoningContent.Text) || reasoningContent.ProtectedData is not null:
+                    part = new Part() { Thought = true };
+
+                    if (!string.IsNullOrEmpty(reasoningContent.Text))
                     {
-                        Thought = true,
-                        Text = !string.IsNullOrEmpty(reasoningContent.Text) ? reasoningContent.Text : null,
-                    };
+                        part.Text = reasoningContent.Text;
+                    }
 
                     if (reasoningContent.ProtectedData is not null)
                     {
