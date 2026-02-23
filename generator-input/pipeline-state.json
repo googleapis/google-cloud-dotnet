@@ -4898,6 +4898,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.VectorSearch.V1/Google.Cloud.VectorSearch.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.HypercomputeCluster.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/hypercomputecluster/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.HypercomputeCluster.V1/Google.Cloud.HypercomputeCluster.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
