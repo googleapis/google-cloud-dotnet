@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKp8NCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKpUbCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -63,11 +63,51 @@ namespace Google.Ads.DataManager.V1 {
             "Tk9UX0FMTE9XTElTVEVEEC8SFgoSSU5WQUxJRF9SRVFVRVNUX0lEEDASNAow",
             "TVVMVElQTEVfREVTVElOQVRJT05TX0ZPUl9HT09HTEVfQU5BTFlUSUNTX0VW",
             "RU5UEDESGAoURklFTERfVkFMVUVfVE9PX0xPTkcQMhIVChFUT09fTUFOWV9F",
-            "TEVNRU5UUxAzQscBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIK",
-            "RXJyb3JQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2Vy",
-            "L2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5B",
-            "ZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx",
-            "6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "TEVNRU5UUxAzEhIKDkFMUkVBRFlfRVhJU1RTEDQSHgoaSU1NVVRBQkxFX0ZJ",
+            "RUxEX0ZPUl9VUERBVEUQNRIZChVJTlZBTElEX1JFU09VUkNFX05BTUUQNhIS",
+            "Cg5JTlZBTElEX0ZJTFRFUhA3EhcKE0lOVkFMSURfVVBEQVRFX01BU0sQOBIW",
+            "ChJJTlZBTElEX1BBR0VfVE9LRU4QORIiCh5DQU5OT1RfVVBEQVRFX0RJU0FC",
+            "TEVEX0xJQ0VOU0UQOhIwCixDQU5OT1RfQ1JFQVRFX0xJQ0VOU0VfRk9SX1NF",
+            "TlNJVElWRV9VU0VSTElTVBA7EhUKEUlOU1VGRklDSUVOVF9DT1NUEDwSGgoW",
+            "Q0FOTk9UX0RJU0FCTEVfTElDRU5TRRA9Eh0KGUlOVkFMSURfQ0xJRU5UX0FD",
+            "Q09VTlRfSUQQPhIiCh5QUklDSU5HX09OTFlfWkVST19DT1NUX0FMTE9XRUQQ",
+            "PxISCg5QUklDRV9UT09fSElHSBBAEioKJkNVU1RPTUVSX05PVF9BTExPV0VE",
+            "X1RPX0NSRUFURV9MSUNFTlNFEEESHAoYSU5WQUxJRF9QUklDSU5HX0VORF9E",
+            "QVRFEEISPwo7Q0FOTk9UX0xJQ0VOU0VfTE9HSUNBTF9MSVNUX1dJVEhfTElD",
+            "RU5TRURfT1JfU0hBUkVEX1NFR01FTlQQQxIbChdNSVNNQVRDSEVEX0FDQ09V",
+            "TlRfVFlQRRBEEjEKLU1FRElBX1NIQVJFX0NPU1RfTk9UX0FMTE9XRURfRk9S",
+            "X0xJQ0VOU0VfVFlQRRBFEjQKME1FRElBX1NIQVJFX0NPU1RfTk9UX0FMTE9X",
+            "RURfRk9SX0NMSUVOVF9DVVNUT01FUhBGEhwKGElOVkFMSURfTUVESUFfU0hB",
+            "UkVfQ09TVBBHEhUKEUlOVkFMSURfQ09TVF9UWVBFEEgSOwo3TUVESUFfU0hB",
+            "UkVfQ09TVF9OT1RfQUxMT1dFRF9GT1JfTk9OX0NPTU1FUkNFX1VTRVJfTElT",
+            "VBBJEhgKFE1BWF9DT1NUX05PVF9BTExPV0VEEEoSMwovQ09NTUVSQ0VfQVVE",
+            "SUVOQ0VfQ0FOX09OTFlfQkVfRElSRUNUTFlfTElDRU5TRUQQSxIXChNJTlZB",
+            "TElEX0RFU0NSSVBUSU9OEEwSGAoUSU5WQUxJRF9ESVNQTEFZX05BTUUQTRId",
+            "ChlESVNQTEFZX05BTUVfQUxSRUFEWV9VU0VEEE4SIQodT1dORVJTSElQX1JF",
+            "UVVJUkVEX0ZPUl9VUERBVEUQTxIkCiBVU0VSX0xJU1RfTVVUQVRJT05fTk9U",
+            "X1NVUFBPUlRFRBBQEiEKHVNFTlNJVElWRV9VU0VSX0xJU1RfSU1NVVRBQkxF",
+            "EFESIwofQklMTEFCTEVfUkVDT1JEX0NPVU5UX0lNTVVUQUJMRRBSEhsKF1VT",
+            "RVJfTElTVF9OQU1FX1JFU0VSVkVEEFMSMAosQURWRVJUSVNFUl9OT1RfQUxM",
+            "T1dMSVNURURfRk9SX1VQTE9BREVEX0RBVEEQVBInCiNVTlNVUFBPUlRFRF9Q",
+            "QVJUTkVSX0FVRElFTkNFX1NPVVJDRRBVEiAKHENPTU1FUkNFX1BBUlRORVJf",
+            "Tk9UX0FMTE9XRUQQVhIlCiFVTlNVUFBPUlRFRF9QQVJUTkVSX0FVRElFTkNF",
+            "X0lORk8QVxIwCixQQVJUTkVSX01BVENIX0ZPUl9NQU5BR0VSX0FDQ09VTlRf",
+            "RElTQUxMT1dFRBBYEj0KOURBVEFfUEFSVE5FUl9OT1RfQUxMT1dMSVNURURf",
+            "Rk9SX1RISVJEX1BBUlRZX1BBUlRORVJfREFUQRBZEh8KG0FEVkVSVElTRVJf",
+            "VE9TX05PVF9BQ0NFUFRFRBBaEjsKN0FEVkVSVElTRVJfTk9UX0FMTE9XTElT",
+            "VEVEX0ZPUl9USElSRF9QQVJUWV9QQVJUTkVSX0RBVEEQWxIsCihVU0VSX0xJ",
+            "U1RfVFlQRV9OT1RfU1VQUE9SVEVEX0ZPUl9BQ0NPVU5UEFwSHAoYSU5WQUxJ",
+            "RF9DT01NRVJDRV9QQVJUTkVSEF0SMgouQ1VTVE9NRVJfTk9UX0FMTE9XTElT",
+            "VEVEX0ZPUl9DT01NRVJDRV9BVURJRU5DRRBeEioKJlVOU1VQUE9SVEVEX1VT",
+            "RVJfTElTVF9VUExPQURfS0VZX1RZUEVTEF8SLgoqVU5TVVBQT1JURURfSU5H",
+            "RVNURURfVVNFUl9MSVNUX0lORk9fQ09ORklHEGASMAosVU5TVVBQT1JURURf",
+            "QUNDT1VOVF9UWVBFU19GT1JfVVNFUl9MSVNUX1RZUEUQYRItCilVTlNVUFBP",
+            "UlRFRF9BQ0NPVU5UX1RZUEVfRk9SX1BBUlRORVJfTElOSxBiQscBCh1jb20u",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIKRXJyb3JQcm90b1ABWkFjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2Vy",
+            "cGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHK",
+            "AhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRh",
+            "dGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -78,6 +118,7 @@ namespace Google.Ads.DataManager.V1 {
   #region Enums
   /// <summary>
   /// Error reasons for Data Manager API.
+  /// NOTE: This enum is not frozen and new values may be added in the future.
   /// </summary>
   public enum ErrorReason {
     /// <summary>
@@ -295,6 +336,200 @@ namespace Google.Ads.DataManager.V1 {
     /// Too many elements in a list in the request.
     /// </summary>
     [pbr::OriginalName("TOO_MANY_ELEMENTS")] TooManyElements = 51,
+    /// <summary>
+    /// The resource already exists.
+    /// </summary>
+    [pbr::OriginalName("ALREADY_EXISTS")] AlreadyExists = 52,
+    /// <summary>
+    /// Attempted to set an immutable field for an update request.
+    /// </summary>
+    [pbr::OriginalName("IMMUTABLE_FIELD_FOR_UPDATE")] ImmutableFieldForUpdate = 53,
+    /// <summary>
+    /// The resource name is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_RESOURCE_NAME")] InvalidResourceName = 54,
+    /// <summary>
+    /// The query filter is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_FILTER")] InvalidFilter = 55,
+    /// <summary>
+    /// The update mask is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_UPDATE_MASK")] InvalidUpdateMask = 56,
+    /// <summary>
+    /// The page token is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_PAGE_TOKEN")] InvalidPageToken = 57,
+    /// <summary>
+    /// Cannot update a license that has been disabled.
+    /// </summary>
+    [pbr::OriginalName("CANNOT_UPDATE_DISABLED_LICENSE")] CannotUpdateDisabledLicense = 58,
+    /// <summary>
+    /// Sensitive user lists cannot be licensed to this client.
+    /// </summary>
+    [pbr::OriginalName("CANNOT_CREATE_LICENSE_FOR_SENSITIVE_USERLIST")] CannotCreateLicenseForSensitiveUserlist = 59,
+    /// <summary>
+    /// Cost too low for this license.
+    /// </summary>
+    [pbr::OriginalName("INSUFFICIENT_COST")] InsufficientCost = 60,
+    /// <summary>
+    /// Reseller license cannot be disabled since it is in use.
+    /// </summary>
+    [pbr::OriginalName("CANNOT_DISABLE_LICENSE")] CannotDisableLicense = 61,
+    /// <summary>
+    /// Invalid client account id.
+    /// </summary>
+    [pbr::OriginalName("INVALID_CLIENT_ACCOUNT_ID")] InvalidClientAccountId = 62,
+    /// <summary>
+    /// Non-zero cost not allowed for this client account.
+    /// </summary>
+    [pbr::OriginalName("PRICING_ONLY_ZERO_COST_ALLOWED")] PricingOnlyZeroCostAllowed = 63,
+    /// <summary>
+    /// Cost too high for this license.
+    /// </summary>
+    [pbr::OriginalName("PRICE_TOO_HIGH")] PriceTooHigh = 64,
+    /// <summary>
+    /// Customer not allowed to create license.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER_NOT_ALLOWED_TO_CREATE_LICENSE")] CustomerNotAllowedToCreateLicense = 65,
+    /// <summary>
+    /// Pricing end date is invalid for this license.
+    /// </summary>
+    [pbr::OriginalName("INVALID_PRICING_END_DATE")] InvalidPricingEndDate = 66,
+    /// <summary>
+    /// Logical user list with shared or licensed segment cannot be licensed.
+    /// </summary>
+    [pbr::OriginalName("CANNOT_LICENSE_LOGICAL_LIST_WITH_LICENSED_OR_SHARED_SEGMENT")] CannotLicenseLogicalListWithLicensedOrSharedSegment = 67,
+    /// <summary>
+    /// Client customer's account type in the request does not match the customer's
+    /// actual account type.
+    /// </summary>
+    [pbr::OriginalName("MISMATCHED_ACCOUNT_TYPE")] MismatchedAccountType = 68,
+    /// <summary>
+    /// License type does not support media share cost.
+    /// </summary>
+    [pbr::OriginalName("MEDIA_SHARE_COST_NOT_ALLOWED_FOR_LICENSE_TYPE")] MediaShareCostNotAllowedForLicenseType = 69,
+    /// <summary>
+    /// Client customer type does not support media share cost.
+    /// </summary>
+    [pbr::OriginalName("MEDIA_SHARE_COST_NOT_ALLOWED_FOR_CLIENT_CUSTOMER")] MediaShareCostNotAllowedForClientCustomer = 70,
+    /// <summary>
+    /// Invalid media share cost.
+    /// </summary>
+    [pbr::OriginalName("INVALID_MEDIA_SHARE_COST")] InvalidMediaShareCost = 71,
+    /// <summary>
+    /// Invalid cost type.
+    /// </summary>
+    [pbr::OriginalName("INVALID_COST_TYPE")] InvalidCostType = 72,
+    /// <summary>
+    /// UserList type does not support media share cost.
+    /// </summary>
+    [pbr::OriginalName("MEDIA_SHARE_COST_NOT_ALLOWED_FOR_NON_COMMERCE_USER_LIST")] MediaShareCostNotAllowedForNonCommerceUserList = 73,
+    /// <summary>
+    /// Max cost is only allowed for cost_type MEDIA_SHARE.
+    /// </summary>
+    [pbr::OriginalName("MAX_COST_NOT_ALLOWED")] MaxCostNotAllowed = 74,
+    /// <summary>
+    /// Commerce audience can only be directly licensed.
+    /// </summary>
+    [pbr::OriginalName("COMMERCE_AUDIENCE_CAN_ONLY_BE_DIRECTLY_LICENSED")] CommerceAudienceCanOnlyBeDirectlyLicensed = 75,
+    /// <summary>
+    /// The description is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_DESCRIPTION")] InvalidDescription = 76,
+    /// <summary>
+    /// The display name is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_DISPLAY_NAME")] InvalidDisplayName = 77,
+    /// <summary>
+    /// The display name is already being used for another user list for the
+    /// account.
+    /// </summary>
+    [pbr::OriginalName("DISPLAY_NAME_ALREADY_USED")] DisplayNameAlreadyUsed = 78,
+    /// <summary>
+    /// Ownership is required to modify the user list.
+    /// </summary>
+    [pbr::OriginalName("OWNERSHIP_REQUIRED_FOR_UPDATE")] OwnershipRequiredForUpdate = 79,
+    /// <summary>
+    /// The user list type is read-only and does not support mutation.
+    /// </summary>
+    [pbr::OriginalName("USER_LIST_MUTATION_NOT_SUPPORTED")] UserListMutationNotSupported = 80,
+    /// <summary>
+    /// A user list which is privacy sensitive or legal rejected cannot be mutated
+    /// by external users.
+    /// </summary>
+    [pbr::OriginalName("SENSITIVE_USER_LIST_IMMUTABLE")] SensitiveUserListImmutable = 81,
+    /// <summary>
+    /// The remarketing user list's billable record field cannot be modified once
+    /// it is set.
+    /// </summary>
+    [pbr::OriginalName("BILLABLE_RECORD_COUNT_IMMUTABLE")] BillableRecordCountImmutable = 82,
+    /// <summary>
+    /// The user list name is reserved for system lists.
+    /// </summary>
+    [pbr::OriginalName("USER_LIST_NAME_RESERVED")] UserListNameReserved = 83,
+    /// <summary>
+    /// The advertiser needs to be allowlisted to use remarketing lists created
+    /// from advertiser uploaded data.
+    /// </summary>
+    [pbr::OriginalName("ADVERTISER_NOT_ALLOWLISTED_FOR_UPLOADED_DATA")] AdvertiserNotAllowlistedForUploadedData = 84,
+    /// <summary>
+    /// The partner audience source is not supported for the user list type.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_PARTNER_AUDIENCE_SOURCE")] UnsupportedPartnerAudienceSource = 85,
+    /// <summary>
+    /// Setting the `commerce_partner` field is only supported if the
+    /// `partner_audience_source` is `COMMERCE_AUDIENCE`.
+    /// </summary>
+    [pbr::OriginalName("COMMERCE_PARTNER_NOT_ALLOWED")] CommercePartnerNotAllowed = 86,
+    /// <summary>
+    /// The `partner_audience_info` field is not supported for the user list type.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_PARTNER_AUDIENCE_INFO")] UnsupportedPartnerAudienceInfo = 87,
+    /// <summary>
+    /// Partner Match user lists cannot be created by manager accounts.
+    /// </summary>
+    [pbr::OriginalName("PARTNER_MATCH_FOR_MANAGER_ACCOUNT_DISALLOWED")] PartnerMatchForManagerAccountDisallowed = 88,
+    /// <summary>
+    /// The data partner is not allowlisted for THIRD_PARTY_PARTNER_DATA.
+    /// </summary>
+    [pbr::OriginalName("DATA_PARTNER_NOT_ALLOWLISTED_FOR_THIRD_PARTY_PARTNER_DATA")] DataPartnerNotAllowlistedForThirdPartyPartnerData = 89,
+    /// <summary>
+    /// The advertiser has not accepted the partner's terms of service.
+    /// </summary>
+    [pbr::OriginalName("ADVERTISER_TOS_NOT_ACCEPTED")] AdvertiserTosNotAccepted = 90,
+    /// <summary>
+    /// The advertiser is not allowlisted for THIRD_PARTY_PARTNER_DATA.
+    /// </summary>
+    [pbr::OriginalName("ADVERTISER_NOT_ALLOWLISTED_FOR_THIRD_PARTY_PARTNER_DATA")] AdvertiserNotAllowlistedForThirdPartyPartnerData = 91,
+    /// <summary>
+    /// This user list type is not supported for this account.
+    /// </summary>
+    [pbr::OriginalName("USER_LIST_TYPE_NOT_SUPPORTED_FOR_ACCOUNT")] UserListTypeNotSupportedForAccount = 92,
+    /// <summary>
+    /// The `commerce_partner` field is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_COMMERCE_PARTNER")] InvalidCommercePartner = 93,
+    /// <summary>
+    /// The data provider is not allowlisted to create commerce audiences.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER_NOT_ALLOWLISTED_FOR_COMMERCE_AUDIENCE")] CustomerNotAllowlistedForCommerceAudience = 94,
+    /// <summary>
+    /// The user list upload key types are not supported.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_USER_LIST_UPLOAD_KEY_TYPES")] UnsupportedUserListUploadKeyTypes = 95,
+    /// <summary>
+    /// The ingested user list info config is not supported.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_INGESTED_USER_LIST_INFO_CONFIG")] UnsupportedIngestedUserListInfoConfig = 96,
+    /// <summary>
+    /// The account types are not supported for the user list type.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_ACCOUNT_TYPES_FOR_USER_LIST_TYPE")] UnsupportedAccountTypesForUserListType = 97,
+    /// <summary>
+    /// The account types are not supported for the partner link.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_ACCOUNT_TYPE_FOR_PARTNER_LINK")] UnsupportedAccountTypeForPartnerLink = 98,
   }
 
   #endregion

@@ -28,26 +28,32 @@ namespace Google.Ads.DataManager.V1 {
             "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxGidnb29nbGUvYWRzL2RhdGFtYW5h",
             "Z2VyL3YxL2NvbnNlbnQucHJvdG8aKWdvb2dsZS9hZHMvZGF0YW1hbmFnZXIv",
             "djEvdXNlcl9kYXRhLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
-            "LnByb3RvIqkCCg5BdWRpZW5jZU1lbWJlchIjChZkZXN0aW5hdGlvbl9yZWZl",
+            "LnByb3RvIqIDCg5BdWRpZW5jZU1lbWJlchIjChZkZXN0aW5hdGlvbl9yZWZl",
             "cmVuY2VzGAEgAygJQgPgQQESOAoJdXNlcl9kYXRhGAIgASgLMiMuZ29vZ2xl",
             "LmFkcy5kYXRhbWFuYWdlci52MS5Vc2VyRGF0YUgAEjgKCXBhaXJfZGF0YRgE",
             "IAEoCzIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUGFpckRhdGFIABI8",
             "Cgttb2JpbGVfZGF0YRgFIAEoCzIlLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
-            "djEuTW9iaWxlRGF0YUgAEjgKB2NvbnNlbnQYAyABKAsyIi5nb29nbGUuYWRz",
-            "LmRhdGFtYW5hZ2VyLnYxLkNvbnNlbnRCA+BBAUIGCgRkYXRhIiEKCFBhaXJE",
-            "YXRhEhUKCHBhaXJfaWRzGAEgAygJQgPgQQIiJQoKTW9iaWxlRGF0YRIXCgpt",
-            "b2JpbGVfaWRzGAEgAygJQgPgQQJCygEKHWNvbS5nb29nbGUuYWRzLmRhdGFt",
-            "YW5hZ2VyLnYxQg1BdWRpZW5jZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdl",
-            "cnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNc",
-            "RGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYx",
-            "YgZwcm90bzM="));
+            "djEuTW9iaWxlRGF0YUgAEj0KDHVzZXJfaWRfZGF0YRgGIAEoCzIlLmdvb2ds",
+            "ZS5hZHMuZGF0YW1hbmFnZXIudjEuVXNlcklkRGF0YUgAEjgKCXBwaWRfZGF0",
+            "YRgHIAEoCzIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHBpZERhdGFI",
+            "ABI4Cgdjb25zZW50GAMgASgLMiIuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5Db25zZW50QgPgQQFCBgoEZGF0YSIhCghQYWlyRGF0YRIVCghwYWlyX2lk",
+            "cxgBIAMoCUID4EECIiUKCk1vYmlsZURhdGESFwoKbW9iaWxlX2lkcxgBIAMo",
+            "CUID4EECIiIKClVzZXJJZERhdGESFAoHdXNlcl9pZBgBIAEoCUID4EECIh4K",
+            "CFBwaWREYXRhEhIKBXBwaWRzGAEgAygJQgPgQQJCygEKHWNvbS5nb29nbGUu",
+            "YWRzLmRhdGFtYW5hZ2VyLnYxQg1BdWRpZW5jZVByb3RvUAFaQWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtk",
+            "YXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdv",
+            "b2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AudienceMember), global::Google.Ads.DataManager.V1.AudienceMember.Parser, new[]{ "DestinationReferences", "UserData", "PairData", "MobileData", "Consent" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AudienceMember), global::Google.Ads.DataManager.V1.AudienceMember.Parser, new[]{ "DestinationReferences", "UserData", "PairData", "MobileData", "UserIdData", "PpidData", "Consent" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PairData), global::Google.Ads.DataManager.V1.PairData.Parser, new[]{ "PairIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.MobileData), global::Google.Ads.DataManager.V1.MobileData.Parser, new[]{ "MobileIds" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.MobileData), global::Google.Ads.DataManager.V1.MobileData.Parser, new[]{ "MobileIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserIdData), global::Google.Ads.DataManager.V1.UserIdData.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PpidData), global::Google.Ads.DataManager.V1.PpidData.Parser, new[]{ "Ppids" }, null, null, null, null)
           }));
     }
     #endregion
@@ -104,6 +110,12 @@ namespace Google.Ads.DataManager.V1 {
         case DataOneofCase.MobileData:
           MobileData = other.MobileData.Clone();
           break;
+        case DataOneofCase.UserIdData:
+          UserIdData = other.UserIdData.Clone();
+          break;
+        case DataOneofCase.PpidData:
+          PpidData = other.PpidData.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -151,6 +163,8 @@ namespace Google.Ads.DataManager.V1 {
     /// <summary>
     /// [Publisher Advertiser Identity Reconciliation (PAIR)
     /// IDs](//support.google.com/admanager/answer/15067908).
+    ///
+    /// This feature is only available to data partners.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -177,6 +191,39 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "user_id_data" field.</summary>
+    public const int UserIdDataFieldNumber = 6;
+    /// <summary>
+    /// Data related to unique identifiers for a user, as defined by the
+    /// advertiser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.UserIdData UserIdData {
+      get { return dataCase_ == DataOneofCase.UserIdData ? (global::Google.Ads.DataManager.V1.UserIdData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.UserIdData;
+      }
+    }
+
+    /// <summary>Field number for the "ppid_data" field.</summary>
+    public const int PpidDataFieldNumber = 7;
+    /// <summary>
+    /// Data related to publisher provided identifiers.
+    ///
+    /// This feature is only available to data partners.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.PpidData PpidData {
+      get { return dataCase_ == DataOneofCase.PpidData ? (global::Google.Ads.DataManager.V1.PpidData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.PpidData;
+      }
+    }
+
     /// <summary>Field number for the "consent" field.</summary>
     public const int ConsentFieldNumber = 3;
     private global::Google.Ads.DataManager.V1.Consent consent_;
@@ -199,6 +246,8 @@ namespace Google.Ads.DataManager.V1 {
       UserData = 2,
       PairData = 4,
       MobileData = 5,
+      UserIdData = 6,
+      PpidData = 7,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -233,6 +282,8 @@ namespace Google.Ads.DataManager.V1 {
       if (!object.Equals(UserData, other.UserData)) return false;
       if (!object.Equals(PairData, other.PairData)) return false;
       if (!object.Equals(MobileData, other.MobileData)) return false;
+      if (!object.Equals(UserIdData, other.UserIdData)) return false;
+      if (!object.Equals(PpidData, other.PpidData)) return false;
       if (!object.Equals(Consent, other.Consent)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -246,6 +297,8 @@ namespace Google.Ads.DataManager.V1 {
       if (dataCase_ == DataOneofCase.UserData) hash ^= UserData.GetHashCode();
       if (dataCase_ == DataOneofCase.PairData) hash ^= PairData.GetHashCode();
       if (dataCase_ == DataOneofCase.MobileData) hash ^= MobileData.GetHashCode();
+      if (dataCase_ == DataOneofCase.UserIdData) hash ^= UserIdData.GetHashCode();
+      if (dataCase_ == DataOneofCase.PpidData) hash ^= PpidData.GetHashCode();
       if (consent_ != null) hash ^= Consent.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -283,6 +336,14 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(MobileData);
       }
+      if (dataCase_ == DataOneofCase.UserIdData) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UserIdData);
+      }
+      if (dataCase_ == DataOneofCase.PpidData) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PpidData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -310,6 +371,14 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(MobileData);
       }
+      if (dataCase_ == DataOneofCase.UserIdData) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UserIdData);
+      }
+      if (dataCase_ == DataOneofCase.PpidData) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PpidData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -329,6 +398,12 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (dataCase_ == DataOneofCase.MobileData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MobileData);
+      }
+      if (dataCase_ == DataOneofCase.UserIdData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserIdData);
+      }
+      if (dataCase_ == DataOneofCase.PpidData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PpidData);
       }
       if (consent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Consent);
@@ -370,6 +445,18 @@ namespace Google.Ads.DataManager.V1 {
             MobileData = new global::Google.Ads.DataManager.V1.MobileData();
           }
           MobileData.MergeFrom(other.MobileData);
+          break;
+        case DataOneofCase.UserIdData:
+          if (UserIdData == null) {
+            UserIdData = new global::Google.Ads.DataManager.V1.UserIdData();
+          }
+          UserIdData.MergeFrom(other.UserIdData);
+          break;
+        case DataOneofCase.PpidData:
+          if (PpidData == null) {
+            PpidData = new global::Google.Ads.DataManager.V1.PpidData();
+          }
+          PpidData.MergeFrom(other.PpidData);
           break;
       }
 
@@ -426,6 +513,24 @@ namespace Google.Ads.DataManager.V1 {
             MobileData = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Ads.DataManager.V1.UserIdData subBuilder = new global::Google.Ads.DataManager.V1.UserIdData();
+            if (dataCase_ == DataOneofCase.UserIdData) {
+              subBuilder.MergeFrom(UserIdData);
+            }
+            input.ReadMessage(subBuilder);
+            UserIdData = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Ads.DataManager.V1.PpidData subBuilder = new global::Google.Ads.DataManager.V1.PpidData();
+            if (dataCase_ == DataOneofCase.PpidData) {
+              subBuilder.MergeFrom(PpidData);
+            }
+            input.ReadMessage(subBuilder);
+            PpidData = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -479,6 +584,24 @@ namespace Google.Ads.DataManager.V1 {
             MobileData = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Ads.DataManager.V1.UserIdData subBuilder = new global::Google.Ads.DataManager.V1.UserIdData();
+            if (dataCase_ == DataOneofCase.UserIdData) {
+              subBuilder.MergeFrom(UserIdData);
+            }
+            input.ReadMessage(subBuilder);
+            UserIdData = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Ads.DataManager.V1.PpidData subBuilder = new global::Google.Ads.DataManager.V1.PpidData();
+            if (dataCase_ == DataOneofCase.PpidData) {
+              subBuilder.MergeFrom(PpidData);
+            }
+            input.ReadMessage(subBuilder);
+            PpidData = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -489,6 +612,8 @@ namespace Google.Ads.DataManager.V1 {
   /// <summary>
   /// [PAIR](//support.google.com/admanager/answer/15067908) IDs for the audience.
   /// At least one PAIR ID is required.
+  ///
+  /// This feature is only available to data partners.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PairData : pb::IMessage<PairData>
@@ -854,6 +979,391 @@ namespace Google.Ads.DataManager.V1 {
             break;
           case 10: {
             mobileIds_.AddEntriesFrom(ref input, _repeated_mobileIds_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// User id data holding the user id.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UserIdData : pb::IMessage<UserIdData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserIdData> _parser = new pb::MessageParser<UserIdData>(() => new UserIdData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserIdData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserIdData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserIdData(UserIdData other) : this() {
+      userId_ = other.userId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserIdData Clone() {
+      return new UserIdData(this);
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
+    /// <summary>
+    /// Required. A unique identifier for a user, as defined by the
+    /// advertiser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserIdData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserIdData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserIdData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Publisher provided identifiers data holding the ppids. At least one ppid is
+  /// required.
+  ///
+  /// This feature is only available to data partners.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PpidData : pb::IMessage<PpidData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PpidData> _parser = new pb::MessageParser<PpidData>(() => new PpidData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PpidData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PpidData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PpidData(PpidData other) : this() {
+      ppids_ = other.ppids_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PpidData Clone() {
+      return new PpidData(this);
+    }
+
+    /// <summary>Field number for the "ppids" field.</summary>
+    public const int PpidsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_ppids_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> ppids_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The list of publisher provided identifiers for a user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Ppids {
+      get { return ppids_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PpidData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PpidData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!ppids_.Equals(other.ppids_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= ppids_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      ppids_.WriteTo(output, _repeated_ppids_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      ppids_.WriteTo(ref output, _repeated_ppids_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += ppids_.CalculateSize(_repeated_ppids_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PpidData other) {
+      if (other == null) {
+        return;
+      }
+      ppids_.Add(other.ppids_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ppids_.AddEntriesFrom(input, _repeated_ppids_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ppids_.AddEntriesFrom(ref input, _repeated_ppids_codec);
             break;
           }
         }

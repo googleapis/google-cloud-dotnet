@@ -397,6 +397,4939 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_MarketingDataInsightsService_RetrieveInsights_sync",
+      "title": "RetrieveInsightsRequestObject",
+      "description": "Snippet for RetrieveInsights",
+      "file": "MarketingDataInsightsServiceClient.RetrieveInsightsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveInsights",
+        "fullName": "Google.Ads.DataManager.V1.MarketingDataInsightsServiceClient.RetrieveInsights",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RetrieveInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.RetrieveInsightsResponse",
+        "client": {
+          "shortName": "MarketingDataInsightsServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.MarketingDataInsightsServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveInsights",
+          "fullName": "google.ads.datamanager.v1.MarketingDataInsightsService.RetrieveInsights",
+          "service": {
+            "shortName": "MarketingDataInsightsService",
+            "fullName": "google.ads.datamanager.v1.MarketingDataInsightsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_MarketingDataInsightsService_RetrieveInsights_async",
+      "title": "RetrieveInsightsRequestObjectAsync",
+      "description": "Snippet for RetrieveInsightsAsync",
+      "file": "MarketingDataInsightsServiceClient.RetrieveInsightsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveInsightsAsync",
+        "fullName": "Google.Ads.DataManager.V1.MarketingDataInsightsServiceClient.RetrieveInsightsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RetrieveInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.RetrieveInsightsResponse>",
+        "client": {
+          "shortName": "MarketingDataInsightsServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.MarketingDataInsightsServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveInsights",
+          "fullName": "google.ads.datamanager.v1.MarketingDataInsightsService.RetrieveInsights",
+          "service": {
+            "shortName": "MarketingDataInsightsService",
+            "fullName": "google.ads.datamanager.v1.MarketingDataInsightsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_sync",
+      "title": "CreatePartnerLinkRequestObject",
+      "description": "Snippet for CreatePartnerLink",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreatePartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.PartnerLink",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_async",
+      "title": "CreatePartnerLinkRequestObjectAsync",
+      "description": "Snippet for CreatePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreatePartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_sync_flattened",
+      "title": "CreatePartnerLink",
+      "description": "Snippet for CreatePartnerLink",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLink",
+            "name": "partnerLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.PartnerLink",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_async_flattened",
+      "title": "CreatePartnerLinkAsync",
+      "description": "Snippet for CreatePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLink",
+            "name": "partnerLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_sync_flattened_resourceNames",
+      "title": "CreatePartnerLinkResourceNames",
+      "description": "Snippet for CreatePartnerLink",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLink",
+            "name": "partnerLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.PartnerLink",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_CreatePartnerLink_async_flattened_resourceNames",
+      "title": "CreatePartnerLinkResourceNamesAsync",
+      "description": "Snippet for CreatePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.CreatePartnerLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.CreatePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLink",
+            "name": "partnerLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.CreatePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_sync",
+      "title": "DeletePartnerLinkRequestObject",
+      "description": "Snippet for DeletePartnerLink",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.DeletePartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_async",
+      "title": "DeletePartnerLinkRequestObjectAsync",
+      "description": "Snippet for DeletePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.DeletePartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_sync_flattened",
+      "title": "DeletePartnerLink",
+      "description": "Snippet for DeletePartnerLink",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_async_flattened",
+      "title": "DeletePartnerLinkAsync",
+      "description": "Snippet for DeletePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_sync_flattened_resourceNames",
+      "title": "DeletePartnerLinkResourceNames",
+      "description": "Snippet for DeletePartnerLink",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLink",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_DeletePartnerLink_async_flattened_resourceNames",
+      "title": "DeletePartnerLinkResourceNamesAsync",
+      "description": "Snippet for DeletePartnerLinkAsync",
+      "file": "PartnerLinkServiceClient.DeletePartnerLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePartnerLinkAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.DeletePartnerLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.PartnerLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePartnerLink",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.DeletePartnerLink",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_sync",
+      "title": "SearchPartnerLinksRequestObject",
+      "description": "Snippet for SearchPartnerLinks",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinks",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinks",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.SearchPartnerLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_async",
+      "title": "SearchPartnerLinksRequestObjectAsync",
+      "description": "Snippet for SearchPartnerLinksAsync",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinksAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.SearchPartnerLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_sync_flattened",
+      "title": "SearchPartnerLinks",
+      "description": "Snippet for SearchPartnerLinks",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinks",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_async_flattened",
+      "title": "SearchPartnerLinksAsync",
+      "description": "Snippet for SearchPartnerLinksAsync",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinksAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_sync_flattened_resourceNames",
+      "title": "SearchPartnerLinksResourceNames",
+      "description": "Snippet for SearchPartnerLinks",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinks",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinks",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_PartnerLinkService_SearchPartnerLinks_async_flattened_resourceNames",
+      "title": "SearchPartnerLinksResourceNamesAsync",
+      "description": "Snippet for SearchPartnerLinksAsync",
+      "file": "PartnerLinkServiceClient.SearchPartnerLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPartnerLinksAsync",
+        "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient.SearchPartnerLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.SearchPartnerLinksResponse, Google.Ads.DataManager.V1.PartnerLink>",
+        "client": {
+          "shortName": "PartnerLinkServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.PartnerLinkServiceClient"
+        },
+        "method": {
+          "shortName": "SearchPartnerLinks",
+          "fullName": "google.ads.datamanager.v1.PartnerLinkService.SearchPartnerLinks",
+          "service": {
+            "shortName": "PartnerLinkService",
+            "fullName": "google.ads.datamanager.v1.PartnerLinkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_sync",
+      "title": "CreateUserListDirectLicenseRequestObject",
+      "description": "Snippet for CreateUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_async",
+      "title": "CreateUserListDirectLicenseRequestObjectAsync",
+      "description": "Snippet for CreateUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_sync_flattened",
+      "title": "CreateUserListDirectLicense",
+      "description": "Snippet for CreateUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_async_flattened",
+      "title": "CreateUserListDirectLicenseAsync",
+      "description": "Snippet for CreateUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_sync_flattened_resourceNames",
+      "title": "CreateUserListDirectLicenseResourceNames",
+      "description": "Snippet for CreateUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_async_flattened_resourceNames",
+      "title": "CreateUserListDirectLicenseResourceNamesAsync",
+      "description": "Snippet for CreateUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.CreateUserListDirectLicenseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.CreateUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.CreateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_sync",
+      "title": "GetUserListDirectLicenseRequestObject",
+      "description": "Snippet for GetUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_async",
+      "title": "GetUserListDirectLicenseRequestObjectAsync",
+      "description": "Snippet for GetUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_sync_flattened",
+      "title": "GetUserListDirectLicense",
+      "description": "Snippet for GetUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_async_flattened",
+      "title": "GetUserListDirectLicenseAsync",
+      "description": "Snippet for GetUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_sync_flattened_resourceNames",
+      "title": "GetUserListDirectLicenseResourceNames",
+      "description": "Snippet for GetUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicenseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_GetUserListDirectLicense_async_flattened_resourceNames",
+      "title": "GetUserListDirectLicenseResourceNamesAsync",
+      "description": "Snippet for GetUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.GetUserListDirectLicenseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.GetUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicenseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.GetUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_UpdateUserListDirectLicense_sync",
+      "title": "UpdateUserListDirectLicenseRequestObject",
+      "description": "Snippet for UpdateUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.UpdateUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.UpdateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_UpdateUserListDirectLicense_async",
+      "title": "UpdateUserListDirectLicenseRequestObjectAsync",
+      "description": "Snippet for UpdateUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListDirectLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.UpdateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_UpdateUserListDirectLicense_sync_flattened",
+      "title": "UpdateUserListDirectLicense",
+      "description": "Snippet for UpdateUserListDirectLicense",
+      "file": "UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListDirectLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.UpdateUserListDirectLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListDirectLicense",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.UpdateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_UpdateUserListDirectLicense_async_flattened",
+      "title": "UpdateUserListDirectLicenseAsync",
+      "description": "Snippet for UpdateUserListDirectLicenseAsync",
+      "file": "UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListDirectLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.UpdateUserListDirectLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListDirectLicense",
+            "name": "userListDirectLicense"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListDirectLicense",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.UpdateUserListDirectLicense",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_sync",
+      "title": "ListUserListDirectLicensesRequestObject",
+      "description": "Snippet for ListUserListDirectLicenses",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicenses",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListDirectLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_async",
+      "title": "ListUserListDirectLicensesRequestObjectAsync",
+      "description": "Snippet for ListUserListDirectLicensesAsync",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListDirectLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_sync_flattened",
+      "title": "ListUserListDirectLicenses",
+      "description": "Snippet for ListUserListDirectLicenses",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicenses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_async_flattened",
+      "title": "ListUserListDirectLicensesAsync",
+      "description": "Snippet for ListUserListDirectLicensesAsync",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_sync_flattened_resourceNames",
+      "title": "ListUserListDirectLicensesResourceNames",
+      "description": "Snippet for ListUserListDirectLicenses",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicenses",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_ListUserListDirectLicenses_async_flattened_resourceNames",
+      "title": "ListUserListDirectLicensesResourceNamesAsync",
+      "description": "Snippet for ListUserListDirectLicensesAsync",
+      "file": "UserListDirectLicenseServiceClient.ListUserListDirectLicensesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListDirectLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient.ListUserListDirectLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListDirectLicensesResponse, Google.Ads.DataManager.V1.UserListDirectLicense>",
+        "client": {
+          "shortName": "UserListDirectLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListDirectLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListDirectLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService.ListUserListDirectLicenses",
+          "service": {
+            "shortName": "UserListDirectLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListDirectLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_sync",
+      "title": "CreateUserListGlobalLicenseRequestObject",
+      "description": "Snippet for CreateUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_async",
+      "title": "CreateUserListGlobalLicenseRequestObjectAsync",
+      "description": "Snippet for CreateUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_sync_flattened",
+      "title": "CreateUserListGlobalLicense",
+      "description": "Snippet for CreateUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_async_flattened",
+      "title": "CreateUserListGlobalLicenseAsync",
+      "description": "Snippet for CreateUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_sync_flattened_resourceNames",
+      "title": "CreateUserListGlobalLicenseResourceNames",
+      "description": "Snippet for CreateUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_CreateUserListGlobalLicense_async_flattened_resourceNames",
+      "title": "CreateUserListGlobalLicenseResourceNamesAsync",
+      "description": "Snippet for CreateUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.CreateUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.CreateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_UpdateUserListGlobalLicense_sync",
+      "title": "UpdateUserListGlobalLicenseRequestObject",
+      "description": "Snippet for UpdateUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.UpdateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_UpdateUserListGlobalLicense_async",
+      "title": "UpdateUserListGlobalLicenseRequestObjectAsync",
+      "description": "Snippet for UpdateUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.UpdateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_UpdateUserListGlobalLicense_sync_flattened",
+      "title": "UpdateUserListGlobalLicense",
+      "description": "Snippet for UpdateUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.UpdateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_UpdateUserListGlobalLicense_async_flattened",
+      "title": "UpdateUserListGlobalLicenseAsync",
+      "description": "Snippet for UpdateUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.UpdateUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+            "name": "userListGlobalLicense"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.UpdateUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_sync",
+      "title": "GetUserListGlobalLicenseRequestObject",
+      "description": "Snippet for GetUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_async",
+      "title": "GetUserListGlobalLicenseRequestObjectAsync",
+      "description": "Snippet for GetUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListGlobalLicenseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_sync_flattened",
+      "title": "GetUserListGlobalLicense",
+      "description": "Snippet for GetUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_async_flattened",
+      "title": "GetUserListGlobalLicenseAsync",
+      "description": "Snippet for GetUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_sync_flattened_resourceNames",
+      "title": "GetUserListGlobalLicenseResourceNames",
+      "description": "Snippet for GetUserListGlobalLicense",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicense",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicense",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicenseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserListGlobalLicense",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_GetUserListGlobalLicense_async_flattened_resourceNames",
+      "title": "GetUserListGlobalLicenseResourceNamesAsync",
+      "description": "Snippet for GetUserListGlobalLicenseAsync",
+      "file": "UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListGlobalLicenseAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.GetUserListGlobalLicenseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicenseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserListGlobalLicense",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.GetUserListGlobalLicense",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_sync",
+      "title": "ListUserListGlobalLicensesRequestObject",
+      "description": "Snippet for ListUserListGlobalLicenses",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenses",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListGlobalLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_async",
+      "title": "ListUserListGlobalLicensesRequestObjectAsync",
+      "description": "Snippet for ListUserListGlobalLicensesAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListGlobalLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_sync_flattened",
+      "title": "ListUserListGlobalLicenses",
+      "description": "Snippet for ListUserListGlobalLicenses",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_async_flattened",
+      "title": "ListUserListGlobalLicensesAsync",
+      "description": "Snippet for ListUserListGlobalLicensesAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_sync_flattened_resourceNames",
+      "title": "ListUserListGlobalLicensesResourceNames",
+      "description": "Snippet for ListUserListGlobalLicenses",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenses",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenses",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenses_async_flattened_resourceNames",
+      "title": "ListUserListGlobalLicensesResourceNamesAsync",
+      "description": "Snippet for ListUserListGlobalLicensesAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicensesAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicensesResponse, Google.Ads.DataManager.V1.UserListGlobalLicense>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenses",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenses",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_sync",
+      "title": "ListUserListGlobalLicenseCustomerInfosRequestObject",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfos",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfos",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfos",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_async",
+      "title": "ListUserListGlobalLicenseCustomerInfosRequestObjectAsync",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfosAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfosAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_sync_flattened",
+      "title": "ListUserListGlobalLicenseCustomerInfos",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfos",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfos",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfos",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_async_flattened",
+      "title": "ListUserListGlobalLicenseCustomerInfosAsync",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfosAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfosAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_sync_flattened_resourceNames",
+      "title": "ListUserListGlobalLicenseCustomerInfosResourceNames",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfos",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfos",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfos",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicenseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListGlobalLicenseService_ListUserListGlobalLicenseCustomerInfos_async_flattened_resourceNames",
+      "title": "ListUserListGlobalLicenseCustomerInfosResourceNamesAsync",
+      "description": "Snippet for ListUserListGlobalLicenseCustomerInfosAsync",
+      "file": "UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListGlobalLicenseCustomerInfosAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient.ListUserListGlobalLicenseCustomerInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListGlobalLicenseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListGlobalLicenseCustomerInfosResponse, Google.Ads.DataManager.V1.UserListGlobalLicenseCustomerInfo>",
+        "client": {
+          "shortName": "UserListGlobalLicenseServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListGlobalLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserListGlobalLicenseCustomerInfos",
+          "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService.ListUserListGlobalLicenseCustomerInfos",
+          "service": {
+            "shortName": "UserListGlobalLicenseService",
+            "fullName": "google.ads.datamanager.v1.UserListGlobalLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_sync",
+      "title": "GetUserListRequestObject",
+      "description": "Snippet for GetUserList",
+      "file": "UserListServiceClient.GetUserListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_async",
+      "title": "GetUserListRequestObjectAsync",
+      "description": "Snippet for GetUserListAsync",
+      "file": "UserListServiceClient.GetUserListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.GetUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_sync_flattened",
+      "title": "GetUserList",
+      "description": "Snippet for GetUserList",
+      "file": "UserListServiceClient.GetUserListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserList",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_async_flattened",
+      "title": "GetUserListAsync",
+      "description": "Snippet for GetUserListAsync",
+      "file": "UserListServiceClient.GetUserListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_sync_flattened_resourceNames",
+      "title": "GetUserListResourceNames",
+      "description": "Snippet for GetUserList",
+      "file": "UserListServiceClient.GetUserListResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_GetUserList_async_flattened_resourceNames",
+      "title": "GetUserListResourceNamesAsync",
+      "description": "Snippet for GetUserListAsync",
+      "file": "UserListServiceClient.GetUserListResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.GetUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.GetUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_sync",
+      "title": "ListUserListsRequestObject",
+      "description": "Snippet for ListUserLists",
+      "file": "UserListServiceClient.ListUserListsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLists",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserLists",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_async",
+      "title": "ListUserListsRequestObjectAsync",
+      "description": "Snippet for ListUserListsAsync",
+      "file": "UserListServiceClient.ListUserListsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListsAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserListsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.ListUserListsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_sync_flattened",
+      "title": "ListUserLists",
+      "description": "Snippet for ListUserLists",
+      "file": "UserListServiceClient.ListUserListsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLists",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserLists",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_async_flattened",
+      "title": "ListUserListsAsync",
+      "description": "Snippet for ListUserListsAsync",
+      "file": "UserListServiceClient.ListUserListsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListsAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserListsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_sync_flattened_resourceNames",
+      "title": "ListUserListsResourceNames",
+      "description": "Snippet for ListUserLists",
+      "file": "UserListServiceClient.ListUserListsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLists",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserLists",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_ListUserLists_async_flattened_resourceNames",
+      "title": "ListUserListsResourceNamesAsync",
+      "description": "Snippet for ListUserListsAsync",
+      "file": "UserListServiceClient.ListUserListsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserListsAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.ListUserListsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.ListUserListsResponse, Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLists",
+          "fullName": "google.ads.datamanager.v1.UserListService.ListUserLists",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_sync",
+      "title": "CreateUserListRequestObject",
+      "description": "Snippet for CreateUserList",
+      "file": "UserListServiceClient.CreateUserListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_async",
+      "title": "CreateUserListRequestObjectAsync",
+      "description": "Snippet for CreateUserListAsync",
+      "file": "UserListServiceClient.CreateUserListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.CreateUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_sync_flattened",
+      "title": "CreateUserList",
+      "description": "Snippet for CreateUserList",
+      "file": "UserListServiceClient.CreateUserListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserList",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_async_flattened",
+      "title": "CreateUserListAsync",
+      "description": "Snippet for CreateUserListAsync",
+      "file": "UserListServiceClient.CreateUserListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_sync_flattened_resourceNames",
+      "title": "CreateUserListResourceNames",
+      "description": "Snippet for CreateUserList",
+      "file": "UserListServiceClient.CreateUserListResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_CreateUserList_async_flattened_resourceNames",
+      "title": "CreateUserListResourceNamesAsync",
+      "description": "Snippet for CreateUserListAsync",
+      "file": "UserListServiceClient.CreateUserListResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.CreateUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.CreateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_UpdateUserList_sync",
+      "title": "UpdateUserListRequestObject",
+      "description": "Snippet for UpdateUserList",
+      "file": "UserListServiceClient.UpdateUserListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.UpdateUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.UpdateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_UpdateUserList_async",
+      "title": "UpdateUserListRequestObjectAsync",
+      "description": "Snippet for UpdateUserListAsync",
+      "file": "UserListServiceClient.UpdateUserListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.UpdateUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UpdateUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.UpdateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_UpdateUserList_sync_flattened",
+      "title": "UpdateUserList",
+      "description": "Snippet for UpdateUserList",
+      "file": "UserListServiceClient.UpdateUserListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.UpdateUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.UserList",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.UpdateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_UpdateUserList_async_flattened",
+      "title": "UpdateUserListAsync",
+      "description": "Snippet for UpdateUserListAsync",
+      "file": "UserListServiceClient.UpdateUserListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.UpdateUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserList",
+            "name": "userList"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.UserList>",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.UpdateUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_sync",
+      "title": "DeleteUserListRequestObject",
+      "description": "Snippet for DeleteUserList",
+      "file": "UserListServiceClient.DeleteUserListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.DeleteUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_async",
+      "title": "DeleteUserListRequestObjectAsync",
+      "description": "Snippet for DeleteUserListAsync",
+      "file": "UserListServiceClient.DeleteUserListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.DeleteUserListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_sync_flattened",
+      "title": "DeleteUserList",
+      "description": "Snippet for DeleteUserList",
+      "file": "UserListServiceClient.DeleteUserListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserList",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_async_flattened",
+      "title": "DeleteUserListAsync",
+      "description": "Snippet for DeleteUserListAsync",
+      "file": "UserListServiceClient.DeleteUserListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_sync_flattened_resourceNames",
+      "title": "DeleteUserListResourceNames",
+      "description": "Snippet for DeleteUserList",
+      "file": "UserListServiceClient.DeleteUserListResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserList",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserList",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_UserListService_DeleteUserList_async_flattened_resourceNames",
+      "title": "DeleteUserListResourceNamesAsync",
+      "description": "Snippet for DeleteUserListAsync",
+      "file": "UserListServiceClient.DeleteUserListResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserListAsync",
+        "fullName": "Google.Ads.DataManager.V1.UserListServiceClient.DeleteUserListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.UserListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "UserListServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.UserListServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserList",
+          "fullName": "google.ads.datamanager.v1.UserListService.DeleteUserList",
+          "service": {
+            "shortName": "UserListService",
+            "fullName": "google.ads.datamanager.v1.UserListService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -61,5 +61,185 @@ namespace Microsoft.Extensions.DependencyInjection
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::MarketingDataInsightsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMarketingDataInsightsServiceClient(this IServiceCollection services, sys::Action<gadv::MarketingDataInsightsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::MarketingDataInsightsServiceClientBuilder builder = new gadv::MarketingDataInsightsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::MarketingDataInsightsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMarketingDataInsightsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gadv::MarketingDataInsightsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::MarketingDataInsightsServiceClientBuilder builder = new gadv::MarketingDataInsightsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::PartnerLinkServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPartnerLinkServiceClient(this IServiceCollection services, sys::Action<gadv::PartnerLinkServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::PartnerLinkServiceClientBuilder builder = new gadv::PartnerLinkServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::PartnerLinkServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPartnerLinkServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gadv::PartnerLinkServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::PartnerLinkServiceClientBuilder builder = new gadv::PartnerLinkServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListDirectLicenseServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListDirectLicenseServiceClient(this IServiceCollection services, sys::Action<gadv::UserListDirectLicenseServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListDirectLicenseServiceClientBuilder builder = new gadv::UserListDirectLicenseServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListDirectLicenseServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListDirectLicenseServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gadv::UserListDirectLicenseServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListDirectLicenseServiceClientBuilder builder = new gadv::UserListDirectLicenseServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListGlobalLicenseServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListGlobalLicenseServiceClient(this IServiceCollection services, sys::Action<gadv::UserListGlobalLicenseServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListGlobalLicenseServiceClientBuilder builder = new gadv::UserListGlobalLicenseServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListGlobalLicenseServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListGlobalLicenseServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gadv::UserListGlobalLicenseServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListGlobalLicenseServiceClientBuilder builder = new gadv::UserListGlobalLicenseServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListServiceClient(this IServiceCollection services, sys::Action<gadv::UserListServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListServiceClientBuilder builder = new gadv::UserListServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gadv::UserListServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserListServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gadv::UserListServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gadv::UserListServiceClientBuilder builder = new gadv::UserListServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
     }
 }
