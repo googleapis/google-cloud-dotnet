@@ -1011,6 +1011,37 @@ public class BuildIChatClientTest
         Assert.NotNull(result);
     }
 
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    public async Task IChatClient_GetResponseAsync_SendsTextReasoningContent_WithNullOrEmptyText(string? text)
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.Equal(2, request.Contents.Count);
+
+                // The empty TextReasoningContent should be skipped entirely.
+                Assert.Equal("model", request.Contents[1].Role);
+                Assert.Empty(request.Contents[1].Parts);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        ChatMessage[] messages =
+        [
+            new(ChatRole.User, "Question"),
+            new(ChatRole.Assistant, [new TextReasoningContent(text)])
+        ];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+        Assert.NotNull(result);
+    }
+
     [Fact]
     public async Task IChatClient_GetResponseAsync_SendsFunctionCallContent_WithoutThoughtSignature()
     {
