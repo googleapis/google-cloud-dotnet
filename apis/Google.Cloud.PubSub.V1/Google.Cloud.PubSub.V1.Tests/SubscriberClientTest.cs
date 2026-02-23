@@ -596,7 +596,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
+#pragma warning disable CS0618 // allow use of obsolete method
                         () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+#pragma warning restore CS0618
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
@@ -645,7 +647,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
                     var exception = await Assert.ThrowsAsync<InvalidOperationException>(
                         async () => await fake.TaskHelper.ConfigureAwaitHideCancellation(
+#pragma warning disable CS0618 // allow use of obsolete method
                             () => fake.Subscriber.StopAsync(TimeSpan.FromHours(1))));
+#pragma warning restore CS0618
                     Assert.Equal("Can only stop a started instance.", exception.Message);
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
@@ -705,7 +709,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                        () => fake.Subscriber.DisposeAsync().AsTask());
                     // Call StopAsync. It shouldn't throw an exception.
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(
+#pragma warning disable CS0618 // allow use of obsolete method
                        () => fake.Subscriber.StopAsync(CancellationToken.None));
+#pragma warning restore CS0618
 
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
@@ -812,8 +818,10 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
+#pragma warning disable CS0618 // allow use of obsolete method
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
                         () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+#pragma warning restore CS0618
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(clientCount, fake.Subscribers.Count);
                     Assert.Equal(expectedMsgCount, handledMsgs.Locked(() => handledMsgs.Count));
@@ -986,7 +994,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
+#pragma warning disable CS0618 // allow use of obsolete method
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(() => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+#pragma warning restore CS0618
                     Assert.Equal(expectedMsgCount, handledMsgs.Count);
                 });
             }
@@ -2275,7 +2285,9 @@ namespace Google.Cloud.PubSub.V1.Tests
 
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
                 Assert.Equivalent(new[] { "msg0", "msg1", "msg2", "msg3", "msg4" }, givenToMessageHandler, strict: true);
+#pragma warning disable CS0618 // allow use of obsolete method
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+#pragma warning restore CS0618
 
                 // msg0-2 were handled/acked; msg3-5 were pulled but nacked on shutdown.
                 Assert.Equivalent(new[] { "msg0", "msg1", "msg2", "msg3", "msg4" }, fake.Subscribers[0].Acks.Select(x => x.Id), strict: true);

@@ -143,7 +143,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 });
 
         public override async Task StopAsync(CancellationToken stoppingToken) =>
-            await _subscriberClient.StopAsync(stoppingToken);
+            await _subscriberClient.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, cancellationToken: stoppingToken);
     }
     // End sample
 }

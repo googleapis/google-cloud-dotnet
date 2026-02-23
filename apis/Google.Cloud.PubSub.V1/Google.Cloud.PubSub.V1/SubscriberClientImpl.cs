@@ -200,10 +200,13 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
                 return new ValueTask(Task.CompletedTask);
             }
         }
-        return new ValueTask(StopAsync(_disposeTimeout));
+#pragma warning disable CS0618 // allow use of obsolete method
+        return new ValueTask(StopAsync( _disposeTimeout));
+#pragma warning restore CS0618
     }
 
     /// <inheritdoc />
+    [Obsolete("Use StopAsync(SubscriberShutdownSetting, TimeSpan?, CancellationToken) instead.")]
     public override Task StopAsync(CancellationToken hardStopToken)
     {
         lock (_lock)

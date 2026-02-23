@@ -159,7 +159,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     {
                         // Test finished, so stop subscriber
                         Console.WriteLine("All msgs received, stopping subscriber.");
-                        Task unused = subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                        Task unused = subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(15));
                     }
                 }
                 else
@@ -194,11 +194,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     {
                         if (noProgressCount > 60)
                         {
-                            // Deadlock, shutdown subscriber, and cancel
-                            Console.WriteLine("Deadlock detected. Cancelling test");
-                            subscriber.StopAsync(new CancellationToken(true));
-                            watchdogCts.Cancel();
-                            break;
+                             // Deadlock, shutdown subscriber, and cancel
+                             Console.WriteLine("Deadlock detected. Cancelling test");
+                             subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, cancellationToken: new CancellationToken(true));
+                             watchdogCts.Cancel();
+                             break;
                         }
                         noProgressCount += 1;
                     }
@@ -431,7 +431,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     });
                     await Task.Delay(subscriberLifetime);
                     Console.WriteLine("Stopping subscriber");
-                    Task stopTask = subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    Task stopTask = subscriber.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(15));
                     // If shutdown times-out then stopTask, and also Task.WhenAll will cancel, causing the test to fail.
                     await Task.WhenAll(subscribeTask, stopTask);
                     int recvCount = recvedMsgs.Locked(() => recvedMsgs.Count);
@@ -538,8 +538,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             {
                 result.Add((msg.GetDeliveryAttempt(), true));
                 // Received DLQ message, so stop test.
-                sub.StopAsync(TimeSpan.FromSeconds(10));
-                dlqSub.StopAsync(TimeSpan.FromSeconds(10));
+                sub.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(10));
+                dlqSub.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately, TimeSpan.FromSeconds(10));
                 return Task.FromResult(SubscriberClient.Reply.Ack);
             });
 
