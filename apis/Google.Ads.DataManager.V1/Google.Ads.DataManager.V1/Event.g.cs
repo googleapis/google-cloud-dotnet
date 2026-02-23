@@ -33,7 +33,7 @@ namespace Google.Ads.DataManager.V1 {
             "ci92MS91c2VyX2RhdGEucHJvdG8aL2dvb2dsZS9hZHMvZGF0YW1hbmFnZXIv",
             "djEvdXNlcl9wcm9wZXJ0aWVzLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Iv4HCgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEgAygJQgPg",
+            "IpgICgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEgAygJQgPg",
             "QQESGwoOdHJhbnNhY3Rpb25faWQYAiABKAlCA+BBARI4Cg9ldmVudF90aW1l",
             "c3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIS",
             "PwoWbGFzdF91cGRhdGVkX3RpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90",
@@ -42,39 +42,40 @@ namespace Google.Ads.DataManager.V1 {
             "dBgGIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ29uc2VudEID",
             "4EEBEkUKDmFkX2lkZW50aWZpZXJzGAcgASgLMiguZ29vZ2xlLmFkcy5kYXRh",
             "bWFuYWdlci52MS5BZElkZW50aWZpZXJzQgPgQQESFQoIY3VycmVuY3kYCCAB",
-            "KAlCA+BBARIdChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQESQQoMZXZl",
-            "bnRfc291cmNlGAogASgOMiYuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5F",
-            "dmVudFNvdXJjZUID4EEBEkUKEWV2ZW50X2RldmljZV9pbmZvGAsgASgLMiUu",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5EZXZpY2VJbmZvQgPgQQESOwoJ",
-            "Y2FydF9kYXRhGAwgASgLMiMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5D",
-            "YXJ0RGF0YUID4EEBEkgKEGN1c3RvbV92YXJpYWJsZXMYDSADKAsyKS5nb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkN1c3RvbVZhcmlhYmxlQgPgQQESTgoT",
-            "ZXhwZXJpbWVudGFsX2ZpZWxkcxgOIAMoCzIsLmdvb2dsZS5hZHMuZGF0YW1h",
-            "bmFnZXIudjEuRXhwZXJpbWVudGFsRmllbGRCA+BBARJHCg91c2VyX3Byb3Bl",
-            "cnRpZXMYDyABKAsyKS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJQ",
-            "cm9wZXJ0aWVzQgPgQQESFwoKZXZlbnRfbmFtZRgQIAEoCUID4EEBEhYKCWNs",
-            "aWVudF9pZBgRIAEoCUID4EEBEhQKB3VzZXJfaWQYEiABKAlCA+BBARJTChth",
-            "ZGRpdGlvbmFsX2V2ZW50X3BhcmFtZXRlcnMYEyADKAsyKS5nb29nbGUuYWRz",
-            "LmRhdGFtYW5hZ2VyLnYxLkV2ZW50UGFyYW1ldGVyQgPgQQEivAEKDUFkSWRl",
-            "bnRpZmllcnMSHwoSc2Vzc2lvbl9hdHRyaWJ1dGVzGAEgASgJQgPgQQESEgoF",
-            "Z2NsaWQYAiABKAlCA+BBARITCgZnYnJhaWQYAyABKAlCA+BBARITCgZ3YnJh",
-            "aWQYBCABKAlCA+BBARJMChhsYW5kaW5nX3BhZ2VfZGV2aWNlX2luZm8YBSAB",
+            "KAlCA+BBARIiChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQFIAIgBARJB",
+            "CgxldmVudF9zb3VyY2UYCiABKA4yJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2Vy",
+            "LnYxLkV2ZW50U291cmNlQgPgQQESRQoRZXZlbnRfZGV2aWNlX2luZm8YCyAB",
             "KAsyJS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRldmljZUluZm9CA+BB",
-            "ASJgCg5DdXN0b21WYXJpYWJsZRIVCgh2YXJpYWJsZRgBIAEoCUID4EEBEhIK",
-            "BXZhbHVlGAIgASgJQgPgQQESIwoWZGVzdGluYXRpb25fcmVmZXJlbmNlcxgD",
-            "IAMoCUID4EEBIkEKDkV2ZW50UGFyYW1ldGVyEhsKDnBhcmFtZXRlcl9uYW1l",
-            "GAEgASgJQgPgQQISEgoFdmFsdWUYAiABKAlCA+BBAiphCgtFdmVudFNvdXJj",
-            "ZRIcChhFVkVOVF9TT1VSQ0VfVU5TUEVDSUZJRUQQABIHCgNXRUIQARIHCgNB",
-            "UFAQAhIMCghJTl9TVE9SRRADEgkKBVBIT05FEAQSCQoFT1RIRVIQBULHAQod",
-            "Y29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCCkV2ZW50UHJvdG9QAVpB",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFu",
-            "YWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2Vy",
-            "LlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRz",
-            "OjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "ARI7CgljYXJ0X2RhdGEYDCABKAsyIy5nb29nbGUuYWRzLmRhdGFtYW5hZ2Vy",
+            "LnYxLkNhcnREYXRhQgPgQQESSAoQY3VzdG9tX3ZhcmlhYmxlcxgNIAMoCzIp",
+            "Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ3VzdG9tVmFyaWFibGVCA+BB",
+            "ARJOChNleHBlcmltZW50YWxfZmllbGRzGA4gAygLMiwuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5FeHBlcmltZW50YWxGaWVsZEID4EEBEkcKD3VzZXJf",
+            "cHJvcGVydGllcxgPIAEoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
+            "VXNlclByb3BlcnRpZXNCA+BBARIXCgpldmVudF9uYW1lGBAgASgJQgPgQQES",
+            "FgoJY2xpZW50X2lkGBEgASgJQgPgQQESFAoHdXNlcl9pZBgSIAEoCUID4EEB",
+            "ElMKG2FkZGl0aW9uYWxfZXZlbnRfcGFyYW1ldGVycxgTIAMoCzIpLmdvb2ds",
+            "ZS5hZHMuZGF0YW1hbmFnZXIudjEuRXZlbnRQYXJhbWV0ZXJCA+BBAUITChFf",
+            "Y29udmVyc2lvbl92YWx1ZSK8AQoNQWRJZGVudGlmaWVycxIfChJzZXNzaW9u",
+            "X2F0dHJpYnV0ZXMYASABKAlCA+BBARISCgVnY2xpZBgCIAEoCUID4EEBEhMK",
+            "BmdicmFpZBgDIAEoCUID4EEBEhMKBndicmFpZBgEIAEoCUID4EEBEkwKGGxh",
+            "bmRpbmdfcGFnZV9kZXZpY2VfaW5mbxgFIAEoCzIlLmdvb2dsZS5hZHMuZGF0",
+            "YW1hbmFnZXIudjEuRGV2aWNlSW5mb0ID4EEBImAKDkN1c3RvbVZhcmlhYmxl",
+            "EhUKCHZhcmlhYmxlGAEgASgJQgPgQQESEgoFdmFsdWUYAiABKAlCA+BBARIj",
+            "ChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAMgAygJQgPgQQEiQQoORXZlbnRQ",
+            "YXJhbWV0ZXISGwoOcGFyYW1ldGVyX25hbWUYASABKAlCA+BBAhISCgV2YWx1",
+            "ZRgCIAEoCUID4EECKmEKC0V2ZW50U291cmNlEhwKGEVWRU5UX1NPVVJDRV9V",
+            "TlNQRUNJRklFRBAAEgcKA1dFQhABEgcKA0FQUBACEgwKCElOX1NUT1JFEAMS",
+            "CQoFUEhPTkUQBBIJCgVPVEhFUhAFQscBCh1jb20uZ29vZ2xlLmFkcy5kYXRh",
+            "bWFuYWdlci52MUIKRXZlbnRQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJw",
+            "YqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERh",
+            "dGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.CartDataReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DeviceInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.ExperimentalFieldReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Ads.DataManager.V1.UserPropertiesReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.EventSource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties", "EventName", "ClientId", "UserId", "AdditionalEventParameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties", "EventName", "ClientId", "UserId", "AdditionalEventParameters" }, new[]{ "ConversionValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AdIdentifiers), global::Google.Ads.DataManager.V1.AdIdentifiers.Parser, new[]{ "SessionAttributes", "Gclid", "Gbraid", "Wbraid", "LandingPageDeviceInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CustomVariable), global::Google.Ads.DataManager.V1.CustomVariable.Parser, new[]{ "Variable", "Value", "DestinationReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EventParameter), global::Google.Ads.DataManager.V1.EventParameter.Parser, new[]{ "ParameterName", "Value" }, null, null, null, null)
@@ -128,6 +129,7 @@ namespace Google.Ads.DataManager.V1 {
   {
     private static readonly pb::MessageParser<Event> _parser = new pb::MessageParser<Event>(() => new Event());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Event> Parser { get { return _parser; } }
@@ -155,6 +157,7 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Event(Event other) : this() {
+      _hasBits0 = other._hasBits0;
       destinationReferences_ = other.destinationReferences_.Clone();
       transactionId_ = other.transactionId_;
       eventTimestamp_ = other.eventTimestamp_ != null ? other.eventTimestamp_.Clone() : null;
@@ -312,6 +315,8 @@ namespace Google.Ads.DataManager.V1 {
 
     /// <summary>Field number for the "conversion_value" field.</summary>
     public const int ConversionValueFieldNumber = 9;
+    private readonly static double ConversionValueDefaultValue = 0D;
+
     private double conversionValue_;
     /// <summary>
     /// Optional. The conversion value associated with the event, for value-based
@@ -320,10 +325,23 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ConversionValue {
-      get { return conversionValue_; }
+      get { if ((_hasBits0 & 1) != 0) { return conversionValue_; } else { return ConversionValueDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         conversionValue_ = value;
       }
+    }
+    /// <summary>Gets whether the "conversion_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConversionValue {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "conversion_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConversionValue() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "event_source" field.</summary>
@@ -531,7 +549,7 @@ namespace Google.Ads.DataManager.V1 {
       if (consent_ != null) hash ^= Consent.GetHashCode();
       if (adIdentifiers_ != null) hash ^= AdIdentifiers.GetHashCode();
       if (Currency.Length != 0) hash ^= Currency.GetHashCode();
-      if (ConversionValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ConversionValue);
+      if (HasConversionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ConversionValue);
       if (EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) hash ^= EventSource.GetHashCode();
       if (eventDeviceInfo_ != null) hash ^= EventDeviceInfo.GetHashCode();
       if (cartData_ != null) hash ^= CartData.GetHashCode();
@@ -589,7 +607,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(66);
         output.WriteString(Currency);
       }
-      if (ConversionValue != 0D) {
+      if (HasConversionValue) {
         output.WriteRawTag(73);
         output.WriteDouble(ConversionValue);
       }
@@ -663,7 +681,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(66);
         output.WriteString(Currency);
       }
-      if (ConversionValue != 0D) {
+      if (HasConversionValue) {
         output.WriteRawTag(73);
         output.WriteDouble(ConversionValue);
       }
@@ -730,7 +748,7 @@ namespace Google.Ads.DataManager.V1 {
       if (Currency.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
       }
-      if (ConversionValue != 0D) {
+      if (HasConversionValue) {
         size += 1 + 8;
       }
       if (EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) {
@@ -806,7 +824,7 @@ namespace Google.Ads.DataManager.V1 {
       if (other.Currency.Length != 0) {
         Currency = other.Currency;
       }
-      if (other.ConversionValue != 0D) {
+      if (other.HasConversionValue) {
         ConversionValue = other.ConversionValue;
       }
       if (other.EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) {

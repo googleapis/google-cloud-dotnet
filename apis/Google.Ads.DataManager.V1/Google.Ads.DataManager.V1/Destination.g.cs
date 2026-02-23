@@ -26,31 +26,34 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Citnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Rlc3RpbmF0aW9uLnByb3Rv",
             "Ehlnb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvIqQCCgtEZXN0aW5hdGlvbhIWCglyZWZlcmVuY2UY",
-            "ASABKAlCA+BBARJFCg1sb2dpbl9hY2NvdW50GAIgASgLMikuZ29vZ2xlLmFk",
-            "cy5kYXRhbWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID4EEBEkYKDmxpbmtl",
-            "ZF9hY2NvdW50GAMgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Q",
-            "cm9kdWN0QWNjb3VudEID4EEBEkkKEW9wZXJhdGluZ19hY2NvdW50GAQgASgL",
-            "MikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID",
-            "4EECEiMKFnByb2R1Y3RfZGVzdGluYXRpb25faWQYBSABKAlCA+BBAiLcAgoO",
-            "UHJvZHVjdEFjY291bnQSNwoHcHJvZHVjdBgBIAEoDjIiLmdvb2dsZS5hZHMu",
-            "ZGF0YW1hbmFnZXIudjEuUHJvZHVjdEICGAESFwoKYWNjb3VudF9pZBgCIAEo",
-            "CUID4EECElAKDGFjY291bnRfdHlwZRgDIAEoDjI1Lmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvZHVjdEFjY291bnQuQWNjb3VudFR5cGVCA+BBASKl",
-            "AQoLQWNjb3VudFR5cGUSHAoYQUNDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "DgoKR09PR0xFX0FEUxABEhkKFURJU1BMQVlfVklERU9fUEFSVE5FUhACEhwK",
-            "GERJU1BMQVlfVklERU9fQURWRVJUSVNFUhADEhAKDERBVEFfUEFSVE5FUhAE",
-            "Eh0KGUdPT0dMRV9BTkFMWVRJQ1NfUFJPUEVSVFkQBSqBAQoHUHJvZHVjdBIX",
-            "ChNQUk9EVUNUX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX0FEUxABEhkKFURJ",
-            "U1BMQVlfVklERU9fUEFSVE5FUhACEhwKGERJU1BMQVlfVklERU9fQURWRVJU",
-            "SVNFUhADEhAKDERBVEFfUEFSVE5FUhAEGgIYAULNAQodY29tLmdvb2dsZS5h",
-            "ZHMuZGF0YW1hbmFnZXIudjFCEERlc3RpbmF0aW9uUHJvdG9QAVpBY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBi",
-            "O2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZ",
-            "R29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRh",
-            "TWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIqQC",
+            "CgtEZXN0aW5hdGlvbhIWCglyZWZlcmVuY2UYASABKAlCA+BBARJFCg1sb2dp",
+            "bl9hY2NvdW50GAIgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Q",
+            "cm9kdWN0QWNjb3VudEID4EEBEkYKDmxpbmtlZF9hY2NvdW50GAMgASgLMiku",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID4EEB",
+            "EkkKEW9wZXJhdGluZ19hY2NvdW50GAQgASgLMikuZ29vZ2xlLmFkcy5kYXRh",
+            "bWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID4EECEiMKFnByb2R1Y3RfZGVz",
+            "dGluYXRpb25faWQYBSABKAlCA+BBAiKBAwoOUHJvZHVjdEFjY291bnQSNwoH",
+            "cHJvZHVjdBgBIAEoDjIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJv",
+            "ZHVjdEICGAESFwoKYWNjb3VudF9pZBgCIAEoCUID4EECElAKDGFjY291bnRf",
+            "dHlwZRgDIAEoDjI1Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJvZHVj",
+            "dEFjY291bnQuQWNjb3VudFR5cGVCA+BBASLKAQoLQWNjb3VudFR5cGUSHAoY",
+            "QUNDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX0FEUxABEhkK",
+            "FURJU1BMQVlfVklERU9fUEFSVE5FUhACEhwKGERJU1BMQVlfVklERU9fQURW",
+            "RVJUSVNFUhADEhAKDERBVEFfUEFSVE5FUhAEEh0KGUdPT0dMRV9BTkFMWVRJ",
+            "Q1NfUFJPUEVSVFkQBRIjCh9HT09HTEVfQURfTUFOQUdFUl9BVURJRU5DRV9M",
+            "SU5LEAYqgQEKB1Byb2R1Y3QSFwoTUFJPRFVDVF9VTlNQRUNJRklFRBAAEg4K",
+            "CkdPT0dMRV9BRFMQARIZChVESVNQTEFZX1ZJREVPX1BBUlRORVIQAhIcChhE",
+            "SVNQTEFZX1ZJREVPX0FEVkVSVElTRVIQAxIQCgxEQVRBX1BBUlRORVIQBBoC",
+            "GAFCpAIKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhBEZXN0aW5h",
+            "dGlvblByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIv",
+            "YXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFk",
+            "cy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHq",
+            "AhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYx6kFUCiJkYXRhbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9BY2NvdW50Ei5hY2NvdW50VHlwZXMve2FjY291",
+            "bnRfdHlwZX0vYWNjb3VudHMve2FjY291bnR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.Product), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Destination), global::Google.Ads.DataManager.V1.Destination.Parser, new[]{ "Reference", "LoginAccount", "LinkedAccount", "OperatingAccount", "ProductDestinationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ProductAccount), global::Google.Ads.DataManager.V1.ProductAccount.Parser, new[]{ "Product", "AccountId", "AccountType" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.ProductAccount.Types.AccountType) }, null, null)
@@ -805,6 +808,10 @@ namespace Google.Ads.DataManager.V1 {
         /// Google Analytics.
         /// </summary>
         [pbr::OriginalName("GOOGLE_ANALYTICS_PROPERTY")] GoogleAnalyticsProperty = 5,
+        /// <summary>
+        /// Google Ad Manager audience link.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_AD_MANAGER_AUDIENCE_LINK")] GoogleAdManagerAudienceLink = 6,
       }
 
     }

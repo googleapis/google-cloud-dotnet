@@ -30,6 +30,7 @@ namespace Google.Ads.DataManager.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AgeRangeReflection.Descriptor;
             yield return AudienceReflection.Descriptor;
             yield return CartDataReflection.Descriptor;
             yield return ConsentReflection.Descriptor;
@@ -39,13 +40,27 @@ namespace Google.Ads.DataManager.V1
             yield return ErrorReflection.Descriptor;
             yield return EventReflection.Descriptor;
             yield return ExperimentalFieldReflection.Descriptor;
+            yield return GenderReflection.Descriptor;
             yield return IngestionServiceReflection.Descriptor;
+            yield return InsightsServiceReflection.Descriptor;
             yield return ItemParameterReflection.Descriptor;
             yield return MatchRateReflection.Descriptor;
+            yield return PartnerLinkServiceReflection.Descriptor;
             yield return ProcessingErrorsReflection.Descriptor;
             yield return RequestStatusPerDestinationReflection.Descriptor;
             yield return TermsOfServiceReflection.Descriptor;
             yield return UserDataReflection.Descriptor;
+            yield return UserListReflection.Descriptor;
+            yield return UserListDirectLicenseReflection.Descriptor;
+            yield return UserListDirectLicenseServiceReflection.Descriptor;
+            yield return UserListGlobalLicenseReflection.Descriptor;
+            yield return UserListGlobalLicenseServiceReflection.Descriptor;
+            yield return UserListGlobalLicenseTypeReflection.Descriptor;
+            yield return UserListLicenseClientAccountTypeReflection.Descriptor;
+            yield return UserListLicenseMetricsReflection.Descriptor;
+            yield return UserListLicensePricingReflection.Descriptor;
+            yield return UserListLicenseStatusReflection.Descriptor;
+            yield return UserListServiceReflection.Descriptor;
             yield return UserPropertiesReflection.Descriptor;
         }
     }
