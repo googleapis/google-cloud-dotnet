@@ -4785,7 +4785,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-12-03T09:44:15.207294119Z",
-            "lastGeneratedCommit": "c9c3b9404798a77c5cb886b960afcb777e7d2dd3",
+            "lastGeneratedCommit": "47e44e0ff4b6aeecd2f2661c14c55e62c42d5ed8",
             "lastReleasedCommit": "c9c3b9404798a77c5cb886b960afcb777e7d2dd3",
             "apiPaths": [
                 "google/cloud/hypercomputecluster/v1beta"
