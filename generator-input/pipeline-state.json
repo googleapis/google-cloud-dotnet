@@ -4904,6 +4904,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "47e44e0ff4b6aeecd2f2661c14c55e62c42d5ed8",
             "apiPaths": [
                 "google/cloud/hypercomputecluster/v1"
             ],
