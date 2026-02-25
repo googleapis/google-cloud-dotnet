@@ -1484,7 +1484,7 @@
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
-      "description": "Recommended Google client library to access the Gemini Enterprise for Customer Experience API.",
+      "description": "Recommended Google client library to access the Gemini Enterprise for Customer Experience API (v1).",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Location": "2.4.0",
@@ -1504,6 +1504,7 @@
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
+      "description": "Recommended Google client library to access the Gemini Enterprise for Customer Experience API (v1beta).",
       "description": "",
       "tags": [],
       "dependencies": {
