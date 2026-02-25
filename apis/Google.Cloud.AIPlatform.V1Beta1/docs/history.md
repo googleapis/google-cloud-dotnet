@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta70, released 2026-02-25
+
+### New features
+
+- Add transcription fields to Session Service
+- Add v1 API version for Session Service
+- Add image_spec to Reasoning Engine public protos
+
+### Documentation improvements
+
+- A comment for field `expire_time` in message `.google.cloud.aiplatform.v1beta1.Session` is changed
+- A comment for field `ttl` in message `.google.cloud.aiplatform.v1beta1.Session` is changed
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListSessionsRequest` is changed
+
 ## Version 1.0.0-beta69, released 2026-02-16
 
 ### New features
