@@ -4901,10 +4901,12 @@
         },
         {
             "id": "Google.Cloud.HypercomputeCluster.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-02-25T08:47:56.993994159Z",
             "lastGeneratedCommit": "47e44e0ff4b6aeecd2f2661c14c55e62c42d5ed8",
+            "lastReleasedCommit": "47e44e0ff4b6aeecd2f2661c14c55e62c42d5ed8",
             "apiPaths": [
                 "google/cloud/hypercomputecluster/v1"
             ],
