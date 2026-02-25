@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.66.0, released 2026-02-25
+
+### New features
+
+- Add transcription fields to Session Service
+- Add v1 API version for Session Service
+- Add image_spec to Reasoning Engine public protos
+
+### Documentation improvements
+
+- A comment for field `expire_time` in message `.google.cloud.aiplatform.v1beta1.Session` is changed
+- A comment for field `ttl` in message `.google.cloud.aiplatform.v1beta1.Session` is changed
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListSessionsRequest` is changed
+
 ## Version 3.65.0, released 2026-02-19
 
 ### New features
