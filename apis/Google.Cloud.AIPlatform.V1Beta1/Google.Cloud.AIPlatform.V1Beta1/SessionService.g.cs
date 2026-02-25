@@ -903,8 +903,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// Supported fields:
     ///    * `display_name`
     ///    * `user_id`
+    ///    * `labels`
     ///
-    /// Example: `display_name="abc"`, `user_id="123"`.
+    /// Example: `display_name="abc"`, `user_id="123"`, `labels.key="value"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
