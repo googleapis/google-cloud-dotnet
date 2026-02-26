@@ -4919,6 +4919,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "2825cb02e05aac3f3a02412d83a7ba51dd1ada3c",
             "apiPaths": [
                 "google/cloud/ces/v1beta"
             ],
