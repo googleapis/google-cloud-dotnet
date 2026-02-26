@@ -1,0 +1,564 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.ces.v1beta",
+  "libraryPackage": "Google.Cloud.Ces.V1Beta",
+  "services": {
+    "AgentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AgentServiceClient",
+          "rpcs": {
+            "BatchDeleteConversations": {
+              "methods": [
+                "BatchDeleteConversations",
+                "BatchDeleteConversationsAsync"
+              ]
+            },
+            "CreateAgent": {
+              "methods": [
+                "CreateAgent",
+                "CreateAgentAsync"
+              ]
+            },
+            "CreateApp": {
+              "methods": [
+                "CreateApp",
+                "CreateAppAsync"
+              ]
+            },
+            "CreateAppVersion": {
+              "methods": [
+                "CreateAppVersion",
+                "CreateAppVersionAsync"
+              ]
+            },
+            "CreateDeployment": {
+              "methods": [
+                "CreateDeployment",
+                "CreateDeploymentAsync"
+              ]
+            },
+            "CreateExample": {
+              "methods": [
+                "CreateExample",
+                "CreateExampleAsync"
+              ]
+            },
+            "CreateGuardrail": {
+              "methods": [
+                "CreateGuardrail",
+                "CreateGuardrailAsync"
+              ]
+            },
+            "CreateTool": {
+              "methods": [
+                "CreateTool",
+                "CreateToolAsync"
+              ]
+            },
+            "CreateToolset": {
+              "methods": [
+                "CreateToolset",
+                "CreateToolsetAsync"
+              ]
+            },
+            "DeleteAgent": {
+              "methods": [
+                "DeleteAgent",
+                "DeleteAgentAsync"
+              ]
+            },
+            "DeleteApp": {
+              "methods": [
+                "DeleteApp",
+                "DeleteAppAsync"
+              ]
+            },
+            "DeleteAppVersion": {
+              "methods": [
+                "DeleteAppVersion",
+                "DeleteAppVersionAsync"
+              ]
+            },
+            "DeleteConversation": {
+              "methods": [
+                "DeleteConversation",
+                "DeleteConversationAsync"
+              ]
+            },
+            "DeleteDeployment": {
+              "methods": [
+                "DeleteDeployment",
+                "DeleteDeploymentAsync"
+              ]
+            },
+            "DeleteExample": {
+              "methods": [
+                "DeleteExample",
+                "DeleteExampleAsync"
+              ]
+            },
+            "DeleteGuardrail": {
+              "methods": [
+                "DeleteGuardrail",
+                "DeleteGuardrailAsync"
+              ]
+            },
+            "DeleteTool": {
+              "methods": [
+                "DeleteTool",
+                "DeleteToolAsync"
+              ]
+            },
+            "DeleteToolset": {
+              "methods": [
+                "DeleteToolset",
+                "DeleteToolsetAsync"
+              ]
+            },
+            "ExportApp": {
+              "methods": [
+                "ExportApp",
+                "ExportAppAsync"
+              ]
+            },
+            "GetAgent": {
+              "methods": [
+                "GetAgent",
+                "GetAgentAsync"
+              ]
+            },
+            "GetApp": {
+              "methods": [
+                "GetApp",
+                "GetAppAsync"
+              ]
+            },
+            "GetAppVersion": {
+              "methods": [
+                "GetAppVersion",
+                "GetAppVersionAsync"
+              ]
+            },
+            "GetChangelog": {
+              "methods": [
+                "GetChangelog",
+                "GetChangelogAsync"
+              ]
+            },
+            "GetConversation": {
+              "methods": [
+                "GetConversation",
+                "GetConversationAsync"
+              ]
+            },
+            "GetDeployment": {
+              "methods": [
+                "GetDeployment",
+                "GetDeploymentAsync"
+              ]
+            },
+            "GetExample": {
+              "methods": [
+                "GetExample",
+                "GetExampleAsync"
+              ]
+            },
+            "GetGuardrail": {
+              "methods": [
+                "GetGuardrail",
+                "GetGuardrailAsync"
+              ]
+            },
+            "GetTool": {
+              "methods": [
+                "GetTool",
+                "GetToolAsync"
+              ]
+            },
+            "GetToolset": {
+              "methods": [
+                "GetToolset",
+                "GetToolsetAsync"
+              ]
+            },
+            "ImportApp": {
+              "methods": [
+                "ImportApp",
+                "ImportAppAsync"
+              ]
+            },
+            "ListAgents": {
+              "methods": [
+                "ListAgents",
+                "ListAgentsAsync"
+              ]
+            },
+            "ListAppVersions": {
+              "methods": [
+                "ListAppVersions",
+                "ListAppVersionsAsync"
+              ]
+            },
+            "ListApps": {
+              "methods": [
+                "ListApps",
+                "ListAppsAsync"
+              ]
+            },
+            "ListChangelogs": {
+              "methods": [
+                "ListChangelogs",
+                "ListChangelogsAsync"
+              ]
+            },
+            "ListConversations": {
+              "methods": [
+                "ListConversations",
+                "ListConversationsAsync"
+              ]
+            },
+            "ListDeployments": {
+              "methods": [
+                "ListDeployments",
+                "ListDeploymentsAsync"
+              ]
+            },
+            "ListExamples": {
+              "methods": [
+                "ListExamples",
+                "ListExamplesAsync"
+              ]
+            },
+            "ListGuardrails": {
+              "methods": [
+                "ListGuardrails",
+                "ListGuardrailsAsync"
+              ]
+            },
+            "ListTools": {
+              "methods": [
+                "ListTools",
+                "ListToolsAsync"
+              ]
+            },
+            "ListToolsets": {
+              "methods": [
+                "ListToolsets",
+                "ListToolsetsAsync"
+              ]
+            },
+            "RestoreAppVersion": {
+              "methods": [
+                "RestoreAppVersion",
+                "RestoreAppVersionAsync"
+              ]
+            },
+            "UpdateAgent": {
+              "methods": [
+                "UpdateAgent",
+                "UpdateAgentAsync"
+              ]
+            },
+            "UpdateApp": {
+              "methods": [
+                "UpdateApp",
+                "UpdateAppAsync"
+              ]
+            },
+            "UpdateDeployment": {
+              "methods": [
+                "UpdateDeployment",
+                "UpdateDeploymentAsync"
+              ]
+            },
+            "UpdateExample": {
+              "methods": [
+                "UpdateExample",
+                "UpdateExampleAsync"
+              ]
+            },
+            "UpdateGuardrail": {
+              "methods": [
+                "UpdateGuardrail",
+                "UpdateGuardrailAsync"
+              ]
+            },
+            "UpdateTool": {
+              "methods": [
+                "UpdateTool",
+                "UpdateToolAsync"
+              ]
+            },
+            "UpdateToolset": {
+              "methods": [
+                "UpdateToolset",
+                "UpdateToolsetAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EvaluationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EvaluationServiceClient",
+          "rpcs": {
+            "CreateEvaluation": {
+              "methods": [
+                "CreateEvaluation",
+                "CreateEvaluationAsync"
+              ]
+            },
+            "CreateEvaluationDataset": {
+              "methods": [
+                "CreateEvaluationDataset",
+                "CreateEvaluationDatasetAsync"
+              ]
+            },
+            "CreateEvaluationExpectation": {
+              "methods": [
+                "CreateEvaluationExpectation",
+                "CreateEvaluationExpectationAsync"
+              ]
+            },
+            "CreateScheduledEvaluationRun": {
+              "methods": [
+                "CreateScheduledEvaluationRun",
+                "CreateScheduledEvaluationRunAsync"
+              ]
+            },
+            "DeleteEvaluation": {
+              "methods": [
+                "DeleteEvaluation",
+                "DeleteEvaluationAsync"
+              ]
+            },
+            "DeleteEvaluationDataset": {
+              "methods": [
+                "DeleteEvaluationDataset",
+                "DeleteEvaluationDatasetAsync"
+              ]
+            },
+            "DeleteEvaluationExpectation": {
+              "methods": [
+                "DeleteEvaluationExpectation",
+                "DeleteEvaluationExpectationAsync"
+              ]
+            },
+            "DeleteEvaluationResult": {
+              "methods": [
+                "DeleteEvaluationResult",
+                "DeleteEvaluationResultAsync"
+              ]
+            },
+            "DeleteEvaluationRun": {
+              "methods": [
+                "DeleteEvaluationRun",
+                "DeleteEvaluationRunAsync"
+              ]
+            },
+            "DeleteScheduledEvaluationRun": {
+              "methods": [
+                "DeleteScheduledEvaluationRun",
+                "DeleteScheduledEvaluationRunAsync"
+              ]
+            },
+            "GenerateEvaluation": {
+              "methods": [
+                "GenerateEvaluation",
+                "GenerateEvaluationAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
+              ]
+            },
+            "GetEvaluationDataset": {
+              "methods": [
+                "GetEvaluationDataset",
+                "GetEvaluationDatasetAsync"
+              ]
+            },
+            "GetEvaluationExpectation": {
+              "methods": [
+                "GetEvaluationExpectation",
+                "GetEvaluationExpectationAsync"
+              ]
+            },
+            "GetEvaluationResult": {
+              "methods": [
+                "GetEvaluationResult",
+                "GetEvaluationResultAsync"
+              ]
+            },
+            "GetEvaluationRun": {
+              "methods": [
+                "GetEvaluationRun",
+                "GetEvaluationRunAsync"
+              ]
+            },
+            "GetScheduledEvaluationRun": {
+              "methods": [
+                "GetScheduledEvaluationRun",
+                "GetScheduledEvaluationRunAsync"
+              ]
+            },
+            "ImportEvaluations": {
+              "methods": [
+                "ImportEvaluations",
+                "ImportEvaluationsAsync"
+              ]
+            },
+            "ListEvaluationDatasets": {
+              "methods": [
+                "ListEvaluationDatasets",
+                "ListEvaluationDatasetsAsync"
+              ]
+            },
+            "ListEvaluationExpectations": {
+              "methods": [
+                "ListEvaluationExpectations",
+                "ListEvaluationExpectationsAsync"
+              ]
+            },
+            "ListEvaluationResults": {
+              "methods": [
+                "ListEvaluationResults",
+                "ListEvaluationResultsAsync"
+              ]
+            },
+            "ListEvaluationRuns": {
+              "methods": [
+                "ListEvaluationRuns",
+                "ListEvaluationRunsAsync"
+              ]
+            },
+            "ListEvaluations": {
+              "methods": [
+                "ListEvaluations",
+                "ListEvaluationsAsync"
+              ]
+            },
+            "ListScheduledEvaluationRuns": {
+              "methods": [
+                "ListScheduledEvaluationRuns",
+                "ListScheduledEvaluationRunsAsync"
+              ]
+            },
+            "RunEvaluation": {
+              "methods": [
+                "RunEvaluation",
+                "RunEvaluationAsync"
+              ]
+            },
+            "TestPersonaVoice": {
+              "methods": [
+                "TestPersonaVoice",
+                "TestPersonaVoiceAsync"
+              ]
+            },
+            "UpdateEvaluation": {
+              "methods": [
+                "UpdateEvaluation",
+                "UpdateEvaluationAsync"
+              ]
+            },
+            "UpdateEvaluationDataset": {
+              "methods": [
+                "UpdateEvaluationDataset",
+                "UpdateEvaluationDatasetAsync"
+              ]
+            },
+            "UpdateEvaluationExpectation": {
+              "methods": [
+                "UpdateEvaluationExpectation",
+                "UpdateEvaluationExpectationAsync"
+              ]
+            },
+            "UpdateScheduledEvaluationRun": {
+              "methods": [
+                "UpdateScheduledEvaluationRun",
+                "UpdateScheduledEvaluationRunAsync"
+              ]
+            },
+            "UploadEvaluationAudio": {
+              "methods": [
+                "UploadEvaluationAudio",
+                "UploadEvaluationAudioAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SessionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SessionServiceClient",
+          "rpcs": {
+            "BidiRunSession": {
+              "methods": [
+                "BidiRunSession",
+                "BidiRunSessionAsync"
+              ]
+            },
+            "RunSession": {
+              "methods": [
+                "RunSession",
+                "RunSessionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ToolService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ToolServiceClient",
+          "rpcs": {
+            "ExecuteTool": {
+              "methods": [
+                "ExecuteTool",
+                "ExecuteToolAsync"
+              ]
+            },
+            "RetrieveToolSchema": {
+              "methods": [
+                "RetrieveToolSchema",
+                "RetrieveToolSchemaAsync"
+              ]
+            },
+            "RetrieveTools": {
+              "methods": [
+                "RetrieveTools",
+                "RetrieveToolsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "WidgetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WidgetServiceClient",
+          "rpcs": {
+            "GenerateChatToken": {
+              "methods": [
+                "GenerateChatToken",
+                "GenerateChatTokenAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
