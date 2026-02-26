@@ -2272,7 +2272,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-26T14:11:37.226820256Z",
-            "lastGeneratedCommit": "3343c4ed68f17a8910a04ef54647e337818e7ec2",
+            "lastGeneratedCommit": "69bf99a9d0910fa86c3c5867ea357aa004dfcc55",
             "lastReleasedCommit": "3343c4ed68f17a8910a04ef54647e337818e7ec2",
             "apiPaths": [
                 "google/cloud/networkmanagement/v1"
