@@ -4134,7 +4134,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-16T14:48:12.144188039Z",
-            "lastGeneratedCommit": "fb371addb34b049d340ac5801c387237b415a810",
+            "lastGeneratedCommit": "d14599c809a8e60a6acc8c7e8deb5e0da08c4b55",
             "lastReleasedCommit": "fb371addb34b049d340ac5801c387237b415a810",
             "apiPaths": [
                 "google/cloud/storagebatchoperations/v1"
