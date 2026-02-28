@@ -133,7 +133,7 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
                         if (recvCount == inputLines.Count)
                         {
                             Console.WriteLine("Received all messages, shutting down");
-                            var dummyTask = sub.StopAsync(CancellationToken.None);
+                            var dummyTask = sub.StopAsync(SubscriberClient.SubscriberShutdownSetting.NackImmediately);
                         }
                     }
                     if (rnd.Next(3) == 0)
