@@ -4890,7 +4890,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-19T08:34:53.837052994Z",
-            "lastGeneratedCommit": "27ffde22e73154260f8eaa6115420b7bd895db2f",
+            "lastGeneratedCommit": "a383b6b923ecd0a68e85c4410146747d207decc8",
             "lastReleasedCommit": "27ffde22e73154260f8eaa6115420b7bd895db2f",
             "apiPaths": [
                 "google/cloud/vectorsearch/v1"
