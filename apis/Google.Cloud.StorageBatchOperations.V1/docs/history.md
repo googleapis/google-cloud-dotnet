@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-03-02
+
+### New features
+
+- Add new transformation `update_object_custom_context`
+
 ## Version 1.0.0-beta04, released 2026-02-16
 
 ### New features
