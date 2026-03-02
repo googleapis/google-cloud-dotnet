@@ -4199,7 +4199,7 @@
     },
     {
       "id": "Google.Cloud.NetworkManagement.V1",
-      "version": "2.18.0",
+      "version": "2.19.0",
       "type": "grpc",
       "productName": "Network Management",
       "productUrl": "https://cloud.google.com/network-intelligence-center/docs/",
