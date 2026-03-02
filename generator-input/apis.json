@@ -412,7 +412,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1Beta1",
-      "version": "1.0.0-beta70",
+      "version": "1.0.0-beta71",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
@@ -1504,7 +1504,6 @@
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
-      "description": "Recommended Google client library to access the Gemini Enterprise for Customer Experience API (v1beta).",
       "description": "",
       "tags": [],
       "dependencies": {
