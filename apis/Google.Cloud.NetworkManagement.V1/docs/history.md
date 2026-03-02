@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.19.0, released 2026-03-02
+
+### New features
+
+- Add API fields related to GKE Pods and Network Policies
+
 ## Version 2.18.0, released 2026-01-26
 
 ### New features
