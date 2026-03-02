@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-03-02
+
+### Bug fixes
+
+- Fix PredictionServiceChatClient to skip empty TextReasoningContent
+
 ## Version 1.0.0-beta05, released 2026-02-16
 
 ### New features
