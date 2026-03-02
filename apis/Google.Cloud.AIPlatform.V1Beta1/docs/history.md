@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta71, released 2026-03-02
+
+### New features
+
+- A new field `inference_generation_config` is added to message `.google.cloud.aiplatform.v1beta1.EvaluationConfig`
+- A new field `evaluation_run` is added to message `.google.cloud.aiplatform.v1beta1.EvaluateDatasetRun`
+
+### Documentation improvements
+
+- Comment on `evaluate_dataset_response` clarified
+
 ## Version 1.0.0-beta70, released 2026-02-25
 
 ### New features
