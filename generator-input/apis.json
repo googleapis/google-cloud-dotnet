@@ -1504,7 +1504,7 @@
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
-      "description": "",
+      "description": "Recommended Google client library to access the Gemini Enterprise for Customer Experience API (v1beta).",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Location": "2.4.0",
@@ -4158,7 +4158,7 @@
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://cloud.google.com/network-connectivity/docs/",
-      "description": "Recommended Google client library to access the Network Connectivity API, which provides access to Network Connectivity Center.",
+      "description": "Recommended Google client library to access the Network Connectivity API (v1), which provides access to Network Connectivity Center.",
       "tags": [
         "network",
         "connectivity",
@@ -4203,7 +4203,7 @@
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://docs.cloud.google.com/network-connectivity/docs/concepts",
-      "description": "This API enables connectivity with and between Google Cloud resources.",
+      "description": "Recommended Google client library to access the Network Connectivity API (v1beta), which provides access to Network Connectivity Center.",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.5.0",
