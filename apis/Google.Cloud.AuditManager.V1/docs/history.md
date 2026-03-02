@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-03-02
+
+### Bug fixes
+
+- Update existing packaging option `cloud.google.com/go/auditmanager/apiv1/auditmanagerpb;auditmanagerpb` for `go_package`
+
 ## Version 1.0.0-beta02, released 2026-02-16
 
 ### Bug fixes
