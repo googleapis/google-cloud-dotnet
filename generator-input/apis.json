@@ -4198,6 +4198,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.NetworkConnectivity.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Connectivity",
+      "productUrl": "https://docs.cloud.google.com/network-connectivity/docs/concepts",
+      "description": "This API enables connectivity with and between Google Cloud resources.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networkconnectivity/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "networkconnectivity",
+      "serviceConfigFile": "networkconnectivity_v1beta.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.NetworkManagement.V1",
       "version": "2.19.0",
       "type": "grpc",

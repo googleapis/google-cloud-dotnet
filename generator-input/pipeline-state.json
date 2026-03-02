@@ -4928,6 +4928,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Ces.V1Beta/Google.Cloud.Ces.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.NetworkConnectivity.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/networkconnectivity/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.NetworkConnectivity.V1Beta/Google.Cloud.NetworkConnectivity.V1Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [
