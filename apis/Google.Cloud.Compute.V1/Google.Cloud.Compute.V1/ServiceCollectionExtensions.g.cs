@@ -2102,6 +2102,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionHealthAggregationPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionHealthAggregationPoliciesClient(this IServiceCollection services, sys::Action<gccv::RegionHealthAggregationPoliciesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionHealthAggregationPoliciesClientBuilder builder = new gccv::RegionHealthAggregationPoliciesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionHealthAggregationPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionHealthAggregationPoliciesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionHealthAggregationPoliciesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionHealthAggregationPoliciesClientBuilder builder = new gccv::RegionHealthAggregationPoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::RegionHealthCheckServicesClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -2841,6 +2877,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::ReservationBlocksClientBuilder builder = new gccv::ReservationBlocksClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ReservationSlotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddReservationSlotsClient(this IServiceCollection services, sys::Action<gccv::ReservationSlotsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ReservationSlotsClientBuilder builder = new gccv::ReservationSlotsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ReservationSlotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddReservationSlotsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ReservationSlotsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ReservationSlotsClientBuilder builder = new gccv::ReservationSlotsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

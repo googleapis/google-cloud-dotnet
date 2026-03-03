@@ -3701,6 +3701,57 @@
         }
       }
     },
+    "RegionHealthAggregationPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionHealthAggregationPoliciesClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "RegionHealthCheckServices": {
       "clients": {
         "grpc": {
@@ -3734,6 +3785,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -4712,6 +4769,33 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReservationSlots": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReservationSlotsClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
               ]
             }
           }

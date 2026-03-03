@@ -35,7 +35,11 @@ namespace GoogleCSharpSnippets
             // Create client
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
-            ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest { TargetResource = "", };
+            ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest
+            {
+                IncludeInheritedPolicies = false,
+                TargetResource = "",
+            };
             // Make the request
             FirewallPoliciesListAssociationsResponse response = await firewallPoliciesClient.ListAssociationsAsync(request);
         }

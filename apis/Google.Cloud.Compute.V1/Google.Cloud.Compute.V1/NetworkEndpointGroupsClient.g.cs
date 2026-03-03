@@ -1026,6 +1026,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1036,6 +1050,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1046,6 +1074,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1082,6 +1124,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1107,6 +1163,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1132,6 +1202,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1749,6 +1833,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1765,6 +1863,20 @@ namespace Google.Cloud.Compute.V1
         /// <summary>
         /// Creates a network endpoint group in the specified project using the
         /// parameters that are included in the request.
+        /// 
+        /// Note: Use the following APIs to manage network endpoint groups:
+        /// 
+        /// -
+        /// To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+        /// NEGs): zonal
+        /// API
+        /// -
+        /// To manage NEGs with regional scope (such as regional internet NEGs,
+        /// serverless NEGs, Private Service Connect NEGs): regional
+        /// API
+        /// -
+        /// To manage NEGs with global scope (such as global internet NEGs):global
+        /// API
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

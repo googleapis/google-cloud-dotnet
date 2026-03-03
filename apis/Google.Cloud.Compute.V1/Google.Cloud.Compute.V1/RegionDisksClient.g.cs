@@ -2559,8 +2559,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2570,8 +2569,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2581,8 +2579,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2618,8 +2615,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2646,8 +2642,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2674,8 +2669,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3411,8 +3405,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3428,8 +3421,7 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Update the specified disk with the data included in the request. Update is
-        /// performed only on selected fields included as part of update-mask. Only the
-        /// following fields can be modified: user_license.
+        /// performed only on selected fields included as part of update-mask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
