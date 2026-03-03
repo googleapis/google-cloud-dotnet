@@ -105262,6 +105262,612 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_sync",
+      "title": "AskContextsRequestObject",
+      "description": "Snippet for AskContexts",
+      "file": "VertexRagServiceClient.AskContextsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContexts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_async",
+      "title": "AskContextsRequestObjectAsync",
+      "description": "Snippet for AskContextsAsync",
+      "file": "VertexRagServiceClient.AskContextsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_sync_flattened",
+      "title": "AskContexts",
+      "description": "Snippet for AskContexts",
+      "file": "VertexRagServiceClient.AskContextsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContexts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_async_flattened",
+      "title": "AskContextsAsync",
+      "description": "Snippet for AskContextsAsync",
+      "file": "VertexRagServiceClient.AskContextsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_sync_flattened_resourceNames",
+      "title": "AskContextsResourceNames",
+      "description": "Snippet for AskContexts",
+      "file": "VertexRagServiceClient.AskContextsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContexts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AskContexts_async_flattened_resourceNames",
+      "title": "AskContextsResourceNamesAsync",
+      "description": "Snippet for AskContextsAsync",
+      "file": "VertexRagServiceClient.AskContextsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AskContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AskContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AskContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AskContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_sync",
+      "title": "AsyncRetrieveContextsRequestObject",
+      "description": "Snippet for AsyncRetrieveContexts",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContexts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_async",
+      "title": "AsyncRetrieveContextsRequestObjectAsync",
+      "description": "Snippet for AsyncRetrieveContextsAsync",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_sync_flattened",
+      "title": "AsyncRetrieveContexts",
+      "description": "Snippet for AsyncRetrieveContexts",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContexts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_async_flattened",
+      "title": "AsyncRetrieveContextsAsync",
+      "description": "Snippet for AsyncRetrieveContextsAsync",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_sync_flattened_resourceNames",
+      "title": "AsyncRetrieveContextsResourceNames",
+      "description": "Snippet for AsyncRetrieveContexts",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContexts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagService_AsyncRetrieveContexts_async_flattened_resourceNames",
+      "title": "AsyncRetrieveContextsResourceNamesAsync",
+      "description": "Snippet for AsyncRetrieveContextsAsync",
+      "file": "VertexRagServiceClient.AsyncRetrieveContextsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncRetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient.AsyncRetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncRetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService.AsyncRetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_VizierService_CreateStudy_sync",
       "title": "CreateStudyRequestObject",
       "description": "Snippet for CreateStudy",
