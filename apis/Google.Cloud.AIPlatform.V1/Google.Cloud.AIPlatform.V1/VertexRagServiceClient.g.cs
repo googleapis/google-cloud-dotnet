@@ -23,6 +23,7 @@ using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using linq = System.Linq;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
@@ -51,6 +52,9 @@ namespace Google.Cloud.AIPlatform.V1
             RetrieveContextsSettings = existing.RetrieveContextsSettings;
             AugmentPromptSettings = existing.AugmentPromptSettings;
             CorroborateContentSettings = existing.CorroborateContentSettings;
+            AskContextsSettings = existing.AskContextsSettings;
+            AsyncRetrieveContextsSettings = existing.AsyncRetrieveContextsSettings;
+            AsyncRetrieveContextsOperationsSettings = existing.AsyncRetrieveContextsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -93,6 +97,49 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CorroborateContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagServiceClient.AskContexts</c> and <c>VertexRagServiceClient.AskContextsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AskContextsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagServiceClient.AsyncRetrieveContexts</c> and <c>VertexRagServiceClient.AsyncRetrieveContextsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AsyncRetrieveContextsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagServiceClient.AsyncRetrieveContexts</c> and
+        /// <c>VertexRagServiceClient.AsyncRetrieveContextsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AsyncRetrieveContextsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -780,6 +827,323 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(gagr::LocationName parent, Content content, scg::IEnumerable<Fact> facts, st::CancellationToken cancellationToken) =>
             CorroborateContentAsync(parent, content, facts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AskContextsResponse AskContexts(AskContextsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(AskContextsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(AskContextsRequest request, st::CancellationToken cancellationToken) =>
+            AskContextsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AskContextsResponse AskContexts(string parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AskContexts(new AskContextsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(string parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AskContextsAsync(new AskContextsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(string parent, RagQuery query, st::CancellationToken cancellationToken) =>
+            AskContextsAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AskContextsResponse AskContexts(gagr::LocationName parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AskContexts(new AskContextsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(gagr::LocationName parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AskContextsAsync(new AskContextsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AskContextsResponse> AskContextsAsync(gagr::LocationName parent, RagQuery query, st::CancellationToken cancellationToken) =>
+            AskContextsAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> AsyncRetrieveContexts(AsyncRetrieveContextsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(AsyncRetrieveContextsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(AsyncRetrieveContextsRequest request, st::CancellationToken cancellationToken) =>
+            AsyncRetrieveContextsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AsyncRetrieveContexts</c>.</summary>
+        public virtual lro::OperationsClient AsyncRetrieveContextsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AsyncRetrieveContexts</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> PollOnceAsyncRetrieveContexts(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AsyncRetrieveContextsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AsyncRetrieveContexts</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> PollOnceAsyncRetrieveContextsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AsyncRetrieveContextsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> AsyncRetrieveContexts(string parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncRetrieveContexts(new AsyncRetrieveContextsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(string parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncRetrieveContextsAsync(new AsyncRetrieveContextsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(string parent, RagQuery query, st::CancellationToken cancellationToken) =>
+            AsyncRetrieveContextsAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> AsyncRetrieveContexts(gagr::LocationName parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncRetrieveContexts(new AsyncRetrieveContextsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(gagr::LocationName parent, RagQuery query, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncRetrieveContextsAsync(new AsyncRetrieveContextsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = gax::GaxPreconditions.CheckNotNull(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to retrieve
+        /// RagContexts. The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. Single RAG retrieve query.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(gagr::LocationName parent, RagQuery query, st::CancellationToken cancellationToken) =>
+            AsyncRetrieveContextsAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VertexRagService client wrapper implementation, for convenient use.</summary>
@@ -793,6 +1157,10 @@ namespace Google.Cloud.AIPlatform.V1
         private readonly gaxgrpc::ApiCall<AugmentPromptRequest, AugmentPromptResponse> _callAugmentPrompt;
 
         private readonly gaxgrpc::ApiCall<CorroborateContentRequest, CorroborateContentResponse> _callCorroborateContent;
+
+        private readonly gaxgrpc::ApiCall<AskContextsRequest, AskContextsResponse> _callAskContexts;
+
+        private readonly gaxgrpc::ApiCall<AsyncRetrieveContextsRequest, lro::Operation> _callAsyncRetrieveContexts;
 
         /// <summary>
         /// Constructs a client wrapper for the VertexRagService service, with the specified gRPC client and settings.
@@ -809,6 +1177,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            AsyncRetrieveContextsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncRetrieveContextsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callRetrieveContexts = clientHelper.BuildApiCall<RetrieveContextsRequest, RetrieveContextsResponse>("RetrieveContexts", grpcClient.RetrieveContextsAsync, grpcClient.RetrieveContexts, effectiveSettings.RetrieveContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -820,6 +1189,12 @@ namespace Google.Cloud.AIPlatform.V1
             _callCorroborateContent = clientHelper.BuildApiCall<CorroborateContentRequest, CorroborateContentResponse>("CorroborateContent", grpcClient.CorroborateContentAsync, grpcClient.CorroborateContent, effectiveSettings.CorroborateContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCorroborateContent);
             Modify_CorroborateContentApiCall(ref _callCorroborateContent);
+            _callAskContexts = clientHelper.BuildApiCall<AskContextsRequest, AskContextsResponse>("AskContexts", grpcClient.AskContextsAsync, grpcClient.AskContexts, effectiveSettings.AskContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAskContexts);
+            Modify_AskContextsApiCall(ref _callAskContexts);
+            _callAsyncRetrieveContexts = clientHelper.BuildApiCall<AsyncRetrieveContextsRequest, lro::Operation>("AsyncRetrieveContexts", grpcClient.AsyncRetrieveContextsAsync, grpcClient.AsyncRetrieveContexts, effectiveSettings.AsyncRetrieveContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAsyncRetrieveContexts);
+            Modify_AsyncRetrieveContextsApiCall(ref _callAsyncRetrieveContexts);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -830,6 +1205,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_AugmentPromptApiCall(ref gaxgrpc::ApiCall<AugmentPromptRequest, AugmentPromptResponse> call);
 
         partial void Modify_CorroborateContentApiCall(ref gaxgrpc::ApiCall<CorroborateContentRequest, CorroborateContentResponse> call);
+
+        partial void Modify_AskContextsApiCall(ref gaxgrpc::ApiCall<AskContextsRequest, AskContextsResponse> call);
+
+        partial void Modify_AsyncRetrieveContextsApiCall(ref gaxgrpc::ApiCall<AsyncRetrieveContextsRequest, lro::Operation> call);
 
         partial void OnConstruction(VertexRagService.VertexRagServiceClient grpcClient, VertexRagServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -847,6 +1226,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_AugmentPromptRequest(ref AugmentPromptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CorroborateContentRequest(ref CorroborateContentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AskContextsRequest(ref AskContextsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AsyncRetrieveContextsRequest(ref AsyncRetrieveContextsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves relevant contexts for a query.
@@ -924,6 +1307,71 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_CorroborateContentRequest(ref request, ref callSettings);
             return _callCorroborateContent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AskContextsResponse AskContexts(AskContextsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AskContextsRequest(ref request, ref callSettings);
+            return _callAskContexts.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Agentic Retrieval Ask API for RAG.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AskContextsResponse> AskContextsAsync(AskContextsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AskContextsRequest(ref request, ref callSettings);
+            return _callAskContexts.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>AsyncRetrieveContexts</c>.</summary>
+        public override lro::OperationsClient AsyncRetrieveContextsOperationsClient { get; }
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> AsyncRetrieveContexts(AsyncRetrieveContextsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsyncRetrieveContextsRequest(ref request, ref callSettings);
+            return new lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>(_callAsyncRetrieveContexts.Sync(request, callSettings), AsyncRetrieveContextsOperationsClient);
+        }
+
+        /// <summary>
+        /// Asynchronous API to retrieves relevant contexts for a query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>> AsyncRetrieveContextsAsync(AsyncRetrieveContextsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsyncRetrieveContextsRequest(ref request, ref callSettings);
+            return new lro::Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata>(await _callAsyncRetrieveContexts.Async(request, callSettings).ConfigureAwait(false), AsyncRetrieveContextsOperationsClient);
+        }
+    }
+
+    public static partial class VertexRagService
+    {
+        public partial class VertexRagServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 
