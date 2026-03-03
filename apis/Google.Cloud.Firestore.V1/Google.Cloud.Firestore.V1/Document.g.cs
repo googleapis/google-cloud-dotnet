@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore.V1 {
             "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
             "LwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIpCgV2YWx1ZRgCIAEo",
-            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIsEECgVWYWx1ZRIw",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIuUECgVWYWx1ZRIw",
             "CgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1",
             "ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1pbnRlZ2VyX3ZhbHVl",
             "GAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAASNQoPdGltZXN0YW1w",
@@ -43,36 +43,37 @@ namespace Google.Cloud.Firestore.V1 {
             "GAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoLYXJyYXlfdmFsdWUY",
             "CSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIABIyCglt",
             "YXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLk1hcFZhbHVl",
-            "SAASHwoVZmllbGRfcmVmZXJlbmNlX3ZhbHVlGBMgASgJSAASNwoOZnVuY3Rp",
-            "b25fdmFsdWUYFCABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9u",
-            "SAASNwoOcGlwZWxpbmVfdmFsdWUYFSABKAsyHS5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLlBpcGVsaW5lSABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioK",
-            "BnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEK",
-            "CE1hcFZhbHVlEjkKBmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuTWFwVmFsdWUuRmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5",
-            "GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5W",
-            "YWx1ZToCOAEi2gEKCEZ1bmN0aW9uEhEKBG5hbWUYASABKAlCA+BBAhItCgRh",
-            "cmdzGAIgAygLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZUID4EEBEkAK",
-            "B29wdGlvbnMYAyADKAsyKi5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9u",
-            "Lk9wdGlvbnNFbnRyeUID4EEBGkoKDE9wdGlvbnNFbnRyeRILCgNrZXkYASAB",
-            "KAkSKQoFdmFsdWUYAiABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVl",
-            "OgI4ASKkAgoIUGlwZWxpbmUSOAoGc3RhZ2VzGAEgAygLMiMuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5QaXBlbGluZS5TdGFnZUID4EECGt0BCgVTdGFnZRIRCgRu",
-            "YW1lGAEgASgJQgPgQQISLQoEYXJncxgCIAMoCzIaLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjEuVmFsdWVCA+BBARJGCgdvcHRpb25zGAMgAygLMjAuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5QaXBlbGluZS5TdGFnZS5PcHRpb25zRW50cnlCA+BBARpK",
-            "CgxPcHRpb25zRW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhou",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAFCxQEKF2NvbS5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxQg1Eb2N1bWVudFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBi",
-            "ogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVc",
-            "Q2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3Jl",
-            "OjpWMWIGcHJvdG8z"));
+            "SAASHwoVZmllbGRfcmVmZXJlbmNlX3ZhbHVlGBMgASgJSAASIgoYdmFyaWFi",
+            "bGVfcmVmZXJlbmNlX3ZhbHVlGBYgASgJSAASNwoOZnVuY3Rpb25fdmFsdWUY",
+            "FCABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9uSAASNwoOcGlw",
+            "ZWxpbmVfdmFsdWUYFSABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLlBpcGVs",
+            "aW5lSABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioKBnZhbHVlcxgB",
+            "IAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEKCE1hcFZhbHVl",
+            "EjkKBmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUudjEuTWFwVmFs",
+            "dWUuRmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikK",
+            "BXZhbHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAEi",
+            "2gEKCEZ1bmN0aW9uEhEKBG5hbWUYASABKAlCA+BBAhItCgRhcmdzGAIgAygL",
+            "MhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZUID4EEBEkAKB29wdGlvbnMY",
+            "AyADKAsyKi5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9uLk9wdGlvbnNF",
+            "bnRyeUID4EEBGkoKDE9wdGlvbnNFbnRyeRILCgNrZXkYASABKAkSKQoFdmFs",
+            "dWUYAiABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlOgI4ASKkAgoI",
+            "UGlwZWxpbmUSOAoGc3RhZ2VzGAEgAygLMiMuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5QaXBlbGluZS5TdGFnZUID4EECGt0BCgVTdGFnZRIRCgRuYW1lGAEgASgJ",
+            "QgPgQQISLQoEYXJncxgCIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFs",
+            "dWVCA+BBARJGCgdvcHRpb25zGAMgAygLMjAuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5QaXBlbGluZS5TdGFnZS5PcHRpb25zRW50cnlCA+BBARpKCgxPcHRpb25z",
+            "RW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5WYWx1ZToCOAFCxQEKF2NvbS5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxQg1Eb2N1bWVudFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZmly",
+            "ZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBiogIER0NGU6oC",
+            "GUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmly",
+            "ZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue", "FieldReferenceValue", "FunctionValue", "PipelineValue" }, new[]{ "ValueType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue", "FieldReferenceValue", "VariableReferenceValue", "FunctionValue", "PipelineValue" }, new[]{ "ValueType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ArrayValue), global::Google.Cloud.Firestore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.MapValue), global::Google.Cloud.Firestore.V1.MapValue.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Function), global::Google.Cloud.Firestore.V1.Function.Parser, new[]{ "Name", "Args", "Options" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -515,6 +516,9 @@ namespace Google.Cloud.Firestore.V1 {
         case ValueTypeOneofCase.FieldReferenceValue:
           FieldReferenceValue = other.FieldReferenceValue;
           break;
+        case ValueTypeOneofCase.VariableReferenceValue:
+          VariableReferenceValue = other.VariableReferenceValue;
+          break;
         case ValueTypeOneofCase.FunctionValue:
           FunctionValue = other.FunctionValue.Clone();
           break;
@@ -847,6 +851,39 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "variable_reference_value" field.</summary>
+    public const int VariableReferenceValueFieldNumber = 22;
+    /// <summary>
+    /// Pointer to a variable defined elsewhere in a pipeline.
+    ///
+    /// Unlike `field_reference_value` which references a field within a
+    /// document, this refers to a variable, defined in a separate namespace than
+    /// the fields of a document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VariableReferenceValue {
+      get { return HasVariableReferenceValue ? (string) valueType_ : ""; }
+      set {
+        valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        valueTypeCase_ = ValueTypeOneofCase.VariableReferenceValue;
+      }
+    }
+    /// <summary>Gets whether the "variable_reference_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVariableReferenceValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.VariableReferenceValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "variable_reference_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVariableReferenceValue() {
+      if (HasVariableReferenceValue) {
+        ClearValueType();
+      }
+    }
+
     /// <summary>Field number for the "function_value" field.</summary>
     public const int FunctionValueFieldNumber = 20;
     /// <summary>
@@ -901,6 +938,7 @@ namespace Google.Cloud.Firestore.V1 {
       ArrayValue = 9,
       MapValue = 6,
       FieldReferenceValue = 19,
+      VariableReferenceValue = 22,
       FunctionValue = 20,
       PipelineValue = 21,
     }
@@ -945,6 +983,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(ArrayValue, other.ArrayValue)) return false;
       if (!object.Equals(MapValue, other.MapValue)) return false;
       if (FieldReferenceValue != other.FieldReferenceValue) return false;
+      if (VariableReferenceValue != other.VariableReferenceValue) return false;
       if (!object.Equals(FunctionValue, other.FunctionValue)) return false;
       if (!object.Equals(PipelineValue, other.PipelineValue)) return false;
       if (ValueTypeCase != other.ValueTypeCase) return false;
@@ -967,6 +1006,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (valueTypeCase_ == ValueTypeOneofCase.ArrayValue) hash ^= ArrayValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.MapValue) hash ^= MapValue.GetHashCode();
       if (HasFieldReferenceValue) hash ^= FieldReferenceValue.GetHashCode();
+      if (HasVariableReferenceValue) hash ^= VariableReferenceValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) hash ^= FunctionValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) hash ^= PipelineValue.GetHashCode();
       hash ^= (int) valueTypeCase_;
@@ -1044,6 +1084,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PipelineValue);
       }
+      if (HasVariableReferenceValue) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VariableReferenceValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1110,6 +1154,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(PipelineValue);
       }
+      if (HasVariableReferenceValue) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VariableReferenceValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1155,6 +1203,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (HasFieldReferenceValue) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(FieldReferenceValue);
+      }
+      if (HasVariableReferenceValue) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VariableReferenceValue);
       }
       if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(FunctionValue);
@@ -1222,6 +1273,9 @@ namespace Google.Cloud.Firestore.V1 {
           break;
         case ValueTypeOneofCase.FieldReferenceValue:
           FieldReferenceValue = other.FieldReferenceValue;
+          break;
+        case ValueTypeOneofCase.VariableReferenceValue:
+          VariableReferenceValue = other.VariableReferenceValue;
           break;
         case ValueTypeOneofCase.FunctionValue:
           if (FunctionValue == null) {
@@ -1339,6 +1393,10 @@ namespace Google.Cloud.Firestore.V1 {
             PipelineValue = subBuilder;
             break;
           }
+          case 178: {
+            VariableReferenceValue = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1439,6 +1497,10 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             PipelineValue = subBuilder;
+            break;
+          }
+          case 178: {
+            VariableReferenceValue = input.ReadString();
             break;
           }
         }
