@@ -696,5 +696,77 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRegionHealthCheckServiceRequest, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = RegionHealthCheckServicesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionHealthCheckServiceRequest request = new TestIamPermissionsRegionHealthCheckServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = regionHealthCheckServicesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRegionHealthCheckServiceRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRegionHealthCheckServiceRequest, CancellationToken)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = await RegionHealthCheckServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionHealthCheckServiceRequest request = new TestIamPermissionsRegionHealthCheckServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await regionHealthCheckServicesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = RegionHealthCheckServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = regionHealthCheckServicesClient.TestIamPermissions(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = await RegionHealthCheckServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await regionHealthCheckServicesClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
     }
 }

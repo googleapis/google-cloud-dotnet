@@ -2058,6 +2058,33 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteRegionHealthAggregationPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionHealthAggregationPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchRegionHealthAggregationPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRegionHealthCheckServiceRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2716,6 +2743,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PerformMaintenanceReservationBlockRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class UpdateReservationSlotRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {
