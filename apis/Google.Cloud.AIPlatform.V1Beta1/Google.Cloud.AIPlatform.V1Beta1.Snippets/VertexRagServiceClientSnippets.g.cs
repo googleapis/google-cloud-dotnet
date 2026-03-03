@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
+    using Google.LongRunning;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -318,6 +319,292 @@ namespace GoogleCSharpSnippets
             IEnumerable<Fact> facts = new Fact[] { new Fact(), };
             // Make the request
             CorroborateContentResponse response = await vertexRagServiceClient.CorroborateContentAsync(parent, content, facts);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContexts</summary>
+        public void AskContextsRequestObject()
+        {
+            // Snippet: AskContexts(AskContextsRequest, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            AskContextsRequest request = new AskContextsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = new RagQuery(),
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            AskContextsResponse response = vertexRagServiceClient.AskContexts(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContextsAsync</summary>
+        public async Task AskContextsRequestObjectAsync()
+        {
+            // Snippet: AskContextsAsync(AskContextsRequest, CallSettings)
+            // Additional: AskContextsAsync(AskContextsRequest, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AskContextsRequest request = new AskContextsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = new RagQuery(),
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            AskContextsResponse response = await vertexRagServiceClient.AskContextsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContexts</summary>
+        public void AskContexts()
+        {
+            // Snippet: AskContexts(string, RagQuery, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RagQuery query = new RagQuery();
+            // Make the request
+            AskContextsResponse response = vertexRagServiceClient.AskContexts(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContextsAsync</summary>
+        public async Task AskContextsAsync()
+        {
+            // Snippet: AskContextsAsync(string, RagQuery, CallSettings)
+            // Additional: AskContextsAsync(string, RagQuery, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RagQuery query = new RagQuery();
+            // Make the request
+            AskContextsResponse response = await vertexRagServiceClient.AskContextsAsync(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContexts</summary>
+        public void AskContextsResourceNames()
+        {
+            // Snippet: AskContexts(LocationName, RagQuery, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RagQuery query = new RagQuery();
+            // Make the request
+            AskContextsResponse response = vertexRagServiceClient.AskContexts(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AskContextsAsync</summary>
+        public async Task AskContextsResourceNamesAsync()
+        {
+            // Snippet: AskContextsAsync(LocationName, RagQuery, CallSettings)
+            // Additional: AskContextsAsync(LocationName, RagQuery, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RagQuery query = new RagQuery();
+            // Make the request
+            AskContextsResponse response = await vertexRagServiceClient.AskContextsAsync(parent, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContexts</summary>
+        public void AsyncRetrieveContextsRequestObject()
+        {
+            // Snippet: AsyncRetrieveContexts(AsyncRetrieveContextsRequest, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            AsyncRetrieveContextsRequest request = new AsyncRetrieveContextsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = new RagQuery(),
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = vertexRagServiceClient.AsyncRetrieveContexts(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = vertexRagServiceClient.PollOnceAsyncRetrieveContexts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContextsAsync</summary>
+        public async Task AsyncRetrieveContextsRequestObjectAsync()
+        {
+            // Snippet: AsyncRetrieveContextsAsync(AsyncRetrieveContextsRequest, CallSettings)
+            // Additional: AsyncRetrieveContextsAsync(AsyncRetrieveContextsRequest, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AsyncRetrieveContextsRequest request = new AsyncRetrieveContextsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = new RagQuery(),
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = await vertexRagServiceClient.AsyncRetrieveContextsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = await vertexRagServiceClient.PollOnceAsyncRetrieveContextsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContexts</summary>
+        public void AsyncRetrieveContexts()
+        {
+            // Snippet: AsyncRetrieveContexts(string, RagQuery, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RagQuery query = new RagQuery();
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = vertexRagServiceClient.AsyncRetrieveContexts(parent, query);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = vertexRagServiceClient.PollOnceAsyncRetrieveContexts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContextsAsync</summary>
+        public async Task AsyncRetrieveContextsAsync()
+        {
+            // Snippet: AsyncRetrieveContextsAsync(string, RagQuery, CallSettings)
+            // Additional: AsyncRetrieveContextsAsync(string, RagQuery, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RagQuery query = new RagQuery();
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = await vertexRagServiceClient.AsyncRetrieveContextsAsync(parent, query);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = await vertexRagServiceClient.PollOnceAsyncRetrieveContextsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContexts</summary>
+        public void AsyncRetrieveContextsResourceNames()
+        {
+            // Snippet: AsyncRetrieveContexts(LocationName, RagQuery, CallSettings)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = VertexRagServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RagQuery query = new RagQuery();
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = vertexRagServiceClient.AsyncRetrieveContexts(parent, query);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = vertexRagServiceClient.PollOnceAsyncRetrieveContexts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncRetrieveContextsAsync</summary>
+        public async Task AsyncRetrieveContextsResourceNamesAsync()
+        {
+            // Snippet: AsyncRetrieveContextsAsync(LocationName, RagQuery, CallSettings)
+            // Additional: AsyncRetrieveContextsAsync(LocationName, RagQuery, CancellationToken)
+            // Create client
+            VertexRagServiceClient vertexRagServiceClient = await VertexRagServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RagQuery query = new RagQuery();
+            // Make the request
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> response = await vertexRagServiceClient.AsyncRetrieveContextsAsync(parent, query);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncRetrieveContextsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRetrieveContextsResponse, AsyncRetrieveContextsOperationMetadata> retrievedResponse = await vertexRagServiceClient.PollOnceAsyncRetrieveContextsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRetrieveContextsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

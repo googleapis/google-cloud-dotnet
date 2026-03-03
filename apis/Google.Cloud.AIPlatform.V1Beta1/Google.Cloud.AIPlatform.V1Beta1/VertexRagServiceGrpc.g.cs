@@ -75,6 +75,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AskContextsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse> __Marshaller_google_cloud_aiplatform_v1beta1_AskContextsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AsyncRetrieveContextsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse> __Method_RetrieveContexts = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse>(
@@ -99,6 +107,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "CorroborateContent",
         __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse> __Method_AskContexts = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AskContexts",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AskContextsRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_AskContextsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest, global::Google.LongRunning.Operation> __Method_AsyncRetrieveContexts = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AsyncRetrieveContexts",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AsyncRetrieveContextsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -145,6 +169,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> CorroborateContent(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Agentic Retrieval Ask API for RAG.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse> AskContexts(global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Asynchronous API to retrieves relevant contexts for a query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AsyncRetrieveContexts(global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -334,6 +382,102 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CorroborateContent, null, options, request);
       }
+      /// <summary>
+      /// Agentic Retrieval Ask API for RAG.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse AskContexts(global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AskContexts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Agentic Retrieval Ask API for RAG.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse AskContexts(global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AskContexts, null, options, request);
+      }
+      /// <summary>
+      /// Agentic Retrieval Ask API for RAG.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse> AskContextsAsync(global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AskContextsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Agentic Retrieval Ask API for RAG.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse> AskContextsAsync(global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AskContexts, null, options, request);
+      }
+      /// <summary>
+      /// Asynchronous API to retrieves relevant contexts for a query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AsyncRetrieveContexts(global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsyncRetrieveContexts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Asynchronous API to retrieves relevant contexts for a query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AsyncRetrieveContexts(global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AsyncRetrieveContexts, null, options, request);
+      }
+      /// <summary>
+      /// Asynchronous API to retrieves relevant contexts for a query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRetrieveContextsAsync(global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsyncRetrieveContextsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Asynchronous API to retrieves relevant contexts for a query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRetrieveContextsAsync(global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AsyncRetrieveContexts, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VertexRagServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -350,7 +494,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RetrieveContexts, serviceImpl.RetrieveContexts)
           .AddMethod(__Method_AugmentPrompt, serviceImpl.AugmentPrompt)
-          .AddMethod(__Method_CorroborateContent, serviceImpl.CorroborateContent).Build();
+          .AddMethod(__Method_CorroborateContent, serviceImpl.CorroborateContent)
+          .AddMethod(__Method_AskContexts, serviceImpl.AskContexts)
+          .AddMethod(__Method_AsyncRetrieveContexts, serviceImpl.AsyncRetrieveContexts).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -363,6 +509,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_RetrieveContexts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse>(serviceImpl.RetrieveContexts));
       serviceBinder.AddMethod(__Method_AugmentPrompt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse>(serviceImpl.AugmentPrompt));
       serviceBinder.AddMethod(__Method_CorroborateContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse>(serviceImpl.CorroborateContent));
+      serviceBinder.AddMethod(__Method_AskContexts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AskContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.AskContextsResponse>(serviceImpl.AskContexts));
+      serviceBinder.AddMethod(__Method_AsyncRetrieveContexts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AsyncRetrieveContextsRequest, global::Google.LongRunning.Operation>(serviceImpl.AsyncRetrieveContexts));
     }
 
   }
