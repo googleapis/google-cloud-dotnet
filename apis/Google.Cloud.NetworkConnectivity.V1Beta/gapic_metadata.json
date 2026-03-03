@@ -1,0 +1,357 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.networkconnectivity.v1beta",
+  "libraryPackage": "Google.Cloud.NetworkConnectivity.V1Beta",
+  "services": {
+    "DataTransferService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTransferServiceClient",
+          "rpcs": {
+            "CreateDestination": {
+              "methods": [
+                "CreateDestination",
+                "CreateDestinationAsync"
+              ]
+            },
+            "CreateMulticloudDataTransferConfig": {
+              "methods": [
+                "CreateMulticloudDataTransferConfig",
+                "CreateMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "DeleteDestination": {
+              "methods": [
+                "DeleteDestination",
+                "DeleteDestinationAsync"
+              ]
+            },
+            "DeleteMulticloudDataTransferConfig": {
+              "methods": [
+                "DeleteMulticloudDataTransferConfig",
+                "DeleteMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "GetDestination": {
+              "methods": [
+                "GetDestination",
+                "GetDestinationAsync"
+              ]
+            },
+            "GetMulticloudDataTransferConfig": {
+              "methods": [
+                "GetMulticloudDataTransferConfig",
+                "GetMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "GetMulticloudDataTransferSupportedService": {
+              "methods": [
+                "GetMulticloudDataTransferSupportedService",
+                "GetMulticloudDataTransferSupportedServiceAsync"
+              ]
+            },
+            "ListDestinations": {
+              "methods": [
+                "ListDestinations",
+                "ListDestinationsAsync"
+              ]
+            },
+            "ListMulticloudDataTransferConfigs": {
+              "methods": [
+                "ListMulticloudDataTransferConfigs",
+                "ListMulticloudDataTransferConfigsAsync"
+              ]
+            },
+            "ListMulticloudDataTransferSupportedServices": {
+              "methods": [
+                "ListMulticloudDataTransferSupportedServices",
+                "ListMulticloudDataTransferSupportedServicesAsync"
+              ]
+            },
+            "UpdateDestination": {
+              "methods": [
+                "UpdateDestination",
+                "UpdateDestinationAsync"
+              ]
+            },
+            "UpdateMulticloudDataTransferConfig": {
+              "methods": [
+                "UpdateMulticloudDataTransferConfig",
+                "UpdateMulticloudDataTransferConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "HubService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "HubServiceClient",
+          "rpcs": {
+            "AcceptHubSpoke": {
+              "methods": [
+                "AcceptHubSpoke",
+                "AcceptHubSpokeAsync"
+              ]
+            },
+            "AcceptSpokeUpdate": {
+              "methods": [
+                "AcceptSpokeUpdate",
+                "AcceptSpokeUpdateAsync"
+              ]
+            },
+            "CreateGatewayAdvertisedRoute": {
+              "methods": [
+                "CreateGatewayAdvertisedRoute",
+                "CreateGatewayAdvertisedRouteAsync"
+              ]
+            },
+            "CreateHub": {
+              "methods": [
+                "CreateHub",
+                "CreateHubAsync"
+              ]
+            },
+            "CreateSpoke": {
+              "methods": [
+                "CreateSpoke",
+                "CreateSpokeAsync"
+              ]
+            },
+            "DeleteGatewayAdvertisedRoute": {
+              "methods": [
+                "DeleteGatewayAdvertisedRoute",
+                "DeleteGatewayAdvertisedRouteAsync"
+              ]
+            },
+            "DeleteHub": {
+              "methods": [
+                "DeleteHub",
+                "DeleteHubAsync"
+              ]
+            },
+            "DeleteSpoke": {
+              "methods": [
+                "DeleteSpoke",
+                "DeleteSpokeAsync"
+              ]
+            },
+            "GetGatewayAdvertisedRoute": {
+              "methods": [
+                "GetGatewayAdvertisedRoute",
+                "GetGatewayAdvertisedRouteAsync"
+              ]
+            },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
+            "GetHub": {
+              "methods": [
+                "GetHub",
+                "GetHubAsync"
+              ]
+            },
+            "GetRoute": {
+              "methods": [
+                "GetRoute",
+                "GetRouteAsync"
+              ]
+            },
+            "GetRouteTable": {
+              "methods": [
+                "GetRouteTable",
+                "GetRouteTableAsync"
+              ]
+            },
+            "GetSpoke": {
+              "methods": [
+                "GetSpoke",
+                "GetSpokeAsync"
+              ]
+            },
+            "ListGatewayAdvertisedRoutes": {
+              "methods": [
+                "ListGatewayAdvertisedRoutes",
+                "ListGatewayAdvertisedRoutesAsync"
+              ]
+            },
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "ListHubSpokes": {
+              "methods": [
+                "ListHubSpokes",
+                "ListHubSpokesAsync"
+              ]
+            },
+            "ListHubs": {
+              "methods": [
+                "ListHubs",
+                "ListHubsAsync"
+              ]
+            },
+            "ListRouteTables": {
+              "methods": [
+                "ListRouteTables",
+                "ListRouteTablesAsync"
+              ]
+            },
+            "ListRoutes": {
+              "methods": [
+                "ListRoutes",
+                "ListRoutesAsync"
+              ]
+            },
+            "ListSpokes": {
+              "methods": [
+                "ListSpokes",
+                "ListSpokesAsync"
+              ]
+            },
+            "QueryHubStatus": {
+              "methods": [
+                "QueryHubStatus",
+                "QueryHubStatusAsync"
+              ]
+            },
+            "RejectHubSpoke": {
+              "methods": [
+                "RejectHubSpoke",
+                "RejectHubSpokeAsync"
+              ]
+            },
+            "RejectSpokeUpdate": {
+              "methods": [
+                "RejectSpokeUpdate",
+                "RejectSpokeUpdateAsync"
+              ]
+            },
+            "UpdateGatewayAdvertisedRoute": {
+              "methods": [
+                "UpdateGatewayAdvertisedRoute",
+                "UpdateGatewayAdvertisedRouteAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
+              ]
+            },
+            "UpdateHub": {
+              "methods": [
+                "UpdateHub",
+                "UpdateHubAsync"
+              ]
+            },
+            "UpdateSpoke": {
+              "methods": [
+                "UpdateSpoke",
+                "UpdateSpokeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyBasedRoutingService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyBasedRoutingServiceClient",
+          "rpcs": {
+            "CreatePolicyBasedRoute": {
+              "methods": [
+                "CreatePolicyBasedRoute",
+                "CreatePolicyBasedRouteAsync"
+              ]
+            },
+            "DeletePolicyBasedRoute": {
+              "methods": [
+                "DeletePolicyBasedRoute",
+                "DeletePolicyBasedRouteAsync"
+              ]
+            },
+            "GetPolicyBasedRoute": {
+              "methods": [
+                "GetPolicyBasedRoute",
+                "GetPolicyBasedRouteAsync"
+              ]
+            },
+            "ListPolicyBasedRoutes": {
+              "methods": [
+                "ListPolicyBasedRoutes",
+                "ListPolicyBasedRoutesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TransportManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TransportManagerClient",
+          "rpcs": {
+            "CreateTransport": {
+              "methods": [
+                "CreateTransport",
+                "CreateTransportAsync"
+              ]
+            },
+            "DeleteTransport": {
+              "methods": [
+                "DeleteTransport",
+                "DeleteTransportAsync"
+              ]
+            },
+            "GetRemoteTransportProfile": {
+              "methods": [
+                "GetRemoteTransportProfile",
+                "GetRemoteTransportProfileAsync"
+              ]
+            },
+            "GetStatus": {
+              "methods": [
+                "GetStatus",
+                "GetStatusAsync"
+              ]
+            },
+            "GetTransport": {
+              "methods": [
+                "GetTransport",
+                "GetTransportAsync"
+              ]
+            },
+            "ListRemoteTransportProfiles": {
+              "methods": [
+                "ListRemoteTransportProfiles",
+                "ListRemoteTransportProfilesAsync"
+              ]
+            },
+            "ListTransports": {
+              "methods": [
+                "ListTransports",
+                "ListTransportsAsync"
+              ]
+            },
+            "UpdateTransport": {
+              "methods": [
+                "UpdateTransport",
+                "UpdateTransportAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
