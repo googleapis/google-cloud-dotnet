@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.2.0, released 2026-03-04
+
+### New features
+
+- Expose the variable definition in the Cloud Firestore API
+
 ## Version 4.1.0, released 2025-12-09
 
 ### New features
