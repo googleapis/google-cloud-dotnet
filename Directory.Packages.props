@@ -10,11 +10,11 @@
     <PackageVersion Include="Grpc.Net.Client" Version="[2.71.0, 3.0.0)" />
 
     <!-- Default GAX versions: these should typically be changed together -->
-    <PackageVersion Include="Google.Api.Gax" Version="[4.12.1, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Rest" Version="[4.12.1, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.12.1, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Testing" Version="[4.12.1, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Grpc.Testing" Version="[4.12.1, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax" Version="[4.13.1, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Rest" Version="[4.13.1, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.13.1, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Testing" Version="[4.13.1, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Grpc.Testing" Version="[4.13.1, 5.0.0)" />
 
     <!-- Support libraries (rarely referenced directly) -->
     <PackageVersion Include="Google.Apis" Version="[1.73.0, 2.0.0)" />
