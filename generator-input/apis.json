@@ -3645,8 +3645,8 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.13.0",
-        "Google.Api.Gax.Grpc": "4.13.0",
+        "Google.Api.Gax": "default",
+        "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.DevTools.Common": "3.3.0",
         "Google.Cloud.Logging.V2": "4.5.0",
         "Grpc.Core": "default",
@@ -3694,8 +3694,8 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.13.0",
-        "Google.Api.Gax.Grpc": "4.13.0",
+        "Google.Api.Gax": "default",
+        "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.DevTools.Common": "3.3.0",
         "Google.Cloud.Logging.V2": "4.5.0",
         "Grpc.Core": "default",
@@ -5543,7 +5543,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.13.0",
+        "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.Iam.V1": "3.5.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Google.LongRunning": "3.5.0"
@@ -5572,7 +5572,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.13.0",
+        "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.Iam.V1": "3.5.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Google.LongRunning": "3.5.0"
@@ -5600,7 +5600,7 @@
         "ADO"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.13.0",
+        "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.Spanner.Admin.Database.V1": "project",
         "Google.Cloud.Spanner.Admin.Instance.V1": "project",
         "Google.Cloud.Spanner.V1": "project",
