@@ -1,5 +1,16 @@
 # Version history
 
+## Version 5.13.0-beta04, released 2026-03-04
+
+### New features
+
+- Include cache updates and routing hint into BeginTransaction and Commit request/response respectively
+
+### Documentation improvements
+
+- A comment in message `.google.spanner.v1.TransactionOptions.ReadWrite.ReadLockMode` is changed
+- A comment for field `routing_hint` in messages `.google.spanner.v1.ResultSet` and `.google.spanner.v1.PartialResultSet` are changed
+
 ## Version 5.13.0-beta03, released 2026-02-16
 
 ### Bug fixes
