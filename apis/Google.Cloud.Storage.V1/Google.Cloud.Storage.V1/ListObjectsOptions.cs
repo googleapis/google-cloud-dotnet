@@ -175,7 +175,7 @@ namespace Google.Cloud.Storage.V1
             {
                 request.MatchGlob = MatchGlob;
             }
-            if (Filter != null)
+            if (!string.IsNullOrWhiteSpace(Filter))
             {
                 request.Filter = Filter;
             }
