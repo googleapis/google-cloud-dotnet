@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.24.0, released 2026-03-04
+
+### New features
+
+- Added a field for enabling image and table annotation for layout parser processor
+
+### Documentation improvements
+
+- Regenerated REST and RPC Document AI documentation to include missing changes from September 2024 to November 2025
+- Fixed language issues in multiple message field descriptions
+
 ## Version 3.23.0, released 2025-11-05
 
 ### New features
