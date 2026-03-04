@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.14.0, released 2026-03-04
+
+### New features
+
+- Add a new field to support Dataplex integration configuration
+
+### Documentation improvements
+
+- Clarify that [initial_user](http://_vscodecontentref_/3) is not required in Cluster
+
 ## Version 1.13.0, released 2025-11-03
 
 ### New features
