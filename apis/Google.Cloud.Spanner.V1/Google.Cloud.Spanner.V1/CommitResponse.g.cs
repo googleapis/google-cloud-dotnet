@@ -25,24 +25,27 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvc3Bhbm5lci92MS9jb21taXRfcmVzcG9uc2UucHJvdG8SEWdv",
-            "b2dsZS5zcGFubmVyLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90byLVAgoO",
-            "Q29tbWl0UmVzcG9uc2USNAoQY29tbWl0X3RpbWVzdGFtcBgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQwoMY29tbWl0X3N0YXRzGAIgASgL",
-            "Mi0uZ29vZ2xlLnNwYW5uZXIudjEuQ29tbWl0UmVzcG9uc2UuQ29tbWl0U3Rh",
-            "dHMSTgoPcHJlY29tbWl0X3Rva2VuGAQgASgLMjMuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJlY29tbWl0VG9rZW5IABI2ChJzbmFw",
-            "c2hvdF90aW1lc3RhbXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wGiUKC0NvbW1pdFN0YXRzEhYKDm11dGF0aW9uX2NvdW50GAEgASgDQhkK",
-            "F011bHRpcGxleGVkU2Vzc2lvblJldHJ5QrYBChVjb20uZ29vZ2xlLnNwYW5u",
-            "ZXIudjFCE0NvbW1pdFJlc3BvbnNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29n",
-            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
-            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "b2dsZS5zcGFubmVyLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGiBnb29nbGUv",
+            "c3Bhbm5lci92MS9sb2NhdGlvbi5wcm90bxojZ29vZ2xlL3NwYW5uZXIvdjEv",
+            "dHJhbnNhY3Rpb24ucHJvdG8ikAMKDkNvbW1pdFJlc3BvbnNlEjQKEGNvbW1p",
+            "dF90aW1lc3RhbXAYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EkMKDGNvbW1pdF9zdGF0cxgCIAEoCzItLmdvb2dsZS5zcGFubmVyLnYxLkNv",
+            "bW1pdFJlc3BvbnNlLkNvbW1pdFN0YXRzEk4KD3ByZWNvbW1pdF90b2tlbhgE",
+            "IAEoCzIzLmdvb2dsZS5zcGFubmVyLnYxLk11bHRpcGxleGVkU2Vzc2lvblBy",
+            "ZWNvbW1pdFRva2VuSAASNgoSc25hcHNob3RfdGltZXN0YW1wGAUgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CgxjYWNoZV91cGRhdGUYBiAB",
+            "KAsyHi5nb29nbGUuc3Bhbm5lci52MS5DYWNoZVVwZGF0ZUID4EEBGiUKC0Nv",
+            "bW1pdFN0YXRzEhYKDm11dGF0aW9uX2NvdW50GAEgASgDQhkKF011bHRpcGxl",
+            "eGVkU2Vzc2lvblJldHJ5QrYBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCE0Nv",
+            "bW1pdFJlc3BvbnNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFu",
+            "bmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQu",
+            "U3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xl",
+            "OjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.LocationReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken", "SnapshotTimestamp" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken", "SnapshotTimestamp", "CacheUpdate" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -90,6 +93,7 @@ namespace Google.Cloud.Spanner.V1 {
       commitTimestamp_ = other.commitTimestamp_ != null ? other.commitTimestamp_.Clone() : null;
       commitStats_ = other.commitStats_ != null ? other.commitStats_.Clone() : null;
       snapshotTimestamp_ = other.snapshotTimestamp_ != null ? other.snapshotTimestamp_.Clone() : null;
+      cacheUpdate_ = other.cacheUpdate_ != null ? other.cacheUpdate_.Clone() : null;
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
           PrecommitToken = other.PrecommitToken.Clone();
@@ -171,6 +175,26 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "cache_update" field.</summary>
+    public const int CacheUpdateFieldNumber = 6;
+    private global::Google.Cloud.Spanner.V1.CacheUpdate cacheUpdate_;
+    /// <summary>
+    /// Optional. A cache update expresses a set of changes the client should
+    /// incorporate into its location cache. The client should discard the changes
+    /// if they are older than the data it already has. This data can be obtained
+    /// in response to requests that included a `RoutingHint` field, but may also
+    /// be obtained by explicit location-fetching RPCs which may be added in the
+    /// future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.CacheUpdate CacheUpdate {
+      get { return cacheUpdate_; }
+      set {
+        cacheUpdate_ = value;
+      }
+    }
+
     private object multiplexedSessionRetry_;
     /// <summary>Enum of possible cases for the "MultiplexedSessionRetry" oneof.</summary>
     public enum MultiplexedSessionRetryOneofCase {
@@ -210,6 +234,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(CommitStats, other.CommitStats)) return false;
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
       if (!object.Equals(SnapshotTimestamp, other.SnapshotTimestamp)) return false;
+      if (!object.Equals(CacheUpdate, other.CacheUpdate)) return false;
       if (MultiplexedSessionRetryCase != other.MultiplexedSessionRetryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -222,6 +247,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (commitStats_ != null) hash ^= CommitStats.GetHashCode();
       if (multiplexedSessionRetryCase_ == MultiplexedSessionRetryOneofCase.PrecommitToken) hash ^= PrecommitToken.GetHashCode();
       if (snapshotTimestamp_ != null) hash ^= SnapshotTimestamp.GetHashCode();
+      if (cacheUpdate_ != null) hash ^= CacheUpdate.GetHashCode();
       hash ^= (int) multiplexedSessionRetryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -257,6 +283,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SnapshotTimestamp);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -283,6 +313,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SnapshotTimestamp);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -304,6 +338,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (snapshotTimestamp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SnapshotTimestamp);
+      }
+      if (cacheUpdate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CacheUpdate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -334,6 +371,12 @@ namespace Google.Cloud.Spanner.V1 {
           SnapshotTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         SnapshotTimestamp.MergeFrom(other.SnapshotTimestamp);
+      }
+      if (other.cacheUpdate_ != null) {
+        if (cacheUpdate_ == null) {
+          CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+        }
+        CacheUpdate.MergeFrom(other.CacheUpdate);
       }
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
@@ -389,6 +432,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(SnapshotTimestamp);
             break;
           }
+          case 50: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
+            break;
+          }
         }
       }
     #endif
@@ -432,6 +482,13 @@ namespace Google.Cloud.Spanner.V1 {
               SnapshotTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(SnapshotTimestamp);
+            break;
+          }
+          case 50: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
             break;
           }
         }

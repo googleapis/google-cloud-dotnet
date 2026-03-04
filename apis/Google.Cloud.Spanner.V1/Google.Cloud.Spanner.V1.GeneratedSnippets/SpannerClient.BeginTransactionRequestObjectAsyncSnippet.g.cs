@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Options = new TransactionOptions(),
                 RequestOptions = new RequestOptions(),
                 MutationKey = new Mutation(),
+                RoutingHint = new RoutingHint(),
             };
             // Make the request
             Transaction response = await spannerClient.BeginTransactionAsync(request);

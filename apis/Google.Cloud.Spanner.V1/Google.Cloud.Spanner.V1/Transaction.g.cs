@@ -27,50 +27,52 @@ namespace Google.Cloud.Spanner.V1 {
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
             "LnNwYW5uZXIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
             "Hmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byL3BwoSVHJhbnNhY3Rpb25PcHRpb25zEkUK",
-            "CnJlYWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2Fj",
-            "dGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0aW9uZWRfZG1sGAMg",
-            "ASgLMjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlBh",
-            "cnRpdGlvbmVkRG1sSAASQwoJcmVhZF9vbmx5GAIgASgLMi4uZ29vZ2xlLnNw",
-            "YW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAASJwofZXhj",
-            "bHVkZV90eG5fZnJvbV9jaGFuZ2Vfc3RyZWFtcxgFIAEoCBJNCg9pc29sYXRp",
-            "b25fbGV2ZWwYBiABKA4yNC5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlv",
-            "bk9wdGlvbnMuSXNvbGF0aW9uTGV2ZWwa7AEKCVJlYWRXcml0ZRJUCg5yZWFk",
-            "X2xvY2tfbW9kZRgBIAEoDjI8Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0",
-            "aW9uT3B0aW9ucy5SZWFkV3JpdGUuUmVhZExvY2tNb2RlEjgKK211bHRpcGxl",
-            "eGVkX3Nlc3Npb25fcHJldmlvdXNfdHJhbnNhY3Rpb25faWQYAiABKAxCA+BB",
-            "ASJPCgxSZWFkTG9ja01vZGUSHgoaUkVBRF9MT0NLX01PREVfVU5TUEVDSUZJ",
-            "RUQQABIPCgtQRVNTSU1JU1RJQxABEg4KCk9QVElNSVNUSUMQAhoQCg5QYXJ0",
-            "aXRpb25lZERtbBqoAgoIUmVhZE9ubHkSEAoGc3Ryb25nGAEgASgISAASOAoS",
-            "bWluX3JlYWRfdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEgAEjIKDW1heF9zdGFsZW5lc3MYAyABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25IABI0Cg5yZWFkX3RpbWVzdGFtcBgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABI0Cg9leGFjdF9zdGFsZW5lc3MY",
-            "BSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIdChVyZXR1cm5f",
-            "cmVhZF90aW1lc3RhbXAYBiABKAhCEQoPdGltZXN0YW1wX2JvdW5kIlgKDklz",
-            "b2xhdGlvbkxldmVsEh8KG0lTT0xBVElPTl9MRVZFTF9VTlNQRUNJRklFRBAA",
-            "EhAKDFNFUklBTElaQUJMRRABEhMKD1JFUEVBVEFCTEVfUkVBRBACQgYKBG1v",
-            "ZGUimwEKC1RyYW5zYWN0aW9uEgoKAmlkGAEgASgMEjIKDnJlYWRfdGltZXN0",
-            "YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJMCg9wcmVj",
-            "b21taXRfdG9rZW4YAyABKAsyMy5nb29nbGUuc3Bhbm5lci52MS5NdWx0aXBs",
-            "ZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbiKkAQoTVHJhbnNhY3Rpb25TZWxl",
-            "Y3RvchI7CgpzaW5nbGVfdXNlGAEgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHJhbnNhY3Rpb25PcHRpb25zSAASDAoCaWQYAiABKAxIABI2CgViZWdpbhgD",
-            "IAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gA",
-            "QgoKCHNlbGVjdG9yIkwKIE11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRv",
-            "a2VuEhcKD3ByZWNvbW1pdF90b2tlbhgBIAEoDBIPCgdzZXFfbnVtGAIgASgF",
-            "QrMBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCEFRyYW5zYWN0aW9uUHJvdG9Q",
-            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJw",
-            "YjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2ds",
-            "ZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6",
-            "VjFiBnByb3RvMw=="));
+            "YnVmL3RpbWVzdGFtcC5wcm90bxogZ29vZ2xlL3NwYW5uZXIvdjEvbG9jYXRp",
+            "b24ucHJvdG8i9wcKElRyYW5zYWN0aW9uT3B0aW9ucxJFCgpyZWFkX3dyaXRl",
+            "GAEgASgLMi8uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25z",
+            "LlJlYWRXcml0ZUgAEk8KD3BhcnRpdGlvbmVkX2RtbBgDIAEoCzI0Lmdvb2ds",
+            "ZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5QYXJ0aXRpb25lZERt",
+            "bEgAEkMKCXJlYWRfb25seRgCIAEoCzIuLmdvb2dsZS5zcGFubmVyLnYxLlRy",
+            "YW5zYWN0aW9uT3B0aW9ucy5SZWFkT25seUgAEicKH2V4Y2x1ZGVfdHhuX2Zy",
+            "b21fY2hhbmdlX3N0cmVhbXMYBSABKAgSTQoPaXNvbGF0aW9uX2xldmVsGAYg",
+            "ASgOMjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLklz",
+            "b2xhdGlvbkxldmVsGuwBCglSZWFkV3JpdGUSVAoOcmVhZF9sb2NrX21vZGUY",
+            "ASABKA4yPC5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnMu",
+            "UmVhZFdyaXRlLlJlYWRMb2NrTW9kZRI4CittdWx0aXBsZXhlZF9zZXNzaW9u",
+            "X3ByZXZpb3VzX3RyYW5zYWN0aW9uX2lkGAIgASgMQgPgQQEiTwoMUmVhZExv",
+            "Y2tNb2RlEh4KGlJFQURfTE9DS19NT0RFX1VOU1BFQ0lGSUVEEAASDwoLUEVT",
+            "U0lNSVNUSUMQARIOCgpPUFRJTUlTVElDEAIaEAoOUGFydGl0aW9uZWREbWwa",
+            "qAIKCFJlYWRPbmx5EhAKBnN0cm9uZxgBIAEoCEgAEjgKEm1pbl9yZWFkX3Rp",
+            "bWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABIy",
+            "Cg1tYXhfc3RhbGVuZXNzGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uSAASNAoOcmVhZF90aW1lc3RhbXAYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wSAASNAoPZXhhY3Rfc3RhbGVuZXNzGAUgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uSAASHQoVcmV0dXJuX3JlYWRfdGltZXN0",
+            "YW1wGAYgASgIQhEKD3RpbWVzdGFtcF9ib3VuZCJYCg5Jc29sYXRpb25MZXZl",
+            "bBIfChtJU09MQVRJT05fTEVWRUxfVU5TUEVDSUZJRUQQABIQCgxTRVJJQUxJ",
+            "WkFCTEUQARITCg9SRVBFQVRBQkxFX1JFQUQQAkIGCgRtb2RlItYBCgtUcmFu",
+            "c2FjdGlvbhIKCgJpZBgBIAEoDBIyCg5yZWFkX3RpbWVzdGFtcBgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASTAoPcHJlY29tbWl0X3Rva2Vu",
+            "GAMgASgLMjMuZ29vZ2xlLnNwYW5uZXIudjEuTXVsdGlwbGV4ZWRTZXNzaW9u",
+            "UHJlY29tbWl0VG9rZW4SOQoMY2FjaGVfdXBkYXRlGAUgASgLMh4uZ29vZ2xl",
+            "LnNwYW5uZXIudjEuQ2FjaGVVcGRhdGVCA+BBASKkAQoTVHJhbnNhY3Rpb25T",
+            "ZWxlY3RvchI7CgpzaW5nbGVfdXNlGAEgASgLMiUuZ29vZ2xlLnNwYW5uZXIu",
+            "djEuVHJhbnNhY3Rpb25PcHRpb25zSAASDAoCaWQYAiABKAxIABI2CgViZWdp",
+            "bhgDIAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9u",
+            "c0gAQgoKCHNlbGVjdG9yIkwKIE11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1p",
+            "dFRva2VuEhcKD3ByZWNvbW1pdF90b2tlbhgBIAEoDBIPCgdzZXFfbnVtGAIg",
+            "ASgFQrMBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCEFRyYW5zYWN0aW9uUHJv",
+            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5u",
+            "ZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dv",
+            "b2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5l",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.LocationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly", "ExcludeTxnFromChangeStreams", "IsolationLevel" }, new[]{ "Mode" }, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode", "MultiplexedSessionPreviousTransactionId" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp", "PrecommitToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp", "PrecommitToken", "CacheUpdate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionSelector), global::Google.Cloud.Spanner.V1.TransactionSelector.Parser, new[]{ "SingleUse", "Id", "Begin" }, new[]{ "Selector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken), global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken.Parser, new[]{ "PrecommitToken", "SeqNum" }, null, null, null, null)
           }));
@@ -834,37 +836,48 @@ namespace Google.Cloud.Spanner.V1 {
             /// Default value.
             ///
             /// * If isolation level is
+            ///   [SERIALIZABLE][google.spanner.v1.TransactionOptions.IsolationLevel.SERIALIZABLE],
+            ///   locking semantics default to `PESSIMISTIC`.
+            /// * If isolation level is
             ///   [REPEATABLE_READ][google.spanner.v1.TransactionOptions.IsolationLevel.REPEATABLE_READ],
-            ///   then it is an error to specify `read_lock_mode`. Locking semantics
-            ///   default to `OPTIMISTIC`. No validation checks are done for reads,
-            ///   except to validate that the data that was served at the snapshot time
-            ///   is unchanged at commit time in the following cases:
-            ///     1. reads done as part of queries that use `SELECT FOR UPDATE`
-            ///     2. reads done as part of statements with a `LOCK_SCANNED_RANGES`
-            ///        hint
-            ///     3. reads done as part of DML statements
-            /// * At all other isolation levels, if `read_lock_mode` is the default
-            ///   value, then pessimistic read locks are used.
+            ///   locking semantics default to `OPTIMISTIC`.
+            /// * See
+            ///   [Concurrency
+            ///   control](https://cloud.google.com/spanner/docs/concurrency-control)
+            ///   for more details.
             /// </summary>
             [pbr::OriginalName("READ_LOCK_MODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// Pessimistic lock mode.
             ///
-            /// Read locks are acquired immediately on read.
-            /// Semantics described only applies to
+            /// Lock acquisition behavior depends on the isolation level in use. In
             /// [SERIALIZABLE][google.spanner.v1.TransactionOptions.IsolationLevel.SERIALIZABLE]
-            /// isolation.
+            /// isolation, reads and writes acquire necessary locks during transaction
+            /// statement execution. In
+            /// [REPEATABLE_READ][google.spanner.v1.TransactionOptions.IsolationLevel.REPEATABLE_READ]
+            /// isolation, reads that explicitly request to be locked and writes
+            /// acquire locks.
+            /// See
+            /// [Concurrency
+            /// control](https://cloud.google.com/spanner/docs/concurrency-control) for
+            /// details on the types of locks acquired at each transaction step.
             /// </summary>
             [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 1,
             /// <summary>
             /// Optimistic lock mode.
             ///
-            /// Locks for reads within the transaction are not acquired on read.
-            /// Instead the locks are acquired on a commit to validate that
-            /// read/queried data has not changed since the transaction started.
-            /// Semantics described only applies to
+            /// Lock acquisition behavior depends on the isolation level in use. In
+            /// both
             /// [SERIALIZABLE][google.spanner.v1.TransactionOptions.IsolationLevel.SERIALIZABLE]
-            /// isolation.
+            /// and
+            /// [REPEATABLE_READ][google.spanner.v1.TransactionOptions.IsolationLevel.REPEATABLE_READ]
+            /// isolation, reads and writes do not acquire locks during transaction
+            /// statement execution.
+            /// See
+            /// [Concurrency
+            /// control](https://cloud.google.com/spanner/docs/concurrency-control) for
+            /// details on how the guarantees of each isolation level are provided at
+            /// commit time.
             /// </summary>
             [pbr::OriginalName("OPTIMISTIC")] Optimistic = 2,
           }
@@ -1625,6 +1638,7 @@ namespace Google.Cloud.Spanner.V1 {
       id_ = other.id_;
       readTimestamp_ = other.readTimestamp_ != null ? other.readTimestamp_.Clone() : null;
       precommitToken_ = other.precommitToken_ != null ? other.precommitToken_.Clone() : null;
+      cacheUpdate_ = other.cacheUpdate_ != null ? other.cacheUpdate_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1697,6 +1711,26 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "cache_update" field.</summary>
+    public const int CacheUpdateFieldNumber = 5;
+    private global::Google.Cloud.Spanner.V1.CacheUpdate cacheUpdate_;
+    /// <summary>
+    /// Optional. A cache update expresses a set of changes the client should
+    /// incorporate into its location cache. The client should discard the changes
+    /// if they are older than the data it already has. This data can be obtained
+    /// in response to requests that included a `RoutingHint` field, but may also
+    /// be obtained by explicit location-fetching RPCs which may be added in the
+    /// future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.CacheUpdate CacheUpdate {
+      get { return cacheUpdate_; }
+      set {
+        cacheUpdate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1715,6 +1749,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Id != other.Id) return false;
       if (!object.Equals(ReadTimestamp, other.ReadTimestamp)) return false;
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
+      if (!object.Equals(CacheUpdate, other.CacheUpdate)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1725,6 +1760,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (readTimestamp_ != null) hash ^= ReadTimestamp.GetHashCode();
       if (precommitToken_ != null) hash ^= PrecommitToken.GetHashCode();
+      if (cacheUpdate_ != null) hash ^= CacheUpdate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1755,6 +1791,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(PrecommitToken);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1777,6 +1817,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(PrecommitToken);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1795,6 +1839,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (precommitToken_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrecommitToken);
+      }
+      if (cacheUpdate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CacheUpdate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1822,6 +1869,12 @@ namespace Google.Cloud.Spanner.V1 {
           PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
         }
         PrecommitToken.MergeFrom(other.PrecommitToken);
+      }
+      if (other.cacheUpdate_ != null) {
+        if (cacheUpdate_ == null) {
+          CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+        }
+        CacheUpdate.MergeFrom(other.CacheUpdate);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1856,6 +1909,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(PrecommitToken);
             break;
           }
+          case 42: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
+            break;
+          }
         }
       }
     #endif
@@ -1887,6 +1947,13 @@ namespace Google.Cloud.Spanner.V1 {
               PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
             }
             input.ReadMessage(PrecommitToken);
+            break;
+          }
+          case 42: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
             break;
           }
         }
