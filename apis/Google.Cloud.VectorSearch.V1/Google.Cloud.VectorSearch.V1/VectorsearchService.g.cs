@@ -7116,7 +7116,7 @@ namespace Google.Cloud.VectorSearch.V1 {
         private int minReplicaCount_;
         /// <summary>
         /// Optional. The minimum number of replicas. If not set or set to `0`,
-        /// defaults to `2`. Must be >= `2` and &lt;= `1000`.
+        /// defaults to `2`. Must be >= `1` and &lt;= `1000`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7131,9 +7131,12 @@ namespace Google.Cloud.VectorSearch.V1 {
         public const int MaxReplicaCountFieldNumber = 2;
         private int maxReplicaCount_;
         /// <summary>
-        /// Optional. The maximum number of replicas. If not set or set to `0`,
-        /// defaults to the greater of `min_replica_count` and `5`. Must be >=
+        /// Optional. The maximum number of replicas.  Must be >=
         /// `min_replica_count` and &lt;= `1000`.
+        /// For the v1beta version, if not set or set to `0`, defaults to
+        /// the greater of `min_replica_count` and `5`.
+        /// For all other versions, if not set or set to `0`, defaults to
+        /// the greater of `min_replica_count` and `2`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
