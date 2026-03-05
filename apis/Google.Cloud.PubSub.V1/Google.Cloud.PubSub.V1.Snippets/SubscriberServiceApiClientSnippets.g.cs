@@ -61,6 +61,7 @@ namespace GoogleCSharpSnippets
                     new MessageTransform(),
                 },
                 Tags = { { "", "" }, },
+                BigtableConfig = new BigtableConfig(),
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -101,6 +102,7 @@ namespace GoogleCSharpSnippets
                     new MessageTransform(),
                 },
                 Tags = { { "", "" }, },
+                BigtableConfig = new BigtableConfig(),
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
