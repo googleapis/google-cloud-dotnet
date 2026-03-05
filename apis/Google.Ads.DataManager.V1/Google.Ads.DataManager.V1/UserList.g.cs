@@ -92,37 +92,39 @@ namespace Google.Ads.DataManager.V1 {
             "dHlwZUIMCgpfa2V5X3NwYWNlQgkKB19hcHBfaWQicwoKVXNlcklkSW5mbxJQ",
             "ChBkYXRhX3NvdXJjZV90eXBlGAEgASgOMikuZ29vZ2xlLmFkcy5kYXRhbWFu",
             "YWdlci52MS5EYXRhU291cmNlVHlwZUIG4EEB4EEFSACIAQFCEwoRX2RhdGFf",
-            "c291cmNlX3R5cGUiiQIKClBhaXJJZEluZm8SIQoMcHVibGlzaGVyX2lkGAEg",
-            "ASgDQgbgQQLgQQVIAIgBARIgCg5wdWJsaXNoZXJfbmFtZRgCIAEoCUID4EEB",
-            "SAGIAQESIgoVbWF0Y2hfcmF0ZV9wZXJjZW50YWdlGAMgASgFQgPgQQMSKAob",
-            "YWR2ZXJ0aXNlcl9pZGVudGlmaWVyX2NvdW50GAQgASgDQgPgQQMSKgoVY2xl",
-            "YW5fcm9vbV9pZGVudGlmaWVyGAUgASgJQgbgQQLgQQVIAogBAUIPCg1fcHVi",
-            "bGlzaGVyX2lkQhEKD19wdWJsaXNoZXJfbmFtZUIYChZfY2xlYW5fcm9vbV9p",
-            "ZGVudGlmaWVyIu4CChNQYXJ0bmVyQXVkaWVuY2VJbmZvEnIKF3BhcnRuZXJf",
-            "YXVkaWVuY2Vfc291cmNlGAEgASgOMkQuZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
-            "ci52MS5QYXJ0bmVyQXVkaWVuY2VJbmZvLlBhcnRuZXJBdWRpZW5jZVNvdXJj",
-            "ZUIG4EEC4EEFSACIAQESIgoQY29tbWVyY2VfcGFydG5lchgCIAEoCUID4EEB",
-            "SAGIAQEijQEKFVBhcnRuZXJBdWRpZW5jZVNvdXJjZRInCiNQQVJUTkVSX0FV",
-            "RElFTkNFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhUKEUNPTU1FUkNFX0FVRElF",
-            "TkNFEAESFgoSTElORUFSX1RWX0FVRElFTkNFEAISHAoYQUdFTkNZX1BST1ZJ",
-            "REVSX0FVRElFTkNFEANCGgoYX3BhcnRuZXJfYXVkaWVuY2Vfc291cmNlQhMK",
-            "EV9jb21tZXJjZV9wYXJ0bmVyIpoCChJQc2V1ZG9ueW1vdXNJZEluZm8SVwoL",
-            "c3luY19zdGF0dXMYASABKA4yOC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
-            "LlBzZXVkb255bW91c0lkSW5mby5TeW5jU3RhdHVzQgPgQQNIAIgBARIqChVi",
-            "aWxsYWJsZV9yZWNvcmRfY291bnQYAiABKANCBuBBAeBBBUgBiAEBIlUKClN5",
-            "bmNTdGF0dXMSGwoXU1lOQ19TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdDUkVB",
-            "VEVEEAESEQoNUkVBRFlfRk9SX1VTRRACEgoKBkZBSUxFRBADQg4KDF9zeW5j",
-            "X3N0YXR1c0IYChZfYmlsbGFibGVfcmVjb3JkX2NvdW50KuABCg5EYXRhU291",
-            "cmNlVHlwZRIgChxEQVRBX1NPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASIAoc",
-            "REFUQV9TT1VSQ0VfVFlQRV9GSVJTVF9QQVJUWRABEi4KKkRBVEFfU09VUkNF",
-            "X1RZUEVfVEhJUkRfUEFSVFlfQ1JFRElUX0JVUkVBVRACEisKJ0RBVEFfU09V",
-            "UkNFX1RZUEVfVEhJUkRfUEFSVFlfVk9URVJfRklMRRADEi0KKURBVEFfU09V",
-            "UkNFX1RZUEVfVEhJUkRfUEFSVFlfUEFSVE5FUl9EQVRBEARCygEKHWNvbS5n",
-            "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQg1Vc2VyTGlzdFByb3RvUAFaQWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFn",
-            "ZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5W",
-            "McoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6",
-            "RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "c291cmNlX3R5cGUizQIKClBhaXJJZEluZm8SIQoMcHVibGlzaGVyX2lkGAEg",
+            "ASgDQgbgQQLgQQVIAIgBARIgCg5wdWJsaXNoZXJfbmFtZRgCIAEoCUID4EEC",
+            "SAGIAQESJwoVbWF0Y2hfcmF0ZV9wZXJjZW50YWdlGAMgASgFQgPgQQJIAogB",
+            "ARItChthZHZlcnRpc2VyX2lkZW50aWZpZXJfY291bnQYBCABKANCA+BBAUgD",
+            "iAEBEioKFWNsZWFuX3Jvb21faWRlbnRpZmllchgFIAEoCUIG4EEC4EEFSASI",
+            "AQFCDwoNX3B1Ymxpc2hlcl9pZEIRCg9fcHVibGlzaGVyX25hbWVCGAoWX21h",
+            "dGNoX3JhdGVfcGVyY2VudGFnZUIeChxfYWR2ZXJ0aXNlcl9pZGVudGlmaWVy",
+            "X2NvdW50QhgKFl9jbGVhbl9yb29tX2lkZW50aWZpZXIi7gIKE1BhcnRuZXJB",
+            "dWRpZW5jZUluZm8ScgoXcGFydG5lcl9hdWRpZW5jZV9zb3VyY2UYASABKA4y",
+            "RC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlBhcnRuZXJBdWRpZW5jZUlu",
+            "Zm8uUGFydG5lckF1ZGllbmNlU291cmNlQgbgQQLgQQVIAIgBARIiChBjb21t",
+            "ZXJjZV9wYXJ0bmVyGAIgASgJQgPgQQFIAYgBASKNAQoVUGFydG5lckF1ZGll",
+            "bmNlU291cmNlEicKI1BBUlRORVJfQVVESUVOQ0VfU09VUkNFX1VOU1BFQ0lG",
+            "SUVEEAASFQoRQ09NTUVSQ0VfQVVESUVOQ0UQARIWChJMSU5FQVJfVFZfQVVE",
+            "SUVOQ0UQAhIcChhBR0VOQ1lfUFJPVklERVJfQVVESUVOQ0UQA0IaChhfcGFy",
+            "dG5lcl9hdWRpZW5jZV9zb3VyY2VCEwoRX2NvbW1lcmNlX3BhcnRuZXIimgIK",
+            "ElBzZXVkb255bW91c0lkSW5mbxJXCgtzeW5jX3N0YXR1cxgBIAEoDjI4Lmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHNldWRvbnltb3VzSWRJbmZvLlN5",
+            "bmNTdGF0dXNCA+BBA0gAiAEBEioKFWJpbGxhYmxlX3JlY29yZF9jb3VudBgC",
+            "IAEoA0IG4EEB4EEFSAGIAQEiVQoKU3luY1N0YXR1cxIbChdTWU5DX1NUQVRV",
+            "U19VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQARIRCg1SRUFEWV9GT1JfVVNF",
+            "EAISCgoGRkFJTEVEEANCDgoMX3N5bmNfc3RhdHVzQhgKFl9iaWxsYWJsZV9y",
+            "ZWNvcmRfY291bnQq4AEKDkRhdGFTb3VyY2VUeXBlEiAKHERBVEFfU09VUkNF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIgChxEQVRBX1NPVVJDRV9UWVBFX0ZJUlNU",
+            "X1BBUlRZEAESLgoqREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9DUkVE",
+            "SVRfQlVSRUFVEAISKwonREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9W",
+            "T1RFUl9GSUxFEAMSLQopREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9Q",
+            "QVJUTkVSX0RBVEEQBELKAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
+            "djFCDVVzZXJMaXN0UHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
+            "bWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlH",
+            "b29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFu",
+            "YWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.DataSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,7 +135,7 @@ namespace Google.Ads.DataManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ContactIdInfo), global::Google.Ads.DataManager.V1.ContactIdInfo.Parser, new[]{ "DataSourceType", "MatchRatePercentage" }, new[]{ "DataSourceType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.MobileIdInfo), global::Google.Ads.DataManager.V1.MobileIdInfo.Parser, new[]{ "DataSourceType", "KeySpace", "AppId" }, new[]{ "DataSourceType", "KeySpace", "AppId" }, new[]{ typeof(global::Google.Ads.DataManager.V1.MobileIdInfo.Types.KeySpace) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserIdInfo), global::Google.Ads.DataManager.V1.UserIdInfo.Parser, new[]{ "DataSourceType" }, new[]{ "DataSourceType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PairIdInfo), global::Google.Ads.DataManager.V1.PairIdInfo.Parser, new[]{ "PublisherId", "PublisherName", "MatchRatePercentage", "AdvertiserIdentifierCount", "CleanRoomIdentifier" }, new[]{ "PublisherId", "PublisherName", "CleanRoomIdentifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PairIdInfo), global::Google.Ads.DataManager.V1.PairIdInfo.Parser, new[]{ "PublisherId", "PublisherName", "MatchRatePercentage", "AdvertiserIdentifierCount", "CleanRoomIdentifier" }, new[]{ "PublisherId", "PublisherName", "MatchRatePercentage", "AdvertiserIdentifierCount", "CleanRoomIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PartnerAudienceInfo), global::Google.Ads.DataManager.V1.PartnerAudienceInfo.Parser, new[]{ "PartnerAudienceSource", "CommercePartner" }, new[]{ "PartnerAudienceSource", "CommercePartner" }, new[]{ typeof(global::Google.Ads.DataManager.V1.PartnerAudienceInfo.Types.PartnerAudienceSource) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PseudonymousIdInfo), global::Google.Ads.DataManager.V1.PseudonymousIdInfo.Parser, new[]{ "SyncStatus", "BillableRecordCount" }, new[]{ "SyncStatus", "BillableRecordCount" }, new[]{ typeof(global::Google.Ads.DataManager.V1.PseudonymousIdInfo.Types.SyncStatus) }, null, null)
           }));
@@ -3087,7 +3089,7 @@ namespace Google.Ads.DataManager.V1 {
 
     private string publisherName_;
     /// <summary>
-    /// Optional. Descriptive name of the publisher to be displayed in the UI for a
+    /// Required. Descriptive name of the publisher to be displayed in the UI for a
     /// better targeting experience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3113,36 +3115,66 @@ namespace Google.Ads.DataManager.V1 {
 
     /// <summary>Field number for the "match_rate_percentage" field.</summary>
     public const int MatchRatePercentageFieldNumber = 3;
+    private readonly static int MatchRatePercentageDefaultValue = 0;
+
     private int matchRatePercentage_;
     /// <summary>
-    /// Output only. This field denotes the percentage of membership match of this
+    /// Required. This field denotes the percentage of membership match of this
     /// user list with the corresponding publisher's first party data. Must be
     /// between 0 and 100 inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MatchRatePercentage {
-      get { return matchRatePercentage_; }
+      get { if ((_hasBits0 & 2) != 0) { return matchRatePercentage_; } else { return MatchRatePercentageDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         matchRatePercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "match_rate_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMatchRatePercentage {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "match_rate_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMatchRatePercentage() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "advertiser_identifier_count" field.</summary>
     public const int AdvertiserIdentifierCountFieldNumber = 4;
+    private readonly static long AdvertiserIdentifierCountDefaultValue = 0L;
+
     private long advertiserIdentifierCount_;
     /// <summary>
-    /// Output only. The count of the advertiser's first party data records that
-    /// have been uploaded to a clean room provider. This does not signify the size
-    /// of a PAIR user list.
+    /// Optional. The count of the advertiser's first party data records that have
+    /// been uploaded to a clean room provider. This does not signify the size of a
+    /// PAIR user list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AdvertiserIdentifierCount {
-      get { return advertiserIdentifierCount_; }
+      get { if ((_hasBits0 & 4) != 0) { return advertiserIdentifierCount_; } else { return AdvertiserIdentifierCountDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         advertiserIdentifierCount_ = value;
       }
+    }
+    /// <summary>Gets whether the "advertiser_identifier_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdvertiserIdentifierCount {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "advertiser_identifier_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdvertiserIdentifierCount() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "clean_room_identifier" field.</summary>
@@ -3205,8 +3237,8 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (HasPublisherId) hash ^= PublisherId.GetHashCode();
       if (HasPublisherName) hash ^= PublisherName.GetHashCode();
-      if (MatchRatePercentage != 0) hash ^= MatchRatePercentage.GetHashCode();
-      if (AdvertiserIdentifierCount != 0L) hash ^= AdvertiserIdentifierCount.GetHashCode();
+      if (HasMatchRatePercentage) hash ^= MatchRatePercentage.GetHashCode();
+      if (HasAdvertiserIdentifierCount) hash ^= AdvertiserIdentifierCount.GetHashCode();
       if (HasCleanRoomIdentifier) hash ^= CleanRoomIdentifier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3234,11 +3266,11 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(PublisherName);
       }
-      if (MatchRatePercentage != 0) {
+      if (HasMatchRatePercentage) {
         output.WriteRawTag(24);
         output.WriteInt32(MatchRatePercentage);
       }
-      if (AdvertiserIdentifierCount != 0L) {
+      if (HasAdvertiserIdentifierCount) {
         output.WriteRawTag(32);
         output.WriteInt64(AdvertiserIdentifierCount);
       }
@@ -3264,11 +3296,11 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(PublisherName);
       }
-      if (MatchRatePercentage != 0) {
+      if (HasMatchRatePercentage) {
         output.WriteRawTag(24);
         output.WriteInt32(MatchRatePercentage);
       }
-      if (AdvertiserIdentifierCount != 0L) {
+      if (HasAdvertiserIdentifierCount) {
         output.WriteRawTag(32);
         output.WriteInt64(AdvertiserIdentifierCount);
       }
@@ -3292,10 +3324,10 @@ namespace Google.Ads.DataManager.V1 {
       if (HasPublisherName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherName);
       }
-      if (MatchRatePercentage != 0) {
+      if (HasMatchRatePercentage) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MatchRatePercentage);
       }
-      if (AdvertiserIdentifierCount != 0L) {
+      if (HasAdvertiserIdentifierCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(AdvertiserIdentifierCount);
       }
       if (HasCleanRoomIdentifier) {
@@ -3319,10 +3351,10 @@ namespace Google.Ads.DataManager.V1 {
       if (other.HasPublisherName) {
         PublisherName = other.PublisherName;
       }
-      if (other.MatchRatePercentage != 0) {
+      if (other.HasMatchRatePercentage) {
         MatchRatePercentage = other.MatchRatePercentage;
       }
-      if (other.AdvertiserIdentifierCount != 0L) {
+      if (other.HasAdvertiserIdentifierCount) {
         AdvertiserIdentifierCount = other.AdvertiserIdentifierCount;
       }
       if (other.HasCleanRoomIdentifier) {
