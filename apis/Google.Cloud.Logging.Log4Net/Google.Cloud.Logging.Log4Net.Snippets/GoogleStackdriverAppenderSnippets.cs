@@ -45,9 +45,10 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
 
         // SampleResource: log4net-template.xml
 
-        [Fact]
+        [SkippableFact]
         public void Overview()
         {
+            TestEnvironment.SkipOnRestrictedEnvironment();
             DateTime startTime = DateTime.UtcNow;
             string projectId = _fixture.ProjectId;
             string logId = _fixture.LogId + $"-{Guid.NewGuid()}";
@@ -120,9 +121,10 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
 
         // SampleResource: log4net-custom-labels-template.xml
 
-        [Fact]
+        [SkippableFact]
         public void CustomLabels()
         {
+            TestEnvironment.SkipOnRestrictedEnvironment();
             DateTime startTime = DateTime.UtcNow;
             string projectId = _fixture.ProjectId;
             string logId = _fixture.LogId + $"-{Guid.NewGuid()}";
