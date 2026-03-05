@@ -1,11 +1,5 @@
 # Version history
 
-## Version 3.67.0, released 2026-03-04
-
-### New features
-
-- Add AskContexts and AsyncRetrieveContexts APIs to VertexRagService
-
 ## Version 3.66.0, released 2026-02-25
 
 ### New features
