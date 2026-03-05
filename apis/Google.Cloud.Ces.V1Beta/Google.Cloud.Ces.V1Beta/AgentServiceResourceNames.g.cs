@@ -740,4 +740,16 @@ namespace Google.Cloud.Ces.V1Beta
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetSecuritySettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::SecuritySettingsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::SecuritySettingsName SecuritySettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::SecuritySettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

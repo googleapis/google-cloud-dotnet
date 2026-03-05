@@ -85,6 +85,12 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ImportAppRequest> __Marshaller_google_cloud_ces_v1beta_ImportAppRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ImportAppRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest> __Marshaller_google_cloud_ces_v1beta_GetSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.SecuritySettings> __Marshaller_google_cloud_ces_v1beta_SecuritySettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.SecuritySettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest> __Marshaller_google_cloud_ces_v1beta_UpdateSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ListAgentsRequest> __Marshaller_google_cloud_ces_v1beta_ListAgentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ListAgentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ListAgentsResponse> __Marshaller_google_cloud_ces_v1beta_ListAgentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ListAgentsResponse.Parser));
@@ -260,6 +266,22 @@ namespace Google.Cloud.Ces.V1Beta {
         "ImportApp",
         __Marshaller_google_cloud_ces_v1beta_ImportAppRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings> __Method_GetSecuritySettings = new grpc::Method<global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSecuritySettings",
+        __Marshaller_google_cloud_ces_v1beta_GetSecuritySettingsRequest,
+        __Marshaller_google_cloud_ces_v1beta_SecuritySettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings> __Method_UpdateSecuritySettings = new grpc::Method<global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSecuritySettings",
+        __Marshaller_google_cloud_ces_v1beta_UpdateSecuritySettingsRequest,
+        __Marshaller_google_cloud_ces_v1beta_SecuritySettings);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.ListAgentsRequest, global::Google.Cloud.Ces.V1Beta.ListAgentsResponse> __Method_ListAgents = new grpc::Method<global::Google.Cloud.Ces.V1Beta.ListAgentsRequest, global::Google.Cloud.Ces.V1Beta.ListAgentsResponse>(
@@ -679,6 +701,30 @@ namespace Google.Cloud.Ces.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportApp(global::Google.Cloud.Ces.V1Beta.ImportAppRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.SecuritySettings> GetSecuritySettings(global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.SecuritySettings> UpdateSecuritySettings(global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1541,6 +1587,102 @@ namespace Google.Cloud.Ces.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportAppAsync(global::Google.Cloud.Ces.V1Beta.ImportAppRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportApp, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.SecuritySettings GetSecuritySettings(global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.SecuritySettings GetSecuritySettings(global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSecuritySettings, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.SecuritySettings> GetSecuritySettingsAsync(global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.SecuritySettings> GetSecuritySettingsAsync(global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSecuritySettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.SecuritySettings UpdateSecuritySettings(global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.SecuritySettings UpdateSecuritySettings(global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSecuritySettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.SecuritySettings> UpdateSecuritySettingsAsync(global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the security settings for the project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.SecuritySettings> UpdateSecuritySettingsAsync(global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSecuritySettings, null, options, request);
       }
       /// <summary>
       /// Lists agents in the given app.
@@ -3539,6 +3681,8 @@ namespace Google.Cloud.Ces.V1Beta {
           .AddMethod(__Method_DeleteApp, serviceImpl.DeleteApp)
           .AddMethod(__Method_ExportApp, serviceImpl.ExportApp)
           .AddMethod(__Method_ImportApp, serviceImpl.ImportApp)
+          .AddMethod(__Method_GetSecuritySettings, serviceImpl.GetSecuritySettings)
+          .AddMethod(__Method_UpdateSecuritySettings, serviceImpl.UpdateSecuritySettings)
           .AddMethod(__Method_ListAgents, serviceImpl.ListAgents)
           .AddMethod(__Method_GetAgent, serviceImpl.GetAgent)
           .AddMethod(__Method_CreateAgent, serviceImpl.CreateAgent)
@@ -3596,6 +3740,8 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceBinder.AddMethod(__Method_DeleteApp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.DeleteAppRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteApp));
       serviceBinder.AddMethod(__Method_ExportApp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ExportAppRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportApp));
       serviceBinder.AddMethod(__Method_ImportApp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ImportAppRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportApp));
+      serviceBinder.AddMethod(__Method_GetSecuritySettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings>(serviceImpl.GetSecuritySettings));
+      serviceBinder.AddMethod(__Method_UpdateSecuritySettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest, global::Google.Cloud.Ces.V1Beta.SecuritySettings>(serviceImpl.UpdateSecuritySettings));
       serviceBinder.AddMethod(__Method_ListAgents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ListAgentsRequest, global::Google.Cloud.Ces.V1Beta.ListAgentsResponse>(serviceImpl.ListAgents));
       serviceBinder.AddMethod(__Method_GetAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GetAgentRequest, global::Google.Cloud.Ces.V1Beta.Agent>(serviceImpl.GetAgent));
       serviceBinder.AddMethod(__Method_CreateAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.CreateAgentRequest, global::Google.Cloud.Ces.V1Beta.Agent>(serviceImpl.CreateAgent));

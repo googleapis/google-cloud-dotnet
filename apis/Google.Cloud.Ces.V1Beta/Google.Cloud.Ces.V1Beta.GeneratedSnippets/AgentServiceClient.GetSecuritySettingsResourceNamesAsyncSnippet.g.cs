@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_sync]
+    // [START ces_v1beta_generated_AgentService_GetSecuritySettings_async_flattened_resourceNames]
     using Google.Cloud.Ces.V1Beta;
-    using Google.Protobuf;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedEvaluationServiceClientSnippets
+    public sealed partial class GeneratedAgentServiceClientSnippets
     {
-        /// <summary>Snippet for UploadEvaluationAudio</summary>
+        /// <summary>Snippet for GetSecuritySettingsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void UploadEvaluationAudioRequestObject()
+        public async Task GetSecuritySettingsResourceNamesAsync()
         {
             // Create client
-            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UploadEvaluationAudioRequest request = new UploadEvaluationAudioRequest
-            {
-                EvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
-                AudioContent = ByteString.Empty,
-                PreviousAudioGcsUri = "",
-            };
+            SecuritySettingsName name = SecuritySettingsName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(request);
+            SecuritySettings response = await agentServiceClient.GetSecuritySettingsAsync(name);
         }
     }
-    // [END ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_sync]
+    // [END ces_v1beta_generated_AgentService_GetSecuritySettings_async_flattened_resourceNames]
 }

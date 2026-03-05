@@ -172,6 +172,12 @@
                 "GetGuardrailAsync"
               ]
             },
+            "GetSecuritySettings": {
+              "methods": [
+                "GetSecuritySettings",
+                "GetSecuritySettingsAsync"
+              ]
+            },
             "GetTool": {
               "methods": [
                 "GetTool",
@@ -284,6 +290,12 @@
               "methods": [
                 "UpdateGuardrail",
                 "UpdateGuardrailAsync"
+              ]
+            },
+            "UpdateSecuritySettings": {
+              "methods": [
+                "UpdateSecuritySettings",
+                "UpdateSecuritySettingsAsync"
               ]
             },
             "UpdateTool": {

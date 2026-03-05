@@ -36,10 +36,10 @@ namespace GoogleCSharpSnippets
             // Create client
             EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string app = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]";
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(app, audioContent);
+            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(name, audioContent);
         }
     }
     // [END ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_async_flattened]

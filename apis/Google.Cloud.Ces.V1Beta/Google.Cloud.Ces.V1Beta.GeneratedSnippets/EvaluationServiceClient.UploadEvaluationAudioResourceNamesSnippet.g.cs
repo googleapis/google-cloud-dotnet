@@ -35,10 +35,10 @@ namespace GoogleCSharpSnippets
             // Create client
             EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
             // Initialize request argument(s)
-            AppName app = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            EvaluationName name = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]");
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(app, audioContent);
+            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(name, audioContent);
         }
     }
     // [END ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_sync_flattened_resourceNames]

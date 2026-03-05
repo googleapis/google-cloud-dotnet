@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_sync]
+    // [START ces_v1beta_generated_AgentService_UpdateSecuritySettings_sync_flattened]
     using Google.Cloud.Ces.V1Beta;
-    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
 
-    public sealed partial class GeneratedEvaluationServiceClientSnippets
+    public sealed partial class GeneratedAgentServiceClientSnippets
     {
-        /// <summary>Snippet for UploadEvaluationAudio</summary>
+        /// <summary>Snippet for UpdateSecuritySettings</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void UploadEvaluationAudioRequestObject()
+        public void UpdateSecuritySettings()
         {
             // Create client
-            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
             // Initialize request argument(s)
-            UploadEvaluationAudioRequest request = new UploadEvaluationAudioRequest
-            {
-                EvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
-                AudioContent = ByteString.Empty,
-                PreviousAudioGcsUri = "",
-            };
+            SecuritySettings securitySettings = new SecuritySettings();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(request);
+            SecuritySettings response = agentServiceClient.UpdateSecuritySettings(securitySettings, updateMask);
         }
     }
-    // [END ces_v1beta_generated_EvaluationService_UploadEvaluationAudio_sync]
+    // [END ces_v1beta_generated_AgentService_UpdateSecuritySettings_sync_flattened]
 }

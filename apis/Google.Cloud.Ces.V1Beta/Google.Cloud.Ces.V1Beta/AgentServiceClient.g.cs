@@ -60,6 +60,8 @@ namespace Google.Cloud.Ces.V1Beta
             ExportAppOperationsSettings = existing.ExportAppOperationsSettings.Clone();
             ImportAppSettings = existing.ImportAppSettings;
             ImportAppOperationsSettings = existing.ImportAppOperationsSettings.Clone();
+            GetSecuritySettingsSettings = existing.GetSecuritySettingsSettings;
+            UpdateSecuritySettingsSettings = existing.UpdateSecuritySettingsSettings;
             ListAgentsSettings = existing.ListAgentsSettings;
             GetAgentSettings = existing.GetAgentSettings;
             CreateAgentSettings = existing.CreateAgentSettings;
@@ -327,6 +329,48 @@ namespace Google.Cloud.Ces.V1Beta
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentServiceClient.GetSecuritySettings</c> and <c>AgentServiceClient.GetSecuritySettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSecuritySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentServiceClient.UpdateSecuritySettings</c> and <c>AgentServiceClient.UpdateSecuritySettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSecuritySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2507,6 +2551,197 @@ namespace Google.Cloud.Ces.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<ImportAppResponse, OperationMetadata>> ImportAppAsync(gagr::LocationName parent, string displayName, string appId, st::CancellationToken cancellationToken) =>
             ImportAppAsync(parent, displayName, appId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecuritySettings GetSecuritySettings(GetSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(GetSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(GetSecuritySettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecuritySettings GetSecuritySettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecuritySettings(new GetSecuritySettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecuritySettingsAsync(new GetSecuritySettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSecuritySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecuritySettings GetSecuritySettings(SecuritySettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecuritySettings(new GetSecuritySettingsRequest
+            {
+                SecuritySettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(SecuritySettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecuritySettingsAsync(new GetSecuritySettingsRequest
+            {
+                SecuritySettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the security settings to retrieve.
+        /// Format: `projects/{project}/locations/{location}/securitySettings`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> GetSecuritySettingsAsync(SecuritySettingsName name, st::CancellationToken cancellationToken) =>
+            GetSecuritySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecuritySettings UpdateSecuritySettings(UpdateSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> UpdateSecuritySettingsAsync(UpdateSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> UpdateSecuritySettingsAsync(UpdateSecuritySettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="securitySettings">
+        /// Required. The security settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to control which fields get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecuritySettings UpdateSecuritySettings(SecuritySettings securitySettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecuritySettings(new UpdateSecuritySettingsRequest
+            {
+                SecuritySettings = gax::GaxPreconditions.CheckNotNull(securitySettings, nameof(securitySettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="securitySettings">
+        /// Required. The security settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to control which fields get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> UpdateSecuritySettingsAsync(SecuritySettings securitySettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecuritySettingsAsync(new UpdateSecuritySettingsRequest
+            {
+                SecuritySettings = gax::GaxPreconditions.CheckNotNull(securitySettings, nameof(securitySettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="securitySettings">
+        /// Required. The security settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to control which fields get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecuritySettings> UpdateSecuritySettingsAsync(SecuritySettings securitySettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSecuritySettingsAsync(securitySettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists agents in the given app.
@@ -8319,6 +8554,10 @@ namespace Google.Cloud.Ces.V1Beta
 
         private readonly gaxgrpc::ApiCall<ImportAppRequest, lro::Operation> _callImportApp;
 
+        private readonly gaxgrpc::ApiCall<GetSecuritySettingsRequest, SecuritySettings> _callGetSecuritySettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateSecuritySettingsRequest, SecuritySettings> _callUpdateSecuritySettings;
+
         private readonly gaxgrpc::ApiCall<ListAgentsRequest, ListAgentsResponse> _callListAgents;
 
         private readonly gaxgrpc::ApiCall<GetAgentRequest, Agent> _callGetAgent;
@@ -8444,6 +8683,12 @@ namespace Google.Cloud.Ces.V1Beta
             _callImportApp = clientHelper.BuildApiCall<ImportAppRequest, lro::Operation>("ImportApp", grpcClient.ImportAppAsync, grpcClient.ImportApp, effectiveSettings.ImportAppSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportApp);
             Modify_ImportAppApiCall(ref _callImportApp);
+            _callGetSecuritySettings = clientHelper.BuildApiCall<GetSecuritySettingsRequest, SecuritySettings>("GetSecuritySettings", grpcClient.GetSecuritySettingsAsync, grpcClient.GetSecuritySettings, effectiveSettings.GetSecuritySettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSecuritySettings);
+            Modify_GetSecuritySettingsApiCall(ref _callGetSecuritySettings);
+            _callUpdateSecuritySettings = clientHelper.BuildApiCall<UpdateSecuritySettingsRequest, SecuritySettings>("UpdateSecuritySettings", grpcClient.UpdateSecuritySettingsAsync, grpcClient.UpdateSecuritySettings, effectiveSettings.UpdateSecuritySettingsSettings).WithGoogleRequestParam("security_settings.name", request => request.SecuritySettings?.Name);
+            Modify_ApiCall(ref _callUpdateSecuritySettings);
+            Modify_UpdateSecuritySettingsApiCall(ref _callUpdateSecuritySettings);
             _callListAgents = clientHelper.BuildApiCall<ListAgentsRequest, ListAgentsResponse>("ListAgents", grpcClient.ListAgentsAsync, grpcClient.ListAgents, effectiveSettings.ListAgentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAgents);
             Modify_ListAgentsApiCall(ref _callListAgents);
@@ -8586,6 +8831,10 @@ namespace Google.Cloud.Ces.V1Beta
 
         partial void Modify_ImportAppApiCall(ref gaxgrpc::ApiCall<ImportAppRequest, lro::Operation> call);
 
+        partial void Modify_GetSecuritySettingsApiCall(ref gaxgrpc::ApiCall<GetSecuritySettingsRequest, SecuritySettings> call);
+
+        partial void Modify_UpdateSecuritySettingsApiCall(ref gaxgrpc::ApiCall<UpdateSecuritySettingsRequest, SecuritySettings> call);
+
         partial void Modify_ListAgentsApiCall(ref gaxgrpc::ApiCall<ListAgentsRequest, ListAgentsResponse> call);
 
         partial void Modify_GetAgentApiCall(ref gaxgrpc::ApiCall<GetAgentRequest, Agent> call);
@@ -8689,6 +8938,10 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_ExportAppRequest(ref ExportAppRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportAppRequest(ref ImportAppRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSecuritySettingsRequest(ref GetSecuritySettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSecuritySettingsRequest(ref UpdateSecuritySettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAgentsRequest(ref ListAgentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8950,6 +9203,54 @@ namespace Google.Cloud.Ces.V1Beta
         {
             Modify_ImportAppRequest(ref request, ref callSettings);
             return new lro::Operation<ImportAppResponse, OperationMetadata>(await _callImportApp.Async(request, callSettings).ConfigureAwait(false), ImportAppOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecuritySettings GetSecuritySettings(GetSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecuritySettingsRequest(ref request, ref callSettings);
+            return _callGetSecuritySettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecuritySettings> GetSecuritySettingsAsync(GetSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecuritySettingsRequest(ref request, ref callSettings);
+            return _callGetSecuritySettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecuritySettings UpdateSecuritySettings(UpdateSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecuritySettingsRequest(ref request, ref callSettings);
+            return _callUpdateSecuritySettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the security settings for the project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecuritySettings> UpdateSecuritySettingsAsync(UpdateSecuritySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecuritySettingsRequest(ref request, ref callSettings);
+            return _callUpdateSecuritySettings.Async(request, callSettings);
         }
 
         /// <summary>

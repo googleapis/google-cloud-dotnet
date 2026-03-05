@@ -290,11 +290,13 @@ namespace Google.Cloud.Ces.V1Beta
 
     public partial class UploadEvaluationAudioRequest
     {
-        /// <summary><see cref="AppName"/>-typed view over the <see cref="App"/> resource name property.</summary>
-        public AppName AppAsAppName
+        /// <summary>
+        /// <see cref="gccv::EvaluationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::EvaluationName EvaluationName
         {
-            get => string.IsNullOrEmpty(App) ? null : AppName.Parse(App, allowUnparsed: true);
-            set => App = value?.ToString() ?? "";
+            get => string.IsNullOrEmpty(Name) ? null : gccv::EvaluationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

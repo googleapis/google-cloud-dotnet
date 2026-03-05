@@ -38,8 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UploadEvaluationAudioRequest request = new UploadEvaluationAudioRequest
             {
-                AppAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                EvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
                 AudioContent = ByteString.Empty,
+                PreviousAudioGcsUri = "",
             };
             // Make the request
             UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(request);
