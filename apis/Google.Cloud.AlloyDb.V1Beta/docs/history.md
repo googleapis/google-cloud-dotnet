@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta16, released 2026-03-05
+
+### New features
+
+- Add a new field to support Dataplex integration configuration
+
 ## Version 1.0.0-beta15, released 2026-01-05
 
 ### New features
