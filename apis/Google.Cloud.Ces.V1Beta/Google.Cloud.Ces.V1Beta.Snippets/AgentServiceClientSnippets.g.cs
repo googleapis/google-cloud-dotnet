@@ -1348,6 +1348,157 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSecuritySettings</summary>
+        public void GetSecuritySettingsRequestObject()
+        {
+            // Snippet: GetSecuritySettings(GetSecuritySettingsRequest, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
+            {
+                SecuritySettingsName = SecuritySettingsName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            SecuritySettings response = agentServiceClient.GetSecuritySettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecuritySettingsAsync</summary>
+        public async Task GetSecuritySettingsRequestObjectAsync()
+        {
+            // Snippet: GetSecuritySettingsAsync(GetSecuritySettingsRequest, CallSettings)
+            // Additional: GetSecuritySettingsAsync(GetSecuritySettingsRequest, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSecuritySettingsRequest request = new GetSecuritySettingsRequest
+            {
+                SecuritySettingsName = SecuritySettingsName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            SecuritySettings response = await agentServiceClient.GetSecuritySettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecuritySettings</summary>
+        public void GetSecuritySettings()
+        {
+            // Snippet: GetSecuritySettings(string, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/securitySettings";
+            // Make the request
+            SecuritySettings response = agentServiceClient.GetSecuritySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecuritySettingsAsync</summary>
+        public async Task GetSecuritySettingsAsync()
+        {
+            // Snippet: GetSecuritySettingsAsync(string, CallSettings)
+            // Additional: GetSecuritySettingsAsync(string, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/securitySettings";
+            // Make the request
+            SecuritySettings response = await agentServiceClient.GetSecuritySettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecuritySettings</summary>
+        public void GetSecuritySettingsResourceNames()
+        {
+            // Snippet: GetSecuritySettings(SecuritySettingsName, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            SecuritySettingsName name = SecuritySettingsName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            SecuritySettings response = agentServiceClient.GetSecuritySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecuritySettingsAsync</summary>
+        public async Task GetSecuritySettingsResourceNamesAsync()
+        {
+            // Snippet: GetSecuritySettingsAsync(SecuritySettingsName, CallSettings)
+            // Additional: GetSecuritySettingsAsync(SecuritySettingsName, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SecuritySettingsName name = SecuritySettingsName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            SecuritySettings response = await agentServiceClient.GetSecuritySettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecuritySettings</summary>
+        public void UpdateSecuritySettingsRequestObject()
+        {
+            // Snippet: UpdateSecuritySettings(UpdateSecuritySettingsRequest, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
+            {
+                SecuritySettings = new SecuritySettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SecuritySettings response = agentServiceClient.UpdateSecuritySettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecuritySettingsAsync</summary>
+        public async Task UpdateSecuritySettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateSecuritySettingsAsync(UpdateSecuritySettingsRequest, CallSettings)
+            // Additional: UpdateSecuritySettingsAsync(UpdateSecuritySettingsRequest, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSecuritySettingsRequest request = new UpdateSecuritySettingsRequest
+            {
+                SecuritySettings = new SecuritySettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SecuritySettings response = await agentServiceClient.UpdateSecuritySettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecuritySettings</summary>
+        public void UpdateSecuritySettings()
+        {
+            // Snippet: UpdateSecuritySettings(SecuritySettings, FieldMask, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            SecuritySettings securitySettings = new SecuritySettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecuritySettings response = agentServiceClient.UpdateSecuritySettings(securitySettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecuritySettingsAsync</summary>
+        public async Task UpdateSecuritySettingsAsync()
+        {
+            // Snippet: UpdateSecuritySettingsAsync(SecuritySettings, FieldMask, CallSettings)
+            // Additional: UpdateSecuritySettingsAsync(SecuritySettings, FieldMask, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SecuritySettings securitySettings = new SecuritySettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecuritySettings response = await agentServiceClient.UpdateSecuritySettingsAsync(securitySettings, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListAgents</summary>
         public void ListAgentsRequestObject()
         {

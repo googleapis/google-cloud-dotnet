@@ -2235,6 +2235,493 @@
       ]
     },
     {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_sync",
+      "title": "GetSecuritySettingsRequestObject",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "AgentServiceClient.GetSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_async",
+      "title": "GetSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "AgentServiceClient.GetSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GetSecuritySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.SecuritySettings>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_sync_flattened",
+      "title": "GetSecuritySettings",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "AgentServiceClient.GetSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_async_flattened",
+      "title": "GetSecuritySettingsAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "AgentServiceClient.GetSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.SecuritySettings>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_sync_flattened_resourceNames",
+      "title": "GetSecuritySettingsResourceNames",
+      "description": "Snippet for GetSecuritySettings",
+      "file": "AgentServiceClient.GetSecuritySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettings",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.SecuritySettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GetSecuritySettings_async_flattened_resourceNames",
+      "title": "GetSecuritySettingsResourceNamesAsync",
+      "description": "Snippet for GetSecuritySettingsAsync",
+      "file": "AgentServiceClient.GetSecuritySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GetSecuritySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.SecuritySettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.SecuritySettings>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GetSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GetSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateSecuritySettings_sync",
+      "title": "UpdateSecuritySettingsRequestObject",
+      "description": "Snippet for UpdateSecuritySettings",
+      "file": "AgentServiceClient.UpdateSecuritySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettings",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateSecuritySettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateSecuritySettings_async",
+      "title": "UpdateSecuritySettingsRequestObjectAsync",
+      "description": "Snippet for UpdateSecuritySettingsAsync",
+      "file": "AgentServiceClient.UpdateSecuritySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateSecuritySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.UpdateSecuritySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.SecuritySettings>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateSecuritySettings_sync_flattened",
+      "title": "UpdateSecuritySettings",
+      "description": "Snippet for UpdateSecuritySettings",
+      "file": "AgentServiceClient.UpdateSecuritySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettings",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateSecuritySettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+            "name": "securitySettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateSecuritySettings_async_flattened",
+      "title": "UpdateSecuritySettingsAsync",
+      "description": "Snippet for UpdateSecuritySettingsAsync",
+      "file": "AgentServiceClient.UpdateSecuritySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecuritySettingsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateSecuritySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.SecuritySettings",
+            "name": "securitySettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.SecuritySettings>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSecuritySettings",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateSecuritySettings",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "ces_v1beta_generated_AgentService_ListAgents_sync",
       "title": "ListAgentsRequestObject",
       "description": "Snippet for ListAgents",
@@ -15734,12 +16221,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -15783,12 +16270,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -15805,7 +16292,7 @@
         "parameters": [
           {
             "type": "System.String",
-            "name": "app"
+            "name": "name"
           },
           {
             "type": "Google.Protobuf.ByteString",
@@ -15857,7 +16344,7 @@
         "parameters": [
           {
             "type": "System.String",
-            "name": "app"
+            "name": "name"
           },
           {
             "type": "Google.Protobuf.ByteString",
@@ -15907,8 +16394,8 @@
         "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.UploadEvaluationAudio",
         "parameters": [
           {
-            "type": "Google.Cloud.Ces.V1Beta.AppName",
-            "name": "app"
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationName",
+            "name": "name"
           },
           {
             "type": "Google.Protobuf.ByteString",
@@ -15959,8 +16446,8 @@
         "async": true,
         "parameters": [
           {
-            "type": "Google.Cloud.Ces.V1Beta.AppName",
-            "name": "app"
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationName",
+            "name": "name"
           },
           {
             "type": "Google.Protobuf.ByteString",

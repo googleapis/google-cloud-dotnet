@@ -253,8 +253,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UploadEvaluationAudioRequest request = new UploadEvaluationAudioRequest
             {
-                AppAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                EvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
                 AudioContent = ByteString.Empty,
+                PreviousAudioGcsUri = "",
             };
             // Make the request
             UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(request);
@@ -271,8 +272,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UploadEvaluationAudioRequest request = new UploadEvaluationAudioRequest
             {
-                AppAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                EvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
                 AudioContent = ByteString.Empty,
+                PreviousAudioGcsUri = "",
             };
             // Make the request
             UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(request);
@@ -286,10 +288,10 @@ namespace GoogleCSharpSnippets
             // Create client
             EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
             // Initialize request argument(s)
-            string app = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]";
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(app, audioContent);
+            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(name, audioContent);
             // End snippet
         }
 
@@ -301,39 +303,39 @@ namespace GoogleCSharpSnippets
             // Create client
             EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string app = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]";
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(app, audioContent);
+            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(name, audioContent);
             // End snippet
         }
 
         /// <summary>Snippet for UploadEvaluationAudio</summary>
         public void UploadEvaluationAudioResourceNames()
         {
-            // Snippet: UploadEvaluationAudio(AppName, ByteString, CallSettings)
+            // Snippet: UploadEvaluationAudio(EvaluationName, ByteString, CallSettings)
             // Create client
             EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
             // Initialize request argument(s)
-            AppName app = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            EvaluationName name = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]");
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(app, audioContent);
+            UploadEvaluationAudioResponse response = evaluationServiceClient.UploadEvaluationAudio(name, audioContent);
             // End snippet
         }
 
         /// <summary>Snippet for UploadEvaluationAudioAsync</summary>
         public async Task UploadEvaluationAudioResourceNamesAsync()
         {
-            // Snippet: UploadEvaluationAudioAsync(AppName, ByteString, CallSettings)
-            // Additional: UploadEvaluationAudioAsync(AppName, ByteString, CancellationToken)
+            // Snippet: UploadEvaluationAudioAsync(EvaluationName, ByteString, CallSettings)
+            // Additional: UploadEvaluationAudioAsync(EvaluationName, ByteString, CancellationToken)
             // Create client
             EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AppName app = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            EvaluationName name = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]");
             ByteString audioContent = ByteString.Empty;
             // Make the request
-            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(app, audioContent);
+            UploadEvaluationAudioResponse response = await evaluationServiceClient.UploadEvaluationAudioAsync(name, audioContent);
             // End snippet
         }
 

@@ -1170,9 +1170,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1181,10 +1182,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual UploadEvaluationAudioResponse UploadEvaluationAudio(string app, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual UploadEvaluationAudioResponse UploadEvaluationAudio(string name, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
             UploadEvaluationAudio(new UploadEvaluationAudioRequest
             {
-                App = gax::GaxPreconditions.CheckNotNullOrEmpty(app, nameof(app)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 AudioContent = gax::GaxPreconditions.CheckNotNull(audioContent, nameof(audioContent)),
             }, callSettings);
 
@@ -1194,9 +1195,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1205,10 +1207,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(string app, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(string name, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
             UploadEvaluationAudioAsync(new UploadEvaluationAudioRequest
             {
-                App = gax::GaxPreconditions.CheckNotNullOrEmpty(app, nameof(app)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 AudioContent = gax::GaxPreconditions.CheckNotNull(audioContent, nameof(audioContent)),
             }, callSettings);
 
@@ -1218,9 +1220,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1229,8 +1232,8 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(string app, proto::ByteString audioContent, st::CancellationToken cancellationToken) =>
-            UploadEvaluationAudioAsync(app, audioContent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(string name, proto::ByteString audioContent, st::CancellationToken cancellationToken) =>
+            UploadEvaluationAudioAsync(name, audioContent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Uploads audio for use in Golden Evaluations. Stores the audio in the Cloud
@@ -1238,9 +1241,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1249,10 +1253,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual UploadEvaluationAudioResponse UploadEvaluationAudio(AppName app, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual UploadEvaluationAudioResponse UploadEvaluationAudio(EvaluationName name, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
             UploadEvaluationAudio(new UploadEvaluationAudioRequest
             {
-                AppAsAppName = gax::GaxPreconditions.CheckNotNull(app, nameof(app)),
+                EvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 AudioContent = gax::GaxPreconditions.CheckNotNull(audioContent, nameof(audioContent)),
             }, callSettings);
 
@@ -1262,9 +1266,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1273,10 +1278,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(AppName app, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(EvaluationName name, proto::ByteString audioContent, gaxgrpc::CallSettings callSettings = null) =>
             UploadEvaluationAudioAsync(new UploadEvaluationAudioRequest
             {
-                AppAsAppName = gax::GaxPreconditions.CheckNotNull(app, nameof(app)),
+                EvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 AudioContent = gax::GaxPreconditions.CheckNotNull(audioContent, nameof(audioContent)),
             }, callSettings);
 
@@ -1286,9 +1291,10 @@ namespace Google.Cloud.Ces.V1Beta
         /// 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and
         /// returns a transcript.
         /// </summary>
-        /// <param name="app">
-        /// Required. The resource name of the App for which to upload the evaluation
-        /// audio. Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// <param name="name">
+        /// Required. The resource name of the Evaluation for which to upload the
+        /// evaluation audio. Format:
+        /// `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
         /// </param>
         /// <param name="audioContent">
         /// Required. The raw audio bytes.
@@ -1297,8 +1303,8 @@ namespace Google.Cloud.Ces.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(AppName app, proto::ByteString audioContent, st::CancellationToken cancellationToken) =>
-            UploadEvaluationAudioAsync(app, audioContent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<UploadEvaluationAudioResponse> UploadEvaluationAudioAsync(EvaluationName name, proto::ByteString audioContent, st::CancellationToken cancellationToken) =>
+            UploadEvaluationAudioAsync(name, audioContent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an evaluation.
@@ -5470,7 +5476,7 @@ namespace Google.Cloud.Ces.V1Beta
             _callRunEvaluation = clientHelper.BuildApiCall<RunEvaluationRequest, lro::Operation>("RunEvaluation", grpcClient.RunEvaluationAsync, grpcClient.RunEvaluation, effectiveSettings.RunEvaluationSettings).WithGoogleRequestParam("app", request => request.App);
             Modify_ApiCall(ref _callRunEvaluation);
             Modify_RunEvaluationApiCall(ref _callRunEvaluation);
-            _callUploadEvaluationAudio = clientHelper.BuildApiCall<UploadEvaluationAudioRequest, UploadEvaluationAudioResponse>("UploadEvaluationAudio", grpcClient.UploadEvaluationAudioAsync, grpcClient.UploadEvaluationAudio, effectiveSettings.UploadEvaluationAudioSettings).WithGoogleRequestParam("app", request => request.App);
+            _callUploadEvaluationAudio = clientHelper.BuildApiCall<UploadEvaluationAudioRequest, UploadEvaluationAudioResponse>("UploadEvaluationAudio", grpcClient.UploadEvaluationAudioAsync, grpcClient.UploadEvaluationAudio, effectiveSettings.UploadEvaluationAudioSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUploadEvaluationAudio);
             Modify_UploadEvaluationAudioApiCall(ref _callUploadEvaluationAudio);
             _callCreateEvaluation = clientHelper.BuildApiCall<CreateEvaluationRequest, Evaluation>("CreateEvaluation", grpcClient.CreateEvaluationAsync, grpcClient.CreateEvaluation, effectiveSettings.CreateEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);

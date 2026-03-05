@@ -68,6 +68,7 @@ namespace Google.Cloud.Ces.V1Beta
         {
             yield return AgentReflection.Descriptor;
             yield return AgentServiceReflection.Descriptor;
+            yield return AgentToolReflection.Descriptor;
             yield return AgentTransfersReflection.Descriptor;
             yield return AppReflection.Descriptor;
             yield return AppVersionReflection.Descriptor;
@@ -99,6 +100,7 @@ namespace Google.Cloud.Ces.V1Beta
             yield return PythonFunctionReflection.Descriptor;
             yield return SchemaReflection.Descriptor;
             yield return SearchSuggestionsReflection.Descriptor;
+            yield return SecuritySettingsReflection.Descriptor;
             yield return SessionServiceReflection.Descriptor;
             yield return SystemToolReflection.Descriptor;
             yield return ToolReflection.Descriptor;
