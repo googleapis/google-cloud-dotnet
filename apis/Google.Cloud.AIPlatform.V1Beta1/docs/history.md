@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta73, released 2026-03-09
+
+### New features
+
+- Add custom session id field to create session v1beta1
+- Add custom memory id field to create memory v1beta1
+- Add raw_event field to event proto v1beta1
+
 ## Version 1.0.0-beta72, released 2026-03-05
 
 ### New features
