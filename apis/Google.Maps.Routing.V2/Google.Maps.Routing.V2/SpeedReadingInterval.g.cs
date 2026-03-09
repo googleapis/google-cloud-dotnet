@@ -417,15 +417,15 @@ namespace Google.Maps.Routing.V2 {
         /// </summary>
         [pbr::OriginalName("SPEED_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Normal speed, no slowdown is detected.
+        /// Normal speed, no traffic delays.
         /// </summary>
         [pbr::OriginalName("NORMAL")] Normal = 1,
         /// <summary>
-        /// Slowdown detected, but no traffic jam formed.
+        /// Slowdown detected, medium amount of traffic.
         /// </summary>
         [pbr::OriginalName("SLOW")] Slow = 2,
         /// <summary>
-        /// Traffic jam detected.
+        /// Traffic delays.
         /// </summary>
         [pbr::OriginalName("TRAFFIC_JAM")] TrafficJam = 3,
       }
