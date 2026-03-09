@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-03-09
+
+### New features
+
+- Deprecate INVALID_COUNTRY_CODE and add MEMBERSHIP_DURATION_TOO_LONG to the ErrorReason enum
+
+### Bug fixes
+
+- Update publisher_name in PairIdInfo to be required
+- Update match_rate_percentage in PairIdInfo to be required
+- Feat: update advertiser_identifier_count in PairIdInfo to be optional
+
+### Documentation improvements
+
+- Update filter field documentation to clarify case requirements and improve examples
+
 ## Version 1.0.0-beta04, released 2026-02-23
 
 ### New features
