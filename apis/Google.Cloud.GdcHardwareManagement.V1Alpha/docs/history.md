@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha08, released 2026-03-09
+
+### New features
+
+- Add `OFFLINE` state to Zone resources
+
 ## Version 1.0.0-alpha07, released 2025-11-05
 
 ### New features

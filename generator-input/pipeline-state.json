@@ -1713,12 +1713,12 @@
         },
         {
             "id": "Google.Cloud.GdcHardwareManagement.V1Alpha",
-            "currentVersion": "1.0.0-alpha07",
+            "currentVersion": "1.0.0-alpha08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T17:06:43.141971012Z",
+            "releaseTimestamp": "2026-03-09T14:07:36.997509934Z",
             "lastGeneratedCommit": "40a49dc1a2305fecb768414c6837b65d3ea8b809",
-            "lastReleasedCommit": "2b1af6f3f23fb91e40de01c703c09b465b139402",
+            "lastReleasedCommit": "40a49dc1a2305fecb768414c6837b65d3ea8b809",
             "apiPaths": [
                 "google/cloud/gdchardwaremanagement/v1alpha"
             ],
