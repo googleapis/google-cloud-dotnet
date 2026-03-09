@@ -26,19 +26,20 @@ namespace Google.Maps.Routing.V2 {
           string.Concat(
             "CiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3dheXBvaW50LnByb3RvEhZnb29n",
             "bGUubWFwcy5yb3V0aW5nLnYyGiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL2xv",
-            "Y2F0aW9uLnByb3RvIrUBCghXYXlwb2ludBI0Cghsb2NhdGlvbhgBIAEoCzIg",
+            "Y2F0aW9uLnByb3RvItcBCghXYXlwb2ludBI0Cghsb2NhdGlvbhgBIAEoCzIg",
             "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb25IABISCghwbGFjZV9p",
-            "ZBgCIAEoCUgAEhEKB2FkZHJlc3MYByABKAlIABILCgN2aWEYAyABKAgSGAoQ",
-            "dmVoaWNsZV9zdG9wb3ZlchgEIAEoCBIUCgxzaWRlX29mX3JvYWQYBSABKAhC",
-            "DwoNbG9jYXRpb25fdHlwZUK/AQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
-            "djJCDVdheXBvaW50UHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBz",
-            "L3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYqICBUdNUlYyqgIW",
-            "R29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdc",
-            "VjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "ZBgCIAEoCUgAEhEKB2FkZHJlc3MYByABKAlIABIgChZuYXZpZ2F0aW9uX3Bv",
+            "aW50X3Rva2VuGAggASgJSAASCwoDdmlhGAMgASgIEhgKEHZlaGljbGVfc3Rv",
+            "cG92ZXIYBCABKAgSFAoMc2lkZV9vZl9yb2FkGAUgASgIQg8KDWxvY2F0aW9u",
+            "X3R5cGVCvwEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQg1XYXlwb2lu",
+            "dFByb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0aW5nL2Fw",
+            "aXYyL3JvdXRpbmdwYjtyb3V0aW5ncGKiAgVHTVJWMqoCFkdvb2dsZS5NYXBz",
+            "LlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xl",
+            "OjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.LocationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Waypoint), global::Google.Maps.Routing.V2.Waypoint.Parser, new[]{ "Location", "PlaceId", "Address", "Via", "VehicleStopover", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Waypoint), global::Google.Maps.Routing.V2.Waypoint.Parser, new[]{ "Location", "PlaceId", "Address", "NavigationPointToken", "Via", "VehicleStopover", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null)
           }));
     }
     #endregion
@@ -96,6 +97,9 @@ namespace Google.Maps.Routing.V2 {
           break;
         case LocationTypeOneofCase.Address:
           Address = other.Address;
+          break;
+        case LocationTypeOneofCase.NavigationPointToken:
+          NavigationPointToken = other.NavigationPointToken;
           break;
       }
 
@@ -183,6 +187,37 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "navigation_point_token" field.</summary>
+    public const int NavigationPointTokenFieldNumber = 8;
+    /// <summary>
+    /// A token that identifies a
+    /// [`NavigationPoint`](https://developers.google.com/maps/documentation/geocoding/reference/rest/v4alpha/geocode.destinations/searchDestinations#navigationpoint),
+    /// obtained from the `SearchDestinations` method of the Geocoding API.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NavigationPointToken {
+      get { return HasNavigationPointToken ? (string) locationType_ : ""; }
+      set {
+        locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        locationTypeCase_ = LocationTypeOneofCase.NavigationPointToken;
+      }
+    }
+    /// <summary>Gets whether the "navigation_point_token" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNavigationPointToken {
+      get { return locationTypeCase_ == LocationTypeOneofCase.NavigationPointToken; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "navigation_point_token" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNavigationPointToken() {
+      if (HasNavigationPointToken) {
+        ClearLocationType();
+      }
+    }
+
     /// <summary>Field number for the "via" field.</summary>
     public const int ViaFieldNumber = 3;
     private bool via_;
@@ -255,6 +290,7 @@ namespace Google.Maps.Routing.V2 {
       Location = 1,
       PlaceId = 2,
       Address = 7,
+      NavigationPointToken = 8,
     }
     private LocationTypeOneofCase locationTypeCase_ = LocationTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -288,6 +324,7 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(Location, other.Location)) return false;
       if (PlaceId != other.PlaceId) return false;
       if (Address != other.Address) return false;
+      if (NavigationPointToken != other.NavigationPointToken) return false;
       if (Via != other.Via) return false;
       if (VehicleStopover != other.VehicleStopover) return false;
       if (SideOfRoad != other.SideOfRoad) return false;
@@ -302,6 +339,7 @@ namespace Google.Maps.Routing.V2 {
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
       if (HasPlaceId) hash ^= PlaceId.GetHashCode();
       if (HasAddress) hash ^= Address.GetHashCode();
+      if (HasNavigationPointToken) hash ^= NavigationPointToken.GetHashCode();
       if (Via != false) hash ^= Via.GetHashCode();
       if (VehicleStopover != false) hash ^= VehicleStopover.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
@@ -348,6 +386,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(58);
         output.WriteString(Address);
       }
+      if (HasNavigationPointToken) {
+        output.WriteRawTag(66);
+        output.WriteString(NavigationPointToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -382,6 +424,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(58);
         output.WriteString(Address);
       }
+      if (HasNavigationPointToken) {
+        output.WriteRawTag(66);
+        output.WriteString(NavigationPointToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -400,6 +446,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (HasAddress) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (HasNavigationPointToken) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NavigationPointToken);
       }
       if (Via != false) {
         size += 1 + 1;
@@ -443,6 +492,9 @@ namespace Google.Maps.Routing.V2 {
           break;
         case LocationTypeOneofCase.Address:
           Address = other.Address;
+          break;
+        case LocationTypeOneofCase.NavigationPointToken:
+          NavigationPointToken = other.NavigationPointToken;
           break;
       }
 
@@ -490,6 +542,10 @@ namespace Google.Maps.Routing.V2 {
             Address = input.ReadString();
             break;
           }
+          case 66: {
+            NavigationPointToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -532,6 +588,10 @@ namespace Google.Maps.Routing.V2 {
           }
           case 58: {
             Address = input.ReadString();
+            break;
+          }
+          case 66: {
+            NavigationPointToken = input.ReadString();
             break;
           }
         }

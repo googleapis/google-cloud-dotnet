@@ -3859,7 +3859,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:41:58.780400597Z",
-            "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
+            "lastGeneratedCommit": "67b1168230d46351fa05aaf11a20b32872339f92",
             "lastReleasedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
             "apiPaths": [
                 "google/maps/routing/v2"
