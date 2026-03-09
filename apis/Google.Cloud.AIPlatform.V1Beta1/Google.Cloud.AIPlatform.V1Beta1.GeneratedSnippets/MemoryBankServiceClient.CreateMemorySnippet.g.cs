@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames]
+    // [START aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_sync_flattened]
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
 
-    public sealed partial class GeneratedSessionServiceClientSnippets
+    public sealed partial class GeneratedMemoryBankServiceClientSnippets
     {
-        /// <summary>Snippet for CreateSession</summary>
+        /// <summary>Snippet for CreateMemory</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,32 +30,33 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateSessionResourceNames()
+        public void CreateMemory()
         {
             // Create client
-            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            MemoryBankServiceClient memoryBankServiceClient = MemoryBankServiceClient.Create();
             // Initialize request argument(s)
-            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
-            Session session = new Session();
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Memory memory = new Memory();
+            string memoryId = "";
             // Make the request
-            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);
+            Operation<Memory, CreateMemoryOperationMetadata> response = memoryBankServiceClient.CreateMemory(parent, memory, memoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Session result = completedResponse.Result;
+            Memory result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = sessionServiceClient.PollOnceCreateSession(operationName);
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = memoryBankServiceClient.PollOnceCreateMemory(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Session retrievedResult = retrievedResponse.Result;
+                Memory retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames]
+    // [END aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_sync_flattened]
 }

@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Memory = new Memory(),
+                MemoryId = "",
             };
             // Make the request
             Operation<Memory, CreateMemoryOperationMetadata> response = memoryBankServiceClient.CreateMemory(request);
@@ -71,9 +72,136 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Memory = new Memory(),
+                MemoryId = "",
             };
             // Make the request
             Operation<Memory, CreateMemoryOperationMetadata> response = await memoryBankServiceClient.CreateMemoryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Memory result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = await memoryBankServiceClient.PollOnceCreateMemoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Memory retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMemory</summary>
+        public void CreateMemory()
+        {
+            // Snippet: CreateMemory(string, Memory, string, CallSettings)
+            // Create client
+            MemoryBankServiceClient memoryBankServiceClient = MemoryBankServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Memory memory = new Memory();
+            string memoryId = "";
+            // Make the request
+            Operation<Memory, CreateMemoryOperationMetadata> response = memoryBankServiceClient.CreateMemory(parent, memory, memoryId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Memory result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = memoryBankServiceClient.PollOnceCreateMemory(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Memory retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMemoryAsync</summary>
+        public async Task CreateMemoryAsync()
+        {
+            // Snippet: CreateMemoryAsync(string, Memory, string, CallSettings)
+            // Additional: CreateMemoryAsync(string, Memory, string, CancellationToken)
+            // Create client
+            MemoryBankServiceClient memoryBankServiceClient = await MemoryBankServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Memory memory = new Memory();
+            string memoryId = "";
+            // Make the request
+            Operation<Memory, CreateMemoryOperationMetadata> response = await memoryBankServiceClient.CreateMemoryAsync(parent, memory, memoryId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Memory result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = await memoryBankServiceClient.PollOnceCreateMemoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Memory retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMemory</summary>
+        public void CreateMemoryResourceNames()
+        {
+            // Snippet: CreateMemory(ReasoningEngineName, Memory, string, CallSettings)
+            // Create client
+            MemoryBankServiceClient memoryBankServiceClient = MemoryBankServiceClient.Create();
+            // Initialize request argument(s)
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
+            Memory memory = new Memory();
+            string memoryId = "";
+            // Make the request
+            Operation<Memory, CreateMemoryOperationMetadata> response = memoryBankServiceClient.CreateMemory(parent, memory, memoryId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Memory result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = memoryBankServiceClient.PollOnceCreateMemory(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Memory retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMemoryAsync</summary>
+        public async Task CreateMemoryResourceNamesAsync()
+        {
+            // Snippet: CreateMemoryAsync(ReasoningEngineName, Memory, string, CallSettings)
+            // Additional: CreateMemoryAsync(ReasoningEngineName, Memory, string, CancellationToken)
+            // Create client
+            MemoryBankServiceClient memoryBankServiceClient = await MemoryBankServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
+            Memory memory = new Memory();
+            string memoryId = "";
+            // Make the request
+            Operation<Memory, CreateMemoryOperationMetadata> response = await memoryBankServiceClient.CreateMemoryAsync(parent, memory, memoryId);
 
             // Poll until the returned long-running operation is complete
             Operation<Memory, CreateMemoryOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

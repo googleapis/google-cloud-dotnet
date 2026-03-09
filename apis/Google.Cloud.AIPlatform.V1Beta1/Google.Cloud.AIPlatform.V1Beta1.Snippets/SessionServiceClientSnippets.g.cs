@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
+                SessionId = "",
             };
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(request);
@@ -71,6 +72,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
+                SessionId = "",
             };
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(request);
@@ -94,7 +96,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSession</summary>
-        public void CreateSession()
+        public void CreateSession1()
         {
             // Snippet: CreateSession(string, Session, CallSettings)
             // Create client
@@ -124,7 +126,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionAsync()
+        public async Task CreateSession1Async()
         {
             // Snippet: CreateSessionAsync(string, Session, CallSettings)
             // Additional: CreateSessionAsync(string, Session, CancellationToken)
@@ -155,7 +157,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSession</summary>
-        public void CreateSessionResourceNames()
+        public void CreateSession1ResourceNames()
         {
             // Snippet: CreateSession(ReasoningEngineName, Session, CallSettings)
             // Create client
@@ -185,7 +187,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionResourceNamesAsync()
+        public async Task CreateSession1ResourceNamesAsync()
         {
             // Snippet: CreateSessionAsync(ReasoningEngineName, Session, CallSettings)
             // Additional: CreateSessionAsync(ReasoningEngineName, Session, CancellationToken)
@@ -196,6 +198,132 @@ namespace GoogleCSharpSnippets
             Session session = new Session();
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Session, CreateSessionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Session result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = await sessionServiceClient.PollOnceCreateSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Session retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSession</summary>
+        public void CreateSession2()
+        {
+            // Snippet: CreateSession(string, Session, string, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Session session = new Session();
+            string sessionId = "";
+            // Make the request
+            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session, sessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Session result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = sessionServiceClient.PollOnceCreateSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Session retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSessionAsync</summary>
+        public async Task CreateSession2Async()
+        {
+            // Snippet: CreateSessionAsync(string, Session, string, CallSettings)
+            // Additional: CreateSessionAsync(string, Session, string, CancellationToken)
+            // Create client
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Session session = new Session();
+            string sessionId = "";
+            // Make the request
+            Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session, sessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Session, CreateSessionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Session result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = await sessionServiceClient.PollOnceCreateSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Session retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSession</summary>
+        public void CreateSession2ResourceNames()
+        {
+            // Snippet: CreateSession(ReasoningEngineName, Session, string, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
+            Session session = new Session();
+            string sessionId = "";
+            // Make the request
+            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session, sessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Session result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = sessionServiceClient.PollOnceCreateSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Session retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSessionAsync</summary>
+        public async Task CreateSession2ResourceNamesAsync()
+        {
+            // Snippet: CreateSessionAsync(ReasoningEngineName, Session, string, CallSettings)
+            // Additional: CreateSessionAsync(ReasoningEngineName, Session, string, CancellationToken)
+            // Create client
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
+            Session session = new Session();
+            string sessionId = "";
+            // Make the request
+            Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session, sessionId);
 
             // Poll until the returned long-running operation is complete
             Operation<Session, CreateSessionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

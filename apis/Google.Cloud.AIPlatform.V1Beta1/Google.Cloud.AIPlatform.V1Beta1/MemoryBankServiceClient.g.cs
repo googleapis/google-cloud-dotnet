@@ -434,6 +434,176 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             lro::Operation<Memory, CreateMemoryOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMemoryOperationsClient, callSettings);
 
         /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Memory, CreateMemoryOperationMetadata> CreateMemory(string parent, Memory memory, string memoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemory(new CreateMemoryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Memory = gax::GaxPreconditions.CheckNotNull(memory, nameof(memory)),
+                MemoryId = memoryId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Memory, CreateMemoryOperationMetadata>> CreateMemoryAsync(string parent, Memory memory, string memoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemoryAsync(new CreateMemoryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Memory = gax::GaxPreconditions.CheckNotNull(memory, nameof(memory)),
+                MemoryId = memoryId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Memory, CreateMemoryOperationMetadata>> CreateMemoryAsync(string parent, Memory memory, string memoryId, st::CancellationToken cancellationToken) =>
+            CreateMemoryAsync(parent, memory, memoryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Memory, CreateMemoryOperationMetadata> CreateMemory(ReasoningEngineName parent, Memory memory, string memoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemory(new CreateMemoryRequest
+            {
+                ParentAsReasoningEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Memory = gax::GaxPreconditions.CheckNotNull(memory, nameof(memory)),
+                MemoryId = memoryId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Memory, CreateMemoryOperationMetadata>> CreateMemoryAsync(ReasoningEngineName parent, Memory memory, string memoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemoryAsync(new CreateMemoryRequest
+            {
+                ParentAsReasoningEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Memory = gax::GaxPreconditions.CheckNotNull(memory, nameof(memory)),
+                MemoryId = memoryId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Memory.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ReasoningEngine to create the Memory
+        /// under. Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="memory">
+        /// Required. The Memory to be created.
+        /// </param>
+        /// <param name="memoryId">
+        /// Optional. The user defined ID to use for memory, which will become the
+        /// final component of the memory resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Memory, CreateMemoryOperationMetadata>> CreateMemoryAsync(ReasoningEngineName parent, Memory memory, string memoryId, st::CancellationToken cancellationToken) =>
+            CreateMemoryAsync(parent, memory, memoryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Get a Memory.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
