@@ -6172,7 +6172,7 @@
     },
     {
       "id": "Google.Cloud.VectorSearch.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Vector Search",
       "productUrl": "https://docs.cloud.google.com/vertex-ai/docs/vector-search-2/overview",
