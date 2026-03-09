@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.2.0, released 2026-03-09
+
+### New features
+
+- Add a new Waypoint source to accept a token that identifies a Navigation Point obtained from the `SearchDestinations` method of the Geocoding API
+
+### Documentation improvements
+
+- Regenerated documentation for fields
+
 ## Version 1.1.0, released 2025-11-06
 
 ### New features
