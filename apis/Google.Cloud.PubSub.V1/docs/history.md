@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.33.0, released 2026-03-09
+
+### New features
+
+- Add BigtableConfig type
+
 ## Version 3.32.0, released 2026-01-29
 
 ### New features
