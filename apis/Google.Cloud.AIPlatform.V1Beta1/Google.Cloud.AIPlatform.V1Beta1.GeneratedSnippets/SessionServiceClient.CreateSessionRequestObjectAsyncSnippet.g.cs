@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
+                SessionId = "",
             };
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(request);

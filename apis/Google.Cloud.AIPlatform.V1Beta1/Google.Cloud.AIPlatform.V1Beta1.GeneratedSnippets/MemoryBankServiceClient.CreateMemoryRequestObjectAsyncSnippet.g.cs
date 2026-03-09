@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Memory = new Memory(),
+                MemoryId = "",
             };
             // Make the request
             Operation<Memory, CreateMemoryOperationMetadata> response = await memoryBankServiceClient.CreateMemoryAsync(request);

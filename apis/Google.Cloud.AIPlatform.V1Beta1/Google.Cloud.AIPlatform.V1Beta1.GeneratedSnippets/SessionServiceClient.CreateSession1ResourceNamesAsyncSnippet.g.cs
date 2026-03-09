@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames]
+    // [START aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened1_resourceNames]
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -31,7 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateSessionResourceNamesAsync()
+        public async Task CreateSession1ResourceNamesAsync()
         {
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
@@ -58,5 +58,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames]
+    // [END aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened1_resourceNames]
 }

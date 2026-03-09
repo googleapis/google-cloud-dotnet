@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_sync]
+    // [START aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_async_flattened]
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedMemoryBankServiceClientSnippets
     {
-        /// <summary>Snippet for CreateMemory</summary>
+        /// <summary>Snippet for CreateMemoryAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,29 +31,26 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateMemoryRequestObject()
+        public async Task CreateMemoryAsync()
         {
             // Create client
-            MemoryBankServiceClient memoryBankServiceClient = MemoryBankServiceClient.Create();
+            MemoryBankServiceClient memoryBankServiceClient = await MemoryBankServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateMemoryRequest request = new CreateMemoryRequest
-            {
-                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
-                Memory = new Memory(),
-                MemoryId = "",
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            Memory memory = new Memory();
+            string memoryId = "";
             // Make the request
-            Operation<Memory, CreateMemoryOperationMetadata> response = memoryBankServiceClient.CreateMemory(request);
+            Operation<Memory, CreateMemoryOperationMetadata> response = await memoryBankServiceClient.CreateMemoryAsync(parent, memory, memoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Memory, CreateMemoryOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Memory result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = memoryBankServiceClient.PollOnceCreateMemory(operationName);
+            Operation<Memory, CreateMemoryOperationMetadata> retrievedResponse = await memoryBankServiceClient.PollOnceCreateMemoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -61,5 +59,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_sync]
+    // [END aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_async_flattened]
 }
