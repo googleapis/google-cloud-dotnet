@@ -44,7 +44,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXNzaW9uEl5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
             "bn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29uaW5nX2VuZ2luZX0vc2Vzc2lv",
             "bnMve3Nlc3Npb259KghzZXNzaW9uczIHc2Vzc2lvbkIMCgpleHBpcmF0aW9u",
-            "IrkECgxTZXNzaW9uRXZlbnQSEQoEbmFtZRgBIAEoCUID4EEIEhMKBmF1dGhv",
+            "IuoECgxTZXNzaW9uRXZlbnQSEQoEbmFtZRgBIAEoCUID4EEIEhMKBmF1dGhv",
             "chgDIAEoCUID4EECEjkKB2NvbnRlbnQYBCABKAsyIy5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5Db250ZW50QgPgQQESGgoNaW52b2NhdGlvbl9pZBgF",
             "IAEoCUID4EECEj4KB2FjdGlvbnMYBiABKAsyKC5nb29nbGUuY2xvdWQuYWlw",
@@ -52,40 +52,41 @@ namespace Google.Cloud.AIPlatform.V1 {
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISFwoKZXJyb3Jf",
             "Y29kZRgJIAEoCUID4EEBEhoKDWVycm9yX21lc3NhZ2UYCiABKAlCA+BBARJG",
             "Cg5ldmVudF9tZXRhZGF0YRgLIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkV2ZW50TWV0YWRhdGFCA+BBATq4AepBtAEKJmFpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vU2Vzc2lvbkV2ZW50Em1wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVhc29uaW5nRW5naW5lcy97cmVh",
-            "c29uaW5nX2VuZ2luZX0vc2Vzc2lvbnMve3Nlc3Npb259L2V2ZW50cy97ZXZl",
-            "bnR9Kg1zZXNzaW9uRXZlbnRzMgxzZXNzaW9uRXZlbnQisQMKDUV2ZW50TWV0",
-            "YWRhdGESTgoSZ3JvdW5kaW5nX21ldGFkYXRhGAEgASgLMi0uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuR3JvdW5kaW5nTWV0YWRhdGFCA+BBARIUCgdw",
-            "YXJ0aWFsGAIgASgIQgPgQQESGgoNdHVybl9jb21wbGV0ZRgDIAEoCEID4EEB",
-            "EhgKC2ludGVycnVwdGVkGAQgASgIQgPgQQESIgoVbG9uZ19ydW5uaW5nX3Rv",
-            "b2xfaWRzGAUgAygJQgPgQQESEwoGYnJhbmNoGAYgASgJQgPgQQESMAoPY3Vz",
-            "dG9tX21ldGFkYXRhGAcgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJL",
-            "ChNpbnB1dF90cmFuc2NyaXB0aW9uGAogASgLMikuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuVHJhbnNjcmlwdGlvbkID4EEBEkwKFG91dHB1dF90cmFu",
-            "c2NyaXB0aW9uGAsgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "VHJhbnNjcmlwdGlvbkID4EEBIuQCCgxFdmVudEFjdGlvbnMSHwoSc2tpcF9z",
-            "dW1tYXJpemF0aW9uGAEgASgIQgPgQQESMQoLc3RhdGVfZGVsdGEYAiABKAsy",
-            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQESWAoOYXJ0aWZhY3RfZGVs",
-            "dGEYAyADKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FdmVudEFj",
-            "dGlvbnMuQXJ0aWZhY3REZWx0YUVudHJ5QgPgQQESFQoIZXNjYWxhdGUYBiAB",
-            "KAhCA+BBARI8ChZyZXF1ZXN0ZWRfYXV0aF9jb25maWdzGAcgASgLMhcuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEhsKDnRyYW5zZmVyX2FnZW50GAgg",
-            "ASgJQgPgQQEaNAoSQXJ0aWZhY3REZWx0YUVudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoBToCOAEiOQoNVHJhbnNjcmlwdGlvbhIRCgR0ZXh0GAEg",
-            "ASgJQgPgQQESFQoIZmluaXNoZWQYAiABKAhCA+BBAULKAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQgxTZXNzaW9uUHJvdG9QAVo+Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
-            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b3JtLnYxLkV2ZW50TWV0YWRhdGFCA+BBARIvCglyYXdfZXZlbnQYDCABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQE6uAHqQbQBCiZhaXBsYXRm",
+            "b3JtLmdvb2dsZWFwaXMuY29tL1Nlc3Npb25FdmVudBJtcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlYXNvbmluZ0VuZ2luZXMv",
+            "e3JlYXNvbmluZ19lbmdpbmV9L3Nlc3Npb25zL3tzZXNzaW9ufS9ldmVudHMv",
+            "e2V2ZW50fSoNc2Vzc2lvbkV2ZW50czIMc2Vzc2lvbkV2ZW50IrEDCg1FdmVu",
+            "dE1ldGFkYXRhEk4KEmdyb3VuZGluZ19tZXRhZGF0YRgBIAEoCzItLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ01ldGFkYXRhQgPgQQES",
+            "FAoHcGFydGlhbBgCIAEoCEID4EEBEhoKDXR1cm5fY29tcGxldGUYAyABKAhC",
+            "A+BBARIYCgtpbnRlcnJ1cHRlZBgEIAEoCEID4EEBEiIKFWxvbmdfcnVubmlu",
+            "Z190b29sX2lkcxgFIAMoCUID4EEBEhMKBmJyYW5jaBgGIAEoCUID4EEBEjAK",
+            "D2N1c3RvbV9tZXRhZGF0YRgHIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
+            "Y3QSSwoTaW5wdXRfdHJhbnNjcmlwdGlvbhgKIAEoCzIpLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlRyYW5zY3JpcHRpb25CA+BBARJMChRvdXRwdXRf",
+            "dHJhbnNjcmlwdGlvbhgLIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlRyYW5zY3JpcHRpb25CA+BBASLkAgoMRXZlbnRBY3Rpb25zEh8KEnNr",
+            "aXBfc3VtbWFyaXphdGlvbhgBIAEoCEID4EEBEjEKC3N0YXRlX2RlbHRhGAIg",
+            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBElgKDmFydGlmYWN0",
+            "X2RlbHRhGAMgAygLMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXZl",
+            "bnRBY3Rpb25zLkFydGlmYWN0RGVsdGFFbnRyeUID4EEBEhUKCGVzY2FsYXRl",
+            "GAYgASgIQgPgQQESPAoWcmVxdWVzdGVkX2F1dGhfY29uZmlncxgHIAEoCzIX",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIbCg50cmFuc2Zlcl9hZ2Vu",
+            "dBgIIAEoCUID4EEBGjQKEkFydGlmYWN0RGVsdGFFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAU6AjgBIjkKDVRyYW5zY3JpcHRpb24SEQoEdGV4",
+            "dBgBIAEoCUID4EEBEhUKCGZpbmlzaGVkGAIgASgIQgPgQQFCygEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIMU2Vzc2lvblByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Session), global::Google.Cloud.AIPlatform.V1.Session.Parser, new[]{ "ExpireTime", "Ttl", "Name", "CreateTime", "UpdateTime", "DisplayName", "Labels", "SessionState", "UserId" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SessionEvent), global::Google.Cloud.AIPlatform.V1.SessionEvent.Parser, new[]{ "Name", "Author", "Content", "InvocationId", "Actions", "Timestamp", "ErrorCode", "ErrorMessage", "EventMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SessionEvent), global::Google.Cloud.AIPlatform.V1.SessionEvent.Parser, new[]{ "Name", "Author", "Content", "InvocationId", "Actions", "Timestamp", "ErrorCode", "ErrorMessage", "EventMetadata", "RawEvent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EventMetadata), global::Google.Cloud.AIPlatform.V1.EventMetadata.Parser, new[]{ "GroundingMetadata", "Partial", "TurnComplete", "Interrupted", "LongRunningToolIds", "Branch", "CustomMetadata", "InputTranscription", "OutputTranscription" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EventActions), global::Google.Cloud.AIPlatform.V1.EventActions.Parser, new[]{ "SkipSummarization", "StateDelta", "ArtifactDelta", "Escalate", "RequestedAuthConfigs", "TransferAgent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Transcription), global::Google.Cloud.AIPlatform.V1.Transcription.Parser, new[]{ "Text", "Finished" }, null, null, null, null)
@@ -745,6 +746,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       errorCode_ = other.errorCode_;
       errorMessage_ = other.errorMessage_;
       eventMetadata_ = other.eventMetadata_ != null ? other.eventMetadata_.Clone() : null;
+      rawEvent_ = other.rawEvent_ != null ? other.rawEvent_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -891,6 +893,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "raw_event" field.</summary>
+    public const int RawEventFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Struct rawEvent_;
+    /// <summary>
+    /// Optional. Weakly typed raw event data in proto struct format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct RawEvent {
+      get { return rawEvent_; }
+      set {
+        rawEvent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -915,6 +932,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ErrorCode != other.ErrorCode) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
       if (!object.Equals(EventMetadata, other.EventMetadata)) return false;
+      if (!object.Equals(RawEvent, other.RawEvent)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -931,6 +949,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ErrorCode.Length != 0) hash ^= ErrorCode.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (eventMetadata_ != null) hash ^= EventMetadata.GetHashCode();
+      if (rawEvent_ != null) hash ^= RawEvent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -985,6 +1004,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EventMetadata);
       }
+      if (rawEvent_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RawEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1031,6 +1054,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EventMetadata);
       }
+      if (rawEvent_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RawEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1067,6 +1094,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (eventMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventMetadata);
+      }
+      if (rawEvent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RawEvent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1118,6 +1148,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           EventMetadata = new global::Google.Cloud.AIPlatform.V1.EventMetadata();
         }
         EventMetadata.MergeFrom(other.EventMetadata);
+      }
+      if (other.rawEvent_ != null) {
+        if (rawEvent_ == null) {
+          RawEvent = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        RawEvent.MergeFrom(other.RawEvent);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1182,6 +1218,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EventMetadata);
             break;
           }
+          case 98: {
+            if (rawEvent_ == null) {
+              RawEvent = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(RawEvent);
+            break;
+          }
         }
       }
     #endif
@@ -1243,6 +1286,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               EventMetadata = new global::Google.Cloud.AIPlatform.V1.EventMetadata();
             }
             input.ReadMessage(EventMetadata);
+            break;
+          }
+          case 98: {
+            if (rawEvent_ == null) {
+              RawEvent = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(RawEvent);
             break;
           }
         }
