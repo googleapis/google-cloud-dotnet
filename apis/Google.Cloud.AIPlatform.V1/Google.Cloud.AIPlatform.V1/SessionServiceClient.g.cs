@@ -508,6 +508,176 @@ namespace Google.Cloud.AIPlatform.V1
             CreateSessionAsync(parent, session, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Session, CreateSessionOperationMetadata> CreateSession(string parent, Session session, string sessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSession(new CreateSessionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                SessionId = sessionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(string parent, Session session, string sessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSessionAsync(new CreateSessionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                SessionId = sessionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(string parent, Session session, string sessionId, st::CancellationToken cancellationToken) =>
+            CreateSessionAsync(parent, session, sessionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Session, CreateSessionOperationMetadata> CreateSession(ReasoningEngineName parent, Session session, string sessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSession(new CreateSessionRequest
+            {
+                ParentAsReasoningEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                SessionId = sessionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(ReasoningEngineName parent, Session session, string sessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSessionAsync(new CreateSessionRequest
+            {
+                ParentAsReasoningEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                SessionId = sessionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new [Session][google.cloud.aiplatform.v1.Session].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the session in.
+        /// Format:
+        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+        /// </param>
+        /// <param name="session">
+        /// Required. The session to create.
+        /// </param>
+        /// <param name="sessionId">
+        /// Optional. The user defined ID to use for session, which will become the
+        /// final component of the session resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        /// 
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9-]`. The first character must be a letter, and the last character
+        /// must be a letter or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(ReasoningEngineName parent, Session session, string sessionId, st::CancellationToken cancellationToken) =>
+            CreateSessionAsync(parent, session, sessionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of the specific [Session][google.cloud.aiplatform.v1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

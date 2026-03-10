@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1_generated_SessionService_CreateSession_sync_flattened]
+    // [START aiplatform_v1_generated_SessionService_CreateSession_sync_flattened2_resourceNames]
     using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
 
@@ -30,15 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateSession()
+        public void CreateSession2ResourceNames()
         {
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
             Session session = new Session();
+            string sessionId = "";
             // Make the request
-            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);
+            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session, sessionId);
 
             // Poll until the returned long-running operation is complete
             Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -57,5 +58,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END aiplatform_v1_generated_SessionService_CreateSession_sync_flattened]
+    // [END aiplatform_v1_generated_SessionService_CreateSession_sync_flattened2_resourceNames]
 }
