@@ -1597,7 +1597,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T17:00:09.722822273Z",
-            "lastGeneratedCommit": "3d9a46d77218aa1cf200f732ff39960a0e3f3d9e",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "3d9a46d77218aa1cf200f732ff39960a0e3f3d9e",
             "apiPaths": [
                 "google/cloud/eventarc/publishing/v1"
