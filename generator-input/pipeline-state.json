@@ -1017,7 +1017,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T09:01:50.482718573Z",
-            "lastGeneratedCommit": "6b36371f6f3099624547e9ce4c1db304161e6afe",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/api/cloudquotas/v1"
