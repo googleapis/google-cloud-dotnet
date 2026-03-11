@@ -1717,7 +1717,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-09T14:07:36.997509934Z",
-            "lastGeneratedCommit": "40a49dc1a2305fecb768414c6837b65d3ea8b809",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "40a49dc1a2305fecb768414c6837b65d3ea8b809",
             "apiPaths": [
                 "google/cloud/gdchardwaremanagement/v1alpha"
