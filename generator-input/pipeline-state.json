@@ -1242,7 +1242,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-16T14:08:41.578882947Z",
-            "lastGeneratedCommit": "e1c1073657f163c3e10e3b93c961346bb4052f09",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "e1c1073657f163c3e10e3b93c961346bb4052f09",
             "apiPaths": [
                 "google/cloud/dataform/v1beta1"
