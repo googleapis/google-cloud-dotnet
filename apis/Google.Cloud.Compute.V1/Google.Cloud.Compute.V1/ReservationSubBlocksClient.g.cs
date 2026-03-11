@@ -48,6 +48,8 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetSettings = existing.GetSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
+            GetVersionSettings = existing.GetVersionSettings;
+            GetVersionOperationsSettings = existing.GetVersionOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
             PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
@@ -101,6 +103,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationSubBlocksClient.GetVersion</c> and <c>ReservationSubBlocksClient.GetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ReservationSubBlocksClient.GetVersion</c> and
+        /// <c>ReservationSubBlocksClient.GetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings GetVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -564,6 +596,148 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string zone, string parentResource, string resource, st::CancellationToken cancellationToken) =>
             GetIamPolicyAsync(project, zone, parentResource, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> GetVersion(GetVersionReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> GetVersionAsync(GetVersionReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> GetVersionAsync(GetVersionReservationSubBlockRequest request, st::CancellationToken cancellationToken) =>
+            GetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>GetVersion</c>.</summary>
+        public virtual lro::OperationsClient GetVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>GetVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceGetVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>GetVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceGetVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of
+        /// reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock.
+        /// Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksGetVersionRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> GetVersion(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksGetVersionRequest reservationSubBlocksGetVersionRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            GetVersion(new GetVersionReservationSubBlockRequest
+            {
+                ParentName = gax::GaxPreconditions.CheckNotNullOrEmpty(parentName, nameof(parentName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ReservationSubBlock = gax::GaxPreconditions.CheckNotNullOrEmpty(reservationSubBlock, nameof(reservationSubBlock)),
+                ReservationSubBlocksGetVersionRequestResource = gax::GaxPreconditions.CheckNotNull(reservationSubBlocksGetVersionRequestResource, nameof(reservationSubBlocksGetVersionRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of
+        /// reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock.
+        /// Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksGetVersionRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> GetVersionAsync(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksGetVersionRequest reservationSubBlocksGetVersionRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            GetVersionAsync(new GetVersionReservationSubBlockRequest
+            {
+                ParentName = gax::GaxPreconditions.CheckNotNullOrEmpty(parentName, nameof(parentName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ReservationSubBlock = gax::GaxPreconditions.CheckNotNullOrEmpty(reservationSubBlock, nameof(reservationSubBlock)),
+                ReservationSubBlocksGetVersionRequestResource = gax::GaxPreconditions.CheckNotNull(reservationSubBlocksGetVersionRequestResource, nameof(reservationSubBlocksGetVersionRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of
+        /// reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock.
+        /// Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksGetVersionRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> GetVersionAsync(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksGetVersionRequest reservationSubBlocksGetVersionRequestResource, st::CancellationToken cancellationToken) =>
+            GetVersionAsync(project, zone, parentName, reservationSubBlock, reservationSubBlocksGetVersionRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of reservation subBlocks under a single reservation.
@@ -1178,6 +1352,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetIamPolicyReservationSubBlockRequest, Policy> _callGetIamPolicy;
 
+        private readonly gaxgrpc::ApiCall<GetVersionReservationSubBlockRequest, Operation> _callGetVersion;
+
         private readonly gaxgrpc::ApiCall<ListReservationSubBlocksRequest, ReservationSubBlocksListResponse> _callList;
 
         private readonly gaxgrpc::ApiCall<PerformMaintenanceReservationSubBlockRequest, Operation> _callPerformMaintenance;
@@ -1204,6 +1380,7 @@ namespace Google.Cloud.Compute.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            GetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.GetVersionOperationsSettings, logger);
             PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             ReportFaultyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ReportFaultyOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetReservationSubBlockRequest, ReservationSubBlocksGetResponse>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName).WithGoogleRequestParam("reservation_sub_block", request => request.ReservationSubBlock);
@@ -1212,6 +1389,9 @@ namespace Google.Cloud.Compute.V1
             _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyReservationSubBlockRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_resource", request => request.ParentResource).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callGetVersion = clientHelper.BuildApiCall<GetVersionReservationSubBlockRequest, Operation>("GetVersion", grpcClient.GetVersionAsync, grpcClient.GetVersion, effectiveSettings.GetVersionSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName).WithGoogleRequestParam("reservation_sub_block", request => request.ReservationSubBlock);
+            Modify_ApiCall(ref _callGetVersion);
+            Modify_GetVersionApiCall(ref _callGetVersion);
             _callList = clientHelper.BuildApiCall<ListReservationSubBlocksRequest, ReservationSubBlocksListResponse>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
@@ -1236,6 +1416,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyReservationSubBlockRequest, Policy> call);
 
+        partial void Modify_GetVersionApiCall(ref gaxgrpc::ApiCall<GetVersionReservationSubBlockRequest, Operation> call);
+
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListReservationSubBlocksRequest, ReservationSubBlocksListResponse> call);
 
         partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceReservationSubBlockRequest, Operation> call);
@@ -1254,6 +1436,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_GetReservationSubBlockRequest(ref GetReservationSubBlockRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyReservationSubBlockRequest(ref GetIamPolicyReservationSubBlockRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetVersionReservationSubBlockRequest(ref GetVersionReservationSubBlockRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReservationSubBlocksRequest(ref ListReservationSubBlocksRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1313,6 +1497,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetIamPolicyReservationSubBlockRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>GetVersion</c>.</summary>
+        public override lro::OperationsClient GetVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> GetVersion(GetVersionReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVersionReservationSubBlockRequest(ref request, ref callSettings);
+            Operation response = _callGetVersion.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), GetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Allows customers to get SBOM versions of a reservation subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> GetVersionAsync(GetVersionReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVersionReservationSubBlockRequest(ref request, ref callSettings);
+            Operation response = await _callGetVersion.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), GetVersionOperationsClient);
         }
 
         /// <summary>

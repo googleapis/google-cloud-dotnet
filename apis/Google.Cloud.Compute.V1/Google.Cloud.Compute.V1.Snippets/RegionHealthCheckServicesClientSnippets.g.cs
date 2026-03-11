@@ -21,12 +21,209 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Compute.V1;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedRegionHealthCheckServicesClientSnippets
     {
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedListRequestObject()
+        {
+            // Snippet: AggregatedList(AggregatedListRegionHealthCheckServicesRequest, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = RegionHealthCheckServicesClient.Create();
+            // Initialize request argument(s)
+            AggregatedListRegionHealthCheckServicesRequest request = new AggregatedListRegionHealthCheckServicesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<HealthCheckServiceAggregatedList, KeyValuePair<string, HealthCheckServicesScopedList>> response = regionHealthCheckServicesClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthCheckServiceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthCheckServicesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListRequestObjectAsync()
+        {
+            // Snippet: AggregatedListAsync(AggregatedListRegionHealthCheckServicesRequest, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = await RegionHealthCheckServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregatedListRegionHealthCheckServicesRequest request = new AggregatedListRegionHealthCheckServicesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<HealthCheckServiceAggregatedList, KeyValuePair<string, HealthCheckServicesScopedList>> response = regionHealthCheckServicesClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthCheckServiceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthCheckServicesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedList()
+        {
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = RegionHealthCheckServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<HealthCheckServiceAggregatedList, KeyValuePair<string, HealthCheckServicesScopedList>> response = regionHealthCheckServicesClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthCheckServiceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthCheckServicesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListAsync()
+        {
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
+            // Create client
+            RegionHealthCheckServicesClient regionHealthCheckServicesClient = await RegionHealthCheckServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<HealthCheckServiceAggregatedList, KeyValuePair<string, HealthCheckServicesScopedList>> response = regionHealthCheckServicesClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthCheckServiceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthCheckServicesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthCheckServicesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {

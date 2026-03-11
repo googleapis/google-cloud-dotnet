@@ -5343,6 +5343,31 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.HealthSource"/> message.
+        /// </summary>
+        public static class HealthSource
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.HealthSource.Types.SourceType"/> enum.
+            /// </summary>
+            public static class SourceType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HealthSource.Types.SourceType.UndefinedSourceType"/>.
+                /// </summary>
+                public const string UndefinedSourceType = "UNDEFINED_SOURCE_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HealthSource.Types.SourceType.BackendService"/>.
+                /// </summary>
+                public const string BackendService = "BACKEND_SERVICE";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.HealthStatus"/> message.
         /// </summary>
         public static class HealthStatus
@@ -5991,6 +6016,111 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string ScaleOutPool = "SCALE_OUT_POOL";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology"/> message.
+        /// </summary>
+        public static class InstanceGroupManagerStatusAcceleratorTopology
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State"/>
+            /// enum.
+            /// </summary>
+            public static class State
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.UndefinedState"/>
+                /// .
+                /// </summary>
+                public const string UndefinedState = "UNDEFINED_STATE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Activating"/>
+                /// .
+                /// </summary>
+                public const string Activating = "ACTIVATING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Active"/>
+                /// .
+                /// </summary>
+                public const string Active = "ACTIVE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Deactivating"/>
+                /// .
+                /// </summary>
+                public const string Deactivating = "DEACTIVATING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Failed"/>
+                /// .
+                /// </summary>
+                public const string Failed = "FAILED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Incomplete"/>
+                /// .
+                /// </summary>
+                public const string Incomplete = "INCOMPLETE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStatusAcceleratorTopology.Types.State.Reactivating"/>
+                /// .
+                /// </summary>
+                public const string Reactivating = "REACTIVATING";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy"/> message.
+        /// </summary>
+        public static class InstanceGroupManagerTargetSizePolicy
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy.Types.Mode"/> enum.
+            /// </summary>
+            public static class Mode
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy.Types.Mode.UndefinedMode"/>
+                /// .
+                /// </summary>
+                public const string UndefinedMode = "UNDEFINED_MODE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy.Types.Mode.Bulk"/>.
+                /// </summary>
+                public const string Bulk = "BULK";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy.Types.Mode.Individual"/>
+                /// .
+                /// </summary>
+                public const string Individual = "INDIVIDUAL";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerTargetSizePolicy.Types.Mode.UnspecifiedMode"/>
+                /// .
+                /// </summary>
+                public const string UnspecifiedMode = "UNSPECIFIED_MODE";
             }
         }
 
@@ -14912,6 +15042,49 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest"/> message.
+        /// </summary>
+        public static class ReservationSlotsGetVersionRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest.Types.SbomSelections"/>
+            /// enum.
+            /// </summary>
+            public static class SbomSelections
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest.Types.SbomSelections.UndefinedSbomSelections"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSbomSelections = "UNDEFINED_SBOM_SELECTIONS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest.Types.SbomSelections.SbomSelectionCurrent"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionCurrent = "SBOM_SELECTION_CURRENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest.Types.SbomSelections.SbomSelectionTarget"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionTarget = "SBOM_SELECTION_TARGET";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSlotsGetVersionRequest.Types.SbomSelections.SbomSelectionUnspecified"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionUnspecified = "SBOM_SELECTION_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlock"/>
         /// message.
         /// </summary>
@@ -14994,6 +15167,49 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string Unspecified = "HEALTH_STATUS_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest"/> message.
+        /// </summary>
+        public static class ReservationSubBlocksGetVersionRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest.Types.SbomSelections"/>
+            /// enum.
+            /// </summary>
+            public static class SbomSelections
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest.Types.SbomSelections.UndefinedSbomSelections"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSbomSelections = "UNDEFINED_SBOM_SELECTIONS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest.Types.SbomSelections.SbomSelectionCurrent"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionCurrent = "SBOM_SELECTION_CURRENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest.Types.SbomSelections.SbomSelectionTarget"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionTarget = "SBOM_SELECTION_TARGET";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlocksGetVersionRequest.Types.SbomSelections.SbomSelectionUnspecified"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionUnspecified = "SBOM_SELECTION_UNSPECIFIED";
             }
         }
 
@@ -15508,6 +15724,35 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         public static class ResourcePolicyWorkloadPolicy
         {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ResourcePolicyWorkloadPolicy.Types.AcceleratorTopologyMode"/>
+            /// enum.
+            /// </summary>
+            public static class AcceleratorTopologyMode
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourcePolicyWorkloadPolicy.Types.AcceleratorTopologyMode.UndefinedAcceleratorTopologyMode"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAcceleratorTopologyMode = "UNDEFINED_ACCELERATOR_TOPOLOGY_MODE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourcePolicyWorkloadPolicy.Types.AcceleratorTopologyMode.AutoConnect"/>
+                /// .
+                /// </summary>
+                public const string AutoConnect = "AUTO_CONNECT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourcePolicyWorkloadPolicy.Types.AcceleratorTopologyMode.ProvisionOnly"/>
+                /// .
+                /// </summary>
+                public const string ProvisionOnly = "PROVISION_ONLY";
+            }
+
             /// <summary>
             /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.ResourcePolicyWorkloadPolicy.Types.MaxTopologyDistance"/>

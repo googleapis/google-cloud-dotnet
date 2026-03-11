@@ -1950,6 +1950,33 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteRegionCompositeHealthCheckRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionCompositeHealthCheckRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchRegionCompositeHealthCheckRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class AddResourcePoliciesRegionDiskRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2140,6 +2167,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class UpdateRegionHealthCheckRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteRegionHealthSourceRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionHealthSourceRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchRegionHealthSourceRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -2751,7 +2805,25 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class GetVersionReservationSlotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class UpdateReservationSlotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class GetVersionReservationSubBlockRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {

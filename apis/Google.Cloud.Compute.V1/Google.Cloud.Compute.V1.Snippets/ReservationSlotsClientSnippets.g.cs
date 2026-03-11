@@ -99,6 +99,148 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetVersion</summary>
+        public void GetVersionRequestObject()
+        {
+            // Snippet: GetVersion(GetVersionReservationSlotRequest, CallSettings)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = ReservationSlotsClient.Create();
+            // Initialize request argument(s)
+            GetVersionReservationSlotRequest request = new GetVersionReservationSlotRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                ReservationSlot = "",
+                ReservationSlotsGetVersionRequestResource = new ReservationSlotsGetVersionRequest(),
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSlotsClient.GetVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSlotsClient.PollOnceGetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersionAsync</summary>
+        public async Task GetVersionRequestObjectAsync()
+        {
+            // Snippet: GetVersionAsync(GetVersionReservationSlotRequest, CallSettings)
+            // Additional: GetVersionAsync(GetVersionReservationSlotRequest, CancellationToken)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = await ReservationSlotsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVersionReservationSlotRequest request = new GetVersionReservationSlotRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                ReservationSlot = "",
+                ReservationSlotsGetVersionRequestResource = new ReservationSlotsGetVersionRequest(),
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSlotsClient.GetVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSlotsClient.PollOnceGetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersion</summary>
+        public void GetVersion()
+        {
+            // Snippet: GetVersion(string, string, string, string, ReservationSlotsGetVersionRequest, CallSettings)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = ReservationSlotsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSlot = "";
+            ReservationSlotsGetVersionRequest reservationSlotsGetVersionRequestResource = new ReservationSlotsGetVersionRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSlotsClient.GetVersion(project, zone, parentName, reservationSlot, reservationSlotsGetVersionRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSlotsClient.PollOnceGetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersionAsync</summary>
+        public async Task GetVersionAsync()
+        {
+            // Snippet: GetVersionAsync(string, string, string, string, ReservationSlotsGetVersionRequest, CallSettings)
+            // Additional: GetVersionAsync(string, string, string, string, ReservationSlotsGetVersionRequest, CancellationToken)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = await ReservationSlotsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSlot = "";
+            ReservationSlotsGetVersionRequest reservationSlotsGetVersionRequestResource = new ReservationSlotsGetVersionRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSlotsClient.GetVersionAsync(project, zone, parentName, reservationSlot, reservationSlotsGetVersionRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSlotsClient.PollOnceGetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for List</summary>
         public void ListRequestObject()
         {
