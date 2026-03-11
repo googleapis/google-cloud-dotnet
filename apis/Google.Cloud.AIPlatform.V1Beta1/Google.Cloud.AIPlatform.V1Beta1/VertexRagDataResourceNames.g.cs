@@ -773,6 +773,576 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public static bool operator !=(RagEngineConfigName a, RagEngineConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>RagDataSchema</c> resource.</summary>
+    public sealed partial class RagDataSchemaName : gax::IResourceName, sys::IEquatable<RagDataSchemaName>
+    {
+        /// <summary>The possible contents of <see cref="RagDataSchemaName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+            /// </summary>
+            ProjectLocationRagCorpusRagDataSchema = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationRagCorpusRagDataSchema = new gax::PathTemplate("projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}");
+
+        /// <summary>Creates a <see cref="RagDataSchemaName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RagDataSchemaName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RagDataSchemaName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RagDataSchemaName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RagDataSchemaName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragDataSchemaId">The <c>RagDataSchema</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RagDataSchemaName"/> constructed from the provided ids.</returns>
+        public static RagDataSchemaName FromProjectLocationRagCorpusRagDataSchema(string projectId, string locationId, string ragCorpusId, string ragDataSchemaId) =>
+            new RagDataSchemaName(ResourceNameType.ProjectLocationRagCorpusRagDataSchema, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), ragCorpusId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), ragDataSchemaId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragDataSchemaId, nameof(ragDataSchemaId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RagDataSchemaName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragDataSchemaId">The <c>RagDataSchema</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RagDataSchemaName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string ragCorpusId, string ragDataSchemaId) =>
+            FormatProjectLocationRagCorpusRagDataSchema(projectId, locationId, ragCorpusId, ragDataSchemaId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RagDataSchemaName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragDataSchemaId">The <c>RagDataSchema</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RagDataSchemaName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRagCorpusRagDataSchema(string projectId, string locationId, string ragCorpusId, string ragDataSchemaId) =>
+            s_projectLocationRagCorpusRagDataSchema.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), gax::GaxPreconditions.CheckNotNullOrEmpty(ragDataSchemaId, nameof(ragDataSchemaId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RagDataSchemaName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="ragDataSchemaName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RagDataSchemaName"/> if successful.</returns>
+        public static RagDataSchemaName Parse(string ragDataSchemaName) => Parse(ragDataSchemaName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RagDataSchemaName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="ragDataSchemaName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RagDataSchemaName"/> if successful.</returns>
+        public static RagDataSchemaName Parse(string ragDataSchemaName, bool allowUnparsed) =>
+            TryParse(ragDataSchemaName, allowUnparsed, out RagDataSchemaName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RagDataSchemaName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="ragDataSchemaName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RagDataSchemaName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string ragDataSchemaName, out RagDataSchemaName result) =>
+            TryParse(ragDataSchemaName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RagDataSchemaName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="ragDataSchemaName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RagDataSchemaName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string ragDataSchemaName, bool allowUnparsed, out RagDataSchemaName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(ragDataSchemaName, nameof(ragDataSchemaName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRagCorpusRagDataSchema.TryParseName(ragDataSchemaName, out resourceName))
+            {
+                result = FromProjectLocationRagCorpusRagDataSchema(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(ragDataSchemaName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RagDataSchemaName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string ragCorpusId = null, string ragDataSchemaId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RagCorpusId = ragCorpusId;
+            RagDataSchemaId = ragDataSchemaId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RagDataSchemaName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragDataSchemaId">The <c>RagDataSchema</c> ID. Must not be <c>null</c> or empty.</param>
+        public RagDataSchemaName(string projectId, string locationId, string ragCorpusId, string ragDataSchemaId) : this(ResourceNameType.ProjectLocationRagCorpusRagDataSchema, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), ragCorpusId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), ragDataSchemaId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragDataSchemaId, nameof(ragDataSchemaId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>RagCorpus</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RagCorpusId { get; }
+
+        /// <summary>
+        /// The <c>RagDataSchema</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string RagDataSchemaId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRagCorpusRagDataSchema: return s_projectLocationRagCorpusRagDataSchema.Expand(ProjectId, LocationId, RagCorpusId, RagDataSchemaId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RagDataSchemaName);
+
+        /// <inheritdoc/>
+        public bool Equals(RagDataSchemaName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(RagDataSchemaName a, RagDataSchemaName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(RagDataSchemaName a, RagDataSchemaName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>RagMetadata</c> resource.</summary>
+    public sealed partial class RagMetadataName : gax::IResourceName, sys::IEquatable<RagMetadataName>
+    {
+        /// <summary>The possible contents of <see cref="RagMetadataName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+            /// .
+            /// </summary>
+            ProjectLocationRagCorpusRagFileRagMetadata = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationRagCorpusRagFileRagMetadata = new gax::PathTemplate("projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}");
+
+        /// <summary>Creates a <see cref="RagMetadataName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RagMetadataName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RagMetadataName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RagMetadataName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RagMetadataName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragFileId">The <c>RagFile</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragMetadataId">The <c>RagMetadata</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RagMetadataName"/> constructed from the provided ids.</returns>
+        public static RagMetadataName FromProjectLocationRagCorpusRagFileRagMetadata(string projectId, string locationId, string ragCorpusId, string ragFileId, string ragMetadataId) =>
+            new RagMetadataName(ResourceNameType.ProjectLocationRagCorpusRagFileRagMetadata, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), ragCorpusId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), ragFileId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragFileId, nameof(ragFileId)), ragMetadataId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragMetadataId, nameof(ragMetadataId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RagMetadataName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragFileId">The <c>RagFile</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragMetadataId">The <c>RagMetadata</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RagMetadataName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string ragCorpusId, string ragFileId, string ragMetadataId) =>
+            FormatProjectLocationRagCorpusRagFileRagMetadata(projectId, locationId, ragCorpusId, ragFileId, ragMetadataId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RagMetadataName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragFileId">The <c>RagFile</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragMetadataId">The <c>RagMetadata</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RagMetadataName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationRagCorpusRagFileRagMetadata(string projectId, string locationId, string ragCorpusId, string ragFileId, string ragMetadataId) =>
+            s_projectLocationRagCorpusRagFileRagMetadata.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), gax::GaxPreconditions.CheckNotNullOrEmpty(ragFileId, nameof(ragFileId)), gax::GaxPreconditions.CheckNotNullOrEmpty(ragMetadataId, nameof(ragMetadataId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="RagMetadataName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="ragMetadataName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RagMetadataName"/> if successful.</returns>
+        public static RagMetadataName Parse(string ragMetadataName) => Parse(ragMetadataName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RagMetadataName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="ragMetadataName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RagMetadataName"/> if successful.</returns>
+        public static RagMetadataName Parse(string ragMetadataName, bool allowUnparsed) =>
+            TryParse(ragMetadataName, allowUnparsed, out RagMetadataName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RagMetadataName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="ragMetadataName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RagMetadataName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string ragMetadataName, out RagMetadataName result) =>
+            TryParse(ragMetadataName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RagMetadataName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="ragMetadataName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RagMetadataName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string ragMetadataName, bool allowUnparsed, out RagMetadataName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(ragMetadataName, nameof(ragMetadataName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRagCorpusRagFileRagMetadata.TryParseName(ragMetadataName, out resourceName))
+            {
+                result = FromProjectLocationRagCorpusRagFileRagMetadata(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(ragMetadataName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RagMetadataName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string ragCorpusId = null, string ragFileId = null, string ragMetadataId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RagCorpusId = ragCorpusId;
+            RagFileId = ragFileId;
+            RagMetadataId = ragMetadataId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RagMetadataName"/> class from the component parts of pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragCorpusId">The <c>RagCorpus</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragFileId">The <c>RagFile</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="ragMetadataId">The <c>RagMetadata</c> ID. Must not be <c>null</c> or empty.</param>
+        public RagMetadataName(string projectId, string locationId, string ragCorpusId, string ragFileId, string ragMetadataId) : this(ResourceNameType.ProjectLocationRagCorpusRagFileRagMetadata, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), ragCorpusId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragCorpusId, nameof(ragCorpusId)), ragFileId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragFileId, nameof(ragFileId)), ragMetadataId: gax::GaxPreconditions.CheckNotNullOrEmpty(ragMetadataId, nameof(ragMetadataId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>RagCorpus</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RagCorpusId { get; }
+
+        /// <summary>
+        /// The <c>RagFile</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RagFileId { get; }
+
+        /// <summary>
+        /// The <c>RagMetadata</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RagMetadataId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRagCorpusRagFileRagMetadata: return s_projectLocationRagCorpusRagFileRagMetadata.Expand(ProjectId, LocationId, RagCorpusId, RagFileId, RagMetadataId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RagMetadataName);
+
+        /// <inheritdoc/>
+        public bool Equals(RagMetadataName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(RagMetadataName a, RagMetadataName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(RagMetadataName a, RagMetadataName b) => !(a == b);
+    }
+
     public partial class RagEmbeddingModelConfig
     {
         public partial class Types
@@ -832,6 +1402,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public gcav::RagEngineConfigName RagEngineConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::RagEngineConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RagDataSchema
+    {
+        /// <summary>
+        /// <see cref="gcav::RagDataSchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RagDataSchemaName RagDataSchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RagDataSchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RagMetadata
+    {
+        /// <summary>
+        /// <see cref="gcav::RagMetadataName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RagMetadataName RagMetadataName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RagMetadataName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

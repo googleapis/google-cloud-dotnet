@@ -68,6 +68,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UpdateRagEngineConfigSettings = existing.UpdateRagEngineConfigSettings;
             UpdateRagEngineConfigOperationsSettings = existing.UpdateRagEngineConfigOperationsSettings.Clone();
             GetRagEngineConfigSettings = existing.GetRagEngineConfigSettings;
+            CreateRagDataSchemaSettings = existing.CreateRagDataSchemaSettings;
+            BatchCreateRagDataSchemasSettings = existing.BatchCreateRagDataSchemasSettings;
+            BatchCreateRagDataSchemasOperationsSettings = existing.BatchCreateRagDataSchemasOperationsSettings.Clone();
+            GetRagDataSchemaSettings = existing.GetRagDataSchemaSettings;
+            ListRagDataSchemasSettings = existing.ListRagDataSchemasSettings;
+            DeleteRagDataSchemaSettings = existing.DeleteRagDataSchemaSettings;
+            BatchDeleteRagDataSchemasSettings = existing.BatchDeleteRagDataSchemasSettings;
+            BatchDeleteRagDataSchemasOperationsSettings = existing.BatchDeleteRagDataSchemasOperationsSettings.Clone();
+            CreateRagMetadataSettings = existing.CreateRagMetadataSettings;
+            BatchCreateRagMetadataSettings = existing.BatchCreateRagMetadataSettings;
+            BatchCreateRagMetadataOperationsSettings = existing.BatchCreateRagMetadataOperationsSettings.Clone();
+            UpdateRagMetadataSettings = existing.UpdateRagMetadataSettings;
+            GetRagMetadataSettings = existing.GetRagMetadataSettings;
+            ListRagMetadataSettings = existing.ListRagMetadataSettings;
+            DeleteRagMetadataSettings = existing.DeleteRagMetadataSettings;
+            BatchDeleteRagMetadataSettings = existing.BatchDeleteRagMetadataSettings;
+            BatchDeleteRagMetadataOperationsSettings = existing.BatchDeleteRagMetadataOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -331,6 +348,246 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetRagEngineConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.CreateRagDataSchema</c> and
+        /// <c>VertexRagDataServiceClient.CreateRagDataSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRagDataSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.BatchCreateRagDataSchemas</c> and
+        /// <c>VertexRagDataServiceClient.BatchCreateRagDataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateRagDataSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.BatchCreateRagDataSchemas</c> and
+        /// <c>VertexRagDataServiceClient.BatchCreateRagDataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateRagDataSchemasOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.GetRagDataSchema</c> and <c>VertexRagDataServiceClient.GetRagDataSchemaAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRagDataSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.ListRagDataSchemas</c> and
+        /// <c>VertexRagDataServiceClient.ListRagDataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRagDataSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.DeleteRagDataSchema</c> and
+        /// <c>VertexRagDataServiceClient.DeleteRagDataSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRagDataSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagDataSchemas</c> and
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagDataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteRagDataSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.BatchDeleteRagDataSchemas</c> and
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagDataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteRagDataSchemasOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.CreateRagMetadata</c> and <c>VertexRagDataServiceClient.CreateRagMetadataAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.BatchCreateRagMetadata</c> and
+        /// <c>VertexRagDataServiceClient.BatchCreateRagMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.BatchCreateRagMetadata</c> and
+        /// <c>VertexRagDataServiceClient.BatchCreateRagMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateRagMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.UpdateRagMetadata</c> and <c>VertexRagDataServiceClient.UpdateRagMetadataAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.GetRagMetadata</c> and <c>VertexRagDataServiceClient.GetRagMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.ListRagMetadata</c> and <c>VertexRagDataServiceClient.ListRagMetadataAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.DeleteRagMetadata</c> and <c>VertexRagDataServiceClient.DeleteRagMetadataAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagMetadata</c> and
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteRagMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.BatchDeleteRagMetadata</c> and
+        /// <c>VertexRagDataServiceClient.BatchDeleteRagMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteRagMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2137,6 +2394,1466 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(RagEngineConfigName name, st::CancellationToken cancellationToken) =>
             GetRagEngineConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema CreateRagDataSchema(CreateRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(CreateRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(CreateRagDataSchemaRequest request, st::CancellationToken cancellationToken) =>
+            CreateRagDataSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema CreateRagDataSchema(string parent, RagDataSchema ragDataSchema, string ragDataSchemaId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagDataSchema(new CreateRagDataSchemaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RagDataSchema = gax::GaxPreconditions.CheckNotNull(ragDataSchema, nameof(ragDataSchema)),
+                RagDataSchemaId = ragDataSchemaId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(string parent, RagDataSchema ragDataSchema, string ragDataSchemaId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagDataSchemaAsync(new CreateRagDataSchemaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RagDataSchema = gax::GaxPreconditions.CheckNotNull(ragDataSchema, nameof(ragDataSchema)),
+                RagDataSchemaId = ragDataSchemaId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(string parent, RagDataSchema ragDataSchema, string ragDataSchemaId, st::CancellationToken cancellationToken) =>
+            CreateRagDataSchemaAsync(parent, ragDataSchema, ragDataSchemaId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema CreateRagDataSchema(RagCorpusName parent, RagDataSchema ragDataSchema, string ragDataSchemaId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagDataSchema(new CreateRagDataSchemaRequest
+            {
+                ParentAsRagCorpusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RagDataSchema = gax::GaxPreconditions.CheckNotNull(ragDataSchema, nameof(ragDataSchema)),
+                RagDataSchemaId = ragDataSchemaId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(RagCorpusName parent, RagDataSchema ragDataSchema, string ragDataSchemaId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagDataSchemaAsync(new CreateRagDataSchemaRequest
+            {
+                ParentAsRagCorpusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RagDataSchema = gax::GaxPreconditions.CheckNotNull(ragDataSchema, nameof(ragDataSchema)),
+                RagDataSchemaId = ragDataSchemaId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus to create the RagDataSchema
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="ragDataSchema">
+        /// Required. The RagDataSchema to create.
+        /// </param>
+        /// <param name="ragDataSchemaId">
+        /// Optional. The ID to use for the RagDataSchema, which will become the final
+        /// component of the RagDataSchema's resource name if the user chooses to
+        /// specify. Otherwise, RagDataSchema id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> CreateRagDataSchemaAsync(RagCorpusName parent, RagDataSchema ragDataSchema, string ragDataSchemaId, st::CancellationToken cancellationToken) =>
+            CreateRagDataSchemaAsync(parent, ragDataSchema, ragDataSchemaId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch Create one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata> BatchCreateRagDataSchemas(BatchCreateRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Create one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>> BatchCreateRagDataSchemasAsync(BatchCreateRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Create one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>> BatchCreateRagDataSchemasAsync(BatchCreateRagDataSchemasRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateRagDataSchemasAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCreateRagDataSchemas</c>.</summary>
+        public virtual lro::OperationsClient BatchCreateRagDataSchemasOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateRagDataSchemas</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata> PollOnceBatchCreateRagDataSchemas(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateRagDataSchemasOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateRagDataSchemas</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>> PollOnceBatchCreateRagDataSchemasAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateRagDataSchemasOperationsClient, callSettings);
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema GetRagDataSchema(GetRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(GetRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(GetRagDataSchemaRequest request, st::CancellationToken cancellationToken) =>
+            GetRagDataSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema GetRagDataSchema(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagDataSchema(new GetRagDataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagDataSchemaAsync(new GetRagDataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRagDataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagDataSchema GetRagDataSchema(RagDataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagDataSchema(new GetRagDataSchemaRequest
+            {
+                RagDataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(RagDataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagDataSchemaAsync(new GetRagDataSchemaRequest
+            {
+                RagDataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagDataSchema> GetRagDataSchemaAsync(RagDataSchemaName name, st::CancellationToken cancellationToken) =>
+            GetRagDataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemas(ListRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemasAsync(ListRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus from which to list the
+        /// RagDataSchemas. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagDataSchemasRequest request = new ListRagDataSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagDataSchemas(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus from which to list the
+        /// RagDataSchemas. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagDataSchemasRequest request = new ListRagDataSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagDataSchemasAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus from which to list the
+        /// RagDataSchemas. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemas(RagCorpusName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagDataSchemasRequest request = new ListRagDataSchemasRequest
+            {
+                ParentAsRagCorpusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagDataSchemas(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagCorpus from which to list the
+        /// RagDataSchemas. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemasAsync(RagCorpusName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagDataSchemasRequest request = new ListRagDataSchemasRequest
+            {
+                ParentAsRagCorpusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagDataSchemasAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagDataSchema(DeleteRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(DeleteRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(DeleteRagDataSchemaRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRagDataSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagDataSchema(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagDataSchema(new DeleteRagDataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagDataSchemaAsync(new DeleteRagDataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRagDataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagDataSchema(RagDataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagDataSchema(new DeleteRagDataSchemaRequest
+            {
+                RagDataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(RagDataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagDataSchemaAsync(new DeleteRagDataSchemaRequest
+            {
+                RagDataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagDataSchema resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragDataSchemas/{rag_data_schema}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagDataSchemaAsync(RagDataSchemaName name, st::CancellationToken cancellationToken) =>
+            DeleteRagDataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch Deletes one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> BatchDeleteRagDataSchemas(BatchDeleteRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Deletes one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagDataSchemasAsync(BatchDeleteRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Deletes one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagDataSchemasAsync(BatchDeleteRagDataSchemasRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteRagDataSchemasAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteRagDataSchemas</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteRagDataSchemasOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteRagDataSchemas</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceBatchDeleteRagDataSchemas(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteRagDataSchemasOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteRagDataSchemas</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceBatchDeleteRagDataSchemasAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteRagDataSchemasOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata CreateRagMetadata(CreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(CreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(CreateRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            CreateRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata CreateRagMetadata(string parent, RagMetadata ragMetadata, string ragMetadataId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagMetadata(new CreateRagMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+                RagMetadataId = ragMetadataId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(string parent, RagMetadata ragMetadata, string ragMetadataId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagMetadataAsync(new CreateRagMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+                RagMetadataId = ragMetadataId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(string parent, RagMetadata ragMetadata, string ragMetadataId, st::CancellationToken cancellationToken) =>
+            CreateRagMetadataAsync(parent, ragMetadata, ragMetadataId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata CreateRagMetadata(RagFileName parent, RagMetadata ragMetadata, string ragMetadataId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagMetadata(new CreateRagMetadataRequest
+            {
+                ParentAsRagFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+                RagMetadataId = ragMetadataId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(RagFileName parent, RagMetadata ragMetadata, string ragMetadataId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRagMetadataAsync(new CreateRagMetadataRequest
+            {
+                ParentAsRagFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+                RagMetadataId = ragMetadataId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this metadata will be created.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="ragMetadata">
+        /// Required. The metadata to create.
+        /// </param>
+        /// <param name="ragMetadataId">
+        /// Optional. The ID to use for the metadata, which will become the final
+        /// component of the metadata's resource name if the user chooses to specify.
+        /// Otherwise, metadata id will be generated by system.
+        /// 
+        /// This value should be up to 63 characters, and valid characters
+        /// are /[a-z][0-9]-/. The first character must be a letter, the last could be
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> CreateRagMetadataAsync(RagFileName parent, RagMetadata ragMetadata, string ragMetadataId, st::CancellationToken cancellationToken) =>
+            CreateRagMetadataAsync(parent, ragMetadata, ragMetadataId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch Create one or more RagMetadatas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata> BatchCreateRagMetadata(BatchCreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Create one or more RagMetadatas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>> BatchCreateRagMetadataAsync(BatchCreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Create one or more RagMetadatas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>> BatchCreateRagMetadataAsync(BatchCreateRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCreateRagMetadata</c>.</summary>
+        public virtual lro::OperationsClient BatchCreateRagMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateRagMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata> PollOnceBatchCreateRagMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateRagMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateRagMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>> PollOnceBatchCreateRagMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateRagMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata UpdateRagMetadata(UpdateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> UpdateRagMetadataAsync(UpdateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> UpdateRagMetadataAsync(UpdateRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="ragMetadata">
+        /// Required. The RagMetadata which replaces the resource on the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata UpdateRagMetadata(RagMetadata ragMetadata, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagMetadata(new UpdateRagMetadataRequest
+            {
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="ragMetadata">
+        /// Required. The RagMetadata which replaces the resource on the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> UpdateRagMetadataAsync(RagMetadata ragMetadata, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagMetadataAsync(new UpdateRagMetadataRequest
+            {
+                RagMetadata = gax::GaxPreconditions.CheckNotNull(ragMetadata, nameof(ragMetadata)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="ragMetadata">
+        /// Required. The RagMetadata which replaces the resource on the server.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> UpdateRagMetadataAsync(RagMetadata ragMetadata, st::CancellationToken cancellationToken) =>
+            UpdateRagMetadataAsync(ragMetadata, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata GetRagMetadata(GetRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(GetRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(GetRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            GetRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata GetRagMetadata(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagMetadata(new GetRagMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagMetadataAsync(new GetRagMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRagMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagMetadata GetRagMetadata(RagMetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagMetadata(new GetRagMetadataRequest
+            {
+                RagMetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(RagMetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagMetadataAsync(new GetRagMetadataRequest
+            {
+                RagMetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagMetadata> GetRagMetadataAsync(RagMetadataName name, st::CancellationToken cancellationToken) =>
+            GetRagMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadata(ListRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadataAsync(ListRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagFile from which to list the
+        /// RagMetadata. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadata(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagMetadataRequest request = new ListRagMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagMetadata(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagFile from which to list the
+        /// RagMetadata. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadataAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagMetadataRequest request = new ListRagMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagMetadataAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagFile from which to list the
+        /// RagMetadata. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadata(RagFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagMetadataRequest request = new ListRagMetadataRequest
+            {
+                ParentAsRagFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagMetadata(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the RagFile from which to list the
+        /// RagMetadata. Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadataAsync(RagFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRagMetadataRequest request = new ListRagMetadataRequest
+            {
+                ParentAsRagFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRagMetadataAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagMetadata(DeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(DeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(DeleteRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagMetadata(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagMetadata(new DeleteRagMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagMetadataAsync(new DeleteRagMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRagMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRagMetadata(RagMetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagMetadata(new DeleteRagMetadataRequest
+            {
+                RagMetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(RagMetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRagMetadataAsync(new DeleteRagMetadataRequest
+            {
+                RagMetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagMetadata resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}/ragFiles/{rag_file}/ragMetadata/{rag_metadata}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRagMetadataAsync(RagMetadataName name, st::CancellationToken cancellationToken) =>
+            DeleteRagMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch Deletes one or more RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> BatchDeleteRagMetadata(BatchDeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Deletes one or more RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagMetadataAsync(BatchDeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch Deletes one or more RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagMetadataAsync(BatchDeleteRagMetadataRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteRagMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteRagMetadata</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteRagMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteRagMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceBatchDeleteRagMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteRagMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteRagMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceBatchDeleteRagMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteRagMetadataOperationsClient, callSettings);
     }
 
     /// <summary>VertexRagDataService client wrapper implementation, for convenient use.</summary>
@@ -2169,6 +3886,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<GetRagEngineConfigRequest, RagEngineConfig> _callGetRagEngineConfig;
 
+        private readonly gaxgrpc::ApiCall<CreateRagDataSchemaRequest, RagDataSchema> _callCreateRagDataSchema;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateRagDataSchemasRequest, lro::Operation> _callBatchCreateRagDataSchemas;
+
+        private readonly gaxgrpc::ApiCall<GetRagDataSchemaRequest, RagDataSchema> _callGetRagDataSchema;
+
+        private readonly gaxgrpc::ApiCall<ListRagDataSchemasRequest, ListRagDataSchemasResponse> _callListRagDataSchemas;
+
+        private readonly gaxgrpc::ApiCall<DeleteRagDataSchemaRequest, wkt::Empty> _callDeleteRagDataSchema;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteRagDataSchemasRequest, lro::Operation> _callBatchDeleteRagDataSchemas;
+
+        private readonly gaxgrpc::ApiCall<CreateRagMetadataRequest, RagMetadata> _callCreateRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateRagMetadataRequest, lro::Operation> _callBatchCreateRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<UpdateRagMetadataRequest, RagMetadata> _callUpdateRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<GetRagMetadataRequest, RagMetadata> _callGetRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<ListRagMetadataRequest, ListRagMetadataResponse> _callListRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<DeleteRagMetadataRequest, wkt::Empty> _callDeleteRagMetadata;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteRagMetadataRequest, lro::Operation> _callBatchDeleteRagMetadata;
+
         /// <summary>
         /// Constructs a client wrapper for the VertexRagDataService service, with the specified gRPC client and
         /// settings.
@@ -2191,6 +3934,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             ImportRagFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportRagFilesOperationsSettings, logger);
             DeleteRagFileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRagFileOperationsSettings, logger);
             UpdateRagEngineConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRagEngineConfigOperationsSettings, logger);
+            BatchCreateRagDataSchemasOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateRagDataSchemasOperationsSettings, logger);
+            BatchDeleteRagDataSchemasOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteRagDataSchemasOperationsSettings, logger);
+            BatchCreateRagMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateRagMetadataOperationsSettings, logger);
+            BatchDeleteRagMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteRagMetadataOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateRagCorpus = clientHelper.BuildApiCall<CreateRagCorpusRequest, lro::Operation>("CreateRagCorpus", grpcClient.CreateRagCorpusAsync, grpcClient.CreateRagCorpus, effectiveSettings.CreateRagCorpusSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2229,6 +3976,45 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callGetRagEngineConfig = clientHelper.BuildApiCall<GetRagEngineConfigRequest, RagEngineConfig>("GetRagEngineConfig", grpcClient.GetRagEngineConfigAsync, grpcClient.GetRagEngineConfig, effectiveSettings.GetRagEngineConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRagEngineConfig);
             Modify_GetRagEngineConfigApiCall(ref _callGetRagEngineConfig);
+            _callCreateRagDataSchema = clientHelper.BuildApiCall<CreateRagDataSchemaRequest, RagDataSchema>("CreateRagDataSchema", grpcClient.CreateRagDataSchemaAsync, grpcClient.CreateRagDataSchema, effectiveSettings.CreateRagDataSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRagDataSchema);
+            Modify_CreateRagDataSchemaApiCall(ref _callCreateRagDataSchema);
+            _callBatchCreateRagDataSchemas = clientHelper.BuildApiCall<BatchCreateRagDataSchemasRequest, lro::Operation>("BatchCreateRagDataSchemas", grpcClient.BatchCreateRagDataSchemasAsync, grpcClient.BatchCreateRagDataSchemas, effectiveSettings.BatchCreateRagDataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateRagDataSchemas);
+            Modify_BatchCreateRagDataSchemasApiCall(ref _callBatchCreateRagDataSchemas);
+            _callGetRagDataSchema = clientHelper.BuildApiCall<GetRagDataSchemaRequest, RagDataSchema>("GetRagDataSchema", grpcClient.GetRagDataSchemaAsync, grpcClient.GetRagDataSchema, effectiveSettings.GetRagDataSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRagDataSchema);
+            Modify_GetRagDataSchemaApiCall(ref _callGetRagDataSchema);
+            _callListRagDataSchemas = clientHelper.BuildApiCall<ListRagDataSchemasRequest, ListRagDataSchemasResponse>("ListRagDataSchemas", grpcClient.ListRagDataSchemasAsync, grpcClient.ListRagDataSchemas, effectiveSettings.ListRagDataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRagDataSchemas);
+            Modify_ListRagDataSchemasApiCall(ref _callListRagDataSchemas);
+            _callDeleteRagDataSchema = clientHelper.BuildApiCall<DeleteRagDataSchemaRequest, wkt::Empty>("DeleteRagDataSchema", grpcClient.DeleteRagDataSchemaAsync, grpcClient.DeleteRagDataSchema, effectiveSettings.DeleteRagDataSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRagDataSchema);
+            Modify_DeleteRagDataSchemaApiCall(ref _callDeleteRagDataSchema);
+            _callBatchDeleteRagDataSchemas = clientHelper.BuildApiCall<BatchDeleteRagDataSchemasRequest, lro::Operation>("BatchDeleteRagDataSchemas", grpcClient.BatchDeleteRagDataSchemasAsync, grpcClient.BatchDeleteRagDataSchemas, effectiveSettings.BatchDeleteRagDataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteRagDataSchemas);
+            Modify_BatchDeleteRagDataSchemasApiCall(ref _callBatchDeleteRagDataSchemas);
+            _callCreateRagMetadata = clientHelper.BuildApiCall<CreateRagMetadataRequest, RagMetadata>("CreateRagMetadata", grpcClient.CreateRagMetadataAsync, grpcClient.CreateRagMetadata, effectiveSettings.CreateRagMetadataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRagMetadata);
+            Modify_CreateRagMetadataApiCall(ref _callCreateRagMetadata);
+            _callBatchCreateRagMetadata = clientHelper.BuildApiCall<BatchCreateRagMetadataRequest, lro::Operation>("BatchCreateRagMetadata", grpcClient.BatchCreateRagMetadataAsync, grpcClient.BatchCreateRagMetadata, effectiveSettings.BatchCreateRagMetadataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateRagMetadata);
+            Modify_BatchCreateRagMetadataApiCall(ref _callBatchCreateRagMetadata);
+            _callUpdateRagMetadata = clientHelper.BuildApiCall<UpdateRagMetadataRequest, RagMetadata>("UpdateRagMetadata", grpcClient.UpdateRagMetadataAsync, grpcClient.UpdateRagMetadata, effectiveSettings.UpdateRagMetadataSettings).WithGoogleRequestParam("rag_metadata.name", request => request.RagMetadata?.Name);
+            Modify_ApiCall(ref _callUpdateRagMetadata);
+            Modify_UpdateRagMetadataApiCall(ref _callUpdateRagMetadata);
+            _callGetRagMetadata = clientHelper.BuildApiCall<GetRagMetadataRequest, RagMetadata>("GetRagMetadata", grpcClient.GetRagMetadataAsync, grpcClient.GetRagMetadata, effectiveSettings.GetRagMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRagMetadata);
+            Modify_GetRagMetadataApiCall(ref _callGetRagMetadata);
+            _callListRagMetadata = clientHelper.BuildApiCall<ListRagMetadataRequest, ListRagMetadataResponse>("ListRagMetadata", grpcClient.ListRagMetadataAsync, grpcClient.ListRagMetadata, effectiveSettings.ListRagMetadataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRagMetadata);
+            Modify_ListRagMetadataApiCall(ref _callListRagMetadata);
+            _callDeleteRagMetadata = clientHelper.BuildApiCall<DeleteRagMetadataRequest, wkt::Empty>("DeleteRagMetadata", grpcClient.DeleteRagMetadataAsync, grpcClient.DeleteRagMetadata, effectiveSettings.DeleteRagMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRagMetadata);
+            Modify_DeleteRagMetadataApiCall(ref _callDeleteRagMetadata);
+            _callBatchDeleteRagMetadata = clientHelper.BuildApiCall<BatchDeleteRagMetadataRequest, lro::Operation>("BatchDeleteRagMetadata", grpcClient.BatchDeleteRagMetadataAsync, grpcClient.BatchDeleteRagMetadata, effectiveSettings.BatchDeleteRagMetadataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteRagMetadata);
+            Modify_BatchDeleteRagMetadataApiCall(ref _callBatchDeleteRagMetadata);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2257,6 +4043,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UpdateRagEngineConfigApiCall(ref gaxgrpc::ApiCall<UpdateRagEngineConfigRequest, lro::Operation> call);
 
         partial void Modify_GetRagEngineConfigApiCall(ref gaxgrpc::ApiCall<GetRagEngineConfigRequest, RagEngineConfig> call);
+
+        partial void Modify_CreateRagDataSchemaApiCall(ref gaxgrpc::ApiCall<CreateRagDataSchemaRequest, RagDataSchema> call);
+
+        partial void Modify_BatchCreateRagDataSchemasApiCall(ref gaxgrpc::ApiCall<BatchCreateRagDataSchemasRequest, lro::Operation> call);
+
+        partial void Modify_GetRagDataSchemaApiCall(ref gaxgrpc::ApiCall<GetRagDataSchemaRequest, RagDataSchema> call);
+
+        partial void Modify_ListRagDataSchemasApiCall(ref gaxgrpc::ApiCall<ListRagDataSchemasRequest, ListRagDataSchemasResponse> call);
+
+        partial void Modify_DeleteRagDataSchemaApiCall(ref gaxgrpc::ApiCall<DeleteRagDataSchemaRequest, wkt::Empty> call);
+
+        partial void Modify_BatchDeleteRagDataSchemasApiCall(ref gaxgrpc::ApiCall<BatchDeleteRagDataSchemasRequest, lro::Operation> call);
+
+        partial void Modify_CreateRagMetadataApiCall(ref gaxgrpc::ApiCall<CreateRagMetadataRequest, RagMetadata> call);
+
+        partial void Modify_BatchCreateRagMetadataApiCall(ref gaxgrpc::ApiCall<BatchCreateRagMetadataRequest, lro::Operation> call);
+
+        partial void Modify_UpdateRagMetadataApiCall(ref gaxgrpc::ApiCall<UpdateRagMetadataRequest, RagMetadata> call);
+
+        partial void Modify_GetRagMetadataApiCall(ref gaxgrpc::ApiCall<GetRagMetadataRequest, RagMetadata> call);
+
+        partial void Modify_ListRagMetadataApiCall(ref gaxgrpc::ApiCall<ListRagMetadataRequest, ListRagMetadataResponse> call);
+
+        partial void Modify_DeleteRagMetadataApiCall(ref gaxgrpc::ApiCall<DeleteRagMetadataRequest, wkt::Empty> call);
+
+        partial void Modify_BatchDeleteRagMetadataApiCall(ref gaxgrpc::ApiCall<BatchDeleteRagMetadataRequest, lro::Operation> call);
 
         partial void OnConstruction(VertexRagDataService.VertexRagDataServiceClient grpcClient, VertexRagDataServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2292,6 +4104,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UpdateRagEngineConfigRequest(ref UpdateRagEngineConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRagEngineConfigRequest(ref GetRagEngineConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRagDataSchemaRequest(ref CreateRagDataSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateRagDataSchemasRequest(ref BatchCreateRagDataSchemasRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRagDataSchemaRequest(ref GetRagDataSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRagDataSchemasRequest(ref ListRagDataSchemasRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRagDataSchemaRequest(ref DeleteRagDataSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteRagDataSchemasRequest(ref BatchDeleteRagDataSchemasRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRagMetadataRequest(ref CreateRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateRagMetadataRequest(ref BatchCreateRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRagMetadataRequest(ref UpdateRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRagMetadataRequest(ref GetRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRagMetadataRequest(ref ListRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRagMetadataRequest(ref DeleteRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteRagMetadataRequest(ref BatchDeleteRagMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateRagCorpus</c>.</summary>
         public override lro::OperationsClient CreateRagCorpusOperationsClient { get; }
@@ -2598,6 +4436,330 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             Modify_GetRagEngineConfigRequest(ref request, ref callSettings);
             return _callGetRagEngineConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagDataSchema CreateRagDataSchema(CreateRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRagDataSchemaRequest(ref request, ref callSettings);
+            return _callCreateRagDataSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagDataSchema> CreateRagDataSchemaAsync(CreateRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRagDataSchemaRequest(ref request, ref callSettings);
+            return _callCreateRagDataSchema.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchCreateRagDataSchemas</c>.</summary>
+        public override lro::OperationsClient BatchCreateRagDataSchemasOperationsClient { get; }
+
+        /// <summary>
+        /// Batch Create one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata> BatchCreateRagDataSchemas(BatchCreateRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRagDataSchemasRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>(_callBatchCreateRagDataSchemas.Sync(request, callSettings), BatchCreateRagDataSchemasOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch Create one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>> BatchCreateRagDataSchemasAsync(BatchCreateRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRagDataSchemasRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateRagDataSchemasResponse, BatchCreateRagDataSchemasOperationMetadata>(await _callBatchCreateRagDataSchemas.Async(request, callSettings).ConfigureAwait(false), BatchCreateRagDataSchemasOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagDataSchema GetRagDataSchema(GetRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagDataSchemaRequest(ref request, ref callSettings);
+            return _callGetRagDataSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagDataSchema> GetRagDataSchemaAsync(GetRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagDataSchemaRequest(ref request, ref callSettings);
+            return _callGetRagDataSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemas(ListRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRagDataSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRagDataSchemasRequest, ListRagDataSchemasResponse, RagDataSchema>(_callListRagDataSchemas, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagDataSchemas in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagDataSchema"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRagDataSchemasResponse, RagDataSchema> ListRagDataSchemasAsync(ListRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRagDataSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRagDataSchemasRequest, ListRagDataSchemasResponse, RagDataSchema>(_callListRagDataSchemas, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteRagDataSchema(DeleteRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRagDataSchemaRequest(ref request, ref callSettings);
+            _callDeleteRagDataSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagDataSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteRagDataSchemaAsync(DeleteRagDataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRagDataSchemaRequest(ref request, ref callSettings);
+            return _callDeleteRagDataSchema.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchDeleteRagDataSchemas</c>.</summary>
+        public override lro::OperationsClient BatchDeleteRagDataSchemasOperationsClient { get; }
+
+        /// <summary>
+        /// Batch Deletes one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> BatchDeleteRagDataSchemas(BatchDeleteRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRagDataSchemasRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callBatchDeleteRagDataSchemas.Sync(request, callSettings), BatchDeleteRagDataSchemasOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch Deletes one or more RagDataSchemas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagDataSchemasAsync(BatchDeleteRagDataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRagDataSchemasRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callBatchDeleteRagDataSchemas.Async(request, callSettings).ConfigureAwait(false), BatchDeleteRagDataSchemasOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagMetadata CreateRagMetadata(CreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRagMetadataRequest(ref request, ref callSettings);
+            return _callCreateRagMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagMetadata> CreateRagMetadataAsync(CreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRagMetadataRequest(ref request, ref callSettings);
+            return _callCreateRagMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchCreateRagMetadata</c>.</summary>
+        public override lro::OperationsClient BatchCreateRagMetadataOperationsClient { get; }
+
+        /// <summary>
+        /// Batch Create one or more RagMetadatas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata> BatchCreateRagMetadata(BatchCreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRagMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>(_callBatchCreateRagMetadata.Sync(request, callSettings), BatchCreateRagMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch Create one or more RagMetadatas
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>> BatchCreateRagMetadataAsync(BatchCreateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRagMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateRagMetadataResponse, BatchCreateRagMetadataOperationMetadata>(await _callBatchCreateRagMetadata.Async(request, callSettings).ConfigureAwait(false), BatchCreateRagMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagMetadata UpdateRagMetadata(UpdateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagMetadataRequest(ref request, ref callSettings);
+            return _callUpdateRagMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagMetadata> UpdateRagMetadataAsync(UpdateRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagMetadataRequest(ref request, ref callSettings);
+            return _callUpdateRagMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagMetadata GetRagMetadata(GetRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagMetadataRequest(ref request, ref callSettings);
+            return _callGetRagMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagMetadata> GetRagMetadataAsync(GetRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagMetadataRequest(ref request, ref callSettings);
+            return _callGetRagMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RagMetadata"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadata(ListRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRagMetadataRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRagMetadataRequest, ListRagMetadataResponse, RagMetadata>(_callListRagMetadata, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RagMetadata in a RagFile.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RagMetadata"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRagMetadataResponse, RagMetadata> ListRagMetadataAsync(ListRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRagMetadataRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRagMetadataRequest, ListRagMetadataResponse, RagMetadata>(_callListRagMetadata, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteRagMetadata(DeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRagMetadataRequest(ref request, ref callSettings);
+            _callDeleteRagMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteRagMetadataAsync(DeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRagMetadataRequest(ref request, ref callSettings);
+            return _callDeleteRagMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchDeleteRagMetadata</c>.</summary>
+        public override lro::OperationsClient BatchDeleteRagMetadataOperationsClient { get; }
+
+        /// <summary>
+        /// Batch Deletes one or more RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> BatchDeleteRagMetadata(BatchDeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRagMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callBatchDeleteRagMetadata.Sync(request, callSettings), BatchDeleteRagMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch Deletes one or more RagMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> BatchDeleteRagMetadataAsync(BatchDeleteRagMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRagMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callBatchDeleteRagMetadata.Async(request, callSettings).ConfigureAwait(false), BatchDeleteRagMetadataOperationsClient);
+        }
     }
 
     public partial class ListRagCorporaRequest : gaxgrpc::IPageRequest
@@ -2605,6 +4767,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     }
 
     public partial class ListRagFilesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRagDataSchemasRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRagMetadataRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2620,6 +4790,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<RagFile> GetEnumerator() => RagFiles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRagDataSchemasResponse : gaxgrpc::IPageResponse<RagDataSchema>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RagDataSchema> GetEnumerator() => RagDataSchemas.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRagMetadataResponse : gaxgrpc::IPageResponse<RagMetadata>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RagMetadata> GetEnumerator() => RagMetadata.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

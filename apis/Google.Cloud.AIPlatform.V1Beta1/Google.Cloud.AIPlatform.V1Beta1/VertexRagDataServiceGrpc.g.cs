@@ -101,6 +101,42 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GetRagEngineConfigRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GetRagEngineConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GetRagEngineConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig> __Marshaller_google_cloud_aiplatform_v1beta1_RagEngineConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CreateRagDataSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> __Marshaller_google_cloud_aiplatform_v1beta1_RagDataSchema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest> __Marshaller_google_cloud_aiplatform_v1beta1_BatchCreateRagDataSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GetRagDataSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ListRagDataSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListRagDataSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest> __Marshaller_google_cloud_aiplatform_v1beta1_DeleteRagDataSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest> __Marshaller_google_cloud_aiplatform_v1beta1_BatchDeleteRagDataSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CreateRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> __Marshaller_google_cloud_aiplatform_v1beta1_RagMetadata = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_BatchCreateRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_UpdateRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GetRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ListRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListRagMetadataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_DeleteRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_BatchDeleteRagMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagCorpusRequest, global::Google.LongRunning.Operation> __Method_CreateRagCorpus = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagCorpusRequest, global::Google.LongRunning.Operation>(
@@ -197,6 +233,110 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "GetRagEngineConfig",
         __Marshaller_google_cloud_aiplatform_v1beta1_GetRagEngineConfigRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_RagEngineConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> __Method_CreateRagDataSchema = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRagDataSchema",
+        __Marshaller_google_cloud_aiplatform_v1beta1_CreateRagDataSchemaRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RagDataSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest, global::Google.LongRunning.Operation> __Method_BatchCreateRagDataSchemas = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateRagDataSchemas",
+        __Marshaller_google_cloud_aiplatform_v1beta1_BatchCreateRagDataSchemasRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> __Method_GetRagDataSchema = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRagDataSchema",
+        __Marshaller_google_cloud_aiplatform_v1beta1_GetRagDataSchemaRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RagDataSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse> __Method_ListRagDataSchemas = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRagDataSchemas",
+        __Marshaller_google_cloud_aiplatform_v1beta1_ListRagDataSchemasRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_ListRagDataSchemasResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRagDataSchema = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRagDataSchema",
+        __Marshaller_google_cloud_aiplatform_v1beta1_DeleteRagDataSchemaRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest, global::Google.LongRunning.Operation> __Method_BatchDeleteRagDataSchemas = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteRagDataSchemas",
+        __Marshaller_google_cloud_aiplatform_v1beta1_BatchDeleteRagDataSchemasRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> __Method_CreateRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_CreateRagMetadataRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RagMetadata);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest, global::Google.LongRunning.Operation> __Method_BatchCreateRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_BatchCreateRagMetadataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> __Method_UpdateRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_UpdateRagMetadataRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RagMetadata);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> __Method_GetRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_GetRagMetadataRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RagMetadata);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse> __Method_ListRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_ListRagMetadataRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_ListRagMetadataResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_DeleteRagMetadataRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest, global::Google.LongRunning.Operation> __Method_BatchDeleteRagMetadata = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteRagMetadata",
+        __Marshaller_google_cloud_aiplatform_v1beta1_BatchDeleteRagMetadataRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -348,6 +488,162 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig> GetRagEngineConfig(global::Google.Cloud.AIPlatform.V1Beta1.GetRagEngineConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> CreateRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch Create one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreateRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> GetRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RagDataSchemas in a Location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse> ListRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch Deletes one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchDeleteRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> CreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch Create one or more RagMetadatas
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> UpdateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> GetRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RagMetadata in a RagFile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse> ListRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch Deletes one or more RagMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchDeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -957,6 +1253,630 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRagEngineConfig, null, options, request);
       }
+      /// <summary>
+      /// Creates a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema CreateRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRagDataSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema CreateRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Creates a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> CreateRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRagDataSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> CreateRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Batch Create one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRagDataSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Create one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Batch Create one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRagDataSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Create one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Gets a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema GetRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRagDataSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema GetRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Gets a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> GetRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRagDataSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema> GetRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Lists RagDataSchemas in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse ListRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRagDataSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RagDataSchemas in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse ListRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Lists RagDataSchemas in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse> ListRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRagDataSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RagDataSchemas in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse> ListRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRagDataSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRagDataSchema(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRagDataSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RagDataSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagDataSchemaAsync(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRagDataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRagDataSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteRagDataSchemas(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRagDataSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagDataSchemas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteRagDataSchemasAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteRagDataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Creates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata CreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata CreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Creates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> CreateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> CreateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Batch Create one or more RagMetadatas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Create one or more RagMetadatas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Batch Create one or more RagMetadatas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Create one or more RagMetadatas
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Updates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata UpdateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata UpdateRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Updates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> UpdateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> UpdateRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Gets a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata GetRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata GetRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Gets a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> GetRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata> GetRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Lists RagMetadata in a RagFile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse ListRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RagMetadata in a RagFile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse ListRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Lists RagMetadata in a RagFile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse> ListRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RagMetadata in a RagFile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse> ListRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRagMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteRagMetadata(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteRagMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRagMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch Deletes one or more RagMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteRagMetadataAsync(global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteRagMetadata, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VertexRagDataServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -982,7 +1902,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_ListRagFiles, serviceImpl.ListRagFiles)
           .AddMethod(__Method_DeleteRagFile, serviceImpl.DeleteRagFile)
           .AddMethod(__Method_UpdateRagEngineConfig, serviceImpl.UpdateRagEngineConfig)
-          .AddMethod(__Method_GetRagEngineConfig, serviceImpl.GetRagEngineConfig).Build();
+          .AddMethod(__Method_GetRagEngineConfig, serviceImpl.GetRagEngineConfig)
+          .AddMethod(__Method_CreateRagDataSchema, serviceImpl.CreateRagDataSchema)
+          .AddMethod(__Method_BatchCreateRagDataSchemas, serviceImpl.BatchCreateRagDataSchemas)
+          .AddMethod(__Method_GetRagDataSchema, serviceImpl.GetRagDataSchema)
+          .AddMethod(__Method_ListRagDataSchemas, serviceImpl.ListRagDataSchemas)
+          .AddMethod(__Method_DeleteRagDataSchema, serviceImpl.DeleteRagDataSchema)
+          .AddMethod(__Method_BatchDeleteRagDataSchemas, serviceImpl.BatchDeleteRagDataSchemas)
+          .AddMethod(__Method_CreateRagMetadata, serviceImpl.CreateRagMetadata)
+          .AddMethod(__Method_BatchCreateRagMetadata, serviceImpl.BatchCreateRagMetadata)
+          .AddMethod(__Method_UpdateRagMetadata, serviceImpl.UpdateRagMetadata)
+          .AddMethod(__Method_GetRagMetadata, serviceImpl.GetRagMetadata)
+          .AddMethod(__Method_ListRagMetadata, serviceImpl.ListRagMetadata)
+          .AddMethod(__Method_DeleteRagMetadata, serviceImpl.DeleteRagMetadata)
+          .AddMethod(__Method_BatchDeleteRagMetadata, serviceImpl.BatchDeleteRagMetadata).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1004,6 +1937,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_DeleteRagFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagFileRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRagFile));
       serviceBinder.AddMethod(__Method_UpdateRagEngineConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagEngineConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRagEngineConfig));
       serviceBinder.AddMethod(__Method_GetRagEngineConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetRagEngineConfigRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig>(serviceImpl.GetRagEngineConfig));
+      serviceBinder.AddMethod(__Method_CreateRagDataSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema>(serviceImpl.CreateRagDataSchema));
+      serviceBinder.AddMethod(__Method_BatchCreateRagDataSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagDataSchemasRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreateRagDataSchemas));
+      serviceBinder.AddMethod(__Method_GetRagDataSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetRagDataSchemaRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagDataSchema>(serviceImpl.GetRagDataSchema));
+      serviceBinder.AddMethod(__Method_ListRagDataSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagDataSchemasResponse>(serviceImpl.ListRagDataSchemas));
+      serviceBinder.AddMethod(__Method_DeleteRagDataSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagDataSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRagDataSchema));
+      serviceBinder.AddMethod(__Method_BatchDeleteRagDataSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagDataSchemasRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteRagDataSchemas));
+      serviceBinder.AddMethod(__Method_CreateRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(serviceImpl.CreateRagMetadata));
+      serviceBinder.AddMethod(__Method_BatchCreateRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.BatchCreateRagMetadataRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreateRagMetadata));
+      serviceBinder.AddMethod(__Method_UpdateRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(serviceImpl.UpdateRagMetadata));
+      serviceBinder.AddMethod(__Method_GetRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagMetadata>(serviceImpl.GetRagMetadata));
+      serviceBinder.AddMethod(__Method_ListRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagMetadataResponse>(serviceImpl.ListRagMetadata));
+      serviceBinder.AddMethod(__Method_DeleteRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagMetadataRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRagMetadata));
+      serviceBinder.AddMethod(__Method_BatchDeleteRagMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.BatchDeleteRagMetadataRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteRagMetadata));
     }
 
   }

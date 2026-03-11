@@ -2521,10 +2521,46 @@
         "grpc": {
           "libraryClient": "VertexRagDataServiceClient",
           "rpcs": {
+            "BatchCreateRagDataSchemas": {
+              "methods": [
+                "BatchCreateRagDataSchemas",
+                "BatchCreateRagDataSchemasAsync"
+              ]
+            },
+            "BatchCreateRagMetadata": {
+              "methods": [
+                "BatchCreateRagMetadata",
+                "BatchCreateRagMetadataAsync"
+              ]
+            },
+            "BatchDeleteRagDataSchemas": {
+              "methods": [
+                "BatchDeleteRagDataSchemas",
+                "BatchDeleteRagDataSchemasAsync"
+              ]
+            },
+            "BatchDeleteRagMetadata": {
+              "methods": [
+                "BatchDeleteRagMetadata",
+                "BatchDeleteRagMetadataAsync"
+              ]
+            },
             "CreateRagCorpus": {
               "methods": [
                 "CreateRagCorpus",
                 "CreateRagCorpusAsync"
+              ]
+            },
+            "CreateRagDataSchema": {
+              "methods": [
+                "CreateRagDataSchema",
+                "CreateRagDataSchemaAsync"
+              ]
+            },
+            "CreateRagMetadata": {
+              "methods": [
+                "CreateRagMetadata",
+                "CreateRagMetadataAsync"
               ]
             },
             "DeleteRagCorpus": {
@@ -2533,16 +2569,34 @@
                 "DeleteRagCorpusAsync"
               ]
             },
+            "DeleteRagDataSchema": {
+              "methods": [
+                "DeleteRagDataSchema",
+                "DeleteRagDataSchemaAsync"
+              ]
+            },
             "DeleteRagFile": {
               "methods": [
                 "DeleteRagFile",
                 "DeleteRagFileAsync"
               ]
             },
+            "DeleteRagMetadata": {
+              "methods": [
+                "DeleteRagMetadata",
+                "DeleteRagMetadataAsync"
+              ]
+            },
             "GetRagCorpus": {
               "methods": [
                 "GetRagCorpus",
                 "GetRagCorpusAsync"
+              ]
+            },
+            "GetRagDataSchema": {
+              "methods": [
+                "GetRagDataSchema",
+                "GetRagDataSchemaAsync"
               ]
             },
             "GetRagEngineConfig": {
@@ -2557,6 +2611,12 @@
                 "GetRagFileAsync"
               ]
             },
+            "GetRagMetadata": {
+              "methods": [
+                "GetRagMetadata",
+                "GetRagMetadataAsync"
+              ]
+            },
             "ImportRagFiles": {
               "methods": [
                 "ImportRagFiles",
@@ -2569,10 +2629,22 @@
                 "ListRagCorporaAsync"
               ]
             },
+            "ListRagDataSchemas": {
+              "methods": [
+                "ListRagDataSchemas",
+                "ListRagDataSchemasAsync"
+              ]
+            },
             "ListRagFiles": {
               "methods": [
                 "ListRagFiles",
                 "ListRagFilesAsync"
+              ]
+            },
+            "ListRagMetadata": {
+              "methods": [
+                "ListRagMetadata",
+                "ListRagMetadataAsync"
               ]
             },
             "UpdateRagCorpus": {
@@ -2585,6 +2657,12 @@
               "methods": [
                 "UpdateRagEngineConfig",
                 "UpdateRagEngineConfigAsync"
+              ]
+            },
+            "UpdateRagMetadata": {
+              "methods": [
+                "UpdateRagMetadata",
+                "UpdateRagMetadataAsync"
               ]
             },
             "UploadRagFile": {
