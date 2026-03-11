@@ -1612,7 +1612,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-12-03T08:58:51.882847984Z",
-            "lastGeneratedCommit": "c9ff4f1cd26f1fe63e6d1c11a198366b70ebdb84",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "c9ff4f1cd26f1fe63e6d1c11a198366b70ebdb84",
             "apiPaths": [
                 "google/cloud/eventarc/v1"
