@@ -2377,7 +2377,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T08:43:10.839665309Z",
-            "lastGeneratedCommit": "56cc4bfad84e2c2316159f0a860196acbd3fd043",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "56cc4bfad84e2c2316159f0a860196acbd3fd043",
             "apiPaths": [
                 "google/cloud/oracledatabase/v1"
