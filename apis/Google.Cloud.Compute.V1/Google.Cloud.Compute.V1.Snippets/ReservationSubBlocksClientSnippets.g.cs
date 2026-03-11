@@ -175,6 +175,148 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetVersion</summary>
+        public void GetVersionRequestObject()
+        {
+            // Snippet: GetVersion(GetVersionReservationSubBlockRequest, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            GetVersionReservationSubBlockRequest request = new GetVersionReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                ReservationSubBlocksGetVersionRequestResource = new ReservationSubBlocksGetVersionRequest(),
+                Project = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.GetVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOnceGetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersionAsync</summary>
+        public async Task GetVersionRequestObjectAsync()
+        {
+            // Snippet: GetVersionAsync(GetVersionReservationSubBlockRequest, CallSettings)
+            // Additional: GetVersionAsync(GetVersionReservationSubBlockRequest, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVersionReservationSubBlockRequest request = new GetVersionReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                ReservationSubBlocksGetVersionRequestResource = new ReservationSubBlocksGetVersionRequest(),
+                Project = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.GetVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOnceGetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersion</summary>
+        public void GetVersion()
+        {
+            // Snippet: GetVersion(string, string, string, string, ReservationSubBlocksGetVersionRequest, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            ReservationSubBlocksGetVersionRequest reservationSubBlocksGetVersionRequestResource = new ReservationSubBlocksGetVersionRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.GetVersion(project, zone, parentName, reservationSubBlock, reservationSubBlocksGetVersionRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOnceGetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVersionAsync</summary>
+        public async Task GetVersionAsync()
+        {
+            // Snippet: GetVersionAsync(string, string, string, string, ReservationSubBlocksGetVersionRequest, CallSettings)
+            // Additional: GetVersionAsync(string, string, string, string, ReservationSubBlocksGetVersionRequest, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            ReservationSubBlocksGetVersionRequest reservationSubBlocksGetVersionRequestResource = new ReservationSubBlocksGetVersionRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.GetVersionAsync(project, zone, parentName, reservationSubBlock, reservationSubBlocksGetVersionRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOnceGetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for List</summary>
         public void ListRequestObject()
         {

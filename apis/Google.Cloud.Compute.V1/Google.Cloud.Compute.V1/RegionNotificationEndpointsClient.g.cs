@@ -48,6 +48,7 @@ namespace Google.Cloud.Compute.V1
         private RegionNotificationEndpointsSettings(RegionNotificationEndpointsSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -59,6 +60,28 @@ namespace Google.Cloud.Compute.V1
         }
 
         partial void OnCopy(RegionNotificationEndpointsSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionNotificationEndpointsClient.AggregatedList</c> and
+        /// <c>RegionNotificationEndpointsClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -320,6 +343,98 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC RegionNotificationEndpoints client</summary>
         public virtual RegionNotificationEndpoints.RegionNotificationEndpointsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedList(AggregatedListRegionNotificationEndpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedListAsync(AggregatedListRegionNotificationEndpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListRegionNotificationEndpointsRequest request = new AggregatedListRegionNotificationEndpointsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListRegionNotificationEndpointsRequest request = new AggregatedListRegionNotificationEndpointsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified NotificationEndpoint in the given region
@@ -841,6 +956,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class RegionNotificationEndpointsClientImpl : RegionNotificationEndpointsClient
     {
+        private readonly gaxgrpc::ApiCall<AggregatedListRegionNotificationEndpointsRequest, NotificationEndpointAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteRegionNotificationEndpointRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetRegionNotificationEndpointRequest, NotificationEndpoint> _callGet;
@@ -871,6 +988,9 @@ namespace Google.Cloud.Compute.V1
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListRegionNotificationEndpointsRequest, NotificationEndpointAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteRegionNotificationEndpointRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -891,6 +1011,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListRegionNotificationEndpointsRequest, NotificationEndpointAggregatedList> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteRegionNotificationEndpointRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRegionNotificationEndpointRequest, NotificationEndpoint> call);
@@ -906,6 +1028,8 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The underlying gRPC RegionNotificationEndpoints client</summary>
         public override RegionNotificationEndpoints.RegionNotificationEndpointsClient GrpcClient { get; }
 
+        partial void Modify_AggregatedListRegionNotificationEndpointsRequest(ref AggregatedListRegionNotificationEndpointsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteRegionNotificationEndpointRequest(ref DeleteRegionNotificationEndpointRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRegionNotificationEndpointRequest(ref GetRegionNotificationEndpointRequest request, ref gaxgrpc::CallSettings settings);
@@ -915,6 +1039,34 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListRegionNotificationEndpointsRequest(ref ListRegionNotificationEndpointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRegionNotificationEndpointRequest(ref TestIamPermissionsRegionNotificationEndpointRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedList(AggregatedListRegionNotificationEndpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListRegionNotificationEndpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListRegionNotificationEndpointsRequest, NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all NotificationEndpoint resources,
+        /// regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>> AggregatedListAsync(AggregatedListRegionNotificationEndpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListRegionNotificationEndpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListRegionNotificationEndpointsRequest, NotificationEndpointAggregatedList, scg::KeyValuePair<string, NotificationEndpointsScopedList>>(_callAggregatedList, request, callSettings);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1057,6 +1209,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListRegionNotificationEndpointsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListRegionNotificationEndpointsRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -1065,6 +1227,15 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
+    }
+
+    public partial class NotificationEndpointAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, NotificationEndpointsScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, NotificationEndpointsScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class NotificationEndpointList : gaxgrpc::IPageResponse<NotificationEndpoint>

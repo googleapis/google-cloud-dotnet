@@ -1,0 +1,969 @@
+// Copyright 2026 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
+{
+    using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using lro = Google.LongRunning;
+
+    /// <summary>Generated snippets.</summary>
+    public sealed class AllGeneratedRegionHealthSourcesClientSnippets
+    {
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedListRequestObject()
+        {
+            // Snippet: AggregatedList(AggregatedListRegionHealthSourcesRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            AggregatedListRegionHealthSourcesRequest request = new AggregatedListRegionHealthSourcesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthSourceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthSourcesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthSourcesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListRequestObjectAsync()
+        {
+            // Snippet: AggregatedListAsync(AggregatedListRegionHealthSourcesRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregatedListRegionHealthSourcesRequest request = new AggregatedListRegionHealthSourcesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, HealthSourcesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthSourceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthSourcesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthSourcesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedList()
+        {
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthSourceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthSourcesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthSourcesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListAsync()
+        {
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, HealthSourcesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthSourceAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, HealthSourcesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, HealthSourcesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, HealthSourcesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Delete</summary>
+        public void DeleteRequestObject()
+        {
+            // Snippet: Delete(DeleteRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            DeleteRegionHealthSourceRequest request = new DeleteRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAsync</summary>
+        public async Task DeleteRequestObjectAsync()
+        {
+            // Snippet: DeleteAsync(DeleteRegionHealthSourceRequest, CallSettings)
+            // Additional: DeleteAsync(DeleteRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRegionHealthSourceRequest request = new DeleteRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Delete</summary>
+        public void Delete()
+        {
+            // Snippet: Delete(string, string, string, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Delete(project, region, healthSource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAsync</summary>
+        public async Task DeleteAsync()
+        {
+            // Snippet: DeleteAsync(string, string, string, CallSettings)
+            // Additional: DeleteAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.DeleteAsync(project, region, healthSource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Get</summary>
+        public void GetRequestObject()
+        {
+            // Snippet: Get(GetRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            GetRegionHealthSourceRequest request = new GetRegionHealthSourceRequest
+            {
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            HealthSource response = regionHealthSourcesClient.Get(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAsync</summary>
+        public async Task GetRequestObjectAsync()
+        {
+            // Snippet: GetAsync(GetRegionHealthSourceRequest, CallSettings)
+            // Additional: GetAsync(GetRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRegionHealthSourceRequest request = new GetRegionHealthSourceRequest
+            {
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            HealthSource response = await regionHealthSourcesClient.GetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Get</summary>
+        public void Get()
+        {
+            // Snippet: Get(string, string, string, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            HealthSource response = regionHealthSourcesClient.Get(project, region, healthSource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAsync</summary>
+        public async Task GetAsync()
+        {
+            // Snippet: GetAsync(string, string, string, CallSettings)
+            // Additional: GetAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            HealthSource response = await regionHealthSourcesClient.GetAsync(project, region, healthSource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Insert</summary>
+        public void InsertRequestObject()
+        {
+            // Snippet: Insert(InsertRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            InsertRegionHealthSourceRequest request = new InsertRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSourceResource = new HealthSource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InsertAsync</summary>
+        public async Task InsertRequestObjectAsync()
+        {
+            // Snippet: InsertAsync(InsertRegionHealthSourceRequest, CallSettings)
+            // Additional: InsertAsync(InsertRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            InsertRegionHealthSourceRequest request = new InsertRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSourceResource = new HealthSource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Insert</summary>
+        public void Insert()
+        {
+            // Snippet: Insert(string, string, HealthSource, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            HealthSource healthSourceResource = new HealthSource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Insert(project, region, healthSourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InsertAsync</summary>
+        public async Task InsertAsync()
+        {
+            // Snippet: InsertAsync(string, string, HealthSource, CallSettings)
+            // Additional: InsertAsync(string, string, HealthSource, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            HealthSource healthSourceResource = new HealthSource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.InsertAsync(project, region, healthSourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for List</summary>
+        public void ListRequestObject()
+        {
+            // Snippet: List(ListRegionHealthSourcesRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            ListRegionHealthSourcesRequest request = new ListRegionHealthSourcesRequest
+            {
+                Region = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HealthSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthSourceList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HealthSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HealthSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HealthSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAsync</summary>
+        public async Task ListRequestObjectAsync()
+        {
+            // Snippet: ListAsync(ListRegionHealthSourcesRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRegionHealthSourcesRequest request = new ListRegionHealthSourcesRequest
+            {
+                Region = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (HealthSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthSourceList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HealthSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HealthSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HealthSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for List</summary>
+        public void List()
+        {
+            // Snippet: List(string, string, string, int?, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            // Make the request
+            PagedEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.List(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HealthSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (HealthSourceList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HealthSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HealthSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HealthSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAsync</summary>
+        public async Task ListAsync()
+        {
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            // Make the request
+            PagedAsyncEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.ListAsync(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (HealthSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (HealthSourceList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HealthSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HealthSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HealthSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void PatchRequestObject()
+        {
+            // Snippet: Patch(PatchRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            PatchRegionHealthSourceRequest request = new PatchRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSourceResource = new HealthSource(),
+                HealthSource = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchRequestObjectAsync()
+        {
+            // Snippet: PatchAsync(PatchRegionHealthSourceRequest, CallSettings)
+            // Additional: PatchAsync(PatchRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchRegionHealthSourceRequest request = new PatchRegionHealthSourceRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                HealthSourceResource = new HealthSource(),
+                HealthSource = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void Patch()
+        {
+            // Snippet: Patch(string, string, string, HealthSource, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            HealthSource healthSourceResource = new HealthSource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionHealthSourcesClient.Patch(project, region, healthSource, healthSourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionHealthSourcesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchAsync()
+        {
+            // Snippet: PatchAsync(string, string, string, HealthSource, CallSettings)
+            // Additional: PatchAsync(string, string, string, HealthSource, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            HealthSource healthSourceResource = new HealthSource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionHealthSourcesClient.PatchAsync(project, region, healthSource, healthSourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionHealthSourcesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionHealthSourceRequest request = new TestIamPermissionsRegionHealthSourceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = regionHealthSourcesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRegionHealthSourceRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionHealthSourceRequest request = new TestIamPermissionsRegionHealthSourceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await regionHealthSourcesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = regionHealthSourcesClient.TestIamPermissions(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await regionHealthSourcesClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+    }
+}

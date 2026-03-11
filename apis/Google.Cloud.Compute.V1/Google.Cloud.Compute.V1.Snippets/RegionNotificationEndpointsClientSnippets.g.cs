@@ -21,12 +21,209 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Compute.V1;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedRegionNotificationEndpointsClientSnippets
     {
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedListRequestObject()
+        {
+            // Snippet: AggregatedList(AggregatedListRegionNotificationEndpointsRequest, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = RegionNotificationEndpointsClient.Create();
+            // Initialize request argument(s)
+            AggregatedListRegionNotificationEndpointsRequest request = new AggregatedListRegionNotificationEndpointsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NotificationEndpointAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NotificationEndpointsScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListRequestObjectAsync()
+        {
+            // Snippet: AggregatedListAsync(AggregatedListRegionNotificationEndpointsRequest, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = await RegionNotificationEndpointsClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregatedListRegionNotificationEndpointsRequest request = new AggregatedListRegionNotificationEndpointsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (NotificationEndpointAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NotificationEndpointsScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedList()
+        {
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = RegionNotificationEndpointsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NotificationEndpointAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NotificationEndpointsScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListAsync()
+        {
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
+            // Create client
+            RegionNotificationEndpointsClient regionNotificationEndpointsClient = await RegionNotificationEndpointsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (NotificationEndpointAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NotificationEndpointsScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NotificationEndpointsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {

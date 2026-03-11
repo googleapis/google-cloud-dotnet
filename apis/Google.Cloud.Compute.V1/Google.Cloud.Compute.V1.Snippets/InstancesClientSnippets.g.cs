@@ -5874,6 +5874,7 @@ namespace GoogleCSharpSnippets
                 InstanceResource = new Instance(),
                 Project = "",
                 MinimalAction = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Update(request);
@@ -5913,6 +5914,7 @@ namespace GoogleCSharpSnippets
                 InstanceResource = new Instance(),
                 Project = "",
                 MinimalAction = "",
+                DiscardLocalSsd = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.UpdateAsync(request);
