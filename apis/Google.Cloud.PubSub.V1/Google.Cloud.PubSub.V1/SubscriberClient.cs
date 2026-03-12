@@ -232,6 +232,19 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
 
     /// <summary>
+    /// Stops this <see cref="SubscriberClient"/>.
+    /// The returned <see cref="Task"/> completes when the shutdown is finished according to the
+    /// <paramref name="shutdownOptions"/> or the <paramref name="cancellationToken"/> is cancelled.
+    /// The returned <see cref="Task"/> completes when all handled messages have been acknowledged.
+    /// The returned <see cref="Task"/> faults if an unrecoverable error occurs in the underlying service.
+    /// The returned <see cref="Task"/> cancels if <paramref name="cancellationToken"/> is cancelled.
+    /// </summary>
+    /// <param name="shutdownOptions">The <see cref="ShutdownOptions"/> to use for shutdown.</param>
+    /// <param name="cancellationToken">Cancel this <see cref="CancellationToken"/> to immediately abort handlers and acknowledgement.</param>
+    /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
+    public virtual Task StopAsync(ShutdownOptions shutdownOptions, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+
+    /// <summary>
     /// Disposes this <see cref="SubscriberClient"/> asynchronously.
     /// </summary>
     /// <remarks>
