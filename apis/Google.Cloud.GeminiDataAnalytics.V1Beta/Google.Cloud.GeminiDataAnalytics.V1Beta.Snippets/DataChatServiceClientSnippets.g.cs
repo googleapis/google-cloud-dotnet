@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             {
                 Messages = { new Message(), },
                 Parent = "",
+                ThinkingMode = ChatRequest.Types.ThinkingMode.Unspecified,
                 InlineContext = new Context(),
             };
             // Make the request, returning a streaming response
