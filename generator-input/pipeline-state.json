@@ -1492,7 +1492,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-09T14:10:08.846499541Z",
-            "lastGeneratedCommit": "39bd091b055e331a4917143355ab7afa83b7130c",
+            "lastGeneratedCommit": "bce678dfbe53750c5af209ea5cfbc246de68a666",
             "lastReleasedCommit": "39bd091b055e331a4917143355ab7afa83b7130c",
             "apiPaths": [
                 "google/cloud/documentai/v1beta3"
