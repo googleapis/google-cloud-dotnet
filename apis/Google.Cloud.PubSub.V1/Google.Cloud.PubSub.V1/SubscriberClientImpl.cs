@@ -91,6 +91,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private TaskCompletionSource<int> _mainTcs;
     private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
     private CancellationTokenSource _globalHardStopCts;
+    private bool _isStopStarted => _globalSoftStopCts.IsCancellationRequested;
 
     // This property only exists for testing.
     // This is the delay between obtaining a lease on a message and then further extending the lease on that message
@@ -203,7 +204,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         lock (_lock)
         {
             // Note: If multiple stop requests are made, only the first cancellation token is observed.
-            if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
+            if (_mainTcs is not null && _isStopStarted)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
                 return _mainTcs.Task;
