@@ -3304,7 +3304,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T16:50:58.694980555Z",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/telcoautomation/v1"
