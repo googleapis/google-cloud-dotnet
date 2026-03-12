@@ -34,25 +34,31 @@ namespace Google.Shopping.Type {
             "Y3Jvc0IQCg5fY3VycmVuY3lfY29kZSKIAQoPQ3VzdG9tQXR0cmlidXRlEhEK",
             "BG5hbWUYASABKAlIAIgBARISCgV2YWx1ZRgCIAEoCUgBiAEBEjsKDGdyb3Vw",
             "X3ZhbHVlcxgDIAMoCzIlLmdvb2dsZS5zaG9wcGluZy50eXBlLkN1c3RvbUF0",
-            "dHJpYnV0ZUIHCgVfbmFtZUIICgZfdmFsdWUiwQEKC0Rlc3RpbmF0aW9uIrEB",
+            "dHJpYnV0ZUIHCgVfbmFtZUIICgZfdmFsdWUizQIKC0Rlc3RpbmF0aW9uIr0C",
             "Cg9EZXN0aW5hdGlvbkVudW0SIAocREVTVElOQVRJT05fRU5VTV9VTlNQRUNJ",
             "RklFRBAAEhAKDFNIT1BQSU5HX0FEUxABEg8KC0RJU1BMQVlfQURTEAISFwoT",
             "TE9DQUxfSU5WRU5UT1JZX0FEUxADEhEKDUZSRUVfTElTVElOR1MQBBIXChNG",
-            "UkVFX0xPQ0FMX0xJU1RJTkdTEAUSFAoQWU9VVFVCRV9TSE9QUElORxAGIpYD",
-            "ChBSZXBvcnRpbmdDb250ZXh0IoEDChRSZXBvcnRpbmdDb250ZXh0RW51bRIm",
-            "CiJSRVBPUlRJTkdfQ09OVEVYVF9FTlVNX1VOU1BFQ0lGSUVEEAASEAoMU0hP",
-            "UFBJTkdfQURTEAESFQoNRElTQ09WRVJZX0FEUxACGgIIARISCg5ERU1BTkRf",
-            "R0VOX0FEUxANEiMKH0RFTUFORF9HRU5fQURTX0RJU0NPVkVSX1NVUkZBQ0UQ",
-            "DhINCglWSURFT19BRFMQAxIPCgtESVNQTEFZX0FEUxAEEhcKE0xPQ0FMX0lO",
-            "VkVOVE9SWV9BRFMQBRIZChVWRUhJQ0xFX0lOVkVOVE9SWV9BRFMQBhIRCg1G",
-            "UkVFX0xJU1RJTkdTEAcSFwoTRlJFRV9MT0NBTF9MSVNUSU5HUxAIEh8KG0ZS",
-            "RUVfTE9DQUxfVkVISUNMRV9MSVNUSU5HUxAJEhQKEFlPVVRVQkVfU0hPUFBJ",
-            "TkcQChIQCgxDTE9VRF9SRVRBSUwQCxIWChJMT0NBTF9DTE9VRF9SRVRBSUwQ",
-            "DCJNCgdDaGFubmVsIkIKC0NoYW5uZWxFbnVtEhwKGENIQU5ORUxfRU5VTV9V",
-            "TlNQRUNJRklFRBAAEgoKBk9OTElORRABEgkKBUxPQ0FMEAJCcAoYY29tLmdv",
-            "b2dsZS5zaG9wcGluZy50eXBlQgpUeXBlc1Byb3RvUAFaL2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vc2hvcHBpbmcvdHlwZS90eXBlcGI7dHlwZXBiqgIUR29vZ2xl",
-            "LlNob3BwaW5nLlR5cGViBnByb3RvMw=="));
+            "UkVFX0xPQ0FMX0xJU1RJTkdTEAUSFAoQWU9VVFVCRV9TSE9QUElORxAGEh0K",
+            "GVlPVVRVQkVfU0hPUFBJTkdfQ0hFQ0tPVVQQBxIVChFZT1VUVUJFX0FGRklM",
+            "SUFURRAIEhkKFUZSRUVfVkVISUNMRV9MSVNUSU5HUxAJEg8KC1ZFSElDTEVf",
+            "QURTEAoSEAoMQ0xPVURfUkVUQUlMEAsSFgoSTE9DQUxfQ0xPVURfUkVUQUlM",
+            "EAwijgQKEFJlcG9ydGluZ0NvbnRleHQi+QMKFFJlcG9ydGluZ0NvbnRleHRF",
+            "bnVtEiYKIlJFUE9SVElOR19DT05URVhUX0VOVU1fVU5TUEVDSUZJRUQQABIQ",
+            "CgxTSE9QUElOR19BRFMQARIVCg1ESVNDT1ZFUllfQURTEAIaAggBEhIKDkRF",
+            "TUFORF9HRU5fQURTEA0SIwofREVNQU5EX0dFTl9BRFNfRElTQ09WRVJfU1VS",
+            "RkFDRRAOEg0KCVZJREVPX0FEUxADEg8KC0RJU1BMQVlfQURTEAQSFwoTTE9D",
+            "QUxfSU5WRU5UT1JZX0FEUxAFEhkKFVZFSElDTEVfSU5WRU5UT1JZX0FEUxAG",
+            "EhEKDUZSRUVfTElTVElOR1MQBxIeChpGUkVFX0xJU1RJTkdTX1VDUF9DSEVD",
+            "S09VVBATEhcKE0ZSRUVfTE9DQUxfTElTVElOR1MQCBIfChtGUkVFX0xPQ0FM",
+            "X1ZFSElDTEVfTElTVElOR1MQCRIVChFZT1VUVUJFX0FGRklMSUFURRASEhQK",
+            "EFlPVVRVQkVfU0hPUFBJTkcQChIQCgxDTE9VRF9SRVRBSUwQCxIWChJMT0NB",
+            "TF9DTE9VRF9SRVRBSUwQDBITCg9QUk9EVUNUX1JFVklFV1MQDxIUChBNRVJD",
+            "SEFOVF9SRVZJRVdTEBASFAoQWU9VVFVCRV9DSEVDS09VVBARIk0KB0NoYW5u",
+            "ZWwiQgoLQ2hhbm5lbEVudW0SHAoYQ0hBTk5FTF9FTlVNX1VOU1BFQ0lGSUVE",
+            "EAASCgoGT05MSU5FEAESCQoFTE9DQUwQAkJwChhjb20uZ29vZ2xlLnNob3Bw",
+            "aW5nLnR5cGVCClR5cGVzUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby9z",
+            "aG9wcGluZy90eXBlL3R5cGVwYjt0eXBlcGKqAhRHb29nbGUuU2hvcHBpbmcu",
+            "VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1114,6 +1120,31 @@ namespace Google.Shopping.Type {
         /// [YouTube Shopping](https://support.google.com/merchants/answer/12362804).
         /// </summary>
         [pbr::OriginalName("YOUTUBE_SHOPPING")] YoutubeShopping = 6,
+        /// <summary>
+        /// Youtube shopping checkout.
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_SHOPPING_CHECKOUT")] YoutubeShoppingCheckout = 7,
+        /// <summary>
+        /// [Youtube Affiliate](https://support.google.com/youtube/answer/13376398).
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_AFFILIATE")] YoutubeAffiliate = 8,
+        /// <summary>
+        /// [Free vehicle
+        /// listings](https://support.google.com/merchants/answer/11189169).
+        /// </summary>
+        [pbr::OriginalName("FREE_VEHICLE_LISTINGS")] FreeVehicleListings = 9,
+        /// <summary>
+        /// [Vehicle ads](https://support.google.com/merchants/answer/11189169).
+        /// </summary>
+        [pbr::OriginalName("VEHICLE_ADS")] VehicleAds = 10,
+        /// <summary>
+        /// [Cloud retail](https://cloud.google.com/solutions/retail).
+        /// </summary>
+        [pbr::OriginalName("CLOUD_RETAIL")] CloudRetail = 11,
+        /// <summary>
+        /// [Local cloud retail](https://cloud.google.com/solutions/retail).
+        /// </summary>
+        [pbr::OriginalName("LOCAL_CLOUD_RETAIL")] LocalCloudRetail = 12,
       }
 
     }
@@ -1338,6 +1369,11 @@ namespace Google.Shopping.Type {
         /// </summary>
         [pbr::OriginalName("FREE_LISTINGS")] FreeListings = 7,
         /// <summary>
+        /// [Free product listings on UCP
+        /// checkout](https://developers.google.com/merchant/ucp).
+        /// </summary>
+        [pbr::OriginalName("FREE_LISTINGS_UCP_CHECKOUT")] FreeListingsUcpCheckout = 19,
+        /// <summary>
         /// [Free local product
         /// listings](https://support.google.com/merchants/answer/9825611).
         /// </summary>
@@ -1347,6 +1383,10 @@ namespace Google.Shopping.Type {
         /// listings](https://support.google.com/merchants/answer/11544533).
         /// </summary>
         [pbr::OriginalName("FREE_LOCAL_VEHICLE_LISTINGS")] FreeLocalVehicleListings = 9,
+        /// <summary>
+        /// [Youtube Affiliate](https://support.google.com/youtube/answer/13376398).
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_AFFILIATE")] YoutubeAffiliate = 18,
         /// <summary>
         /// [YouTube
         /// Shopping](https://support.google.com/merchants/answer/13478370).
@@ -1360,6 +1400,21 @@ namespace Google.Shopping.Type {
         /// [Local cloud retail](https://cloud.google.com/solutions/retail).
         /// </summary>
         [pbr::OriginalName("LOCAL_CLOUD_RETAIL")] LocalCloudRetail = 12,
+        /// <summary>
+        /// [Product
+        /// Reviews](https://support.google.com/merchants/answer/14620732).
+        /// </summary>
+        [pbr::OriginalName("PRODUCT_REVIEWS")] ProductReviews = 15,
+        /// <summary>
+        /// [Merchant
+        /// Reviews](https://developers.google.com/merchant-review-feeds).
+        /// </summary>
+        [pbr::OriginalName("MERCHANT_REVIEWS")] MerchantReviews = 16,
+        /// <summary>
+        /// YouTube Checkout
+        /// .
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_CHECKOUT")] YoutubeCheckout = 17,
       }
 
     }
