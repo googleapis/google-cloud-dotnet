@@ -170,6 +170,7 @@ public sealed partial class SubscriberClientImpl
 
         private int _pushInFlight = 0;
         private readonly HashSet<string> _messagesInFlight = new HashSet<string>();
+        private readonly HashSet<string> _nackedOnShutdownIds = new HashSet<string>();
         private SubscriberServiceApiClient.StreamingPullStream _pull = null;
         private int _concurrentPushCount = 0;
         private bool _pullComplete = false;
@@ -199,11 +200,13 @@ public sealed partial class SubscriberClientImpl
             // Arrange cancellation token sources for shutdown
             var nackAndWaitToken        = subscriber._globalNackAndWaitCts.Token;
             var hardstopToken           = subscriber._globalHardStopCts.Token;
+            var nackImmediatelyToken    = subscriber._globalNackImmediatelyCts.Token;
+            var waitForProcessingToken  = subscriber._globalWaitForProcessingCts.Token;
             _mainCts                    = new LinkedCancellationTokenSource(hardstopToken);
             _ackNackCts                 = new LinkedCancellationTokenSource(hardstopToken);
-            _pullCts                    = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken);
-            _sendToHandlerCts           = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken);// This is guaranteed to be cancelled before _waitForHandlerCts
-            _waitForHandlerCts          = new LinkedCancellationTokenSource(hardstopToken);
+            _pullCts                    = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken, nackImmediatelyToken, waitForProcessingToken);
+            _sendToHandlerCts           = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken, nackImmediatelyToken); // This is guaranteed to be cancelled before _waitForHandlerCts
+            _waitForHandlerCts          = new LinkedCancellationTokenSource(hardstopToken, nackImmediatelyToken);
 
             _subscriptionName = subscriber.SubscriptionName;
             _normalLeaseTiming = subscriber._normalLeaseTiming;
@@ -539,22 +542,17 @@ public sealed partial class SubscriberClientImpl
                     {
                         return _handler.HandleMessage(msg.Message, _waitForHandlerCts.Token);
                     }, Reply.Nack);
-                    if (_waitForHandlerCts.IsCancellationRequested)
-                    {
-                        // Don't return any ack/nack responses if we are no longer waiting on handlers
-                        lock (_lock)
-                        {
-                            _messagesInFlight.Remove(msg.AckId);
-                        }
-                        // Signal the event loop to re-evaluate the shutdown state and exit early without forwarding ack
-                        // replies, all unhandled messages will be NAck'ed in HandleExtendLease().
-                        _eventPush.Set();
-                        return;
-                    }
                     // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
                     lock (_lock)
                     {
                         _messagesInFlight.Remove(msg.AckId);
+                        if (_waitForHandlerCts.IsCancellationRequested)
+                        {
+                            // Signal the event loop to re-evaluate the shutdown state and exit early without forwarding ack
+                            // replies, all unhandled messages will be NAck'ed in HandleExtendLease().
+                            _eventPush.Set();
+                            return;
+                        }
                         var queue = reply == Reply.Ack ? _ackQueue : _nackQueue;
                         queue.Enqueue(msg.AckId);
                     }
@@ -645,6 +643,7 @@ public sealed partial class SubscriberClientImpl
             if (_waitForHandlerCts.IsCancellationRequested)
             {
                 // if we are no longer waiting on handlers then NAck messages for redelivery.
+                _nackedOnShutdownIds.UnionWith(leaseTracking);
                 Nack(ackIds: leaseTracking, leaseTracking);
                 return;
             }
@@ -654,6 +653,7 @@ public sealed partial class SubscriberClientImpl
                 // Nack messages that will not be sent to handler freeing them for redelivery.
                 // We continue extending leases for in flight messages.
                 var messagesNotBeingHandled = leaseTracking.Except(_messagesInFlight);
+                _nackedOnShutdownIds.UnionWith(messagesNotBeingHandled);
                 Nack(messagesNotBeingHandled, leaseTracking);
 
             }
@@ -1097,7 +1097,7 @@ public sealed partial class SubscriberClientImpl
                         // Temporary errors are deliberately ignored for maintaining consistency with the other client libraries.
                         // Temporary errors will eventually become successful or fail permanently. Their status would be shared then.
                         var ackError = AckError.ForRpcException(rpcException, ids);
-                        return ackError.GetAckNackResponses().ToList();
+                        return UpdateOnShutdown(ackError.GetAckNackResponses().ToList());
                     }
                     else if (rpcException != null)
                     {
@@ -1122,10 +1122,37 @@ public sealed partial class SubscriberClientImpl
                 // This method is local to GetAckNackResponses and gets the successful AckNackResponse for every given ID.
                 // It takes the list of IDs that are deemed to be successfully ACK-ed or NACK-ed.
                 // The corresponding AckNackResponse with success status is created for every ID and returned.
-                static IReadOnlyList<AckNackResponse> GetSuccessResponses(List<string> successfulIds) =>
-                    successfulIds.ConvertAll(item => new AckNackResponse(item, AcknowledgementStatus.Success, default));
+                IReadOnlyList<AckNackResponse> GetSuccessResponses(List<string> successfulIds) =>
+                    UpdateOnShutdown(successfulIds.ConvertAll(item => new AckNackResponse(item, AcknowledgementStatus.Success, default)));
+
+                // Updates response statuses to failure if the messages were Nacked because of shutdown.
+                // This way the message handler will recognize the message processing ultimately failed.
+                IReadOnlyList<AckNackResponse> UpdateOnShutdown(List<AckNackResponse> responses)
+                {
+                    // If we are no longer waiting on message handlers then we may have NAck'ed some of the in-flight messages.
+                    if (IsStopStarted)
+                    {
+                        for (int i = 0; i < responses.Count; i++)
+                        {
+                            var response = responses[i];
+                            if (_nackedOnShutdownIds.Contains(response.MessageId) && response.Status == AcknowledgementStatus.Success)
+                            {
+                                // Override status to reflect the shutdown failure
+                                responses[i] = new AckNackResponse(response.MessageId, AcknowledgementStatus.Other, "Failed on NackImmediately shutdown.");
+                            }
+                        }
+                    }
+
+                    return responses;
+                }
             }
         }
+
+        // A stop is initiated if any of the cancellation tokens have been invoked.
+        private bool IsStopStarted => _pullCts.IsCancellationRequested ||
+                                      _sendToHandlerCts.IsCancellationRequested ||
+                                      _waitForHandlerCts.IsCancellationRequested ||
+                                      _mainCts.IsCancellationRequested;
 
         private void HandleStreamPing()
         {
