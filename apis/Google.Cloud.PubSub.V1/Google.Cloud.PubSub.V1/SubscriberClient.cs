@@ -55,6 +55,22 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     }
 
     /// <summary>
+    /// Settings available for subscriber shutdown.
+    /// </summary>
+    public enum ShutdownOption
+    {
+        /// <summary>
+        /// Stops receiving new messages and continues processing all received messages.
+        /// </summary>
+        WaitForProcessing = 0,
+
+        /// <summary>
+        /// Stops receiving new messages and immediately Nacks all unhandled messages, releasing them for redelivery.
+        /// </summary>
+        NackImmediately = 1,
+    }
+
+    /// <summary>
     /// Default <see cref="FlowControlSettings"/> for <see cref="SubscriberClient"/>.
     /// Allows 1,000 outstanding messages; and 100Mb outstanding bytes.
     /// </summary>
@@ -230,6 +246,19 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="timeout"/> expires.</returns>
     public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
+
+    /// <summary>
+    /// Stops this <see cref="SubscriberClient"/>.
+    /// The returned <see cref="Task"/> completes when the shutdown is finished according to the
+    /// <paramref name="shutdownSetting"/>, the <paramref name="timeout"/> is reached,
+    /// or the <paramref name="cancellationToken"/> is cancelled.
+    /// The returned <see cref="Task"/> faults if an unrecoverable error occurs in the underlying service.
+    /// </summary>
+    /// <param name="shutdownSetting">The <see cref="ShutdownOption"/> to use for shutdown.</param>
+    /// <param name="timeout">The timeout for the shutdown process. If not specified, a default 1-hour timeout is used.</param>
+    /// <param name="cancellationToken">Optional. A <see cref="CancellationToken"/> that can be used to abort the graceful shutdown and trigger an immediate hard stop.</param>
+    /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
+    public virtual Task StopAsync(ShutdownOption shutdownSetting, TimeSpan? timeout = null, CancellationToken cancellationToken = default) => throw new NotImplementedException();
 
     /// <summary>
     /// Disposes this <see cref="SubscriberClient"/> asynchronously.

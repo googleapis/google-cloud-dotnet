@@ -139,7 +139,7 @@ public sealed partial class SubscriberClientImpl
         // The keys in the dictionary represents the Ack ID of the message, while value contains the receipt ModAck status.
         // A value of null indicates that the status is not yet started or in progress. A value of true indicates success, and false indicates failure (which can be temporary or permanent).
         private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new();
-        private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight
+        private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight, _shutdownNackedIds
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
         private readonly IScheduler _scheduler;
@@ -148,6 +148,7 @@ public sealed partial class SubscriberClientImpl
         private readonly SubscriptionHandler _handler;
         private readonly CancellationTokenSource _hardStopCts;
         private readonly CancellationTokenSource _softStopCts;
+        private readonly CancellationTokenSource _nackImmediatelyCts;
         private readonly CancellationTokenSource _pushCts; // Cancels waiting for the next ACK/NACK/ModACK to be pushed to the server.
         private readonly CancellationTokenSource _pullCts; // Cancels the streaming pull, prevent new messages from being consumed.
         private readonly CancellationTokenSource _streamingPingCts; // Cancels the periodic streaming ping that is used to keeps the stream alive.
@@ -181,6 +182,7 @@ public sealed partial class SubscriberClientImpl
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
         private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
+        private readonly HashSet<string> _nackedOnShutdownIds = new HashSet<string>();
         private readonly RetryState _retryState;
         private readonly ILogger _logger;
         private readonly int _clientIndex; // The index of this client within the overall SubscriberClient, in the range 1-ClientCount. Only used for logging.
@@ -201,12 +203,13 @@ public sealed partial class SubscriberClientImpl
 
             // Arrange cancellation token sources for shutdown
             _softStopCts            = subscriber._globalSoftStopCts;
+            _nackImmediatelyCts     = subscriber._globalNackImmediatelyCts;
             _hardStopCts            = subscriber._globalHardStopCts;
             _pushCts                = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-            _pullCts                = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
-            _streamingPingCts       = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
-            _leaseExtensionCts      = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
-            _messageHandlerCts      = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
+            _pullCts                = CancellationTokenSource.CreateLinkedTokenSource(subscriber._globalWaitForProcessingCts.Token, _softStopCts.Token, _nackImmediatelyCts.Token);
+            _streamingPingCts       = CancellationTokenSource.CreateLinkedTokenSource(subscriber._globalWaitForProcessingCts.Token, _softStopCts.Token, _nackImmediatelyCts.Token);
+            _leaseExtensionCts      = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token, _nackImmediatelyCts.Token);
+            _messageHandlerCts      = CancellationTokenSource.CreateLinkedTokenSource(_nackImmediatelyCts.Token, _hardStopCts.Token);
             _shutdownStartedCts     = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
 
             _subscriptionName = subscriber.SubscriptionName;
@@ -249,7 +252,7 @@ public sealed partial class SubscriberClientImpl
                 }
                 var task = nextContinuation.Task;
                 var next = nextContinuation.NextAction;
-                if (next.IsPull && (task.IsCanceled || (task.IsFaulted && (task.Exception.IsCancellation() || task.Exception.IsRpcCancellation()))))
+                if (next.IsPull && (task.IsCanceled || (task.IsFaulted && (task.Exception.IsCancellation() || task.Exception.IsRpcCancellation())) || _pullCts.IsCancellationRequested))
                 {
                     // Pull has been cancelled by user, shutdown pull stream and don't run continuation.
                     // RPC exceptions are dealt with in the relevant handlers.
@@ -514,12 +517,18 @@ public sealed partial class SubscriberClientImpl
             // Running async. Common data needs locking
             for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
             {
+                if (_nackImmediatelyCts.IsCancellationRequested)
+                {
+                    // If NackImmediately has been triggered we stop processing new messages.
+                    break;
+                }
+
                 if (_softStopCts.IsCancellationRequested)
                 {
                     // If the subscriber was shutdown we should stop processing and nack remaining messages, releasing
                     // the message for re-delivery.
                     var remainingAckIds = msgs.Skip(msgIndex).Select(x => x.AckId);
-                    Nack(remainingAckIds);
+                    Nack(remainingAckIds, leaseTracking);
                     _softStopCts.Token.ThrowIfCancellationRequested();
                 }
 
@@ -540,11 +549,23 @@ public sealed partial class SubscriberClientImpl
                     // Call user message handler
                     var reply = await _taskHelper.ConfigureAwaitHideErrors(() =>
                     {
-                        // If the subscriber shut down while waiting for flow control, skip the handler.
-                        // Throwing here triggers a Nack, releasing the message for redelivery.
+                        // If the subscriber shut down while waiting for flow control, throw here to return early.
                         _softStopCts.Token.ThrowIfCancellationRequested();
+                        _nackImmediatelyCts.Token.ThrowIfCancellationRequested();
                         return _handler.HandleMessage(msg.Message, _messageHandlerCts.Token);
                     }, Reply.Nack);
+
+                    if (_nackImmediatelyCts.IsCancellationRequested)
+                    {
+                        lock (_lock)
+                        {
+                            _userHandlerInFlight -= 1;
+                        }
+                        // Signal the event loop to re-evaluate the shutdown state and exit early without forwarding ack
+                        // replies, all unhandled messages will be NAck'ed in HandleExtendLease().
+                        _eventPush.Set();
+                        return;
+                    }
 
                     // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
                     lock (leaseTracking)
@@ -562,20 +583,25 @@ public sealed partial class SubscriberClientImpl
                     _eventPush.Set();
                 }));
             }
+        }
 
-            void Nack(IEnumerable<string> ackIds)
+        private void Nack(IEnumerable<string> ackIds, HashSet<string> leaseTracking)
+        {
+            var idsToNack = ackIds.ToList();
+            if (idsToNack.Count == 0)
             {
-                lock (_lock)
-                {
-                    _nackQueue.Enqueue(ackIds);
-                }
-                lock (leaseTracking)
-                {
-                    leaseTracking.ExceptWith(ackIds);
-                }
-                // Ids have been added to nack-queue, so trigger a push.
-                _eventPush.Set();
+                return;
             }
+
+            lock (_lock)
+            {
+                _nackQueue.Enqueue(idsToNack);
+            }
+            lock (leaseTracking)
+            {
+                leaseTracking.ExceptWith(idsToNack);
+            }
+            _eventPush.Set();
         }
 
         private class LeaseCancellation
@@ -632,6 +658,13 @@ public sealed partial class SubscriberClientImpl
 
         private void HandleExtendLease(HashSet<string> msgIds, LeaseCancellation cancellation)
         {
+            if (_nackImmediatelyCts.IsCancellationRequested)
+            {
+                // No further lease extensions once stop is requested, instead NackEverything.
+                _nackedOnShutdownIds.UnionWith(msgIds);
+                Nack(ackIds: msgIds, leaseTracking: msgIds);
+                return;
+            }
             if (_softStopCts.IsCancellationRequested)
             {
                 // No further lease extensions once stop is requested.
@@ -1071,7 +1104,7 @@ public sealed partial class SubscriberClientImpl
                         // Temporary errors are deliberately ignored for maintaining consistency with the other client libraries.
                         // Temporary errors will eventually become successful or fail permanently. Their status would be shared then.
                         var ackError = AckError.ForRpcException(rpcException, ids);
-                        return ackError.GetAckNackResponses().ToList();
+                        return UpdateOnShutdown(ackError.GetAckNackResponses().ToList());
                     }
                     else if (rpcException != null)
                     {
@@ -1096,8 +1129,29 @@ public sealed partial class SubscriberClientImpl
                 // This method is local to GetAckNackResponses and gets the successful AckNackResponse for every given ID.
                 // It takes the list of IDs that are deemed to be successfully ACK-ed or NACK-ed.
                 // The corresponding AckNackResponse with success status is created for every ID and returned.
-                static IReadOnlyList<AckNackResponse> GetSuccessResponses(List<string> successfulIds) =>
-                    successfulIds.ConvertAll(item => new AckNackResponse(item, AcknowledgementStatus.Success, default));
+                IReadOnlyList<AckNackResponse> GetSuccessResponses(List<string> successfulIds) =>
+                    UpdateOnShutdown(successfulIds.ConvertAll(item => new AckNackResponse(item, AcknowledgementStatus.Success, default)));
+
+                // Updates response statuses to failure if the messages were Nacked because of NackImmediately shutdown.
+                // This way the message handler will recognize the message processing ultimately failed.
+                IReadOnlyList<AckNackResponse> UpdateOnShutdown(List<AckNackResponse> responses)
+                {
+                    // Only process if a NackImmediately shutdown is in progress
+                    if (_nackImmediatelyCts.IsCancellationRequested)
+                    {
+                        for (int i = 0; i < responses.Count; i++)
+                        {
+                            var response = responses[i];
+                            if (_nackedOnShutdownIds.Contains(response.MessageId) && response.Status == AcknowledgementStatus.Success)
+                            {
+                                // Override status to reflect the shutdown failure
+                                responses[i] = new AckNackResponse(response.MessageId, AcknowledgementStatus.Other, "Failed on NackImmediately shutdown.");
+                            }
+                        }
+                    }
+
+                    return responses;
+                }
             }
         }
 
