@@ -30,23 +30,24 @@ namespace Grafeas.V1 {
             "ZAoIRW52ZWxvcGUSDwoHcGF5bG9hZBgBIAEoDBIUCgxwYXlsb2FkX3R5cGUY",
             "AiABKAkSMQoKc2lnbmF0dXJlcxgDIAMoCzIdLmdyYWZlYXMudjEuRW52ZWxv",
             "cGVTaWduYXR1cmUiLwoRRW52ZWxvcGVTaWduYXR1cmUSCwoDc2lnGAEgASgM",
-            "Eg0KBWtleWlkGAIgASgJIlIKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
+            "Eg0KBWtleWlkGAIgASgJImcKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
             "ASABKAkSLwoNbGF5ZXJfZGV0YWlscxgCIAEoCzIYLmdyYWZlYXMudjEuTGF5",
-            "ZXJEZXRhaWxzIlQKCUJhc2VJbWFnZRIMCgRuYW1lGAEgASgJEhIKCnJlcG9z",
-            "aXRvcnkYAiABKAkSEwoLbGF5ZXJfY291bnQYAyABKAUSEAoIcmVnaXN0cnkY",
-            "BCABKAkifQoMTGF5ZXJEZXRhaWxzEg0KBWluZGV4GAEgASgFEg8KB2RpZmZf",
-            "aWQYAiABKAkSEAoIY2hhaW5faWQYBSABKAkSDwoHY29tbWFuZBgDIAEoCRIq",
-            "CgtiYXNlX2ltYWdlcxgEIAMoCzIVLmdyYWZlYXMudjEuQmFzZUltYWdlIi8K",
-            "B0xpY2Vuc2USEgoKZXhwcmVzc2lvbhgBIAEoCRIQCghjb21tZW50cxgCIAEo",
-            "CSIsCgZEaWdlc3QSDAoEYWxnbxgBIAEoCRIUCgxkaWdlc3RfYnl0ZXMYAiAB",
-            "KAwq/AEKCE5vdGVLaW5kEhkKFU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEK",
-            "DVZVTE5FUkFCSUxJVFkQARIJCgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFD",
-            "S0FHRRAEEg4KCkRFUExPWU1FTlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRF",
-            "U1RBVElPThAHEgsKB1VQR1JBREUQCBIOCgpDT01QTElBTkNFEAkSFAoQRFNT",
-            "RV9BVFRFU1RBVElPThAKEhwKGFZVTE5FUkFCSUxJVFlfQVNTRVNTTUVOVBAL",
-            "EhIKDlNCT01fUkVGRVJFTkNFEAwSCgoGU0VDUkVUEA1CUQoNaW8uZ3JhZmVh",
-            "cy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
+            "ZXJEZXRhaWxzEhMKC2xpbmVfbnVtYmVyGAMgASgFIlQKCUJhc2VJbWFnZRIM",
+            "CgRuYW1lGAEgASgJEhIKCnJlcG9zaXRvcnkYAiABKAkSEwoLbGF5ZXJfY291",
+            "bnQYAyABKAUSEAoIcmVnaXN0cnkYBCABKAkifQoMTGF5ZXJEZXRhaWxzEg0K",
+            "BWluZGV4GAEgASgFEg8KB2RpZmZfaWQYAiABKAkSEAoIY2hhaW5faWQYBSAB",
+            "KAkSDwoHY29tbWFuZBgDIAEoCRIqCgtiYXNlX2ltYWdlcxgEIAMoCzIVLmdy",
+            "YWZlYXMudjEuQmFzZUltYWdlIi8KB0xpY2Vuc2USEgoKZXhwcmVzc2lvbhgB",
+            "IAEoCRIQCghjb21tZW50cxgCIAEoCSIsCgZEaWdlc3QSDAoEYWxnbxgBIAEo",
+            "CRIUCgxkaWdlc3RfYnl0ZXMYAiABKAwq/AEKCE5vdGVLaW5kEhkKFU5PVEVf",
+            "S0lORF9VTlNQRUNJRklFRBAAEhEKDVZVTE5FUkFCSUxJVFkQARIJCgVCVUlM",
+            "RBACEgkKBUlNQUdFEAMSCwoHUEFDS0FHRRAEEg4KCkRFUExPWU1FTlQQBRIN",
+            "CglESVNDT1ZFUlkQBhIPCgtBVFRFU1RBVElPThAHEgsKB1VQR1JBREUQCBIO",
+            "CgpDT01QTElBTkNFEAkSFAoQRFNTRV9BVFRFU1RBVElPThAKEhwKGFZVTE5F",
+            "UkFCSUxJVFlfQVNTRVNTTUVOVBALEhIKDlNCT01fUkVGRVJFTkNFEAwSCgoG",
+            "U0VDUkVUEA1CUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dS",
+            "QWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +55,7 @@ namespace Grafeas.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Signature), global::Grafeas.V1.Signature.Parser, new[]{ "Signature_", "PublicKeyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Envelope), global::Grafeas.V1.Envelope.Parser, new[]{ "Payload", "PayloadType", "Signatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.EnvelopeSignature), global::Grafeas.V1.EnvelopeSignature.Parser, new[]{ "Sig", "Keyid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileLocation), global::Grafeas.V1.FileLocation.Parser, new[]{ "FilePath", "LayerDetails" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileLocation), global::Grafeas.V1.FileLocation.Parser, new[]{ "FilePath", "LayerDetails", "LineNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BaseImage), global::Grafeas.V1.BaseImage.Parser, new[]{ "Name", "Repository", "LayerCount", "Registry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.LayerDetails), global::Grafeas.V1.LayerDetails.Parser, new[]{ "Index", "DiffId", "ChainId", "Command", "BaseImages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.License), global::Grafeas.V1.License.Parser, new[]{ "Expression", "Comments" }, null, null, null, null),
@@ -1169,6 +1170,7 @@ namespace Grafeas.V1 {
     public FileLocation(FileLocation other) : this() {
       filePath_ = other.filePath_;
       layerDetails_ = other.layerDetails_ != null ? other.layerDetails_.Clone() : null;
+      lineNumber_ = other.lineNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1210,6 +1212,22 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "line_number" field.</summary>
+    public const int LineNumberFieldNumber = 3;
+    private int lineNumber_;
+    /// <summary>
+    /// Line number in the file where the package was found.
+    /// Optional field that only applies to source repository scanning.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LineNumber {
+      get { return lineNumber_; }
+      set {
+        lineNumber_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1227,6 +1245,7 @@ namespace Grafeas.V1 {
       }
       if (FilePath != other.FilePath) return false;
       if (!object.Equals(LayerDetails, other.LayerDetails)) return false;
+      if (LineNumber != other.LineNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1236,6 +1255,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (FilePath.Length != 0) hash ^= FilePath.GetHashCode();
       if (layerDetails_ != null) hash ^= LayerDetails.GetHashCode();
+      if (LineNumber != 0) hash ^= LineNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1262,6 +1282,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(LayerDetails);
       }
+      if (LineNumber != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LineNumber);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1280,6 +1304,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(LayerDetails);
       }
+      if (LineNumber != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LineNumber);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1295,6 +1323,9 @@ namespace Grafeas.V1 {
       }
       if (layerDetails_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LayerDetails);
+      }
+      if (LineNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LineNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1316,6 +1347,9 @@ namespace Grafeas.V1 {
           LayerDetails = new global::Grafeas.V1.LayerDetails();
         }
         LayerDetails.MergeFrom(other.LayerDetails);
+      }
+      if (other.LineNumber != 0) {
+        LineNumber = other.LineNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1343,6 +1377,10 @@ namespace Grafeas.V1 {
             input.ReadMessage(LayerDetails);
             break;
           }
+          case 24: {
+            LineNumber = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1367,6 +1405,10 @@ namespace Grafeas.V1 {
               LayerDetails = new global::Grafeas.V1.LayerDetails();
             }
             input.ReadMessage(LayerDetails);
+            break;
+          }
+          case 24: {
+            LineNumber = input.ReadInt32();
             break;
           }
         }
