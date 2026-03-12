@@ -4386,7 +4386,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-03T19:24:14.263872403Z",
-            "lastGeneratedCommit": "09a8b09e41d18a09d5f34b6025a74dce25a5507e",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "09a8b09e41d18a09d5f34b6025a74dce25a5507e",
             "apiPaths": [
                 "google/apps/events/subscriptions/v1beta"
