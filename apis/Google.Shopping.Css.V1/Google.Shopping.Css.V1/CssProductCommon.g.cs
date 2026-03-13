@@ -27,7 +27,7 @@ namespace Google.Shopping.Css.V1 {
             "Ci9nb29nbGUvc2hvcHBpbmcvY3NzL3YxL2Nzc19wcm9kdWN0X2NvbW1vbi5w",
             "cm90bxIWZ29vZ2xlLnNob3BwaW5nLmNzcy52MRofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlwZXMucHJvdG8ioBIKCkF0",
+            "cm90bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlwZXMucHJvdG8ivBMKCkF0",
             "dHJpYnV0ZXMSFQoIY3BwX2xpbmsYASABKAlIAIgBARIcCg9jcHBfbW9iaWxl",
             "X2xpbmsYAiABKAlIAYgBARIdChBjcHBfYWRzX3JlZGlyZWN0GCogASgJSAKI",
             "AQESLgoJbG93X3ByaWNlGAMgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUu",
@@ -68,56 +68,60 @@ namespace Google.Shopping.Css.V1 {
             "cl9pbnN0YWxsbWVudBgzIAEoCzIwLmdvb2dsZS5zaG9wcGluZy5jc3MudjEu",
             "SGVhZGxpbmVPZmZlckluc3RhbGxtZW50El8KIGhlYWRsaW5lX29mZmVyX3N1",
             "YnNjcmlwdGlvbl9jb3N0GDQgASgLMjUuZ29vZ2xlLnNob3BwaW5nLmNzcy52",
-            "MS5IZWFkbGluZU9mZmVyU3Vic2NyaXB0aW9uQ29zdEILCglfY3BwX2xpbmtC",
-            "EgoQX2NwcF9tb2JpbGVfbGlua0ITChFfY3BwX2Fkc19yZWRpcmVjdEITChFf",
-            "bnVtYmVyX29mX29mZmVyc0IbChlfaGVhZGxpbmVfb2ZmZXJfY29uZGl0aW9u",
-            "QhYKFF9oZWFkbGluZV9vZmZlcl9saW5rQh0KG19oZWFkbGluZV9vZmZlcl9t",
-            "b2JpbGVfbGlua0IICgZfdGl0bGVCDQoLX2ltYWdlX2xpbmtCDgoMX2Rlc2Ny",
-            "aXB0aW9uQggKBl9icmFuZEIGCgRfbXBuQgcKBV9ndGluQhoKGF9nb29nbGVf",
-            "cHJvZHVjdF9jYXRlZ29yeUIICgZfYWR1bHRCDAoKX211bHRpcGFja0IMCgpf",
-            "aXNfYnVuZGxlQgwKCl9hZ2VfZ3JvdXBCCAoGX2NvbG9yQgkKB19nZW5kZXJC",
-            "CwoJX21hdGVyaWFsQgoKCF9wYXR0ZXJuQgcKBV9zaXplQg4KDF9zaXplX3N5",
-            "c3RlbUIQCg5faXRlbV9ncm91cF9pZEIICgZfcGF1c2VCEQoPX2N1c3RvbV9s",
-            "YWJlbF8wQhEKD19jdXN0b21fbGFiZWxfMUIRCg9fY3VzdG9tX2xhYmVsXzJC",
-            "EQoPX2N1c3RvbV9sYWJlbF8zQhEKD19jdXN0b21fbGFiZWxfNCI+Cg1DZXJ0",
-            "aWZpY2F0aW9uEgwKBG5hbWUYASABKAkSEQoJYXV0aG9yaXR5GAIgASgJEgwK",
-            "BGNvZGUYAyABKAkiVgoNUHJvZHVjdERldGFpbBIUCgxzZWN0aW9uX25hbWUY",
-            "ASABKAkSFgoOYXR0cmlidXRlX25hbWUYAiABKAkSFwoPYXR0cmlidXRlX3Zh",
-            "bHVlGAMgASgJIjkKEFByb2R1Y3REaW1lbnNpb24SEgoFdmFsdWUYASABKAFC",
-            "A+BBAhIRCgR1bml0GAIgASgJQgPgQQIiNgoNUHJvZHVjdFdlaWdodBISCgV2",
-            "YWx1ZRgBIAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiKxBQoQQ3NzUHJv",
-            "ZHVjdFN0YXR1cxJYChRkZXN0aW5hdGlvbl9zdGF0dXNlcxgDIAMoCzI6Lmdv",
-            "b2dsZS5zaG9wcGluZy5jc3MudjEuQ3NzUHJvZHVjdFN0YXR1cy5EZXN0aW5h",
-            "dGlvblN0YXR1cxJSChFpdGVtX2xldmVsX2lzc3VlcxgEIAMoCzI3Lmdvb2ds",
-            "ZS5zaG9wcGluZy5jc3MudjEuQ3NzUHJvZHVjdFN0YXR1cy5JdGVtTGV2ZWxJ",
-            "c3N1ZRIxCg1jcmVhdGlvbl9kYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV9kYXRlGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBI6ChZnb29nbGVfZXhwaXJhdGlvbl9kYXRl",
-            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBp+ChFEZXN0aW5h",
-            "dGlvblN0YXR1cxITCgtkZXN0aW5hdGlvbhgBIAEoCRIaChJhcHByb3ZlZF9j",
-            "b3VudHJpZXMYAiADKAkSGQoRcGVuZGluZ19jb3VudHJpZXMYAyADKAkSHQoV",
-            "ZGlzYXBwcm92ZWRfY291bnRyaWVzGAQgAygJGskBCg5JdGVtTGV2ZWxJc3N1",
-            "ZRIMCgRjb2RlGAEgASgJEhMKC3NlcnZhYmlsaXR5GAIgASgJEhIKCnJlc29s",
-            "dXRpb24YAyABKAkSEQoJYXR0cmlidXRlGAQgASgJEhMKC2Rlc3RpbmF0aW9u",
-            "GAUgASgJEhMKC2Rlc2NyaXB0aW9uGAYgASgJEg4KBmRldGFpbBgHIAEoCRIV",
-            "Cg1kb2N1bWVudGF0aW9uGAggASgJEhwKFGFwcGxpY2FibGVfY291bnRyaWVz",
-            "GAkgAygJIp8BCh1IZWFkbGluZU9mZmVyU3Vic2NyaXB0aW9uQ29zdBI6CgZw",
-            "ZXJpb2QYASABKA4yKi5nb29nbGUuc2hvcHBpbmcuY3NzLnYxLlN1YnNjcmlw",
-            "dGlvblBlcmlvZBIVCg1wZXJpb2RfbGVuZ3RoGAIgASgDEisKBmFtb3VudBgD",
-            "IAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlIokBChhIZWFkbGlu",
-            "ZU9mZmVySW5zdGFsbG1lbnQSDgoGbW9udGhzGAEgASgDEisKBmFtb3VudBgC",
-            "IAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEjAKC2Rvd25wYXlt",
-            "ZW50GAMgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2UqTgoSU3Vi",
-            "c2NyaXB0aW9uUGVyaW9kEiMKH1NVQlNDUklQVElPTl9QRVJJT0RfVU5TUEVD",
-            "SUZJRUQQABIJCgVNT05USBABEggKBFlFQVIQAkK3AQoaY29tLmdvb2dsZS5z",
-            "aG9wcGluZy5jc3MudjFCFUNzc1Byb2R1Y3RDb21tb25Qcm90b1ABWjJjbG91",
-            "ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL2Nzcy9hcGl2MS9jc3NwYjtjc3Nw",
-            "YqoCFkdvb2dsZS5TaG9wcGluZy5Dc3MuVjHKAhZHb29nbGVcU2hvcHBpbmdc",
-            "Q3NzXFYx6gIZR29vZ2xlOjpTaG9wcGluZzo6Q3NzOjpWMWIGcHJvdG8z"));
+            "MS5IZWFkbGluZU9mZmVyU3Vic2NyaXB0aW9uQ29zdBIZCgxyZXZpZXdfY291",
+            "bnQYNiABKANIH4gBARIXCgptaW5fcmF0aW5nGDcgASgDSCCIAQESFwoKbWF4",
+            "X3JhdGluZxg4IAEoA0ghiAEBEhMKBnJhdGluZxg5IAEoAUgiiAEBQgsKCV9j",
+            "cHBfbGlua0ISChBfY3BwX21vYmlsZV9saW5rQhMKEV9jcHBfYWRzX3JlZGly",
+            "ZWN0QhMKEV9udW1iZXJfb2Zfb2ZmZXJzQhsKGV9oZWFkbGluZV9vZmZlcl9j",
+            "b25kaXRpb25CFgoUX2hlYWRsaW5lX29mZmVyX2xpbmtCHQobX2hlYWRsaW5l",
+            "X29mZmVyX21vYmlsZV9saW5rQggKBl90aXRsZUINCgtfaW1hZ2VfbGlua0IO",
+            "CgxfZGVzY3JpcHRpb25CCAoGX2JyYW5kQgYKBF9tcG5CBwoFX2d0aW5CGgoY",
+            "X2dvb2dsZV9wcm9kdWN0X2NhdGVnb3J5QggKBl9hZHVsdEIMCgpfbXVsdGlw",
+            "YWNrQgwKCl9pc19idW5kbGVCDAoKX2FnZV9ncm91cEIICgZfY29sb3JCCQoH",
+            "X2dlbmRlckILCglfbWF0ZXJpYWxCCgoIX3BhdHRlcm5CBwoFX3NpemVCDgoM",
+            "X3NpemVfc3lzdGVtQhAKDl9pdGVtX2dyb3VwX2lkQggKBl9wYXVzZUIRCg9f",
+            "Y3VzdG9tX2xhYmVsXzBCEQoPX2N1c3RvbV9sYWJlbF8xQhEKD19jdXN0b21f",
+            "bGFiZWxfMkIRCg9fY3VzdG9tX2xhYmVsXzNCEQoPX2N1c3RvbV9sYWJlbF80",
+            "Qg8KDV9yZXZpZXdfY291bnRCDQoLX21pbl9yYXRpbmdCDQoLX21heF9yYXRp",
+            "bmdCCQoHX3JhdGluZyI+Cg1DZXJ0aWZpY2F0aW9uEgwKBG5hbWUYASABKAkS",
+            "EQoJYXV0aG9yaXR5GAIgASgJEgwKBGNvZGUYAyABKAkiVgoNUHJvZHVjdERl",
+            "dGFpbBIUCgxzZWN0aW9uX25hbWUYASABKAkSFgoOYXR0cmlidXRlX25hbWUY",
+            "AiABKAkSFwoPYXR0cmlidXRlX3ZhbHVlGAMgASgJIjkKEFByb2R1Y3REaW1l",
+            "bnNpb24SEgoFdmFsdWUYASABKAFCA+BBAhIRCgR1bml0GAIgASgJQgPgQQIi",
+            "NgoNUHJvZHVjdFdlaWdodBISCgV2YWx1ZRgBIAEoAUID4EECEhEKBHVuaXQY",
+            "AiABKAlCA+BBAiKxBQoQQ3NzUHJvZHVjdFN0YXR1cxJYChRkZXN0aW5hdGlv",
+            "bl9zdGF0dXNlcxgDIAMoCzI6Lmdvb2dsZS5zaG9wcGluZy5jc3MudjEuQ3Nz",
+            "UHJvZHVjdFN0YXR1cy5EZXN0aW5hdGlvblN0YXR1cxJSChFpdGVtX2xldmVs",
+            "X2lzc3VlcxgEIAMoCzI3Lmdvb2dsZS5zaG9wcGluZy5jc3MudjEuQ3NzUHJv",
+            "ZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZRIxCg1jcmVhdGlvbl9kYXRlGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0",
+            "ZV9kYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6ChZn",
+            "b29nbGVfZXhwaXJhdGlvbl9kYXRlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBp+ChFEZXN0aW5hdGlvblN0YXR1cxITCgtkZXN0aW5hdGlv",
+            "bhgBIAEoCRIaChJhcHByb3ZlZF9jb3VudHJpZXMYAiADKAkSGQoRcGVuZGlu",
+            "Z19jb3VudHJpZXMYAyADKAkSHQoVZGlzYXBwcm92ZWRfY291bnRyaWVzGAQg",
+            "AygJGskBCg5JdGVtTGV2ZWxJc3N1ZRIMCgRjb2RlGAEgASgJEhMKC3NlcnZh",
+            "YmlsaXR5GAIgASgJEhIKCnJlc29sdXRpb24YAyABKAkSEQoJYXR0cmlidXRl",
+            "GAQgASgJEhMKC2Rlc3RpbmF0aW9uGAUgASgJEhMKC2Rlc2NyaXB0aW9uGAYg",
+            "ASgJEg4KBmRldGFpbBgHIAEoCRIVCg1kb2N1bWVudGF0aW9uGAggASgJEhwK",
+            "FGFwcGxpY2FibGVfY291bnRyaWVzGAkgAygJIp8BCh1IZWFkbGluZU9mZmVy",
+            "U3Vic2NyaXB0aW9uQ29zdBI6CgZwZXJpb2QYASABKA4yKi5nb29nbGUuc2hv",
+            "cHBpbmcuY3NzLnYxLlN1YnNjcmlwdGlvblBlcmlvZBIVCg1wZXJpb2RfbGVu",
+            "Z3RoGAIgASgDEisKBmFtb3VudBgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50",
+            "eXBlLlByaWNlIokBChhIZWFkbGluZU9mZmVySW5zdGFsbG1lbnQSDgoGbW9u",
+            "dGhzGAEgASgDEisKBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50",
+            "eXBlLlByaWNlEjAKC2Rvd25wYXltZW50GAMgASgLMhsuZ29vZ2xlLnNob3Bw",
+            "aW5nLnR5cGUuUHJpY2UqTgoSU3Vic2NyaXB0aW9uUGVyaW9kEiMKH1NVQlND",
+            "UklQVElPTl9QRVJJT0RfVU5TUEVDSUZJRUQQABIJCgVNT05USBABEggKBFlF",
+            "QVIQAkK3AQoaY29tLmdvb2dsZS5zaG9wcGluZy5jc3MudjFCFUNzc1Byb2R1",
+            "Y3RDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5n",
+            "L2Nzcy9hcGl2MS9jc3NwYjtjc3NwYqoCFkdvb2dsZS5TaG9wcGluZy5Dc3Mu",
+            "VjHKAhZHb29nbGVcU2hvcHBpbmdcQ3NzXFYx6gIZR29vZ2xlOjpTaG9wcGlu",
+            "Zzo6Q3NzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Css.V1.SubscriptionPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Css.V1.Attributes), global::Google.Shopping.Css.V1.Attributes.Parser, new[]{ "CppLink", "CppMobileLink", "CppAdsRedirect", "LowPrice", "HighPrice", "NumberOfOffers", "HeadlineOfferCondition", "HeadlineOfferPrice", "HeadlineOfferLink", "HeadlineOfferMobileLink", "HeadlineOfferShippingPrice", "Title", "ImageLink", "AdditionalImageLinks", "Description", "Brand", "Mpn", "Gtin", "ProductTypes", "GoogleProductCategory", "Adult", "Multipack", "IsBundle", "AgeGroup", "Color", "Gender", "Material", "Pattern", "Size", "SizeSystem", "SizeTypes", "ItemGroupId", "ProductDetails", "ProductWeight", "ProductLength", "ProductWidth", "ProductHeight", "ProductHighlights", "Certifications", "ExpirationDate", "IncludedDestinations", "ExcludedDestinations", "Pause", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "HeadlineOfferInstallment", "HeadlineOfferSubscriptionCost" }, new[]{ "CppLink", "CppMobileLink", "CppAdsRedirect", "NumberOfOffers", "HeadlineOfferCondition", "HeadlineOfferLink", "HeadlineOfferMobileLink", "Title", "ImageLink", "Description", "Brand", "Mpn", "Gtin", "GoogleProductCategory", "Adult", "Multipack", "IsBundle", "AgeGroup", "Color", "Gender", "Material", "Pattern", "Size", "SizeSystem", "ItemGroupId", "Pause", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Css.V1.Attributes), global::Google.Shopping.Css.V1.Attributes.Parser, new[]{ "CppLink", "CppMobileLink", "CppAdsRedirect", "LowPrice", "HighPrice", "NumberOfOffers", "HeadlineOfferCondition", "HeadlineOfferPrice", "HeadlineOfferLink", "HeadlineOfferMobileLink", "HeadlineOfferShippingPrice", "Title", "ImageLink", "AdditionalImageLinks", "Description", "Brand", "Mpn", "Gtin", "ProductTypes", "GoogleProductCategory", "Adult", "Multipack", "IsBundle", "AgeGroup", "Color", "Gender", "Material", "Pattern", "Size", "SizeSystem", "SizeTypes", "ItemGroupId", "ProductDetails", "ProductWeight", "ProductLength", "ProductWidth", "ProductHeight", "ProductHighlights", "Certifications", "ExpirationDate", "IncludedDestinations", "ExcludedDestinations", "Pause", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "HeadlineOfferInstallment", "HeadlineOfferSubscriptionCost", "ReviewCount", "MinRating", "MaxRating", "Rating" }, new[]{ "CppLink", "CppMobileLink", "CppAdsRedirect", "NumberOfOffers", "HeadlineOfferCondition", "HeadlineOfferLink", "HeadlineOfferMobileLink", "Title", "ImageLink", "Description", "Brand", "Mpn", "Gtin", "GoogleProductCategory", "Adult", "Multipack", "IsBundle", "AgeGroup", "Color", "Gender", "Material", "Pattern", "Size", "SizeSystem", "ItemGroupId", "Pause", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ReviewCount", "MinRating", "MaxRating", "Rating" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Css.V1.Certification), global::Google.Shopping.Css.V1.Certification.Parser, new[]{ "Name", "Authority", "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Css.V1.ProductDetail), global::Google.Shopping.Css.V1.ProductDetail.Parser, new[]{ "SectionName", "AttributeName", "AttributeValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Css.V1.ProductDimension), global::Google.Shopping.Css.V1.ProductDimension.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
@@ -243,6 +247,10 @@ namespace Google.Shopping.Css.V1 {
       customLabel4_ = other.customLabel4_;
       headlineOfferInstallment_ = other.headlineOfferInstallment_ != null ? other.headlineOfferInstallment_.Clone() : null;
       headlineOfferSubscriptionCost_ = other.headlineOfferSubscriptionCost_ != null ? other.headlineOfferSubscriptionCost_.Clone() : null;
+      reviewCount_ = other.reviewCount_;
+      minRating_ = other.minRating_;
+      maxRating_ = other.maxRating_;
+      rating_ = other.rating_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1063,7 +1071,7 @@ namespace Google.Shopping.Css.V1 {
     /// <summary>
     /// The cut of the item. It can be used to represent combined size types for
     /// apparel items. Maximum two of size types can be provided (see
-    /// [https://support.google.com/merchants/answer/6324497](size type)).
+    /// [size type](https://support.google.com/merchants/answer/6324497).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1465,6 +1473,139 @@ namespace Google.Shopping.Css.V1 {
       }
     }
 
+    /// <summary>Field number for the "review_count" field.</summary>
+    public const int ReviewCountFieldNumber = 54;
+    private readonly static long ReviewCountDefaultValue = 0L;
+
+    private long reviewCount_;
+    /// <summary>
+    /// Number of reviews of the product. Required if
+    /// [`rating`][google.shopping.css.v1.Attributes.rating] is provided.
+    /// This field is for an upcoming feature and is not yet used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ReviewCount {
+      get { if ((_hasBits0 & 16) != 0) { return reviewCount_; } else { return ReviewCountDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        reviewCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "review_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReviewCount {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "review_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReviewCount() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "min_rating" field.</summary>
+    public const int MinRatingFieldNumber = 55;
+    private readonly static long MinRatingDefaultValue = 0L;
+
+    private long minRating_;
+    /// <summary>
+    /// Minimum rating score of the product. Required if
+    /// [`rating`][google.shopping.css.v1.Attributes.rating] is provided.
+    /// This field is for an upcoming feature and is not yet used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinRating {
+      get { if ((_hasBits0 & 32) != 0) { return minRating_; } else { return MinRatingDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        minRating_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_rating" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinRating {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "min_rating" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinRating() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "max_rating" field.</summary>
+    public const int MaxRatingFieldNumber = 56;
+    private readonly static long MaxRatingDefaultValue = 0L;
+
+    private long maxRating_;
+    /// <summary>
+    /// Maximum rating score of the product. Required if
+    /// [`rating`][google.shopping.css.v1.Attributes.rating] is provided.
+    /// This field is for an upcoming feature and is not yet used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxRating {
+      get { if ((_hasBits0 & 64) != 0) { return maxRating_; } else { return MaxRatingDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        maxRating_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_rating" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxRating {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "max_rating" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxRating() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "rating" field.</summary>
+    public const int RatingFieldNumber = 57;
+    private readonly static double RatingDefaultValue = 0D;
+
+    private double rating_;
+    /// <summary>
+    /// Average rating score of the product. The value must be within the
+    /// range of [`min_rating`, `max_rating`], inclusive. When displayed on the
+    /// product page, this rating is normalized to a scale of [1, 5] with one
+    /// decimal place. If provided,
+    /// [`review_count`][google.shopping.css.v1.Attributes.review_count],
+    /// [`min_rating`][google.shopping.css.v1.Attributes.min_rating], and
+    /// [`max_rating`][google.shopping.css.v1.Attributes.max_rating] are also
+    /// required. This field is for an upcoming feature and is not yet used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Rating {
+      get { if ((_hasBits0 & 128) != 0) { return rating_; } else { return RatingDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        rating_ = value;
+      }
+    }
+    /// <summary>Gets whether the "rating" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRating {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "rating" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRating() {
+      _hasBits0 &= ~128;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1530,6 +1671,10 @@ namespace Google.Shopping.Css.V1 {
       if (CustomLabel4 != other.CustomLabel4) return false;
       if (!object.Equals(HeadlineOfferInstallment, other.HeadlineOfferInstallment)) return false;
       if (!object.Equals(HeadlineOfferSubscriptionCost, other.HeadlineOfferSubscriptionCost)) return false;
+      if (ReviewCount != other.ReviewCount) return false;
+      if (MinRating != other.MinRating) return false;
+      if (MaxRating != other.MaxRating) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Rating, other.Rating)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1587,6 +1732,10 @@ namespace Google.Shopping.Css.V1 {
       if (HasCustomLabel4) hash ^= CustomLabel4.GetHashCode();
       if (headlineOfferInstallment_ != null) hash ^= HeadlineOfferInstallment.GetHashCode();
       if (headlineOfferSubscriptionCost_ != null) hash ^= HeadlineOfferSubscriptionCost.GetHashCode();
+      if (HasReviewCount) hash ^= ReviewCount.GetHashCode();
+      if (HasMinRating) hash ^= MinRating.GetHashCode();
+      if (HasMaxRating) hash ^= MaxRating.GetHashCode();
+      if (HasRating) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Rating);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1781,6 +1930,22 @@ namespace Google.Shopping.Css.V1 {
         output.WriteRawTag(162, 3);
         output.WriteMessage(HeadlineOfferSubscriptionCost);
       }
+      if (HasReviewCount) {
+        output.WriteRawTag(176, 3);
+        output.WriteInt64(ReviewCount);
+      }
+      if (HasMinRating) {
+        output.WriteRawTag(184, 3);
+        output.WriteInt64(MinRating);
+      }
+      if (HasMaxRating) {
+        output.WriteRawTag(192, 3);
+        output.WriteInt64(MaxRating);
+      }
+      if (HasRating) {
+        output.WriteRawTag(201, 3);
+        output.WriteDouble(Rating);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1967,6 +2132,22 @@ namespace Google.Shopping.Css.V1 {
         output.WriteRawTag(162, 3);
         output.WriteMessage(HeadlineOfferSubscriptionCost);
       }
+      if (HasReviewCount) {
+        output.WriteRawTag(176, 3);
+        output.WriteInt64(ReviewCount);
+      }
+      if (HasMinRating) {
+        output.WriteRawTag(184, 3);
+        output.WriteInt64(MinRating);
+      }
+      if (HasMaxRating) {
+        output.WriteRawTag(192, 3);
+        output.WriteInt64(MaxRating);
+      }
+      if (HasRating) {
+        output.WriteRawTag(201, 3);
+        output.WriteDouble(Rating);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2110,6 +2291,18 @@ namespace Google.Shopping.Css.V1 {
       }
       if (headlineOfferSubscriptionCost_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HeadlineOfferSubscriptionCost);
+      }
+      if (HasReviewCount) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ReviewCount);
+      }
+      if (HasMinRating) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MinRating);
+      }
+      if (HasMaxRating) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MaxRating);
+      }
+      if (HasRating) {
+        size += 2 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2289,6 +2482,18 @@ namespace Google.Shopping.Css.V1 {
           HeadlineOfferSubscriptionCost = new global::Google.Shopping.Css.V1.HeadlineOfferSubscriptionCost();
         }
         HeadlineOfferSubscriptionCost.MergeFrom(other.HeadlineOfferSubscriptionCost);
+      }
+      if (other.HasReviewCount) {
+        ReviewCount = other.ReviewCount;
+      }
+      if (other.HasMinRating) {
+        MinRating = other.MinRating;
+      }
+      if (other.HasMaxRating) {
+        MaxRating = other.MaxRating;
+      }
+      if (other.HasRating) {
+        Rating = other.Rating;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2538,6 +2743,22 @@ namespace Google.Shopping.Css.V1 {
             input.ReadMessage(HeadlineOfferSubscriptionCost);
             break;
           }
+          case 432: {
+            ReviewCount = input.ReadInt64();
+            break;
+          }
+          case 440: {
+            MinRating = input.ReadInt64();
+            break;
+          }
+          case 448: {
+            MaxRating = input.ReadInt64();
+            break;
+          }
+          case 457: {
+            Rating = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -2784,6 +3005,22 @@ namespace Google.Shopping.Css.V1 {
               HeadlineOfferSubscriptionCost = new global::Google.Shopping.Css.V1.HeadlineOfferSubscriptionCost();
             }
             input.ReadMessage(HeadlineOfferSubscriptionCost);
+            break;
+          }
+          case 432: {
+            ReviewCount = input.ReadInt64();
+            break;
+          }
+          case 440: {
+            MinRating = input.ReadInt64();
+            break;
+          }
+          case 448: {
+            MaxRating = input.ReadInt64();
+            break;
+          }
+          case 457: {
+            Rating = input.ReadDouble();
             break;
           }
         }
