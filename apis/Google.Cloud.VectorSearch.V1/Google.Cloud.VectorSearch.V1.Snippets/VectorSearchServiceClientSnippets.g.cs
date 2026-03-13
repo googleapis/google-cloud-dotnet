@@ -1723,5 +1723,72 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ExportDataObjects</summary>
+        public void ExportDataObjectsRequestObject()
+        {
+            // Snippet: ExportDataObjects(ExportDataObjectsRequest, CallSettings)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = gcvv::VectorSearchServiceClient.Create();
+            // Initialize request argument(s)
+            gcvv::ExportDataObjectsRequest request = new gcvv::ExportDataObjectsRequest
+            {
+                CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
+                GcsDestination = new gcvv::ExportDataObjectsRequest.Types.GcsExportDestination(),
+            };
+            // Make the request
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> response = vectorSearchServiceClient.ExportDataObjects(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcvv::ExportDataObjectsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> retrievedResponse = vectorSearchServiceClient.PollOnceExportDataObjects(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::ExportDataObjectsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDataObjectsAsync</summary>
+        public async Task ExportDataObjectsRequestObjectAsync()
+        {
+            // Snippet: ExportDataObjectsAsync(ExportDataObjectsRequest, CallSettings)
+            // Additional: ExportDataObjectsAsync(ExportDataObjectsRequest, CancellationToken)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = await gcvv::VectorSearchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcvv::ExportDataObjectsRequest request = new gcvv::ExportDataObjectsRequest
+            {
+                CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
+                GcsDestination = new gcvv::ExportDataObjectsRequest.Types.GcsExportDestination(),
+            };
+            // Make the request
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> response = await vectorSearchServiceClient.ExportDataObjectsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcvv::ExportDataObjectsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> retrievedResponse = await vectorSearchServiceClient.PollOnceExportDataObjectsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::ExportDataObjectsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

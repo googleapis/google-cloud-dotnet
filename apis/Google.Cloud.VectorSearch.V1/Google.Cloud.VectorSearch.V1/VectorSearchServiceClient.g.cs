@@ -65,6 +65,8 @@ namespace Google.Cloud.VectorSearch.V1
             DeleteIndexOperationsSettings = existing.DeleteIndexOperationsSettings.Clone();
             ImportDataObjectsSettings = existing.ImportDataObjectsSettings;
             ImportDataObjectsOperationsSettings = existing.ImportDataObjectsOperationsSettings.Clone();
+            ExportDataObjectsSettings = existing.ExportDataObjectsSettings;
+            ExportDataObjectsOperationsSettings = existing.ExportDataObjectsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -359,6 +361,37 @@ namespace Google.Cloud.VectorSearch.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportDataObjectsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VectorSearchServiceClient.ExportDataObjects</c> and <c>VectorSearchServiceClient.ExportDataObjectsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportDataObjectsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VectorSearchServiceClient.ExportDataObjects</c> and
+        /// <c>VectorSearchServiceClient.ExportDataObjectsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportDataObjectsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1917,6 +1950,60 @@ namespace Google.Cloud.VectorSearch.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<ImportDataObjectsResponse, ImportDataObjectsMetadata>> PollOnceImportDataObjectsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ImportDataObjectsResponse, ImportDataObjectsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDataObjectsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Initiates a Long-Running Operation to export DataObjects from a Collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata> ExportDataObjects(ExportDataObjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates a Long-Running Operation to export DataObjects from a Collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>> ExportDataObjectsAsync(ExportDataObjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates a Long-Running Operation to export DataObjects from a Collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>> ExportDataObjectsAsync(ExportDataObjectsRequest request, st::CancellationToken cancellationToken) =>
+            ExportDataObjectsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportDataObjects</c>.</summary>
+        public virtual lro::OperationsClient ExportDataObjectsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportDataObjects</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata> PollOnceExportDataObjects(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportDataObjectsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportDataObjects</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>> PollOnceExportDataObjectsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportDataObjectsOperationsClient, callSettings);
     }
 
     /// <summary>VectorSearchService client wrapper implementation, for convenient use.</summary>
@@ -1949,6 +2036,8 @@ namespace Google.Cloud.VectorSearch.V1
 
         private readonly gaxgrpc::ApiCall<ImportDataObjectsRequest, lro::Operation> _callImportDataObjects;
 
+        private readonly gaxgrpc::ApiCall<ExportDataObjectsRequest, lro::Operation> _callExportDataObjects;
+
         /// <summary>
         /// Constructs a client wrapper for the VectorSearchService service, with the specified gRPC client and
         /// settings.
@@ -1971,6 +2060,7 @@ namespace Google.Cloud.VectorSearch.V1
             CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
             DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings, logger);
             ImportDataObjectsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataObjectsOperationsSettings, logger);
+            ExportDataObjectsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataObjectsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCollections = clientHelper.BuildApiCall<ListCollectionsRequest, ListCollectionsResponse>("ListCollections", grpcClient.ListCollectionsAsync, grpcClient.ListCollections, effectiveSettings.ListCollectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCollections);
@@ -2002,6 +2092,9 @@ namespace Google.Cloud.VectorSearch.V1
             _callImportDataObjects = clientHelper.BuildApiCall<ImportDataObjectsRequest, lro::Operation>("ImportDataObjects", grpcClient.ImportDataObjectsAsync, grpcClient.ImportDataObjects, effectiveSettings.ImportDataObjectsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportDataObjects);
             Modify_ImportDataObjectsApiCall(ref _callImportDataObjects);
+            _callExportDataObjects = clientHelper.BuildApiCall<ExportDataObjectsRequest, lro::Operation>("ExportDataObjects", grpcClient.ExportDataObjectsAsync, grpcClient.ExportDataObjects, effectiveSettings.ExportDataObjectsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportDataObjects);
+            Modify_ExportDataObjectsApiCall(ref _callExportDataObjects);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2026,6 +2119,8 @@ namespace Google.Cloud.VectorSearch.V1
         partial void Modify_DeleteIndexApiCall(ref gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> call);
 
         partial void Modify_ImportDataObjectsApiCall(ref gaxgrpc::ApiCall<ImportDataObjectsRequest, lro::Operation> call);
+
+        partial void Modify_ExportDataObjectsApiCall(ref gaxgrpc::ApiCall<ExportDataObjectsRequest, lro::Operation> call);
 
         partial void OnConstruction(VectorSearchService.VectorSearchServiceClient grpcClient, VectorSearchServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2054,6 +2149,8 @@ namespace Google.Cloud.VectorSearch.V1
         partial void Modify_DeleteIndexRequest(ref DeleteIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportDataObjectsRequest(ref ImportDataObjectsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportDataObjectsRequest(ref ExportDataObjectsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Collections in a given project and location.
@@ -2311,6 +2408,33 @@ namespace Google.Cloud.VectorSearch.V1
         {
             Modify_ImportDataObjectsRequest(ref request, ref callSettings);
             return new lro::Operation<ImportDataObjectsResponse, ImportDataObjectsMetadata>(await _callImportDataObjects.Async(request, callSettings).ConfigureAwait(false), ImportDataObjectsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportDataObjects</c>.</summary>
+        public override lro::OperationsClient ExportDataObjectsOperationsClient { get; }
+
+        /// <summary>
+        /// Initiates a Long-Running Operation to export DataObjects from a Collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata> ExportDataObjects(ExportDataObjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportDataObjectsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>(_callExportDataObjects.Sync(request, callSettings), ExportDataObjectsOperationsClient);
+        }
+
+        /// <summary>
+        /// Initiates a Long-Running Operation to export DataObjects from a Collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>> ExportDataObjectsAsync(ExportDataObjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportDataObjectsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata>(await _callExportDataObjects.Async(request, callSettings).ConfigureAwait(false), ExportDataObjectsOperationsClient);
         }
     }
 

@@ -118,6 +118,12 @@
                 "DeleteIndexAsync"
               ]
             },
+            "ExportDataObjects": {
+              "methods": [
+                "ExportDataObjects",
+                "ExportDataObjectsAsync"
+              ]
+            },
             "GetCollection": {
               "methods": [
                 "GetCollection",
