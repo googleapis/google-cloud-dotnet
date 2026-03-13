@@ -672,4 +672,16 @@ namespace Google.Cloud.VectorSearch.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExportDataObjectsRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::CollectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::CollectionName CollectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::CollectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

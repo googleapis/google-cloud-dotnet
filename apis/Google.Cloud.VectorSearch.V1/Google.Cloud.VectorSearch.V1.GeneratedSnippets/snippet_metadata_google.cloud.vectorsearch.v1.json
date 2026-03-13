@@ -4908,6 +4908,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ExportDataObjects_sync",
+      "title": "ExportDataObjectsRequestObject",
+      "description": "Snippet for ExportDataObjects",
+      "file": "VectorSearchServiceClient.ExportDataObjectsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataObjects",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ExportDataObjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ExportDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.ExportDataObjectsResponse, Google.Cloud.VectorSearch.V1.ExportDataObjectsMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ExportDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ExportDataObjects",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_ExportDataObjects_async",
+      "title": "ExportDataObjectsRequestObjectAsync",
+      "description": "Snippet for ExportDataObjectsAsync",
+      "file": "VectorSearchServiceClient.ExportDataObjectsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataObjectsAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.ExportDataObjectsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.ExportDataObjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.ExportDataObjectsResponse, Google.Cloud.VectorSearch.V1.ExportDataObjectsMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ExportDataObjects",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.ExportDataObjects",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
