@@ -126,6 +126,7 @@ namespace Google.Shopping.Css.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the CSS product to retrieve.
+    /// Format: `accounts/{account}/cssProducts/{css_product}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
