@@ -4830,7 +4830,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-29T19:10:18.258299848Z",
-            "lastGeneratedCommit": "2ac88973cbafba24e4fb6f31038e0c76174ae704",
+            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "2ac88973cbafba24e4fb6f31038e0c76174ae704",
             "apiPaths": [
                 "google/cloud/apiregistry/v1"
