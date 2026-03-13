@@ -3,7 +3,7 @@
 //     source: google/shopping/merchant/products/v1/productinputs.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -110,11 +110,11 @@ namespace Google.Shopping.Merchant.Products.V1 {
     {
       /// <summary>
       /// [Uploads a product input to your Merchant Center
-      /// account](/merchant/api/guides/products/overview#upload-product-input). You
+      /// account](/merchant/api/guides/products/add-manage#add_a_product). You
       /// must have a products [data
-      /// source](/merchant/api/guides/data-sources/overview) to be able to insert a
-      /// product. The unique identifier of the data source is passed as a query
-      /// parameter in the request URL.
+      /// source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source)
+      /// to be able to insert a product. The unique identifier of the data source is
+      /// passed as a query parameter in the request URL.
       ///
       /// If a product input with the same contentLanguage, offerId, and dataSource
       /// already exists, then the product input inserted by this method replaces
@@ -134,6 +134,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
 
       /// <summary>
       /// Updates the existing product input in your Merchant Center account.
+      /// The name of the product input to update is taken from the `name` field
+      /// within the `ProductInput` resource.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the processed product can be retrieved.
@@ -193,11 +195,11 @@ namespace Google.Shopping.Merchant.Products.V1 {
 
       /// <summary>
       /// [Uploads a product input to your Merchant Center
-      /// account](/merchant/api/guides/products/overview#upload-product-input). You
+      /// account](/merchant/api/guides/products/add-manage#add_a_product). You
       /// must have a products [data
-      /// source](/merchant/api/guides/data-sources/overview) to be able to insert a
-      /// product. The unique identifier of the data source is passed as a query
-      /// parameter in the request URL.
+      /// source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source)
+      /// to be able to insert a product. The unique identifier of the data source is
+      /// passed as a query parameter in the request URL.
       ///
       /// If a product input with the same contentLanguage, offerId, and dataSource
       /// already exists, then the product input inserted by this method replaces
@@ -218,11 +220,11 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// [Uploads a product input to your Merchant Center
-      /// account](/merchant/api/guides/products/overview#upload-product-input). You
+      /// account](/merchant/api/guides/products/add-manage#add_a_product). You
       /// must have a products [data
-      /// source](/merchant/api/guides/data-sources/overview) to be able to insert a
-      /// product. The unique identifier of the data source is passed as a query
-      /// parameter in the request URL.
+      /// source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source)
+      /// to be able to insert a product. The unique identifier of the data source is
+      /// passed as a query parameter in the request URL.
       ///
       /// If a product input with the same contentLanguage, offerId, and dataSource
       /// already exists, then the product input inserted by this method replaces
@@ -241,11 +243,11 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// [Uploads a product input to your Merchant Center
-      /// account](/merchant/api/guides/products/overview#upload-product-input). You
+      /// account](/merchant/api/guides/products/add-manage#add_a_product). You
       /// must have a products [data
-      /// source](/merchant/api/guides/data-sources/overview) to be able to insert a
-      /// product. The unique identifier of the data source is passed as a query
-      /// parameter in the request URL.
+      /// source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source)
+      /// to be able to insert a product. The unique identifier of the data source is
+      /// passed as a query parameter in the request URL.
       ///
       /// If a product input with the same contentLanguage, offerId, and dataSource
       /// already exists, then the product input inserted by this method replaces
@@ -266,11 +268,11 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// [Uploads a product input to your Merchant Center
-      /// account](/merchant/api/guides/products/overview#upload-product-input). You
+      /// account](/merchant/api/guides/products/add-manage#add_a_product). You
       /// must have a products [data
-      /// source](/merchant/api/guides/data-sources/overview) to be able to insert a
-      /// product. The unique identifier of the data source is passed as a query
-      /// parameter in the request URL.
+      /// source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source)
+      /// to be able to insert a product. The unique identifier of the data source is
+      /// passed as a query parameter in the request URL.
       ///
       /// If a product input with the same contentLanguage, offerId, and dataSource
       /// already exists, then the product input inserted by this method replaces
@@ -289,6 +291,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// Updates the existing product input in your Merchant Center account.
+      /// The name of the product input to update is taken from the `name` field
+      /// within the `ProductInput` resource.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the processed product can be retrieved.
@@ -305,6 +309,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// Updates the existing product input in your Merchant Center account.
+      /// The name of the product input to update is taken from the `name` field
+      /// within the `ProductInput` resource.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the processed product can be retrieved.
@@ -319,6 +325,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// Updates the existing product input in your Merchant Center account.
+      /// The name of the product input to update is taken from the `name` field
+      /// within the `ProductInput` resource.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the processed product can be retrieved.
@@ -335,6 +343,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       /// <summary>
       /// Updates the existing product input in your Merchant Center account.
+      /// The name of the product input to update is taken from the `name` field
+      /// within the `ProductInput` resource.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the processed product can be retrieved.
