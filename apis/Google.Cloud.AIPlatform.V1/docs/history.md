@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.68.0, released 2026-03-16
+
+### New features
+
+- Add custom session id field to create session v1
+- Add raw_event field to event proto v1
+
 ## Version 3.67.0, released 2026-03-05
 
 ### New features
