@@ -1253,12 +1253,12 @@
         },
         {
             "id": "Google.Cloud.Dataplex.V1",
-            "currentVersion": "3.12.0",
+            "currentVersion": "3.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T09:18:19.663308052Z",
+            "releaseTimestamp": "2026-03-16T14:15:26.898319346Z",
             "lastGeneratedCommit": "69ca7ae2e66cd5623cafecc00971ef5397a4b258",
-            "lastReleasedCommit": "53f97391f3451398f7b53c7f86dabd325d205677",
+            "lastReleasedCommit": "69ca7ae2e66cd5623cafecc00971ef5397a4b258",
             "apiPaths": [
                 "google/cloud/dataplex/v1"
             ],
