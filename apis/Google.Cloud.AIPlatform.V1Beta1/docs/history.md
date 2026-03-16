@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta74, released 2026-03-16
+
+### New features
+
+- Upgrade protobuf from v25.7 to v31.0
+- RagMetadata and RagDataSchema concepts and Batch API definitions added for Preview
+
+### Documentation improvements
+
+- Updated comments for `rag_file_metadata_config` across ImportRagFilesRequest and UploadRagFileRequest
+
 ## Version 1.0.0-beta73, released 2026-03-09
 
 ### New features
