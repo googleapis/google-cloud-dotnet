@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.4.0, released 2026-03-16
+
+### New features
+
+- Update products_common fields to include `handling_cutoff_timezone `, `shipping_handling_business_days`, `shipping_transit_business_days`
+
+### Documentation improvements
+
+- Comment for messages for products_common are changed
+
 ## Version 1.3.0, released 2025-11-17
 
 ### New features
