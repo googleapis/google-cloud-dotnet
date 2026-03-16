@@ -1,5 +1,27 @@
 # Version history
 
+## Version 3.13.0, released 2026-03-16
+
+### New features
+
+- Add DataProductService to manage data products and underlying data assets
+- Add MetadataFeed to CatalogService for tracking metadata changes
+- Add LookupContext to CatalogService for LLM-generated resource context
+- Add support for attaching aspects to EntryLinks
+- Add UpdateEntryLink and LookupEntryLinks methods to CatalogService
+- Support OneTime triggers for DataScan operations
+- Add debug query support to Data Quality rules
+- Allow selective generation scope for Data Documentation scans
+- Add SKIPPED state to DataScan catalog publishing status
+
+### Bug fixes
+
+- Remove deprecated Explore-related methods and messages from public client libraries
+
+### Documentation improvements
+
+- Remove deprecated metadata change warnings in Dataplex Catalog
+
 ## Version 3.12.0, released 2025-11-05
 
 ### New features
