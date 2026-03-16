@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.10.0, released 2026-03-16
+
+### New features
+
+- Add oauth fields for IapSettings
+
 ## Version 2.9.0, released 2025-11-05
 
 ### New features
