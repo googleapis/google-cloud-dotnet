@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta30, released 2026-03-16
+
+### New features
+
+- Add a field for upgrading previous processor version when fine tuning
+
 ## Version 2.0.0-beta29, released 2026-02-09
 
 ### New features
