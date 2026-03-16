@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-03-16
+
+### New features
+
+- Add `ParameterizedSecureViewParameters` message and field for PSV support
+- Add `ThinkingMode` enum and field to control agent thinking mode
+
+### Documentation improvements
+
+- Update field comments for `generated_looker_query` in `DataMessage`
+
 ## Version 1.0.0-beta08, released 2026-02-02
 
 ### New features
