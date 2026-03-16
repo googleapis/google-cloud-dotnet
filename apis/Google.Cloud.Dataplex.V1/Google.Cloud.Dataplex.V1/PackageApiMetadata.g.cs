@@ -89,6 +89,7 @@ namespace Google.Cloud.Dataplex.V1
             yield return ContentReflection.Descriptor;
             yield return DataDiscoveryReflection.Descriptor;
             yield return DataDocumentationReflection.Descriptor;
+            yield return DataProductsReflection.Descriptor;
             yield return DataProfileReflection.Descriptor;
             yield return DataQualityReflection.Descriptor;
             yield return DataTaxonomyReflection.Descriptor;

@@ -1562,6 +1562,259 @@ namespace Google.Cloud.Dataplex.V1
         public static bool operator !=(EntryLinkName a, EntryLinkName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>MetadataFeed</c> resource.</summary>
+    public sealed partial class MetadataFeedName : gax::IResourceName, sys::IEquatable<MetadataFeedName>
+    {
+        /// <summary>The possible contents of <see cref="MetadataFeedName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>
+            /// .
+            /// </summary>
+            ProjectLocationMetadataFeed = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationMetadataFeed = new gax::PathTemplate("projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}");
+
+        /// <summary>Creates a <see cref="MetadataFeedName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MetadataFeedName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MetadataFeedName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MetadataFeedName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MetadataFeedName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataFeedId">The <c>MetadataFeed</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MetadataFeedName"/> constructed from the provided ids.</returns>
+        public static MetadataFeedName FromProjectLocationMetadataFeed(string projectId, string locationId, string metadataFeedId) =>
+            new MetadataFeedName(ResourceNameType.ProjectLocationMetadataFeed, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), metadataFeedId: gax::GaxPreconditions.CheckNotNullOrEmpty(metadataFeedId, nameof(metadataFeedId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MetadataFeedName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataFeedId">The <c>MetadataFeed</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MetadataFeedName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string metadataFeedId) =>
+            FormatProjectLocationMetadataFeed(projectId, locationId, metadataFeedId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MetadataFeedName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataFeedId">The <c>MetadataFeed</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MetadataFeedName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>.
+        /// </returns>
+        public static string FormatProjectLocationMetadataFeed(string projectId, string locationId, string metadataFeedId) =>
+            s_projectLocationMetadataFeed.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(metadataFeedId, nameof(metadataFeedId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="MetadataFeedName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="metadataFeedName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MetadataFeedName"/> if successful.</returns>
+        public static MetadataFeedName Parse(string metadataFeedName) => Parse(metadataFeedName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MetadataFeedName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="metadataFeedName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MetadataFeedName"/> if successful.</returns>
+        public static MetadataFeedName Parse(string metadataFeedName, bool allowUnparsed) =>
+            TryParse(metadataFeedName, allowUnparsed, out MetadataFeedName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MetadataFeedName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="metadataFeedName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MetadataFeedName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metadataFeedName, out MetadataFeedName result) =>
+            TryParse(metadataFeedName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MetadataFeedName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="metadataFeedName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MetadataFeedName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metadataFeedName, bool allowUnparsed, out MetadataFeedName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(metadataFeedName, nameof(metadataFeedName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationMetadataFeed.TryParseName(metadataFeedName, out resourceName))
+            {
+                result = FromProjectLocationMetadataFeed(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(metadataFeedName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MetadataFeedName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string metadataFeedId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            MetadataFeedId = metadataFeedId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MetadataFeedName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/metadataFeeds/{metadata_feed}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataFeedId">The <c>MetadataFeed</c> ID. Must not be <c>null</c> or empty.</param>
+        public MetadataFeedName(string projectId, string locationId, string metadataFeedId) : this(ResourceNameType.ProjectLocationMetadataFeed, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), metadataFeedId: gax::GaxPreconditions.CheckNotNullOrEmpty(metadataFeedId, nameof(metadataFeedId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>MetadataFeed</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string MetadataFeedId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationMetadataFeed: return s_projectLocationMetadataFeed.Expand(ProjectId, LocationId, MetadataFeedId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MetadataFeedName);
+
+        /// <inheritdoc/>
+        public bool Equals(MetadataFeedName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(MetadataFeedName a, MetadataFeedName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(MetadataFeedName a, MetadataFeedName b) => !(a == b);
+    }
+
     public partial class AspectType
     {
         /// <summary>
@@ -1827,6 +2080,17 @@ namespace Google.Cloud.Dataplex.V1
         }
     }
 
+    public partial class LookupContextRequest
+    {
+        /// <summary>
+        /// <see cref="EntryName"/>-typed view over the <see cref="Resources"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EntryName> ResourcesAsEntryNames
+        {
+            get => new gax::ResourceNameList<EntryName>(Resources, s => string.IsNullOrEmpty(s) ? null : EntryName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class SearchEntriesRequest
     {
         /// <summary>
@@ -2028,6 +2292,16 @@ namespace Google.Cloud.Dataplex.V1
         }
     }
 
+    public partial class LookupEntryLinksRequest
+    {
+        /// <summary><see cref="EntryName"/>-typed view over the <see cref="Entry"/> resource name property.</summary>
+        public EntryName EntryAsEntryName
+        {
+            get => string.IsNullOrEmpty(Entry) ? null : EntryName.Parse(Entry, allowUnparsed: true);
+            set => Entry = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetEntryLinkRequest
     {
         /// <summary>
@@ -2036,6 +2310,107 @@ namespace Google.Cloud.Dataplex.V1
         public gcdv::EntryLinkName EntryLinkName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MetadataFeed
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataFeedName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataFeedName MetadataFeedName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataFeedName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class Scope
+            {
+                /// <summary>
+                /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Projects"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<gagr::ProjectName> ProjectsAsProjectNames
+                {
+                    get => new gax::ResourceNameList<gagr::ProjectName>(Projects, s => string.IsNullOrEmpty(s) ? null : gagr::ProjectName.Parse(s, allowUnparsed: true));
+                }
+
+                /// <summary>
+                /// <see cref="EntryGroupName"/>-typed view over the <see cref="EntryGroups"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<EntryGroupName> EntryGroupsAsEntryGroupNames
+                {
+                    get => new gax::ResourceNameList<EntryGroupName>(EntryGroups, s => string.IsNullOrEmpty(s) ? null : EntryGroupName.Parse(s, allowUnparsed: true));
+                }
+            }
+
+            public partial class Filters
+            {
+                /// <summary>
+                /// <see cref="EntryTypeName"/>-typed view over the <see cref="EntryTypes"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<EntryTypeName> EntryTypesAsEntryTypeNames
+                {
+                    get => new gax::ResourceNameList<EntryTypeName>(EntryTypes, s => string.IsNullOrEmpty(s) ? null : EntryTypeName.Parse(s, allowUnparsed: true));
+                }
+
+                /// <summary>
+                /// <see cref="AspectTypeName"/>-typed view over the <see cref="AspectTypes"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<AspectTypeName> AspectTypesAsAspectTypeNames
+                {
+                    get => new gax::ResourceNameList<AspectTypeName>(AspectTypes, s => string.IsNullOrEmpty(s) ? null : AspectTypeName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
+    }
+
+    public partial class CreateMetadataFeedRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMetadataFeedRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataFeedName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataFeedName MetadataFeedName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataFeedName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMetadataFeedsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMetadataFeedRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataFeedName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataFeedName MetadataFeedName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataFeedName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

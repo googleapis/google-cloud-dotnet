@@ -26,28 +26,34 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9kb2N1bWVudGF0aW9u",
             "LnByb3RvEhhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8iFwoVRGF0YURvY3VtZW50YXRpb25TcGVj",
-            "IukEChdEYXRhRG9jdW1lbnRhdGlvblJlc3VsdBJaCgx0YWJsZV9yZXN1bHQY",
-            "CCABKAsyPS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50",
-            "YXRpb25SZXN1bHQuVGFibGVSZXN1bHRCA+BBA0gAGtUBCgtUYWJsZVJlc3Vs",
-            "dBIRCgRuYW1lGAEgASgJQgPgQQMSFQoIb3ZlcnZpZXcYAiABKAlCA+BBAxJN",
-            "CgZzY2hlbWEYAyABKAsyOC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0",
-            "YURvY3VtZW50YXRpb25SZXN1bHQuU2NoZW1hQgPgQQMSTQoHcXVlcmllcxgE",
-            "IAMoCzI3Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhRG9jdW1lbnRh",
-            "dGlvblJlc3VsdC5RdWVyeUID4EEDGjMKBVF1ZXJ5EhAKA3NxbBgBIAEoCUID",
-            "4EEDEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQMaVgoGU2NoZW1hEkwKBmZp",
-            "ZWxkcxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhRG9j",
-            "dW1lbnRhdGlvblJlc3VsdC5GaWVsZEID4EEDGoIBCgVGaWVsZBIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBAxJMCgZmaWVs",
-            "ZHMYAyADKAsyNy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3Vt",
-            "ZW50YXRpb25SZXN1bHQuRmllbGRCA+BBA0IICgZyZXN1bHRCcgocY29tLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MUIWRGF0YURvY3VtZW50YXRpb25Qcm90",
-            "b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFw",
-            "bGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8ikwIKFURhdGFEb2N1bWVudGF0aW9uU3Bl",
+            "YxInChpjYXRhbG9nX3B1Ymxpc2hpbmdfZW5hYmxlZBgCIAEoCEID4EEBEl8K",
+            "EWdlbmVyYXRpb25fc2NvcGVzGAMgAygOMj8uZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uU3BlYy5HZW5lcmF0aW9uU2NvcGVC",
+            "A+BBASJwCg9HZW5lcmF0aW9uU2NvcGUSIAocR0VORVJBVElPTl9TQ09QRV9V",
+            "TlNQRUNJRklFRBAAEgcKA0FMTBABEiEKHVRBQkxFX0FORF9DT0xVTU5fREVT",
+            "Q1JJUFRJT05TEAISDwoLU1FMX1FVRVJJRVMQAyLpBAoXRGF0YURvY3VtZW50",
+            "YXRpb25SZXN1bHQSWgoMdGFibGVfcmVzdWx0GAggASgLMj0uZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVzdWx0LlRhYmxl",
+            "UmVzdWx0QgPgQQNIABrVAQoLVGFibGVSZXN1bHQSEQoEbmFtZRgBIAEoCUID",
+            "4EEDEhUKCG92ZXJ2aWV3GAIgASgJQgPgQQMSTQoGc2NoZW1hGAMgASgLMjgu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVz",
+            "dWx0LlNjaGVtYUID4EEDEk0KB3F1ZXJpZXMYBCADKAsyNy5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHQuUXVlcnlC",
+            "A+BBAxozCgVRdWVyeRIQCgNzcWwYASABKAlCA+BBAxIYCgtkZXNjcmlwdGlv",
+            "bhgCIAEoCUID4EEDGlYKBlNjaGVtYRJMCgZmaWVsZHMYASADKAsyNy5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHQu",
+            "RmllbGRCA+BBAxqCAQoFRmllbGQSEQoEbmFtZRgBIAEoCUID4EEDEhgKC2Rl",
+            "c2NyaXB0aW9uGAIgASgJQgPgQQMSTAoGZmllbGRzGAMgAygLMjcuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVzdWx0LkZp",
+            "ZWxkQgPgQQNCCAoGcmVzdWx0QnIKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjFCFkRhdGFEb2N1bWVudGF0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBiO2RhdGFwbGV4cGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationSpec), global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationSpec), global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Parser, new[]{ "CatalogPublishingEnabled", "GenerationScopes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Parser, new[]{ "TableResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult.Parser, new[]{ "Name", "Overview", "Schema", "Queries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query.Parser, new[]{ "Sql", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Schema), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Schema.Parser, new[]{ "Fields" }, null, null, null, null),
@@ -96,6 +102,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataDocumentationSpec(DataDocumentationSpec other) : this() {
+      catalogPublishingEnabled_ = other.catalogPublishingEnabled_;
+      generationScopes_ = other.generationScopes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -103,6 +111,38 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataDocumentationSpec Clone() {
       return new DataDocumentationSpec(this);
+    }
+
+    /// <summary>Field number for the "catalog_publishing_enabled" field.</summary>
+    public const int CatalogPublishingEnabledFieldNumber = 2;
+    private bool catalogPublishingEnabled_;
+    /// <summary>
+    /// Optional. Whether to publish result to Dataplex Catalog.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CatalogPublishingEnabled {
+      get { return catalogPublishingEnabled_; }
+      set {
+        catalogPublishingEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "generation_scopes" field.</summary>
+    public const int GenerationScopesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope> _repeated_generationScopes_codec
+        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope> generationScopes_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope>();
+    /// <summary>
+    /// Optional. Specifies which components of the data documentation to generate.
+    /// Any component that is required to generate the specified components will
+    /// also be generated. If no generation scope is specified, all available
+    /// documentation components will be generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope> GenerationScopes {
+      get { return generationScopes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -120,6 +160,8 @@ namespace Google.Cloud.Dataplex.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (CatalogPublishingEnabled != other.CatalogPublishingEnabled) return false;
+      if(!generationScopes_.Equals(other.generationScopes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -127,6 +169,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (CatalogPublishingEnabled != false) hash ^= CatalogPublishingEnabled.GetHashCode();
+      hash ^= generationScopes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -145,6 +189,11 @@ namespace Google.Cloud.Dataplex.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CatalogPublishingEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(CatalogPublishingEnabled);
+      }
+      generationScopes_.WriteTo(output, _repeated_generationScopes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -155,6 +204,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CatalogPublishingEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(CatalogPublishingEnabled);
+      }
+      generationScopes_.WriteTo(ref output, _repeated_generationScopes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -165,6 +219,10 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (CatalogPublishingEnabled != false) {
+        size += 1 + 1;
+      }
+      size += generationScopes_.CalculateSize(_repeated_generationScopes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -177,6 +235,10 @@ namespace Google.Cloud.Dataplex.V1 {
       if (other == null) {
         return;
       }
+      if (other.CatalogPublishingEnabled != false) {
+        CatalogPublishingEnabled = other.CatalogPublishingEnabled;
+      }
+      generationScopes_.Add(other.generationScopes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -192,6 +254,15 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 16: {
+            CatalogPublishingEnabled = input.ReadBool();
+            break;
+          }
+          case 26:
+          case 24: {
+            generationScopes_.AddEntriesFrom(input, _repeated_generationScopes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -207,10 +278,51 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 16: {
+            CatalogPublishingEnabled = input.ReadBool();
+            break;
+          }
+          case 26:
+          case 24: {
+            generationScopes_.AddEntriesFrom(ref input, _repeated_generationScopes_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DataDocumentationSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The data documentation generation scope. This field contains the possible
+      /// components of a data documentation scan which can be selectively generated.
+      /// </summary>
+      public enum GenerationScope {
+        /// <summary>
+        /// Unspecified generation scope. If no generation scope is specified, all
+        /// available documentation components will be generated.
+        /// </summary>
+        [pbr::OriginalName("GENERATION_SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// All the possible results will be generated.
+        /// </summary>
+        [pbr::OriginalName("ALL")] All = 1,
+        /// <summary>
+        /// Table and column descriptions will be generated.
+        /// </summary>
+        [pbr::OriginalName("TABLE_AND_COLUMN_DESCRIPTIONS")] TableAndColumnDescriptions = 2,
+        /// <summary>
+        /// SQL queries will be generated.
+        /// </summary>
+        [pbr::OriginalName("SQL_QUERIES")] SqlQueries = 3,
+      }
+
+    }
+    #endregion
 
   }
 

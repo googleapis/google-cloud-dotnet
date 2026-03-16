@@ -26,14 +26,14 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YXNjYW5zX2NvbW1vbi5w",
             "cm90bxIYZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvIrEBCh9EYXRhU2NhbkNhdGFsb2dQdWJsaXNo",
+            "ZWxkX2JlaGF2aW9yLnByb3RvIr4BCh9EYXRhU2NhbkNhdGFsb2dQdWJsaXNo",
             "aW5nU3RhdHVzElMKBXN0YXRlGAEgASgOMj8uZ29vZ2xlLmNsb3VkLmRhdGFw",
             "bGV4LnYxLkRhdGFTY2FuQ2F0YWxvZ1B1Ymxpc2hpbmdTdGF0dXMuU3RhdGVC",
-            "A+BBAyI5CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCVNVQ0NF",
-            "RURFRBABEgoKBkZBSUxFRBACQnAKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjFCFERhdGFTY2Fuc0NvbW1vblByb3RvUAFaOGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZw",
-            "cm90bzM="));
+            "A+BBAyJGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCVNVQ0NF",
+            "RURFRBABEgoKBkZBSUxFRBACEgsKB1NLSVBQRUQQA0JwChxjb20uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxQhREYXRhU2NhbnNDb21tb25Qcm90b1ABWjhj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7",
+            "ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,7 +46,8 @@ namespace Google.Cloud.Dataplex.V1 {
   #region Messages
   /// <summary>
   /// The status of publishing the data scan result as Dataplex Universal Catalog
-  /// metadata.
+  /// metadata. Multiple DataScan log events may exist, each with different
+  /// publishing information depending on the type of publishing triggered.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataScanCatalogPublishingStatus : pb::IMessage<DataScanCatalogPublishingStatus>
@@ -97,7 +98,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus.Types.State state_ = global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus.Types.State.Unspecified;
     /// <summary>
-    /// Output only. Execution state for catalog publishing.
+    /// Output only. Execution state for publishing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -253,13 +254,17 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Publish to catalog completed successfully.
+        /// Publishing to catalog completed successfully.
         /// </summary>
         [pbr::OriginalName("SUCCEEDED")] Succeeded = 1,
         /// <summary>
         /// Publish to catalog failed.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 2,
+        /// <summary>
+        /// Publishing to catalog was skipped.
+        /// </summary>
+        [pbr::OriginalName("SKIPPED")] Skipped = 3,
       }
 
     }

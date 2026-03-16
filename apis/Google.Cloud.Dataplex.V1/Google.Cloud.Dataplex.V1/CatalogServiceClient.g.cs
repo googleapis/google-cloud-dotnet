@@ -87,8 +87,19 @@ namespace Google.Cloud.Dataplex.V1
             ListMetadataJobsSettings = existing.ListMetadataJobsSettings;
             CancelMetadataJobSettings = existing.CancelMetadataJobSettings;
             CreateEntryLinkSettings = existing.CreateEntryLinkSettings;
+            UpdateEntryLinkSettings = existing.UpdateEntryLinkSettings;
             DeleteEntryLinkSettings = existing.DeleteEntryLinkSettings;
+            LookupEntryLinksSettings = existing.LookupEntryLinksSettings;
+            LookupContextSettings = existing.LookupContextSettings;
             GetEntryLinkSettings = existing.GetEntryLinkSettings;
+            CreateMetadataFeedSettings = existing.CreateMetadataFeedSettings;
+            CreateMetadataFeedOperationsSettings = existing.CreateMetadataFeedOperationsSettings.Clone();
+            GetMetadataFeedSettings = existing.GetMetadataFeedSettings;
+            ListMetadataFeedsSettings = existing.ListMetadataFeedsSettings;
+            DeleteMetadataFeedSettings = existing.DeleteMetadataFeedSettings;
+            DeleteMetadataFeedOperationsSettings = existing.DeleteMetadataFeedOperationsSettings.Clone();
+            UpdateMetadataFeedSettings = existing.UpdateMetadataFeedSettings;
+            UpdateMetadataFeedOperationsSettings = existing.UpdateMetadataFeedOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -701,6 +712,18 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.UpdateEntryLink</c> and <c>CatalogServiceClient.UpdateEntryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CatalogServiceClient.DeleteEntryLink</c> and <c>CatalogServiceClient.DeleteEntryLinkAsync</c>.
         /// </summary>
         /// <remarks>
@@ -713,6 +736,30 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.LookupEntryLinks</c> and <c>CatalogServiceClient.LookupEntryLinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupEntryLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.LookupContext</c> and <c>CatalogServiceClient.LookupContextAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupContextSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CatalogServiceClient.GetEntryLink</c> and <c>CatalogServiceClient.GetEntryLinkAsync</c>.
         /// </summary>
         /// <remarks>
@@ -722,6 +769,120 @@ namespace Google.Cloud.Dataplex.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.CreateMetadataFeed</c> and <c>CatalogServiceClient.CreateMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMetadataFeedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CatalogServiceClient.CreateMetadataFeed</c> and
+        /// <c>CatalogServiceClient.CreateMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateMetadataFeedOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetMetadataFeed</c> and <c>CatalogServiceClient.GetMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMetadataFeedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.ListMetadataFeeds</c> and <c>CatalogServiceClient.ListMetadataFeedsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMetadataFeedsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.DeleteMetadataFeed</c> and <c>CatalogServiceClient.DeleteMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMetadataFeedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CatalogServiceClient.DeleteMetadataFeed</c> and
+        /// <c>CatalogServiceClient.DeleteMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteMetadataFeedOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.UpdateMetadataFeed</c> and <c>CatalogServiceClient.UpdateMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMetadataFeedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CatalogServiceClient.UpdateMetadataFeed</c> and
+        /// <c>CatalogServiceClient.UpdateMetadataFeedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateMetadataFeedOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -811,11 +972,17 @@ namespace Google.Cloud.Dataplex.V1
         /// The default CatalogService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.read-write</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/dataplex.read-write",
+            "https://www.googleapis.com/auth/dataplex.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -3443,11 +3610,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3457,11 +3619,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3471,11 +3628,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3510,11 +3662,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3549,11 +3696,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3588,11 +3730,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3627,11 +3764,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3641,11 +3773,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3655,11 +3782,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3669,11 +3791,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3689,11 +3806,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3709,11 +3821,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3726,11 +3833,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3746,11 +3848,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3766,11 +3863,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3783,11 +3875,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3797,11 +3884,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3811,11 +3893,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4805,6 +4882,72 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryLinkAsync(parent, entryLink, entryLinkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink UpdateEntryLink(UpdateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> UpdateEntryLinkAsync(UpdateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> UpdateEntryLinkAsync(UpdateEntryLinkRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEntryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink UpdateEntryLink(EntryLink entryLink, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEntryLink(new UpdateEntryLinkRequest
+            {
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> UpdateEntryLinkAsync(EntryLink entryLink, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEntryLinkAsync(new UpdateEntryLinkRequest
+            {
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> UpdateEntryLinkAsync(EntryLink entryLink, st::CancellationToken cancellationToken) =>
+            UpdateEntryLinkAsync(entryLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes an Entry Link.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4916,6 +5059,51 @@ namespace Google.Cloud.Dataplex.V1
             DeleteEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Looks up Entry Links referencing the specified Entry.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntryLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<LookupEntryLinksResponse, EntryLink> LookupEntryLinks(LookupEntryLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up Entry Links referencing the specified Entry.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntryLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<LookupEntryLinksResponse, EntryLink> LookupEntryLinksAsync(LookupEntryLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up LLM Context for the specified resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupContextResponse LookupContext(LookupContextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up LLM Context for the specified resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupContextResponse> LookupContextAsync(LookupContextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up LLM Context for the specified resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupContextResponse> LookupContextAsync(LookupContextRequest request, st::CancellationToken cancellationToken) =>
+            LookupContextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an Entry Link.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5025,6 +5213,704 @@ namespace Google.Cloud.Dataplex.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<EntryLink> GetEntryLinkAsync(EntryLinkName name, st::CancellationToken cancellationToken) =>
             GetEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> CreateMetadataFeed(CreateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(CreateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(CreateMetadataFeedRequest request, st::CancellationToken cancellationToken) =>
+            CreateMetadataFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateMetadataFeed</c>.</summary>
+        public virtual lro::OperationsClient CreateMetadataFeedOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateMetadataFeed</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> PollOnceCreateMetadataFeed(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataFeed, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMetadataFeed</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> PollOnceCreateMetadataFeedAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataFeed, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> CreateMetadataFeed(string parent, MetadataFeed metadataFeed, string metadataFeedId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataFeed(new CreateMetadataFeedRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                MetadataFeedId = metadataFeedId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(string parent, MetadataFeed metadataFeed, string metadataFeedId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataFeedAsync(new CreateMetadataFeedRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                MetadataFeedId = metadataFeedId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(string parent, MetadataFeed metadataFeed, string metadataFeedId, st::CancellationToken cancellationToken) =>
+            CreateMetadataFeedAsync(parent, metadataFeed, metadataFeedId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> CreateMetadataFeed(gagr::LocationName parent, MetadataFeed metadataFeed, string metadataFeedId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataFeed(new CreateMetadataFeedRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                MetadataFeedId = metadataFeedId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(gagr::LocationName parent, MetadataFeed metadataFeed, string metadataFeedId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataFeedAsync(new CreateMetadataFeedRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                MetadataFeedId = metadataFeedId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataFeed">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataFeedId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(gagr::LocationName parent, MetadataFeed metadataFeed, string metadataFeedId, st::CancellationToken cancellationToken) =>
+            CreateMetadataFeedAsync(parent, metadataFeed, metadataFeedId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataFeed GetMetadataFeed(GetMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(GetMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(GetMetadataFeedRequest request, st::CancellationToken cancellationToken) =>
+            GetMetadataFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataFeed GetMetadataFeed(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataFeed(new GetMetadataFeedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataFeedAsync(new GetMetadataFeedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMetadataFeedAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataFeed GetMetadataFeed(MetadataFeedName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataFeed(new GetMetadataFeedRequest
+            {
+                MetadataFeedName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(MetadataFeedName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataFeedAsync(new GetMetadataFeedRequest
+            {
+                MetadataFeedName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataFeed> GetMetadataFeedAsync(MetadataFeedName name, st::CancellationToken cancellationToken) =>
+            GetMetadataFeedAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeeds(ListMetadataFeedsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeedsAsync(ListMetadataFeedsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeeds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataFeedsRequest request = new ListMetadataFeedsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataFeeds(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeedsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataFeedsRequest request = new ListMetadataFeedsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataFeedsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeeds(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataFeedsRequest request = new ListMetadataFeedsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataFeeds(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeedsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataFeedsRequest request = new ListMetadataFeedsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataFeedsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMetadataFeed(DeleteMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(DeleteMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(DeleteMetadataFeedRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMetadataFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteMetadataFeed</c>.</summary>
+        public virtual lro::OperationsClient DeleteMetadataFeedOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteMetadataFeed</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteMetadataFeed(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteMetadataFeed</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteMetadataFeedAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMetadataFeed(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMetadataFeed(new DeleteMetadataFeedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMetadataFeedAsync(new DeleteMetadataFeedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteMetadataFeedAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMetadataFeed(MetadataFeedName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMetadataFeed(new DeleteMetadataFeedRequest
+            {
+                MetadataFeedName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(MetadataFeedName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMetadataFeedAsync(new DeleteMetadataFeedRequest
+            {
+                MetadataFeedName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata feed, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(MetadataFeedName name, st::CancellationToken cancellationToken) =>
+            DeleteMetadataFeedAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> UpdateMetadataFeed(UpdateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> UpdateMetadataFeedAsync(UpdateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> UpdateMetadataFeedAsync(UpdateMetadataFeedRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMetadataFeedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateMetadataFeed</c>.</summary>
+        public virtual lro::OperationsClient UpdateMetadataFeedOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateMetadataFeed</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> PollOnceUpdateMetadataFeed(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataFeed, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMetadataFeed</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> PollOnceUpdateMetadataFeedAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataFeed, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMetadataFeedOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="metadataFeed">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataFeed, OperationMetadata> UpdateMetadataFeed(MetadataFeed metadataFeed, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMetadataFeed(new UpdateMetadataFeedRequest
+            {
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="metadataFeed">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> UpdateMetadataFeedAsync(MetadataFeed metadataFeed, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMetadataFeedAsync(new UpdateMetadataFeedRequest
+            {
+                MetadataFeed = gax::GaxPreconditions.CheckNotNull(metadataFeed, nameof(metadataFeed)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="metadataFeed">
+        /// Required. Update description.
+        /// Only fields specified in `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> UpdateMetadataFeedAsync(MetadataFeed metadataFeed, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMetadataFeedAsync(metadataFeed, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CatalogService client wrapper implementation, for convenient use.</summary>
@@ -5091,9 +5977,25 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<CreateEntryLinkRequest, EntryLink> _callCreateEntryLink;
 
+        private readonly gaxgrpc::ApiCall<UpdateEntryLinkRequest, EntryLink> _callUpdateEntryLink;
+
         private readonly gaxgrpc::ApiCall<DeleteEntryLinkRequest, EntryLink> _callDeleteEntryLink;
 
+        private readonly gaxgrpc::ApiCall<LookupEntryLinksRequest, LookupEntryLinksResponse> _callLookupEntryLinks;
+
+        private readonly gaxgrpc::ApiCall<LookupContextRequest, LookupContextResponse> _callLookupContext;
+
         private readonly gaxgrpc::ApiCall<GetEntryLinkRequest, EntryLink> _callGetEntryLink;
+
+        private readonly gaxgrpc::ApiCall<CreateMetadataFeedRequest, lro::Operation> _callCreateMetadataFeed;
+
+        private readonly gaxgrpc::ApiCall<GetMetadataFeedRequest, MetadataFeed> _callGetMetadataFeed;
+
+        private readonly gaxgrpc::ApiCall<ListMetadataFeedsRequest, ListMetadataFeedsResponse> _callListMetadataFeeds;
+
+        private readonly gaxgrpc::ApiCall<DeleteMetadataFeedRequest, lro::Operation> _callDeleteMetadataFeed;
+
+        private readonly gaxgrpc::ApiCall<UpdateMetadataFeedRequest, lro::Operation> _callUpdateMetadataFeed;
 
         /// <summary>
         /// Constructs a client wrapper for the CatalogService service, with the specified gRPC client and settings.
@@ -5120,6 +6022,9 @@ namespace Google.Cloud.Dataplex.V1
             UpdateEntryGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEntryGroupOperationsSettings, logger);
             DeleteEntryGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEntryGroupOperationsSettings, logger);
             CreateMetadataJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataJobOperationsSettings, logger);
+            CreateMetadataFeedOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataFeedOperationsSettings, logger);
+            DeleteMetadataFeedOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMetadataFeedOperationsSettings, logger);
+            UpdateMetadataFeedOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMetadataFeedOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateEntryType = clientHelper.BuildApiCall<CreateEntryTypeRequest, lro::Operation>("CreateEntryType", grpcClient.CreateEntryTypeAsync, grpcClient.CreateEntryType, effectiveSettings.CreateEntryTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -5203,12 +6108,36 @@ namespace Google.Cloud.Dataplex.V1
             _callCreateEntryLink = clientHelper.BuildApiCall<CreateEntryLinkRequest, EntryLink>("CreateEntryLink", grpcClient.CreateEntryLinkAsync, grpcClient.CreateEntryLink, effectiveSettings.CreateEntryLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntryLink);
             Modify_CreateEntryLinkApiCall(ref _callCreateEntryLink);
+            _callUpdateEntryLink = clientHelper.BuildApiCall<UpdateEntryLinkRequest, EntryLink>("UpdateEntryLink", grpcClient.UpdateEntryLinkAsync, grpcClient.UpdateEntryLink, effectiveSettings.UpdateEntryLinkSettings).WithGoogleRequestParam("entry_link.name", request => request.EntryLink?.Name);
+            Modify_ApiCall(ref _callUpdateEntryLink);
+            Modify_UpdateEntryLinkApiCall(ref _callUpdateEntryLink);
             _callDeleteEntryLink = clientHelper.BuildApiCall<DeleteEntryLinkRequest, EntryLink>("DeleteEntryLink", grpcClient.DeleteEntryLinkAsync, grpcClient.DeleteEntryLink, effectiveSettings.DeleteEntryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntryLink);
             Modify_DeleteEntryLinkApiCall(ref _callDeleteEntryLink);
+            _callLookupEntryLinks = clientHelper.BuildApiCall<LookupEntryLinksRequest, LookupEntryLinksResponse>("LookupEntryLinks", grpcClient.LookupEntryLinksAsync, grpcClient.LookupEntryLinks, effectiveSettings.LookupEntryLinksSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callLookupEntryLinks);
+            Modify_LookupEntryLinksApiCall(ref _callLookupEntryLinks);
+            _callLookupContext = clientHelper.BuildApiCall<LookupContextRequest, LookupContextResponse>("LookupContext", grpcClient.LookupContextAsync, grpcClient.LookupContext, effectiveSettings.LookupContextSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callLookupContext);
+            Modify_LookupContextApiCall(ref _callLookupContext);
             _callGetEntryLink = clientHelper.BuildApiCall<GetEntryLinkRequest, EntryLink>("GetEntryLink", grpcClient.GetEntryLinkAsync, grpcClient.GetEntryLink, effectiveSettings.GetEntryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntryLink);
             Modify_GetEntryLinkApiCall(ref _callGetEntryLink);
+            _callCreateMetadataFeed = clientHelper.BuildApiCall<CreateMetadataFeedRequest, lro::Operation>("CreateMetadataFeed", grpcClient.CreateMetadataFeedAsync, grpcClient.CreateMetadataFeed, effectiveSettings.CreateMetadataFeedSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMetadataFeed);
+            Modify_CreateMetadataFeedApiCall(ref _callCreateMetadataFeed);
+            _callGetMetadataFeed = clientHelper.BuildApiCall<GetMetadataFeedRequest, MetadataFeed>("GetMetadataFeed", grpcClient.GetMetadataFeedAsync, grpcClient.GetMetadataFeed, effectiveSettings.GetMetadataFeedSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMetadataFeed);
+            Modify_GetMetadataFeedApiCall(ref _callGetMetadataFeed);
+            _callListMetadataFeeds = clientHelper.BuildApiCall<ListMetadataFeedsRequest, ListMetadataFeedsResponse>("ListMetadataFeeds", grpcClient.ListMetadataFeedsAsync, grpcClient.ListMetadataFeeds, effectiveSettings.ListMetadataFeedsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMetadataFeeds);
+            Modify_ListMetadataFeedsApiCall(ref _callListMetadataFeeds);
+            _callDeleteMetadataFeed = clientHelper.BuildApiCall<DeleteMetadataFeedRequest, lro::Operation>("DeleteMetadataFeed", grpcClient.DeleteMetadataFeedAsync, grpcClient.DeleteMetadataFeed, effectiveSettings.DeleteMetadataFeedSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMetadataFeed);
+            Modify_DeleteMetadataFeedApiCall(ref _callDeleteMetadataFeed);
+            _callUpdateMetadataFeed = clientHelper.BuildApiCall<UpdateMetadataFeedRequest, lro::Operation>("UpdateMetadataFeed", grpcClient.UpdateMetadataFeedAsync, grpcClient.UpdateMetadataFeed, effectiveSettings.UpdateMetadataFeedSettings).WithGoogleRequestParam("metadata_feed.name", request => request.MetadataFeed?.Name);
+            Modify_ApiCall(ref _callUpdateMetadataFeed);
+            Modify_UpdateMetadataFeedApiCall(ref _callUpdateMetadataFeed);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5268,9 +6197,25 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_CreateEntryLinkApiCall(ref gaxgrpc::ApiCall<CreateEntryLinkRequest, EntryLink> call);
 
+        partial void Modify_UpdateEntryLinkApiCall(ref gaxgrpc::ApiCall<UpdateEntryLinkRequest, EntryLink> call);
+
         partial void Modify_DeleteEntryLinkApiCall(ref gaxgrpc::ApiCall<DeleteEntryLinkRequest, EntryLink> call);
 
+        partial void Modify_LookupEntryLinksApiCall(ref gaxgrpc::ApiCall<LookupEntryLinksRequest, LookupEntryLinksResponse> call);
+
+        partial void Modify_LookupContextApiCall(ref gaxgrpc::ApiCall<LookupContextRequest, LookupContextResponse> call);
+
         partial void Modify_GetEntryLinkApiCall(ref gaxgrpc::ApiCall<GetEntryLinkRequest, EntryLink> call);
+
+        partial void Modify_CreateMetadataFeedApiCall(ref gaxgrpc::ApiCall<CreateMetadataFeedRequest, lro::Operation> call);
+
+        partial void Modify_GetMetadataFeedApiCall(ref gaxgrpc::ApiCall<GetMetadataFeedRequest, MetadataFeed> call);
+
+        partial void Modify_ListMetadataFeedsApiCall(ref gaxgrpc::ApiCall<ListMetadataFeedsRequest, ListMetadataFeedsResponse> call);
+
+        partial void Modify_DeleteMetadataFeedApiCall(ref gaxgrpc::ApiCall<DeleteMetadataFeedRequest, lro::Operation> call);
+
+        partial void Modify_UpdateMetadataFeedApiCall(ref gaxgrpc::ApiCall<UpdateMetadataFeedRequest, lro::Operation> call);
 
         partial void OnConstruction(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5337,9 +6282,25 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_CreateEntryLinkRequest(ref CreateEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateEntryLinkRequest(ref UpdateEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteEntryLinkRequest(ref DeleteEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_LookupEntryLinksRequest(ref LookupEntryLinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LookupContextRequest(ref LookupContextRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetEntryLinkRequest(ref GetEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMetadataFeedRequest(ref CreateMetadataFeedRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMetadataFeedRequest(ref GetMetadataFeedRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMetadataFeedsRequest(ref ListMetadataFeedsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMetadataFeedRequest(ref DeleteMetadataFeedRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMetadataFeedRequest(ref UpdateMetadataFeedRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEntryType</c>.</summary>
         public override lro::OperationsClient CreateEntryTypeOperationsClient { get; }
@@ -5802,11 +6763,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5819,11 +6775,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5836,11 +6787,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5853,11 +6799,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5870,11 +6811,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5887,11 +6823,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
-        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-        /// Metastore metadata that is stored in Dataplex Universal Catalog is
-        /// changing. For more information, see [Changes to metadata stored in
-        /// Dataplex Universal
-        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6062,6 +6993,30 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EntryLink UpdateEntryLink(UpdateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEntryLinkRequest(ref request, ref callSettings);
+            return _callUpdateEntryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EntryLink> UpdateEntryLinkAsync(UpdateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEntryLinkRequest(ref request, ref callSettings);
+            return _callUpdateEntryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Deletes an Entry Link.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6083,6 +7038,54 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_DeleteEntryLinkRequest(ref request, ref callSettings);
             return _callDeleteEntryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up Entry Links referencing the specified Entry.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntryLink"/> resources.</returns>
+        public override gax::PagedEnumerable<LookupEntryLinksResponse, EntryLink> LookupEntryLinks(LookupEntryLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupEntryLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<LookupEntryLinksRequest, LookupEntryLinksResponse, EntryLink>(_callLookupEntryLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up Entry Links referencing the specified Entry.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntryLink"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<LookupEntryLinksResponse, EntryLink> LookupEntryLinksAsync(LookupEntryLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupEntryLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<LookupEntryLinksRequest, LookupEntryLinksResponse, EntryLink>(_callLookupEntryLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up LLM Context for the specified resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LookupContextResponse LookupContext(LookupContextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupContextRequest(ref request, ref callSettings);
+            return _callLookupContext.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up LLM Context for the specified resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LookupContextResponse> LookupContextAsync(LookupContextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupContextRequest(ref request, ref callSettings);
+            return _callLookupContext.Async(request, callSettings);
         }
 
         /// <summary>
@@ -6108,6 +7111,135 @@ namespace Google.Cloud.Dataplex.V1
             Modify_GetEntryLinkRequest(ref request, ref callSettings);
             return _callGetEntryLink.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateMetadataFeed</c>.</summary>
+        public override lro::OperationsClient CreateMetadataFeedOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MetadataFeed, OperationMetadata> CreateMetadataFeed(CreateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataFeed, OperationMetadata>(_callCreateMetadataFeed.Sync(request, callSettings), CreateMetadataFeedOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> CreateMetadataFeedAsync(CreateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataFeed, OperationMetadata>(await _callCreateMetadataFeed.Async(request, callSettings).ConfigureAwait(false), CreateMetadataFeedOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MetadataFeed GetMetadataFeed(GetMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataFeedRequest(ref request, ref callSettings);
+            return _callGetMetadataFeed.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MetadataFeed> GetMetadataFeedAsync(GetMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataFeedRequest(ref request, ref callSettings);
+            return _callGetMetadataFeed.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeeds(ListMetadataFeedsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMetadataFeedsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMetadataFeedsRequest, ListMetadataFeedsResponse, MetadataFeed>(_callListMetadataFeeds, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a list of MetadataFeeds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataFeed"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMetadataFeedsResponse, MetadataFeed> ListMetadataFeedsAsync(ListMetadataFeedsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMetadataFeedsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMetadataFeedsRequest, ListMetadataFeedsResponse, MetadataFeed>(_callListMetadataFeeds, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteMetadataFeed</c>.</summary>
+        public override lro::OperationsClient DeleteMetadataFeedOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteMetadataFeed(DeleteMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteMetadataFeed.Sync(request, callSettings), DeleteMetadataFeedOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMetadataFeedAsync(DeleteMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteMetadataFeed.Async(request, callSettings).ConfigureAwait(false), DeleteMetadataFeedOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateMetadataFeed</c>.</summary>
+        public override lro::OperationsClient UpdateMetadataFeedOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MetadataFeed, OperationMetadata> UpdateMetadataFeed(UpdateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataFeed, OperationMetadata>(_callUpdateMetadataFeed.Sync(request, callSettings), UpdateMetadataFeedOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a MetadataFeed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MetadataFeed, OperationMetadata>> UpdateMetadataFeedAsync(UpdateMetadataFeedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMetadataFeedRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataFeed, OperationMetadata>(await _callUpdateMetadataFeed.Async(request, callSettings).ConfigureAwait(false), UpdateMetadataFeedOperationsClient);
+        }
     }
 
     public partial class ListEntryTypesRequest : gaxgrpc::IPageRequest
@@ -6131,6 +7263,14 @@ namespace Google.Cloud.Dataplex.V1
     }
 
     public partial class ListMetadataJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class LookupEntryLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMetadataFeedsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6178,6 +7318,22 @@ namespace Google.Cloud.Dataplex.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<MetadataJob> GetEnumerator() => MetadataJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class LookupEntryLinksResponse : gaxgrpc::IPageResponse<EntryLink>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EntryLink> GetEnumerator() => EntryLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMetadataFeedsResponse : gaxgrpc::IPageResponse<MetadataFeed>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MetadataFeed> GetEnumerator() => MetadataFeeds.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
