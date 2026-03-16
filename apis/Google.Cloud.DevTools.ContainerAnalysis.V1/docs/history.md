@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.15.0, released 2026-03-16
+
+### New features
+
+- Added line_number to FileLocation
+
 ## Version 3.14.0, released 2026-02-16
 
 ### New features
