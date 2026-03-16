@@ -4372,6 +4372,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateEntryLink</summary>
+        public void UpdateEntryLinkRequestObject()
+        {
+            // Snippet: UpdateEntryLink(UpdateEntryLinkRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::UpdateEntryLinkRequest request = new gcdv::UpdateEntryLinkRequest
+            {
+                EntryLink = new gcdv::EntryLink(),
+                AllowMissing = false,
+                AspectKeys = { "", },
+            };
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.UpdateEntryLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntryLinkAsync</summary>
+        public async Task UpdateEntryLinkRequestObjectAsync()
+        {
+            // Snippet: UpdateEntryLinkAsync(UpdateEntryLinkRequest, CallSettings)
+            // Additional: UpdateEntryLinkAsync(UpdateEntryLinkRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::UpdateEntryLinkRequest request = new gcdv::UpdateEntryLinkRequest
+            {
+                EntryLink = new gcdv::EntryLink(),
+                AllowMissing = false,
+                AspectKeys = { "", },
+            };
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.UpdateEntryLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntryLink</summary>
+        public void UpdateEntryLink()
+        {
+            // Snippet: UpdateEntryLink(EntryLink, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.UpdateEntryLink(entryLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEntryLinkAsync</summary>
+        public async Task UpdateEntryLinkAsync()
+        {
+            // Snippet: UpdateEntryLinkAsync(EntryLink, CallSettings)
+            // Additional: UpdateEntryLinkAsync(EntryLink, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.UpdateEntryLinkAsync(entryLink);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteEntryLink</summary>
         public void DeleteEntryLinkRequestObject()
         {
@@ -4459,6 +4523,151 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for LookupEntryLinks</summary>
+        public void LookupEntryLinksRequestObject()
+        {
+            // Snippet: LookupEntryLinks(LookupEntryLinksRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::LookupEntryLinksRequest request = new gcdv::LookupEntryLinksRequest
+            {
+                Name = "",
+                EntryAsEntryName = gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryMode = gcdv::LookupEntryLinksRequest.Types.EntryMode.Unspecified,
+                EntryLinkTypes = { "", },
+            };
+            // Make the request
+            PagedEnumerable<gcdv::LookupEntryLinksResponse, gcdv::EntryLink> response = catalogServiceClient.LookupEntryLinks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::EntryLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::LookupEntryLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::EntryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::EntryLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::EntryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupEntryLinksAsync</summary>
+        public async Task LookupEntryLinksRequestObjectAsync()
+        {
+            // Snippet: LookupEntryLinksAsync(LookupEntryLinksRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::LookupEntryLinksRequest request = new gcdv::LookupEntryLinksRequest
+            {
+                Name = "",
+                EntryAsEntryName = gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryMode = gcdv::LookupEntryLinksRequest.Types.EntryMode.Unspecified,
+                EntryLinkTypes = { "", },
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::LookupEntryLinksResponse, gcdv::EntryLink> response = catalogServiceClient.LookupEntryLinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::EntryLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::LookupEntryLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::EntryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::EntryLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::EntryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupContext</summary>
+        public void LookupContextRequestObject()
+        {
+            // Snippet: LookupContext(LookupContextRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
+            {
+                Name = "",
+                ResourcesAsEntryNames =
+                {
+                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                },
+                Options = { { "", "" }, },
+            };
+            // Make the request
+            gcdv::LookupContextResponse response = catalogServiceClient.LookupContext(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupContextAsync</summary>
+        public async Task LookupContextRequestObjectAsync()
+        {
+            // Snippet: LookupContextAsync(LookupContextRequest, CallSettings)
+            // Additional: LookupContextAsync(LookupContextRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
+            {
+                Name = "",
+                ResourcesAsEntryNames =
+                {
+                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                },
+                Options = { { "", "" }, },
+            };
+            // Make the request
+            gcdv::LookupContextResponse response = await catalogServiceClient.LookupContextAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetEntryLink</summary>
         public void GetEntryLinkRequestObject()
         {
@@ -4543,6 +4752,883 @@ namespace GoogleCSharpSnippets
             gcdv::EntryLinkName name = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]");
             // Make the request
             gcdv::EntryLink response = await catalogServiceClient.GetEntryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeed</summary>
+        public void CreateMetadataFeedRequestObject()
+        {
+            // Snippet: CreateMetadataFeed(CreateMetadataFeedRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateMetadataFeedRequest request = new gcdv::CreateMetadataFeedRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MetadataFeed = new gcdv::MetadataFeed(),
+                MetadataFeedId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataFeed(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeedAsync</summary>
+        public async Task CreateMetadataFeedRequestObjectAsync()
+        {
+            // Snippet: CreateMetadataFeedAsync(CreateMetadataFeedRequest, CallSettings)
+            // Additional: CreateMetadataFeedAsync(CreateMetadataFeedRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateMetadataFeedRequest request = new gcdv::CreateMetadataFeedRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MetadataFeed = new gcdv::MetadataFeed(),
+                MetadataFeedId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataFeedAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeed</summary>
+        public void CreateMetadataFeed()
+        {
+            // Snippet: CreateMetadataFeed(string, MetadataFeed, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            string metadataFeedId = "";
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataFeed(parent, metadataFeed, metadataFeedId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeedAsync</summary>
+        public async Task CreateMetadataFeedAsync()
+        {
+            // Snippet: CreateMetadataFeedAsync(string, MetadataFeed, string, CallSettings)
+            // Additional: CreateMetadataFeedAsync(string, MetadataFeed, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            string metadataFeedId = "";
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataFeedAsync(parent, metadataFeed, metadataFeedId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeed</summary>
+        public void CreateMetadataFeedResourceNames()
+        {
+            // Snippet: CreateMetadataFeed(LocationName, MetadataFeed, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            string metadataFeedId = "";
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataFeed(parent, metadataFeed, metadataFeedId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataFeedAsync</summary>
+        public async Task CreateMetadataFeedResourceNamesAsync()
+        {
+            // Snippet: CreateMetadataFeedAsync(LocationName, MetadataFeed, string, CallSettings)
+            // Additional: CreateMetadataFeedAsync(LocationName, MetadataFeed, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            string metadataFeedId = "";
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataFeedAsync(parent, metadataFeed, metadataFeedId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeed</summary>
+        public void GetMetadataFeedRequestObject()
+        {
+            // Snippet: GetMetadataFeed(GetMetadataFeedRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::GetMetadataFeedRequest request = new gcdv::GetMetadataFeedRequest
+            {
+                MetadataFeedName = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]"),
+            };
+            // Make the request
+            gcdv::MetadataFeed response = catalogServiceClient.GetMetadataFeed(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeedAsync</summary>
+        public async Task GetMetadataFeedRequestObjectAsync()
+        {
+            // Snippet: GetMetadataFeedAsync(GetMetadataFeedRequest, CallSettings)
+            // Additional: GetMetadataFeedAsync(GetMetadataFeedRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GetMetadataFeedRequest request = new gcdv::GetMetadataFeedRequest
+            {
+                MetadataFeedName = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]"),
+            };
+            // Make the request
+            gcdv::MetadataFeed response = await catalogServiceClient.GetMetadataFeedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeed</summary>
+        public void GetMetadataFeed()
+        {
+            // Snippet: GetMetadataFeed(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataFeeds/[METADATA_FEED]";
+            // Make the request
+            gcdv::MetadataFeed response = catalogServiceClient.GetMetadataFeed(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeedAsync</summary>
+        public async Task GetMetadataFeedAsync()
+        {
+            // Snippet: GetMetadataFeedAsync(string, CallSettings)
+            // Additional: GetMetadataFeedAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataFeeds/[METADATA_FEED]";
+            // Make the request
+            gcdv::MetadataFeed response = await catalogServiceClient.GetMetadataFeedAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeed</summary>
+        public void GetMetadataFeedResourceNames()
+        {
+            // Snippet: GetMetadataFeed(MetadataFeedName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::MetadataFeedName name = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]");
+            // Make the request
+            gcdv::MetadataFeed response = catalogServiceClient.GetMetadataFeed(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataFeedAsync</summary>
+        public async Task GetMetadataFeedResourceNamesAsync()
+        {
+            // Snippet: GetMetadataFeedAsync(MetadataFeedName, CallSettings)
+            // Additional: GetMetadataFeedAsync(MetadataFeedName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MetadataFeedName name = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]");
+            // Make the request
+            gcdv::MetadataFeed response = await catalogServiceClient.GetMetadataFeedAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeeds</summary>
+        public void ListMetadataFeedsRequestObject()
+        {
+            // Snippet: ListMetadataFeeds(ListMetadataFeedsRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::ListMetadataFeedsRequest request = new gcdv::ListMetadataFeedsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeeds(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeedsAsync</summary>
+        public async Task ListMetadataFeedsRequestObjectAsync()
+        {
+            // Snippet: ListMetadataFeedsAsync(ListMetadataFeedsRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::ListMetadataFeedsRequest request = new gcdv::ListMetadataFeedsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeedsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeeds</summary>
+        public void ListMetadataFeeds()
+        {
+            // Snippet: ListMetadataFeeds(string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeeds(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeedsAsync</summary>
+        public async Task ListMetadataFeedsAsync()
+        {
+            // Snippet: ListMetadataFeedsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeedsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeeds</summary>
+        public void ListMetadataFeedsResourceNames()
+        {
+            // Snippet: ListMetadataFeeds(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeeds(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataFeedsAsync</summary>
+        public async Task ListMetadataFeedsResourceNamesAsync()
+        {
+            // Snippet: ListMetadataFeedsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataFeedsResponse, gcdv::MetadataFeed> response = catalogServiceClient.ListMetadataFeedsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::MetadataFeed item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::ListMetadataFeedsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataFeed item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataFeed> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataFeed item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeed</summary>
+        public void DeleteMetadataFeedRequestObject()
+        {
+            // Snippet: DeleteMetadataFeed(DeleteMetadataFeedRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::DeleteMetadataFeedRequest request = new gcdv::DeleteMetadataFeedRequest
+            {
+                MetadataFeedName = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]"),
+            };
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = catalogServiceClient.DeleteMetadataFeed(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceDeleteMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeedAsync</summary>
+        public async Task DeleteMetadataFeedRequestObjectAsync()
+        {
+            // Snippet: DeleteMetadataFeedAsync(DeleteMetadataFeedRequest, CallSettings)
+            // Additional: DeleteMetadataFeedAsync(DeleteMetadataFeedRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DeleteMetadataFeedRequest request = new gcdv::DeleteMetadataFeedRequest
+            {
+                MetadataFeedName = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]"),
+            };
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = await catalogServiceClient.DeleteMetadataFeedAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceDeleteMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeed</summary>
+        public void DeleteMetadataFeed()
+        {
+            // Snippet: DeleteMetadataFeed(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataFeeds/[METADATA_FEED]";
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = catalogServiceClient.DeleteMetadataFeed(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceDeleteMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeedAsync</summary>
+        public async Task DeleteMetadataFeedAsync()
+        {
+            // Snippet: DeleteMetadataFeedAsync(string, CallSettings)
+            // Additional: DeleteMetadataFeedAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataFeeds/[METADATA_FEED]";
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = await catalogServiceClient.DeleteMetadataFeedAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceDeleteMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeed</summary>
+        public void DeleteMetadataFeedResourceNames()
+        {
+            // Snippet: DeleteMetadataFeed(MetadataFeedName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::MetadataFeedName name = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]");
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = catalogServiceClient.DeleteMetadataFeed(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceDeleteMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMetadataFeedAsync</summary>
+        public async Task DeleteMetadataFeedResourceNamesAsync()
+        {
+            // Snippet: DeleteMetadataFeedAsync(MetadataFeedName, CallSettings)
+            // Additional: DeleteMetadataFeedAsync(MetadataFeedName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MetadataFeedName name = gcdv::MetadataFeedName.FromProjectLocationMetadataFeed("[PROJECT]", "[LOCATION]", "[METADATA_FEED]");
+            // Make the request
+            Operation<Empty, gcdv::OperationMetadata> response = await catalogServiceClient.DeleteMetadataFeedAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceDeleteMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMetadataFeed</summary>
+        public void UpdateMetadataFeedRequestObject()
+        {
+            // Snippet: UpdateMetadataFeed(UpdateMetadataFeedRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::UpdateMetadataFeedRequest request = new gcdv::UpdateMetadataFeedRequest
+            {
+                MetadataFeed = new gcdv::MetadataFeed(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = catalogServiceClient.UpdateMetadataFeed(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceUpdateMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMetadataFeedAsync</summary>
+        public async Task UpdateMetadataFeedRequestObjectAsync()
+        {
+            // Snippet: UpdateMetadataFeedAsync(UpdateMetadataFeedRequest, CallSettings)
+            // Additional: UpdateMetadataFeedAsync(UpdateMetadataFeedRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::UpdateMetadataFeedRequest request = new gcdv::UpdateMetadataFeedRequest
+            {
+                MetadataFeed = new gcdv::MetadataFeed(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = await catalogServiceClient.UpdateMetadataFeedAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceUpdateMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMetadataFeed</summary>
+        public void UpdateMetadataFeed()
+        {
+            // Snippet: UpdateMetadataFeed(MetadataFeed, FieldMask, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = catalogServiceClient.UpdateMetadataFeed(metadataFeed, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceUpdateMetadataFeed(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMetadataFeedAsync</summary>
+        public async Task UpdateMetadataFeedAsync()
+        {
+            // Snippet: UpdateMetadataFeedAsync(MetadataFeed, FieldMask, CallSettings)
+            // Additional: UpdateMetadataFeedAsync(MetadataFeed, FieldMask, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MetadataFeed metadataFeed = new gcdv::MetadataFeed();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> response = await catalogServiceClient.UpdateMetadataFeedAsync(metadataFeed, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataFeed result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataFeed, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceUpdateMetadataFeedAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataFeed retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

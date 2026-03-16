@@ -26,26 +26,31 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvcHJvY2Vzc2luZy5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIr0BCgdU",
-            "cmlnZ2VyEj8KCW9uX2RlbWFuZBhkIAEoCzIqLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5UcmlnZ2VyLk9uRGVtYW5kSAASPgoIc2NoZWR1bGUYZSABKAsy",
-            "Ki5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVHJpZ2dlci5TY2hlZHVsZUgA",
-            "GgoKCE9uRGVtYW5kGh0KCFNjaGVkdWxlEhEKBGNyb24YASABKAlCA+BBAkIG",
-            "CgRtb2RlImkKCkRhdGFTb3VyY2USOAoGZW50aXR5GGQgASgJQibgQQX6QSAK",
-            "HmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eUgAEhcKCHJlc291cmNl",
-            "GGUgASgJQgPgQQVIAEIICgZzb3VyY2UivgEKC1NjYW5uZWREYXRhElMKEWlu",
-            "Y3JlbWVudGFsX2ZpZWxkGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABpMChBJbmNyZW1l",
-            "bnRhbEZpZWxkEhIKBWZpZWxkGAEgASgJQgPgQQMSEgoFc3RhcnQYAiABKAlC",
-            "A+BBAxIQCgNlbmQYAyABKAlCA+BBA0IMCgpkYXRhX3JhbmdlQmsKHGNvbS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7",
-            "ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
+            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8iygIKB1RyaWdnZXISPwoJb25f",
+            "ZGVtYW5kGGQgASgLMiouZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlRyaWdn",
+            "ZXIuT25EZW1hbmRIABI+CghzY2hlZHVsZRhlIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5UcmlnZ2VyLlNjaGVkdWxlSAASPQoIb25lX3RpbWUY",
+            "ZiABKAsyKS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVHJpZ2dlci5PbmVU",
+            "aW1lSAAaCgoIT25EZW1hbmQaHQoIU2NoZWR1bGUSEQoEY3JvbhgBIAEoCUID",
+            "4EECGkwKB09uZVRpbWUSQQoZdHRsX2FmdGVyX3NjYW5fY29tcGxldGlvbhgB",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBQgYKBG1vZGUi",
+            "aQoKRGF0YVNvdXJjZRI4CgZlbnRpdHkYZCABKAlCJuBBBfpBIAoeZGF0YXBs",
+            "ZXguZ29vZ2xlYXBpcy5jb20vRW50aXR5SAASFwoIcmVzb3VyY2UYZSABKAlC",
+            "A+BBBUgAQggKBnNvdXJjZSK+AQoLU2Nhbm5lZERhdGESUwoRaW5jcmVtZW50",
+            "YWxfZmllbGQYASABKAsyNi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Nh",
+            "bm5lZERhdGEuSW5jcmVtZW50YWxGaWVsZEgAGkwKEEluY3JlbWVudGFsRmll",
+            "bGQSEgoFZmllbGQYASABKAlCA+BBAxISCgVzdGFydBgCIAEoCUID4EEDEhAK",
+            "A2VuZBgDIAEoCUID4EEDQgwKCmRhdGFfcmFuZ2VCawocY29tLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MUIPUHJvY2Vzc2luZ1Byb3RvUAFaOGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxl",
+            "eHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger), global::Google.Cloud.Dataplex.V1.Trigger.Parser, new[]{ "OnDemand", "Schedule" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand), global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule), global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule.Parser, new[]{ "Cron" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger), global::Google.Cloud.Dataplex.V1.Trigger.Parser, new[]{ "OnDemand", "Schedule", "OneTime" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand), global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule), global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule.Parser, new[]{ "Cron" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime), global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime.Parser, new[]{ "TtlAfterScanCompletion" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataSource), global::Google.Cloud.Dataplex.V1.DataSource.Parser, new[]{ "Entity", "Resource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ScannedData), global::Google.Cloud.Dataplex.V1.ScannedData.Parser, new[]{ "IncrementalField" }, new[]{ "DataRange" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ScannedData.Types.IncrementalField), global::Google.Cloud.Dataplex.V1.ScannedData.Types.IncrementalField.Parser, new[]{ "Field", "Start", "End" }, null, null, null, null)})
           }));
@@ -99,6 +104,9 @@ namespace Google.Cloud.Dataplex.V1 {
         case ModeOneofCase.Schedule:
           Schedule = other.Schedule.Clone();
           break;
+        case ModeOneofCase.OneTime:
+          OneTime = other.OneTime.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -140,12 +148,29 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "one_time" field.</summary>
+    public const int OneTimeFieldNumber = 102;
+    /// <summary>
+    /// The scan runs once, and does not create an associated ScanJob child
+    /// resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime OneTime {
+      get { return modeCase_ == ModeOneofCase.OneTime ? (global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime) mode_ : null; }
+      set {
+        mode_ = value;
+        modeCase_ = value == null ? ModeOneofCase.None : ModeOneofCase.OneTime;
+      }
+    }
+
     private object mode_;
     /// <summary>Enum of possible cases for the "mode" oneof.</summary>
     public enum ModeOneofCase {
       None = 0,
       OnDemand = 100,
       Schedule = 101,
+      OneTime = 102,
     }
     private ModeOneofCase modeCase_ = ModeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,6 +203,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (!object.Equals(OnDemand, other.OnDemand)) return false;
       if (!object.Equals(Schedule, other.Schedule)) return false;
+      if (!object.Equals(OneTime, other.OneTime)) return false;
       if (ModeCase != other.ModeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -188,6 +214,7 @@ namespace Google.Cloud.Dataplex.V1 {
       int hash = 1;
       if (modeCase_ == ModeOneofCase.OnDemand) hash ^= OnDemand.GetHashCode();
       if (modeCase_ == ModeOneofCase.Schedule) hash ^= Schedule.GetHashCode();
+      if (modeCase_ == ModeOneofCase.OneTime) hash ^= OneTime.GetHashCode();
       hash ^= (int) modeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -215,6 +242,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(170, 6);
         output.WriteMessage(Schedule);
       }
+      if (modeCase_ == ModeOneofCase.OneTime) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(OneTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -233,6 +264,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(170, 6);
         output.WriteMessage(Schedule);
       }
+      if (modeCase_ == ModeOneofCase.OneTime) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(OneTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -248,6 +283,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (modeCase_ == ModeOneofCase.Schedule) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Schedule);
+      }
+      if (modeCase_ == ModeOneofCase.OneTime) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OneTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -273,6 +311,12 @@ namespace Google.Cloud.Dataplex.V1 {
             Schedule = new global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule();
           }
           Schedule.MergeFrom(other.Schedule);
+          break;
+        case ModeOneofCase.OneTime:
+          if (OneTime == null) {
+            OneTime = new global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime();
+          }
+          OneTime.MergeFrom(other.OneTime);
           break;
       }
 
@@ -309,6 +353,15 @@ namespace Google.Cloud.Dataplex.V1 {
             Schedule = subBuilder;
             break;
           }
+          case 818: {
+            global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime subBuilder = new global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime();
+            if (modeCase_ == ModeOneofCase.OneTime) {
+              subBuilder.MergeFrom(OneTime);
+            }
+            input.ReadMessage(subBuilder);
+            OneTime = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -340,6 +393,15 @@ namespace Google.Cloud.Dataplex.V1 {
             }
             input.ReadMessage(subBuilder);
             Schedule = subBuilder;
+            break;
+          }
+          case 818: {
+            global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime subBuilder = new global::Google.Cloud.Dataplex.V1.Trigger.Types.OneTime();
+            if (modeCase_ == ModeOneofCase.OneTime) {
+              subBuilder.MergeFrom(OneTime);
+            }
+            input.ReadMessage(subBuilder);
+            OneTime = subBuilder;
             break;
           }
         }
@@ -706,6 +768,215 @@ namespace Google.Cloud.Dataplex.V1 {
                 break;
               case 10: {
                 Cron = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The scan runs once using create API.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class OneTime : pb::IMessage<OneTime>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OneTime> _parser = new pb::MessageParser<OneTime>(() => new OneTime());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OneTime> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.Trigger.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OneTime() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OneTime(OneTime other) : this() {
+          ttlAfterScanCompletion_ = other.ttlAfterScanCompletion_ != null ? other.ttlAfterScanCompletion_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OneTime Clone() {
+          return new OneTime(this);
+        }
+
+        /// <summary>Field number for the "ttl_after_scan_completion" field.</summary>
+        public const int TtlAfterScanCompletionFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Duration ttlAfterScanCompletion_;
+        /// <summary>
+        /// Optional. Time to live for OneTime scans.
+        /// default value is 24 hours, minimum value is 0 seconds, and maximum value
+        /// is 365 days. The time is calculated from the data scan job completion
+        /// time. If value is set as 0 seconds, the scan will be immediately deleted
+        /// upon job completion, regardless of whether the job succeeded or failed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration TtlAfterScanCompletion {
+          get { return ttlAfterScanCompletion_; }
+          set {
+            ttlAfterScanCompletion_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OneTime);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OneTime other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(TtlAfterScanCompletion, other.TtlAfterScanCompletion)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ttlAfterScanCompletion_ != null) hash ^= TtlAfterScanCompletion.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ttlAfterScanCompletion_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TtlAfterScanCompletion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ttlAfterScanCompletion_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TtlAfterScanCompletion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ttlAfterScanCompletion_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TtlAfterScanCompletion);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OneTime other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ttlAfterScanCompletion_ != null) {
+            if (ttlAfterScanCompletion_ == null) {
+              TtlAfterScanCompletion = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            TtlAfterScanCompletion.MergeFrom(other.TtlAfterScanCompletion);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (ttlAfterScanCompletion_ == null) {
+                  TtlAfterScanCompletion = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(TtlAfterScanCompletion);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (ttlAfterScanCompletion_ == null) {
+                  TtlAfterScanCompletion = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(TtlAfterScanCompletion);
                 break;
               }
             }

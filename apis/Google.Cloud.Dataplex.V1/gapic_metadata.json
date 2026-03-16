@@ -145,6 +145,12 @@
                 "CreateEntryTypeAsync"
               ]
             },
+            "CreateMetadataFeed": {
+              "methods": [
+                "CreateMetadataFeed",
+                "CreateMetadataFeedAsync"
+              ]
+            },
             "CreateMetadataJob": {
               "methods": [
                 "CreateMetadataJob",
@@ -181,6 +187,12 @@
                 "DeleteEntryTypeAsync"
               ]
             },
+            "DeleteMetadataFeed": {
+              "methods": [
+                "DeleteMetadataFeed",
+                "DeleteMetadataFeedAsync"
+              ]
+            },
             "GetAspectType": {
               "methods": [
                 "GetAspectType",
@@ -209,6 +221,12 @@
               "methods": [
                 "GetEntryType",
                 "GetEntryTypeAsync"
+              ]
+            },
+            "GetMetadataFeed": {
+              "methods": [
+                "GetMetadataFeed",
+                "GetMetadataFeedAsync"
               ]
             },
             "GetMetadataJob": {
@@ -241,16 +259,34 @@
                 "ListEntryTypesAsync"
               ]
             },
+            "ListMetadataFeeds": {
+              "methods": [
+                "ListMetadataFeeds",
+                "ListMetadataFeedsAsync"
+              ]
+            },
             "ListMetadataJobs": {
               "methods": [
                 "ListMetadataJobs",
                 "ListMetadataJobsAsync"
               ]
             },
+            "LookupContext": {
+              "methods": [
+                "LookupContext",
+                "LookupContextAsync"
+              ]
+            },
             "LookupEntry": {
               "methods": [
                 "LookupEntry",
                 "LookupEntryAsync"
+              ]
+            },
+            "LookupEntryLinks": {
+              "methods": [
+                "LookupEntryLinks",
+                "LookupEntryLinksAsync"
               ]
             },
             "SearchEntries": {
@@ -277,10 +313,22 @@
                 "UpdateEntryGroupAsync"
               ]
             },
+            "UpdateEntryLink": {
+              "methods": [
+                "UpdateEntryLink",
+                "UpdateEntryLinkAsync"
+              ]
+            },
             "UpdateEntryType": {
               "methods": [
                 "UpdateEntryType",
                 "UpdateEntryTypeAsync"
+              ]
+            },
+            "UpdateMetadataFeed": {
+              "methods": [
+                "UpdateMetadataFeed",
+                "UpdateMetadataFeedAsync"
               ]
             }
           }
@@ -329,54 +377,73 @@
     "ContentService": {
       "clients": {
         "grpc": {
-          "libraryClient": "ContentServiceClient",
+          "libraryClient": "ContentServiceClient"
+        }
+      }
+    },
+    "DataProductService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataProductServiceClient",
           "rpcs": {
-            "CreateContent": {
+            "CreateDataAsset": {
               "methods": [
-                "CreateContent",
-                "CreateContentAsync"
+                "CreateDataAsset",
+                "CreateDataAssetAsync"
               ]
             },
-            "DeleteContent": {
+            "CreateDataProduct": {
               "methods": [
-                "DeleteContent",
-                "DeleteContentAsync"
+                "CreateDataProduct",
+                "CreateDataProductAsync"
               ]
             },
-            "GetContent": {
+            "DeleteDataAsset": {
               "methods": [
-                "GetContent",
-                "GetContentAsync"
+                "DeleteDataAsset",
+                "DeleteDataAssetAsync"
               ]
             },
-            "GetIamPolicy": {
+            "DeleteDataProduct": {
               "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
+                "DeleteDataProduct",
+                "DeleteDataProductAsync"
               ]
             },
-            "ListContent": {
+            "GetDataAsset": {
               "methods": [
-                "ListContent",
-                "ListContentAsync"
+                "GetDataAsset",
+                "GetDataAssetAsync"
               ]
             },
-            "SetIamPolicy": {
+            "GetDataProduct": {
               "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
+                "GetDataProduct",
+                "GetDataProductAsync"
               ]
             },
-            "TestIamPermissions": {
+            "ListDataAssets": {
               "methods": [
-                "TestIamPermissions",
-                "TestIamPermissionsAsync"
+                "ListDataAssets",
+                "ListDataAssetsAsync"
               ]
             },
-            "UpdateContent": {
+            "ListDataProducts": {
               "methods": [
-                "UpdateContent",
-                "UpdateContentAsync"
+                "ListDataProducts",
+                "ListDataProductsAsync"
+              ]
+            },
+            "UpdateDataAsset": {
+              "methods": [
+                "UpdateDataAsset",
+                "UpdateDataAssetAsync"
+              ]
+            },
+            "UpdateDataProduct": {
+              "methods": [
+                "UpdateDataProduct",
+                "UpdateDataProductAsync"
               ]
             }
           }
@@ -562,12 +629,6 @@
                 "CreateAssetAsync"
               ]
             },
-            "CreateEnvironment": {
-              "methods": [
-                "CreateEnvironment",
-                "CreateEnvironmentAsync"
-              ]
-            },
             "CreateLake": {
               "methods": [
                 "CreateLake",
@@ -592,12 +653,6 @@
                 "DeleteAssetAsync"
               ]
             },
-            "DeleteEnvironment": {
-              "methods": [
-                "DeleteEnvironment",
-                "DeleteEnvironmentAsync"
-              ]
-            },
             "DeleteLake": {
               "methods": [
                 "DeleteLake",
@@ -620,12 +675,6 @@
               "methods": [
                 "GetAsset",
                 "GetAssetAsync"
-              ]
-            },
-            "GetEnvironment": {
-              "methods": [
-                "GetEnvironment",
-                "GetEnvironmentAsync"
               ]
             },
             "GetJob": {
@@ -664,12 +713,6 @@
                 "ListAssetsAsync"
               ]
             },
-            "ListEnvironments": {
-              "methods": [
-                "ListEnvironments",
-                "ListEnvironmentsAsync"
-              ]
-            },
             "ListJobs": {
               "methods": [
                 "ListJobs",
@@ -686,12 +729,6 @@
               "methods": [
                 "ListLakes",
                 "ListLakesAsync"
-              ]
-            },
-            "ListSessions": {
-              "methods": [
-                "ListSessions",
-                "ListSessionsAsync"
               ]
             },
             "ListTasks": {
@@ -722,12 +759,6 @@
               "methods": [
                 "UpdateAsset",
                 "UpdateAssetAsync"
-              ]
-            },
-            "UpdateEnvironment": {
-              "methods": [
-                "UpdateEnvironment",
-                "UpdateEnvironmentAsync"
               ]
             },
             "UpdateLake": {
