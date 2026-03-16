@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-03-16
+
+### New features
+
+- Add product rating fields to CSS API v1. This is in
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.shopping.css.v1.AccountLabel` is changed
+- A comment for field `size_types` in message `.google.shopping.css.v1.Attributes` is changed
+- A comment for field `name` in message `.google.shopping.css.v1.CssProductInput` is changed
+- A comment for field `name` in message `.google.shopping.css.v1.GetCssProductRequest` is changed
+
 ## Version 1.0.0-beta08, released 2025-11-06
 
 ### New features
