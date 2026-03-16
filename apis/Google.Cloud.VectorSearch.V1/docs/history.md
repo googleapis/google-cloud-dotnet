@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-03-16
+
+### New features
+
+- Mark Vector Search v1 API as GA
+- Add support for ExportDataObjects
+
 ## Version 1.0.0-beta03, released 2026-03-09
 
 ### Bug fixes
