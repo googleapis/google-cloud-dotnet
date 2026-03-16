@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.1.0, released 2026-03-16
+
+### New features
+
+- Add more values in DestintionEnum
+
+### Documentation improvements
+
+- A comment for message `DestintionEnum` is changed
+
 ## Version 1.0.0, released 2025-08-05
 
 No API changes, just promotion to GA.
