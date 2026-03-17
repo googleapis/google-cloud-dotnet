@@ -26,26 +26,38 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjtnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvY2xvdWRfZGxwX2Rh",
             "dGFfcHJvZmlsZS5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIvQBChNDbG91ZERscERh",
+            "LnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIrICChNDbG91ZERscERh",
             "dGFQcm9maWxlEj4KDGRhdGFfcHJvZmlsZRgBIAEoCUIo+kElCiNkbHAuZ29v",
             "Z2xlYXBpcy5jb20vVGFibGVEYXRhUHJvZmlsZRJTCgtwYXJlbnRfdHlwZRgC",
             "IAEoDjI+Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5DbG91ZERs",
-            "cERhdGFQcm9maWxlLlBhcmVudFR5cGUiSAoKUGFyZW50VHlwZRIbChdQQVJF",
-            "TlRfVFlQRV9VTlNQRUNJRklFRBAAEhAKDE9SR0FOSVpBVElPThABEgsKB1BS",
-            "T0pFQ1QQAkKUAwoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
-            "MUIYQ2xvdWREbHBEYXRhUHJvZmlsZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtz",
-            "ZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVy",
-            "LlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xl",
-            "OjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx6kGeAQojZGxwLmdvb2dsZWFw",
-            "aXMuY29tL1RhYmxlRGF0YVByb2ZpbGUSMHByb2plY3RzL3twcm9qZWN0fS90",
-            "YWJsZVByb2ZpbGVzL3t0YWJsZV9wcm9maWxlfRJFcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RhYmxlUHJvZmlsZXMve3RhYmxl",
-            "X3Byb2ZpbGV9YgZwcm90bzM="));
+            "cERhdGFQcm9maWxlLlBhcmVudFR5cGUSPAoKaW5mb190eXBlcxgDIAMoCzIo",
+            "Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5JbmZvVHlwZSJICgpQ",
+            "YXJlbnRUeXBlEhsKF1BBUkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMT1JH",
+            "QU5JWkFUSU9OEAESCwoHUFJPSkVDVBACInYKCEluZm9UeXBlEgwKBG5hbWUY",
+            "ASABKAkSDwoHdmVyc2lvbhgCIAEoCRJLChFzZW5zaXRpdml0eV9zY29yZRgD",
+            "IAEoCzIwLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5TZW5zaXRp",
+            "dml0eVNjb3JlIooCChBTZW5zaXRpdml0eVNjb3JlElUKBXNjb3JlGAEgASgO",
+            "MkYuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNlbnNpdGl2aXR5",
+            "U2NvcmUuU2Vuc2l0aXZpdHlTY29yZUxldmVsIp4BChVTZW5zaXRpdml0eVNj",
+            "b3JlTGV2ZWwSJwojU0VOU0lUSVZJVFlfU0NPUkVfTEVWRUxfVU5TUEVDSUZJ",
+            "RUQQABITCg9TRU5TSVRJVklUWV9MT1cQChIXChNTRU5TSVRJVklUWV9VTktO",
+            "T1dOEAwSGAoUU0VOU0lUSVZJVFlfTU9ERVJBVEUQFBIUChBTRU5TSVRJVklU",
+            "WV9ISUdIEB5ClAMKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djFCGENsb3VkRGxwRGF0YVByb2ZpbGVQcm90b1ABWkpjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7",
+            "c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRl",
+            "ci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2ds",
+            "ZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMepBngEKI2RscC5nb29nbGVh",
+            "cGlzLmNvbS9UYWJsZURhdGFQcm9maWxlEjBwcm9qZWN0cy97cHJvamVjdH0v",
+            "dGFibGVQcm9maWxlcy97dGFibGVfcHJvZmlsZX0SRXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWJsZVByb2ZpbGVzL3t0YWJs",
+            "ZV9wcm9maWxlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile), global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Parser, new[]{ "DataProfile", "ParentType" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile), global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Parser, new[]{ "DataProfile", "ParentType", "InfoTypes" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.InfoType), global::Google.Cloud.SecurityCenter.V1.InfoType.Parser, new[]{ "Name", "Version", "SensitivityScore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.SensitivityScore), global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Parser, new[]{ "Score" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel) }, null, null)
           }));
     }
     #endregion
@@ -93,6 +105,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public CloudDlpDataProfile(CloudDlpDataProfile other) : this() {
       dataProfile_ = other.dataProfile_;
       parentType_ = other.parentType_;
+      infoTypes_ = other.infoTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -133,6 +146,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "info_types" field.</summary>
+    public const int InfoTypesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.InfoType> _repeated_infoTypes_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.SecurityCenter.V1.InfoType.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.InfoType> infoTypes_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.InfoType>();
+    /// <summary>
+    /// Type of information detected by SDP.
+    /// Info type includes name, version and sensitivity of the detected
+    /// information type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.InfoType> InfoTypes {
+      get { return infoTypes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -150,6 +179,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (DataProfile != other.DataProfile) return false;
       if (ParentType != other.ParentType) return false;
+      if(!infoTypes_.Equals(other.infoTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,6 +189,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int hash = 1;
       if (DataProfile.Length != 0) hash ^= DataProfile.GetHashCode();
       if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) hash ^= ParentType.GetHashCode();
+      hash ^= infoTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,6 +216,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ParentType);
       }
+      infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -203,6 +235,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ParentType);
       }
+      infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,6 +252,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ParentType);
       }
+      size += infoTypes_.CalculateSize(_repeated_infoTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -237,6 +271,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
         ParentType = other.ParentType;
       }
+      infoTypes_.Add(other.infoTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -260,6 +295,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             ParentType = (global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) input.ReadEnum();
             break;
           }
+          case 26: {
+            infoTypes_.AddEntriesFrom(input, _repeated_infoTypes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -281,6 +320,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 16: {
             ParentType = (global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
             break;
           }
         }
@@ -309,6 +352,536 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// Project-level configurations.
         /// </summary>
         [pbr::OriginalName("PROJECT")] Project = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Type of information detected by the API.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InfoType : pb::IMessage<InfoType>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InfoType> _parser = new pb::MessageParser<InfoType>(() => new InfoType());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InfoType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfileReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InfoType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InfoType(InfoType other) : this() {
+      name_ = other.name_;
+      version_ = other.version_;
+      sensitivityScore_ = other.sensitivityScore_ != null ? other.sensitivityScore_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InfoType Clone() {
+      return new InfoType(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the information type. Either a name of your choosing when
+    /// creating a CustomInfoType, or one of the names listed
+    /// at
+    /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+    /// when specifying a built-in type.  When sending Cloud DLP results to Data
+    /// Catalog, infoType names should conform to the pattern
+    /// `[A-Za-z0-9$_-]{1,64}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 2;
+    private string version_ = "";
+    /// <summary>
+    /// Optional version name for this InfoType.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sensitivity_score" field.</summary>
+    public const int SensitivityScoreFieldNumber = 3;
+    private global::Google.Cloud.SecurityCenter.V1.SensitivityScore sensitivityScore_;
+    /// <summary>
+    /// Optional custom sensitivity for this InfoType.
+    /// This only applies to data profiling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.SensitivityScore SensitivityScore {
+      get { return sensitivityScore_; }
+      set {
+        sensitivityScore_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InfoType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InfoType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Version != other.Version) return false;
+      if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (sensitivityScore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityScore);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InfoType other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.sensitivityScore_ != null) {
+        if (sensitivityScore_ == null) {
+          SensitivityScore = new global::Google.Cloud.SecurityCenter.V1.SensitivityScore();
+        }
+        SensitivityScore.MergeFrom(other.SensitivityScore);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.SecurityCenter.V1.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.SecurityCenter.V1.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Score is calculated from of all elements in the data profile.
+  /// A higher level means the data is more sensitive.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SensitivityScore : pb::IMessage<SensitivityScore>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SensitivityScore> _parser = new pb::MessageParser<SensitivityScore>(() => new SensitivityScore());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SensitivityScore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfileReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensitivityScore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensitivityScore(SensitivityScore other) : this() {
+      score_ = other.score_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensitivityScore Clone() {
+      return new SensitivityScore(this);
+    }
+
+    /// <summary>Field number for the "score" field.</summary>
+    public const int ScoreFieldNumber = 1;
+    private global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel score_ = global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified;
+    /// <summary>
+    /// The sensitivity score applied to the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel Score {
+      get { return score_; }
+      set {
+        score_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SensitivityScore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SensitivityScore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Score != other.Score) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Score != global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified) hash ^= Score.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Score != global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Score);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Score != global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Score);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Score != global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Score);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SensitivityScore other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Score != global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel.Unspecified) {
+        Score = other.Score;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Score = (global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Score = (global::Google.Cloud.SecurityCenter.V1.SensitivityScore.Types.SensitivityScoreLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SensitivityScore message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Various sensitivity score levels for resources.
+      /// </summary>
+      public enum SensitivityScoreLevel {
+        /// <summary>
+        /// Unused.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_SCORE_LEVEL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// No sensitive information detected. The resource isn't publicly
+        /// accessible.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_LOW")] SensitivityLow = 10,
+        /// <summary>
+        /// Unable to determine sensitivity.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_UNKNOWN")] SensitivityUnknown = 12,
+        /// <summary>
+        /// Medium risk. Contains personally identifiable information (PII),
+        /// potentially sensitive data, or fields with free-text data that are at a
+        /// higher risk of having intermittent sensitive data. Consider limiting
+        /// access.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_MODERATE")] SensitivityModerate = 20,
+        /// <summary>
+        /// High risk. Sensitive personally identifiable information (SPII) can be
+        /// present. Exfiltration of data can lead to user data loss.
+        /// Re-identification of users might be possible. Consider limiting usage and
+        /// or removing SPII.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_HIGH")] SensitivityHigh = 30,
       }
 
     }

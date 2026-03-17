@@ -62,6 +62,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return AttackPathReflection.Descriptor;
             yield return BackupDisasterRecoveryReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return ChokepointReflection.Descriptor;
             yield return CloudArmorReflection.Descriptor;
             yield return CloudDlpDataProfileReflection.Descriptor;
             yield return CloudDlpInspectionReflection.Descriptor;
@@ -75,6 +76,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return EventThreatDetectionCustomModuleReflection.Descriptor;
             yield return EventThreatDetectionCustomModuleValidationErrorsReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
+            yield return ExternalExposureReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
             yield return FindingReflection.Descriptor;
