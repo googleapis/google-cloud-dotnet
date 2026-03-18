@@ -89,8 +89,11 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private readonly TimeSpan _disposeTimeout;
 
     private TaskCompletionSource<int> _mainTcs;
-    private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
-    private CancellationTokenSource _globalHardStopCts;
+    private CancellationTokenSource _globalNackAndWaitCts; // Nack and wait is guarenteed to occur before hard-stop.
+    private CancellationTokenSource _globalHardStopCts; // Immediately stops all processing, dropping any unhandled messages.
+
+    // A boolean that is true if stop has been initiated with the StopAsync methods.
+    private bool IsStopStarted => _globalNackAndWaitCts.IsCancellationRequested;
 
     // This property only exists for testing.
     // This is the delay between obtaining a lease on a message and then further extending the lease on that message
@@ -120,7 +123,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         {
             GaxPreconditions.CheckState(_mainTcs == null, "Can only start an instance once.");
             _mainTcs = new TaskCompletionSource<int>();
-            _globalSoftStopCts = new CancellationTokenSource();
+            _globalNackAndWaitCts = new CancellationTokenSource();
             _globalHardStopCts = new CancellationTokenSource();
         }
         var registeredTasks = new HashSet<Task>();
@@ -149,7 +152,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         var task = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(subscriberTasks));
         if (task.IsFaulted)
         {
-            _globalSoftStopCts.Cancel();
+            _globalNackAndWaitCts.Cancel();
             _globalHardStopCts.Cancel();
         }
         // Wait for all subscribers to stop
@@ -203,13 +206,13 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         lock (_lock)
         {
             // Note: If multiple stop requests are made, only the first cancellation token is observed.
-            if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
+            if (_mainTcs is not null && IsStopStarted)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
                 return _mainTcs.Task;
             }
             GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
-            _globalSoftStopCts.Cancel();
+            _globalNackAndWaitCts.Cancel();
         }
 
         var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());

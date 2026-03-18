@@ -146,9 +146,13 @@ public sealed partial class SubscriberClientImpl
         private readonly IClock _clock;
         private readonly SubscriberServiceApiClient _client;
         private readonly SubscriptionHandler _handler;
-        private readonly CancellationTokenSource _hardStopCts;
-        private readonly CancellationTokenSource _pushStopCts;
-        private readonly CancellationTokenSource _softStopCts;
+        private readonly CancellationTokenSource _mainCts; // Cancels the main processing loop, immediately stoping all processing. This may drop messages.
+        private readonly CancellationTokenSource _pullCts; // Cancels the streaming pull, preventing new messages from being consumed.
+        private readonly CancellationTokenSource _ackNackCts; // Cancels all ACK/NACK pushes to the Pub/Sub service.
+        private readonly CancellationTokenSource _leaseExtensionCts; // Cancels lease extension ModAcks pushes to the Pub/Sub service
+        private readonly CancellationTokenSource _streamingPingCts; // Cancels the periodic streaming ping that is used to keeps the stream alive.
+        private readonly CancellationTokenSource _sendToHandlerCts; // Cancels sending new messages to be handled.
+        private readonly CancellationTokenSource _waitForHandlerCts; // Cancels all message handler operations.
         private readonly SubscriptionName _subscriptionName;
         private readonly LeaseTiming _normalLeaseTiming;
         private readonly LeaseTiming _exactlyOnceDeliveryLeaseTiming;
@@ -176,6 +180,7 @@ public sealed partial class SubscriberClientImpl
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
         private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
+        private readonly HashSet<string> _nackedOnShutdownIds = new HashSet<string>();
         private readonly RetryState _retryState;
         private readonly ILogger _logger;
         private readonly int _clientIndex; // The index of this client within the overall SubscriberClient, in the range 1-ClientCount. Only used for logging.
@@ -193,9 +198,18 @@ public sealed partial class SubscriberClientImpl
             _client = client;
             _clientIndex = clientIndex;
             _handler = handler;
-            _hardStopCts = subscriber._globalHardStopCts;
-            _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-            _softStopCts = subscriber._globalSoftStopCts;
+
+            // Arrange cancellation token sources for shutdown
+            var nackAndWaitToken        = subscriber._globalNackAndWaitCts.Token;
+            var hardstopToken           = subscriber._globalHardStopCts.Token;
+            _mainCts                    = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
+            _pullCts                    = CancellationTokenSource.CreateLinkedTokenSource(nackAndWaitToken);
+            _ackNackCts                 = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
+            _leaseExtensionCts          = CancellationTokenSource.CreateLinkedTokenSource(nackAndWaitToken);
+            _sendToHandlerCts           = CancellationTokenSource.CreateLinkedTokenSource(nackAndWaitToken);
+            _waitForHandlerCts          = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
+            _streamingPingCts           = CancellationTokenSource.CreateLinkedTokenSource(nackAndWaitToken);
+
             _subscriptionName = subscriber.SubscriptionName;
             _normalLeaseTiming = subscriber._normalLeaseTiming;
             _exactlyOnceDeliveryLeaseTiming = subscriber._exactlyOnceDeliveryLeaseTiming;
@@ -226,10 +240,10 @@ public sealed partial class SubscriberClientImpl
             {
                 // Wait for, then process next continuation.
                 TaskNextAction nextContinuation = await _taskHelper.ConfigureAwait(_continuationQueue.DequeueAsync());
-                // On hardstop just immediately stop this event loop.
+                // Once _mainCts is cancelled just immediately stop this event loop.
                 // The registered-task code ensures that all currently-active tasks finish before
                 // return to user code.
-                if (_hardStopCts.IsCancellationRequested)
+                if (_mainCts.IsCancellationRequested)
                 {
                     StopStreamingPull();
                     throw new OperationCanceledException();
@@ -251,7 +265,7 @@ public sealed partial class SubscriberClientImpl
             }
             _logger?.LogDebug("Subscriber task completed.");
             // Stop waiting for data to push.
-            _pushStopCts.Cancel();
+            _ackNackCts.Cancel();
         }
 
         private LeaseTiming EffectiveLeaseTiming => _exactlyOnceDeliveryEnabled ? _exactlyOnceDeliveryLeaseTiming : _normalLeaseTiming;
@@ -313,7 +327,7 @@ public sealed partial class SubscriberClientImpl
             {
                 // Delay, then start the streaming-pull.
                 _logger?.LogDebug("Client {index} delaying for {seconds}s before streaming pull call.", _clientIndex, (int) backoff.TotalSeconds);
-                Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
+                Task delayTask = _scheduler.Delay(backoff, _pullCts.Token);
                 Add(delayTask, Next(true, HandleStartStreamingPullWithoutBackoff));
             }
             else
@@ -327,9 +341,9 @@ public sealed partial class SubscriberClientImpl
         private void HandleStartStreamingPullWithoutBackoff()
         {
             _retryState.OnStartAttempt();
-            _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_softStopCts.Token));
+            _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_pullCts.Token));
             // Cancellation not needed in this WriteAsync call. The StreamingPull() cancellation
-            // (above) will cause this call to cancel if _softStopCts is cancelled.
+            // (above) will cause this call to cancel if _pullCts is cancelled.
             Task initTask = _pull.WriteAsync(new StreamingPullRequest
             {
                 SubscriptionAsSubscriptionName = _subscriptionName,
@@ -391,7 +405,7 @@ public sealed partial class SubscriberClientImpl
             if (throttle)
             {
                 // Too many queued ack/nack/extend ids. Loop until the queue has drained a bit.
-                Add(_scheduler.Delay(TimeSpan.FromMilliseconds(100), _softStopCts.Token), Next(true, () => HandlePullMoveNext(null)));
+                Add(_scheduler.Delay(TimeSpan.FromMilliseconds(100), _pullCts.Token), Next(true, () => HandlePullMoveNext(null)));
             }
             else
             {
@@ -446,7 +460,7 @@ public sealed partial class SubscriberClientImpl
                     // However, temporary failures are retried for up to three times and may eventaully succeed, result in permanent failure, or remain as temporary failure.
                     // Therefore, we must wait for all receipt ModAck responses to complete to obtain the final status.
                     // Then, the messages with successful receipt ModAcks are sent to the user, while those with failed ModAcks are removed from further processing.
-                    Add(_eventReceiptModAckForExactlyOnceDelivery.WaitAsync(_softStopCts.Token)
+                    Add(_eventReceiptModAckForExactlyOnceDelivery.WaitAsync(_leaseExtensionCts.Token)
                         .ContinueWith(task => ProcessSuccessfulMessages(msgs, msgIds), CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler)
                         , Next(true, () => HandlePullMoveNext(null)));
                 }
@@ -501,19 +515,19 @@ public sealed partial class SubscriberClientImpl
             // Running async. Common data needs locking
             for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
             {
-                if (_softStopCts.IsCancellationRequested)
+                if (_sendToHandlerCts.IsCancellationRequested)
                 {
                     // If the subscriber was shutdown we should stop processing and nack remaining messages, releasing
                     // the message for re-delivery.
                     var remainingAckIds = msgs.Skip(msgIndex).Select(x => x.AckId);
-                    Nack(remainingAckIds);
-                    _softStopCts.Token.ThrowIfCancellationRequested();
+                    Nack(remainingAckIds, leaseTracking);
+                    _sendToHandlerCts.Token.ThrowIfCancellationRequested();
                 }
 
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
-                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
+                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", (Func<Task>) (async () =>
                 {
                     // Running async. Common data needs locking
                     lock (_lock)
@@ -525,13 +539,13 @@ public sealed partial class SubscriberClientImpl
                         msg.Message.Attributes[DeliveryAttemptAttrKey] = msg.DeliveryAttempt.ToString(CultureInfo.InvariantCulture);
                     }
                     // Call user message handler
-                    var reply = await _taskHelper.ConfigureAwaitHideErrors(() =>
+                    var reply = await _taskHelper.ConfigureAwaitHideErrors((Func<Task<Reply>>) (() =>
                     {
                         // If the subscriber shut down while waiting for flow control, skip the handler.
                         // Throwing here triggers a Nack, releasing the message for redelivery.
-                        _softStopCts.Token.ThrowIfCancellationRequested();
-                        return _handler.HandleMessage(msg.Message, _hardStopCts.Token);
-                    }, Reply.Nack);
+                        this._sendToHandlerCts.Token.ThrowIfCancellationRequested();
+                        return _handler.HandleMessage(msg.Message, _waitForHandlerCts.Token);
+                    }), Reply.Nack);
 
                     // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
                     lock (leaseTracking)
@@ -547,22 +561,27 @@ public sealed partial class SubscriberClientImpl
                     }
                     // Ids have been added to ack/nack-queue, so trigger a push.
                     _eventPush.Set();
-                }));
+                })));
+            }
+        }
+
+        private void Nack(IEnumerable<string> ackIds, HashSet<string> leaseTracking)
+        {
+            var idsToNack = ackIds.ToList();
+            if (idsToNack.Count == 0)
+            {
+                return;
             }
 
-            void Nack(IEnumerable<string> ackIds)
+            lock (_lock)
             {
-                lock (_lock)
-                {
-                    _nackQueue.Enqueue(ackIds);
-                }
-                lock (leaseTracking)
-                {
-                    leaseTracking.ExceptWith(ackIds);
-                }
-                // Ids have been added to nack-queue, so trigger a push.
-                _eventPush.Set();
+                _nackQueue.Enqueue(idsToNack);
             }
+            lock (leaseTracking)
+            {
+                leaseTracking.ExceptWith(idsToNack);
+            }
+            _eventPush.Set();
         }
 
         private class LeaseCancellation
@@ -581,8 +600,8 @@ public sealed partial class SubscriberClientImpl
                 }
             }
 
-            public LeaseCancellation(CancellationTokenSource softStopCts) =>
-                _cts = CancellationTokenSource.CreateLinkedTokenSource(softStopCts.Token);
+            public LeaseCancellation(CancellationTokenSource leaseExtensionCts) =>
+                _cts = CancellationTokenSource.CreateLinkedTokenSource(leaseExtensionCts.Token);
 
             public void Dispose()
             {
@@ -619,7 +638,7 @@ public sealed partial class SubscriberClientImpl
 
         private void HandleExtendLease(HashSet<string> msgIds, LeaseCancellation cancellation)
         {
-            if (_softStopCts.IsCancellationRequested)
+            if (_leaseExtensionCts.IsCancellationRequested)
             {
                 // No further lease extensions once stop is requested.
                 return;
@@ -630,7 +649,7 @@ public sealed partial class SubscriberClientImpl
             {
                 // Create a task to cancel lease-extension once `_maxExtensionDuration` has been reached.
                 // This set up once for each chunk of received messages, and passed through to each future call to this method.
-                cancellation = new LeaseCancellation(_softStopCts);
+                cancellation = new LeaseCancellation(_leaseExtensionCts);
                 Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                 {
                     // This is executed when `_maxExtensionDuration` has expired, or when `cancellation` is cancelled,
@@ -663,10 +682,10 @@ public sealed partial class SubscriberClientImpl
                     _eventPush.Set();
                     // Some ids still exist, schedule another extension.
                     // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                    Add(_scheduler.Delay(EffectiveLeaseTiming.AutoExtendDelay, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.AutoExtendDelay, _leaseExtensionCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                     // Increment _extendThrottles.
                     _extendThrottleHigh += 1;
-                    Add(_scheduler.Delay(EffectiveLeaseTiming.ExtendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.ExtendQueueThrottleInterval, _leaseExtensionCts.Token), Next(false, () => _extendThrottleLow += 1));
                 }
                 else
                 {
@@ -680,7 +699,7 @@ public sealed partial class SubscriberClientImpl
         private void HandlePush()
         {
             // Always re-listen for push events.
-            Add(_eventPush.WaitAsync(_pushStopCts.Token), Next(false, HandlePush));
+            Add(_eventPush.WaitAsync(_ackNackCts.Token), Next(false, HandlePush));
             // Send data, if there is any to send.
             StartPush();
         }
@@ -712,21 +731,21 @@ public sealed partial class SubscriberClientImpl
             {
                 _pushInFlight += acks.Count;
                 _concurrentPushCount += 1;
-                Task ackTask = _client.AcknowledgeAsync(_subscriptionName, acks, _hardStopCts.Token);
+                Task ackTask = _client.AcknowledgeAsync(_subscriptionName, acks, _ackNackCts.Token);
                 Add(ackTask, Next(false, () => HandleAckResponse(ackTask, acks, null, null)));
             }
             if (extends.Count > 0)
             {
                 _pushInFlight += extends.Count;
                 _concurrentPushCount += 1;
-                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), EffectiveLeaseTiming.AckDeadlineSeconds, _hardStopCts.Token);
+                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), EffectiveLeaseTiming.AckDeadlineSeconds, _leaseExtensionCts.Token);
                 Add(extendTask, Next(false, () => HandleAckResponse(extendTask, null, null, extends)));
             }
             if (nacks.Count > 0)
             {
                 _pushInFlight += nacks.Count;
                 _concurrentPushCount += 1;
-                Task nackTask = _client.ModifyAckDeadlineAsync(_subscriptionName, nacks, 0, _hardStopCts.Token);
+                Task nackTask = _client.ModifyAckDeadlineAsync(_subscriptionName, nacks, 0, _ackNackCts.Token);
                 Add(nackTask, Next(false, () => HandleAckResponse(nackTask, null, nacks, null)));
             }
         }
@@ -929,7 +948,7 @@ public sealed partial class SubscriberClientImpl
                 {
                     var backoff = retryGroup.Key ?? TimeSpan.Zero;
                     var retryIds = retryGroup.Select(j => j.id);
-                    Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
+                    Task delayTask = _scheduler.Delay(backoff, _ackNackCts.Token);
                     Add(delayTask, new NextAction(false, hasAcksOrNacks
                         ? () => { ackActionToRetry(retryIds); StartPush(); }
                         : () => { extendActionToRetry(extendIds.Where(j => retryIds.Contains(j.Id))); StartPush(); }));
@@ -1092,13 +1111,13 @@ public sealed partial class SubscriberClientImpl
         {
             // Need to explicitly check this, as the continuation passed to Add() may be executed
             // regardless of the fault/cancellation state of the Task.
-            if (_softStopCts.IsCancellationRequested)
+            if (_streamingPingCts.IsCancellationRequested)
             {
                 // No more pings when subscriber stopping.
                 return;
             }
             // Schedule next ping, this never stops whilst this subscriber as active
-            Add(_scheduler.Delay(s_streamPingPeriod, _softStopCts.Token), Next(false, HandleStreamPing));
+            Add(_scheduler.Delay(s_streamPingPeriod, _streamingPingCts.Token), Next(false, HandleStreamPing));
             // If messages are currently being processed, then ping the stream periodically;
             // this ensures the stream isn't closed.
             // If the stream is closed, then all gRPC-buffered messages have their server-side
