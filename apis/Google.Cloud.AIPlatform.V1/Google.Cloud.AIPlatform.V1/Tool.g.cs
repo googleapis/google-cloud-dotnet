@@ -130,35 +130,36 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ElcKF2Z1bmN0aW9uX2NhbGxpbmdfY29uZmlnGAEgASgLMjEuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjEuRnVuY3Rpb25DYWxsaW5nQ29uZmlnQgPgQQES",
             "SgoQcmV0cmlldmFsX2NvbmZpZxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLlJldHJpZXZhbENvbmZpZ0ID4EEBIu8BChVGdW5jdGlvbkNh",
+            "YXRmb3JtLnYxLlJldHJpZXZhbENvbmZpZ0ID4EEBIoQCChVGdW5jdGlvbkNh",
             "bGxpbmdDb25maWcSSQoEbW9kZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoW",
             "YWxsb3dlZF9mdW5jdGlvbl9uYW1lcxgCIAMoCUID4EEBEisKHnN0cmVhbV9m",
-            "dW5jdGlvbl9jYWxsX2FyZ3VtZW50cxgEIAEoCEID4EEBIjkKBE1vZGUSFAoQ",
+            "dW5jdGlvbl9jYWxsX2FyZ3VtZW50cxgEIAEoCEID4EEBIk4KBE1vZGUSFAoQ",
             "TU9ERV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIHCgNBTlkQAhIICgROT05F",
-            "EAMidgoPUmV0cmlldmFsQ29uZmlnEikKB2xhdF9sbmcYASABKAsyEy5nb29n",
-            "bGUudHlwZS5MYXRMbmdIAIgBARIaCg1sYW5ndWFnZV9jb2RlGAIgASgJSAGI",
-            "AQFCCgoIX2xhdF9sbmdCEAoOX2xhbmd1YWdlX2NvZGUiqgUKElJhZ1JldHJp",
-            "ZXZhbENvbmZpZxISCgV0b3BfaxgBIAEoBUID4EEBEkoKBmZpbHRlchgDIAEo",
-            "CzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ1JldHJpZXZhbENv",
-            "bmZpZy5GaWx0ZXJCA+BBARJMCgdyYW5raW5nGAQgASgLMjYuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuUmFnUmV0cmlldmFsQ29uZmlnLlJhbmtpbmdC",
-            "A+BBARqTAQoGRmlsdGVyEigKGXZlY3Rvcl9kaXN0YW5jZV90aHJlc2hvbGQY",
-            "AyABKAFCA+BBAUgAEioKG3ZlY3Rvcl9zaW1pbGFyaXR5X3RocmVzaG9sZBgE",
-            "IAEoAUID4EEBSAASHAoPbWV0YWRhdGFfZmlsdGVyGAIgASgJQgPgQQFCFQoT",
-            "dmVjdG9yX2RiX3RocmVzaG9sZBrPAgoHUmFua2luZxJfCgxyYW5rX3NlcnZp",
-            "Y2UYASABKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SYWdSZXRy",
-            "aWV2YWxDb25maWcuUmFua2luZy5SYW5rU2VydmljZUID4EEBSAASWwoKbGxt",
-            "X3JhbmtlchgDIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJh",
-            "Z1JldHJpZXZhbENvbmZpZy5SYW5raW5nLkxsbVJhbmtlckID4EEBSAAaOgoL",
-            "UmFua1NlcnZpY2USHAoKbW9kZWxfbmFtZRgBIAEoCUID4EEBSACIAQFCDQoL",
-            "X21vZGVsX25hbWUaOAoJTGxtUmFua2VyEhwKCm1vZGVsX25hbWUYASABKAlC",
-            "A+BBAUgAiAEBQg0KC19tb2RlbF9uYW1lQhAKDnJhbmtpbmdfY29uZmlnQscB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCVRvb2xQcm90b1AB",
-            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "EAMSDQoJVkFMSURBVEVEEAUiBAgEEAQidgoPUmV0cmlldmFsQ29uZmlnEikK",
+            "B2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdIAIgBARIaCg1s",
+            "YW5ndWFnZV9jb2RlGAIgASgJSAGIAQFCCgoIX2xhdF9sbmdCEAoOX2xhbmd1",
+            "YWdlX2NvZGUiqgUKElJhZ1JldHJpZXZhbENvbmZpZxISCgV0b3BfaxgBIAEo",
+            "BUID4EEBEkoKBmZpbHRlchgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLlJhZ1JldHJpZXZhbENvbmZpZy5GaWx0ZXJCA+BBARJMCgdyYW5r",
+            "aW5nGAQgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmFnUmV0",
+            "cmlldmFsQ29uZmlnLlJhbmtpbmdCA+BBARqTAQoGRmlsdGVyEigKGXZlY3Rv",
+            "cl9kaXN0YW5jZV90aHJlc2hvbGQYAyABKAFCA+BBAUgAEioKG3ZlY3Rvcl9z",
+            "aW1pbGFyaXR5X3RocmVzaG9sZBgEIAEoAUID4EEBSAASHAoPbWV0YWRhdGFf",
+            "ZmlsdGVyGAIgASgJQgPgQQFCFQoTdmVjdG9yX2RiX3RocmVzaG9sZBrPAgoH",
+            "UmFua2luZxJfCgxyYW5rX3NlcnZpY2UYASABKAsyQi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5SYWdSZXRyaWV2YWxDb25maWcuUmFua2luZy5SYW5r",
+            "U2VydmljZUID4EEBSAASWwoKbGxtX3JhbmtlchgDIAEoCzJALmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlJhZ1JldHJpZXZhbENvbmZpZy5SYW5raW5n",
+            "LkxsbVJhbmtlckID4EEBSAAaOgoLUmFua1NlcnZpY2USHAoKbW9kZWxfbmFt",
+            "ZRgBIAEoCUID4EEBSACIAQFCDQoLX21vZGVsX25hbWUaOAoJTGxtUmFua2Vy",
+            "EhwKCm1vZGVsX25hbWUYASABKAlCA+BBAUgAiAEBQg0KC19tb2RlbF9uYW1l",
+            "QhAKDnJhbmtpbmdfY29uZmlnQscBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFCCVRvb2xQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Fp",
+            "cGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -7639,6 +7640,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// not passing any function declarations.
         /// </summary>
         [pbr::OriginalName("NONE")] None = 3,
+        /// <summary>
+        /// Model is constrained to predict either function calls or natural language
+        /// response.
+        /// If [allowed_function_names][FunctionCallingConfig.allowed_function_names]
+        /// are set, the predicted function calls will be limited to any one of
+        /// `allowed_function_names`, else the predicted function calls will be any
+        /// one of the provided [FunctionDeclaration].
+        /// </summary>
+        [pbr::OriginalName("VALIDATED")] Validated = 5,
       }
 
     }
