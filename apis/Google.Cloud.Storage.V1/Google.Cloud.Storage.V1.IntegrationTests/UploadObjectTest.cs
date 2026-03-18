@@ -264,8 +264,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.None };
-            var exception = Assert.Throws<GoogleApiException>(() => client.UploadObject(bucket, name, null, stream, options));
-            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
+            // Upload succeeds despite the data being broken.
+            client.UploadObject(bucket, name, null, stream, options);
+            // The object should contain our "wrong" bytes.
+            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]
@@ -308,8 +310,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.None };
-            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
-            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
+            // Upload succeeds despite the data being broken.
+            await client.UploadObjectAsync(bucket, name, null, stream, options);
+            // The object should contain our "wrong" bytes.
+            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]

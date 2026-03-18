@@ -35,12 +35,13 @@ namespace Google.Cloud.Storage.V1
         private readonly IClientService _service;
 
         public CustomMediaUpload(IClientService service, Apis.Storage.v1.Data.Object body, string bucket,
-            Stream stream, string contentType)
+            Stream stream, string contentType, UploadObjectOptions options)
             : base(service, body, bucket, stream, contentType)
         {
             _stream = stream;
             _service = service;
-            _interceptor = new Crc32cHashInterceptor(this, _stream, _service);
+            var validationMode = options?.UploadValidationMode ?? UploadObjectOptions.DefaultValidationMode;
+            _interceptor = new Crc32cHashInterceptor(this, _stream, _service, validationMode);
             _service?.HttpClient?.MessageHandler?.AddExecuteInterceptor(_interceptor);
         }
 
@@ -54,12 +55,14 @@ namespace Google.Cloud.Storage.V1
             private readonly IClientService _service;
             private readonly CustomMediaUpload _owner;
             private Uri _uploadUri;
+            private readonly UploadValidationMode _validationMode;
 
-            public Crc32cHashInterceptor(CustomMediaUpload owner, Stream stream, IClientService service)
+            public Crc32cHashInterceptor(CustomMediaUpload owner, Stream stream, IClientService service, UploadValidationMode validationMode)
             {
                 _stream = stream;
                 _service = service;
                 _owner = owner;
+                _validationMode = validationMode;
                 _owner.UploadSessionData += OnSessionData;
                 _owner.ProgressChanged += OnProgressChanged;
             }
@@ -104,7 +107,11 @@ namespace Google.Cloud.Storage.V1
 
                             byte[] hash = hasher.GetHash();
                             string calculatedHash = Convert.ToBase64String(hash);
-                            request.Headers.TryAddWithoutValidation(GoogleHashHeader, $"crc32c={calculatedHash}");
+
+                            if (_validationMode != UploadValidationMode.None)
+                            {
+                               request.Headers.TryAddWithoutValidation(GoogleHashHeader, $"crc32c={calculatedHash}");
+                            }
                         }
                         finally
                         {

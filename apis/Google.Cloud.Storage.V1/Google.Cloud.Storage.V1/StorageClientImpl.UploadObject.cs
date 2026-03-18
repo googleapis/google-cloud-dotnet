@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType, options);
             options?.ModifyMediaUpload(mediaUpload);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, mediaUpload);
             return mediaUpload;
