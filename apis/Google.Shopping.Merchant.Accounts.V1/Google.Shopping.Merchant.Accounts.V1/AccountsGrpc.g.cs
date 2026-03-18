@@ -3,7 +3,7 @@
 //     source: google/shopping/merchant/accounts/v1/accounts.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -70,6 +70,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest> __Marshaller_google_shopping_merchant_accounts_v1_CreateAndConfigureAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest> __Marshaller_google_shopping_merchant_accounts_v1_CreateTestAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.DeleteAccountRequest> __Marshaller_google_shopping_merchant_accounts_v1_DeleteAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.DeleteAccountRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -98,6 +100,14 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         __ServiceName,
         "CreateAndConfigureAccount",
         __Marshaller_google_shopping_merchant_accounts_v1_CreateAndConfigureAccountRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1_Account);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account> __Method_CreateTestAccount = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTestAccount",
+        __Marshaller_google_shopping_merchant_accounts_v1_CreateTestAccountRequest,
         __Marshaller_google_shopping_merchant_accounts_v1_Account);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -165,6 +175,31 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.Account> CreateAndConfigureAccount(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Merchant Center test account.
+      ///
+      /// Test accounts are intended for development and testing purposes, such as
+      /// validating API integrations or new feature behavior.
+      ///
+      /// Key characteristics and limitations of test accounts:
+      /// - Immutable Type: A test account cannot be converted into a regular
+      ///   (live) Merchant Center account. Likewise, a regular account cannot be
+      ///   converted into a test account.
+      /// - Non-Serving Products: Any products, offers, or data created within a
+      ///   test account will not be published or made visible to end-users on any
+      ///   Google surfaces. They are strictly for testing environments.
+      /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+      ///   isolated from live serving and real user traffic.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.Account> CreateTestAccount(global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -370,6 +405,106 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.Account> CreateAndConfigureAccountAsync(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAndConfigureAccount, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Merchant Center test account.
+      ///
+      /// Test accounts are intended for development and testing purposes, such as
+      /// validating API integrations or new feature behavior.
+      ///
+      /// Key characteristics and limitations of test accounts:
+      /// - Immutable Type: A test account cannot be converted into a regular
+      ///   (live) Merchant Center account. Likewise, a regular account cannot be
+      ///   converted into a test account.
+      /// - Non-Serving Products: Any products, offers, or data created within a
+      ///   test account will not be published or made visible to end-users on any
+      ///   Google surfaces. They are strictly for testing environments.
+      /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+      ///   isolated from live serving and real user traffic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.Account CreateTestAccount(global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTestAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Merchant Center test account.
+      ///
+      /// Test accounts are intended for development and testing purposes, such as
+      /// validating API integrations or new feature behavior.
+      ///
+      /// Key characteristics and limitations of test accounts:
+      /// - Immutable Type: A test account cannot be converted into a regular
+      ///   (live) Merchant Center account. Likewise, a regular account cannot be
+      ///   converted into a test account.
+      /// - Non-Serving Products: Any products, offers, or data created within a
+      ///   test account will not be published or made visible to end-users on any
+      ///   Google surfaces. They are strictly for testing environments.
+      /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+      ///   isolated from live serving and real user traffic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.Account CreateTestAccount(global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTestAccount, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Merchant Center test account.
+      ///
+      /// Test accounts are intended for development and testing purposes, such as
+      /// validating API integrations or new feature behavior.
+      ///
+      /// Key characteristics and limitations of test accounts:
+      /// - Immutable Type: A test account cannot be converted into a regular
+      ///   (live) Merchant Center account. Likewise, a regular account cannot be
+      ///   converted into a test account.
+      /// - Non-Serving Products: Any products, offers, or data created within a
+      ///   test account will not be published or made visible to end-users on any
+      ///   Google surfaces. They are strictly for testing environments.
+      /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+      ///   isolated from live serving and real user traffic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.Account> CreateTestAccountAsync(global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTestAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Merchant Center test account.
+      ///
+      /// Test accounts are intended for development and testing purposes, such as
+      /// validating API integrations or new feature behavior.
+      ///
+      /// Key characteristics and limitations of test accounts:
+      /// - Immutable Type: A test account cannot be converted into a regular
+      ///   (live) Merchant Center account. Likewise, a regular account cannot be
+      ///   converted into a test account.
+      /// - Non-Serving Products: Any products, offers, or data created within a
+      ///   test account will not be published or made visible to end-users on any
+      ///   Google surfaces. They are strictly for testing environments.
+      /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+      ///   isolated from live serving and real user traffic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.Account> CreateTestAccountAsync(global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTestAccount, null, options, request);
       }
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
@@ -647,6 +782,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetAccount, serviceImpl.GetAccount)
           .AddMethod(__Method_CreateAndConfigureAccount, serviceImpl.CreateAndConfigureAccount)
+          .AddMethod(__Method_CreateTestAccount, serviceImpl.CreateTestAccount)
           .AddMethod(__Method_DeleteAccount, serviceImpl.DeleteAccount)
           .AddMethod(__Method_UpdateAccount, serviceImpl.UpdateAccount)
           .AddMethod(__Method_ListAccounts, serviceImpl.ListAccounts)
@@ -662,6 +798,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     {
       serviceBinder.AddMethod(__Method_GetAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.GetAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account>(serviceImpl.GetAccount));
       serviceBinder.AddMethod(__Method_CreateAndConfigureAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account>(serviceImpl.CreateAndConfigureAccount));
+      serviceBinder.AddMethod(__Method_CreateTestAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account>(serviceImpl.CreateTestAccount));
       serviceBinder.AddMethod(__Method_DeleteAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.DeleteAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAccount));
       serviceBinder.AddMethod(__Method_UpdateAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.UpdateAccountRequest, global::Google.Shopping.Merchant.Accounts.V1.Account>(serviceImpl.UpdateAccount));
       serviceBinder.AddMethod(__Method_ListAccounts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.ListAccountsRequest, global::Google.Shopping.Merchant.Accounts.V1.ListAccountsResponse>(serviceImpl.ListAccounts));

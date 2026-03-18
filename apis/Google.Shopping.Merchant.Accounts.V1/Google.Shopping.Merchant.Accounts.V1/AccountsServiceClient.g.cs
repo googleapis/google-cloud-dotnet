@@ -48,6 +48,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetAccountSettings = existing.GetAccountSettings;
             CreateAndConfigureAccountSettings = existing.CreateAndConfigureAccountSettings;
+            CreateTestAccountSettings = existing.CreateTestAccountSettings;
             DeleteAccountSettings = existing.DeleteAccountSettings;
             UpdateAccountSettings = existing.UpdateAccountSettings;
             ListAccountsSettings = existing.ListAccountsSettings;
@@ -93,6 +94,24 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateAndConfigureAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AccountsServiceClient.CreateTestAccount</c> and <c>AccountsServiceClient.CreateTestAccountAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateTestAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -463,6 +482,256 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Account> CreateAndConfigureAccountAsync(CreateAndConfigureAccountRequest request, st::CancellationToken cancellationToken) =>
             CreateAndConfigureAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Account CreateTestAccount(CreateTestAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(CreateTestAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(CreateTestAccountRequest request, st::CancellationToken cancellationToken) =>
+            CreateTestAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Account CreateTestAccount(string parent, Account account, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTestAccount(new CreateTestAccountRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(string parent, Account account, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTestAccountAsync(new CreateTestAccountRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(string parent, Account account, st::CancellationToken cancellationToken) =>
+            CreateTestAccountAsync(parent, account, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Account CreateTestAccount(AccountName parent, Account account, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTestAccount(new CreateTestAccountRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(AccountName parent, Account account, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTestAccountAsync(new CreateTestAccountRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The account resource name to create the test account under.
+        /// Format: accounts/{account}
+        /// </param>
+        /// <param name="account">
+        /// Required. The account to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Account> CreateTestAccountAsync(AccountName parent, Account account, st::CancellationToken cancellationToken) =>
+            CreateTestAccountAsync(parent, account, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified account regardless of its type: standalone, advanced
@@ -969,6 +1238,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         private readonly gaxgrpc::ApiCall<CreateAndConfigureAccountRequest, Account> _callCreateAndConfigureAccount;
 
+        private readonly gaxgrpc::ApiCall<CreateTestAccountRequest, Account> _callCreateTestAccount;
+
         private readonly gaxgrpc::ApiCall<DeleteAccountRequest, wkt::Empty> _callDeleteAccount;
 
         private readonly gaxgrpc::ApiCall<UpdateAccountRequest, Account> _callUpdateAccount;
@@ -998,6 +1269,9 @@ namespace Google.Shopping.Merchant.Accounts.V1
             _callCreateAndConfigureAccount = clientHelper.BuildApiCall<CreateAndConfigureAccountRequest, Account>("CreateAndConfigureAccount", grpcClient.CreateAndConfigureAccountAsync, grpcClient.CreateAndConfigureAccount, effectiveSettings.CreateAndConfigureAccountSettings);
             Modify_ApiCall(ref _callCreateAndConfigureAccount);
             Modify_CreateAndConfigureAccountApiCall(ref _callCreateAndConfigureAccount);
+            _callCreateTestAccount = clientHelper.BuildApiCall<CreateTestAccountRequest, Account>("CreateTestAccount", grpcClient.CreateTestAccountAsync, grpcClient.CreateTestAccount, effectiveSettings.CreateTestAccountSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateTestAccount);
+            Modify_CreateTestAccountApiCall(ref _callCreateTestAccount);
             _callDeleteAccount = clientHelper.BuildApiCall<DeleteAccountRequest, wkt::Empty>("DeleteAccount", grpcClient.DeleteAccountAsync, grpcClient.DeleteAccount, effectiveSettings.DeleteAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAccount);
             Modify_DeleteAccountApiCall(ref _callDeleteAccount);
@@ -1019,6 +1293,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         partial void Modify_CreateAndConfigureAccountApiCall(ref gaxgrpc::ApiCall<CreateAndConfigureAccountRequest, Account> call);
 
+        partial void Modify_CreateTestAccountApiCall(ref gaxgrpc::ApiCall<CreateTestAccountRequest, Account> call);
+
         partial void Modify_DeleteAccountApiCall(ref gaxgrpc::ApiCall<DeleteAccountRequest, wkt::Empty> call);
 
         partial void Modify_UpdateAccountApiCall(ref gaxgrpc::ApiCall<UpdateAccountRequest, Account> call);
@@ -1035,6 +1311,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
         partial void Modify_GetAccountRequest(ref GetAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAndConfigureAccountRequest(ref CreateAndConfigureAccountRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateTestAccountRequest(ref CreateTestAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAccountRequest(ref DeleteAccountRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1096,6 +1374,56 @@ namespace Google.Shopping.Merchant.Accounts.V1
         {
             Modify_CreateAndConfigureAccountRequest(ref request, ref callSettings);
             return _callCreateAndConfigureAccount.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Account CreateTestAccount(CreateTestAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTestAccountRequest(ref request, ref callSettings);
+            return _callCreateTestAccount.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Merchant Center test account.
+        /// 
+        /// Test accounts are intended for development and testing purposes, such as
+        /// validating API integrations or new feature behavior.
+        /// 
+        /// Key characteristics and limitations of test accounts:
+        /// - Immutable Type: A test account cannot be converted into a regular
+        /// (live) Merchant Center account. Likewise, a regular account cannot be
+        /// converted into a test account.
+        /// - Non-Serving Products: Any products, offers, or data created within a
+        /// test account will not be published or made visible to end-users on any
+        /// Google surfaces. They are strictly for testing environments.
+        /// - Separate Environment: Test accounts operate in a sandbox-like manner,
+        /// isolated from live serving and real user traffic.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Account> CreateTestAccountAsync(CreateTestAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTestAccountRequest(ref request, ref callSettings);
+            return _callCreateTestAccount.Async(request, callSettings);
         }
 
         /// <summary>

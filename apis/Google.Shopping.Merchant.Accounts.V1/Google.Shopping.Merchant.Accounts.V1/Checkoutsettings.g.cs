@@ -1114,10 +1114,11 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Shopping.Type.Destination.Types.DestinationEnum) x);
     private readonly pbc::RepeatedField<global::Google.Shopping.Type.Destination.Types.DestinationEnum> eligibleDestinations_ = new pbc::RepeatedField<global::Google.Shopping.Type.Destination.Types.DestinationEnum>();
     /// <summary>
-    /// Optional. The destinations (also known as [Marketing
+    /// Optional. Required for the create operation. The destinations (also known
+    /// as [Marketing
     /// methods](https://support.google.com/merchants/answer/15130232)) to which
-    /// the checkout program applies, valid destination values are `SHOPPING_ADS`,
-    /// `FREE_LISTINGS`
+    /// the checkout program applies. Valid destination values are `SHOPPING_ADS`
+    /// and `FREE_LISTINGS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
