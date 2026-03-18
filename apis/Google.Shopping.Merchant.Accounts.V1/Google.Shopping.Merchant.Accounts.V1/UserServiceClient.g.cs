@@ -611,8 +611,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -623,8 +622,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -635,8 +633,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -647,8 +644,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -668,8 +664,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -689,8 +684,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -707,8 +701,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -728,8 +721,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -749,8 +741,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the user to delete.
@@ -1284,8 +1275,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1299,8 +1289,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <summary>
         /// Deletes a Merchant Center account user. Executing this method requires
         /// admin access. The user to be deleted can't be the last admin user of that
-        /// account. Also a user is protected from deletion if it
-        /// is managed by Business Manager"
+        /// account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

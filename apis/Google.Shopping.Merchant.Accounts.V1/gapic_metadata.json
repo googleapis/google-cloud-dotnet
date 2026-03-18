@@ -97,6 +97,12 @@
                 "CreateAndConfigureAccountAsync"
               ]
             },
+            "CreateTestAccount": {
+              "methods": [
+                "CreateTestAccount",
+                "CreateTestAccountAsync"
+              ]
+            },
             "DeleteAccount": {
               "methods": [
                 "DeleteAccount",

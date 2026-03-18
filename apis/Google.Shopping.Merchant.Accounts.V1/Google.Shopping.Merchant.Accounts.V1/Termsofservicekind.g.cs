@@ -52,7 +52,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     /// </summary>
     [pbr::OriginalName("TERMS_OF_SERVICE_KIND_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Merchant Center application.
+    /// Terms of service for the Merchant Center application.
     /// </summary>
     [pbr::OriginalName("MERCHANT_CENTER")] MerchantCenter = 1,
   }

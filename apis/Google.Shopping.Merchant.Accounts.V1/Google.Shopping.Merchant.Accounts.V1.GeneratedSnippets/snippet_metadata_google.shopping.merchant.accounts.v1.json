@@ -3016,6 +3016,309 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_sync",
+      "title": "CreateTestAccountRequestObject",
+      "description": "Snippet for CreateTestAccount",
+      "file": "AccountsServiceClient.CreateTestAccountRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_async",
+      "title": "CreateTestAccountRequestObjectAsync",
+      "description": "Snippet for CreateTestAccountAsync",
+      "file": "AccountsServiceClient.CreateTestAccountRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.CreateTestAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_sync_flattened",
+      "title": "CreateTestAccount",
+      "description": "Snippet for CreateTestAccount",
+      "file": "AccountsServiceClient.CreateTestAccountSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_async_flattened",
+      "title": "CreateTestAccountAsync",
+      "description": "Snippet for CreateTestAccountAsync",
+      "file": "AccountsServiceClient.CreateTestAccountAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_sync_flattened_resourceNames",
+      "title": "CreateTestAccountResourceNames",
+      "description": "Snippet for CreateTestAccount",
+      "file": "AccountsServiceClient.CreateTestAccountResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountsService_CreateTestAccount_async_flattened_resourceNames",
+      "title": "CreateTestAccountResourceNamesAsync",
+      "description": "Snippet for CreateTestAccountAsync",
+      "file": "AccountsServiceClient.CreateTestAccountResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTestAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient.CreateTestAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTestAccount",
+          "fullName": "google.shopping.merchant.accounts.v1.AccountsService.CreateTestAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1_generated_AccountsService_DeleteAccount_sync",
       "title": "DeleteAccountRequestObject",
       "description": "Snippet for DeleteAccount",

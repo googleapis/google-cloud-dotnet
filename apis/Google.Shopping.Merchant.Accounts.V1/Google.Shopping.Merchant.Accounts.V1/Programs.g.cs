@@ -106,6 +106,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   ///
   /// * `checkout`
   /// * `free-listings`
+  /// * `product-ratings`
   /// * `shopping-ads`
   /// * `youtube-shopping-checkout`
   /// </summary>

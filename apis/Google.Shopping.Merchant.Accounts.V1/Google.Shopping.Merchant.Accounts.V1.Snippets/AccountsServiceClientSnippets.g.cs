@@ -169,6 +169,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTestAccount</summary>
+        public void CreateTestAccountRequestObject()
+        {
+            // Snippet: CreateTestAccount(CreateTestAccountRequest, CallSettings)
+            // Create client
+            AccountsServiceClient accountsServiceClient = AccountsServiceClient.Create();
+            // Initialize request argument(s)
+            CreateTestAccountRequest request = new CreateTestAccountRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Account = new Account(),
+            };
+            // Make the request
+            Account response = accountsServiceClient.CreateTestAccount(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTestAccountAsync</summary>
+        public async Task CreateTestAccountRequestObjectAsync()
+        {
+            // Snippet: CreateTestAccountAsync(CreateTestAccountRequest, CallSettings)
+            // Additional: CreateTestAccountAsync(CreateTestAccountRequest, CancellationToken)
+            // Create client
+            AccountsServiceClient accountsServiceClient = await AccountsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateTestAccountRequest request = new CreateTestAccountRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Account = new Account(),
+            };
+            // Make the request
+            Account response = await accountsServiceClient.CreateTestAccountAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTestAccount</summary>
+        public void CreateTestAccount()
+        {
+            // Snippet: CreateTestAccount(string, Account, CallSettings)
+            // Create client
+            AccountsServiceClient accountsServiceClient = AccountsServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            Account account = new Account();
+            // Make the request
+            Account response = accountsServiceClient.CreateTestAccount(parent, account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTestAccountAsync</summary>
+        public async Task CreateTestAccountAsync()
+        {
+            // Snippet: CreateTestAccountAsync(string, Account, CallSettings)
+            // Additional: CreateTestAccountAsync(string, Account, CancellationToken)
+            // Create client
+            AccountsServiceClient accountsServiceClient = await AccountsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            Account account = new Account();
+            // Make the request
+            Account response = await accountsServiceClient.CreateTestAccountAsync(parent, account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTestAccount</summary>
+        public void CreateTestAccountResourceNames()
+        {
+            // Snippet: CreateTestAccount(AccountName, Account, CallSettings)
+            // Create client
+            AccountsServiceClient accountsServiceClient = AccountsServiceClient.Create();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            Account account = new Account();
+            // Make the request
+            Account response = accountsServiceClient.CreateTestAccount(parent, account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTestAccountAsync</summary>
+        public async Task CreateTestAccountResourceNamesAsync()
+        {
+            // Snippet: CreateTestAccountAsync(AccountName, Account, CallSettings)
+            // Additional: CreateTestAccountAsync(AccountName, Account, CancellationToken)
+            // Create client
+            AccountsServiceClient accountsServiceClient = await AccountsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            Account account = new Account();
+            // Make the request
+            Account response = await accountsServiceClient.CreateTestAccountAsync(parent, account);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteAccount</summary>
         public void DeleteAccountRequestObject()
         {
