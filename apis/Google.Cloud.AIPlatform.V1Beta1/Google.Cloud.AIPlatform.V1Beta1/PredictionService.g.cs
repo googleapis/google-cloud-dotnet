@@ -183,130 +183,142 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "mgEKFUdlbmVyYXRlVmlkZW9SZXNwb25zZRIZChFnZW5lcmF0ZWRfc2FtcGxl",
             "cxgBIAMoCRIlChhyYWlfbWVkaWFfZmlsdGVyZWRfY291bnQYAiABKAVIAIgB",
             "ARIiChpyYWlfbWVkaWFfZmlsdGVyZWRfcmVhc29ucxgDIAMoCUIbChlfcmFp",
-            "X21lZGlhX2ZpbHRlcmVkX2NvdW50Io4FChNFbWJlZENvbnRlbnRSZXF1ZXN0",
+            "X21lZGlhX2ZpbHRlcmVkX2NvdW50IrkJChNFbWJlZENvbnRlbnRSZXF1ZXN0",
             "EjsKBW1vZGVsGAEgASgJQif6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
             "b20vRW5kcG9pbnRIAIgBARI+Cgdjb250ZW50GAIgASgLMiguZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db250ZW50SAGIAQESFwoFdGl0bGUY",
-            "BCABKAlCA+BBAUgCiAEBEmMKCXRhc2tfdHlwZRgFIAEoDjJGLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW1iZWRDb250ZW50UmVxdWVzdC5F",
-            "bWJlZGRpbmdUYXNrVHlwZUID4EEBSAOIAQESJwoVb3V0cHV0X2RpbWVuc2lv",
-            "bmFsaXR5GAYgASgFQgPgQQFIBIgBARIfCg1hdXRvX3RydW5jYXRlGAcgASgI",
-            "QgPgQQFIBYgBASLXAQoRRW1iZWRkaW5nVGFza1R5cGUSDwoLVU5TUEVDSUZJ",
-            "RUQQABITCg9SRVRSSUVWQUxfUVVFUlkQAhIWChJSRVRSSUVWQUxfRE9DVU1F",
-            "TlQQAxIXChNTRU1BTlRJQ19TSU1JTEFSSVRZEAQSEgoOQ0xBU1NJRklDQVRJ",
-            "T04QBRIOCgpDTFVTVEVSSU5HEAYSFgoSUVVFU1RJT05fQU5TV0VSSU5HEAcS",
-            "FQoRRkFDVF9WRVJJRklDQVRJT04QCBIYChRDT0RFX1JFVFJJRVZBTF9RVUVS",
-            "WRAJQggKBl9tb2RlbEIKCghfY29udGVudEIICgZfdGl0bGVCDAoKX3Rhc2tf",
-            "dHlwZUIYChZfb3V0cHV0X2RpbWVuc2lvbmFsaXR5QhAKDl9hdXRvX3RydW5j",
-            "YXRlIuIBChRFbWJlZENvbnRlbnRSZXNwb25zZRJSCgllbWJlZGRpbmcYASAB",
-            "KAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkVtYmVkQ29u",
-            "dGVudFJlc3BvbnNlLkVtYmVkZGluZxJGCg51c2FnZV9tZXRhZGF0YRgCIAEo",
-            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVXNhZ2VNZXRh",
-            "ZGF0YRIRCgl0cnVuY2F0ZWQYBCABKAgaGwoJRW1iZWRkaW5nEg4KBnZhbHVl",
-            "cxgBIAMoAjKmIgoRUHJlZGljdGlvblNlcnZpY2USqAIKB1ByZWRpY3QSLy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlByZWRpY3RSZXF1ZXN0",
-            "GjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QcmVkaWN0UmVz",
-            "cG9uc2UiuQHaQR1lbmRwb2ludCxpbnN0YW5jZXMscGFyYW1ldGVyc4LT5JMC",
-            "kgEiPi92MWJldGExL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2VuZHBvaW50cy8qfTpwcmVkaWN0OgEqWk0iSC92MWJldGExL3tlbmRwb2lu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMv",
-            "Kn06cHJlZGljdDoBKhKNAgoKUmF3UHJlZGljdBIyLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxYmV0YTEuUmF3UHJlZGljdFJlcXVlc3QaFC5nb29nbGUu",
-            "YXBpLkh0dHBCb2R5IrQB2kESZW5kcG9pbnQsaHR0cF9ib2R5gtPkkwKYASJB",
-            "L3YxYmV0YTEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW5k",
-            "cG9pbnRzLyp9OnJhd1ByZWRpY3Q6ASpaUCJLL3YxYmV0YTEve2VuZHBvaW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovcHVibGlzaGVycy8qL21vZGVscy8q",
-            "fTpyYXdQcmVkaWN0OgEqEqcCChBTdHJlYW1SYXdQcmVkaWN0EjguZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TdHJlYW1SYXdQcmVkaWN0UmVx",
-            "dWVzdBoULmdvb2dsZS5hcGkuSHR0cEJvZHkiwAHaQRJlbmRwb2ludCxodHRw",
-            "X2JvZHmC0+STAqQBIkcvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9lbmRwb2ludHMvKn06c3RyZWFtUmF3UHJlZGljdDoBKlpW",
-            "IlEvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9w",
-            "dWJsaXNoZXJzLyovbW9kZWxzLyp9OnN0cmVhbVJhd1ByZWRpY3Q6ASowARLP",
-            "AQoNRGlyZWN0UHJlZGljdBI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "YmV0YTEuRGlyZWN0UHJlZGljdFJlcXVlc3QaNi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExLkRpcmVjdFByZWRpY3RSZXNwb25zZSJPgtPkkwJJ",
-            "IkQvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9l",
-            "bmRwb2ludHMvKn06ZGlyZWN0UHJlZGljdDoBKhLbAQoQRGlyZWN0UmF3UHJl",
-            "ZGljdBI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGlyZWN0",
-            "UmF3UHJlZGljdFJlcXVlc3QaOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkRpcmVjdFJhd1ByZWRpY3RSZXNwb25zZSJSgtPkkwJMIkcvdjFi",
-            "ZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2lu",
-            "dHMvKn06ZGlyZWN0UmF3UHJlZGljdDoBKhKWAQoTU3RyZWFtRGlyZWN0UHJl",
-            "ZGljdBI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFt",
-            "RGlyZWN0UHJlZGljdFJlcXVlc3QaPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLlN0cmVhbURpcmVjdFByZWRpY3RSZXNwb25zZSIAKAEwARKf",
-            "AQoWU3RyZWFtRGlyZWN0UmF3UHJlZGljdBI+Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuU3RyZWFtRGlyZWN0UmF3UHJlZGljdFJlcXVlc3Qa",
-            "Py5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN0cmVhbURpcmVj",
-            "dFJhd1ByZWRpY3RSZXNwb25zZSIAKAEwARKNAQoQU3RyZWFtaW5nUHJlZGlj",
-            "dBI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFtaW5n",
-            "UHJlZGljdFJlcXVlc3QaOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLlN0cmVhbWluZ1ByZWRpY3RSZXNwb25zZSIAKAEwARLJAgoWU2VydmVy",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db250ZW50SAGIAQESGQoFdGl0bGUY",
+            "BCABKAlCBRgB4EEBSAKIAQESZQoJdGFza190eXBlGAUgASgOMkYuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FbWJlZENvbnRlbnRSZXF1ZXN0",
+            "LkVtYmVkZGluZ1Rhc2tUeXBlQgUYAeBBAUgDiAEBEikKFW91dHB1dF9kaW1l",
+            "bnNpb25hbGl0eRgGIAEoBUIFGAHgQQFIBIgBARIhCg1hdXRvX3RydW5jYXRl",
+            "GAcgASgIQgUYAeBBAUgFiAEBEm8KFGVtYmVkX2NvbnRlbnRfY29uZmlnGAgg",
+            "ASgLMkcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FbWJlZENv",
+            "bnRlbnRSZXF1ZXN0LkVtYmVkQ29udGVudENvbmZpZ0ID4EEBSAaIAQEalgMK",
+            "EkVtYmVkQ29udGVudENvbmZpZxIXCgV0aXRsZRgBIAEoCUID4EEBSACIAQES",
+            "YwoJdGFza190eXBlGAIgASgOMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5FbWJlZENvbnRlbnRSZXF1ZXN0LkVtYmVkZGluZ1Rhc2tUeXBl",
+            "QgPgQQFIAYgBARIfCg1hdXRvX3RydW5jYXRlGAMgASgIQgPgQQFIAogBARIn",
+            "ChVvdXRwdXRfZGltZW5zaW9uYWxpdHkYBCABKAVCA+BBAUgDiAEBEh4KDGRv",
+            "Y3VtZW50X29jchgFIAEoCEID4EEBSASIAQESKAoWYXVkaW9fdHJhY2tfZXh0",
+            "cmFjdGlvbhgGIAEoCEID4EEBSAWIAQFCCAoGX3RpdGxlQgwKCl90YXNrX3R5",
+            "cGVCEAoOX2F1dG9fdHJ1bmNhdGVCGAoWX291dHB1dF9kaW1lbnNpb25hbGl0",
+            "eUIPCg1fZG9jdW1lbnRfb2NyQhkKF19hdWRpb190cmFja19leHRyYWN0aW9u",
+            "ItcBChFFbWJlZGRpbmdUYXNrVHlwZRIPCgtVTlNQRUNJRklFRBAAEhMKD1JF",
+            "VFJJRVZBTF9RVUVSWRACEhYKElJFVFJJRVZBTF9ET0NVTUVOVBADEhcKE1NF",
+            "TUFOVElDX1NJTUlMQVJJVFkQBBISCg5DTEFTU0lGSUNBVElPThAFEg4KCkNM",
+            "VVNURVJJTkcQBhIWChJRVUVTVElPTl9BTlNXRVJJTkcQBxIVChFGQUNUX1ZF",
+            "UklGSUNBVElPThAIEhgKFENPREVfUkVUUklFVkFMX1FVRVJZEAlCCAoGX21v",
+            "ZGVsQgoKCF9jb250ZW50QggKBl90aXRsZUIMCgpfdGFza190eXBlQhgKFl9v",
+            "dXRwdXRfZGltZW5zaW9uYWxpdHlCEAoOX2F1dG9fdHJ1bmNhdGVCFwoVX2Vt",
+            "YmVkX2NvbnRlbnRfY29uZmlnIuIBChRFbWJlZENvbnRlbnRSZXNwb25zZRJS",
+            "CgllbWJlZGRpbmcYASABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLkVtYmVkQ29udGVudFJlc3BvbnNlLkVtYmVkZGluZxJGCg51c2Fn",
+            "ZV9tZXRhZGF0YRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuVXNhZ2VNZXRhZGF0YRIRCgl0cnVuY2F0ZWQYBCABKAgaGwoJRW1i",
+            "ZWRkaW5nEg4KBnZhbHVlcxgBIAMoAjKmIgoRUHJlZGljdGlvblNlcnZpY2US",
+            "qAIKB1ByZWRpY3QSLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LlByZWRpY3RSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5QcmVkaWN0UmVzcG9uc2UiuQHaQR1lbmRwb2ludCxpbnN0YW5jZXMs",
+            "cGFyYW1ldGVyc4LT5JMCkgEiPi92MWJldGExL3tlbmRwb2ludD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2VuZHBvaW50cy8qfTpwcmVkaWN0OgEqWk0iSC92",
+            "MWJldGExL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3B1Ymxp",
+            "c2hlcnMvKi9tb2RlbHMvKn06cHJlZGljdDoBKhKNAgoKUmF3UHJlZGljdBIy",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmF3UHJlZGljdFJl",
+            "cXVlc3QaFC5nb29nbGUuYXBpLkh0dHBCb2R5IrQB2kESZW5kcG9pbnQsaHR0",
+            "cF9ib2R5gtPkkwKYASJBL3YxYmV0YTEve2VuZHBvaW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovZW5kcG9pbnRzLyp9OnJhd1ByZWRpY3Q6ASpaUCJLL3Yx",
+            "YmV0YTEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcHVibGlz",
+            "aGVycy8qL21vZGVscy8qfTpyYXdQcmVkaWN0OgEqEqcCChBTdHJlYW1SYXdQ",
+            "cmVkaWN0EjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TdHJl",
+            "YW1SYXdQcmVkaWN0UmVxdWVzdBoULmdvb2dsZS5hcGkuSHR0cEJvZHkiwAHa",
+            "QRJlbmRwb2ludCxodHRwX2JvZHmC0+STAqQBIkcvdjFiZXRhMS97ZW5kcG9p",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06c3RyZWFt",
+            "UmF3UHJlZGljdDoBKlpWIlEvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9wdWJsaXNoZXJzLyovbW9kZWxzLyp9OnN0cmVhbVJh",
+            "d1ByZWRpY3Q6ASowARLPAQoNRGlyZWN0UHJlZGljdBI1Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGlyZWN0UHJlZGljdFJlcXVlc3QaNi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRpcmVjdFByZWRpY3RS",
+            "ZXNwb25zZSJPgtPkkwJJIkQvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06ZGlyZWN0UHJlZGljdDoBKhLb",
+            "AQoQRGlyZWN0UmF3UHJlZGljdBI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuRGlyZWN0UmF3UHJlZGljdFJlcXVlc3QaOS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkRpcmVjdFJhd1ByZWRpY3RSZXNwb25z",
+            "ZSJSgtPkkwJMIkcvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9lbmRwb2ludHMvKn06ZGlyZWN0UmF3UHJlZGljdDoBKhKWAQoT",
+            "U3RyZWFtRGlyZWN0UHJlZGljdBI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuU3RyZWFtRGlyZWN0UHJlZGljdFJlcXVlc3QaPC5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN0cmVhbURpcmVjdFByZWRpY3RS",
+            "ZXNwb25zZSIAKAEwARKfAQoWU3RyZWFtRGlyZWN0UmF3UHJlZGljdBI+Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFtRGlyZWN0UmF3",
+            "UHJlZGljdFJlcXVlc3QaPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlN0cmVhbURpcmVjdFJhd1ByZWRpY3RSZXNwb25zZSIAKAEwARKNAQoQ",
             "U3RyZWFtaW5nUHJlZGljdBI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "YmV0YTEuU3RyZWFtaW5nUHJlZGljdFJlcXVlc3QaOS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLlN0cmVhbWluZ1ByZWRpY3RSZXNwb25zZSK3",
-            "AYLT5JMCsAEiTS92MWJldGExL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2VuZHBvaW50cy8qfTpzZXJ2ZXJTdHJlYW1pbmdQcmVkaWN0OgEq",
-            "WlwiVy92MWJldGExL3tlbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06c2VydmVyU3RyZWFtaW5nUHJlZGlj",
-            "dDoBKjABEpYBChNTdHJlYW1pbmdSYXdQcmVkaWN0EjsuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5TdHJlYW1pbmdSYXdQcmVkaWN0UmVxdWVz",
-            "dBo8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFtaW5n",
-            "UmF3UHJlZGljdFJlc3BvbnNlIgAoATABEukBCgdFeHBsYWluEi8uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FeHBsYWluUmVxdWVzdBowLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRXhwbGFpblJlc3BvbnNl",
-            "InvaQS9lbmRwb2ludCxpbnN0YW5jZXMscGFyYW1ldGVycyxkZXBsb3llZF9t",
-            "b2RlbF9pZILT5JMCQyI+L3YxYmV0YTEve2VuZHBvaW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZW5kcG9pbnRzLyp9OmV4cGxhaW46ASoSnwMKC0NvdW50",
-            "VG9rZW5zEjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db3Vu",
-            "dFRva2Vuc1JlcXVlc3QaNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkNvdW50VG9rZW5zUmVzcG9uc2UipALaQRJlbmRwb2ludCxpbnN0YW5j",
-            "ZXOC0+STAogCIkIvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9lbmRwb2ludHMvKn06Y291bnRUb2tlbnM6ASpaUSJML3YxYmV0",
-            "YTEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcHVibGlzaGVy",
-            "cy8qL21vZGVscy8qfTpjb3VudFRva2VuczoBKlowIisvdjFiZXRhMS97ZW5k",
-            "cG9pbnQ9ZW5kcG9pbnRzLyp9OmNvdW50VG9rZW5zOgEqWjoiNS92MWJldGEx",
-            "L3tlbmRwb2ludD1wdWJsaXNoZXJzLyovbW9kZWxzLyp9OmNvdW50VG9rZW5z",
-            "OgEqEqsDCg9HZW5lcmF0ZUNvbnRlbnQSNy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkdlbmVyYXRlQ29udGVudFJlcXVlc3QaOC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVyYXRlQ29udGVudFJlc3Bv",
-            "bnNlIqQC2kEObW9kZWwsY29udGVudHOC0+STAowCIkMvdjFiZXRhMS97bW9k",
-            "ZWw9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06Z2VuZXJh",
-            "dGVDb250ZW50OgEqWlIiTS92MWJldGExL3ttb2RlbD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06Z2VuZXJhdGVDb250",
-            "ZW50OgEqWjEiLC92MWJldGExL3ttb2RlbD1lbmRwb2ludHMvKn06Z2VuZXJh",
-            "dGVDb250ZW50OgEqWjsiNi92MWJldGExL3ttb2RlbD1wdWJsaXNoZXJzLyov",
-            "bW9kZWxzLyp9OmdlbmVyYXRlQ29udGVudDoBKhLLAwoVU3RyZWFtR2VuZXJh",
-            "dGVDb250ZW50EjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5H",
-            "ZW5lcmF0ZUNvbnRlbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5HZW5lcmF0ZUNvbnRlbnRSZXNwb25zZSK8AtpBDm1vZGVs",
-            "LGNvbnRlbnRzgtPkkwKkAiJJL3YxYmV0YTEve21vZGVsPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZW5kcG9pbnRzLyp9OnN0cmVhbUdlbmVyYXRlQ29udGVu",
-            "dDoBKlpYIlMvdjFiZXRhMS97bW9kZWw9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9wdWJsaXNoZXJzLyovbW9kZWxzLyp9OnN0cmVhbUdlbmVyYXRlQ29udGVu",
-            "dDoBKlo3IjIvdjFiZXRhMS97bW9kZWw9ZW5kcG9pbnRzLyp9OnN0cmVhbUdl",
-            "bmVyYXRlQ29udGVudDoBKlpBIjwvdjFiZXRhMS97bW9kZWw9cHVibGlzaGVy",
-            "cy8qL21vZGVscy8qfTpzdHJlYW1HZW5lcmF0ZUNvbnRlbnQ6ASowARLTAQoP",
-            "Q2hhdENvbXBsZXRpb25zEjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5DaGF0Q29tcGxldGlvbnNSZXF1ZXN0GhQuZ29vZ2xlLmFwaS5IdHRw",
-            "Qm9keSJv2kESZW5kcG9pbnQsaHR0cF9ib2R5gtPkkwJUIkcvdjFiZXRhMS97",
-            "ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn0v",
-            "Y2hhdC9jb21wbGV0aW9uczoJaHR0cF9ib2R5MAES4gEKDEVtYmVkQ29udGVu",
-            "dBI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW1iZWRDb250",
-            "ZW50UmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "RW1iZWRDb250ZW50UmVzcG9uc2UiZdpBDW1vZGVsLGNvbnRlbnSC0+STAk8i",
-            "Si92MWJldGExL3ttb2RlbD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3B1Ymxp",
-            "c2hlcnMvKi9tb2RlbHMvKn06ZW1iZWRDb250ZW50OgEqGoYBykEZYWlwbGF0",
-            "Zm9ybS5nb29nbGVhcGlzLmNvbdJBZ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHlC7QEKI2NvbS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhZQcmVkaWN0aW9uU2Vy",
-            "dmljZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
-            "cGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUu",
-            "Q2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxh",
-            "dGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
-            "YmV0YTFiBnByb3RvMw=="));
+            "YWlwbGF0Zm9ybS52MWJldGExLlN0cmVhbWluZ1ByZWRpY3RSZXNwb25zZSIA",
+            "KAEwARLJAgoWU2VydmVyU3RyZWFtaW5nUHJlZGljdBI4Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFtaW5nUHJlZGljdFJlcXVlc3Qa",
+            "OS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN0cmVhbWluZ1By",
+            "ZWRpY3RSZXNwb25zZSK3AYLT5JMCsAEiTS92MWJldGExL3tlbmRwb2ludD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VuZHBvaW50cy8qfTpzZXJ2ZXJTdHJl",
+            "YW1pbmdQcmVkaWN0OgEqWlwiVy92MWJldGExL3tlbmRwb2ludD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06c2VydmVy",
+            "U3RyZWFtaW5nUHJlZGljdDoBKjABEpYBChNTdHJlYW1pbmdSYXdQcmVkaWN0",
+            "EjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TdHJlYW1pbmdS",
+            "YXdQcmVkaWN0UmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuU3RyZWFtaW5nUmF3UHJlZGljdFJlc3BvbnNlIgAoATABEukBCgdF",
+            "eHBsYWluEi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5FeHBs",
+            "YWluUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "RXhwbGFpblJlc3BvbnNlInvaQS9lbmRwb2ludCxpbnN0YW5jZXMscGFyYW1l",
+            "dGVycyxkZXBsb3llZF9tb2RlbF9pZILT5JMCQyI+L3YxYmV0YTEve2VuZHBv",
+            "aW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW5kcG9pbnRzLyp9OmV4cGxh",
+            "aW46ASoSnwMKC0NvdW50VG9rZW5zEjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMS5Db3VudFRva2Vuc1JlcXVlc3QaNC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkNvdW50VG9rZW5zUmVzcG9uc2UipALaQRJl",
+            "bmRwb2ludCxpbnN0YW5jZXOC0+STAogCIkIvdjFiZXRhMS97ZW5kcG9pbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRwb2ludHMvKn06Y291bnRUb2tl",
+            "bnM6ASpaUSJML3YxYmV0YTEve2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovcHVibGlzaGVycy8qL21vZGVscy8qfTpjb3VudFRva2VuczoBKlow",
+            "IisvdjFiZXRhMS97ZW5kcG9pbnQ9ZW5kcG9pbnRzLyp9OmNvdW50VG9rZW5z",
+            "OgEqWjoiNS92MWJldGExL3tlbmRwb2ludD1wdWJsaXNoZXJzLyovbW9kZWxz",
+            "Lyp9OmNvdW50VG9rZW5zOgEqEqsDCg9HZW5lcmF0ZUNvbnRlbnQSNy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVyYXRlQ29udGVudFJl",
+            "cXVlc3QaOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVy",
+            "YXRlQ29udGVudFJlc3BvbnNlIqQC2kEObW9kZWwsY29udGVudHOC0+STAowC",
+            "IkMvdjFiZXRhMS97bW9kZWw9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbmRw",
+            "b2ludHMvKn06Z2VuZXJhdGVDb250ZW50OgEqWlIiTS92MWJldGExL3ttb2Rl",
+            "bD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMv",
+            "Kn06Z2VuZXJhdGVDb250ZW50OgEqWjEiLC92MWJldGExL3ttb2RlbD1lbmRw",
+            "b2ludHMvKn06Z2VuZXJhdGVDb250ZW50OgEqWjsiNi92MWJldGExL3ttb2Rl",
+            "bD1wdWJsaXNoZXJzLyovbW9kZWxzLyp9OmdlbmVyYXRlQ29udGVudDoBKhLL",
+            "AwoVU3RyZWFtR2VuZXJhdGVDb250ZW50EjcuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5HZW5lcmF0ZUNvbnRlbnRSZXF1ZXN0GjguZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HZW5lcmF0ZUNvbnRlbnRSZXNw",
+            "b25zZSK8AtpBDm1vZGVsLGNvbnRlbnRzgtPkkwKkAiJJL3YxYmV0YTEve21v",
+            "ZGVsPXByb2plY3RzLyovbG9jYXRpb25zLyovZW5kcG9pbnRzLyp9OnN0cmVh",
+            "bUdlbmVyYXRlQ29udGVudDoBKlpYIlMvdjFiZXRhMS97bW9kZWw9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9wdWJsaXNoZXJzLyovbW9kZWxzLyp9OnN0cmVh",
+            "bUdlbmVyYXRlQ29udGVudDoBKlo3IjIvdjFiZXRhMS97bW9kZWw9ZW5kcG9p",
+            "bnRzLyp9OnN0cmVhbUdlbmVyYXRlQ29udGVudDoBKlpBIjwvdjFiZXRhMS97",
+            "bW9kZWw9cHVibGlzaGVycy8qL21vZGVscy8qfTpzdHJlYW1HZW5lcmF0ZUNv",
+            "bnRlbnQ6ASowARLTAQoPQ2hhdENvbXBsZXRpb25zEjcuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5DaGF0Q29tcGxldGlvbnNSZXF1ZXN0GhQu",
+            "Z29vZ2xlLmFwaS5IdHRwQm9keSJv2kESZW5kcG9pbnQsaHR0cF9ib2R5gtPk",
+            "kwJUIkcvdjFiZXRhMS97ZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9lbmRwb2ludHMvKn0vY2hhdC9jb21wbGV0aW9uczoJaHR0cF9ib2R5MAES",
+            "4gEKDEVtYmVkQ29udGVudBI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuRW1iZWRDb250ZW50UmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuRW1iZWRDb250ZW50UmVzcG9uc2UiZdpBDW1vZGVs",
+            "LGNvbnRlbnSC0+STAk8iSi92MWJldGExL3ttb2RlbD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3B1Ymxpc2hlcnMvKi9tb2RlbHMvKn06ZW1iZWRDb250ZW50",
+            "OgEqGoYBykEZYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbdJBZ2h0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFk",
+            "LW9ubHlC7QEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "QhZQcmVkaWN0aW9uU2VydmljZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.TypesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.UsageMetadataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -338,7 +350,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningResponse), global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningResponse.Parser, new[]{ "GenerateVideoResponse" }, new[]{ "Response" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningMetadata), global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateVideoResponse), global::Google.Cloud.AIPlatform.V1Beta1.GenerateVideoResponse.Parser, new[]{ "GeneratedSamples", "RaiMediaFilteredCount", "RaiMediaFilteredReasons" }, new[]{ "RaiMediaFilteredCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest), global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Parser, new[]{ "Model", "Content", "Title", "TaskType", "OutputDimensionality", "AutoTruncate" }, new[]{ "Model", "Content", "Title", "TaskType", "OutputDimensionality", "AutoTruncate" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest), global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Parser, new[]{ "Model", "Content", "Title", "TaskType", "OutputDimensionality", "AutoTruncate", "EmbedContentConfig" }, new[]{ "Model", "Content", "Title", "TaskType", "OutputDimensionality", "AutoTruncate", "EmbedContentConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig), global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig.Parser, new[]{ "Title", "TaskType", "AutoTruncate", "OutputDimensionality", "DocumentOcr", "AudioTrackExtraction" }, new[]{ "Title", "TaskType", "AutoTruncate", "OutputDimensionality", "DocumentOcr", "AudioTrackExtraction" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse), global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse.Parser, new[]{ "Embedding", "UsageMetadata", "Truncated" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse.Types.Embedding), global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse.Types.Embedding.Parser, new[]{ "Values" }, null, null, null, null)})
           }));
     }
@@ -8924,6 +8936,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       taskType_ = other.taskType_;
       outputDimensionality_ = other.outputDimensionality_;
       autoTruncate_ = other.autoTruncate_;
+      embedContentConfig_ = other.embedContentConfig_ != null ? other.embedContentConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8968,7 +8981,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int ContentFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1Beta1.Content content_;
     /// <summary>
-    /// Required. Input content to be embedded. Required.
+    /// Required. Input content to be embedded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8985,8 +8998,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     private string title_;
     /// <summary>
-    /// Optional. An optional title for the text.
+    /// Optional. Deprecated: Please use EmbedContentConfig.title instead.
+    /// The title for the text.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Title {
@@ -8996,12 +9011,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
     /// <summary>Gets whether the "title" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTitle {
       get { return title_ != null; }
     }
     /// <summary>Clears the value of the "title" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTitle() {
@@ -9014,8 +9031,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     private global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType taskType_;
     /// <summary>
-    /// Optional. The task type of the embedding.
+    /// Optional. Deprecated: Please use EmbedContentConfig.task_type instead.
+    /// The task type of the embedding.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType TaskType {
@@ -9026,12 +9045,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
     /// <summary>Gets whether the "task_type" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTaskType {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "task_type" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTaskType() {
@@ -9044,9 +9065,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     private int outputDimensionality_;
     /// <summary>
-    /// Optional. Optional reduced dimension for the output embedding. If set,
-    /// excessive values in the output embedding are truncated from the end.
+    /// Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality
+    /// instead. Reduced dimension for the output embedding. If set, excessive
+    /// values in the output embedding are truncated from the end.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int OutputDimensionality {
@@ -9057,12 +9080,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
     /// <summary>Gets whether the "output_dimensionality" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasOutputDimensionality {
       get { return (_hasBits0 & 2) != 0; }
     }
     /// <summary>Clears the value of the "output_dimensionality" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearOutputDimensionality() {
@@ -9075,9 +9100,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     private bool autoTruncate_;
     /// <summary>
-    /// Optional. Whether to silently truncate the input content if it's longer
+    /// Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead.
+    /// Whether to silently truncate the input content if it's longer
     /// than the maximum sequence length.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AutoTruncate {
@@ -9088,16 +9115,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
     /// <summary>Gets whether the "auto_truncate" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasAutoTruncate {
       get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "auto_truncate" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAutoTruncate() {
       _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "embed_content_config" field.</summary>
+    public const int EmbedContentConfigFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig embedContentConfig_;
+    /// <summary>
+    /// Optional. Configuration for the EmbedContent request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig EmbedContentConfig {
+      get { return embedContentConfig_; }
+      set {
+        embedContentConfig_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9121,6 +9165,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (TaskType != other.TaskType) return false;
       if (OutputDimensionality != other.OutputDimensionality) return false;
       if (AutoTruncate != other.AutoTruncate) return false;
+      if (!object.Equals(EmbedContentConfig, other.EmbedContentConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9134,6 +9179,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (HasTaskType) hash ^= TaskType.GetHashCode();
       if (HasOutputDimensionality) hash ^= OutputDimensionality.GetHashCode();
       if (HasAutoTruncate) hash ^= AutoTruncate.GetHashCode();
+      if (embedContentConfig_ != null) hash ^= EmbedContentConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9176,6 +9222,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(56);
         output.WriteBool(AutoTruncate);
       }
+      if (embedContentConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EmbedContentConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9210,6 +9260,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(56);
         output.WriteBool(AutoTruncate);
       }
+      if (embedContentConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EmbedContentConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9237,6 +9291,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (HasAutoTruncate) {
         size += 1 + 1;
+      }
+      if (embedContentConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EmbedContentConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9270,6 +9327,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.HasAutoTruncate) {
         AutoTruncate = other.AutoTruncate;
+      }
+      if (other.embedContentConfig_ != null) {
+        if (embedContentConfig_ == null) {
+          EmbedContentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig();
+        }
+        EmbedContentConfig.MergeFrom(other.EmbedContentConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9313,6 +9376,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             AutoTruncate = input.ReadBool();
             break;
           }
+          case 66: {
+            if (embedContentConfig_ == null) {
+              EmbedContentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig();
+            }
+            input.ReadMessage(EmbedContentConfig);
+            break;
+          }
         }
       }
     #endif
@@ -9353,6 +9423,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 56: {
             AutoTruncate = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (embedContentConfig_ == null) {
+              EmbedContentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbedContentConfig();
+            }
+            input.ReadMessage(EmbedContentConfig);
             break;
           }
         }
@@ -9405,6 +9482,501 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         /// Specifies that the embeddings will be used for code retrieval.
         /// </summary>
         [pbr::OriginalName("CODE_RETRIEVAL_QUERY")] CodeRetrievalQuery = 9,
+      }
+
+      /// <summary>
+      /// Configurations for the EmbedContent API.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EmbedContentConfig : pb::IMessage<EmbedContentConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EmbedContentConfig> _parser = new pb::MessageParser<EmbedContentConfig>(() => new EmbedContentConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EmbedContentConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmbedContentConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmbedContentConfig(EmbedContentConfig other) : this() {
+          _hasBits0 = other._hasBits0;
+          title_ = other.title_;
+          taskType_ = other.taskType_;
+          autoTruncate_ = other.autoTruncate_;
+          outputDimensionality_ = other.outputDimensionality_;
+          documentOcr_ = other.documentOcr_;
+          audioTrackExtraction_ = other.audioTrackExtraction_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmbedContentConfig Clone() {
+          return new EmbedContentConfig(this);
+        }
+
+        /// <summary>Field number for the "title" field.</summary>
+        public const int TitleFieldNumber = 1;
+        private readonly static string TitleDefaultValue = "";
+
+        private string title_;
+        /// <summary>
+        /// Optional. The title for the text.
+        ///
+        /// Only applicable to text-only embedding models.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Title {
+          get { return title_ ?? TitleDefaultValue; }
+          set {
+            title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "title" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTitle {
+          get { return title_ != null; }
+        }
+        /// <summary>Clears the value of the "title" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTitle() {
+          title_ = null;
+        }
+
+        /// <summary>Field number for the "task_type" field.</summary>
+        public const int TaskTypeFieldNumber = 2;
+        private readonly static global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType TaskTypeDefaultValue = global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType.Unspecified;
+
+        private global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType taskType_;
+        /// <summary>
+        /// Optional. The task type of the embedding.
+        ///
+        /// Only applicable to text-only embedding models.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType TaskType {
+          get { if ((_hasBits0 & 1) != 0) { return taskType_; } else { return TaskTypeDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            taskType_ = value;
+          }
+        }
+        /// <summary>Gets whether the "task_type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTaskType {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "task_type" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTaskType() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "auto_truncate" field.</summary>
+        public const int AutoTruncateFieldNumber = 3;
+        private readonly static bool AutoTruncateDefaultValue = false;
+
+        private bool autoTruncate_;
+        /// <summary>
+        /// Optional. Whether to silently truncate the input content if it's longer
+        /// than the maximum sequence length.
+        ///
+        /// Only applicable to text-only embedding models.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AutoTruncate {
+          get { if ((_hasBits0 & 2) != 0) { return autoTruncate_; } else { return AutoTruncateDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            autoTruncate_ = value;
+          }
+        }
+        /// <summary>Gets whether the "auto_truncate" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAutoTruncate {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "auto_truncate" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAutoTruncate() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "output_dimensionality" field.</summary>
+        public const int OutputDimensionalityFieldNumber = 4;
+        private readonly static int OutputDimensionalityDefaultValue = 0;
+
+        private int outputDimensionality_;
+        /// <summary>
+        /// Optional. Reduced dimension for the output embedding. If set, excessive
+        /// values in the output embedding are truncated from the end.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int OutputDimensionality {
+          get { if ((_hasBits0 & 4) != 0) { return outputDimensionality_; } else { return OutputDimensionalityDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            outputDimensionality_ = value;
+          }
+        }
+        /// <summary>Gets whether the "output_dimensionality" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOutputDimensionality {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "output_dimensionality" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOutputDimensionality() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "document_ocr" field.</summary>
+        public const int DocumentOcrFieldNumber = 5;
+        private readonly static bool DocumentOcrDefaultValue = false;
+
+        private bool documentOcr_;
+        /// <summary>
+        /// Optional. Whether to enable OCR for document content.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DocumentOcr {
+          get { if ((_hasBits0 & 8) != 0) { return documentOcr_; } else { return DocumentOcrDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            documentOcr_ = value;
+          }
+        }
+        /// <summary>Gets whether the "document_ocr" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDocumentOcr {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "document_ocr" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDocumentOcr() {
+          _hasBits0 &= ~8;
+        }
+
+        /// <summary>Field number for the "audio_track_extraction" field.</summary>
+        public const int AudioTrackExtractionFieldNumber = 6;
+        private readonly static bool AudioTrackExtractionDefaultValue = false;
+
+        private bool audioTrackExtraction_;
+        /// <summary>
+        /// Optional. Whether to extract audio from video content.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AudioTrackExtraction {
+          get { if ((_hasBits0 & 16) != 0) { return audioTrackExtraction_; } else { return AudioTrackExtractionDefaultValue; } }
+          set {
+            _hasBits0 |= 16;
+            audioTrackExtraction_ = value;
+          }
+        }
+        /// <summary>Gets whether the "audio_track_extraction" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAudioTrackExtraction {
+          get { return (_hasBits0 & 16) != 0; }
+        }
+        /// <summary>Clears the value of the "audio_track_extraction" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAudioTrackExtraction() {
+          _hasBits0 &= ~16;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EmbedContentConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EmbedContentConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Title != other.Title) return false;
+          if (TaskType != other.TaskType) return false;
+          if (AutoTruncate != other.AutoTruncate) return false;
+          if (OutputDimensionality != other.OutputDimensionality) return false;
+          if (DocumentOcr != other.DocumentOcr) return false;
+          if (AudioTrackExtraction != other.AudioTrackExtraction) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasTitle) hash ^= Title.GetHashCode();
+          if (HasTaskType) hash ^= TaskType.GetHashCode();
+          if (HasAutoTruncate) hash ^= AutoTruncate.GetHashCode();
+          if (HasOutputDimensionality) hash ^= OutputDimensionality.GetHashCode();
+          if (HasDocumentOcr) hash ^= DocumentOcr.GetHashCode();
+          if (HasAudioTrackExtraction) hash ^= AudioTrackExtraction.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasTitle) {
+            output.WriteRawTag(10);
+            output.WriteString(Title);
+          }
+          if (HasTaskType) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) TaskType);
+          }
+          if (HasAutoTruncate) {
+            output.WriteRawTag(24);
+            output.WriteBool(AutoTruncate);
+          }
+          if (HasOutputDimensionality) {
+            output.WriteRawTag(32);
+            output.WriteInt32(OutputDimensionality);
+          }
+          if (HasDocumentOcr) {
+            output.WriteRawTag(40);
+            output.WriteBool(DocumentOcr);
+          }
+          if (HasAudioTrackExtraction) {
+            output.WriteRawTag(48);
+            output.WriteBool(AudioTrackExtraction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasTitle) {
+            output.WriteRawTag(10);
+            output.WriteString(Title);
+          }
+          if (HasTaskType) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) TaskType);
+          }
+          if (HasAutoTruncate) {
+            output.WriteRawTag(24);
+            output.WriteBool(AutoTruncate);
+          }
+          if (HasOutputDimensionality) {
+            output.WriteRawTag(32);
+            output.WriteInt32(OutputDimensionality);
+          }
+          if (HasDocumentOcr) {
+            output.WriteRawTag(40);
+            output.WriteBool(DocumentOcr);
+          }
+          if (HasAudioTrackExtraction) {
+            output.WriteRawTag(48);
+            output.WriteBool(AudioTrackExtraction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasTitle) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+          }
+          if (HasTaskType) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskType);
+          }
+          if (HasAutoTruncate) {
+            size += 1 + 1;
+          }
+          if (HasOutputDimensionality) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(OutputDimensionality);
+          }
+          if (HasDocumentOcr) {
+            size += 1 + 1;
+          }
+          if (HasAudioTrackExtraction) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EmbedContentConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasTitle) {
+            Title = other.Title;
+          }
+          if (other.HasTaskType) {
+            TaskType = other.TaskType;
+          }
+          if (other.HasAutoTruncate) {
+            AutoTruncate = other.AutoTruncate;
+          }
+          if (other.HasOutputDimensionality) {
+            OutputDimensionality = other.OutputDimensionality;
+          }
+          if (other.HasDocumentOcr) {
+            DocumentOcr = other.DocumentOcr;
+          }
+          if (other.HasAudioTrackExtraction) {
+            AudioTrackExtraction = other.AudioTrackExtraction;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Title = input.ReadString();
+                break;
+              }
+              case 16: {
+                TaskType = (global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                AutoTruncate = input.ReadBool();
+                break;
+              }
+              case 32: {
+                OutputDimensionality = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                DocumentOcr = input.ReadBool();
+                break;
+              }
+              case 48: {
+                AudioTrackExtraction = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Title = input.ReadString();
+                break;
+              }
+              case 16: {
+                TaskType = (global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Types.EmbeddingTaskType) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                AutoTruncate = input.ReadBool();
+                break;
+              }
+              case 32: {
+                OutputDimensionality = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                DocumentOcr = input.ReadBool();
+                break;
+              }
+              case 48: {
+                AudioTrackExtraction = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -9482,7 +10054,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int UsageMetadataFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1Beta1.UsageMetadata usageMetadata_;
     /// <summary>
-    /// Metadata about the response(s).
+    /// Usage metadata about the response(s).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

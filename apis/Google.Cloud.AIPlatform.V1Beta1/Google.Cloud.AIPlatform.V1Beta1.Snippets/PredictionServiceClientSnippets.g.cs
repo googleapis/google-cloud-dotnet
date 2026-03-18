@@ -1054,10 +1054,7 @@ namespace GoogleCSharpSnippets
             {
                 ModelAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Content = new Content(),
-                Title = "",
-                TaskType = EmbedContentRequest.Types.EmbeddingTaskType.Unspecified,
-                OutputDimensionality = 0,
-                AutoTruncate = false,
+                EmbedContentConfig = new EmbedContentRequest.Types.EmbedContentConfig(),
             };
             // Make the request
             EmbedContentResponse response = predictionServiceClient.EmbedContent(request);
@@ -1076,10 +1073,7 @@ namespace GoogleCSharpSnippets
             {
                 ModelAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Content = new Content(),
-                Title = "",
-                TaskType = EmbedContentRequest.Types.EmbeddingTaskType.Unspecified,
-                OutputDimensionality = 0,
-                AutoTruncate = false,
+                EmbedContentConfig = new EmbedContentRequest.Types.EmbedContentConfig(),
             };
             // Make the request
             EmbedContentResponse response = await predictionServiceClient.EmbedContentAsync(request);
