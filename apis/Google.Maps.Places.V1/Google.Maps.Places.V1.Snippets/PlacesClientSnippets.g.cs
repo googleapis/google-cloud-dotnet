@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 LocationRestriction = new SearchNearbyRequest.Types.LocationRestriction(),
                 RankPreference = SearchNearbyRequest.Types.RankPreference.Unspecified,
                 RoutingParameters = new RoutingParameters(),
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             SearchNearbyResponse response = placesClient.SearchNearby(request);
@@ -68,6 +69,7 @@ namespace GoogleCSharpSnippets
                 LocationRestriction = new SearchNearbyRequest.Types.LocationRestriction(),
                 RankPreference = SearchNearbyRequest.Types.RankPreference.Unspecified,
                 RoutingParameters = new RoutingParameters(),
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             SearchNearbyResponse response = await placesClient.SearchNearbyAsync(request);
@@ -102,6 +104,7 @@ namespace GoogleCSharpSnippets
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = placesClient.SearchText(request);
@@ -137,6 +140,7 @@ namespace GoogleCSharpSnippets
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);
@@ -350,6 +354,7 @@ namespace GoogleCSharpSnippets
                 IncludeQueryPredictions = false,
                 SessionToken = "",
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             AutocompletePlacesResponse response = placesClient.AutocompletePlaces(request);
@@ -378,6 +383,7 @@ namespace GoogleCSharpSnippets
                 IncludeQueryPredictions = false,
                 SessionToken = "",
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             AutocompletePlacesResponse response = await placesClient.AutocompletePlacesAsync(request);
