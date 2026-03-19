@@ -49,6 +49,7 @@ namespace GoogleCSharpSnippets
                 IncludeQueryPredictions = false,
                 SessionToken = "",
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             AutocompletePlacesResponse response = placesClient.AutocompletePlaces(request);

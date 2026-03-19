@@ -56,6 +56,7 @@ namespace GoogleCSharpSnippets
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
                 IncludePureServiceAreaBusinesses = false,
+                IncludeFutureOpeningBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);
