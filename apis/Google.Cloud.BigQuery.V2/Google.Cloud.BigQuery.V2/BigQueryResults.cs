@@ -30,13 +30,18 @@ namespace Google.Cloud.BigQuery.V2
     {
         private readonly BigQueryClient _client;
         private readonly GetQueryResultsOptions _options;
-        private readonly GetQueryResultsResponse _response;
+        private readonly IQueryResponse _response;
         private readonly Dictionary<string, int> _fieldNames;
 
         /// <summary>
         /// The reference to the query job.
         /// </summary>
         public JobReference JobReference => _response.JobReference;
+
+        /// <summary>
+        /// The query ID if executed as a stateless query or <c>null</c> otherwise.
+        /// </summary>
+        public string QueryId => _response.QueryId;
 
         /// <summary>
         /// The schema of the query.
@@ -98,6 +103,11 @@ namespace Google.Cloud.BigQuery.V2
         /// May be null. (For example, script queries don't store results in tables.)</param>
         /// <param name="options">Options to use when fetching results. May be null.</param>
         public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, GetQueryResultsOptions options)
+            : this(client, new GetQueryResultsResponseWrapper(GaxPreconditions.CheckNotNull(response, nameof(response))), tableReference, options)
+        {
+        }
+
+        internal BigQueryResults(BigQueryClient client, IQueryResponse response, TableReference tableReference, GetQueryResultsOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _response = GaxPreconditions.CheckNotNull(response, nameof(response));
@@ -122,7 +132,7 @@ namespace Google.Cloud.BigQuery.V2
             while (clonedOptions.PageToken != null)
             {
                 var response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
-                foreach (var row in ConvertResponseRows(response))
+                foreach (var row in ConvertResponseRows(new GetQueryResultsResponseWrapper(response)))
                 {
                     yield return row;
                 }
@@ -144,12 +154,12 @@ namespace Google.Cloud.BigQuery.V2
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
 
             // Work out whether to use the response we've already got, or create a new one.
-            GetQueryResultsResponse response = _response;
+            IQueryResponse response = _response;
             if (response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
-                response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                response = new GetQueryResultsResponseWrapper(_client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null));
             }
             // First add the rows from the existing response.
             rows.AddRange(ConvertResponseRows(response));
@@ -161,7 +171,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = pageSize - rows.Count;
-                var nextResponse = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                var nextResponse = new GetQueryResultsResponseWrapper(_client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null));
                 rows.AddRange(ConvertResponseRows(nextResponse));
                 pageToken = nextResponse.PageToken;
             }
@@ -184,12 +194,12 @@ namespace Google.Cloud.BigQuery.V2
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
 
             // Work out whether to use the response we've already got, or create a new one.
-            GetQueryResultsResponse response = _response;
+            IQueryResponse response = _response;
             if (response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
-                response = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                response = new GetQueryResultsResponseWrapper(await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false));
             }
             // First add the rows from the existing response.
             rows.AddRange(ConvertResponseRows(response));
@@ -201,7 +211,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = pageSize - rows.Count;
-                var nextResponse = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                var nextResponse = new GetQueryResultsResponseWrapper(await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false));
                 rows.AddRange(ConvertResponseRows(nextResponse));
                 pageToken = nextResponse.PageToken;
             }
@@ -281,7 +291,7 @@ namespace Google.Cloud.BigQuery.V2
                     var nextResponse = await _parent._client.GetRawQueryResultsAsync(_parent.JobReference, _options, timeoutBase: null, _cancellationToken).ConfigureAwait(false);
                     // Set the page token for the next time we need to fetch
                     _options.PageToken = nextResponse.PageToken;
-                    _underlyingEnumerator = _parent.ConvertResponseRows(nextResponse).GetEnumerator();
+                    _underlyingEnumerator = _parent.ConvertResponseRows(new GetQueryResultsResponseWrapper(nextResponse)).GetEnumerator();
                 }
                 return true;
             }
@@ -289,7 +299,7 @@ namespace Google.Cloud.BigQuery.V2
             public ValueTask DisposeAsync() => default;
         }
 
-        private IEnumerable<BigQueryRow> ConvertResponseRows(GetQueryResultsResponse response) =>
-            (response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true));
+        private IEnumerable<BigQueryRow> ConvertResponseRows(IQueryResponse response) =>
+            (response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true, QueryId));
     }
 }

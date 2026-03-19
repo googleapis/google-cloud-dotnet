@@ -26,6 +26,28 @@ namespace Google.Cloud.BigQuery.V2
 {
     public partial class BigQueryClientImpl
     {
+        /// <inheritdoc />
+        public override BigQueryResults ExecuteQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
+        {
+            if (SupportedByStatelessQuery(queryOptions))
+            {
+                // The fast execution path
+               return ExecuteStatelessQuery(sql, parameters, queryOptions, resultsOptions);
+            }
+            return CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryResults> ExecuteQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
+        {
+            if (SupportedByStatelessQuery(queryOptions))
+            {
+               return await ExecuteStatelessQueryAsync(sql, parameters, queryOptions, resultsOptions, cancellationToken).ConfigureAwait(false);
+            }
+            var job = await CreateQueryJobAsync(sql, parameters, queryOptions, cancellationToken).ConfigureAwait(false);
+            return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
+        }
+
         private sealed class TableRowPageManager : IPageManager<TabledataResource.ListRequest, TableDataList, BigQueryRow>
         {
             private readonly TableSchema _schema;
@@ -53,7 +75,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override BigQueryJob CreateQueryJob(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null)
         {
-            var request = CreateInsertQueryJobRequest(sql, parameters, options);
+            var request = CreateJobsInsertRequest(sql, parameters, options);
             var job = request.Execute();
             return new BigQueryJob(this, job);
         }
@@ -61,7 +83,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
-            var request = CreateInsertQueryJobRequest(sql, parameters, options);
+            var request = CreateJobsInsertRequest(sql, parameters, options);
             var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
         }
@@ -162,8 +184,8 @@ namespace Google.Cloud.BigQuery.V2
                 () => CreateListRequest(tableReference, options, schema), pageManager);
         }
 
-        // Request creation
-        private JobsResource.InsertRequest CreateInsertQueryJobRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options)
+        // Request creation for Jobs.Insert
+        private JobsResource.InsertRequest CreateJobsInsertRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             if (parameters != null)
@@ -192,6 +214,22 @@ namespace Google.Cloud.BigQuery.V2
                     $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
             }
             return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery }, options);
+        }
+
+        // Request creation for Jobs.Query stateless queries
+        private QueryRequest CreateJobsQueryRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options, GetQueryResultsOptions resultsOptions)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            var request = new QueryRequest
+            {
+                Query = sql,
+                UseLegacySql = false,
+                ParameterMode = options?.ParameterMode?.ToString().ToLowerInvariant() ?? "named",
+                QueryParameters = parameters?.Select(p => p.ToQueryParameter()).ToList(),
+            };
+            options?.ModifyRequest(request);
+            resultsOptions?.ModifyRequest(request);
+            return request;
         }
 
         private TabledataResource.ListRequest CreateListRequest(TableReference tableReference, ListRowsOptions options, TableSchema schema)
@@ -225,6 +263,66 @@ namespace Google.Cloud.BigQuery.V2
             RetryHandler.MarkAsRetriable(request);
             request.PrettyPrint = PrettyPrint;
             return request;
+        }
+
+        private bool SupportedByStatelessQuery(QueryOptions options)
+        {
+            if (options == null)
+            {
+                return true;
+            }
+
+            // These features exist in QueryOptions but are MISSING from QueryRequest.
+            // If any of these are set (not null), we may not use the Jobs.Query endpoint.
+            return options.DestinationTable == null
+                && options.CreateDisposition == null
+                && options.WriteDisposition == null
+                && options.Priority == null
+                && options.AllowLargeResults == null
+                && options.FlattenResults == null
+                && options.MaximumBillingTier == null
+                && options.TimePartitioning == null
+                && options.DestinationSchemaUpdateOptions == null;
+        }
+
+        /// <summary>
+        /// Executes a query using the stateless jobs.query endpoint.
+        /// </summary>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="parameters">The parameters for the query. May be null.</param>
+        /// <param name="queryOptions">The options for the query. May be null.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null.</param>
+        /// <returns>The result of the query.</returns>
+        private BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
+        {
+            var request = CreateJobsQueryRequest(sql, parameters, queryOptions, resultsOptions);
+            var response = Service.Jobs.Query(request, ProjectId).Execute();
+            if (response.JobComplete == true)
+            {
+                return new BigQueryResults(this, new QueryResponseWrapper(response), null, resultsOptions);
+            }
+            return GetQueryResults(response.JobReference, resultsOptions);
+        }
+
+        /// <summary>
+        /// Asynchronously executes a query using the stateless jobs.query endpoint.
+        /// </summary>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="parameters">The parameters for the query. May be null.</param>
+        /// <param name="queryOptions">The options for the query. May be null.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigQueryResults"/> representing the query.</returns>
+        private async Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateJobsQueryRequest(sql, parameters, queryOptions, resultsOptions);
+            var response = await Service.Jobs.Query(request, ProjectId).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            if (response.JobComplete == true)
+            {
+                return new BigQueryResults(this, new QueryResponseWrapper(response), null, resultsOptions);
+            }
+            return await GetQueryResultsAsync(response.JobReference, resultsOptions, cancellationToken).ConfigureAwait(false);
         }
     }
 }
