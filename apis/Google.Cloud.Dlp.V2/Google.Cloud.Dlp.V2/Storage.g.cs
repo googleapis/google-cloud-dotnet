@@ -36,7 +36,7 @@ namespace Google.Cloud.Dlp.V2 {
             "WV9MT1cQChIXChNTRU5TSVRJVklUWV9VTktOT1dOEAwSGAoUU0VOU0lUSVZJ",
             "VFlfTU9ERVJBVEUQFBIUChBTRU5TSVRJVklUWV9ISUdIEB4iSwoKU3RvcmVk",
             "VHlwZRIMCgRuYW1lGAEgASgJEi8KC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCKMDAoOQ3VzdG9tSW5mb1R5cGUSMgoJ",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCK9DQoOQ3VzdG9tSW5mb1R5cGUSMgoJ",
             "aW5mb190eXBlGAEgASgLMh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9U",
             "eXBlEjUKCmxpa2VsaWhvb2QYBiABKA4yIS5nb29nbGUucHJpdmFjeS5kbHAu",
             "djIuTGlrZWxpaG9vZBJGCgpkaWN0aW9uYXJ5GAIgASgLMjAuZ29vZ2xlLnBy",
@@ -45,121 +45,126 @@ namespace Google.Cloud.Dlp.V2 {
             "VHlwZS5SZWdleEgAEk0KDnN1cnJvZ2F0ZV90eXBlGAQgASgLMjMuZ29vZ2xl",
             "LnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlN1cnJvZ2F0ZVR5cGVI",
             "ABI4CgtzdG9yZWRfdHlwZRgFIAEoCzIhLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5TdG9yZWRUeXBlSAASTAoPZGV0ZWN0aW9uX3J1bGVzGAcgAygLMjMuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1",
-            "bGUSSwoOZXhjbHVzaW9uX3R5cGUYCCABKA4yMy5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuQ3VzdG9tSW5mb1R5cGUuRXhjbHVzaW9uVHlwZRJCChFzZW5zaXRp",
-            "dml0eV9zY29yZRgJIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TZW5z",
-            "aXRpdml0eVNjb3JlGsgBCgpEaWN0aW9uYXJ5Ek4KCXdvcmRfbGlzdBgBIAEo",
-            "CzI5Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5EaWN0",
-            "aW9uYXJ5LldvcmRMaXN0SAASRQoSY2xvdWRfc3RvcmFnZV9wYXRoGAMgASgL",
-            "MicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVBhdGhIABoZ",
-            "CghXb3JkTGlzdBINCgV3b3JkcxgBIAMoCUIICgZzb3VyY2UaLwoFUmVnZXgS",
-            "DwoHcGF0dGVybhgBIAEoCRIVCg1ncm91cF9pbmRleGVzGAIgAygFGg8KDVN1",
-            "cnJvZ2F0ZVR5cGUavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxl",
-            "GAEgASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
-            "LkRldGVjdGlvblJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoN",
-            "d2luZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEK",
-            "FExpa2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASAB",
-            "KA4yIS5nb29nbGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3Jl",
-            "bGF0aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtI",
-            "b3R3b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0",
-            "eRgCIAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlw",
-            "ZS5EZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVz",
-            "dG1lbnQYAyABKAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
-            "b1R5cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0",
-            "eXBlIksKDUV4Y2x1c2lvblR5cGUSHgoaRVhDTFVTSU9OX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIaChZFWENMVVNJT05fVFlQRV9FWENMVURFEAFCBgoEdHlwZSIX",
-            "CgdGaWVsZElkEgwKBG5hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJv",
-            "amVjdF9pZBgCIAEoCRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4",
-            "cHJlc3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQRGF0YXN0b3JlT3B0aW9ucxI4",
-            "CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "UGFydGl0aW9uSWQSMwoEa2luZBgCIAEoCzIlLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91ZFN0b3JhZ2VSZWdleEZpbGVT",
-            "ZXQSEwoLYnVja2V0X25hbWUYASABKAkSFQoNaW5jbHVkZV9yZWdleBgCIAMo",
-            "CRIVCg1leGNsdWRlX3JlZ2V4GAMgAygJIuwDChNDbG91ZFN0b3JhZ2VPcHRp",
-            "b25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNldBIcChRieXRlc19saW1pdF9w",
-            "ZXJfZmlsZRgEIAEoAxIkChxieXRlc19saW1pdF9wZXJfZmlsZV9wZXJjZW50",
-            "GAggASgFEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21ldGhvZBgGIAEoDjI3Lmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLlNhbXBsZU1l",
-            "dGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50GAcgASgFGl8KB0ZpbGVTZXQS",
-            "CwoDdXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVfc2V0GAIgASgLMi8uZ29vZ2xl",
-            "LnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVJlZ2V4RmlsZVNldCJICgxT",
-            "YW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcK",
-            "A1RPUBABEhAKDFJBTkRPTV9TVEFSVBACIiIKE0Nsb3VkU3RvcmFnZUZpbGVT",
-            "ZXQSCwoDdXJsGAEgASgJIiAKEENsb3VkU3RvcmFnZVBhdGgSDAoEcGF0aBgB",
-            "IAEoCSLEAwoPQmlnUXVlcnlPcHRpb25zEj0KD3RhYmxlX3JlZmVyZW5jZRgB",
-            "IAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEjoK",
-            "EmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQYAyABKAMSGgoScm93c19saW1p",
-            "dF9wZXJjZW50GAYgASgFEkoKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhv",
-            "ZBI3Cg9leGNsdWRlZF9maWVsZHMYBSADKAsyHi5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuRmllbGRJZBI3Cg9pbmNsdWRlZF9maWVsZHMYByADKAsyHi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJICgxTYW1wbGVNZXRob2QSHQoZ",
-            "U0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRP",
-            "TV9TVEFSVBACItoECg1TdG9yYWdlQ29uZmlnEkQKEWRhdGFzdG9yZV9vcHRp",
-            "b25zGAIgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFzdG9yZU9w",
-            "dGlvbnNIABJLChVjbG91ZF9zdG9yYWdlX29wdGlvbnMYAyABKAsyKi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9yYWdlT3B0aW9uc0gAEkMKEWJp",
-            "Z19xdWVyeV9vcHRpb25zGAQgASgLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkJpZ1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJpZF9vcHRpb25zGAkgASgLMiQu",
-            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkh5YnJpZE9wdGlvbnNIABJMCg90aW1l",
-            "c3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3Rv",
-            "cmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcS",
-            "LgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2Zf",
-            "dGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5cGUi9gEKDUh5YnJpZE9wdGlv",
-            "bnMSEwoLZGVzY3JpcHRpb24YASABKAkSIwobcmVxdWlyZWRfZmluZGluZ19s",
-            "YWJlbF9rZXlzGAIgAygJEkAKBmxhYmVscxgDIAMoCzIwLmdvb2dsZS5wcml2",
-            "YWN5LmRscC52Mi5IeWJyaWRPcHRpb25zLkxhYmVsc0VudHJ5EjoKDXRhYmxl",
-            "X29wdGlvbnMYBCABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuVGFibGVP",
-            "cHRpb25zGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEg",
-            "ASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoK",
-            "cm93X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tl",
-            "eRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4",
-            "CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "UGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgB",
-            "IAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBl",
-            "IqEBCglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlf",
-            "a2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5",
-            "SAASEQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJs",
-            "ZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoI",
-            "dGFibGVfaWQYAyABKAkiSgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9p",
-            "ZBgBIAEoCRIQCgh0YWJsZV9pZBgCIAEoCRISCgpwcm9qZWN0X2lkGAMgASgJ",
-            "InMKDUJpZ1F1ZXJ5RmllbGQSMwoFdGFibGUYASABKAsyJC5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuQmlnUXVlcnlUYWJsZRItCgVmaWVsZBgCIAEoCzIeLmdv",
-            "b2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkIjkKCEVudGl0eUlkEi0KBWZp",
-            "ZWxkGAEgASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSgoM",
-            "VGFibGVPcHRpb25zEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgBIAMoCzIeLmdv",
-            "b2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoW",
-            "TElLRUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIM",
-            "CghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVS",
-            "WV9MSUtFTFkQBSqaAQoIRmlsZVR5cGUSGQoVRklMRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDwoLQklOQVJZX0ZJTEUQARINCglURVhUX0ZJTEUQAhIJCgVJTUFH",
-            "RRADEggKBFdPUkQQBRIHCgNQREYQBhIICgRBVlJPEAcSBwoDQ1NWEAgSBwoD",
-            "VFNWEAkSDgoKUE9XRVJQT0lOVBALEgkKBUVYQ0VMEAxCmQEKGWNvbS5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjJCCkRscFN0b3JhZ2VQAVopY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kbHAvYXBpdjIvZGxwcGI7ZGxwcGKqAhNHb29nbGUuQ2xvdWQu",
-            "RGxwLlYyygITR29vZ2xlXENsb3VkXERscFxWMuoCFkdvb2dsZTo6Q2xvdWQ6",
-            "OkRscDo6VjJiBnByb3RvMw=="));
+            "Mi5TdG9yZWRUeXBlSAASaQodbWV0YWRhdGFfa2V5X3ZhbHVlX2V4cHJlc3Np",
+            "b24YCiABKAsyQC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5",
+            "cGUuTWV0YWRhdGFLZXlWYWx1ZUV4cHJlc3Npb25IABJMCg9kZXRlY3Rpb25f",
+            "cnVsZXMYByADKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
+            "b1R5cGUuRGV0ZWN0aW9uUnVsZRJLCg5leGNsdXNpb25fdHlwZRgIIAEoDjIz",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5FeGNsdXNp",
+            "b25UeXBlEkIKEXNlbnNpdGl2aXR5X3Njb3JlGAkgASgLMicuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUayAEKCkRpY3Rpb25hcnkS",
+            "TgoJd29yZF9saXN0GAEgASgLMjkuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1",
+            "c3RvbUluZm9UeXBlLkRpY3Rpb25hcnkuV29yZExpc3RIABJFChJjbG91ZF9z",
+            "dG9yYWdlX3BhdGgYAyABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xv",
+            "dWRTdG9yYWdlUGF0aEgAGhkKCFdvcmRMaXN0Eg0KBXdvcmRzGAEgAygJQggK",
+            "BnNvdXJjZRovCgVSZWdleBIPCgdwYXR0ZXJuGAEgASgJEhUKDWdyb3VwX2lu",
+            "ZGV4ZXMYAiADKAUaDwoNU3Vycm9nYXRlVHlwZRpEChpNZXRhZGF0YUtleVZh",
+            "bHVlRXhwcmVzc2lvbhIRCglrZXlfcmVnZXgYASABKAkSEwoLdmFsdWVfcmVn",
+            "ZXgYAiABKAkavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxlGAEg",
+            "ASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRl",
+            "dGVjdGlvblJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoNd2lu",
+            "ZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEKFExp",
+            "a2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASABKA4y",
+            "IS5nb29nbGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3JlbGF0",
+            "aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtIb3R3",
+            "b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0eRgC",
+            "IAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5E",
+            "ZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVzdG1l",
+            "bnQYAyABKAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5",
+            "cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0eXBl",
+            "IksKDUV4Y2x1c2lvblR5cGUSHgoaRVhDTFVTSU9OX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIaChZFWENMVVNJT05fVFlQRV9FWENMVURFEAFCBgoEdHlwZSIXCgdG",
+            "aWVsZElkEgwKBG5hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJvamVj",
+            "dF9pZBgCIAEoCRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4cHJl",
+            "c3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQRGF0YXN0b3JlT3B0aW9ucxI4Cgxw",
+            "YXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFy",
+            "dGl0aW9uSWQSMwoEa2luZBgCIAEoCzIlLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91ZFN0b3JhZ2VSZWdleEZpbGVTZXQS",
+            "EwoLYnVja2V0X25hbWUYASABKAkSFQoNaW5jbHVkZV9yZWdleBgCIAMoCRIV",
+            "Cg1leGNsdWRlX3JlZ2V4GAMgAygJIuwDChNDbG91ZFN0b3JhZ2VPcHRpb25z",
+            "EkQKCGZpbGVfc2V0GAEgASgLMjIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNs",
+            "b3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNldBIcChRieXRlc19saW1pdF9wZXJf",
+            "ZmlsZRgEIAEoAxIkChxieXRlc19saW1pdF9wZXJfZmlsZV9wZXJjZW50GAgg",
+            "ASgFEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djIuRmlsZVR5cGUSTgoNc2FtcGxlX21ldGhvZBgGIAEoDjI3Lmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLlNhbXBsZU1ldGhv",
+            "ZBIbChNmaWxlc19saW1pdF9wZXJjZW50GAcgASgFGl8KB0ZpbGVTZXQSCwoD",
+            "dXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVfc2V0GAIgASgLMi8uZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVJlZ2V4RmlsZVNldCJICgxTYW1w",
+            "bGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RP",
+            "UBABEhAKDFJBTkRPTV9TVEFSVBACIiIKE0Nsb3VkU3RvcmFnZUZpbGVTZXQS",
+            "CwoDdXJsGAEgASgJIiAKEENsb3VkU3RvcmFnZVBhdGgSDAoEcGF0aBgBIAEo",
+            "CSLEAwoPQmlnUXVlcnlPcHRpb25zEj0KD3RhYmxlX3JlZmVyZW5jZRgBIAEo",
+            "CzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEjoKEmlk",
+            "ZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQYAyABKAMSGgoScm93c19saW1pdF9w",
+            "ZXJjZW50GAYgASgFEkoKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhvZBI3",
+            "Cg9leGNsdWRlZF9maWVsZHMYBSADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djIuRmllbGRJZBI3Cg9pbmNsdWRlZF9maWVsZHMYByADKAsyHi5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjIuRmllbGRJZCJICgxTYW1wbGVNZXRob2QSHQoZU0FN",
+            "UExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRPTV9T",
+            "VEFSVBACItoECg1TdG9yYWdlQ29uZmlnEkQKEWRhdGFzdG9yZV9vcHRpb25z",
+            "GAIgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFzdG9yZU9wdGlv",
+            "bnNIABJLChVjbG91ZF9zdG9yYWdlX29wdGlvbnMYAyABKAsyKi5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9yYWdlT3B0aW9uc0gAEkMKEWJpZ19x",
+            "dWVyeV9vcHRpb25zGAQgASgLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJp",
+            "Z1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJpZF9vcHRpb25zGAkgASgLMiQuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkh5YnJpZE9wdGlvbnNIABJMCg90aW1lc3Bh",
+            "bl9jb25maWcYBiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3RvcmFn",
+            "ZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcSLgoK",
+            "c3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EjcKD3RpbWVzdGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5GaWVsZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2ZfdGlt",
+            "ZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5cGUi9gEKDUh5YnJpZE9wdGlvbnMS",
+            "EwoLZGVzY3JpcHRpb24YASABKAkSIwobcmVxdWlyZWRfZmluZGluZ19sYWJl",
+            "bF9rZXlzGAIgAygJEkAKBmxhYmVscxgDIAMoCzIwLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5IeWJyaWRPcHRpb25zLkxhYmVsc0VudHJ5EjoKDXRhYmxlX29w",
+            "dGlvbnMYBCABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuVGFibGVPcHRp",
+            "b25zGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgL",
+            "MiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoKcm93",
+            "X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tleRgB",
+            "IAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4Cgxw",
+            "YXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFy",
+            "dGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgBIAEo",
+            "CRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBlIqEB",
+            "CglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlfa2V5",
+            "GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5SAAS",
+            "EQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRIS",
+            "Cgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFi",
+            "bGVfaWQYAyABKAkiSgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9pZBgB",
+            "IAEoCRIQCgh0YWJsZV9pZBgCIAEoCRISCgpwcm9qZWN0X2lkGAMgASgJInMK",
+            "DUJpZ1F1ZXJ5RmllbGQSMwoFdGFibGUYASABKAsyJC5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjIuQmlnUXVlcnlUYWJsZRItCgVmaWVsZBgCIAEoCzIeLmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52Mi5GaWVsZElkIjkKCEVudGl0eUlkEi0KBWZpZWxk",
+            "GAEgASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSgoMVGFi",
+            "bGVPcHRpb25zEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgBIAMoCzIeLmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoWTElL",
+            "RUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghV",
+            "TkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9M",
+            "SUtFTFkQBSqaAQoIRmlsZVR5cGUSGQoVRklMRV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASDwoLQklOQVJZX0ZJTEUQARINCglURVhUX0ZJTEUQAhIJCgVJTUFHRRAD",
+            "EggKBFdPUkQQBRIHCgNQREYQBhIICgRBVlJPEAcSBwoDQ1NWEAgSBwoDVFNW",
+            "EAkSDgoKUE9XRVJQT0lOVBALEgkKBUVYQ0VMEAxCmQEKGWNvbS5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJCCkRscFN0b3JhZ2VQAVopY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kbHAvYXBpdjIvZGxwcGI7ZGxwcGKqAhNHb29nbGUuQ2xvdWQuRGxw",
+            "LlYyygITR29vZ2xlXENsb3VkXERscFxWMuoCFkdvb2dsZTo6Q2xvdWQ6OkRs",
+            "cDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version", "SensitivityScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.SensitivityScore), global::Google.Cloud.Dlp.V2.SensitivityScore.Parser, new[]{ "Score" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "MetadataKeyValueExpression", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression.Parser, new[]{ "KeyRegex", "ValueRegex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment.Parser, new[]{ "FixedLikelihood", "RelativeLikelihood" }, new[]{ "Adjustment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule.Parser, new[]{ "HotwordRegex", "Proximity", "LikelihoodAdjustment" }, null, null, null, null)})}),
@@ -1154,6 +1159,9 @@ namespace Google.Cloud.Dlp.V2 {
         case TypeOneofCase.StoredType:
           StoredType = other.StoredType.Clone();
           break;
+        case TypeOneofCase.MetadataKeyValueExpression:
+          MetadataKeyValueExpression = other.MetadataKeyValueExpression.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1251,8 +1259,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "stored_type" field.</summary>
     public const int StoredTypeFieldNumber = 5;
     /// <summary>
-    /// Load an existing `StoredInfoType` resource for use in
-    /// `InspectDataSource`. Not currently supported in `InspectContent`.
+    /// Loads an existing `StoredInfoType` resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1264,6 +1271,21 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "metadata_key_value_expression" field.</summary>
+    public const int MetadataKeyValueExpressionFieldNumber = 10;
+    /// <summary>
+    /// Key-value pair to detect in the metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression MetadataKeyValueExpression {
+      get { return typeCase_ == TypeOneofCase.MetadataKeyValueExpression ? (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.MetadataKeyValueExpression;
+      }
+    }
+
     /// <summary>Field number for the "detection_rules" field.</summary>
     public const int DetectionRulesFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule> _repeated_detectionRules_codec
@@ -1271,8 +1293,8 @@ namespace Google.Cloud.Dlp.V2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule> detectionRules_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule>();
     /// <summary>
     /// Set of detection rules to apply to all findings of this CustomInfoType.
-    /// Rules are applied in order that they are specified. Not supported for the
-    /// `surrogate_type` CustomInfoType.
+    /// Rules are applied in the order that they are specified. Only supported
+    /// for the `dictionary`, `regex`, and `stored_type` CustomInfoTypes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1285,7 +1307,8 @@ namespace Google.Cloud.Dlp.V2 {
     private global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType exclusionType_ = global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified;
     /// <summary>
     /// If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding
-    /// to be returned. It still can be used for rules matching.
+    /// to be returned. It still can be used for rules matching. Only supported
+    /// for the `dictionary`, `regex`, and `stored_type` CustomInfoTypes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1323,6 +1346,7 @@ namespace Google.Cloud.Dlp.V2 {
       Regex = 3,
       SurrogateType = 4,
       StoredType = 5,
+      MetadataKeyValueExpression = 10,
     }
     private TypeOneofCase typeCase_ = TypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1359,6 +1383,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(Regex, other.Regex)) return false;
       if (!object.Equals(SurrogateType, other.SurrogateType)) return false;
       if (!object.Equals(StoredType, other.StoredType)) return false;
+      if (!object.Equals(MetadataKeyValueExpression, other.MetadataKeyValueExpression)) return false;
       if(!detectionRules_.Equals(other.detectionRules_)) return false;
       if (ExclusionType != other.ExclusionType) return false;
       if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
@@ -1376,6 +1401,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.Regex) hash ^= Regex.GetHashCode();
       if (typeCase_ == TypeOneofCase.SurrogateType) hash ^= SurrogateType.GetHashCode();
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
+      if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) hash ^= MetadataKeyValueExpression.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) hash ^= ExclusionType.GetHashCode();
       if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
@@ -1431,6 +1457,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(SensitivityScore);
       }
+      if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
+        output.WriteRawTag(82);
+        output.WriteMessage(MetadataKeyValueExpression);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1474,6 +1504,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(SensitivityScore);
       }
+      if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
+        output.WriteRawTag(82);
+        output.WriteMessage(MetadataKeyValueExpression);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1501,6 +1535,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (typeCase_ == TypeOneofCase.StoredType) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoredType);
+      }
+      if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetadataKeyValueExpression);
       }
       size += detectionRules_.CalculateSize(_repeated_detectionRules_codec);
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
@@ -1564,6 +1601,12 @@ namespace Google.Cloud.Dlp.V2 {
             StoredType = new global::Google.Cloud.Dlp.V2.StoredType();
           }
           StoredType.MergeFrom(other.StoredType);
+          break;
+        case TypeOneofCase.MetadataKeyValueExpression:
+          if (MetadataKeyValueExpression == null) {
+            MetadataKeyValueExpression = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression();
+          }
+          MetadataKeyValueExpression.MergeFrom(other.MetadataKeyValueExpression);
           break;
       }
 
@@ -1644,6 +1687,15 @@ namespace Google.Cloud.Dlp.V2 {
             input.ReadMessage(SensitivityScore);
             break;
           }
+          case 82: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression();
+            if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
+              subBuilder.MergeFrom(MetadataKeyValueExpression);
+            }
+            input.ReadMessage(subBuilder);
+            MetadataKeyValueExpression = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1719,6 +1771,15 @@ namespace Google.Cloud.Dlp.V2 {
               SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
             }
             input.ReadMessage(SensitivityScore);
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression();
+            if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
+              subBuilder.MergeFrom(MetadataKeyValueExpression);
+            }
+            input.ReadMessage(subBuilder);
+            MetadataKeyValueExpression = subBuilder;
             break;
           }
         }
@@ -2653,6 +2714,244 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
+      /// Configuration for a custom infoType that detects key-value pairs in the
+      /// metadata matching the specified regular expressions.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MetadataKeyValueExpression : pb::IMessage<MetadataKeyValueExpression>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MetadataKeyValueExpression> _parser = new pb::MessageParser<MetadataKeyValueExpression>(() => new MetadataKeyValueExpression());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MetadataKeyValueExpression> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MetadataKeyValueExpression() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MetadataKeyValueExpression(MetadataKeyValueExpression other) : this() {
+          keyRegex_ = other.keyRegex_;
+          valueRegex_ = other.valueRegex_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MetadataKeyValueExpression Clone() {
+          return new MetadataKeyValueExpression(this);
+        }
+
+        /// <summary>Field number for the "key_regex" field.</summary>
+        public const int KeyRegexFieldNumber = 1;
+        private string keyRegex_ = "";
+        /// <summary>
+        /// The regular expression for the key. Key should be
+        /// non-empty.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string KeyRegex {
+          get { return keyRegex_; }
+          set {
+            keyRegex_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value_regex" field.</summary>
+        public const int ValueRegexFieldNumber = 2;
+        private string valueRegex_ = "";
+        /// <summary>
+        /// The regular expression for the value. Value should be non-empty.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ValueRegex {
+          get { return valueRegex_; }
+          set {
+            valueRegex_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MetadataKeyValueExpression);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MetadataKeyValueExpression other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (KeyRegex != other.KeyRegex) return false;
+          if (ValueRegex != other.ValueRegex) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (KeyRegex.Length != 0) hash ^= KeyRegex.GetHashCode();
+          if (ValueRegex.Length != 0) hash ^= ValueRegex.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (KeyRegex.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KeyRegex);
+          }
+          if (ValueRegex.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ValueRegex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (KeyRegex.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KeyRegex);
+          }
+          if (ValueRegex.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ValueRegex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (KeyRegex.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyRegex);
+          }
+          if (ValueRegex.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ValueRegex);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MetadataKeyValueExpression other) {
+          if (other == null) {
+            return;
+          }
+          if (other.KeyRegex.Length != 0) {
+            KeyRegex = other.KeyRegex;
+          }
+          if (other.ValueRegex.Length != 0) {
+            ValueRegex = other.ValueRegex;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                KeyRegex = input.ReadString();
+                break;
+              }
+              case 18: {
+                ValueRegex = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                KeyRegex = input.ReadString();
+                break;
+              }
+              case 18: {
+                ValueRegex = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Deprecated; use `InspectionRuleSet` instead. Rule for modifying a
       /// `CustomInfoType` to alter behavior under certain circumstances, depending
       /// on the specific details of the rule. Not supported for the `surrogate_type`
@@ -2673,7 +2972,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
