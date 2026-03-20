@@ -69,6 +69,18 @@ namespace Google.Cloud.BigQuery.V2
             request.FormatOptionsUseInt64Timestamp = options?.UseInt64Timestamp ?? true;
         }
 
+        internal void ModifyRequest(Apis.Bigquery.v2.Data.QueryRequest request)
+        {
+            if (Timeout != null)
+            {
+                request.TimeoutMs = (long?) Timeout?.TotalMilliseconds;
+            }
+            if (PageSize != null)
+            {
+                request.MaxResults = PageSize;
+            }
+        }
+
         private void ModifyRequest(GetQueryResultsRequest request)
         {
             if (PageToken != null && StartIndex != null)

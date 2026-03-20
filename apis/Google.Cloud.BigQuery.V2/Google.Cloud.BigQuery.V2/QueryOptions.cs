@@ -223,5 +223,40 @@ namespace Google.Cloud.BigQuery.V2
             }
             ConfigurationModifier?.Invoke(query);
         }
+
+        internal void ModifyRequest(QueryRequest query)
+        {
+            // Note: no validation of combinations (flatten results etc). Leave this to the server,
+            // to avoid restrictions getting out of date.
+            if (DefaultDataset != null)
+            {
+                query.DefaultDataset = DefaultDataset;
+            }
+            if (MaximumBytesBilled != null)
+            {
+                query.MaximumBytesBilled = MaximumBytesBilled;
+            }
+            if (UseQueryCache != null)
+            {
+                query.UseQueryCache = UseQueryCache;
+            }
+            if (UseLegacySql != null)
+            {
+                query.UseLegacySql = UseLegacySql;
+            }
+            if (ParameterMode != null)
+            {
+                // Safe for now; we only have "named" or "positional". This is unlikely to change.
+                query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
+            }
+            if (DestinationEncryptionConfiguration != null)
+            {
+                query.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
+            }
+
+            // TODO: Maybe add support for something like ConfigurationModifier?.Invoke(query) this would need to be as
+            // a new action since there's no overlap otherwise we will have to do a lossy mapping from the modifications
+            // on JobsConfigurationQuery to QueryRequest.
+        }
     }
 }
