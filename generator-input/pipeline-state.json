@@ -4943,6 +4943,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.NetworkConnectivity.V1Beta/Google.Cloud.NetworkConnectivity.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/datacatalog/lineage/configmanagement/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [

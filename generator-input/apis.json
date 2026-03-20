@@ -1971,6 +1971,25 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Lineage",
+      "productUrl": "https://cloud.google.com/dataplex/docs/about-data-lineage",
+      "description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "tags": [],
+      "dependencies": {
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/datacatalog/lineage/configmanagement/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "datalineage",
+      "serviceConfigFile": "datalineage_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.DataCatalog.Lineage.V1",
       "version": "1.5.0",
       "type": "grpc",
