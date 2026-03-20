@@ -4948,7 +4948,7 @@
             "id": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/configmanagement/v1"
             ],
