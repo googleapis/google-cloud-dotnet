@@ -62,7 +62,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
         GenerateContentResponse generateResult = await _client.GenerateContentAsync(request, cancellationToken).ConfigureAwait(false);
 
         // Create the response.
-        ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, []))
+        ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, (IList<AIContent>)[]))
         {
             CreatedAt = generateResult.CreateTime?.ToDateTimeOffset(),
             ModelId = !string.IsNullOrEmpty(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
@@ -98,7 +98,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
         await foreach (GenerateContentResponse generateResult in responseStream.WithCancellation(cancellationToken).ConfigureAwait(false))
         {
             // Create a response update for each result in the stream.
-            ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, [])
+            ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, (IList<AIContent>)[])
             {
                 CreatedAt = generateResult.CreateTime.ToDateTimeOffset(),
                 ModelId = !string.IsNullOrEmpty(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
@@ -590,6 +590,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     /// <summary>Creates <see cref="AIContent"/>s for <paramref name="parts"/> and adds them to <paramref name="contents"/>.</summary>
     private static void AddAIContentsForParts(RepeatedField<Part> parts, IList<AIContent> contents)
     {
+        string? lastCodeInterpreterCallId = null;
         foreach (var part in parts)
         {
             AIContent content = part.DataCase switch
@@ -613,13 +614,13 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         null),
 
                 Part.DataOneofCase.ExecutableCode when part.ExecutableCode is { } execCode =>
-                    new CodeInterpreterToolCallContent()
+                    new CodeInterpreterToolCallContent(lastCodeInterpreterCallId = Guid.NewGuid().ToString())
                     {
                         Inputs = [new DataContent(Encoding.UTF8.GetBytes(execCode.Code), LanguageToMimeType(execCode.Language))],
                     },
 
                 Part.DataOneofCase.CodeExecutionResult when part.CodeExecutionResult is { Output: { } codeResultOutput } codeResult =>
-                    new CodeInterpreterToolResultContent()
+                    new CodeInterpreterToolResultContent(lastCodeInterpreterCallId ?? Guid.NewGuid().ToString())
                     {
                         Outputs = [codeResult.Outcome is CodeExecutionResult.Types.Outcome.Ok ?
                             new TextContent(codeResultOutput) :
