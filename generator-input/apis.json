@@ -1976,7 +1976,7 @@
       "type": "grpc",
       "productName": "Data Lineage",
       "productUrl": "https://cloud.google.com/dataplex/docs/about-data-lineage",
-      "description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "description": "Recommended Google client library to access the Dataplex Data Lineage Config Management API",
       "tags": [],
       "dependencies": {
         "Google.LongRunning": "3.5.0"
