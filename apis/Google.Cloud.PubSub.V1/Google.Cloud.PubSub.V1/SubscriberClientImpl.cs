@@ -36,7 +36,7 @@ namespace Google.Cloud.PubSub.V1;
 public sealed partial class SubscriberClientImpl : SubscriberClient
 {
     // TODO: Logging
-
+    private static readonly TimeSpan s_nackGracePeriod = TimeSpan.FromSeconds(30);
     internal const string DeliveryAttemptAttrKey = "googclient_deliveryattempt";
 
     /// <summary>
@@ -89,8 +89,13 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private readonly TimeSpan _disposeTimeout;
 
     private TaskCompletionSource<int> _mainTcs;
-    private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
-    private CancellationTokenSource _globalHardStopCts;
+    private CancellationTokenSource _globalNackAndWaitCts; // Nack and wait is guarenteed to occur before hard-stop.
+    private CancellationTokenSource _globalHardStopCts; // Immediately stops all processing, dropping any unhandled messages.
+    private CancellationTokenSource _globalWaitForProcessingCts;
+    private CancellationTokenSource _globalNackImmediatelyCts;
+
+    // A boolean that is true if stop has been initiated with the StopAsync methods.
+    private bool IsStopStarted =>_globalWaitForProcessingCts.IsCancellationRequested || _globalNackAndWaitCts.IsCancellationRequested;
 
     // This property only exists for testing.
     // This is the delay between obtaining a lease on a message and then further extending the lease on that message
@@ -120,8 +125,10 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         {
             GaxPreconditions.CheckState(_mainTcs == null, "Can only start an instance once.");
             _mainTcs = new TaskCompletionSource<int>();
-            _globalSoftStopCts = new CancellationTokenSource();
+            _globalNackAndWaitCts = new CancellationTokenSource();
             _globalHardStopCts = new CancellationTokenSource();
+            _globalNackImmediatelyCts = new CancellationTokenSource();
+            _globalWaitForProcessingCts = CancellationTokenSource.CreateLinkedTokenSource(_globalNackImmediatelyCts.Token);
         }
         var registeredTasks = new HashSet<Task>();
         Action<Task> registerTask = task =>
@@ -149,7 +156,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         var task = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(subscriberTasks));
         if (task.IsFaulted)
         {
-            _globalSoftStopCts.Cancel();
+            _globalNackAndWaitCts.Cancel();
             _globalHardStopCts.Cancel();
         }
         // Wait for all subscribers to stop
@@ -194,29 +201,117 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
                 return new ValueTask(Task.CompletedTask);
             }
         }
+#pragma warning disable CS0618 // allow use of obsolete method
         return new ValueTask(StopAsync(_disposeTimeout));
+#pragma warning restore CS0618
     }
 
     /// <inheritdoc />
+    [Obsolete("Use StopAsync(ShutdownOption, TimeSpan?, CancellationToken) instead.")]
     public override Task StopAsync(CancellationToken hardStopToken)
     {
         lock (_lock)
         {
             // Note: If multiple stop requests are made, only the first cancellation token is observed.
-            if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
+            if (_mainTcs is not null && IsStopStarted)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
                 return _mainTcs.Task;
             }
             GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
-            _globalSoftStopCts.Cancel();
+            _globalNackAndWaitCts.Cancel();
         }
 
-        var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());
+        CancelTargetOnTrigger(targetSourceToCancel: _globalHardStopCts, triggerToken: hardStopToken);
+        return _mainTcs.Task;
+    }
+
+    /// <inheritdoc />
+    public override Task StopAsync(ShutdownOptions shutdownOptions, CancellationToken cancellationToken = default)
+    {
+        lock (_lock)
+        {
+            GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
+            // Only the first call to StopAsync is observed
+            if (IsStopStarted)
+            {
+                // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.
+                return _mainTcs.Task;
+            }
+            // Signal to stop retrieving new messages immediately.
+            _globalWaitForProcessingCts.Cancel();
+        }
+
+        GaxPreconditions.CheckArgument(shutdownOptions != null, nameof(shutdownOptions), "ShutdownOptions cannot be null");
+        TimeSpan shutdownTimeout = shutdownOptions.Timeout ?? _maxExtensionDuration;
+        if (shutdownTimeout <= TimeSpan.Zero)
+        {
+            Logger?.LogWarning("Shutdown timeout is 0! Stopping {Client} immediately; work may be dropped.", nameof(SubscriberClient));
+        }
+
+        // Schedule the shutdown, we can always think of a shutdown as occuring in the following steps
+        // WaitForProcessing -> NackImmedieately and maybe a HardStop afterwards if the timeout is reached
+        // or the cancellation token is cancelled. Note a the Nack delay will be zero in the case of NackImmediately
+        CancelAfterDelay(_globalNackImmediatelyCts, CalculateNackDelay());
+        CancelAfterDelay(_globalHardStopCts, shutdownTimeout);
+        CancelTargetOnTrigger(targetSourceToCancel: _globalHardStopCts, triggerToken: cancellationToken);
+
+        return _mainTcs.Task;
+
+        // Calculates the time until we switch to NackImmediately mode.
+        TimeSpan CalculateNackDelay()
+        {
+            switch (shutdownOptions.Mode)
+            {
+                case ShutdownMode.NackImmediately:
+                    return TimeSpan.Zero;
+                case ShutdownMode.WaitForProcessing:
+                    // WaitForProcessing enters a Nack grace period before final shutdown if it was unable to finish
+                    // handling all received messages.
+                    TimeSpan delay = shutdownTimeout > s_nackGracePeriod ? shutdownTimeout - s_nackGracePeriod : TimeSpan.Zero;
+                    if (delay == TimeSpan.Zero && shutdownTimeout > TimeSpan.Zero)
+                    {
+                        Logger?.LogWarning("Shutdown timeout ({Timeout}) <= GracePeriod ({GracePeriod}). Nacking immediately.",
+                            shutdownTimeout, s_nackGracePeriod);
+                    }
+                    return delay;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(shutdownOptions.Mode), shutdownOptions.Mode, null);
+            }
+        }
+    }
+
+    // Triggers cancellation after provided delay. This is used instead of .CancelAfterDelay to integrate with
+    // IScheduler, allowing this shutdown method to be tested.
+    private void CancelAfterDelay(CancellationTokenSource cts, TimeSpan delay)
+    {
+        if (delay == TimeSpan.Zero)
+        {
+            cts.Cancel();
+            return;
+        }
+        _taskHelper.Run(async () =>
+        {
+            await _taskHelper.ConfigureAwait(_scheduler.Delay(delay, CancellationToken.None));
+            cts.Cancel();
+        });
+    }
+
+    /// <summary>
+    /// Configures a <see cref="CancellationTokenSource"/> to be cancelled automatically
+    /// whenever a specific <see cref="CancellationToken"/> is triggered.
+    /// The registration is automatically disposed when _mainTcs completes.
+    /// </summary>
+    /// <param name="targetSourceToCancel">The destination <see cref="CancellationTokenSource"/> that should be cancelled.</param>
+    /// <param name="triggerToken">The source <see cref="CancellationToken"/> that provides the cancellation signal.</param>
+    private void CancelTargetOnTrigger(
+        CancellationTokenSource targetSourceToCancel,
+        CancellationToken triggerToken)
+    {
+        var registration = triggerToken.Register(() => targetSourceToCancel.Cancel());
         // Do not register this Task to be awaited on at shutdown.
         // It completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
         _taskHelper.Run(async () =>
             await _taskHelper.ConfigureAwaitWithFinally(() => _mainTcs.Task, () => registration.Dispose()));
-        return _mainTcs.Task;
     }
 }
