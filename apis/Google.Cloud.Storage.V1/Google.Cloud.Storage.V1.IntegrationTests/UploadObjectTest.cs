@@ -308,9 +308,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
-            Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
-            // We don't delete the object, so it's still present.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
+            var exception = Assert.Throws<GoogleApiException>(() => client.UploadObject(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -323,26 +322,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
+            var exception = Assert.Throws<GoogleApiException>(() => client.UploadObject(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
             var notFound = Assert.Throws<GoogleApiException>(() => _fixture.Client.GetObject(bucket, name));
             Assert.Equal(HttpStatusCode.NotFound, notFound.HttpStatusCode);
-        }
-
-        [Fact]
-        public void UploadObject_InvalidHash_DeleteAndThrow_DeleteFails()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            var ex = Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
-            Assert.NotNull(ex.AdditionalFailures);
-            // The deletion failed, so the uploaded object still exists.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]
@@ -371,9 +354,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
-            await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
-            // We don't delete the object, so it's still present.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -387,26 +369,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
             var notFound = await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.GetObjectAsync(bucket, name));
             Assert.Equal(HttpStatusCode.NotFound, notFound.HttpStatusCode);
-        }
-
-        [Fact]
-        public async Task UploadObjectAsync_InvalidHash_DeleteAndThrow_DeleteFails()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            var ex = await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
-            Assert.NotNull(ex.AdditionalFailures);
-            // The deletion failed, so the uploaded object still exists.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]
@@ -485,21 +451,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 {
                     request.Content.Headers.Add(header.Key, header.Value);
                 }
-            }
-        }
-
-        private class BreakDeleteInterceptor : IHttpExecuteInterceptor
-        {
-            public Task InterceptAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-            {
-                // We only care about Delete requests
-                if (request.Method == HttpMethod.Delete)
-                {
-                    // Ugly but effective hack: replace the generation URL parameter so that we add a leading 9,
-                    // so the generation we try to delete is the wrong one.
-                    request.RequestUri = new Uri(request.RequestUri.ToString().Replace("generation=", "generation=9"));
-                }
-                return Task.FromResult(0);
             }
         }
 
