@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.26.0, released 2026-03-23
+
+### New features
+
+- Support Chokepoint and external exposure in findings Proto
+
 ## Version 3.25.0, released 2025-11-06
 
 ### New features
