@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-03-23
+
+### New features
+
+- Update public libraries for CES v1beta
+
+### Documentation improvements
+
+- A comment for field `fallback_action` in message `.google.cloud.ces.v1beta.LanguageSettings` is changed
+- A comment for enum value `ERROR_HANDLING_STRATEGY_UNSPECIFIED` in enum `ErrorHandlingStrategy` is changed
+- A comment for enum value `FALLBACK_RESPONSE` in enum `ErrorHandlingStrategy` is changed
+- A comment for field `project` in message `.google.cloud.ces.v1beta.BigQueryExportSettings` is changed
+- A comment for field `dataset` in message `.google.cloud.ces.v1beta.BigQueryExportSettings` is changed
+- A comment for message `RunEvaluationOperationMetadata` is changed
+- A comment for method `RunSession` in service `SessionService` is changed
+
 ## Version 1.0.0-beta02, released 2026-03-09
 
 ### New features
