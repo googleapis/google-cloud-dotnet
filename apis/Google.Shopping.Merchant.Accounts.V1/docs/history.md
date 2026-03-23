@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.5.0, released 2026-03-23
+
+### New features
+
+- Add CreateTestAccount RPC to Accounts service for creating test-only Merchant Center accounts
+
+### Documentation improvements
+
+- Update Account.account_name documentation for naming restrictions
+- Clarify CheckoutSettings.eligible_destinations usage
+- Refine DeveloperRegistration.developer_email behavior description
+- Add product-ratings to Program documentation
+- Update Region to support radius_area and clarify area type exclusivity
+- Improve TermsOfServiceKind.MERCHANT_CENTER comment
+- Update DeleteUser method description
+
 ## Version 1.4.0, released 2025-12-03
 
 ### New features
