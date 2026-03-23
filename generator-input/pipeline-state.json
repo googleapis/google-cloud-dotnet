@@ -4946,10 +4946,12 @@
         },
         {
             "id": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-03-23T14:52:42.675020538Z",
             "lastGeneratedCommit": "cba8415718590712af80d0fd90a5f016a2607b25",
+            "lastReleasedCommit": "cba8415718590712af80d0fd90a5f016a2607b25",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/configmanagement/v1"
             ],
