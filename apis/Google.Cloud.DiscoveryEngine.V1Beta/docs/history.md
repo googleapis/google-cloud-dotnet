@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta22, released 2026-03-23
+
+### New features
+
+- Update DataStoreSpec and add BoostSpec to SearchService
+
+### Documentation improvements
+
+- Clarify project number requirement for data_store field
+
 ## Version 1.0.0-beta21, released 2025-11-05
 
 ### New features
