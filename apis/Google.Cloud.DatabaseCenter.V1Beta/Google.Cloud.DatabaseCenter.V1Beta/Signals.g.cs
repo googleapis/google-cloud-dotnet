@@ -133,7 +133,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             "ZXJpdHkSHgoaSVNTVUVfU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIWChJJU1NV",
             "RV9TRVZFUklUWV9MT1cQARIZChVJU1NVRV9TRVZFUklUWV9NRURJVU0QAhIX",
             "ChNJU1NVRV9TRVZFUklUWV9ISUdIEAMSGwoXSVNTVUVfU0VWRVJJVFlfQ1JJ",
-            "VElDQUwQBBIdChlJU1NVRV9TRVZFUklUWV9JUlJFTEVWQU5UEAUq3yAKClNp",
+            "VElDQUwQBBIdChlJU1NVRV9TRVZFUklUWV9JUlJFTEVWQU5UEAUqjCEKClNp",
             "Z25hbFR5cGUSGwoXU0lHTkFMX1RZUEVfVU5TUEVDSUZJRUQQABIrCidTSUdO",
             "QUxfVFlQRV9SRVNPVVJDRV9GQUlMT1ZFUl9QUk9URUNURUQQARIjCh9TSUdO",
             "QUxfVFlQRV9HUk9VUF9NVUxUSVJFR0lPTkFMEAISKgomU0lHTkFMX1RZUEVf",
@@ -227,7 +227,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             "T1VUREFURURfQ0xJRU5UEGMSIgoeU0lHTkFMX1RZUEVfREFUQUJPT1NUX0RJ",
             "U0FCTEVEEGQSMAosU0lHTkFMX1RZUEVfUkVDT01NRU5ERURfTUFJTlRFTkFO",
             "Q0VfUE9MSUNJRVMQZRIgChxTSUdOQUxfVFlQRV9FWFRFTkRFRF9TVVBQT1JU",
-            "EGZC+gEKJmNvbS5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRh",
+            "EGYSKwonU0lHTkFMX1RZUEVfVkVSU0lPTl9ORUFSSU5HX0VORF9PRl9MSUZF",
+            "EGhC+gEKJmNvbS5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRh",
             "QgxTaWduYWxzUHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhYmFz",
             "ZWNlbnRlci9hcGl2MWJldGEvZGF0YWJhc2VjZW50ZXJwYjtkYXRhYmFzZWNl",
             "bnRlcnBiqgIiR29vZ2xlLkNsb3VkLkRhdGFiYXNlQ2VudGVyLlYxQmV0YcoC",
@@ -786,6 +787,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// Resource version is in extended support.
     /// </summary>
     [pbr::OriginalName("SIGNAL_TYPE_EXTENDED_SUPPORT")] ExtendedSupport = 102,
+    /// <summary>
+    /// Represents a database version nearing end of life.
+    /// </summary>
+    [pbr::OriginalName("SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE")] VersionNearingEndOfLife = 104,
   }
 
   #endregion

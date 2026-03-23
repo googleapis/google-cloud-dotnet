@@ -163,43 +163,45 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             "RBAAEgwKCElOU1RBTkNFEAESCwoHQ0xVU1RFUhACEgwKCERBVEFCQVNFEAMq",
             "bQoHRWRpdGlvbhIXChNFRElUSU9OX1VOU1BFQ0lGSUVEEAASFgoSRURJVElP",
             "Tl9FTlRFUlBSSVNFEAESGwoXRURJVElPTl9FTlRFUlBSSVNFX1BMVVMQAhIU",
-            "ChBFRElUSU9OX1NUQU5EQVJEEAMq3QEKD1N1YlJlc291cmNlVHlwZRIhCh1T",
+            "ChBFRElUSU9OX1NUQU5EQVJEEAMqwAIKD1N1YlJlc291cmNlVHlwZRIhCh1T",
             "VUJfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEh0KGVNVQl9SRVNPVVJD",
             "RV9UWVBFX1BSSU1BUlkQARIfChtTVUJfUkVTT1VSQ0VfVFlQRV9TRUNPTkRB",
             "UlkQAhIiCh5TVUJfUkVTT1VSQ0VfVFlQRV9SRUFEX1JFUExJQ0EQAxImCiJT",
-            "VUJfUkVTT1VSQ0VfVFlQRV9FWFRFUk5BTF9QUklNQVJZEAUSGwoXU1VCX1JF",
-            "U09VUkNFX1RZUEVfT1RIRVIQBCp0Cg5NYW5hZ2VtZW50VHlwZRIfChtNQU5B",
-            "R0VNRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIfChtNQU5BR0VNRU5UX1RZUEVf",
-            "R0NQX01BTkFHRUQQARIgChxNQU5BR0VNRU5UX1RZUEVfU0VMRl9NQU5BR0VE",
-            "EAIy/wcKDkRhdGFiYXNlQ2VudGVyEqMBCg1RdWVyeVByb2R1Y3RzEjguZ29v",
-            "Z2xlLmNsb3VkLmRhdGFiYXNlY2VudGVyLnYxYmV0YS5RdWVyeVByb2R1Y3Rz",
-            "UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEu",
-            "UXVlcnlQcm9kdWN0c1Jlc3BvbnNlIh2C0+STAhcSFS92MWJldGE6cXVlcnlQ",
-            "cm9kdWN0cxKnAQoOQWdncmVnYXRlRmxlZXQSOS5nb29nbGUuY2xvdWQuZGF0",
-            "YWJhc2VjZW50ZXIudjFiZXRhLkFnZ3JlZ2F0ZUZsZWV0UmVxdWVzdBo6Lmdv",
-            "b2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuQWdncmVnYXRlRmxl",
-            "ZXRSZXNwb25zZSIegtPkkwIYEhYvdjFiZXRhOmFnZ3JlZ2F0ZUZsZWV0Et4B",
-            "ChtRdWVyeURhdGFiYXNlUmVzb3VyY2VHcm91cHMSRi5nb29nbGUuY2xvdWQu",
-            "ZGF0YWJhc2VjZW50ZXIudjFiZXRhLlF1ZXJ5RGF0YWJhc2VSZXNvdXJjZUdy",
-            "b3Vwc1JlcXVlc3QaRy5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFi",
-            "ZXRhLlF1ZXJ5RGF0YWJhc2VSZXNvdXJjZUdyb3Vwc1Jlc3BvbnNlIi6C0+ST",
-            "AigiIy92MWJldGE6cXVlcnlEYXRhYmFzZVJlc291cmNlR3JvdXBzOgEqEr4B",
-            "ChNBZ2dyZWdhdGVJc3N1ZVN0YXRzEj4uZ29vZ2xlLmNsb3VkLmRhdGFiYXNl",
-            "Y2VudGVyLnYxYmV0YS5BZ2dyZWdhdGVJc3N1ZVN0YXRzUmVxdWVzdBo/Lmdv",
-            "b2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuQWdncmVnYXRlSXNz",
-            "dWVTdGF0c1Jlc3BvbnNlIiaC0+STAiAiGy92MWJldGE6YWdncmVnYXRlSXNz",
-            "dWVTdGF0czoBKhKnAQoLUXVlcnlJc3N1ZXMSNi5nb29nbGUuY2xvdWQuZGF0",
-            "YWJhc2VjZW50ZXIudjFiZXRhLlF1ZXJ5SXNzdWVzUmVxdWVzdBo3Lmdvb2ds",
-            "ZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuUXVlcnlJc3N1ZXNSZXNw",
-            "b25zZSIn2kEGcGFyZW50gtPkkwIYIhMvdjFiZXRhOnF1ZXJ5SXNzdWVzOgEq",
-            "GlHKQR1kYXRhYmFzZWNlbnRlci5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C+gEKJmNv",
-            "bS5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRhQgxTZXJ2aWNl",
-            "UHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhYmFzZWNlbnRlci9h",
-            "cGl2MWJldGEvZGF0YWJhc2VjZW50ZXJwYjtkYXRhYmFzZWNlbnRlcnBiqgIi",
-            "R29vZ2xlLkNsb3VkLkRhdGFiYXNlQ2VudGVyLlYxQmV0YcoCIkdvb2dsZVxD",
-            "bG91ZFxEYXRhYmFzZUNlbnRlclxWMWJldGHqAiVHb29nbGU6OkNsb3VkOjpE",
-            "YXRhYmFzZUNlbnRlcjo6VjFiZXRhYgZwcm90bzM="));
+            "VUJfUkVTT1VSQ0VfVFlQRV9FWFRFUk5BTF9QUklNQVJZEAUSHwobU1VCX1JF",
+            "U09VUkNFX1RZUEVfUkVBRF9QT09MEAYSIQodU1VCX1JFU09VUkNFX1RZUEVf",
+            "UkVTRVJWQVRJT04QBxIdChlTVUJfUkVTT1VSQ0VfVFlQRV9EQVRBU0VUEAgS",
+            "GwoXU1VCX1JFU09VUkNFX1RZUEVfT1RIRVIQBCp0Cg5NYW5hZ2VtZW50VHlw",
+            "ZRIfChtNQU5BR0VNRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIfChtNQU5BR0VN",
+            "RU5UX1RZUEVfR0NQX01BTkFHRUQQARIgChxNQU5BR0VNRU5UX1RZUEVfU0VM",
+            "Rl9NQU5BR0VEEAIy/wcKDkRhdGFiYXNlQ2VudGVyEqMBCg1RdWVyeVByb2R1",
+            "Y3RzEjguZ29vZ2xlLmNsb3VkLmRhdGFiYXNlY2VudGVyLnYxYmV0YS5RdWVy",
+            "eVByb2R1Y3RzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRl",
+            "ci52MWJldGEuUXVlcnlQcm9kdWN0c1Jlc3BvbnNlIh2C0+STAhcSFS92MWJl",
+            "dGE6cXVlcnlQcm9kdWN0cxKnAQoOQWdncmVnYXRlRmxlZXQSOS5nb29nbGUu",
+            "Y2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRhLkFnZ3JlZ2F0ZUZsZWV0UmVx",
+            "dWVzdBo6Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuQWdn",
+            "cmVnYXRlRmxlZXRSZXNwb25zZSIegtPkkwIYEhYvdjFiZXRhOmFnZ3JlZ2F0",
+            "ZUZsZWV0Et4BChtRdWVyeURhdGFiYXNlUmVzb3VyY2VHcm91cHMSRi5nb29n",
+            "bGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRhLlF1ZXJ5RGF0YWJhc2VS",
+            "ZXNvdXJjZUdyb3Vwc1JlcXVlc3QaRy5nb29nbGUuY2xvdWQuZGF0YWJhc2Vj",
+            "ZW50ZXIudjFiZXRhLlF1ZXJ5RGF0YWJhc2VSZXNvdXJjZUdyb3Vwc1Jlc3Bv",
+            "bnNlIi6C0+STAigiIy92MWJldGE6cXVlcnlEYXRhYmFzZVJlc291cmNlR3Jv",
+            "dXBzOgEqEr4BChNBZ2dyZWdhdGVJc3N1ZVN0YXRzEj4uZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFiYXNlY2VudGVyLnYxYmV0YS5BZ2dyZWdhdGVJc3N1ZVN0YXRzUmVx",
+            "dWVzdBo/Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuQWdn",
+            "cmVnYXRlSXNzdWVTdGF0c1Jlc3BvbnNlIiaC0+STAiAiGy92MWJldGE6YWdn",
+            "cmVnYXRlSXNzdWVTdGF0czoBKhKnAQoLUXVlcnlJc3N1ZXMSNi5nb29nbGUu",
+            "Y2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRhLlF1ZXJ5SXNzdWVzUmVxdWVz",
+            "dBo3Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuUXVlcnlJ",
+            "c3N1ZXNSZXNwb25zZSIn2kEGcGFyZW50gtPkkwIYIhMvdjFiZXRhOnF1ZXJ5",
+            "SXNzdWVzOgEqGlHKQR1kYXRhYmFzZWNlbnRlci5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1C+gEKJmNvbS5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRh",
+            "QgxTZXJ2aWNlUHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhYmFz",
+            "ZWNlbnRlci9hcGl2MWJldGEvZGF0YWJhc2VjZW50ZXJwYjtkYXRhYmFzZWNl",
+            "bnRlcnBiqgIiR29vZ2xlLkNsb3VkLkRhdGFiYXNlQ2VudGVyLlYxQmV0YcoC",
+            "Ikdvb2dsZVxDbG91ZFxEYXRhYmFzZUNlbnRlclxWMWJldGHqAiVHb29nbGU6",
+            "OkNsb3VkOjpEYXRhYmFzZUNlbnRlcjo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DatabaseCenter.V1Beta.MachineConfigReflection.Descriptor, global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceReflection.Descriptor, global::Google.Cloud.DatabaseCenter.V1Beta.MetricDataReflection.Descriptor, global::Google.Cloud.DatabaseCenter.V1Beta.ProductReflection.Descriptor, global::Google.Cloud.DatabaseCenter.V1Beta.SignalsReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DatabaseCenter.V1Beta.ResourceCategory), typeof(global::Google.Cloud.DatabaseCenter.V1Beta.Edition), typeof(global::Google.Cloud.DatabaseCenter.V1Beta.SubResourceType), typeof(global::Google.Cloud.DatabaseCenter.V1Beta.ManagementType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -255,8 +257,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
   }
 
   /// <summary>
-  /// Proto representing the edition of the instance.
-  /// NextId: 4.
+  /// Represents the edition of a database resource.
   /// </summary>
   public enum Edition {
     /// <summary>
@@ -301,6 +302,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// A resource acting as an external primary.
     /// </summary>
     [pbr::OriginalName("SUB_RESOURCE_TYPE_EXTERNAL_PRIMARY")] ExternalPrimary = 5,
+    /// <summary>
+    /// A resource acting as a read pool.
+    /// </summary>
+    [pbr::OriginalName("SUB_RESOURCE_TYPE_READ_POOL")] ReadPool = 6,
+    /// <summary>
+    /// Represents a reservation resource.
+    /// </summary>
+    [pbr::OriginalName("SUB_RESOURCE_TYPE_RESERVATION")] Reservation = 7,
+    /// <summary>
+    /// Represents a dataset resource.
+    /// </summary>
+    [pbr::OriginalName("SUB_RESOURCE_TYPE_DATASET")] Dataset = 8,
     /// <summary>
     /// For the rest of the categories.
     /// </summary>
