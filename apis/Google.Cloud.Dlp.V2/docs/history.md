@@ -1,5 +1,19 @@
 # Version history
 
+## Version 4.23.0, released 2026-03-23
+
+### New features
+
+- Added support for detecting key-value pairs in document metadata
+- Added support for image exclusion and adjustment rules
+- Add InfoType launch status in InfoType Description
+
+### Documentation improvements
+
+- Added formatting to various comments
+- Add messages stating that Data Catalog actions are deprecated
+- Add example resource name to VertexDatasetResourceReference
+
 ## Version 4.22.0, released 2025-11-05
 
 ### New features
