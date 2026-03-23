@@ -3509,7 +3509,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-09T14:14:24.893592892Z",
-            "lastGeneratedCommit": "fe4d9b3bcaae6282d1d6ee57a42fed53b334931b",
+            "lastGeneratedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
             "lastReleasedCommit": "fe4d9b3bcaae6282d1d6ee57a42fed53b334931b",
             "apiPaths": [
                 "google/cloud/visionai/v1"
