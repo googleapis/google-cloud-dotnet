@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-03-23
+
+### New features
+
+- A new value `SUB_RESOURCE_TYPE_READ_POOL` is added to enum `SubResourceType`
+- A new value `SUB_RESOURCE_TYPE_RESERVATION` is added to enum `SubResourceType`
+- A new value `SUB_RESOURCE_TYPE_DATASET` is added to enum `SubResourceType`
+- A new value `SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE` is added to enum `SignalType
+
+### Documentation improvements
+
+- Modified comment for Edition Enum
+- Replace "GCP" with "Google Cloud" in API comments
+- Remove single quotes from DatabaseCenter summary.
+
 ## Version 1.0.0-beta05, released 2026-02-16
 
 ### New features
