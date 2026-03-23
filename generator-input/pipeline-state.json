@@ -1642,7 +1642,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-05T16:58:58.215419506Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
             "lastReleasedCommit": "760ef85838a9f9decef98fcb91e2a73891ed8f7d",
             "apiPaths": [
                 "google/firestore/admin/v1"
