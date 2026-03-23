@@ -4949,6 +4949,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "cba8415718590712af80d0fd90a5f016a2607b25",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/configmanagement/v1"
             ],

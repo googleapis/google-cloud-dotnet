@@ -1,0 +1,493 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.datacatalog.lineage.configmanagement.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_sync",
+      "title": "GetConfigRequestObject",
+      "description": "Snippet for GetConfig",
+      "file": "ConfigManagementServiceClient.GetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_async",
+      "title": "GetConfigRequestObjectAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "ConfigManagementServiceClient.GetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config>",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_sync_flattened",
+      "title": "GetConfig",
+      "description": "Snippet for GetConfig",
+      "file": "ConfigManagementServiceClient.GetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_async_flattened",
+      "title": "GetConfigAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "ConfigManagementServiceClient.GetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config>",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_sync_flattened_resourceNames",
+      "title": "GetConfigResourceNames",
+      "description": "Snippet for GetConfig",
+      "file": "ConfigManagementServiceClient.GetConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_GetConfig_async_flattened_resourceNames",
+      "title": "GetConfigResourceNamesAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "ConfigManagementServiceClient.GetConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config>",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.GetConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_UpdateConfig_sync",
+      "title": "UpdateConfigRequestObject",
+      "description": "Snippet for UpdateConfig",
+      "file": "ConfigManagementServiceClient.UpdateConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfig",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.UpdateConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.UpdateConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.UpdateConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_UpdateConfig_async",
+      "title": "UpdateConfigRequestObjectAsync",
+      "description": "Snippet for UpdateConfigAsync",
+      "file": "ConfigManagementServiceClient.UpdateConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.UpdateConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.UpdateConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config>",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.UpdateConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_UpdateConfig_sync_flattened",
+      "title": "UpdateConfig",
+      "description": "Snippet for UpdateConfig",
+      "file": "ConfigManagementServiceClient.UpdateConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfig",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.UpdateConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.UpdateConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_ConfigManagementService_UpdateConfig_async_flattened",
+      "title": "UpdateConfigAsync",
+      "description": "Snippet for UpdateConfigAsync",
+      "file": "ConfigManagementServiceClient.UpdateConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient.UpdateConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.Config>",
+        "client": {
+          "shortName": "ConfigManagementServiceClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1.ConfigManagementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService.UpdateConfig",
+          "service": {
+            "shortName": "ConfigManagementService",
+            "fullName": "google.cloud.datacatalog.lineage.configmanagement.v1.ConfigManagementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.datacatalog.lineage.configmanagement.v1",
+  "libraryPackage": "Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1",
+  "services": {
+    "ConfigManagementService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConfigManagementServiceClient",
+          "rpcs": {
+            "GetConfig": {
+              "methods": [
+                "GetConfig",
+                "GetConfigAsync"
+              ]
+            },
+            "UpdateConfig": {
+              "methods": [
+                "UpdateConfig",
+                "UpdateConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
