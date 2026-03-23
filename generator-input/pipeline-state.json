@@ -1567,7 +1567,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T16:57:10.605128175Z",
-            "lastGeneratedCommit": "a0ff7486adf5ae827a140c3b45102019c592b438",
+            "lastGeneratedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
             "lastReleasedCommit": "9215671dbc32a2bb26be3fe0678f7942ca12b365",
             "apiPaths": [
                 "google/devtools/clouderrorreporting/v1beta1"
