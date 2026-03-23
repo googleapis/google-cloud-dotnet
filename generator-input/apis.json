@@ -6870,7 +6870,7 @@
       "type": "grpc",
       "productName": "Geocoding",
       "productUrl": "https://developers.google.com/maps/documentation/geocoding/overview",
-      "description": "Convert addresses into geographic coordinates (geocoding), which you can use     to place markers or position the map. This API also allows you to convert     geographic coordinates into an address (reverse geocoding).",
+      "description": "Convert addresses into geographic coordinates (geocoding), which you can use to place markers or position the map. This API also allows you to convert geographic coordinates into an address (reverse geocoding).",
       "tags": [],
       "dependencies": {
         "Google.Geo.Type": "1.3.0"
