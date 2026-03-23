@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta75, released 2026-03-23
+
+### New features
+
+- Update the schema proto for the RagChunk with file_id and chunk_id to align with the vertex_rag_data.proto
+- Add new `embed_content_config` to message `EmbedContentRequest`
+
 ## Version 1.0.0-beta74, released 2026-03-16
 
 ### New features
