@@ -81,6 +81,14 @@ namespace Google.Cloud.Ces.V1Beta {
         __Marshaller_google_cloud_ces_v1beta_RunSessionResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse> __Method_StreamRunSession = new grpc::Method<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamRunSession",
+        __Marshaller_google_cloud_ces_v1beta_RunSessionRequest,
+        __Marshaller_google_cloud_ces_v1beta_RunSessionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage, global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage> __Method_BidiRunSession = new grpc::Method<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage, global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -99,14 +107,34 @@ namespace Google.Cloud.Ces.V1Beta {
     public abstract partial class SessionServiceBase
     {
       /// <summary>
-      /// Initiates a single turn interaction with the CES agent within a
-      /// session.
+      /// Initiates a single-turn interaction with the CES agent within a session.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.RunSessionResponse> RunSession(global::Google.Cloud.Ces.V1Beta.RunSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initiates a single-turn interaction with the CES agent. Uses server-side
+      /// streaming to deliver incremental results and partial responses as they are
+      /// generated.
+      ///
+      /// By default, complete responses (e.g., messages from callbacks or full LLM
+      /// responses) are sent to the client as soon as they are available. To enable
+      /// streaming individual text chunks directly from the model, set
+      /// [enable_text_streaming][google.cloud.ces.v1beta.SessionConfig.enable_text_streaming]
+      /// to true.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamRunSession(global::Google.Cloud.Ces.V1Beta.RunSessionRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Ces.V1Beta.RunSessionResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -217,8 +245,7 @@ namespace Google.Cloud.Ces.V1Beta {
       }
 
       /// <summary>
-      /// Initiates a single turn interaction with the CES agent within a
-      /// session.
+      /// Initiates a single-turn interaction with the CES agent within a session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -231,8 +258,7 @@ namespace Google.Cloud.Ces.V1Beta {
         return RunSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a single turn interaction with the CES agent within a
-      /// session.
+      /// Initiates a single-turn interaction with the CES agent within a session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -243,8 +269,7 @@ namespace Google.Cloud.Ces.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_RunSession, null, options, request);
       }
       /// <summary>
-      /// Initiates a single turn interaction with the CES agent within a
-      /// session.
+      /// Initiates a single-turn interaction with the CES agent within a session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -257,8 +282,7 @@ namespace Google.Cloud.Ces.V1Beta {
         return RunSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a single turn interaction with the CES agent within a
-      /// session.
+      /// Initiates a single-turn interaction with the CES agent within a session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -267,6 +291,46 @@ namespace Google.Cloud.Ces.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.RunSessionResponse> RunSessionAsync(global::Google.Cloud.Ces.V1Beta.RunSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunSession, null, options, request);
+      }
+      /// <summary>
+      /// Initiates a single-turn interaction with the CES agent. Uses server-side
+      /// streaming to deliver incremental results and partial responses as they are
+      /// generated.
+      ///
+      /// By default, complete responses (e.g., messages from callbacks or full LLM
+      /// responses) are sent to the client as soon as they are available. To enable
+      /// streaming individual text chunks directly from the model, set
+      /// [enable_text_streaming][google.cloud.ces.v1beta.SessionConfig.enable_text_streaming]
+      /// to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Ces.V1Beta.RunSessionResponse> StreamRunSession(global::Google.Cloud.Ces.V1Beta.RunSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamRunSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initiates a single-turn interaction with the CES agent. Uses server-side
+      /// streaming to deliver incremental results and partial responses as they are
+      /// generated.
+      ///
+      /// By default, complete responses (e.g., messages from callbacks or full LLM
+      /// responses) are sent to the client as soon as they are available. To enable
+      /// streaming individual text chunks directly from the model, set
+      /// [enable_text_streaming][google.cloud.ces.v1beta.SessionConfig.enable_text_streaming]
+      /// to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Ces.V1Beta.RunSessionResponse> StreamRunSession(global::Google.Cloud.Ces.V1Beta.RunSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamRunSession, null, options, request);
       }
       /// <summary>
       /// Establishes a bidirectional streaming connection with the CES agent.
@@ -431,6 +495,7 @@ namespace Google.Cloud.Ces.V1Beta {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RunSession, serviceImpl.RunSession)
+          .AddMethod(__Method_StreamRunSession, serviceImpl.StreamRunSession)
           .AddMethod(__Method_BidiRunSession, serviceImpl.BidiRunSession).Build();
     }
 
@@ -442,6 +507,7 @@ namespace Google.Cloud.Ces.V1Beta {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SessionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_RunSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(serviceImpl.RunSession));
+      serviceBinder.AddMethod(__Method_StreamRunSession, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(serviceImpl.StreamRunSession));
       serviceBinder.AddMethod(__Method_BidiRunSession, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage, global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage>(serviceImpl.BidiRunSession));
     }
 

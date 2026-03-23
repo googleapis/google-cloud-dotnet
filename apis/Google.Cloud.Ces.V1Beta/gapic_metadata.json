@@ -525,6 +525,12 @@
                 "RunSession",
                 "RunSessionAsync"
               ]
+            },
+            "StreamRunSession": {
+              "methods": [
+                "StreamRunSession",
+                "StreamRunSessionAsync"
+              ]
             }
           }
         }

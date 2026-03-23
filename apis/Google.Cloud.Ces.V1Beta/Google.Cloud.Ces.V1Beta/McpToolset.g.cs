@@ -27,20 +27,23 @@ namespace Google.Cloud.Ces.V1Beta {
             "Cilnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9tY3BfdG9vbHNldC5wcm90bxIX",
             "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aImdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2F1dGgucHJv",
-            "dG8aJGdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2NvbW1vbi5wcm90byKLAgoK",
+            "dG8aJGdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2NvbW1vbi5wcm90byKWAwoK",
             "TWNwVG9vbHNldBIbCg5zZXJ2ZXJfYWRkcmVzcxgBIAEoCUID4EECEksKEmFw",
             "aV9hdXRoZW50aWNhdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5jZXMudjFi",
             "ZXRhLkFwaUF1dGhlbnRpY2F0aW9uQgPgQQESVgoYc2VydmljZV9kaXJlY3Rv",
             "cnlfY29uZmlnGAMgASgLMi8uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU2Vy",
             "dmljZURpcmVjdG9yeUNvbmZpZ0ID4EEBEjsKCnRsc19jb25maWcYBCABKAsy",
-            "Ii5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5UbHNDb25maWdCA+BBAUJfChtj",
-            "b20uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGFCD01jcFRvb2xzZXRQcm90b1AB",
-            "Wi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2Vz",
-            "cGJiBnByb3RvMw=="));
+            "Ii5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5UbHNDb25maWdCA+BBARJTCg5j",
+            "dXN0b21faGVhZGVycxgFIAMoCzI2Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
+            "Lk1jcFRvb2xzZXQuQ3VzdG9tSGVhZGVyc0VudHJ5QgPgQQEaNAoSQ3VzdG9t",
+            "SGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC",
+            "XwobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQg9NY3BUb29sc2V0UHJv",
+            "dG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3Bi",
+            "O2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AuthReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolset), global::Google.Cloud.Ces.V1Beta.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolset), global::Google.Cloud.Ces.V1Beta.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig", "CustomHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -90,6 +93,7 @@ namespace Google.Cloud.Ces.V1Beta {
       apiAuthentication_ = other.apiAuthentication_ != null ? other.apiAuthentication_.Clone() : null;
       serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
       tlsConfig_ = other.tlsConfig_ != null ? other.tlsConfig_.Clone() : null;
+      customHeaders_ = other.customHeaders_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -169,6 +173,24 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "custom_headers" field.</summary>
+    public const int CustomHeadersFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_customHeaders_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> customHeaders_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The custom headers to send in the request to the MCP server. The
+    /// values must be in the format `$context.variables.&lt;name_of_variable>` and
+    /// can be set in the session variables. See
+    /// https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-api#openapi-injection
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> CustomHeaders {
+      get { return customHeaders_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -188,6 +210,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (!object.Equals(ApiAuthentication, other.ApiAuthentication)) return false;
       if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
       if (!object.Equals(TlsConfig, other.TlsConfig)) return false;
+      if (!CustomHeaders.Equals(other.CustomHeaders)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -199,6 +222,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (apiAuthentication_ != null) hash ^= ApiAuthentication.GetHashCode();
       if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
       if (tlsConfig_ != null) hash ^= TlsConfig.GetHashCode();
+      hash ^= CustomHeaders.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -233,6 +257,7 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(TlsConfig);
       }
+      customHeaders_.WriteTo(output, _map_customHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -259,6 +284,7 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(TlsConfig);
       }
+      customHeaders_.WriteTo(ref output, _map_customHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -281,6 +307,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (tlsConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TlsConfig);
       }
+      size += customHeaders_.CalculateSize(_map_customHeaders_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -314,6 +341,7 @@ namespace Google.Cloud.Ces.V1Beta {
         }
         TlsConfig.MergeFrom(other.TlsConfig);
       }
+      customHeaders_.MergeFrom(other.customHeaders_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -354,6 +382,10 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(TlsConfig);
             break;
           }
+          case 42: {
+            customHeaders_.AddEntriesFrom(input, _map_customHeaders_codec);
+            break;
+          }
         }
       }
     #endif
@@ -392,6 +424,10 @@ namespace Google.Cloud.Ces.V1Beta {
               TlsConfig = new global::Google.Cloud.Ces.V1Beta.TlsConfig();
             }
             input.ReadMessage(TlsConfig);
+            break;
+          }
+          case 42: {
+            customHeaders_.AddEntriesFrom(ref input, _map_customHeaders_codec);
             break;
           }
         }

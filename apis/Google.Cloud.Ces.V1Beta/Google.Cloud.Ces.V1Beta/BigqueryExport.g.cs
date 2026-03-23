@@ -110,7 +110,7 @@ namespace Google.Cloud.Ces.V1Beta {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// Optional. The project ID of the BigQuery dataset to export the data to.
+    /// Optional. The **project ID** of the BigQuery dataset to export the data to.
     ///
     /// Note: If the BigQuery dataset is in a different project from the app,
     /// you should grant `roles/bigquery.admin` role to the CES service agent
@@ -129,7 +129,7 @@ namespace Google.Cloud.Ces.V1Beta {
     public const int DatasetFieldNumber = 3;
     private string dataset_ = "";
     /// <summary>
-    /// Optional. The BigQuery dataset to export the data to.
+    /// Optional. The BigQuery **dataset ID** to export the data to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

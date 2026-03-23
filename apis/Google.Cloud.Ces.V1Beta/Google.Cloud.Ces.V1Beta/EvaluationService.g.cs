@@ -607,7 +607,7 @@ namespace Google.Cloud.Ces.V1Beta {
 
   /// <summary>
   /// Operation metadata for
-  /// [EvaluationService.RunEvaluation][google.cloud.ces.v1beta.EvaluationService.RunEvaluation]
+  /// [EvaluationService.RunEvaluation][google.cloud.ces.v1beta.EvaluationService.RunEvaluation].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunEvaluationOperationMetadata : pb::IMessage<RunEvaluationOperationMetadata>

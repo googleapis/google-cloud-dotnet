@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 AppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
                 ExportFormat = ExportAppRequest.Types.ExportFormat.Unspecified,
                 GcsUri = "",
+                AppVersionAsAppVersionName = AppVersionName.FromProjectLocationAppVersion("[PROJECT]", "[LOCATION]", "[APP]", "[VERSION]"),
             };
             // Make the request
             Operation<ExportAppResponse, OperationMetadata> response = await agentServiceClient.ExportAppAsync(request);
