@@ -4956,6 +4956,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1/Google.Cloud.DataCatalog.Lineage.ConfigManagement.V1"
             ]
+        },
+        {
+            "id": "Google.Maps.Geocode.V4",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/maps/geocode/v4"
+            ],
+            "sourcePaths": [
+                "apis/Google.Maps.Geocode.V4/Google.Maps.Geocode.V4"
+            ]
         }
     ],
     "ignoredApiPaths": [
