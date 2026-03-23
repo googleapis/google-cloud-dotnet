@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.69.0, released 2026-03-23
+
+### New features
+
+- Add new `embed_content_config` to message `EmbedContentRequest`
+- Add `VALIDATED` Function Calling mode to v1
+
 ## Version 3.68.0, released 2026-03-16
 
 ### New features
