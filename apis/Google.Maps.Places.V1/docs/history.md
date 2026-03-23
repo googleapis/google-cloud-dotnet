@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta20, released 2026-03-23
+
+### New features
+
+- Add a new business status `FUTURE_OPENING` for places,
+- Add a new `include_future_opening_businesses` flag to Nearby Search, Text Search, and AutocompletPlaces. When true, businesses opening in the future are included in the results.
+
 ## Version 1.0.0-beta19, released 2026-02-16
 
 ### New features

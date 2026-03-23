@@ -6887,7 +6887,7 @@
     },
     {
       "id": "Google.Maps.Places.V1",
-      "version": "1.0.0-beta19",
+      "version": "1.0.0-beta20",
       "type": "grpc",
       "productName": "Places API",
       "productUrl": "https://developers.google.com/maps/documentation/places/web-service/",
