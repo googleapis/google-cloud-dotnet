@@ -26,25 +26,28 @@ namespace Google.Cloud.BackupDR.V1 {
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvYmFja3VwZHIvdjEvYmFja3VwdmF1bHRfYWxsb3lk",
             "Yi5wcm90bxIYZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvIloKIkFsbG95REJDbHVzdGVyRGF0YVNvdXJjZVByb3BlcnRpZXMSNAoE",
-            "bmFtZRgBIAEoCUIm4EED+kEgCh5hbGxveWRiLmdvb2dsZWFwaXMuY29tL0Ns",
-            "dXN0ZXIimwEKHkFsbG95RGJDbHVzdGVyQmFja3VwUHJvcGVydGllcxIYCgtk",
-            "ZXNjcmlwdGlvbhgBIAEoCUgAiAEBEhkKDHN0b3JlZF9ieXRlcxgCIAEoA0ID",
-            "4EEDEhUKCGNoYWluX2lkGAMgASgJQgPgQQMSHQoQZGF0YWJhc2VfdmVyc2lv",
-            "bhgEIAEoCUID4EEDQg4KDF9kZXNjcmlwdGlvbkKmAgocY29tLmdvb2dsZS5j",
-            "bG91ZC5iYWNrdXBkci52MUIXQmFja3VwdmF1bHRBbGxveURCUHJvdG9QAVo4",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBi",
-            "O2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29n",
-            "bGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBE",
-            "Ujo6VjHqQVwKHmFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchI6cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NsdXN0ZXJz",
-            "L3tjbHVzdGVyfWIGcHJvdG8z"));
+            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8u",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iWgoiQWxsb3lEQkNs",
+            "dXN0ZXJEYXRhU291cmNlUHJvcGVydGllcxI0CgRuYW1lGAEgASgJQibgQQP6",
+            "QSAKHmFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlciKbAQoeQWxsb3lE",
+            "YkNsdXN0ZXJCYWNrdXBQcm9wZXJ0aWVzEhgKC2Rlc2NyaXB0aW9uGAEgASgJ",
+            "SACIAQESGQoMc3RvcmVkX2J5dGVzGAIgASgDQgPgQQMSFQoIY2hhaW5faWQY",
+            "AyABKAlCA+BBAxIdChBkYXRhYmFzZV92ZXJzaW9uGAQgASgJQgPgQQNCDgoM",
+            "X2Rlc2NyaXB0aW9uIlEKLUFsbG95REJDbHVzdGVyQmFja3VwUGxhbkFzc29j",
+            "aWF0aW9uUHJvcGVydGllcxIgCgtjbHVzdGVyX3VpZBgBIAEoCUIL4EED4ozP",
+            "1wgCCAFCpgIKHGNvbS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjFCF0JhY2t1",
+            "cHZhdWx0QWxsb3lEQlByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmFj",
+            "a3VwZHIvYXBpdjEvYmFja3VwZHJwYjtiYWNrdXBkcnBiqgIYR29vZ2xlLkNs",
+            "b3VkLkJhY2t1cERSLlYxygIYR29vZ2xlXENsb3VkXEJhY2t1cERSXFYx6gIb",
+            "R29vZ2xlOjpDbG91ZDo6QmFja3VwRFI6OlYx6kFcCh5hbGxveWRiLmdvb2ds",
+            "ZWFwaXMuY29tL0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties), global::Google.Cloud.BackupDR.V1.AlloyDBClusterDataSourceProperties.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties), global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties.Parser, new[]{ "Description", "StoredBytes", "ChainId", "DatabaseVersion" }, new[]{ "Description" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties), global::Google.Cloud.BackupDR.V1.AlloyDbClusterBackupProperties.Parser, new[]{ "Description", "StoredBytes", "ChainId", "DatabaseVersion" }, new[]{ "Description" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.AlloyDBClusterBackupPlanAssociationProperties), global::Google.Cloud.BackupDR.V1.AlloyDBClusterBackupPlanAssociationProperties.Parser, new[]{ "ClusterUid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -575,6 +578,202 @@ namespace Google.Cloud.BackupDR.V1 {
           }
           case 34: {
             DatabaseVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Properties for an AlloyDB cluster backup plan association.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AlloyDBClusterBackupPlanAssociationProperties : pb::IMessage<AlloyDBClusterBackupPlanAssociationProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AlloyDBClusterBackupPlanAssociationProperties> _parser = new pb::MessageParser<AlloyDBClusterBackupPlanAssociationProperties>(() => new AlloyDBClusterBackupPlanAssociationProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AlloyDBClusterBackupPlanAssociationProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupvaultAlloydbReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDBClusterBackupPlanAssociationProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDBClusterBackupPlanAssociationProperties(AlloyDBClusterBackupPlanAssociationProperties other) : this() {
+      clusterUid_ = other.clusterUid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDBClusterBackupPlanAssociationProperties Clone() {
+      return new AlloyDBClusterBackupPlanAssociationProperties(this);
+    }
+
+    /// <summary>Field number for the "cluster_uid" field.</summary>
+    public const int ClusterUidFieldNumber = 1;
+    private string clusterUid_ = "";
+    /// <summary>
+    /// Output only. The cluster UID of the AlloyDB cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClusterUid {
+      get { return clusterUid_; }
+      set {
+        clusterUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AlloyDBClusterBackupPlanAssociationProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AlloyDBClusterBackupPlanAssociationProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClusterUid != other.ClusterUid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ClusterUid.Length != 0) hash ^= ClusterUid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ClusterUid.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClusterUid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ClusterUid.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClusterUid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ClusterUid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterUid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AlloyDBClusterBackupPlanAssociationProperties other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ClusterUid.Length != 0) {
+        ClusterUid = other.ClusterUid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClusterUid = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ClusterUid = input.ReadString();
             break;
           }
         }
