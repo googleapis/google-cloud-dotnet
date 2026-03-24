@@ -4950,7 +4950,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-23T14:52:42.675020538Z",
-            "lastGeneratedCommit": "cba8415718590712af80d0fd90a5f016a2607b25",
+            "lastGeneratedCommit": "0b3dec847f1045e47991c1539d4c69d8b025cfe8",
             "lastReleasedCommit": "cba8415718590712af80d0fd90a5f016a2607b25",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/configmanagement/v1"
