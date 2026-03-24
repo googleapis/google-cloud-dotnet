@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 SessionName = SessionName.FromProjectLocationAppSession("[PROJECT]", "[LOCATION]", "[APP]", "[SESSION]"),
                 DeploymentAsDeploymentName = DeploymentName.FromProjectLocationAppDeployment("[PROJECT]", "[LOCATION]", "[APP]", "[DEPLOYMENT]"),
                 RecaptchaToken = "",
+                LiveHandoffEnabled = false,
             };
             // Make the request
             GenerateChatTokenResponse response = widgetServiceClient.GenerateChatToken(request);

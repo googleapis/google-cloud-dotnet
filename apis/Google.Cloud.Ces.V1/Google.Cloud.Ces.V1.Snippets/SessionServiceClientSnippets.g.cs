@@ -58,6 +58,33 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for StreamRunSession</summary>
+        public async Task StreamRunSessionRequestObject()
+        {
+            // Snippet: StreamRunSession(RunSessionRequest, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            RunSessionRequest request = new RunSessionRequest
+            {
+                Config = new SessionConfig(),
+                Inputs = { new SessionInput(), },
+            };
+            // Make the request, returning a streaming response
+            using SessionServiceClient.StreamRunSessionStream response = sessionServiceClient.StreamRunSession(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<RunSessionResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                RunSessionResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for BidiRunSession</summary>
         public async Task BidiRunSession()
         {

@@ -30,7 +30,7 @@ namespace Google.Cloud.Ces.V1 {
             "ZXMvdjEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
             "LnByb3RvIsQDCgpEZXBsb3ltZW50EhEKBG5hbWUYASABKAlCA+BBCBIZCgxk",
             "aXNwbGF5X25hbWUYCCABKAlCA+BBAhI6CgthcHBfdmVyc2lvbhgCIAEoCUIl",
-            "4EEC+kEfCh1jZXMuZ29vZ2xlYXBpcy5jb20vQXBwVmVyc2lvbhJBCg9jaGFu",
+            "4EEB+kEfCh1jZXMuZ29vZ2xlYXBpcy5jb20vQXBwVmVyc2lvbhJBCg9jaGFu",
             "bmVsX3Byb2ZpbGUYAyABKAsyIy5nb29nbGUuY2xvdWQuY2VzLnYxLkNoYW5u",
             "ZWxQcm9maWxlQgPgQQISNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsy",
@@ -112,7 +112,7 @@ namespace Google.Cloud.Ces.V1 {
     /// <summary>
     /// Identifier. The resource name of the deployment.
     /// Format:
-    /// projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+    /// `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -142,9 +142,11 @@ namespace Google.Cloud.Ces.V1 {
     public const int AppVersionFieldNumber = 2;
     private string appVersion_ = "";
     /// <summary>
-    /// Required. The resource name of the app version to deploy.
+    /// Optional. The resource name of the app version to deploy.
     /// Format:
-    /// projects/{project}/locations/{location}/apps/{app}/versions/{version}
+    /// `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
+    /// Use `projects/{project}/locations/{location}/apps/{app}/versions/-` to use
+    /// the draft app.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

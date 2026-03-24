@@ -30,54 +30,57 @@ namespace Google.Cloud.Ces.V1 {
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdv",
             "b2dsZS9jbG91ZC9jZXMvdjEvc2NoZW1hLnByb3RvGh5nb29nbGUvY2xvdWQv",
             "Y2VzL3YxL3Rvb2wucHJvdG8aJmdvb2dsZS9jbG91ZC9jZXMvdjEvdG9vbHNl",
-            "dF90b29sLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIvMB",
+            "dF90b29sLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIvEC",
             "ChJFeGVjdXRlVG9vbFJlcXVlc3QSLwoEdG9vbBgBIAEoCUIf4EEB+kEZChdj",
             "ZXMuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEj0KDHRvb2xzZXRfdG9vbBgDIAEo",
-            "CzIgLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9vbHNldFRvb2xCA+BBAUgAEi4K",
-            "BnBhcmVudBgEIAEoCUIe4EEC+kEYChZjZXMuZ29vZ2xlYXBpcy5jb20vQXBw",
-            "EioKBGFyZ3MYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQFC",
-            "EQoPdG9vbF9pZGVudGlmaWVyIsABChNFeGVjdXRlVG9vbFJlc3BvbnNlEiwK",
-            "BHRvb2wYASABKAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI4",
-            "Cgx0b29sc2V0X3Rvb2wYAyABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRv",
-            "b2xzZXRUb29sSAASLgoIcmVzcG9uc2UYAiABKAsyFy5nb29nbGUucHJvdG9i",
-            "dWYuU3RydWN0QgPgQQJCEQoPdG9vbF9pZGVudGlmaWVyIs4BChlSZXRyaWV2",
-            "ZVRvb2xTY2hlbWFSZXF1ZXN0Ei8KBHRvb2wYASABKAlCH+BBAfpBGQoXY2Vz",
-            "Lmdvb2dsZWFwaXMuY29tL1Rvb2xIABI9Cgx0b29sc2V0X3Rvb2wYAiABKAsy",
-            "IC5nb29nbGUuY2xvdWQuY2VzLnYxLlRvb2xzZXRUb29sQgPgQQFIABIuCgZw",
-            "YXJlbnQYAyABKAlCHuBBAvpBGAoWY2VzLmdvb2dsZWFwaXMuY29tL0FwcEIR",
-            "Cg90b29sX2lkZW50aWZpZXIiiAIKGlJldHJpZXZlVG9vbFNjaGVtYVJlc3Bv",
-            "bnNlEiwKBHRvb2wYASABKAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rv",
-            "b2xIABI4Cgx0b29sc2V0X3Rvb2wYAiABKAsyIC5nb29nbGUuY2xvdWQuY2Vz",
-            "LnYxLlRvb2xzZXRUb29sSAASNgoMaW5wdXRfc2NoZW1hGAMgASgLMhsuZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MS5TY2hlbWFCA+BBAhI3Cg1vdXRwdXRfc2NoZW1h",
-            "GAQgASgLMhsuZ29vZ2xlLmNsb3VkLmNlcy52MS5TY2hlbWFCA+BBAkIRCg90",
-            "b29sX2lkZW50aWZpZXIiYgoUUmV0cmlldmVUb29sc1JlcXVlc3QSMwoHdG9v",
-            "bHNldBgBIAEoCUIi4EEC+kEcChpjZXMuZ29vZ2xlYXBpcy5jb20vVG9vbHNl",
-            "dBIVCgh0b29sX2lkcxgDIAMoCUID4EEBIkYKFVJldHJpZXZlVG9vbHNSZXNw",
-            "b25zZRItCgV0b29scxgBIAMoCzIZLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9v",
-            "bEID4EECMpsFCgtUb29sU2VydmljZRKjAQoLRXhlY3V0ZVRvb2wSJy5nb29n",
-            "bGUuY2xvdWQuY2VzLnYxLkV4ZWN1dGVUb29sUmVxdWVzdBooLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjEuRXhlY3V0ZVRvb2xSZXNwb25zZSJBgtPkkwI7IjYvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcHMvKn06ZXhlY3V0",
-            "ZVRvb2w6ASoSvwEKElJldHJpZXZlVG9vbFNjaGVtYRIuLmdvb2dsZS5jbG91",
-            "ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1hUmVxdWVzdBovLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1hUmVzcG9uc2UiSILT5JMC",
-            "QiI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBzLyp9",
-            "OnJldHJpZXZlVG9vbFNjaGVtYToBKhK3AQoNUmV0cmlldmVUb29scxIpLmdv",
-            "b2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sc1JlcXVlc3QaKi5nb29n",
-            "bGUuY2xvdWQuY2VzLnYxLlJldHJpZXZlVG9vbHNSZXNwb25zZSJPgtPkkwJJ",
-            "IkQvdjEve3Rvb2xzZXQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBzLyov",
-            "dG9vbHNldHMvKn06cmV0cmlldmVUb29sczoBKhpqykESY2VzLmdvb2dsZWFw",
-            "aXMuY29t0kFSaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jZXMs",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUJYChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52MUIQVG9vbFNlcnZpY2VQcm90",
-            "b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MS9jZXNwYjtjZXNw",
-            "YmIGcHJvdG8z"));
+            "CzIgLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9vbHNldFRvb2xCA+BBAUgAEjEK",
+            "CXZhcmlhYmxlcxgFIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BB",
+            "AUgBEi8KB2NvbnRleHQYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
+            "QgPgQQFIARIuCgZwYXJlbnQYBCABKAlCHuBBAvpBGAoWY2VzLmdvb2dsZWFw",
+            "aXMuY29tL0FwcBIqCgRhcmdzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdEID4EEBQhEKD3Rvb2xfaWRlbnRpZmllckIYChZ0b29sX2V4ZWN1dGlv",
+            "bl9jb250ZXh0IucBChNFeGVjdXRlVG9vbFJlc3BvbnNlEiwKBHRvb2wYASAB",
+            "KAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI4Cgx0b29sc2V0",
+            "X3Rvb2wYAyABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRvb2xzZXRUb29s",
+            "SAASKQoIcmVzcG9uc2UYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
+            "EioKCXZhcmlhYmxlcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
+            "EQoPdG9vbF9pZGVudGlmaWVyIs4BChlSZXRyaWV2ZVRvb2xTY2hlbWFSZXF1",
+            "ZXN0Ei8KBHRvb2wYASABKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29t",
+            "L1Rvb2xIABI9Cgx0b29sc2V0X3Rvb2wYAiABKAsyIC5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxLlRvb2xzZXRUb29sQgPgQQFIABIuCgZwYXJlbnQYAyABKAlCHuBB",
+            "AvpBGAoWY2VzLmdvb2dsZWFwaXMuY29tL0FwcEIRCg90b29sX2lkZW50aWZp",
+            "ZXIi/gEKGlJldHJpZXZlVG9vbFNjaGVtYVJlc3BvbnNlEiwKBHRvb2wYASAB",
+            "KAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI4Cgx0b29sc2V0",
+            "X3Rvb2wYAiABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRvb2xzZXRUb29s",
+            "SAASMQoMaW5wdXRfc2NoZW1hGAMgASgLMhsuZ29vZ2xlLmNsb3VkLmNlcy52",
+            "MS5TY2hlbWESMgoNb3V0cHV0X3NjaGVtYRgEIAEoCzIbLmdvb2dsZS5jbG91",
+            "ZC5jZXMudjEuU2NoZW1hQhEKD3Rvb2xfaWRlbnRpZmllciJiChRSZXRyaWV2",
+            "ZVRvb2xzUmVxdWVzdBIzCgd0b29sc2V0GAEgASgJQiLgQQL6QRwKGmNlcy5n",
+            "b29nbGVhcGlzLmNvbS9Ub29sc2V0EhUKCHRvb2xfaWRzGAMgAygJQgPgQQEi",
+            "QQoVUmV0cmlldmVUb29sc1Jlc3BvbnNlEigKBXRvb2xzGAEgAygLMhkuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MS5Ub29sMpsFCgtUb29sU2VydmljZRKjAQoLRXhl",
+            "Y3V0ZVRvb2wSJy5nb29nbGUuY2xvdWQuY2VzLnYxLkV4ZWN1dGVUb29sUmVx",
+            "dWVzdBooLmdvb2dsZS5jbG91ZC5jZXMudjEuRXhlY3V0ZVRvb2xSZXNwb25z",
+            "ZSJBgtPkkwI7IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2FwcHMvKn06ZXhlY3V0ZVRvb2w6ASoSvwEKElJldHJpZXZlVG9vbFNjaGVt",
+            "YRIuLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1hUmVx",
+            "dWVzdBovLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1h",
+            "UmVzcG9uc2UiSILT5JMCQiI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9hcHBzLyp9OnJldHJpZXZlVG9vbFNjaGVtYToBKhK3AQoNUmV0",
+            "cmlldmVUb29scxIpLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29s",
+            "c1JlcXVlc3QaKi5nb29nbGUuY2xvdWQuY2VzLnYxLlJldHJpZXZlVG9vbHNS",
+            "ZXNwb25zZSJPgtPkkwJJIkQvdjEve3Rvb2xzZXQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9hcHBzLyovdG9vbHNldHMvKn06cmV0cmlldmVUb29sczoBKhpq",
+            "ykESY2VzLmdvb2dsZWFwaXMuY29t0kFSaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jZXMsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybUJYChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52MUIQ",
+            "VG9vbFNlcnZpY2VQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9h",
+            "cGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.SchemaReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolsetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolRequest), global::Google.Cloud.Ces.V1.ExecuteToolRequest.Parser, new[]{ "Tool", "ToolsetTool", "Parent", "Args" }, new[]{ "ToolIdentifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolResponse), global::Google.Cloud.Ces.V1.ExecuteToolResponse.Parser, new[]{ "Tool", "ToolsetTool", "Response" }, new[]{ "ToolIdentifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolRequest), global::Google.Cloud.Ces.V1.ExecuteToolRequest.Parser, new[]{ "Tool", "ToolsetTool", "Variables", "Context", "Parent", "Args" }, new[]{ "ToolIdentifier", "ToolExecutionContext" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolResponse), global::Google.Cloud.Ces.V1.ExecuteToolResponse.Parser, new[]{ "Tool", "ToolsetTool", "Response", "Variables" }, new[]{ "ToolIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolSchemaRequest), global::Google.Cloud.Ces.V1.RetrieveToolSchemaRequest.Parser, new[]{ "Tool", "ToolsetTool", "Parent" }, new[]{ "ToolIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolSchemaResponse), global::Google.Cloud.Ces.V1.RetrieveToolSchemaResponse.Parser, new[]{ "Tool", "ToolsetTool", "InputSchema", "OutputSchema" }, new[]{ "ToolIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolsRequest), global::Google.Cloud.Ces.V1.RetrieveToolsRequest.Parser, new[]{ "Toolset", "ToolIds" }, null, null, null, null),
@@ -138,6 +141,15 @@ namespace Google.Cloud.Ces.V1 {
           break;
       }
 
+      switch (other.ToolExecutionContextCase) {
+        case ToolExecutionContextOneofCase.Variables:
+          Variables = other.Variables.Clone();
+          break;
+        case ToolExecutionContextOneofCase.Context:
+          Context = other.Context.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -194,6 +206,38 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "variables" field.</summary>
+    public const int VariablesFieldNumber = 5;
+    /// <summary>
+    /// Optional. The variables that are available for the tool execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct Variables {
+      get { return toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables ? (global::Google.Protobuf.WellKnownTypes.Struct) toolExecutionContext_ : null; }
+      set {
+        toolExecutionContext_ = value;
+        toolExecutionContextCase_ = value == null ? ToolExecutionContextOneofCase.None : ToolExecutionContextOneofCase.Variables;
+      }
+    }
+
+    /// <summary>Field number for the "context" field.</summary>
+    public const int ContextFieldNumber = 6;
+    /// <summary>
+    /// Optional. The
+    /// [ToolCallContext](https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/python#environment
+    /// for details) to be passed to the Python tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct Context {
+      get { return toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context ? (global::Google.Protobuf.WellKnownTypes.Struct) toolExecutionContext_ : null; }
+      set {
+        toolExecutionContext_ = value;
+        toolExecutionContextCase_ = value == null ? ToolExecutionContextOneofCase.None : ToolExecutionContextOneofCase.Context;
+      }
+    }
+
     /// <summary>Field number for the "parent" field.</summary>
     public const int ParentFieldNumber = 4;
     private string parent_ = "";
@@ -247,6 +291,27 @@ namespace Google.Cloud.Ces.V1 {
       toolIdentifier_ = null;
     }
 
+    private object toolExecutionContext_;
+    /// <summary>Enum of possible cases for the "tool_execution_context" oneof.</summary>
+    public enum ToolExecutionContextOneofCase {
+      None = 0,
+      Variables = 5,
+      Context = 6,
+    }
+    private ToolExecutionContextOneofCase toolExecutionContextCase_ = ToolExecutionContextOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ToolExecutionContextOneofCase ToolExecutionContextCase {
+      get { return toolExecutionContextCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearToolExecutionContext() {
+      toolExecutionContextCase_ = ToolExecutionContextOneofCase.None;
+      toolExecutionContext_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -264,9 +329,12 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (Tool != other.Tool) return false;
       if (!object.Equals(ToolsetTool, other.ToolsetTool)) return false;
+      if (!object.Equals(Variables, other.Variables)) return false;
+      if (!object.Equals(Context, other.Context)) return false;
       if (Parent != other.Parent) return false;
       if (!object.Equals(Args, other.Args)) return false;
       if (ToolIdentifierCase != other.ToolIdentifierCase) return false;
+      if (ToolExecutionContextCase != other.ToolExecutionContextCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -276,9 +344,12 @@ namespace Google.Cloud.Ces.V1 {
       int hash = 1;
       if (HasTool) hash ^= Tool.GetHashCode();
       if (toolIdentifierCase_ == ToolIdentifierOneofCase.ToolsetTool) hash ^= ToolsetTool.GetHashCode();
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) hash ^= Variables.GetHashCode();
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) hash ^= Context.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (args_ != null) hash ^= Args.GetHashCode();
       hash ^= (int) toolIdentifierCase_;
+      hash ^= (int) toolExecutionContextCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -313,6 +384,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Variables);
+      }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Context);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -339,6 +418,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Variables);
+      }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Context);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -354,6 +441,12 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (toolIdentifierCase_ == ToolIdentifierOneofCase.ToolsetTool) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ToolsetTool);
+      }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Variables);
+      }
+      if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Context);
       }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
@@ -391,6 +484,21 @@ namespace Google.Cloud.Ces.V1 {
             ToolsetTool = new global::Google.Cloud.Ces.V1.ToolsetTool();
           }
           ToolsetTool.MergeFrom(other.ToolsetTool);
+          break;
+      }
+
+      switch (other.ToolExecutionContextCase) {
+        case ToolExecutionContextOneofCase.Variables:
+          if (Variables == null) {
+            Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
+          }
+          Variables.MergeFrom(other.Variables);
+          break;
+        case ToolExecutionContextOneofCase.Context:
+          if (Context == null) {
+            Context = new global::Google.Protobuf.WellKnownTypes.Struct();
+          }
+          Context.MergeFrom(other.Context);
           break;
       }
 
@@ -433,6 +541,24 @@ namespace Google.Cloud.Ces.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            global::Google.Protobuf.WellKnownTypes.Struct subBuilder = new global::Google.Protobuf.WellKnownTypes.Struct();
+            if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) {
+              subBuilder.MergeFrom(Variables);
+            }
+            input.ReadMessage(subBuilder);
+            Variables = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Protobuf.WellKnownTypes.Struct subBuilder = new global::Google.Protobuf.WellKnownTypes.Struct();
+            if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) {
+              subBuilder.MergeFrom(Context);
+            }
+            input.ReadMessage(subBuilder);
+            Context = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -470,6 +596,24 @@ namespace Google.Cloud.Ces.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            global::Google.Protobuf.WellKnownTypes.Struct subBuilder = new global::Google.Protobuf.WellKnownTypes.Struct();
+            if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Variables) {
+              subBuilder.MergeFrom(Variables);
+            }
+            input.ReadMessage(subBuilder);
+            Variables = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Protobuf.WellKnownTypes.Struct subBuilder = new global::Google.Protobuf.WellKnownTypes.Struct();
+            if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) {
+              subBuilder.MergeFrom(Context);
+            }
+            input.ReadMessage(subBuilder);
+            Context = subBuilder;
             break;
           }
         }
@@ -519,6 +663,7 @@ namespace Google.Cloud.Ces.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteToolResponse(ExecuteToolResponse other) : this() {
       response_ = other.response_ != null ? other.response_.Clone() : null;
+      variables_ = other.variables_ != null ? other.variables_.Clone() : null;
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
           Tool = other.Tool;
@@ -586,7 +731,7 @@ namespace Google.Cloud.Ces.V1 {
     public const int ResponseFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Struct response_;
     /// <summary>
-    /// Required. The tool execution result in JSON object format.
+    /// The tool execution result in JSON object format.
     /// Use "output" key to specify tool response and "error" key to specify
     /// error details (if any). If "output" and "error" keys are not specified,
     /// then whole "response" is treated as tool execution result.
@@ -597,6 +742,21 @@ namespace Google.Cloud.Ces.V1 {
       get { return response_; }
       set {
         response_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "variables" field.</summary>
+    public const int VariablesFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Struct variables_;
+    /// <summary>
+    /// The variable values at the end of the tool execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct Variables {
+      get { return variables_; }
+      set {
+        variables_ = value;
       }
     }
 
@@ -639,6 +799,7 @@ namespace Google.Cloud.Ces.V1 {
       if (Tool != other.Tool) return false;
       if (!object.Equals(ToolsetTool, other.ToolsetTool)) return false;
       if (!object.Equals(Response, other.Response)) return false;
+      if (!object.Equals(Variables, other.Variables)) return false;
       if (ToolIdentifierCase != other.ToolIdentifierCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -650,6 +811,7 @@ namespace Google.Cloud.Ces.V1 {
       if (HasTool) hash ^= Tool.GetHashCode();
       if (toolIdentifierCase_ == ToolIdentifierOneofCase.ToolsetTool) hash ^= ToolsetTool.GetHashCode();
       if (response_ != null) hash ^= Response.GetHashCode();
+      if (variables_ != null) hash ^= Variables.GetHashCode();
       hash ^= (int) toolIdentifierCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -681,6 +843,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ToolsetTool);
       }
+      if (variables_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Variables);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -703,6 +869,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ToolsetTool);
       }
+      if (variables_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Variables);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -722,6 +892,9 @@ namespace Google.Cloud.Ces.V1 {
       if (response_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Response);
       }
+      if (variables_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Variables);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -739,6 +912,12 @@ namespace Google.Cloud.Ces.V1 {
           Response = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Response.MergeFrom(other.Response);
+      }
+      if (other.variables_ != null) {
+        if (variables_ == null) {
+          Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        Variables.MergeFrom(other.Variables);
       }
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
@@ -787,6 +966,13 @@ namespace Google.Cloud.Ces.V1 {
             ToolsetTool = subBuilder;
             break;
           }
+          case 34: {
+            if (variables_ == null) {
+              Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Variables);
+            break;
+          }
         }
       }
     #endif
@@ -820,6 +1006,13 @@ namespace Google.Cloud.Ces.V1 {
             }
             input.ReadMessage(subBuilder);
             ToolsetTool = subBuilder;
+            break;
+          }
+          case 34: {
+            if (variables_ == null) {
+              Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Variables);
             break;
           }
         }
@@ -1279,7 +1472,7 @@ namespace Google.Cloud.Ces.V1 {
     public const int InputSchemaFieldNumber = 3;
     private global::Google.Cloud.Ces.V1.Schema inputSchema_;
     /// <summary>
-    /// Required. The schema of the tool input parameters.
+    /// The schema of the tool input parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1294,7 +1487,7 @@ namespace Google.Cloud.Ces.V1 {
     public const int OutputSchemaFieldNumber = 4;
     private global::Google.Cloud.Ces.V1.Schema outputSchema_;
     /// <summary>
-    /// Required. The schema of the tool output parameters.
+    /// The schema of the tool output parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1851,7 +2044,7 @@ namespace Google.Cloud.Ces.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Ces.V1.Tool.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Ces.V1.Tool> tools_ = new pbc::RepeatedField<global::Google.Cloud.Ces.V1.Tool>();
     /// <summary>
-    /// Required. The list of tools that are included in the specified toolset.
+    /// The list of tools that are included in the specified toolset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

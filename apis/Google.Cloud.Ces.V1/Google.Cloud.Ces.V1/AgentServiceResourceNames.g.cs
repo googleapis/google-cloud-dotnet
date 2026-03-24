@@ -321,6 +321,15 @@ namespace Google.Cloud.Ces.V1
             get => string.IsNullOrEmpty(Name) ? null : gccv::AppName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AppVersionName"/>-typed view over the <see cref="AppVersion"/> resource name property.
+        /// </summary>
+        public AppVersionName AppVersionAsAppVersionName
+        {
+            get => string.IsNullOrEmpty(AppVersion) ? null : AppVersionName.Parse(AppVersion, allowUnparsed: true);
+            set => AppVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class ImportAppRequest

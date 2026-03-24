@@ -1666,12 +1666,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -1715,12 +1715,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -15507,6 +15507,54 @@
       ]
     },
     {
+      "regionTag": "ces_v1_generated_SessionService_StreamRunSession_sync",
+      "title": "StreamRunSessionRequestObject",
+      "description": "Snippet for StreamRunSession",
+      "file": "SessionServiceClient.StreamRunSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamRunSession",
+        "fullName": "Google.Cloud.Ces.V1.SessionServiceClient.StreamRunSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1.RunSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1.SessionServiceClient+StreamRunSessionStream",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "StreamRunSession",
+          "fullName": "google.cloud.ces.v1.SessionService.StreamRunSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 57,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 55,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "ces_v1_generated_SessionService_BidiRunSession_sync",
       "title": "BidiRunSession",
       "description": "Snippet for BidiRunSession",
@@ -15592,12 +15640,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -15641,12 +15689,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -15883,12 +15931,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -15932,12 +15980,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]

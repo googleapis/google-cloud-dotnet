@@ -50,7 +50,7 @@ namespace Google.Cloud.Ces.V1 {
             "Q29uZmlnLkNhQ2VydEID4EECGjYKBkNhQ2VydBIZCgxkaXNwbGF5X25hbWUY",
             "ASABKAlCA+BBAhIRCgRjZXJ0GAIgASgMQgPgQQIiWgoWU2VydmljZURpcmVj",
             "dG9yeUNvbmZpZxJACgdzZXJ2aWNlGAEgASgJQi/gQQL6QSkKJ3NlcnZpY2Vk",
-            "aXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZSKJCgoOQ2hhbm5lbFBy",
+            "aXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZSLDCgoOQ2hhbm5lbFBy",
             "b2ZpbGUSFwoKcHJvZmlsZV9pZBgBIAEoCUID4EEBEkoKDGNoYW5uZWxfdHlw",
             "ZRgDIAEoDjIvLmdvb2dsZS5jbG91ZC5jZXMudjEuQ2hhbm5lbFByb2ZpbGUu",
             "Q2hhbm5lbFR5cGVCA+BBARJSChBwZXJzb25hX3Byb3BlcnR5GAIgASgLMjMu",
@@ -62,7 +62,7 @@ namespace Google.Cloud.Ces.V1 {
             "b25fbGV2ZWwYCCABKAlCA+BBARqVAQoPUGVyc29uYVByb3BlcnR5ElEKB3Bl",
             "cnNvbmEYASABKA4yOy5nb29nbGUuY2xvdWQuY2VzLnYxLkNoYW5uZWxQcm9m",
             "aWxlLlBlcnNvbmFQcm9wZXJ0eS5QZXJzb25hQgPgQQEiLwoHUGVyc29uYRIL",
-            "CgdVTktOT1dOEAASCwoHQ09OQ0lTRRABEgoKBkNIQVRUWRACGt8ECg9XZWJX",
+            "CgdVTktOT1dOEAASCwoHQ09OQ0lTRRABEgoKBkNIQVRUWRACGvkECg9XZWJX",
             "aWRnZXRDb25maWcSUwoIbW9kYWxpdHkYASABKA4yPC5nb29nbGUuY2xvdWQu",
             "Y2VzLnYxLkNoYW5uZWxQcm9maWxlLldlYldpZGdldENvbmZpZy5Nb2RhbGl0",
             "eUID4EEBEk0KBXRoZW1lGAIgASgOMjkuZ29vZ2xlLmNsb3VkLmNlcy52MS5D",
@@ -73,26 +73,27 @@ namespace Google.Cloud.Ces.V1 {
             "Y3VyaXR5U2V0dGluZ3MSIQoUZW5hYmxlX3B1YmxpY19hY2Nlc3MYASABKAhC",
             "A+BBARIgChNlbmFibGVfb3JpZ2luX2NoZWNrGAQgASgIQgPgQQESHAoPYWxs",
             "b3dlZF9vcmlnaW5zGAIgAygJQgPgQQESHQoQZW5hYmxlX3JlY2FwdGNoYRgD",
-            "IAEoCEID4EEBIlcKCE1vZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BFQ0lGSUVE",
+            "IAEoCEID4EEBInEKCE1vZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BFQ0lGSUVE",
             "EAASEgoOQ0hBVF9BTkRfVk9JQ0UQARIOCgpWT0lDRV9PTkxZEAISDQoJQ0hB",
-            "VF9PTkxZEAMiMwoFVGhlbWUSFQoRVEhFTUVfVU5TUEVDSUZJRUQQABIJCgVM",
-            "SUdIVBABEggKBERBUksQAiKGAQoLQ2hhbm5lbFR5cGUSCwoHVU5LTk9XThAA",
-            "EgoKBldFQl9VSRACEgcKA0FQSRADEgoKBlRXSUxJTxAEEh0KGUdPT0dMRV9U",
-            "RUxFUEhPTllfUExBVEZPUk0QBRIfChtDT05UQUNUX0NFTlRFUl9BU19BX1NF",
-            "UlZJQ0UQBhIJCgVGSVZFORAHIpoCCgRTcGFuEhEKBG5hbWUYASABKAlCA+BB",
-            "AxIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjAKCGR1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uQgPgQQMSMAoKYXR0cmlidXRlcxgEIAEoCzIXLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAxIzCgtjaGlsZF9zcGFucxgFIAMo",
-            "CzIZLmdvb2dsZS5jbG91ZC5jZXMudjEuU3BhbkID4EEDKlIKDUV4ZWN1dGlv",
-            "blR5cGUSHgoaRVhFQ1VUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtTWU5D",
-            "SFJPTk9VUxABEhAKDEFTWU5DSFJPTk9VUxACQtIBChdjb20uZ29vZ2xlLmNs",
-            "b3VkLmNlcy52MUILQ29tbW9uUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9jZXMvYXBpdjEvY2VzcGI7Y2VzcGLqQXwKJ3NlcnZpY2VkaXJlY3Rvcnku",
-            "Z29vZ2xlYXBpcy5jb20vU2VydmljZRJRcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L25hbWVzcGFjZXMve25hbWVzcGFjZX0vc2Vy",
-            "dmljZXMve3NlcnZpY2V9YgZwcm90bzM="));
+            "VF9PTkxZEAMSGAoUQ0hBVF9WT0lDRV9BTkRfVklERU8QBCIzCgVUaGVtZRIV",
+            "ChFUSEVNRV9VTlNQRUNJRklFRBAAEgkKBUxJR0hUEAESCAoEREFSSxACIqYB",
+            "CgtDaGFubmVsVHlwZRILCgdVTktOT1dOEAASCgoGV0VCX1VJEAISBwoDQVBJ",
+            "EAMSCgoGVFdJTElPEAQSHQoZR09PR0xFX1RFTEVQSE9OWV9QTEFURk9STRAF",
+            "Eh8KG0NPTlRBQ1RfQ0VOVEVSX0FTX0FfU0VSVklDRRAGEgkKBUZJVkU5EAcS",
+            "HgoaQ09OVEFDVF9DRU5URVJfSU5URUdSQVRJT04QCCKaAgoEU3BhbhIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSMwoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIwCghkdXJhdGlvbhgGIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEjAKCmF0dHJpYnV0",
+            "ZXMYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQMSMwoLY2hp",
+            "bGRfc3BhbnMYBSADKAsyGS5nb29nbGUuY2xvdWQuY2VzLnYxLlNwYW5CA+BB",
+            "AypSCg1FeGVjdXRpb25UeXBlEh4KGkVYRUNVVElPTl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDwoLU1lOQ0hST05PVVMQARIQCgxBU1lOQ0hST05PVVMQAkLSAQoX",
+            "Y29tLmdvb2dsZS5jbG91ZC5jZXMudjFCC0NvbW1vblByb3RvUAFaKWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vY2VzL2FwaXYxL2Nlc3BiO2Nlc3Bi6kF8CidzZXJ2",
+            "aWNlZGlyZWN0b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USUXByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3BhY2VzL3tu",
+            "YW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Ces.V1.ExecutionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2200,11 +2201,14 @@ namespace Google.Cloud.Ces.V1 {
         /// is empty or unspecified, CES will use Google's default trust
         /// store to verify certificates. N.B. Make sure the HTTPS server
         /// certificates are signed with "subject alt name". For instance a
-        /// certificate can be self-signed using the following command,
+        /// certificate can be self-signed using the following command:
+        ///
+        /// ```
         ///    openssl x509 -req -days 200 -in example.com.csr \
         ///      -signkey example.com.key \
         ///      -out example.com.crt \
         ///      -extfile &lt;(printf "\nsubjectAltName='DNS:www.example.com'")
+        /// ```
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3072,6 +3076,10 @@ namespace Google.Cloud.Ces.V1 {
         /// Five9 channel.
         /// </summary>
         [pbr::OriginalName("FIVE9")] Five9 = 7,
+        /// <summary>
+        /// Third party contact center integration channel.
+        /// </summary>
+        [pbr::OriginalName("CONTACT_CENTER_INTEGRATION")] ContactCenterIntegration = 8,
       }
 
       /// <summary>
@@ -3644,6 +3652,10 @@ namespace Google.Cloud.Ces.V1 {
             /// Widget supports only chat input.
             /// </summary>
             [pbr::OriginalName("CHAT_ONLY")] ChatOnly = 3,
+            /// <summary>
+            /// Widget supports chat, voice, and video input.
+            /// </summary>
+            [pbr::OriginalName("CHAT_VOICE_AND_VIDEO")] ChatVoiceAndVideo = 4,
           }
 
           /// <summary>

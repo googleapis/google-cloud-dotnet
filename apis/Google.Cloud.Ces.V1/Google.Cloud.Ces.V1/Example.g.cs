@@ -42,40 +42,41 @@ namespace Google.Cloud.Ces.V1 {
             "cGxlIoIBCgdNZXNzYWdlEhEKBHJvbGUYASABKAlCA+BBARIvCgZjaHVua3MY",
             "AiADKAsyGi5nb29nbGUuY2xvdWQuY2VzLnYxLkNodW5rQgPgQQESMwoKZXZl",
             "bnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "ASLLAwoFQ2h1bmsSEwoEdGV4dBgBIAEoCUID4EEBSAASGQoKdHJhbnNjcmlw",
-            "dBgJIAEoCUID4EEBSAASLwoHcGF5bG9hZBgLIAEoCzIXLmdvb2dsZS5wcm90",
-            "b2J1Zi5TdHJ1Y3RCA+BBAUgAEjAKBWltYWdlGAUgASgLMhouZ29vZ2xlLmNs",
-            "b3VkLmNlcy52MS5JbWFnZUID4EEBSAASNwoJdG9vbF9jYWxsGAIgASgLMh0u",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MS5Ub29sQ2FsbEID4EEBSAASPwoNdG9vbF9y",
-            "ZXNwb25zZRgDIAEoCzIhLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9vbFJlc3Bv",
-            "bnNlQgPgQQFIABJBCg5hZ2VudF90cmFuc2ZlchgEIAEoCzIiLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjEuQWdlbnRUcmFuc2ZlckID4EEBSAASNAoRdXBkYXRlZF92",
-            "YXJpYWJsZXMYCCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0SAASNAoR",
-            "ZGVmYXVsdF92YXJpYWJsZXMYCiABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
-            "dWN0SABCBgoEZGF0YSIxCgRCbG9iEhYKCW1pbWVfdHlwZRgBIAEoCUID4EEC",
-            "EhEKBGRhdGEYAiABKAxCA+BBAiIyCgVJbWFnZRIWCgltaW1lX3R5cGUYASAB",
-            "KAlCA+BBAhIRCgRkYXRhGAIgASgMQgPgQQIi5QEKCFRvb2xDYWxsEi8KBHRv",
-            "b2wYAiABKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI9",
-            "Cgx0b29sc2V0X3Rvb2wYBSABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRv",
-            "b2xzZXRUb29sQgPgQQFIABIPCgJpZBgBIAEoCUID4EEBEhkKDGRpc3BsYXlf",
-            "bmFtZRgEIAEoCUID4EEDEioKBGFyZ3MYAyABKAsyFy5nb29nbGUucHJvdG9i",
-            "dWYuU3RydWN0QgPgQQFCEQoPdG9vbF9pZGVudGlmaWVyIu0BCgxUb29sUmVz",
-            "cG9uc2USLwoEdG9vbBgCIAEoCUIf4EEB+kEZChdjZXMuZ29vZ2xlYXBpcy5j",
-            "b20vVG9vbEgAEj0KDHRvb2xzZXRfdG9vbBgFIAEoCzIgLmdvb2dsZS5jbG91",
-            "ZC5jZXMudjEuVG9vbHNldFRvb2xCA+BBAUgAEg8KAmlkGAEgASgJQgPgQQES",
-            "GQoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSLgoIcmVzcG9uc2UYAyABKAsy",
-            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQJCEQoPdG9vbF9pZGVudGlm",
-            "aWVyImIKDUFnZW50VHJhbnNmZXISNgoMdGFyZ2V0X2FnZW50GAEgASgJQiDg",
-            "QQL6QRoKGGNlcy5nb29nbGVhcGlzLmNvbS9BZ2VudBIZCgxkaXNwbGF5X25h",
-            "bWUYAiABKAlCA+BBA0JUChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52MUIMRXhh",
-            "bXBsZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vY2VzL2FwaXYxL2Nl",
-            "c3BiO2Nlc3BiYgZwcm90bzM="));
+            "ASL7AwoFQ2h1bmsSEwoEdGV4dBgBIAEoCUID4EEBSAASGQoKdHJhbnNjcmlw",
+            "dBgJIAEoCUID4EEBSAASLgoEYmxvYhgHIAEoCzIZLmdvb2dsZS5jbG91ZC5j",
+            "ZXMudjEuQmxvYkID4EEBSAASLwoHcGF5bG9hZBgLIAEoCzIXLmdvb2dsZS5w",
+            "cm90b2J1Zi5TdHJ1Y3RCA+BBAUgAEjAKBWltYWdlGAUgASgLMhouZ29vZ2xl",
+            "LmNsb3VkLmNlcy52MS5JbWFnZUID4EEBSAASNwoJdG9vbF9jYWxsGAIgASgL",
+            "Mh0uZ29vZ2xlLmNsb3VkLmNlcy52MS5Ub29sQ2FsbEID4EEBSAASPwoNdG9v",
+            "bF9yZXNwb25zZRgDIAEoCzIhLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9vbFJl",
+            "c3BvbnNlQgPgQQFIABJBCg5hZ2VudF90cmFuc2ZlchgEIAEoCzIiLmdvb2ds",
+            "ZS5jbG91ZC5jZXMudjEuQWdlbnRUcmFuc2ZlckID4EEBSAASNAoRdXBkYXRl",
+            "ZF92YXJpYWJsZXMYCCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0SAAS",
+            "NAoRZGVmYXVsdF92YXJpYWJsZXMYCiABKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0SABCBgoEZGF0YSIxCgRCbG9iEhYKCW1pbWVfdHlwZRgBIAEoCUID",
+            "4EECEhEKBGRhdGEYAiABKAxCA+BBAiIyCgVJbWFnZRIWCgltaW1lX3R5cGUY",
+            "ASABKAlCA+BBAhIRCgRkYXRhGAIgASgMQgPgQQIi5QEKCFRvb2xDYWxsEi8K",
+            "BHRvb2wYAiABKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xI",
+            "ABI9Cgx0b29sc2V0X3Rvb2wYBSABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYx",
+            "LlRvb2xzZXRUb29sQgPgQQFIABIPCgJpZBgBIAEoCUID4EEBEhkKDGRpc3Bs",
+            "YXlfbmFtZRgEIAEoCUID4EEDEioKBGFyZ3MYAyABKAsyFy5nb29nbGUucHJv",
+            "dG9idWYuU3RydWN0QgPgQQFCEQoPdG9vbF9pZGVudGlmaWVyIu0BCgxUb29s",
+            "UmVzcG9uc2USLwoEdG9vbBgCIAEoCUIf4EEB+kEZChdjZXMuZ29vZ2xlYXBp",
+            "cy5jb20vVG9vbEgAEj0KDHRvb2xzZXRfdG9vbBgFIAEoCzIgLmdvb2dsZS5j",
+            "bG91ZC5jZXMudjEuVG9vbHNldFRvb2xCA+BBAUgAEg8KAmlkGAEgASgJQgPg",
+            "QQESGQoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSLgoIcmVzcG9uc2UYAyAB",
+            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQJCEQoPdG9vbF9pZGVu",
+            "dGlmaWVyImIKDUFnZW50VHJhbnNmZXISNgoMdGFyZ2V0X2FnZW50GAEgASgJ",
+            "QiDgQQL6QRoKGGNlcy5nb29nbGVhcGlzLmNvbS9BZ2VudBIZCgxkaXNwbGF5",
+            "X25hbWUYAiABKAlCA+BBA0JUChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52MUIM",
+            "RXhhbXBsZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vY2VzL2FwaXYx",
+            "L2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolsetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Example), global::Google.Cloud.Ces.V1.Example.Parser, new[]{ "Name", "DisplayName", "Description", "EntryAgent", "Messages", "CreateTime", "UpdateTime", "Invalid", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Message), global::Google.Cloud.Ces.V1.Message.Parser, new[]{ "Role", "Chunks", "EventTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Chunk), global::Google.Cloud.Ces.V1.Chunk.Parser, new[]{ "Text", "Transcript", "Payload", "Image", "ToolCall", "ToolResponse", "AgentTransfer", "UpdatedVariables", "DefaultVariables" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Chunk), global::Google.Cloud.Ces.V1.Chunk.Parser, new[]{ "Text", "Transcript", "Blob", "Payload", "Image", "ToolCall", "ToolResponse", "AgentTransfer", "UpdatedVariables", "DefaultVariables" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Blob), global::Google.Cloud.Ces.V1.Blob.Parser, new[]{ "MimeType", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Image), global::Google.Cloud.Ces.V1.Image.Parser, new[]{ "MimeType", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ToolCall), global::Google.Cloud.Ces.V1.ToolCall.Parser, new[]{ "Tool", "ToolsetTool", "Id", "DisplayName", "Args" }, new[]{ "ToolIdentifier" }, null, null, null),
@@ -939,6 +940,9 @@ namespace Google.Cloud.Ces.V1 {
         case DataOneofCase.Transcript:
           Transcript = other.Transcript;
           break;
+        case DataOneofCase.Blob:
+          Blob = other.Blob.Clone();
+          break;
         case DataOneofCase.Payload:
           Payload = other.Payload.Clone();
           break;
@@ -1026,6 +1030,21 @@ namespace Google.Cloud.Ces.V1 {
     public void ClearTranscript() {
       if (HasTranscript) {
         ClearData();
+      }
+    }
+
+    /// <summary>Field number for the "blob" field.</summary>
+    public const int BlobFieldNumber = 7;
+    /// <summary>
+    /// Optional. Blob data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.Blob Blob {
+      get { return dataCase_ == DataOneofCase.Blob ? (global::Google.Cloud.Ces.V1.Blob) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Blob;
       }
     }
 
@@ -1142,6 +1161,7 @@ namespace Google.Cloud.Ces.V1 {
       None = 0,
       Text = 1,
       Transcript = 9,
+      Blob = 7,
       Payload = 11,
       Image = 5,
       ToolCall = 2,
@@ -1181,6 +1201,7 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (Text != other.Text) return false;
       if (Transcript != other.Transcript) return false;
+      if (!object.Equals(Blob, other.Blob)) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
       if (!object.Equals(Image, other.Image)) return false;
       if (!object.Equals(ToolCall, other.ToolCall)) return false;
@@ -1198,6 +1219,7 @@ namespace Google.Cloud.Ces.V1 {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
       if (HasTranscript) hash ^= Transcript.GetHashCode();
+      if (dataCase_ == DataOneofCase.Blob) hash ^= Blob.GetHashCode();
       if (dataCase_ == DataOneofCase.Payload) hash ^= Payload.GetHashCode();
       if (dataCase_ == DataOneofCase.Image) hash ^= Image.GetHashCode();
       if (dataCase_ == DataOneofCase.ToolCall) hash ^= ToolCall.GetHashCode();
@@ -1243,6 +1265,10 @@ namespace Google.Cloud.Ces.V1 {
       if (dataCase_ == DataOneofCase.Image) {
         output.WriteRawTag(42);
         output.WriteMessage(Image);
+      }
+      if (dataCase_ == DataOneofCase.Blob) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Blob);
       }
       if (dataCase_ == DataOneofCase.UpdatedVariables) {
         output.WriteRawTag(66);
@@ -1290,6 +1316,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Image);
       }
+      if (dataCase_ == DataOneofCase.Blob) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Blob);
+      }
       if (dataCase_ == DataOneofCase.UpdatedVariables) {
         output.WriteRawTag(66);
         output.WriteMessage(UpdatedVariables);
@@ -1321,6 +1351,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (HasTranscript) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Transcript);
+      }
+      if (dataCase_ == DataOneofCase.Blob) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Blob);
       }
       if (dataCase_ == DataOneofCase.Payload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
@@ -1361,6 +1394,12 @@ namespace Google.Cloud.Ces.V1 {
           break;
         case DataOneofCase.Transcript:
           Transcript = other.Transcript;
+          break;
+        case DataOneofCase.Blob:
+          if (Blob == null) {
+            Blob = new global::Google.Cloud.Ces.V1.Blob();
+          }
+          Blob.MergeFrom(other.Blob);
           break;
         case DataOneofCase.Payload:
           if (Payload == null) {
@@ -1461,6 +1500,15 @@ namespace Google.Cloud.Ces.V1 {
             Image = subBuilder;
             break;
           }
+          case 58: {
+            global::Google.Cloud.Ces.V1.Blob subBuilder = new global::Google.Cloud.Ces.V1.Blob();
+            if (dataCase_ == DataOneofCase.Blob) {
+              subBuilder.MergeFrom(Blob);
+            }
+            input.ReadMessage(subBuilder);
+            Blob = subBuilder;
+            break;
+          }
           case 66: {
             global::Google.Protobuf.WellKnownTypes.Struct subBuilder = new global::Google.Protobuf.WellKnownTypes.Struct();
             if (dataCase_ == DataOneofCase.UpdatedVariables) {
@@ -1545,6 +1593,15 @@ namespace Google.Cloud.Ces.V1 {
             }
             input.ReadMessage(subBuilder);
             Image = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Ces.V1.Blob subBuilder = new global::Google.Cloud.Ces.V1.Blob();
+            if (dataCase_ == DataOneofCase.Blob) {
+              subBuilder.MergeFrom(Blob);
+            }
+            input.ReadMessage(subBuilder);
+            Blob = subBuilder;
             break;
           }
           case 66: {

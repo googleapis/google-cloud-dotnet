@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
                 ToolAsToolName = ToolName.FromProjectLocationAppTool("[PROJECT]", "[LOCATION]", "[APP]", "[TOOL]"),
                 Args = new Struct(),
                 ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                Variables = new Struct(),
             };
             // Make the request
             ExecuteToolResponse response = toolServiceClient.ExecuteTool(request);
@@ -54,6 +55,7 @@ namespace GoogleCSharpSnippets
                 ToolAsToolName = ToolName.FromProjectLocationAppTool("[PROJECT]", "[LOCATION]", "[APP]", "[TOOL]"),
                 Args = new Struct(),
                 ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                Variables = new Struct(),
             };
             // Make the request
             ExecuteToolResponse response = await toolServiceClient.ExecuteToolAsync(request);

@@ -46,6 +46,7 @@ namespace Google.Cloud.Ces.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             RunSessionSettings = existing.RunSessionSettings;
+            StreamRunSessionSettings = existing.StreamRunSessionSettings;
             BidiRunSessionSettings = existing.BidiRunSessionSettings;
             BidiRunSessionStreamingSettings = existing.BidiRunSessionStreamingSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -69,6 +70,13 @@ namespace Google.Cloud.Ces.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(220000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes()));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionServiceClient.StreamRunSession</c> and <c>SessionServiceClient.StreamRunSessionAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 60 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamRunSessionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -236,8 +244,7 @@ namespace Google.Cloud.Ces.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a single turn interaction with the CES agent within a
-        /// session.
+        /// Initiates a single-turn interaction with the CES agent within a session.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -246,8 +253,7 @@ namespace Google.Cloud.Ces.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a single turn interaction with the CES agent within a
-        /// session.
+        /// Initiates a single-turn interaction with the CES agent within a session.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -256,14 +262,37 @@ namespace Google.Cloud.Ces.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a single turn interaction with the CES agent within a
-        /// session.
+        /// Initiates a single-turn interaction with the CES agent within a session.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RunSessionResponse> RunSessionAsync(RunSessionRequest request, st::CancellationToken cancellationToken) =>
             RunSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Server streaming methods for <see cref="StreamRunSession(RunSessionRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamRunSessionStream : gaxgrpc::ServerStreamingBase<RunSessionResponse>
+        {
+        }
+
+        /// <summary>
+        /// Initiates a single-turn interaction with the CES agent. Uses server-side
+        /// streaming to deliver incremental results and partial responses as they are
+        /// generated.
+        /// 
+        /// By default, complete responses (e.g., messages from callbacks or full LLM
+        /// responses) are sent to the client as soon as they are available. To enable
+        /// streaming individual text chunks directly from the model, set
+        /// [enable_text_streaming][google.cloud.ces.v1.SessionConfig.enable_text_streaming]
+        /// to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamRunSessionStream StreamRunSession(RunSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Bidirectional streaming methods for
@@ -353,6 +382,8 @@ namespace Google.Cloud.Ces.V1
     {
         private readonly gaxgrpc::ApiCall<RunSessionRequest, RunSessionResponse> _callRunSession;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<RunSessionRequest, RunSessionResponse> _callStreamRunSession;
+
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<BidiSessionClientMessage, BidiSessionServerMessage> _callBidiRunSession;
 
         /// <summary>
@@ -374,6 +405,9 @@ namespace Google.Cloud.Ces.V1
             _callRunSession = clientHelper.BuildApiCall<RunSessionRequest, RunSessionResponse>("RunSession", grpcClient.RunSessionAsync, grpcClient.RunSession, effectiveSettings.RunSessionSettings).WithGoogleRequestParam("config.session", request => request.Config?.Session);
             Modify_ApiCall(ref _callRunSession);
             Modify_RunSessionApiCall(ref _callRunSession);
+            _callStreamRunSession = clientHelper.BuildApiCall<RunSessionRequest, RunSessionResponse>("StreamRunSession", grpcClient.StreamRunSession, effectiveSettings.StreamRunSessionSettings).WithGoogleRequestParam("config.session", request => request.Config?.Session);
+            Modify_ApiCall(ref _callStreamRunSession);
+            Modify_StreamRunSessionApiCall(ref _callStreamRunSession);
             _callBidiRunSession = clientHelper.BuildApiCall<BidiSessionClientMessage, BidiSessionServerMessage>("BidiRunSession", grpcClient.BidiRunSession, effectiveSettings.BidiRunSessionSettings, effectiveSettings.BidiRunSessionStreamingSettings);
             Modify_ApiCall(ref _callBidiRunSession);
             Modify_BidiRunSessionApiCall(ref _callBidiRunSession);
@@ -384,7 +418,11 @@ namespace Google.Cloud.Ces.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_RunSessionApiCall(ref gaxgrpc::ApiCall<RunSessionRequest, RunSessionResponse> call);
+
+        partial void Modify_StreamRunSessionApiCall(ref gaxgrpc::ApiServerStreamingCall<RunSessionRequest, RunSessionResponse> call);
 
         partial void Modify_BidiRunSessionApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<BidiSessionClientMessage, BidiSessionServerMessage> call);
 
@@ -403,8 +441,7 @@ namespace Google.Cloud.Ces.V1
         partial void Modify_BidiSessionClientMessageRequest(ref BidiSessionClientMessage request);
 
         /// <summary>
-        /// Initiates a single turn interaction with the CES agent within a
-        /// session.
+        /// Initiates a single-turn interaction with the CES agent within a session.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -416,8 +453,7 @@ namespace Google.Cloud.Ces.V1
         }
 
         /// <summary>
-        /// Initiates a single turn interaction with the CES agent within a
-        /// session.
+        /// Initiates a single-turn interaction with the CES agent within a session.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -426,6 +462,35 @@ namespace Google.Cloud.Ces.V1
         {
             Modify_RunSessionRequest(ref request, ref callSettings);
             return _callRunSession.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamRunSessionStreamImpl : StreamRunSessionStream
+        {
+            /// <summary>Construct the server streaming method for <c>StreamRunSession</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public StreamRunSessionStreamImpl(grpccore::AsyncServerStreamingCall<RunSessionResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<RunSessionResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Initiates a single-turn interaction with the CES agent. Uses server-side
+        /// streaming to deliver incremental results and partial responses as they are
+        /// generated.
+        /// 
+        /// By default, complete responses (e.g., messages from callbacks or full LLM
+        /// responses) are sent to the client as soon as they are available. To enable
+        /// streaming individual text chunks directly from the model, set
+        /// [enable_text_streaming][google.cloud.ces.v1.SessionConfig.enable_text_streaming]
+        /// to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SessionServiceClient.StreamRunSessionStream StreamRunSession(RunSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunSessionRequest(ref request, ref callSettings);
+            return new StreamRunSessionStreamImpl(_callStreamRunSession.Call(request, callSettings));
         }
 
         internal sealed partial class BidiRunSessionStreamImpl : BidiRunSessionStream

@@ -28,27 +28,27 @@ namespace Google.Cloud.Ces.V1 {
             "b29nbGUuY2xvdWQuY2VzLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
             "b3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKlAQoYR2VuZXJhdGVD",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLIAQoYR2VuZXJhdGVD",
             "aGF0VG9rZW5SZXF1ZXN0EjAKBG5hbWUYASABKAlCIuBBAvpBHAoaY2VzLmdv",
             "b2dsZWFwaXMuY29tL1Nlc3Npb24SOQoKZGVwbG95bWVudBgCIAEoCUIl4EEC",
             "+kEfCh1jZXMuZ29vZ2xlYXBpcy5jb20vRGVwbG95bWVudBIcCg9yZWNhcHRj",
-            "aGFfdG9rZW4YAyABKAlCA+BBASJgChlHZW5lcmF0ZUNoYXRUb2tlblJlc3Bv",
-            "bnNlEhIKCmNoYXRfdG9rZW4YASABKAkSLwoLZXhwaXJlX3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMsICCg1XaWRnZXRTZXJ2aWNl",
-            "EsQBChFHZW5lcmF0ZUNoYXRUb2tlbhItLmdvb2dsZS5jbG91ZC5jZXMudjEu",
-            "R2VuZXJhdGVDaGF0VG9rZW5SZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmNlcy52",
-            "MS5HZW5lcmF0ZUNoYXRUb2tlblJlc3BvbnNlIlCC0+STAkoiRS92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcHMvKi9zZXNzaW9ucy8qfTpn",
-            "ZW5lcmF0ZUNoYXRUb2tlbjoBKhpqykESY2VzLmdvb2dsZWFwaXMuY29t0kFS",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jZXMsaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJaChdjb20u",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MUISV2lkZ2V0U2VydmljZVByb3RvUAFaKWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vY2VzL2FwaXYxL2Nlc3BiO2Nlc3BiYgZwcm90",
-            "bzM="));
+            "aGFfdG9rZW4YAyABKAlCA+BBARIhChRsaXZlX2hhbmRvZmZfZW5hYmxlZBgE",
+            "IAEoCEID4EEBImAKGUdlbmVyYXRlQ2hhdFRva2VuUmVzcG9uc2USEgoKY2hh",
+            "dF90b2tlbhgBIAEoCRIvCgtleHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAywgIKDVdpZGdldFNlcnZpY2USxAEKEUdlbmVy",
+            "YXRlQ2hhdFRva2VuEi0uZ29vZ2xlLmNsb3VkLmNlcy52MS5HZW5lcmF0ZUNo",
+            "YXRUb2tlblJlcXVlc3QaLi5nb29nbGUuY2xvdWQuY2VzLnYxLkdlbmVyYXRl",
+            "Q2hhdFRva2VuUmVzcG9uc2UiUILT5JMCSiJFL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovYXBwcy8qL3Nlc3Npb25zLyp9OmdlbmVyYXRlQ2hh",
+            "dFRva2VuOgEqGmrKQRJjZXMuZ29vZ2xlYXBpcy5jb23SQVJodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NlcyxodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQloKF2NvbS5nb29nbGUuY2xv",
+            "dWQuY2VzLnYxQhJXaWRnZXRTZXJ2aWNlUHJvdG9QAVopY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9jZXMvYXBpdjEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.GenerateChatTokenRequest), global::Google.Cloud.Ces.V1.GenerateChatTokenRequest.Parser, new[]{ "Name", "Deployment", "RecaptchaToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.GenerateChatTokenRequest), global::Google.Cloud.Ces.V1.GenerateChatTokenRequest.Parser, new[]{ "Name", "Deployment", "RecaptchaToken", "LiveHandoffEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.GenerateChatTokenResponse), global::Google.Cloud.Ces.V1.GenerateChatTokenResponse.Parser, new[]{ "ChatToken", "ExpireTime" }, null, null, null, null)
           }));
     }
@@ -98,6 +98,7 @@ namespace Google.Cloud.Ces.V1 {
       name_ = other.name_;
       deployment_ = other.deployment_;
       recaptchaToken_ = other.recaptchaToken_;
+      liveHandoffEnabled_ = other.liveHandoffEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -156,6 +157,21 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "live_handoff_enabled" field.</summary>
+    public const int LiveHandoffEnabledFieldNumber = 4;
+    private bool liveHandoffEnabled_;
+    /// <summary>
+    /// Optional. Indicates if live handoff is enabled for the session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LiveHandoffEnabled {
+      get { return liveHandoffEnabled_; }
+      set {
+        liveHandoffEnabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -174,6 +190,7 @@ namespace Google.Cloud.Ces.V1 {
       if (Name != other.Name) return false;
       if (Deployment != other.Deployment) return false;
       if (RecaptchaToken != other.RecaptchaToken) return false;
+      if (LiveHandoffEnabled != other.LiveHandoffEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -184,6 +201,7 @@ namespace Google.Cloud.Ces.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Deployment.Length != 0) hash ^= Deployment.GetHashCode();
       if (RecaptchaToken.Length != 0) hash ^= RecaptchaToken.GetHashCode();
+      if (LiveHandoffEnabled != false) hash ^= LiveHandoffEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,6 +232,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(26);
         output.WriteString(RecaptchaToken);
       }
+      if (LiveHandoffEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(LiveHandoffEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -236,6 +258,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(26);
         output.WriteString(RecaptchaToken);
       }
+      if (LiveHandoffEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(LiveHandoffEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -254,6 +280,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (RecaptchaToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RecaptchaToken);
+      }
+      if (LiveHandoffEnabled != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -275,6 +304,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (other.RecaptchaToken.Length != 0) {
         RecaptchaToken = other.RecaptchaToken;
+      }
+      if (other.LiveHandoffEnabled != false) {
+        LiveHandoffEnabled = other.LiveHandoffEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -303,6 +335,10 @@ namespace Google.Cloud.Ces.V1 {
             RecaptchaToken = input.ReadString();
             break;
           }
+          case 32: {
+            LiveHandoffEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -328,6 +364,10 @@ namespace Google.Cloud.Ces.V1 {
           }
           case 26: {
             RecaptchaToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            LiveHandoffEnabled = input.ReadBool();
             break;
           }
         }

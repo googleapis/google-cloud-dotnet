@@ -27,19 +27,22 @@ namespace Google.Cloud.Ces.V1 {
             "CiVnb29nbGUvY2xvdWQvY2VzL3YxL21jcF90b29sc2V0LnByb3RvEhNnb29n",
             "bGUuY2xvdWQuY2VzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
             "b3RvGh5nb29nbGUvY2xvdWQvY2VzL3YxL2F1dGgucHJvdG8aIGdvb2dsZS9j",
-            "bG91ZC9jZXMvdjEvY29tbW9uLnByb3RvIv8BCgpNY3BUb29sc2V0EhsKDnNl",
+            "bG91ZC9jZXMvdjEvY29tbW9uLnByb3RvIoYDCgpNY3BUb29sc2V0EhsKDnNl",
             "cnZlcl9hZGRyZXNzGAEgASgJQgPgQQISRwoSYXBpX2F1dGhlbnRpY2F0aW9u",
             "GAIgASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52MS5BcGlBdXRoZW50aWNhdGlv",
             "bkID4EEBElIKGHNlcnZpY2VfZGlyZWN0b3J5X2NvbmZpZxgDIAEoCzIrLmdv",
             "b2dsZS5jbG91ZC5jZXMudjEuU2VydmljZURpcmVjdG9yeUNvbmZpZ0ID4EEB",
             "EjcKCnRsc19jb25maWcYBCABKAsyHi5nb29nbGUuY2xvdWQuY2VzLnYxLlRs",
-            "c0NvbmZpZ0ID4EEBQlcKF2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxQg9NY3BU",
+            "c0NvbmZpZ0ID4EEBEk8KDmN1c3RvbV9oZWFkZXJzGAUgAygLMjIuZ29vZ2xl",
+            "LmNsb3VkLmNlcy52MS5NY3BUb29sc2V0LkN1c3RvbUhlYWRlcnNFbnRyeUID",
+            "4EEBGjQKEkN1c3RvbUhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBQlcKF2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxQg9NY3BU",
             "b29sc2V0UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjEv",
             "Y2VzcGI7Y2VzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1.AuthReflection.Descriptor, global::Google.Cloud.Ces.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.McpToolset), global::Google.Cloud.Ces.V1.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.McpToolset), global::Google.Cloud.Ces.V1.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig", "CustomHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -89,6 +92,7 @@ namespace Google.Cloud.Ces.V1 {
       apiAuthentication_ = other.apiAuthentication_ != null ? other.apiAuthentication_.Clone() : null;
       serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
       tlsConfig_ = other.tlsConfig_ != null ? other.tlsConfig_.Clone() : null;
+      customHeaders_ = other.customHeaders_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -168,6 +172,24 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_headers" field.</summary>
+    public const int CustomHeadersFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_customHeaders_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> customHeaders_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The custom headers to send in the request to the MCP server. The
+    /// values must be in the format `$context.variables.&lt;name_of_variable>` and
+    /// can be set in the session variables. See
+    /// https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-api#openapi-injection
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> CustomHeaders {
+      get { return customHeaders_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -187,6 +209,7 @@ namespace Google.Cloud.Ces.V1 {
       if (!object.Equals(ApiAuthentication, other.ApiAuthentication)) return false;
       if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
       if (!object.Equals(TlsConfig, other.TlsConfig)) return false;
+      if (!CustomHeaders.Equals(other.CustomHeaders)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -198,6 +221,7 @@ namespace Google.Cloud.Ces.V1 {
       if (apiAuthentication_ != null) hash ^= ApiAuthentication.GetHashCode();
       if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
       if (tlsConfig_ != null) hash ^= TlsConfig.GetHashCode();
+      hash ^= CustomHeaders.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -232,6 +256,7 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(TlsConfig);
       }
+      customHeaders_.WriteTo(output, _map_customHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -258,6 +283,7 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(TlsConfig);
       }
+      customHeaders_.WriteTo(ref output, _map_customHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -280,6 +306,7 @@ namespace Google.Cloud.Ces.V1 {
       if (tlsConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TlsConfig);
       }
+      size += customHeaders_.CalculateSize(_map_customHeaders_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -313,6 +340,7 @@ namespace Google.Cloud.Ces.V1 {
         }
         TlsConfig.MergeFrom(other.TlsConfig);
       }
+      customHeaders_.MergeFrom(other.customHeaders_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -353,6 +381,10 @@ namespace Google.Cloud.Ces.V1 {
             input.ReadMessage(TlsConfig);
             break;
           }
+          case 42: {
+            customHeaders_.AddEntriesFrom(input, _map_customHeaders_codec);
+            break;
+          }
         }
       }
     #endif
@@ -391,6 +423,10 @@ namespace Google.Cloud.Ces.V1 {
               TlsConfig = new global::Google.Cloud.Ces.V1.TlsConfig();
             }
             input.ReadMessage(TlsConfig);
+            break;
+          }
+          case 42: {
+            customHeaders_.AddEntriesFrom(ref input, _map_customHeaders_codec);
             break;
           }
         }
