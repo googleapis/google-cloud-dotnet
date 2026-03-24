@@ -146,11 +146,11 @@ public sealed partial class SubscriberClientImpl
         private readonly IClock _clock;
         private readonly SubscriberServiceApiClient _client;
         private readonly SubscriptionHandler _handler;
-        private readonly CancellationTokenSource _mainCts; // Cancels the main processing loop, immediately stoping all processing. This may drop messages.
-        private readonly CancellationTokenSource _pullCts; // Cancels the streaming pull, preventing new messages from being consumed.
-        private readonly CancellationTokenSource _ackNackCts; // Cancels all ACK/NACK pushes to the Pub/Sub service.
-        private readonly CancellationTokenSource _sendToHandlerCts; // Cancels sending new messages to be handled.
-        private readonly CancellationTokenSource _waitForHandlerCts; // Cancels all message handler operations.
+        private readonly LinkedCancellationTokenSource _mainCts; // Cancels the main processing loop, immediately stoping all processing. This may drop messages.
+        private readonly LinkedCancellationTokenSource _pullCts; // Cancels the streaming pull, preventing new messages from being consumed.
+        private readonly LinkedCancellationTokenSource _ackNackCts; // Cancels all ACK/NACK pushes to the Pub/Sub service.
+        private readonly LinkedCancellationTokenSource _sendToHandlerCts; // Cancels sending new messages to be handled.
+        private readonly LinkedCancellationTokenSource _waitForHandlerCts; // Cancels all message handler operations.
         private readonly SubscriptionName _subscriptionName;
         private readonly LeaseTiming _normalLeaseTiming;
         private readonly LeaseTiming _exactlyOnceDeliveryLeaseTiming;
@@ -199,11 +199,11 @@ public sealed partial class SubscriberClientImpl
             // Arrange cancellation token sources for shutdown
             var nackAndWaitToken        = subscriber._globalNackAndWaitCts.Token;
             var hardstopToken           = subscriber._globalHardStopCts.Token;
-            _mainCts                    = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
-            _ackNackCts                 = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
-            _pullCts                    = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken, nackAndWaitToken);
-            _sendToHandlerCts           = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken, nackAndWaitToken); // This is guaranteed to be cancelled before _waitForHandlerCts
-            _waitForHandlerCts          = CancellationTokenSource.CreateLinkedTokenSource(hardstopToken);
+            _mainCts                    = new LinkedCancellationTokenSource(hardstopToken);
+            _ackNackCts                 = new LinkedCancellationTokenSource(hardstopToken);
+            _pullCts                    = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken);
+            _sendToHandlerCts           = new LinkedCancellationTokenSource(hardstopToken, nackAndWaitToken);// This is guaranteed to be cancelled before _waitForHandlerCts
+            _waitForHandlerCts          = new LinkedCancellationTokenSource(hardstopToken);
 
             _subscriptionName = subscriber.SubscriptionName;
             _normalLeaseTiming = subscriber._normalLeaseTiming;
@@ -664,7 +664,7 @@ public sealed partial class SubscriberClientImpl
             {
                 // Create a task to cancel lease-extension once `_maxExtensionDuration` has been reached.
                 // This set up once for each chunk of received messages, and passed through to each future call to this method.
-                cancellation = new LeaseCancellation(_waitForHandlerCts);
+                cancellation = new LeaseCancellation(_waitForHandlerCts.Source);
                 Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                 {
                     // On cancellation we may have not reached the max extension duration so don't clear the lease
@@ -1325,6 +1325,91 @@ public sealed partial class SubscriberClientImpl
                 // Backoff briefly.
                 Backoff = _disconnectBackoff;
             }
+        }
+
+        /// <summary>
+        /// Evaluates the underlying parent tokens directly for cancellation rather than relying on standard callback mechanisms.
+        /// This guarantees atomicity and precise synchronization across multiple sources linked to the same parent tokens.
+        /// </summary>
+        private sealed class LinkedCancellationTokenSource
+        {
+            private readonly CancellationTokenSource _linkedSource;
+            private readonly CancellationToken[] _parentTokens;
+
+            /// <summary>
+            /// Initializes a new instance linked to the provided parent tokens.
+            /// </summary>
+            public LinkedCancellationTokenSource(params CancellationToken[] parentTokens)
+            {
+                _parentTokens = parentTokens ?? Array.Empty<CancellationToken>();
+
+                // Fallback to a standard source if no parent tokens are provided
+                _linkedSource = _parentTokens.Length > 0
+                    ? CancellationTokenSource.CreateLinkedTokenSource(_parentTokens)
+                    : new CancellationTokenSource();
+            }
+
+            /// <summary>
+            /// Gets whether cancellation has been requested for this source or any parent tokens.
+            /// </summary>
+            public bool IsCancellationRequested
+            {
+                get
+                {
+                    // Fast path: inner source already registered the cancellation
+                    if (_linkedSource.IsCancellationRequested)
+                    {
+                        return true;
+                    }
+
+                    // Explicitly check parents to bypass callback delays
+                    for (int i = 0; i < _parentTokens.Length; i++)
+                    {
+                        if (_parentTokens[i].IsCancellationRequested)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+
+            /// <summary>
+            /// Gets the CancellationToken associated with this source.
+            /// </summary>
+            public CancellationToken Token => _linkedSource.Token;
+
+
+            /// <summary>
+            /// Gets the CancellationTokenSource associated with the linked token.
+            /// </summary>
+            public CancellationTokenSource Source => _linkedSource;
+
+            /// <summary>
+            /// Throws an OperationCanceledException if this source or any parent token has been canceled.
+            /// </summary>
+            public void ThrowIfCancellationRequested()
+            {
+                // Fast path: inner source already registered the cancellation
+                if (_linkedSource.IsCancellationRequested)
+                {
+                    _linkedSource.Token.ThrowIfCancellationRequested();
+                }
+
+                // Explicitly check parents to bypass callback delays
+                for (int i = 0; i < _parentTokens.Length; i++)
+                {
+                    if (_parentTokens[i].IsCancellationRequested)
+                    {
+                        _parentTokens[i].ThrowIfCancellationRequested();
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Communicates a request for cancellation to the linked cancellation token. Does not cancel parent tokens.
+            /// </summary>
+            public void Cancel() => _linkedSource.Cancel();
         }
     }
 }
