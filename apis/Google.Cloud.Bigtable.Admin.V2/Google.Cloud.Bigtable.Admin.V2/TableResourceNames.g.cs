@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gcbav = Google.Cloud.Bigtable.Admin.V2;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
@@ -1412,6 +1413,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbcv::TableName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class AutomatedBackupPolicy
+            {
+                /// <summary>
+                /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Locations"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<gagr::LocationName> LocationsAsLocationNames
+                {
+                    get => new gax::ResourceNameList<gagr::LocationName>(Locations, s => string.IsNullOrEmpty(s) ? null : gagr::LocationName.Parse(s, allowUnparsed: true));
+                }
+            }
         }
     }
 

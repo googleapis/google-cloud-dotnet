@@ -797,7 +797,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-02T14:08:49.604101116Z",
-            "lastGeneratedCommit": "a6cbf809c4c165e618ee23a059442af90a80a0f5",
+            "lastGeneratedCommit": "5993bc685e72fbda796378c146533f7ef6e95d8a",
             "lastReleasedCommit": "a6cbf809c4c165e618ee23a059442af90a80a0f5",
             "apiPaths": [
                 "google/bigtable/admin/v2"
