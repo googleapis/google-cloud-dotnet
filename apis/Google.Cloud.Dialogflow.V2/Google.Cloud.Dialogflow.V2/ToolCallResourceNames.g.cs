@@ -26,6 +26,31 @@ namespace Google.Cloud.Dialogflow.V2
             get => string.IsNullOrEmpty(Tool) ? null : ToolName.Parse(Tool, allowUnparsed: true);
             set => Tool = value?.ToString() ?? "";
         }
+
+        /// <summary><see cref="AppName"/>-typed view over the <see cref="CesApp"/> resource name property.</summary>
+        public AppName CesAppAsAppName
+        {
+            get => string.IsNullOrEmpty(CesApp) ? null : AppName.Parse(CesApp, allowUnparsed: true);
+            set => CesApp = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CesToolName"/>-typed view over the <see cref="CesTool"/> resource name property.
+        /// </summary>
+        public CesToolName CesToolAsCesToolName
+        {
+            get => string.IsNullOrEmpty(CesTool) ? null : CesToolName.Parse(CesTool, allowUnparsed: true);
+            set => CesTool = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ToolsetName"/>-typed view over the <see cref="CesToolset"/> resource name property.
+        /// </summary>
+        public ToolsetName CesToolsetAsToolsetName
+        {
+            get => string.IsNullOrEmpty(CesToolset) ? null : ToolsetName.Parse(CesToolset, allowUnparsed: true);
+            set => CesToolset = value?.ToString() ?? "";
+        }
     }
 
     public partial class ToolCallResult
@@ -35,6 +60,31 @@ namespace Google.Cloud.Dialogflow.V2
         {
             get => string.IsNullOrEmpty(Tool) ? null : ToolName.Parse(Tool, allowUnparsed: true);
             set => Tool = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="AppName"/>-typed view over the <see cref="CesApp"/> resource name property.</summary>
+        public AppName CesAppAsAppName
+        {
+            get => string.IsNullOrEmpty(CesApp) ? null : AppName.Parse(CesApp, allowUnparsed: true);
+            set => CesApp = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CesToolName"/>-typed view over the <see cref="CesTool"/> resource name property.
+        /// </summary>
+        public CesToolName CesToolAsCesToolName
+        {
+            get => string.IsNullOrEmpty(CesTool) ? null : CesToolName.Parse(CesTool, allowUnparsed: true);
+            set => CesTool = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ToolsetName"/>-typed view over the <see cref="CesToolset"/> resource name property.
+        /// </summary>
+        public ToolsetName CesToolsetAsToolsetName
+        {
+            get => string.IsNullOrEmpty(CesToolset) ? null : ToolsetName.Parse(CesToolset, allowUnparsed: true);
+            set => CesToolset = value?.ToString() ?? "";
         }
     }
 }

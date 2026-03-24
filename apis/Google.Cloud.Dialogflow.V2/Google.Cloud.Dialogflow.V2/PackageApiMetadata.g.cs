@@ -65,6 +65,8 @@ namespace Google.Cloud.Dialogflow.V2
             yield return AgentCoachingInstructionReflection.Descriptor;
             yield return AnswerRecordReflection.Descriptor;
             yield return AudioConfigReflection.Descriptor;
+            yield return CesAppReflection.Descriptor;
+            yield return CesToolReflection.Descriptor;
             yield return ContextReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
             yield return ConversationDatasetReflection.Descriptor;
@@ -89,6 +91,7 @@ namespace Google.Cloud.Dialogflow.V2
             yield return SipTrunkReflection.Descriptor;
             yield return ToolReflection.Descriptor;
             yield return ToolCallReflection.Descriptor;
+            yield return ToolsetReflection.Descriptor;
             yield return ValidationResultReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return WebhookReflection.Descriptor;

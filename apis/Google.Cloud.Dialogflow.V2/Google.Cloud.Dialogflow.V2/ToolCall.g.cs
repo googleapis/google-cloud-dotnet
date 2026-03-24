@@ -28,33 +28,40 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Gmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhxn",
             "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvIrUDCghUb29sQ2FsbBI2CgR0b29sGAEgASgJQibg",
-            "QQH6QSAKHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEh4KEXRv",
-            "b2xfZGlzcGxheV9uYW1lGAkgASgJQgPgQQESIQoUdG9vbF9kaXNwbGF5X2Rl",
-            "dGFpbHMYCiABKAlCA+BBARITCgZhY3Rpb24YAiABKAlCA+BBARI2ChBpbnB1",
-            "dF9wYXJhbWV0ZXJzGAMgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID",
-            "4EEBEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEhoKDWFuc3dlcl9yZWNvcmQYBiABKAlCA+BBARI+CgVz",
-            "dGF0ZRgHIAEoDjIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRvb2xD",
-            "YWxsLlN0YXRlQgPgQQMiRQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABINCglUUklHR0VSRUQQARIWChJORUVEU19DT05GSVJNQVRJT04QAkIICgZz",
-            "b3VyY2UizwIKDlRvb2xDYWxsUmVzdWx0EjYKBHRvb2wYASABKAlCJuBBAfpB",
-            "IAoeZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Ub29sSAASEwoGYWN0aW9u",
-            "GAIgASgJQgPgQQESQQoFZXJyb3IYAyABKAsyMC5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5Ub29sQ2FsbFJlc3VsdC5FcnJvckgBEhUKC3Jhd19jb250",
-            "ZW50GAUgASgMSAESEQoHY29udGVudBgGIAEoCUgBEjQKC2NyZWF0ZV90aW1l",
-            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhoKDWFu",
-            "c3dlcl9yZWNvcmQYCSABKAlCA+BBARodCgVFcnJvchIUCgdtZXNzYWdlGAEg",
-            "ASgJQgPgQQFCCAoGc291cmNlQggKBnJlc3VsdEKTAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyQg1Ub29sQ2FsbFByb3RvUAFaPmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlh",
-            "bG9nZmxvd3BiogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIG",
-            "cHJvdG8z"));
+            "dGltZXN0YW1wLnByb3RvItgECghUb29sQ2FsbBI2CgR0b29sGAEgASgJQibg",
+            "QQH6QSAKHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEjMKCGNl",
+            "c190b29sGAsgASgJQh/gQQH6QRkKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29s",
+            "SAASOQoLY2VzX3Rvb2xzZXQYDCABKAlCIuBBAfpBHAoaY2VzLmdvb2dsZWFw",
+            "aXMuY29tL1Rvb2xzZXRIABIxCgdjZXNfYXBwGAggASgJQh7gQQH6QRgKFmNl",
+            "cy5nb29nbGVhcGlzLmNvbS9BcHBIABIeChF0b29sX2Rpc3BsYXlfbmFtZRgJ",
+            "IAEoCUID4EEBEiEKFHRvb2xfZGlzcGxheV9kZXRhaWxzGAogASgJQgPgQQES",
+            "EwoGYWN0aW9uGAIgASgJQgPgQQESNgoQaW5wdXRfcGFyYW1ldGVycxgDIAEo",
+            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARI0CgtjcmVhdGVfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1h",
+            "bnN3ZXJfcmVjb3JkGAYgASgJQgPgQQESPgoFc3RhdGUYByABKA4yKi5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Ub29sQ2FsbC5TdGF0ZUID4EEDIkUK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDQoJVFJJR0dFUkVEEAES",
+            "FgoSTkVFRFNfQ09ORklSTUFUSU9OEAJCCAoGc291cmNlIvIDCg5Ub29sQ2Fs",
+            "bFJlc3VsdBI2CgR0b29sGAEgASgJQibgQQH6QSAKHmRpYWxvZ2Zsb3cuZ29v",
+            "Z2xlYXBpcy5jb20vVG9vbEgAEjkKC2Nlc190b29sc2V0GA0gASgJQiLgQQH6",
+            "QRwKGmNlcy5nb29nbGVhcGlzLmNvbS9Ub29sc2V0SAASMwoIY2VzX3Rvb2wY",
+            "DCABKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABIxCgdj",
+            "ZXNfYXBwGAsgASgJQh7gQQH6QRgKFmNlcy5nb29nbGVhcGlzLmNvbS9BcHBI",
+            "ABITCgZhY3Rpb24YAiABKAlCA+BBARJBCgVlcnJvchgDIAEoCzIwLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRvb2xDYWxsUmVzdWx0LkVycm9ySAES",
+            "FQoLcmF3X2NvbnRlbnQYBSABKAxIARIRCgdjb250ZW50GAYgASgJSAESNAoL",
+            "Y3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSGgoNYW5zd2VyX3JlY29yZBgJIAEoCUID4EEBGh0KBUVycm9yEhQK",
+            "B21lc3NhZ2UYASABKAlCA+BBAUIICgZzb3VyY2VCCAoGcmVzdWx0QpMBCh5j",
+            "b20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDVRvb2xDYWxsUHJvdG9Q",
+            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2RpYWxv",
+            "Z2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
+            "b2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCall), global::Google.Cloud.Dialogflow.V2.ToolCall.Parser, new[]{ "Tool", "ToolDisplayName", "ToolDisplayDetails", "Action", "InputParameters", "CreateTime", "AnswerRecord", "State" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.ToolCall.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCallResult), global::Google.Cloud.Dialogflow.V2.ToolCallResult.Parser, new[]{ "Tool", "Action", "Error", "RawContent", "Content", "CreateTime", "AnswerRecord" }, new[]{ "Source", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCallResult.Types.Error), global::Google.Cloud.Dialogflow.V2.ToolCallResult.Types.Error.Parser, new[]{ "Message" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCall), global::Google.Cloud.Dialogflow.V2.ToolCall.Parser, new[]{ "Tool", "CesTool", "CesToolset", "CesApp", "ToolDisplayName", "ToolDisplayDetails", "Action", "InputParameters", "CreateTime", "AnswerRecord", "State" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.ToolCall.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCallResult), global::Google.Cloud.Dialogflow.V2.ToolCallResult.Parser, new[]{ "Tool", "CesToolset", "CesTool", "CesApp", "Action", "Error", "RawContent", "Content", "CreateTime", "AnswerRecord" }, new[]{ "Source", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ToolCallResult.Types.Error), global::Google.Cloud.Dialogflow.V2.ToolCallResult.Types.Error.Parser, new[]{ "Message" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -110,6 +117,15 @@ namespace Google.Cloud.Dialogflow.V2 {
         case SourceOneofCase.Tool:
           Tool = other.Tool;
           break;
+        case SourceOneofCase.CesTool:
+          CesTool = other.CesTool;
+          break;
+        case SourceOneofCase.CesToolset:
+          CesToolset = other.CesToolset;
+          break;
+        case SourceOneofCase.CesApp:
+          CesApp = other.CesApp;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -148,6 +164,99 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTool() {
       if (HasTool) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_tool" field.</summary>
+    public const int CesToolFieldNumber = 11;
+    /// <summary>
+    /// Optional. CES tool name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>/tools/&lt;ToolID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesTool {
+      get { return HasCesTool ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesTool;
+      }
+    }
+    /// <summary>Gets whether the "ces_tool" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesTool {
+      get { return sourceCase_ == SourceOneofCase.CesTool; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_tool" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesTool() {
+      if (HasCesTool) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_toolset" field.</summary>
+    public const int CesToolsetFieldNumber = 12;
+    /// <summary>
+    /// Optional. CES toolset name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>/toolsets/ToolsetID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesToolset {
+      get { return HasCesToolset ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesToolset;
+      }
+    }
+    /// <summary>Gets whether the "ces_toolset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesToolset {
+      get { return sourceCase_ == SourceOneofCase.CesToolset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_toolset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesToolset() {
+      if (HasCesToolset) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_app" field.</summary>
+    public const int CesAppFieldNumber = 8;
+    /// <summary>
+    /// Optional. CES app name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesApp {
+      get { return HasCesApp ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesApp;
+      }
+    }
+    /// <summary>Gets whether the "ces_app" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesApp {
+      get { return sourceCase_ == SourceOneofCase.CesApp; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_app" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesApp() {
+      if (HasCesApp) {
         ClearSource();
       }
     }
@@ -262,6 +371,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public enum SourceOneofCase {
       None = 0,
       Tool = 1,
+      CesTool = 11,
+      CesToolset = 12,
+      CesApp = 8,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -293,6 +405,9 @@ namespace Google.Cloud.Dialogflow.V2 {
         return true;
       }
       if (Tool != other.Tool) return false;
+      if (CesTool != other.CesTool) return false;
+      if (CesToolset != other.CesToolset) return false;
+      if (CesApp != other.CesApp) return false;
       if (ToolDisplayName != other.ToolDisplayName) return false;
       if (ToolDisplayDetails != other.ToolDisplayDetails) return false;
       if (Action != other.Action) return false;
@@ -309,6 +424,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasTool) hash ^= Tool.GetHashCode();
+      if (HasCesTool) hash ^= CesTool.GetHashCode();
+      if (HasCesToolset) hash ^= CesToolset.GetHashCode();
+      if (HasCesApp) hash ^= CesApp.GetHashCode();
       if (ToolDisplayName.Length != 0) hash ^= ToolDisplayName.GetHashCode();
       if (ToolDisplayDetails.Length != 0) hash ^= ToolDisplayDetails.GetHashCode();
       if (Action.Length != 0) hash ^= Action.GetHashCode();
@@ -359,6 +477,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) State);
       }
+      if (HasCesApp) {
+        output.WriteRawTag(66);
+        output.WriteString(CesApp);
+      }
       if (ToolDisplayName.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(ToolDisplayName);
@@ -366,6 +488,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ToolDisplayDetails.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(ToolDisplayDetails);
+      }
+      if (HasCesTool) {
+        output.WriteRawTag(90);
+        output.WriteString(CesTool);
+      }
+      if (HasCesToolset) {
+        output.WriteRawTag(98);
+        output.WriteString(CesToolset);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -401,6 +531,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) State);
       }
+      if (HasCesApp) {
+        output.WriteRawTag(66);
+        output.WriteString(CesApp);
+      }
       if (ToolDisplayName.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(ToolDisplayName);
@@ -408,6 +542,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ToolDisplayDetails.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(ToolDisplayDetails);
+      }
+      if (HasCesTool) {
+        output.WriteRawTag(90);
+        output.WriteString(CesTool);
+      }
+      if (HasCesToolset) {
+        output.WriteRawTag(98);
+        output.WriteString(CesToolset);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -421,6 +563,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       int size = 0;
       if (HasTool) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tool);
+      }
+      if (HasCesTool) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesTool);
+      }
+      if (HasCesToolset) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesToolset);
+      }
+      if (HasCesApp) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesApp);
       }
       if (ToolDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ToolDisplayName);
@@ -486,6 +637,15 @@ namespace Google.Cloud.Dialogflow.V2 {
         case SourceOneofCase.Tool:
           Tool = other.Tool;
           break;
+        case SourceOneofCase.CesTool:
+          CesTool = other.CesTool;
+          break;
+        case SourceOneofCase.CesToolset:
+          CesToolset = other.CesToolset;
+          break;
+        case SourceOneofCase.CesApp:
+          CesApp = other.CesApp;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -533,12 +693,24 @@ namespace Google.Cloud.Dialogflow.V2 {
             State = (global::Google.Cloud.Dialogflow.V2.ToolCall.Types.State) input.ReadEnum();
             break;
           }
+          case 66: {
+            CesApp = input.ReadString();
+            break;
+          }
           case 74: {
             ToolDisplayName = input.ReadString();
             break;
           }
           case 82: {
             ToolDisplayDetails = input.ReadString();
+            break;
+          }
+          case 90: {
+            CesTool = input.ReadString();
+            break;
+          }
+          case 98: {
+            CesToolset = input.ReadString();
             break;
           }
         }
@@ -586,12 +758,24 @@ namespace Google.Cloud.Dialogflow.V2 {
             State = (global::Google.Cloud.Dialogflow.V2.ToolCall.Types.State) input.ReadEnum();
             break;
           }
+          case 66: {
+            CesApp = input.ReadString();
+            break;
+          }
           case 74: {
             ToolDisplayName = input.ReadString();
             break;
           }
           case 82: {
             ToolDisplayDetails = input.ReadString();
+            break;
+          }
+          case 90: {
+            CesTool = input.ReadString();
+            break;
+          }
+          case 98: {
+            CesToolset = input.ReadString();
             break;
           }
         }
@@ -672,6 +856,15 @@ namespace Google.Cloud.Dialogflow.V2 {
         case SourceOneofCase.Tool:
           Tool = other.Tool;
           break;
+        case SourceOneofCase.CesToolset:
+          CesToolset = other.CesToolset;
+          break;
+        case SourceOneofCase.CesTool:
+          CesTool = other.CesTool;
+          break;
+        case SourceOneofCase.CesApp:
+          CesApp = other.CesApp;
+          break;
       }
 
       switch (other.ResultCase) {
@@ -722,6 +915,99 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTool() {
       if (HasTool) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_toolset" field.</summary>
+    public const int CesToolsetFieldNumber = 13;
+    /// <summary>
+    /// Optional. CES toolset name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>/toolsets/ToolsetID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesToolset {
+      get { return HasCesToolset ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesToolset;
+      }
+    }
+    /// <summary>Gets whether the "ces_toolset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesToolset {
+      get { return sourceCase_ == SourceOneofCase.CesToolset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_toolset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesToolset() {
+      if (HasCesToolset) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_tool" field.</summary>
+    public const int CesToolFieldNumber = 12;
+    /// <summary>
+    /// Optional. CES tool name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>/tools/&lt;ToolID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesTool {
+      get { return HasCesTool ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesTool;
+      }
+    }
+    /// <summary>Gets whether the "ces_tool" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesTool {
+      get { return sourceCase_ == SourceOneofCase.CesTool; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_tool" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesTool() {
+      if (HasCesTool) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "ces_app" field.</summary>
+    public const int CesAppFieldNumber = 11;
+    /// <summary>
+    /// Optional. CES app name for this call.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/apps/&lt;AppID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CesApp {
+      get { return HasCesApp ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.CesApp;
+      }
+    }
+    /// <summary>Gets whether the "ces_app" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCesApp {
+      get { return sourceCase_ == SourceOneofCase.CesApp; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ces_app" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCesApp() {
+      if (HasCesApp) {
         ClearSource();
       }
     }
@@ -850,6 +1136,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public enum SourceOneofCase {
       None = 0,
       Tool = 1,
+      CesToolset = 13,
+      CesTool = 12,
+      CesApp = 11,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -903,6 +1192,9 @@ namespace Google.Cloud.Dialogflow.V2 {
         return true;
       }
       if (Tool != other.Tool) return false;
+      if (CesToolset != other.CesToolset) return false;
+      if (CesTool != other.CesTool) return false;
+      if (CesApp != other.CesApp) return false;
       if (Action != other.Action) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (RawContent != other.RawContent) return false;
@@ -919,6 +1211,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasTool) hash ^= Tool.GetHashCode();
+      if (HasCesToolset) hash ^= CesToolset.GetHashCode();
+      if (HasCesTool) hash ^= CesTool.GetHashCode();
+      if (HasCesApp) hash ^= CesApp.GetHashCode();
       if (Action.Length != 0) hash ^= Action.GetHashCode();
       if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
       if (HasRawContent) hash ^= RawContent.GetHashCode();
@@ -973,6 +1268,18 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(74);
         output.WriteString(AnswerRecord);
       }
+      if (HasCesApp) {
+        output.WriteRawTag(90);
+        output.WriteString(CesApp);
+      }
+      if (HasCesTool) {
+        output.WriteRawTag(98);
+        output.WriteString(CesTool);
+      }
+      if (HasCesToolset) {
+        output.WriteRawTag(106);
+        output.WriteString(CesToolset);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1011,6 +1318,18 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(74);
         output.WriteString(AnswerRecord);
       }
+      if (HasCesApp) {
+        output.WriteRawTag(90);
+        output.WriteString(CesApp);
+      }
+      if (HasCesTool) {
+        output.WriteRawTag(98);
+        output.WriteString(CesTool);
+      }
+      if (HasCesToolset) {
+        output.WriteRawTag(106);
+        output.WriteString(CesToolset);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1023,6 +1342,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       int size = 0;
       if (HasTool) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tool);
+      }
+      if (HasCesToolset) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesToolset);
+      }
+      if (HasCesTool) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesTool);
+      }
+      if (HasCesApp) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CesApp);
       }
       if (Action.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Action);
@@ -1069,6 +1397,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       switch (other.SourceCase) {
         case SourceOneofCase.Tool:
           Tool = other.Tool;
+          break;
+        case SourceOneofCase.CesToolset:
+          CesToolset = other.CesToolset;
+          break;
+        case SourceOneofCase.CesTool:
+          CesTool = other.CesTool;
+          break;
+        case SourceOneofCase.CesApp:
+          CesApp = other.CesApp;
           break;
       }
 
@@ -1138,6 +1475,18 @@ namespace Google.Cloud.Dialogflow.V2 {
             AnswerRecord = input.ReadString();
             break;
           }
+          case 90: {
+            CesApp = input.ReadString();
+            break;
+          }
+          case 98: {
+            CesTool = input.ReadString();
+            break;
+          }
+          case 106: {
+            CesToolset = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1187,6 +1536,18 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 74: {
             AnswerRecord = input.ReadString();
+            break;
+          }
+          case 90: {
+            CesApp = input.ReadString();
+            break;
+          }
+          case 98: {
+            CesTool = input.ReadString();
+            break;
+          }
+          case 106: {
+            CesToolset = input.ReadString();
             break;
           }
         }
