@@ -313,6 +313,7 @@
     "apis/Google.Maps.AreaInsights.V1/Google.Maps.AreaInsights.V1/**",
     "apis/Google.Maps.FleetEngine.Delivery.V1/Google.Maps.FleetEngine.Delivery.V1/**",
     "apis/Google.Maps.FleetEngine.V1/Google.Maps.FleetEngine.V1/**",
+    "apis/Google.Maps.Geocode.V4/Google.Maps.Geocode.V4/**",
     "apis/Google.Maps.MapsPlatformDatasets.V1/Google.Maps.MapsPlatformDatasets.V1/**",
     "apis/Google.Maps.Places.V1/Google.Maps.Places.V1/**",
     "apis/Google.Maps.RouteOptimization.V1/Google.Maps.RouteOptimization.V1/**",

@@ -1,0 +1,402 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.Geocode.V4",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.geocode.v4",
+        "version": "v4"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "backend_v4_generated_DestinationService_SearchDestinations_sync",
+      "title": "SearchDestinationsRequestObject",
+      "description": "Snippet for SearchDestinations",
+      "file": "DestinationServiceClient.SearchDestinationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDestinations",
+        "fullName": "Google.Maps.Geocode.V4.DestinationServiceClient.SearchDestinations",
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.SearchDestinationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Geocode.V4.SearchDestinationsResponse",
+        "client": {
+          "shortName": "DestinationServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.DestinationServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDestinations",
+          "fullName": "google.maps.geocode.v4.DestinationService.SearchDestinations",
+          "service": {
+            "shortName": "DestinationService",
+            "fullName": "google.maps.geocode.v4.DestinationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_DestinationService_SearchDestinations_async",
+      "title": "SearchDestinationsRequestObjectAsync",
+      "description": "Snippet for SearchDestinationsAsync",
+      "file": "DestinationServiceClient.SearchDestinationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDestinationsAsync",
+        "fullName": "Google.Maps.Geocode.V4.DestinationServiceClient.SearchDestinationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.SearchDestinationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Geocode.V4.SearchDestinationsResponse>",
+        "client": {
+          "shortName": "DestinationServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.DestinationServiceClient"
+        },
+        "method": {
+          "shortName": "SearchDestinations",
+          "fullName": "google.maps.geocode.v4.DestinationService.SearchDestinations",
+          "service": {
+            "shortName": "DestinationService",
+            "fullName": "google.maps.geocode.v4.DestinationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodeAddress_sync",
+      "title": "GeocodeAddressRequestObject",
+      "description": "Snippet for GeocodeAddress",
+      "file": "GeocodeServiceClient.GeocodeAddressRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodeAddress",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodeAddress",
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodeAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Geocode.V4.GeocodeAddressResponse",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodeAddress",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodeAddress",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodeAddress_async",
+      "title": "GeocodeAddressRequestObjectAsync",
+      "description": "Snippet for GeocodeAddressAsync",
+      "file": "GeocodeServiceClient.GeocodeAddressRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodeAddressAsync",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodeAddressAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodeAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Geocode.V4.GeocodeAddressResponse>",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodeAddress",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodeAddress",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodeLocation_sync",
+      "title": "GeocodeLocationRequestObject",
+      "description": "Snippet for GeocodeLocation",
+      "file": "GeocodeServiceClient.GeocodeLocationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodeLocation",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodeLocation",
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodeLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Geocode.V4.GeocodeLocationResponse",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodeLocation",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodeLocation",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodeLocation_async",
+      "title": "GeocodeLocationRequestObjectAsync",
+      "description": "Snippet for GeocodeLocationAsync",
+      "file": "GeocodeServiceClient.GeocodeLocationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodeLocationAsync",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodeLocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodeLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Geocode.V4.GeocodeLocationResponse>",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodeLocation",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodeLocation",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodePlace_sync",
+      "title": "GeocodePlaceRequestObject",
+      "description": "Snippet for GeocodePlace",
+      "file": "GeocodeServiceClient.GeocodePlaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodePlace",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodePlace",
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodePlaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Geocode.V4.GeocodeResult",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodePlace",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodePlace",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backend_v4_generated_GeocodeService_GeocodePlace_async",
+      "title": "GeocodePlaceRequestObjectAsync",
+      "description": "Snippet for GeocodePlaceAsync",
+      "file": "GeocodeServiceClient.GeocodePlaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GeocodePlaceAsync",
+        "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient.GeocodePlaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Geocode.V4.GeocodePlaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Geocode.V4.GeocodeResult>",
+        "client": {
+          "shortName": "GeocodeServiceClient",
+          "fullName": "Google.Maps.Geocode.V4.GeocodeServiceClient"
+        },
+        "method": {
+          "shortName": "GeocodePlace",
+          "fullName": "google.maps.geocode.v4.GeocodeService.GeocodePlace",
+          "service": {
+            "shortName": "GeocodeService",
+            "fullName": "google.maps.geocode.v4.GeocodeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
