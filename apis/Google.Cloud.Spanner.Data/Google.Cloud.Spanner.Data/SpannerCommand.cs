@@ -293,6 +293,12 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         public DirectedReadOptions DirectedReadOptions { get; set; }
 
+        /// <summary>
+        /// Client context to be attached to the request. This can be used to pass values that can be read 
+        /// by any SECURE_CONTEXT() calls invoked by this request (e.g., by queries against Parameterized Secure Views).
+        /// </summary>
+        public Google.Cloud.Spanner.V1.RequestOptions.Types.ClientContext ClientContext { get; set; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -362,6 +368,7 @@ namespace Google.Cloud.Spanner.Data
             Priority = Priority,
             Tag = Tag,
             DirectedReadOptions = DirectedReadOptions?.Clone(),
+            ClientContext = ClientContext?.Clone(),
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
         };
 

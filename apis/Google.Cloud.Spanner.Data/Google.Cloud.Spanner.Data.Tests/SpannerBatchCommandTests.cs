@@ -191,6 +191,30 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task CommandIncludesClientContext()
+        {
+            var clientContext = new RequestOptions.Types.ClientContext();
+            clientContext.SecureContext["key1"] = Value.ForString("value1");
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupCreateSessionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = transaction.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.ClientContext = clientContext;
+            command.ExecuteNonQuery();
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.ClientContext != null && request.RequestOptions.ClientContext.SecureContext["key1"].StringValue == "value1"),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
         public async Task EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
         {
             var priority = Priority.Medium;

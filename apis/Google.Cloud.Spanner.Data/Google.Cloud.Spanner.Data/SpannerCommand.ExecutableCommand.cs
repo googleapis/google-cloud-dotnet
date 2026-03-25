@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.Data
             internal Priority Priority { get; }
             internal string Tag { get; }
             internal DirectedReadOptions DirectedReadOptions { get; }
+            internal RequestOptions.Types.ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
 
             public ExecutableCommand(SpannerCommand command)
@@ -75,6 +76,7 @@ namespace Google.Cloud.Spanner.Data
                 Priority = command.Priority;
                 Tag = command.Tag;
                 DirectedReadOptions = command.DirectedReadOptions;
+                ClientContext = command.ClientContext?.Clone();
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
                 EphemeralTransactionOptions.CommitPriority ??= Priority;
@@ -462,6 +464,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Priority = PriorityConverter.ToProto(Priority),
                     RequestTag = Tag ?? "",
+                    ClientContext = ClientContext?.Clone()
                 };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()

@@ -546,6 +546,21 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CloneWithClientContext()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            var clientContext = new RequestOptions.Types.ClientContext();
+            clientContext.SecureContext["key1"] = Value.ForString("value1");
+            command.ClientContext = clientContext;
+            var command2 = (SpannerCommand)command.Clone();
+            Assert.Same(command.SpannerConnection, command2.SpannerConnection);
+            Assert.Equal(command.CommandText, command2.CommandText);
+            Assert.NotNull(command2.ClientContext);
+            Assert.Equal(Value.ForString("value1"), command2.ClientContext.SecureContext["key1"]);
+        }
+
+        [Fact]
         public void CommandIncludesRequestTag()
         {
             var tag = "tag-1";
@@ -563,6 +578,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == tag && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommandIncludesClientContext()
+        {
+            var clientContext = new RequestOptions.Types.ClientContext();
+            clientContext.SecureContext["key1"] = Value.ForString("value1");
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupCreateSessionAsync()
+                .SetupExecuteStreamingSql();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.ClientContext = clientContext;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.ClientContext != null && request.RequestOptions.ClientContext.SecureContext["key1"].StringValue == "value1"),
                 Arg.Any<CallSettings>());
         }
 

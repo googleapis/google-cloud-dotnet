@@ -84,6 +84,12 @@ public sealed partial class SpannerBatchWriteCommand
     public Priority Priority { get; set; }
 
     /// <summary>
+    /// Client context to be attached to the request. This can be used to pass values that can be read 
+    /// by any SECURE_CONTEXT() calls invoked by this request (e.g., by queries against Parameterized Secure Views).
+    /// </summary>
+    public Google.Cloud.Spanner.V1.RequestOptions.Types.ClientContext ClientContext { get; set; }
+
+    /// <summary>
     /// Adds one or more <see cref="SpannerCommand"/> instances as a single atomic command group.
     /// </summary>
     /// <param name="firstCommand">The first command to add to the group. Must not be null.</param>

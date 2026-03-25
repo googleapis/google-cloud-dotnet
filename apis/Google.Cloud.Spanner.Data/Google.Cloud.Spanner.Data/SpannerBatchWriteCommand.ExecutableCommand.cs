@@ -36,6 +36,7 @@ public sealed partial class SpannerBatchWriteCommand
         internal int CommandTimeout { get; }
         internal Priority Priority { get; }
         internal string Tag { get; }
+        internal RequestOptions.Types.ClientContext ClientContext { get; }
 
         public ExecutableCommand(SpannerBatchWriteCommand command)
         {
@@ -44,6 +45,7 @@ public sealed partial class SpannerBatchWriteCommand
             CommandTimeout = command.CommandTimeout;
             Priority = command.Priority;
             Tag = command.Tag;
+            ClientContext = command.ClientContext?.Clone();
         }
 
         /// <summary>
@@ -80,14 +82,15 @@ public sealed partial class SpannerBatchWriteCommand
 
         private RequestOptions BuildRequestOptions()
         {
-            if (string.IsNullOrEmpty(Tag) && Priority == Priority.Unspecified)
+            if (string.IsNullOrEmpty(Tag) && Priority == Priority.Unspecified && ClientContext == null)
             {
                 return null;
             }
             return new RequestOptions
             {
                 RequestTag = Tag ?? "",
-                Priority = PriorityConverter.ToProto(Priority)
+                Priority = PriorityConverter.ToProto(Priority),
+                ClientContext = ClientContext?.Clone()
             };
         }
 

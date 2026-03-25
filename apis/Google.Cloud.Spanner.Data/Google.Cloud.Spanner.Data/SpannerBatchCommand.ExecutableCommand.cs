@@ -41,6 +41,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerBatchCommandType CommandType { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal RequestOptions.Types.ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
             internal SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; }
             internal SpannerTransactionOptions EphemeralTransactionOptions { get; }
@@ -54,6 +55,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandType = command.CommandType;
                 Priority = command.Priority;
                 Tag = command.Tag;
+                ClientContext = command.ClientContext?.Clone();
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
                 EphemeralTransactionOptions.CommitPriority ??= Priority;
@@ -114,6 +116,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Priority = PriorityConverter.ToProto(Priority),
                     RequestTag = Tag ?? "",
+                    ClientContext = ClientContext?.Clone()
                 };
 
             private void ValidateConnectionAndCommandCount()

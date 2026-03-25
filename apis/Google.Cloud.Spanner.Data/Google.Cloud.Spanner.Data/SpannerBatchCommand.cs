@@ -112,6 +112,12 @@ namespace Google.Cloud.Spanner.Data
         public Priority Priority { get; set; }
 
         /// <summary>
+        /// Client context to be attached to the request. This can be used to pass values that can be read 
+        /// by any SECURE_CONTEXT() calls invoked by this request (e.g., by queries against Parameterized Secure Views).
+        /// </summary>
+        public Google.Cloud.Spanner.V1.RequestOptions.Types.ClientContext ClientContext { get; set; }
+
+        /// <summary>
         /// Options to be used for creating the ephemeral transaction under which this command will be executed
         /// if no explicit or ambient transaction is set.
         /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
