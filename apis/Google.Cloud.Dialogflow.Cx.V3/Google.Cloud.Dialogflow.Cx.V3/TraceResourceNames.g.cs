@@ -18,6 +18,28 @@
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
+    public partial class PlaybookTraceMetadata
+    {
+        /// <summary>
+        /// <see cref="PlaybookName"/>-typed view over the <see cref="Playbook"/> resource name property.
+        /// </summary>
+        public PlaybookName PlaybookAsPlaybookName
+        {
+            get => string.IsNullOrEmpty(Playbook) ? null : PlaybookName.Parse(Playbook, allowUnparsed: true);
+            set => Playbook = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FlowTraceMetadata
+    {
+        /// <summary><see cref="FlowName"/>-typed view over the <see cref="Flow"/> resource name property.</summary>
+        public FlowName FlowAsFlowName
+        {
+            get => string.IsNullOrEmpty(Flow) ? null : FlowName.Parse(Flow, allowUnparsed: true);
+            set => Flow = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ToolUse
     {
         /// <summary><see cref="ToolName"/>-typed view over the <see cref="Tool"/> resource name property.</summary>
