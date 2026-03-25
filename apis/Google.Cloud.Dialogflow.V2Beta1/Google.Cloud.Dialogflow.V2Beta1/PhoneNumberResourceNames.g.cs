@@ -320,6 +320,20 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::PhoneNumberName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class AllowedSipTrunks
+            {
+                /// <summary>
+                /// <see cref="SipTrunkName"/>-typed view over the <see cref="SipTrunks"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<SipTrunkName> SipTrunksAsSipTrunkNames
+                {
+                    get => new gax::ResourceNameList<SipTrunkName>(SipTrunks, s => string.IsNullOrEmpty(s) ? null : SipTrunkName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
     }
 
     public partial class DeletePhoneNumberRequest

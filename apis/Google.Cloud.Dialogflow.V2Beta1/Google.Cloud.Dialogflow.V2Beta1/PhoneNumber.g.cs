@@ -29,65 +29,72 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
             "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9t",
-            "YXNrLnByb3RvIrEDCgtQaG9uZU51bWJlchIRCgRuYW1lGAEgASgJQgPgQQES",
-            "GQoMcGhvbmVfbnVtYmVyGAIgASgJQgPgQQMSIQoUY29udmVyc2F0aW9uX3By",
-            "b2ZpbGUYAyABKAlCA+BBARJZCg9saWZlY3ljbGVfc3RhdGUYBCABKA4yOy5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlBob25lTnVtYmVyLkxp",
-            "ZmVjeWNsZVN0YXRlQgPgQQMiUwoOTGlmZWN5Y2xlU3RhdGUSHwobTElGRUNZ",
-            "Q0xFX1NUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESFAoQREVMRVRF",
-            "X1JFUVVFU1RFRBACOqAB6kGcAQolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
-            "bS9QaG9uZU51bWJlchIucHJvamVjdHMve3Byb2plY3R9L3Bob25lTnVtYmVy",
-            "cy97cGhvbmVfbnVtYmVyfRJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3Bob25lTnVtYmVycy97cGhvbmVfbnVtYmVyfSJXChhE",
+            "YXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsoF",
+            "CgtQaG9uZU51bWJlchIRCgRuYW1lGAEgASgJQgPgQQESGQoMcGhvbmVfbnVt",
+            "YmVyGAIgASgJQgPgQQMSIQoUY29udmVyc2F0aW9uX3Byb2ZpbGUYAyABKAlC",
+            "A+BBARJZCg9saWZlY3ljbGVfc3RhdGUYBCABKA4yOy5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52MmJldGExLlBob25lTnVtYmVyLkxpZmVjeWNsZVN0YXRl",
+            "QgPgQQMSYAoSYWxsb3dlZF9zaXBfdHJ1bmtzGAcgASgLMj0uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5QaG9uZU51bWJlci5BbGxvd2VkU2lw",
+            "VHJ1bmtzQgPgQQFIABIzCgpwdXJnZV90aW1lGAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDGmkKEEFsbG93ZWRTaXBUcnVua3MSOwoK",
+            "c2lwX3RydW5rcxgBIAMoCUIn+kEkCiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
+            "Y29tL1NpcFRydW5rEhgKC2NhcnJpZXJfaWRzGAIgAygJQgPgQQEiUwoOTGlm",
+            "ZWN5Y2xlU3RhdGUSHwobTElGRUNZQ0xFX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGQUNUSVZFEAESFAoQREVMRVRFX1JFUVVFU1RFRBACOqAB6kGcAQolZGlh",
+            "bG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QaG9uZU51bWJlchIucHJvamVjdHMv",
+            "e3Byb2plY3R9L3Bob25lTnVtYmVycy97cGhvbmVfbnVtYmVyfRJDcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Bob25lTnVtYmVy",
+            "cy97cGhvbmVfbnVtYmVyfUIVChNpbmJvdW5kX3Jlc3RyaWN0aW9uIlcKGERl",
+            "bGV0ZVBob25lTnVtYmVyUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScK",
+            "JWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vUGhvbmVOdW1iZXIiWQoaVW5k",
             "ZWxldGVQaG9uZU51bWJlclJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEn",
-            "CiVkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Bob25lTnVtYmVyIlkKGlVu",
-            "ZGVsZXRlUGhvbmVOdW1iZXJSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpB",
-            "JwolZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QaG9uZU51bWJlciKkAQoX",
-            "TGlzdFBob25lTnVtYmVyc1JlcXVlc3QSPQoGcGFyZW50GAEgASgJQi3gQQL6",
-            "QScSJWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vUGhvbmVOdW1iZXISFgoJ",
-            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
-            "EhkKDHNob3dfZGVsZXRlZBgEIAEoCEID4EEBIngKGExpc3RQaG9uZU51bWJl",
-            "cnNSZXNwb25zZRJDCg1waG9uZV9udW1iZXJzGAEgAygLMiwuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5QaG9uZU51bWJlchIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkimQEKGFVwZGF0ZVBob25lTnVtYmVyUmVxdWVzdBJH",
-            "CgxwaG9uZV9udW1iZXIYASABKAsyLC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MmJldGExLlBob25lTnVtYmVyQgPgQQISNAoLdXBkYXRlX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEyxgkKDFBob25l",
-            "TnVtYmVycxL8AQoQTGlzdFBob25lTnVtYmVycxI4Lmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyYmV0YTEuTGlzdFBob25lTnVtYmVyc1JlcXVlc3QaOS5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkxpc3RQaG9uZU51bWJl",
-            "cnNSZXNwb25zZSJz2kEGcGFyZW50gtPkkwJkEikvdjJiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyp9L3Bob25lTnVtYmVyc1o3EjUvdjJiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Bob25lTnVtYmVycxK7AgoRVXBk",
-            "YXRlUGhvbmVOdW1iZXISOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJl",
-            "dGExLlVwZGF0ZVBob25lTnVtYmVyUmVxdWVzdBosLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyYmV0YTEuUGhvbmVOdW1iZXIivAHaQRhwaG9uZV9udW1i",
-            "ZXIsdXBkYXRlX21hc2uC0+STApoBMjYvdjJiZXRhMS97cGhvbmVfbnVtYmVy",
-            "Lm5hbWU9cHJvamVjdHMvKi9waG9uZU51bWJlcnMvKn06DHBob25lX251bWJl",
-            "clpSMkIvdjJiZXRhMS97cGhvbmVfbnVtYmVyLm5hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9waG9uZU51bWJlcnMvKn06DHBob25lX251bWJlchLvAQoR",
-            "RGVsZXRlUGhvbmVOdW1iZXISOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MmJldGExLkRlbGV0ZVBob25lTnVtYmVyUmVxdWVzdBosLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyYmV0YTEuUGhvbmVOdW1iZXIicdpBBG5hbWWC0+ST",
-            "AmQqKS92MmJldGExL3tuYW1lPXByb2plY3RzLyovcGhvbmVOdW1iZXJzLyp9",
-            "WjcqNS92MmJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGhv",
-            "bmVOdW1iZXJzLyp9EowCChNVbmRlbGV0ZVBob25lTnVtYmVyEjsuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5VbmRlbGV0ZVBob25lTnVtYmVy",
-            "UmVxdWVzdBosLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuUGhv",
-            "bmVOdW1iZXIiiQHaQQRuYW1lgtPkkwJ8IjIvdjJiZXRhMS97bmFtZT1wcm9q",
-            "ZWN0cy8qL3Bob25lTnVtYmVycy8qfTp1bmRlbGV0ZToBKlpDIj4vdjJiZXRh",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Bob25lTnVtYmVycy8q",
-            "fTp1bmRlbGV0ZToBKhp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJB",
-            "WWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93",
-            "QqUBCiNjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUIQUGhv",
-            "bmVOdW1iZXJQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zs",
-            "b3cvYXBpdjJiZXRhMS9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaq",
-            "Ah9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJldGExYgZwcm90bzM="));
+            "CiVkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Bob25lTnVtYmVyIqQBChdM",
+            "aXN0UGhvbmVOdW1iZXJzUmVxdWVzdBI9CgZwYXJlbnQYASABKAlCLeBBAvpB",
+            "JxIlZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9QaG9uZU51bWJlchIWCglw",
+            "YWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQES",
+            "GQoMc2hvd19kZWxldGVkGAQgASgIQgPgQQEieAoYTGlzdFBob25lTnVtYmVy",
+            "c1Jlc3BvbnNlEkMKDXBob25lX251bWJlcnMYASADKAsyLC5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52MmJldGExLlBob25lTnVtYmVyEhcKD25leHRfcGFn",
+            "ZV90b2tlbhgCIAEoCSKZAQoYVXBkYXRlUGhvbmVOdW1iZXJSZXF1ZXN0EkcK",
+            "DHBob25lX251bWJlchgBIAEoCzIsLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyYmV0YTEuUGhvbmVOdW1iZXJCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBATLGCQoMUGhvbmVO",
+            "dW1iZXJzEvwBChBMaXN0UGhvbmVOdW1iZXJzEjguZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjJiZXRhMS5MaXN0UGhvbmVOdW1iZXJzUmVxdWVzdBo5Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuTGlzdFBob25lTnVtYmVy",
+            "c1Jlc3BvbnNlInPaQQZwYXJlbnSC0+STAmQSKS92MmJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn0vcGhvbmVOdW1iZXJzWjcSNS92MmJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcGhvbmVOdW1iZXJzErsCChFVcGRh",
+            "dGVQaG9uZU51bWJlchI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0",
+            "YTEuVXBkYXRlUGhvbmVOdW1iZXJSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjJiZXRhMS5QaG9uZU51bWJlciK8AdpBGHBob25lX251bWJl",
+            "cix1cGRhdGVfbWFza4LT5JMCmgEyNi92MmJldGExL3twaG9uZV9udW1iZXIu",
+            "bmFtZT1wcm9qZWN0cy8qL3Bob25lTnVtYmVycy8qfToMcGhvbmVfbnVtYmVy",
+            "WlIyQi92MmJldGExL3twaG9uZV9udW1iZXIubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3Bob25lTnVtYmVycy8qfToMcGhvbmVfbnVtYmVyEu8BChFE",
+            "ZWxldGVQaG9uZU51bWJlchI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "YmV0YTEuRGVsZXRlUGhvbmVOdW1iZXJSZXF1ZXN0GiwuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjJiZXRhMS5QaG9uZU51bWJlciJx2kEEbmFtZYLT5JMC",
+            "ZCopL3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9waG9uZU51bWJlcnMvKn1a",
+            "Nyo1L3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9waG9u",
+            "ZU51bWJlcnMvKn0SjAIKE1VuZGVsZXRlUGhvbmVOdW1iZXISOy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlVuZGVsZXRlUGhvbmVOdW1iZXJS",
+            "ZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5QaG9u",
+            "ZU51bWJlciKJAdpBBG5hbWWC0+STAnwiMi92MmJldGExL3tuYW1lPXByb2pl",
+            "Y3RzLyovcGhvbmVOdW1iZXJzLyp9OnVuZGVsZXRlOgEqWkMiPi92MmJldGEx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGhvbmVOdW1iZXJzLyp9",
+            "OnVuZGVsZXRlOgEqGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZ",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dC",
+            "pQEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQhBQaG9u",
+            "ZU51bWJlclByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxv",
+            "dy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoC",
+            "H0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber), global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Parser, new[]{ "Name", "PhoneNumber_", "ConversationProfile", "LifecycleState" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber), global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Parser, new[]{ "Name", "PhoneNumber_", "ConversationProfile", "LifecycleState", "AllowedSipTrunks", "PurgeTime" }, new[]{ "InboundRestriction" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks), global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks.Parser, new[]{ "SipTrunks", "CarrierIds" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.DeletePhoneNumberRequest), global::Google.Cloud.Dialogflow.V2Beta1.DeletePhoneNumberRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.UndeletePhoneNumberRequest), global::Google.Cloud.Dialogflow.V2Beta1.UndeletePhoneNumberRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersRequest), global::Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
@@ -144,6 +151,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       phoneNumber_ = other.phoneNumber_;
       conversationProfile_ = other.conversationProfile_;
       lifecycleState_ = other.lifecycleState_;
+      purgeTime_ = other.purgeTime_ != null ? other.purgeTime_.Clone() : null;
+      switch (other.InboundRestrictionCase) {
+        case InboundRestrictionOneofCase.AllowedSipTrunks:
+          AllowedSipTrunks = other.AllowedSipTrunks.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -227,6 +241,56 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "allowed_sip_trunks" field.</summary>
+    public const int AllowedSipTrunksFieldNumber = 7;
+    /// <summary>
+    /// Optional. Only allow calls from the specified SIP trunks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks AllowedSipTrunks {
+      get { return inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks ? (global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks) inboundRestriction_ : null; }
+      set {
+        inboundRestriction_ = value;
+        inboundRestrictionCase_ = value == null ? InboundRestrictionOneofCase.None : InboundRestrictionOneofCase.AllowedSipTrunks;
+      }
+    }
+
+    /// <summary>Field number for the "purge_time" field.</summary>
+    public const int PurgeTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp purgeTime_;
+    /// <summary>
+    /// Output only. The time at which this resource will be purged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp PurgeTime {
+      get { return purgeTime_; }
+      set {
+        purgeTime_ = value;
+      }
+    }
+
+    private object inboundRestriction_;
+    /// <summary>Enum of possible cases for the "inbound_restriction" oneof.</summary>
+    public enum InboundRestrictionOneofCase {
+      None = 0,
+      AllowedSipTrunks = 7,
+    }
+    private InboundRestrictionOneofCase inboundRestrictionCase_ = InboundRestrictionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InboundRestrictionOneofCase InboundRestrictionCase {
+      get { return inboundRestrictionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInboundRestriction() {
+      inboundRestrictionCase_ = InboundRestrictionOneofCase.None;
+      inboundRestriction_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -246,6 +310,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (PhoneNumber_ != other.PhoneNumber_) return false;
       if (ConversationProfile != other.ConversationProfile) return false;
       if (LifecycleState != other.LifecycleState) return false;
+      if (!object.Equals(AllowedSipTrunks, other.AllowedSipTrunks)) return false;
+      if (!object.Equals(PurgeTime, other.PurgeTime)) return false;
+      if (InboundRestrictionCase != other.InboundRestrictionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -257,6 +324,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (PhoneNumber_.Length != 0) hash ^= PhoneNumber_.GetHashCode();
       if (ConversationProfile.Length != 0) hash ^= ConversationProfile.GetHashCode();
       if (LifecycleState != global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState.Unspecified) hash ^= LifecycleState.GetHashCode();
+      if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) hash ^= AllowedSipTrunks.GetHashCode();
+      if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
+      hash ^= (int) inboundRestrictionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -291,6 +361,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) LifecycleState);
       }
+      if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AllowedSipTrunks);
+      }
+      if (purgeTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PurgeTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -317,6 +395,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) LifecycleState);
       }
+      if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AllowedSipTrunks);
+      }
+      if (purgeTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PurgeTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -338,6 +424,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (LifecycleState != global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LifecycleState);
+      }
+      if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowedSipTrunks);
+      }
+      if (purgeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PurgeTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -363,6 +455,21 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (other.LifecycleState != global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState.Unspecified) {
         LifecycleState = other.LifecycleState;
       }
+      if (other.purgeTime_ != null) {
+        if (purgeTime_ == null) {
+          PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        PurgeTime.MergeFrom(other.PurgeTime);
+      }
+      switch (other.InboundRestrictionCase) {
+        case InboundRestrictionOneofCase.AllowedSipTrunks:
+          if (AllowedSipTrunks == null) {
+            AllowedSipTrunks = new global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks();
+          }
+          AllowedSipTrunks.MergeFrom(other.AllowedSipTrunks);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -392,6 +499,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
           case 32: {
             LifecycleState = (global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks subBuilder = new global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks();
+            if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) {
+              subBuilder.MergeFrom(AllowedSipTrunks);
+            }
+            input.ReadMessage(subBuilder);
+            AllowedSipTrunks = subBuilder;
+            break;
+          }
+          case 66: {
+            if (purgeTime_ == null) {
+              PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PurgeTime);
             break;
           }
         }
@@ -425,6 +548,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             LifecycleState = (global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.LifecycleState) input.ReadEnum();
             break;
           }
+          case 58: {
+            global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks subBuilder = new global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Types.AllowedSipTrunks();
+            if (inboundRestrictionCase_ == InboundRestrictionOneofCase.AllowedSipTrunks) {
+              subBuilder.MergeFrom(AllowedSipTrunks);
+            }
+            input.ReadMessage(subBuilder);
+            AllowedSipTrunks = subBuilder;
+            break;
+          }
+          case 66: {
+            if (purgeTime_ == null) {
+              PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PurgeTime);
+            break;
+          }
         }
       }
     }
@@ -451,6 +590,223 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// Number is pending deletion, and cannot receive calls.
         /// </summary>
         [pbr::OriginalName("DELETE_REQUESTED")] DeleteRequested = 2,
+      }
+
+      /// <summary>
+      /// List of SIP trunks that are allowed to make calls to this phone number.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AllowedSipTrunks : pb::IMessage<AllowedSipTrunks>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AllowedSipTrunks> _parser = new pb::MessageParser<AllowedSipTrunks>(() => new AllowedSipTrunks());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AllowedSipTrunks> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.V2Beta1.PhoneNumber.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowedSipTrunks() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowedSipTrunks(AllowedSipTrunks other) : this() {
+          sipTrunks_ = other.sipTrunks_.Clone();
+          carrierIds_ = other.carrierIds_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowedSipTrunks Clone() {
+          return new AllowedSipTrunks(this);
+        }
+
+        /// <summary>Field number for the "sip_trunks" field.</summary>
+        public const int SipTrunksFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_sipTrunks_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> sipTrunks_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of SIP trunks that are allowed to make calls to this phone number.
+        /// If empty, any SIP trunk is allowed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> SipTrunks {
+          get { return sipTrunks_; }
+        }
+
+        /// <summary>Field number for the "carrier_ids" field.</summary>
+        public const int CarrierIdsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_carrierIds_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> carrierIds_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. List of GTP carrier IDs allowed to make calls to this phone
+        /// number. Used for private interconnects where standard SIP trunks aren't
+        /// applicable.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> CarrierIds {
+          get { return carrierIds_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AllowedSipTrunks);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AllowedSipTrunks other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!sipTrunks_.Equals(other.sipTrunks_)) return false;
+          if(!carrierIds_.Equals(other.carrierIds_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= sipTrunks_.GetHashCode();
+          hash ^= carrierIds_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          sipTrunks_.WriteTo(output, _repeated_sipTrunks_codec);
+          carrierIds_.WriteTo(output, _repeated_carrierIds_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          sipTrunks_.WriteTo(ref output, _repeated_sipTrunks_codec);
+          carrierIds_.WriteTo(ref output, _repeated_carrierIds_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += sipTrunks_.CalculateSize(_repeated_sipTrunks_codec);
+          size += carrierIds_.CalculateSize(_repeated_carrierIds_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AllowedSipTrunks other) {
+          if (other == null) {
+            return;
+          }
+          sipTrunks_.Add(other.sipTrunks_);
+          carrierIds_.Add(other.carrierIds_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                sipTrunks_.AddEntriesFrom(input, _repeated_sipTrunks_codec);
+                break;
+              }
+              case 18: {
+                carrierIds_.AddEntriesFrom(input, _repeated_carrierIds_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                sipTrunks_.AddEntriesFrom(ref input, _repeated_sipTrunks_codec);
+                break;
+              }
+              case 18: {
+                carrierIds_.AddEntriesFrom(ref input, _repeated_carrierIds_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
