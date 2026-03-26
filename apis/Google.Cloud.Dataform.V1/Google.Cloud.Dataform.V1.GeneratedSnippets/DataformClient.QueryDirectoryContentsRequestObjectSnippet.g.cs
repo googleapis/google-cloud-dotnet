@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
+                View = DirectoryContentsView.Unspecified,
             };
             // Make the request
             PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
