@@ -90,7 +90,7 @@ public sealed partial class SpannerBatchWriteCommand
             {
                 RequestTag = Tag ?? "",
                 Priority = PriorityConverter.ToProto(Priority),
-                ClientContext = ClientContext?.Clone()
+                ClientContext = ClientContext
             };
         }
 

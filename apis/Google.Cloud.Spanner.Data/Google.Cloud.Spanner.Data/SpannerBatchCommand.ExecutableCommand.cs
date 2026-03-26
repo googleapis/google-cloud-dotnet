@@ -116,7 +116,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Priority = PriorityConverter.ToProto(Priority),
                     RequestTag = Tag ?? "",
-                    ClientContext = ClientContext?.Clone()
+                    ClientContext = ClientContext
                 };
 
             private void ValidateConnectionAndCommandCount()
