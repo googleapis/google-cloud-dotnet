@@ -131,7 +131,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
             _globalNackAndWaitCts = new CancellationTokenSource();
             _globalHardStopCts = new CancellationTokenSource();
             _globalNackImmediatelyCts = new CancellationTokenSource();
-            _globalWaitForProcessingCts = CancellationTokenSource.CreateLinkedTokenSource(_globalNackImmediatelyCts.Token);
+            _globalWaitForProcessingCts = new CancellationTokenSource();
         }
         var registeredTasks = new HashSet<Task>();
         Action<Task> registerTask = task =>
@@ -242,7 +242,15 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
                 return _mainTcs.Task;
             }
             // Signal to stop retrieving new messages immediately.
-            _globalWaitForProcessingCts.Cancel();
+            switch (shutdownOptions.Mode)
+            {
+                case ShutdownMode.NackImmediately:
+                    _globalNackImmediatelyCts.Cancel();
+                    break;
+                case ShutdownMode.WaitForProcessing:
+                    _globalWaitForProcessingCts.Cancel();
+                    break;
+            }
         }
 
         TimeSpan shutdownTimeout = shutdownOptions.Timeout ?? _maxExtensionDuration;
@@ -251,10 +259,14 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
             Logger?.LogWarning("Shutdown timeout is 0! Stopping {Client} immediately; work may be dropped.", nameof(SubscriberClient));
         }
 
-        // Schedule the shutdown, we can always think of a shutdown as occuring in the following steps
-        // WaitForProcessing -> NackImmedieately and maybe a HardStop afterwards if the timeout is reached
-        // or the cancellation token is cancelled. Note a the Nack delay will be zero in the case of NackImmediately
-        CancelAfterDelay(_globalNackImmediatelyCts, CalculateNackDelay());
+        if (shutdownOptions.Mode == ShutdownMode.WaitForProcessing)
+        {
+            // Schedule a NackImmediately shutdown mode to follow WaitForProcessing.
+            CancelAfterDelay(_globalNackImmediatelyCts, CalculateNackDelay());
+        }
+
+        // In all cases perform final HardStop if either the timeout is reached or the
+        // cancellation token is cancelled.
         CancelAfterDelay(_globalHardStopCts, shutdownTimeout);
         CancelTargetOnTrigger(targetSourceToCancel: _globalHardStopCts, triggerToken: cancellationToken);
 
@@ -263,23 +275,15 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         // Calculates the time until we switch to NackImmediately mode.
         TimeSpan CalculateNackDelay()
         {
-            switch (shutdownOptions.Mode)
+            // WaitForProcessing enters a Nack grace period before final shutdown if it was unable to finish
+            // handling all received messages.
+            TimeSpan delay = shutdownTimeout > s_finalNackReservedTime ? shutdownTimeout - s_finalNackReservedTime : TimeSpan.Zero;
+            if (delay == TimeSpan.Zero && shutdownTimeout > TimeSpan.Zero)
             {
-                case ShutdownMode.NackImmediately:
-                    return TimeSpan.Zero;
-                case ShutdownMode.WaitForProcessing:
-                    // WaitForProcessing enters a Nack grace period before final shutdown if it was unable to finish
-                    // handling all received messages.
-                    TimeSpan delay = shutdownTimeout > s_finalNackReservedTime ? shutdownTimeout - s_finalNackReservedTime : TimeSpan.Zero;
-                    if (delay == TimeSpan.Zero && shutdownTimeout > TimeSpan.Zero)
-                    {
-                        Logger?.LogWarning("Shutdown timeout ({Timeout}) <= GracePeriod ({GracePeriod}). Nacking immediately.",
-                            shutdownTimeout, s_finalNackReservedTime);
-                    }
-                    return delay;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(shutdownOptions.Mode), shutdownOptions.Mode, null);
+                Logger?.LogWarning("Shutdown timeout ({Timeout}) <= GracePeriod ({GracePeriod}). Nacking immediately.",
+                    shutdownTimeout, s_finalNackReservedTime);
             }
+            return delay;
         }
     }
 

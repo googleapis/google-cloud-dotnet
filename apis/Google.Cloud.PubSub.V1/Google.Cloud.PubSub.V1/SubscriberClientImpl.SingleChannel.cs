@@ -139,7 +139,7 @@ public sealed partial class SubscriberClientImpl
         // The keys in the dictionary represents the Ack ID of the message, while value contains the receipt ModAck status.
         // A value of null indicates that the status is not yet started or in progress. A value of true indicates success, and false indicates failure (which can be temporary or permanent).
         private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new();
-        private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _messagesInFlight
+        private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _messagesInHandler
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
         private readonly IScheduler _scheduler;
@@ -169,7 +169,7 @@ public sealed partial class SubscriberClientImpl
         private readonly RequeueableQueue<string> _nackQueue = new RequeueableQueue<string>();
 
         private int _pushInFlight = 0;
-        private readonly HashSet<string> _messagesInFlight = new HashSet<string>();
+        private readonly HashSet<string> _messagesInHandler = new HashSet<string>();
         private readonly HashSet<string> _nackedOnShutdownIds = new HashSet<string>();
         private SubscriberServiceApiClient.StreamingPullStream _pull = null;
         private int _concurrentPushCount = 0;
@@ -262,8 +262,7 @@ public sealed partial class SubscriberClientImpl
                 }
             }
             _logger?.LogDebug("Subscriber task completed.");
-            // Stop waiting for data to push and handler tasks.
-            _waitForHandlerCts.Cancel();
+            // Stop waiting for data to push.
             _ackNackCts.Cancel();
         }
 
@@ -275,7 +274,7 @@ public sealed partial class SubscriberClientImpl
             // Lock required for ackQueue and nackQueue.
             lock (_lock)
             {
-                return _ackQueue.Count == 0 && _nackQueue.Count == 0 && _pushInFlight == 0 && _messagesInFlight.Count == 0;
+                return _ackQueue.Count == 0 && _nackQueue.Count == 0 && _pushInFlight == 0 && _messagesInHandler.Count == 0;
             }
         }
 
@@ -514,52 +513,62 @@ public sealed partial class SubscriberClientImpl
             // Running async. Common data needs locking
             for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
             {
-                if (_sendToHandlerCts.IsCancellationRequested)
-                {
-                    break;
-                }
+                _sendToHandlerCts.ThrowIfCancellationRequested();
 
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
                 await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
                 {
-                    if (_sendToHandlerCts.IsCancellationRequested || _waitForHandlerCts.IsCancellationRequested)
-                    {
-                        return;
-                    }
                     // Running async. Common data needs locking
                     lock (_lock)
                     {
-                        _messagesInFlight.Add(msg.AckId);
+                        _messagesInHandler.Add(msg.AckId);
                     }
                     if (msg.DeliveryAttempt > 0)
                     {
                         msg.Message.Attributes[DeliveryAttemptAttrKey] = msg.DeliveryAttempt.ToString(CultureInfo.InvariantCulture);
                     }
                     // Call user message handler
-                    var reply = await _taskHelper.ConfigureAwaitHideErrors(() =>
+                    bool ignoreReply = false;
+                    var reply = await _taskHelper.ConfigureAwaitHideErrors(async () =>
                     {
-                        return _handler.HandleMessage(msg.Message, _waitForHandlerCts.Token);
-                    }, Reply.Nack);
-                    // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
-                    lock (_lock)
-                    {
-                        _messagesInFlight.Remove(msg.AckId);
-                        if (_waitForHandlerCts.IsCancellationRequested)
+                        try
                         {
-                            // Signal the event loop to re-evaluate the shutdown state and exit early without forwarding ack
-                            // replies, all unhandled messages will be NAck'ed in HandleExtendLease().
-                            _eventPush.Set();
-                            return;
+                            _sendToHandlerCts.ThrowIfCancellationRequested();
+                            var reply = await _taskHelper.ConfigureAwait(_handler.HandleMessage(msg.Message, _waitForHandlerCts.Token));
+                            _waitForHandlerCts.ThrowIfCancellationRequested();
+                            return reply;
                         }
-                        var queue = reply == Reply.Ack ? _ackQueue : _nackQueue;
-                        queue.Enqueue(msg.AckId);
-                    }
-                    // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
-                    lock (leaseTracking)
+                        catch (OperationCanceledException)
+                        {
+                            ignoreReply = true;
+                            // A reply needs to be returned, so just throw here to return NAck which will just be
+                            // ignored as the operation was cancelled.
+                            throw;
+                        }
+                    }, Reply.Nack);
+                    if (ignoreReply)
                     {
-                        leaseTracking.Remove(msg.AckId);
+                        lock (_lock)
+                        {
+                            _messagesInHandler.Remove(msg.AckId);
+                        }
+                    }
+                    else
+                    {
+                        // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
+                        lock (leaseTracking)
+                        {
+                            leaseTracking.Remove(msg.AckId);
+                        }
+                        // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
+                        lock (_lock)
+                        {
+                            _messagesInHandler.Remove(msg.AckId);
+                            var queue = reply == Reply.Ack ? _ackQueue : _nackQueue;
+                            queue.Enqueue(msg.AckId);
+                        }
                     }
                     // Ids have been added to ack/nack-queue, so trigger a push.
                     _eventPush.Set();
@@ -567,24 +576,6 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
-        private void Nack(IEnumerable<string> ackIds, HashSet<string> leaseTracking)
-        {
-            var idsToNack = ackIds.ToList();
-            if (idsToNack.Count == 0)
-            {
-                return;
-            }
-
-            lock (_lock)
-            {
-                _nackQueue.Enqueue(idsToNack);
-            }
-            lock (leaseTracking)
-            {
-                leaseTracking.ExceptWith(idsToNack);
-            }
-            _eventPush.Set();
-        }
 
         private class LeaseCancellation
         {
@@ -602,8 +593,8 @@ public sealed partial class SubscriberClientImpl
                 }
             }
 
-            public LeaseCancellation(CancellationTokenSource leaseExtensionCts) =>
-                _cts = CancellationTokenSource.CreateLinkedTokenSource(leaseExtensionCts.Token);
+            public LeaseCancellation(CancellationTokenSource parentCts) =>
+                _cts = CancellationTokenSource.CreateLinkedTokenSource(parentCts.Token);
 
             public void Dispose()
             {
@@ -640,23 +631,9 @@ public sealed partial class SubscriberClientImpl
 
         private void HandleExtendLease(HashSet<string> leaseTracking, LeaseCancellation cancellation)
         {
-            if (_waitForHandlerCts.IsCancellationRequested)
-            {
-                // if we are no longer waiting on handlers then NAck messages for redelivery.
-                _nackedOnShutdownIds.UnionWith(leaseTracking);
-                Nack(ackIds: leaseTracking, leaseTracking);
-                return;
-            }
-
-            if (_sendToHandlerCts.IsCancellationRequested)
-            {
-                // Nack messages that will not be sent to handler freeing them for redelivery.
-                // We continue extending leases for in flight messages.
-                var messagesNotBeingHandled = leaseTracking.Except(_messagesInFlight);
-                _nackedOnShutdownIds.UnionWith(messagesNotBeingHandled);
-                Nack(messagesNotBeingHandled, leaseTracking);
-
-            }
+            // NAck any messages for which we do not want to continue extending
+            // leases for, freeing them for redelivery
+            MaybeNack();
 
             // The first call to this method happens as soon as messages in this chunk start to be processed.
             // This triggers the server to start its lease timer.
@@ -667,14 +644,11 @@ public sealed partial class SubscriberClientImpl
                 cancellation = new LeaseCancellation(_waitForHandlerCts.Source);
                 Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                 {
-                    // On cancellation we may have not reached the max extension duration so don't clear the lease
-                    // tracking allowing the messages to be Nack'ed for redelivery.
-                    if (!_waitForHandlerCts.IsCancellationRequested)
+                    // Attempt to NAck messages that are not expired, but cancelled before stopping lease extension.
+                    MaybeNack();
+                    lock (leaseTracking)
                     {
-                        lock (leaseTracking)
-                        {
-                            leaseTracking.Clear();
-                        }
+                        leaseTracking.Clear();
                     }
                     // This is executed when `_maxExtensionDuration` has expired, or when `cancellation` is cancelled,
                     // Which ensures `cancellation` is aways disposed of.
@@ -714,6 +688,40 @@ public sealed partial class SubscriberClientImpl
                     cancellation.Cancel();
                 }
             }
+
+            void MaybeNack()
+            {
+                HashSet<string> idsToNack = null;
+                if (_waitForHandlerCts.IsCancellationRequested)
+                {
+                    // We are no longer waiting on handlers so Nack everything.
+                    idsToNack = leaseTracking;
+                }
+                else if (_sendToHandlerCts.IsCancellationRequested)
+                {
+                    // Nack messages that will not be sent to handler freeing them for redelivery.
+                    // We continue extending leases for in flight messages.
+                    idsToNack = new HashSet<string>(leaseTracking.Except(_messagesInHandler));
+                }
+                if (idsToNack == null || idsToNack.Count == 0)
+                {
+                    return;
+                }
+                lock(_nackedOnShutdownIds)
+                {
+                    _nackedOnShutdownIds.UnionWith(idsToNack);
+                }
+                lock (_lock)
+                {
+                    _nackQueue.Enqueue(idsToNack);
+                }
+                lock (leaseTracking)
+                {
+                    leaseTracking.ExceptWith(idsToNack);
+                }
+                _eventPush.Set();
+            }
+
         }
 
         private void HandlePush()
@@ -1132,13 +1140,17 @@ public sealed partial class SubscriberClientImpl
                     // If we are no longer waiting on message handlers then we may have NAck'ed some of the in-flight messages.
                     if (IsStopStarted)
                     {
-                        for (int i = 0; i < responses.Count; i++)
+                        lock (_nackedOnShutdownIds)
                         {
-                            var response = responses[i];
-                            if (_nackedOnShutdownIds.Contains(response.MessageId) && response.Status == AcknowledgementStatus.Success)
+                            for (int i = 0; i < responses.Count; i++)
                             {
-                                // Override status to reflect the shutdown failure
-                                responses[i] = new AckNackResponse(response.MessageId, AcknowledgementStatus.Other, "Failed on NackImmediately shutdown.");
+
+                                var response = responses[i];
+                                if (_nackedOnShutdownIds.Contains(response.MessageId) && response.Status == AcknowledgementStatus.Success)
+                                {
+                                    // Override status to reflect the shutdown failure
+                                    responses[i] = new AckNackResponse(response.MessageId, AcknowledgementStatus.Other, "Failed on NackImmediately shutdown.");
+                                }
                             }
                         }
                     }
@@ -1150,6 +1162,7 @@ public sealed partial class SubscriberClientImpl
 
         // A stop is initiated if any of the cancellation tokens have been invoked.
         private bool IsStopStarted => _pullCts.IsCancellationRequested ||
+                                      _ackNackCts.IsCancellationRequested ||
                                       _sendToHandlerCts.IsCancellationRequested ||
                                       _waitForHandlerCts.IsCancellationRequested ||
                                       _mainCts.IsCancellationRequested;
@@ -1394,6 +1407,8 @@ public sealed partial class SubscriberClientImpl
                     {
                         if (_parentTokens[i].IsCancellationRequested)
                         {
+                            // Cancel the linked soruce, since we already know it's parents are cancelled.
+                            _linkedSource.Cancel();
                             return true;
                         }
                     }
@@ -1417,19 +1432,11 @@ public sealed partial class SubscriberClientImpl
             /// </summary>
             public void ThrowIfCancellationRequested()
             {
-                // Fast path: inner source already registered the cancellation
-                if (_linkedSource.IsCancellationRequested)
+                if (IsCancellationRequested)
                 {
+                    // IsCancellationRequested will synchronize _linkedSource with it's parents
+                    // so no only need to throw from the linked token here.
                     _linkedSource.Token.ThrowIfCancellationRequested();
-                }
-
-                // Explicitly check parents to bypass callback delays
-                for (int i = 0; i < _parentTokens.Length; i++)
-                {
-                    if (_parentTokens[i].IsCancellationRequested)
-                    {
-                        _parentTokens[i].ThrowIfCancellationRequested();
-                    }
                 }
             }
 
