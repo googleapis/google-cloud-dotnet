@@ -71,6 +71,8 @@ namespace Google.Cloud.NetApp.V1
             DeleteVolumeOperationsSettings = existing.DeleteVolumeOperationsSettings.Clone();
             RevertVolumeSettings = existing.RevertVolumeSettings;
             RevertVolumeOperationsSettings = existing.RevertVolumeOperationsSettings.Clone();
+            EstablishVolumePeeringSettings = existing.EstablishVolumePeeringSettings;
+            EstablishVolumePeeringOperationsSettings = existing.EstablishVolumePeeringOperationsSettings.Clone();
             ListSnapshotsSettings = existing.ListSnapshotsSettings;
             GetSnapshotSettings = existing.GetSnapshotSettings;
             CreateSnapshotSettings = existing.CreateSnapshotSettings;
@@ -158,6 +160,10 @@ namespace Google.Cloud.NetApp.V1
             UpdateHostGroupOperationsSettings = existing.UpdateHostGroupOperationsSettings.Clone();
             DeleteHostGroupSettings = existing.DeleteHostGroupSettings;
             DeleteHostGroupOperationsSettings = existing.DeleteHostGroupOperationsSettings.Clone();
+            ExecuteOntapPostSettings = existing.ExecuteOntapPostSettings;
+            ExecuteOntapGetSettings = existing.ExecuteOntapGetSettings;
+            ExecuteOntapDeleteSettings = existing.ExecuteOntapDeleteSettings;
+            ExecuteOntapPatchSettings = existing.ExecuteOntapPatchSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -502,6 +508,36 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RevertVolumeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.EstablishVolumePeering</c> and <c>NetAppClient.EstablishVolumePeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EstablishVolumePeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.EstablishVolumePeering</c> and
+        /// <c>NetAppClient.EstablishVolumePeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EstablishVolumePeeringOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1837,6 +1873,54 @@ namespace Google.Cloud.NetApp.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ExecuteOntapPost</c> and <c>NetAppClient.ExecuteOntapPostAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteOntapPostSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ExecuteOntapGet</c> and <c>NetAppClient.ExecuteOntapGetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteOntapGetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ExecuteOntapDelete</c> and <c>NetAppClient.ExecuteOntapDeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteOntapDeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ExecuteOntapPatch</c> and <c>NetAppClient.ExecuteOntapPatchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteOntapPatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3548,6 +3632,63 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> PollOnceRevertVolumeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Volume, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevertVolumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Establish volume peering. This is used to establish cluster and svm
+        /// peerings between the GCNV and OnPrem clusters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> EstablishVolumePeering(EstablishVolumePeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Establish volume peering. This is used to establish cluster and svm
+        /// peerings between the GCNV and OnPrem clusters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> EstablishVolumePeeringAsync(EstablishVolumePeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Establish volume peering. This is used to establish cluster and svm
+        /// peerings between the GCNV and OnPrem clusters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> EstablishVolumePeeringAsync(EstablishVolumePeeringRequest request, st::CancellationToken cancellationToken) =>
+            EstablishVolumePeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EstablishVolumePeering</c>.</summary>
+        public virtual lro::OperationsClient EstablishVolumePeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EstablishVolumePeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> PollOnceEstablishVolumePeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Volume, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EstablishVolumePeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EstablishVolumePeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> PollOnceEstablishVolumePeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Volume, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EstablishVolumePeeringOperationsClient, callSettings);
 
         /// <summary>
         /// Returns descriptions of all snapshots for a volume.
@@ -10425,6 +10566,126 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteHostGroupAsync(HostGroupName name, st::CancellationToken cancellationToken) =>
             DeleteHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteOntapPostResponse ExecuteOntapPost(ExecuteOntapPostRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapPostResponse> ExecuteOntapPostAsync(ExecuteOntapPostRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapPostResponse> ExecuteOntapPostAsync(ExecuteOntapPostRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteOntapPostAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteOntapGetResponse ExecuteOntapGet(ExecuteOntapGetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapGetResponse> ExecuteOntapGetAsync(ExecuteOntapGetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapGetResponse> ExecuteOntapGetAsync(ExecuteOntapGetRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteOntapGetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteOntapDeleteResponse ExecuteOntapDelete(ExecuteOntapDeleteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapDeleteResponse> ExecuteOntapDeleteAsync(ExecuteOntapDeleteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapDeleteResponse> ExecuteOntapDeleteAsync(ExecuteOntapDeleteRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteOntapDeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteOntapPatchResponse ExecuteOntapPatch(ExecuteOntapPatchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(ExecuteOntapPatchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(ExecuteOntapPatchRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteOntapPatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetApp client wrapper implementation, for convenient use.</summary>
@@ -10458,6 +10719,8 @@ namespace Google.Cloud.NetApp.V1
         private readonly gaxgrpc::ApiCall<DeleteVolumeRequest, lro::Operation> _callDeleteVolume;
 
         private readonly gaxgrpc::ApiCall<RevertVolumeRequest, lro::Operation> _callRevertVolume;
+
+        private readonly gaxgrpc::ApiCall<EstablishVolumePeeringRequest, lro::Operation> _callEstablishVolumePeering;
 
         private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
 
@@ -10565,6 +10828,14 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<DeleteHostGroupRequest, lro::Operation> _callDeleteHostGroup;
 
+        private readonly gaxgrpc::ApiCall<ExecuteOntapPostRequest, ExecuteOntapPostResponse> _callExecuteOntapPost;
+
+        private readonly gaxgrpc::ApiCall<ExecuteOntapGetRequest, ExecuteOntapGetResponse> _callExecuteOntapGet;
+
+        private readonly gaxgrpc::ApiCall<ExecuteOntapDeleteRequest, ExecuteOntapDeleteResponse> _callExecuteOntapDelete;
+
+        private readonly gaxgrpc::ApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse> _callExecuteOntapPatch;
+
         /// <summary>
         /// Constructs a client wrapper for the NetApp service, with the specified gRPC client and settings.
         /// </summary>
@@ -10589,6 +10860,7 @@ namespace Google.Cloud.NetApp.V1
             UpdateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVolumeOperationsSettings, logger);
             DeleteVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVolumeOperationsSettings, logger);
             RevertVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RevertVolumeOperationsSettings, logger);
+            EstablishVolumePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EstablishVolumePeeringOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
             DeleteSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSnapshotOperationsSettings, logger);
             UpdateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSnapshotOperationsSettings, logger);
@@ -10663,6 +10935,9 @@ namespace Google.Cloud.NetApp.V1
             _callRevertVolume = clientHelper.BuildApiCall<RevertVolumeRequest, lro::Operation>("RevertVolume", grpcClient.RevertVolumeAsync, grpcClient.RevertVolume, effectiveSettings.RevertVolumeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRevertVolume);
             Modify_RevertVolumeApiCall(ref _callRevertVolume);
+            _callEstablishVolumePeering = clientHelper.BuildApiCall<EstablishVolumePeeringRequest, lro::Operation>("EstablishVolumePeering", grpcClient.EstablishVolumePeeringAsync, grpcClient.EstablishVolumePeering, effectiveSettings.EstablishVolumePeeringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEstablishVolumePeering);
+            Modify_EstablishVolumePeeringApiCall(ref _callEstablishVolumePeering);
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>("ListSnapshots", grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSnapshots);
             Modify_ListSnapshotsApiCall(ref _callListSnapshots);
@@ -10822,6 +11097,18 @@ namespace Google.Cloud.NetApp.V1
             _callDeleteHostGroup = clientHelper.BuildApiCall<DeleteHostGroupRequest, lro::Operation>("DeleteHostGroup", grpcClient.DeleteHostGroupAsync, grpcClient.DeleteHostGroup, effectiveSettings.DeleteHostGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteHostGroup);
             Modify_DeleteHostGroupApiCall(ref _callDeleteHostGroup);
+            _callExecuteOntapPost = clientHelper.BuildApiCall<ExecuteOntapPostRequest, ExecuteOntapPostResponse>("ExecuteOntapPost", grpcClient.ExecuteOntapPostAsync, grpcClient.ExecuteOntapPost, effectiveSettings.ExecuteOntapPostSettings).WithGoogleRequestParam("ontap_path", request => request.OntapPath);
+            Modify_ApiCall(ref _callExecuteOntapPost);
+            Modify_ExecuteOntapPostApiCall(ref _callExecuteOntapPost);
+            _callExecuteOntapGet = clientHelper.BuildApiCall<ExecuteOntapGetRequest, ExecuteOntapGetResponse>("ExecuteOntapGet", grpcClient.ExecuteOntapGetAsync, grpcClient.ExecuteOntapGet, effectiveSettings.ExecuteOntapGetSettings).WithGoogleRequestParam("ontap_path", request => request.OntapPath);
+            Modify_ApiCall(ref _callExecuteOntapGet);
+            Modify_ExecuteOntapGetApiCall(ref _callExecuteOntapGet);
+            _callExecuteOntapDelete = clientHelper.BuildApiCall<ExecuteOntapDeleteRequest, ExecuteOntapDeleteResponse>("ExecuteOntapDelete", grpcClient.ExecuteOntapDeleteAsync, grpcClient.ExecuteOntapDelete, effectiveSettings.ExecuteOntapDeleteSettings).WithGoogleRequestParam("ontap_path", request => request.OntapPath);
+            Modify_ApiCall(ref _callExecuteOntapDelete);
+            Modify_ExecuteOntapDeleteApiCall(ref _callExecuteOntapDelete);
+            _callExecuteOntapPatch = clientHelper.BuildApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse>("ExecuteOntapPatch", grpcClient.ExecuteOntapPatchAsync, grpcClient.ExecuteOntapPatch, effectiveSettings.ExecuteOntapPatchSettings).WithGoogleRequestParam("ontap_path", request => request.OntapPath);
+            Modify_ApiCall(ref _callExecuteOntapPatch);
+            Modify_ExecuteOntapPatchApiCall(ref _callExecuteOntapPatch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -10852,6 +11139,8 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_DeleteVolumeApiCall(ref gaxgrpc::ApiCall<DeleteVolumeRequest, lro::Operation> call);
 
         partial void Modify_RevertVolumeApiCall(ref gaxgrpc::ApiCall<RevertVolumeRequest, lro::Operation> call);
+
+        partial void Modify_EstablishVolumePeeringApiCall(ref gaxgrpc::ApiCall<EstablishVolumePeeringRequest, lro::Operation> call);
 
         partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
 
@@ -10959,6 +11248,14 @@ namespace Google.Cloud.NetApp.V1
 
         partial void Modify_DeleteHostGroupApiCall(ref gaxgrpc::ApiCall<DeleteHostGroupRequest, lro::Operation> call);
 
+        partial void Modify_ExecuteOntapPostApiCall(ref gaxgrpc::ApiCall<ExecuteOntapPostRequest, ExecuteOntapPostResponse> call);
+
+        partial void Modify_ExecuteOntapGetApiCall(ref gaxgrpc::ApiCall<ExecuteOntapGetRequest, ExecuteOntapGetResponse> call);
+
+        partial void Modify_ExecuteOntapDeleteApiCall(ref gaxgrpc::ApiCall<ExecuteOntapDeleteRequest, ExecuteOntapDeleteResponse> call);
+
+        partial void Modify_ExecuteOntapPatchApiCall(ref gaxgrpc::ApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse> call);
+
         partial void OnConstruction(NetApp.NetAppClient grpcClient, NetAppSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC NetApp client</summary>
@@ -10992,6 +11289,8 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_DeleteVolumeRequest(ref DeleteVolumeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RevertVolumeRequest(ref RevertVolumeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EstablishVolumePeeringRequest(ref EstablishVolumePeeringRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -11098,6 +11397,14 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateHostGroupRequest(ref UpdateHostGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteHostGroupRequest(ref DeleteHostGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteOntapPostRequest(ref ExecuteOntapPostRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteOntapGetRequest(ref ExecuteOntapGetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteOntapDeleteRequest(ref ExecuteOntapDeleteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteOntapPatchRequest(ref ExecuteOntapPatchRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -11444,6 +11751,35 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_RevertVolumeRequest(ref request, ref callSettings);
             return new lro::Operation<Volume, OperationMetadata>(await _callRevertVolume.Async(request, callSettings).ConfigureAwait(false), RevertVolumeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>EstablishVolumePeering</c>.</summary>
+        public override lro::OperationsClient EstablishVolumePeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Establish volume peering. This is used to establish cluster and svm
+        /// peerings between the GCNV and OnPrem clusters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Volume, OperationMetadata> EstablishVolumePeering(EstablishVolumePeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EstablishVolumePeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<Volume, OperationMetadata>(_callEstablishVolumePeering.Sync(request, callSettings), EstablishVolumePeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Establish volume peering. This is used to establish cluster and svm
+        /// peerings between the GCNV and OnPrem clusters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Volume, OperationMetadata>> EstablishVolumePeeringAsync(EstablishVolumePeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EstablishVolumePeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<Volume, OperationMetadata>(await _callEstablishVolumePeering.Async(request, callSettings).ConfigureAwait(false), EstablishVolumePeeringOperationsClient);
         }
 
         /// <summary>
@@ -12834,6 +13170,110 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_DeleteHostGroupRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteHostGroup.Async(request, callSettings).ConfigureAwait(false), DeleteHostGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteOntapPostResponse ExecuteOntapPost(ExecuteOntapPostRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapPostRequest(ref request, ref callSettings);
+            return _callExecuteOntapPost.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteOntapPostResponse> ExecuteOntapPostAsync(ExecuteOntapPostRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapPostRequest(ref request, ref callSettings);
+            return _callExecuteOntapPost.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteOntapGetResponse ExecuteOntapGet(ExecuteOntapGetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapGetRequest(ref request, ref callSettings);
+            return _callExecuteOntapGet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteOntapGetResponse> ExecuteOntapGetAsync(ExecuteOntapGetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapGetRequest(ref request, ref callSettings);
+            return _callExecuteOntapGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteOntapDeleteResponse ExecuteOntapDelete(ExecuteOntapDeleteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapDeleteRequest(ref request, ref callSettings);
+            return _callExecuteOntapDelete.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteOntapDeleteResponse> ExecuteOntapDeleteAsync(ExecuteOntapDeleteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapDeleteRequest(ref request, ref callSettings);
+            return _callExecuteOntapDelete.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteOntapPatchResponse ExecuteOntapPatch(ExecuteOntapPatchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapPatchRequest(ref request, ref callSettings);
+            return _callExecuteOntapPatch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `StoragePool` cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(ExecuteOntapPatchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteOntapPatchRequest(ref request, ref callSettings);
+            return _callExecuteOntapPatch.Async(request, callSettings);
         }
     }
 

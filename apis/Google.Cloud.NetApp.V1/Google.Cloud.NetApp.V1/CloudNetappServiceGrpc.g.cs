@@ -100,6 +100,8 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.RevertVolumeRequest> __Marshaller_google_cloud_netapp_v1_RevertVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest> __Marshaller_google_cloud_netapp_v1_EstablishVolumePeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListSnapshotsRequest> __Marshaller_google_cloud_netapp_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListSnapshotsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListSnapshotsResponse> __Marshaller_google_cloud_netapp_v1_ListSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListSnapshotsResponse.Parser));
@@ -243,6 +245,22 @@ namespace Google.Cloud.NetApp.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest> __Marshaller_google_cloud_netapp_v1_UpdateHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest> __Marshaller_google_cloud_netapp_v1_DeleteHostGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPostRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPostResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest> __Marshaller_google_cloud_netapp_v1_ExecuteOntapGetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse> __Marshaller_google_cloud_netapp_v1_ExecuteOntapGetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest> __Marshaller_google_cloud_netapp_v1_ExecuteOntapDeleteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse> __Marshaller_google_cloud_netapp_v1_ExecuteOntapDeleteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse> __Method_ListStoragePools = new grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse>(
@@ -346,6 +364,14 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "RevertVolume",
         __Marshaller_google_cloud_netapp_v1_RevertVolumeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation> __Method_EstablishVolumePeering = new grpc::Method<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EstablishVolumePeering",
+        __Marshaller_google_cloud_netapp_v1_EstablishVolumePeeringRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -772,6 +798,38 @@ namespace Google.Cloud.NetApp.V1 {
         __Marshaller_google_cloud_netapp_v1_DeleteHostGroupRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse> __Method_ExecuteOntapPost = new grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteOntapPost",
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapPostRequest,
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapPostResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse> __Method_ExecuteOntapGet = new grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteOntapGet",
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapGetRequest,
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapGetResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse> __Method_ExecuteOntapDelete = new grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteOntapDelete",
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapDeleteRequest,
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapDeleteResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> __Method_ExecuteOntapPatch = new grpc::Method<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteOntapPatch",
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchRequest,
+        __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -938,6 +996,19 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RevertVolume(global::Google.Cloud.NetApp.V1.RevertVolumeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Establish volume peering. This is used to establish cluster and svm
+      /// peerings between the GCNV and OnPrem clusters.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EstablishVolumePeering(global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1582,6 +1653,58 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteHostGroup(global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse> ExecuteOntapPost(global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse> ExecuteOntapGet(global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse> ExecuteOntapDelete(global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> ExecuteOntapPatch(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2254,6 +2377,58 @@ namespace Google.Cloud.NetApp.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevertVolumeAsync(global::Google.Cloud.NetApp.V1.RevertVolumeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RevertVolume, null, options, request);
+      }
+      /// <summary>
+      /// Establish volume peering. This is used to establish cluster and svm
+      /// peerings between the GCNV and OnPrem clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EstablishVolumePeering(global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EstablishVolumePeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Establish volume peering. This is used to establish cluster and svm
+      /// peerings between the GCNV and OnPrem clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EstablishVolumePeering(global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EstablishVolumePeering, null, options, request);
+      }
+      /// <summary>
+      /// Establish volume peering. This is used to establish cluster and svm
+      /// peerings between the GCNV and OnPrem clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EstablishVolumePeeringAsync(global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EstablishVolumePeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Establish volume peering. This is used to establish cluster and svm
+      /// peerings between the GCNV and OnPrem clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EstablishVolumePeeringAsync(global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EstablishVolumePeering, null, options, request);
       }
       /// <summary>
       /// Returns descriptions of all snapshots for a volume.
@@ -4831,6 +5006,214 @@ namespace Google.Cloud.NetApp.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteHostGroup, null, options, request);
       }
+      /// <summary>
+      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse ExecuteOntapPost(global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapPost(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse ExecuteOntapPost(global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapPost, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse> ExecuteOntapPostAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapPostAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse> ExecuteOntapPostAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapPost, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse ExecuteOntapGet(global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapGet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse ExecuteOntapGet(global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapGet, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse> ExecuteOntapGetAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapGetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse> ExecuteOntapGetAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapGet, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse ExecuteOntapDelete(global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapDelete(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse ExecuteOntapDelete(global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapDelete, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse> ExecuteOntapDeleteAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapDeleteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse> ExecuteOntapDeleteAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapDelete, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse ExecuteOntapPatch(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapPatch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse ExecuteOntapPatch(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapPatch, null, options, request);
+      }
+      /// <summary>
+      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteOntapPatchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `StoragePool` cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapPatch, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetAppClient NewInstance(ClientBaseConfiguration configuration)
@@ -4858,6 +5241,7 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_UpdateVolume, serviceImpl.UpdateVolume)
           .AddMethod(__Method_DeleteVolume, serviceImpl.DeleteVolume)
           .AddMethod(__Method_RevertVolume, serviceImpl.RevertVolume)
+          .AddMethod(__Method_EstablishVolumePeering, serviceImpl.EstablishVolumePeering)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
           .AddMethod(__Method_CreateSnapshot, serviceImpl.CreateSnapshot)
@@ -4910,7 +5294,11 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_GetHostGroup, serviceImpl.GetHostGroup)
           .AddMethod(__Method_CreateHostGroup, serviceImpl.CreateHostGroup)
           .AddMethod(__Method_UpdateHostGroup, serviceImpl.UpdateHostGroup)
-          .AddMethod(__Method_DeleteHostGroup, serviceImpl.DeleteHostGroup).Build();
+          .AddMethod(__Method_DeleteHostGroup, serviceImpl.DeleteHostGroup)
+          .AddMethod(__Method_ExecuteOntapPost, serviceImpl.ExecuteOntapPost)
+          .AddMethod(__Method_ExecuteOntapGet, serviceImpl.ExecuteOntapGet)
+          .AddMethod(__Method_ExecuteOntapDelete, serviceImpl.ExecuteOntapDelete)
+          .AddMethod(__Method_ExecuteOntapPatch, serviceImpl.ExecuteOntapPatch).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4933,6 +5321,7 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_UpdateVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVolume));
       serviceBinder.AddMethod(__Method_DeleteVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVolume));
       serviceBinder.AddMethod(__Method_RevertVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.RevertVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.RevertVolume));
+      serviceBinder.AddMethod(__Method_EstablishVolumePeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.EstablishVolumePeering));
       serviceBinder.AddMethod(__Method_ListSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListSnapshotsRequest, global::Google.Cloud.NetApp.V1.ListSnapshotsResponse>(serviceImpl.ListSnapshots));
       serviceBinder.AddMethod(__Method_GetSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetSnapshotRequest, global::Google.Cloud.NetApp.V1.Snapshot>(serviceImpl.GetSnapshot));
       serviceBinder.AddMethod(__Method_CreateSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSnapshot));
@@ -4986,6 +5375,10 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_CreateHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHostGroup));
       serviceBinder.AddMethod(__Method_UpdateHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateHostGroup));
       serviceBinder.AddMethod(__Method_DeleteHostGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteHostGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteHostGroup));
+      serviceBinder.AddMethod(__Method_ExecuteOntapPost, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapPostRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPostResponse>(serviceImpl.ExecuteOntapPost));
+      serviceBinder.AddMethod(__Method_ExecuteOntapGet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse>(serviceImpl.ExecuteOntapGet));
+      serviceBinder.AddMethod(__Method_ExecuteOntapDelete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse>(serviceImpl.ExecuteOntapDelete));
+      serviceBinder.AddMethod(__Method_ExecuteOntapPatch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse>(serviceImpl.ExecuteOntapPatch));
     }
 
   }

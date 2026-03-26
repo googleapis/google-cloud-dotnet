@@ -154,6 +154,36 @@
                 "EstablishPeeringAsync"
               ]
             },
+            "EstablishVolumePeering": {
+              "methods": [
+                "EstablishVolumePeering",
+                "EstablishVolumePeeringAsync"
+              ]
+            },
+            "ExecuteOntapDelete": {
+              "methods": [
+                "ExecuteOntapDelete",
+                "ExecuteOntapDeleteAsync"
+              ]
+            },
+            "ExecuteOntapGet": {
+              "methods": [
+                "ExecuteOntapGet",
+                "ExecuteOntapGetAsync"
+              ]
+            },
+            "ExecuteOntapPatch": {
+              "methods": [
+                "ExecuteOntapPatch",
+                "ExecuteOntapPatchAsync"
+              ]
+            },
+            "ExecuteOntapPost": {
+              "methods": [
+                "ExecuteOntapPost",
+                "ExecuteOntapPostAsync"
+              ]
+            },
             "GetActiveDirectory": {
               "methods": [
                 "GetActiveDirectory",

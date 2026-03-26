@@ -1974,6 +1974,79 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for EstablishVolumePeering</summary>
+        public void EstablishVolumePeeringRequestObject()
+        {
+            // Snippet: EstablishVolumePeering(EstablishVolumePeeringRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            EstablishVolumePeeringRequest request = new EstablishVolumePeeringRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                PeerClusterName = "",
+                PeerSvmName = "",
+                PeerIpAddresses = { "", },
+                PeerVolumeName = "",
+            };
+            // Make the request
+            Operation<Volume, OperationMetadata> response = netAppClient.EstablishVolumePeering(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = netAppClient.PollOnceEstablishVolumePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EstablishVolumePeeringAsync</summary>
+        public async Task EstablishVolumePeeringRequestObjectAsync()
+        {
+            // Snippet: EstablishVolumePeeringAsync(EstablishVolumePeeringRequest, CallSettings)
+            // Additional: EstablishVolumePeeringAsync(EstablishVolumePeeringRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            EstablishVolumePeeringRequest request = new EstablishVolumePeeringRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                PeerClusterName = "",
+                PeerSvmName = "",
+                PeerIpAddresses = { "", },
+                PeerVolumeName = "",
+            };
+            // Make the request
+            Operation<Volume, OperationMetadata> response = await netAppClient.EstablishVolumePeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = await netAppClient.PollOnceEstablishVolumePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSnapshots</summary>
         public void ListSnapshotsRequestObject()
         {
@@ -10332,6 +10405,130 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapPost</summary>
+        public void ExecuteOntapPostRequestObject()
+        {
+            // Snippet: ExecuteOntapPost(ExecuteOntapPostRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ExecuteOntapPostRequest request = new ExecuteOntapPostRequest
+            {
+                Body = new Struct(),
+                OntapPath = "",
+            };
+            // Make the request
+            ExecuteOntapPostResponse response = netAppClient.ExecuteOntapPost(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapPostAsync</summary>
+        public async Task ExecuteOntapPostRequestObjectAsync()
+        {
+            // Snippet: ExecuteOntapPostAsync(ExecuteOntapPostRequest, CallSettings)
+            // Additional: ExecuteOntapPostAsync(ExecuteOntapPostRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteOntapPostRequest request = new ExecuteOntapPostRequest
+            {
+                Body = new Struct(),
+                OntapPath = "",
+            };
+            // Make the request
+            ExecuteOntapPostResponse response = await netAppClient.ExecuteOntapPostAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapGet</summary>
+        public void ExecuteOntapGetRequestObject()
+        {
+            // Snippet: ExecuteOntapGet(ExecuteOntapGetRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ExecuteOntapGetRequest request = new ExecuteOntapGetRequest { OntapPath = "", };
+            // Make the request
+            ExecuteOntapGetResponse response = netAppClient.ExecuteOntapGet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapGetAsync</summary>
+        public async Task ExecuteOntapGetRequestObjectAsync()
+        {
+            // Snippet: ExecuteOntapGetAsync(ExecuteOntapGetRequest, CallSettings)
+            // Additional: ExecuteOntapGetAsync(ExecuteOntapGetRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteOntapGetRequest request = new ExecuteOntapGetRequest { OntapPath = "", };
+            // Make the request
+            ExecuteOntapGetResponse response = await netAppClient.ExecuteOntapGetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapDelete</summary>
+        public void ExecuteOntapDeleteRequestObject()
+        {
+            // Snippet: ExecuteOntapDelete(ExecuteOntapDeleteRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ExecuteOntapDeleteRequest request = new ExecuteOntapDeleteRequest { OntapPath = "", };
+            // Make the request
+            ExecuteOntapDeleteResponse response = netAppClient.ExecuteOntapDelete(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapDeleteAsync</summary>
+        public async Task ExecuteOntapDeleteRequestObjectAsync()
+        {
+            // Snippet: ExecuteOntapDeleteAsync(ExecuteOntapDeleteRequest, CallSettings)
+            // Additional: ExecuteOntapDeleteAsync(ExecuteOntapDeleteRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteOntapDeleteRequest request = new ExecuteOntapDeleteRequest { OntapPath = "", };
+            // Make the request
+            ExecuteOntapDeleteResponse response = await netAppClient.ExecuteOntapDeleteAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapPatch</summary>
+        public void ExecuteOntapPatchRequestObject()
+        {
+            // Snippet: ExecuteOntapPatch(ExecuteOntapPatchRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ExecuteOntapPatchRequest request = new ExecuteOntapPatchRequest
+            {
+                Body = new Struct(),
+                OntapPath = "",
+            };
+            // Make the request
+            ExecuteOntapPatchResponse response = netAppClient.ExecuteOntapPatch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteOntapPatchAsync</summary>
+        public async Task ExecuteOntapPatchRequestObjectAsync()
+        {
+            // Snippet: ExecuteOntapPatchAsync(ExecuteOntapPatchRequest, CallSettings)
+            // Additional: ExecuteOntapPatchAsync(ExecuteOntapPatchRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteOntapPatchRequest request = new ExecuteOntapPatchRequest
+            {
+                Body = new Struct(),
+                OntapPath = "",
+            };
+            // Make the request
+            ExecuteOntapPatchResponse response = await netAppClient.ExecuteOntapPatchAsync(request);
             // End snippet
         }
     }
