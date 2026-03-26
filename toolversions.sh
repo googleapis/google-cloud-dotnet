@@ -9,7 +9,7 @@
 declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
-declare -r PROTOC_VERSION=3.25.2
+declare -r PROTOC_VERSION=3.31.0
 declare -r GRPC_VERSION=2.60.0
 if [[ $GAPIC_GENERATOR_VERSION == "" ]]
 then
