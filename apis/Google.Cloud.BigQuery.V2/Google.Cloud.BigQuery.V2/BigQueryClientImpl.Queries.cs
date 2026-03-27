@@ -26,6 +26,36 @@ namespace Google.Cloud.BigQuery.V2
 {
     public partial class BigQueryClientImpl
     {
+        /// <inheritdoc />
+        public override BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
+        {
+            var request = CreateQueryRequest(sql, parameters, queryOptions);
+            var queryRestRequest = Service.Jobs.Query(request, ProjectId);
+            queryRestRequest.PrettyPrint = PrettyPrint;
+            var response = queryRestRequest.Execute();
+            if (response.JobComplete == true)
+            {
+                return new BigQueryResults(this, response, null, resultsOptions);
+            }
+            // Otherwise, the query is still running and we must fetch the results using the job reference.
+            return GetQueryResults(response.JobReference, resultsOptions);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateQueryRequest(sql, parameters, queryOptions);
+            var queryRestRequest = Service.Jobs.Query(request, ProjectId);
+            queryRestRequest.PrettyPrint = PrettyPrint;
+            var response = await queryRestRequest.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            if (response.JobComplete == true)
+            {
+                return new BigQueryResults(this, response, null, resultsOptions);
+            }
+            // Otherwise, the query is still running and we must fetch the results using the job reference.
+            return await GetQueryResultsAsync(response.JobReference, resultsOptions, cancellationToken).ConfigureAwait(false);
+        }
+
         private sealed class TableRowPageManager : IPageManager<TabledataResource.ListRequest, TableDataList, BigQueryRow>
         {
             private readonly TableSchema _schema;
@@ -162,7 +192,7 @@ namespace Google.Cloud.BigQuery.V2
                 () => CreateListRequest(tableReference, options, schema), pageManager);
         }
 
-        // Request creation
+        // Request creation for Jobs.Insert
         private JobsResource.InsertRequest CreateInsertQueryJobRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
@@ -192,6 +222,39 @@ namespace Google.Cloud.BigQuery.V2
                     $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
             }
             return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery }, options);
+        }
+
+        // Request creation for Jobs.Query stateless queries
+        private QueryRequest CreateQueryRequest(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            if (parameters != null)
+            {
+                parameters = parameters.ToList();
+                GaxPreconditions.CheckArgument(!parameters.Contains(null), nameof(parameters), "Parameter list must not contain null elements");
+            }
+            var request = new QueryRequest
+            {
+                Query = sql,
+                UseLegacySql = false,
+                ParameterMode = "named",
+                QueryParameters = parameters?.Select(p => p.ToQueryParameter()).ToList(),
+            };
+            options?.ModifyRequest(request);
+            request.Location ??= DefaultLocation;
+            // If there aren't any parameters, set ParameterMode to null - otherwise legacy SQL queries fail,
+            // even if haven't set any parameters.
+            if (parameters == null)
+            {
+                request.ParameterMode = null;
+            }
+            // Now we've definitely set the parameter mode, validate that all parameters have names if appropriate.
+            if (request.ParameterMode == "named")
+            {
+                GaxPreconditions.CheckArgument(parameters.All(p => !string.IsNullOrEmpty(p.Name)), nameof(parameters),
+                    $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
+            }
+            return request;
         }
 
         private TabledataResource.ListRequest CreateListRequest(TableReference tableReference, ListRowsOptions options, TableSchema schema)

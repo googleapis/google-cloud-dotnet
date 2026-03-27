@@ -65,6 +65,60 @@ namespace Google.Cloud.BigQuery.V2
         }
         #endregion
 
+        #region ExecuteStatelessQuery
+        /// <summary>
+        /// Executes a query using the <c>jobs.query</c> RPC path.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed.
+        /// </para>
+        /// <para>
+        /// This method delegates to the <c>jobs.query</c> RPC path, which provides an optimized
+        /// path for executing queries with lower latency. The BigQuery service will return
+        /// results immediately in the query response if the query completes within the specified
+        /// timeout (see <see cref="StatelessQueryOptions.Timeout"/>).
+        /// </para>
+        /// <para>
+        /// If the query does not complete within the specified timeout, results are fetched
+        /// using <see cref="GetQueryResults(JobReference, GetQueryResultsOptions)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="parameters">The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The result of the query.</returns>
+        public virtual BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) => throw new NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously executes a query using the <c>jobs.query</c> RPC path.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// </para>
+        /// <para>
+        /// This method delegates to the <c>jobs.query</c> RPC path, which provides an optimized
+        /// path for executing queries with lower latency. The BigQuery service will return
+        /// results immediately in the query response if the query completes within the specified
+        /// timeout (see <see cref="StatelessQueryOptions.Timeout"/>).
+        /// </para>
+        /// <para>
+        /// If the query does not complete within the specified timeout, results are fetched
+        /// using <see cref="GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="parameters">The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigQueryResults"/> representing the query.</returns>
+        public virtual Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+        #endregion
+
         #region CreateQueryJob
         /// <summary>
         /// Creates a job for a SQL query.

@@ -323,6 +323,67 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void ExecuteStatelessQuery()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table";
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us" };
+            service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
+
+            var results = client.ExecuteStatelessQuery(sql, parameters: null, queryOptions: new StatelessQueryOptions { MaxResults = 10, Location = "us" });
+            AssertStatelessQueryResult(results, "value");
+        }
+
+        [Fact]
+        public async Task ExecuteStatelessQueryAsync()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table";
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us" };
+            service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
+
+            var results = await client.ExecuteStatelessQueryAsync(sql, parameters: null, queryOptions: new StatelessQueryOptions { MaxResults = 10, Location = "us" });
+            AssertStatelessQueryResult(results, "value");
+        }
+
+        [Fact]
+        public void ExecuteStatelessQuery_WithParameters()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table WHERE col = @val";
+            var parameters = new[] { new BigQueryParameter("val", BigQueryDbType.String, "foo") };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, ParameterMode = "named", QueryParameters = new[] { parameters[0].ToQueryParameter() } };
+            service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("foo"));
+
+            var results = client.ExecuteStatelessQuery(sql, parameters);
+            AssertStatelessQueryResult(results, "foo");
+        }
+
+        /// <summary>
+        /// Creates a QueryResponse with a single row containing the specified value in a column named "col".
+        /// </summary>
+        private static QueryResponse CreateStatelessResponse(string columnValue) => new QueryResponse
+        {
+            JobComplete = true,
+            Rows = new[] { new TableRow { F = new[] { new TableCell { V = columnValue } } } },
+            Schema = new TableSchema { Fields = new[] { new TableFieldSchema { Name = "col", Type = "STRING" } } },
+            QueryId = "queryId"
+        };
+
+        /// <summary>
+        /// Asserts that the BigQueryResults contains a single row with the expected value in the "col" column.
+        /// </summary>
+        private static void AssertStatelessQueryResult(BigQueryResults results, string expectedColumnValue)
+        {
+            Assert.Equal("queryId", results.QueryId);
+            var row = results.Single();
+            Assert.Equal(expectedColumnValue, (string)row["col"]);
+        }
+
+        [Fact]
         public void CreateTable()
         {
             var projectId = "project";

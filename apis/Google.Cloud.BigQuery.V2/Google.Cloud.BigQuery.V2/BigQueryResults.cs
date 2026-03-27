@@ -15,9 +15,11 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -180,8 +182,15 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="pageSize">The maximum number of rows to retrieve. Must be positive.</param>
         /// <returns>An in-memory result set of at most the given number of rows.</returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown when attempting to run this method on results that did not create a job.
+        /// Use the default <see cref="JobCreationMode.Required"/> to ensure the job is created before calling this method.
+        /// </exception>
         public BigQueryPage ReadPage(int pageSize)
         {
+            // A JobReference is required for token based pagination. This might be missing if the query was executed with
+            // JobCreationMode.Optional. Validating early to provide a clear error message.
+            ThrowIfJobReferenceIsNull();
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
@@ -222,8 +231,15 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// an in-memory result set of at most the given number of rows.</returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown when attempting to run this method on results that did not create a job.
+        /// Use the default <see cref="JobCreationMode.Required"/> to ensure the job is created before calling this method.
+        /// </exception>
         public async Task<BigQueryPage> ReadPageAsync(int pageSize, CancellationToken cancellationToken = default)
         {
+            // A JobReference is required for token based pagination. This might be missing if the query was executed with
+            // JobCreationMode.Optional. Validating early to provide a clear error message.
+            ThrowIfJobReferenceIsNull();
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
@@ -337,5 +353,15 @@ namespace Google.Cloud.BigQuery.V2
 
         private IEnumerable<BigQueryRow> ConvertResponseRows(IList<TableRow> rows) =>
             (rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true));
+
+        private void ThrowIfJobReferenceIsNull([CallerMemberName] string methodName = "")
+        {
+            if (JobReference == null)
+            {
+                throw new InvalidOperationException(
+                    $"Cannot execute '{methodName}' because '{nameof(JobReference)}' is null. " +
+                    $"Specify '{nameof(JobCreationMode)}.{nameof(JobCreationMode.Required)}' to ensure the job is created beforehand.");
+            }
+        }
     }
 }
