@@ -213,6 +213,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(expected, (DateTime) row["timestamp"]);
         }
 
+        [Fact]
+        public void QueryId_PropagatedToRow()
+        {
+            var queryId = "test-query-id";
+            var schema = new TableSchemaBuilder {{ "text", BigQueryDbType.String }}.Build();
+            var rowWithQueryId = new BigQueryRow(new TableRow(), schema, schema.IndexFieldNames(), false, queryId);
+            var rowWithoutQueryId = new BigQueryRow(new TableRow(), schema);
+            Assert.Equal(queryId, rowWithQueryId.QueryId);
+            Assert.Null(rowWithoutQueryId.QueryId);
+        }
+
         private JArray CreateArray(params string[] values) => new JArray(values.Select(CreateObject));
 
         private JObject CreateObject(string value) => new JObject { ["v"] = value };

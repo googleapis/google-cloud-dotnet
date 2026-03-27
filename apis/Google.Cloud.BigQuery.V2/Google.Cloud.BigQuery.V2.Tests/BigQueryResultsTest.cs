@@ -15,6 +15,7 @@
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -22,6 +23,52 @@ namespace Google.Cloud.BigQuery.V2.Tests;
 
 public class BigQueryResultsTest
 {
+    private const string TestQueryId = "test-query-id";
+
+    private static BigQueryResults CreateResults(string queryId = TestQueryId)
+    {
+        var client = new SimpleClient();
+        var schema = new TableSchemaBuilder { { "col", BigQueryDbType.String } }.Build();
+        var rows = new[] { new TableRow { F = new[] { new TableCell { V = "val" } } } };
+        var response = new QueryResponse
+        {
+            JobReference = new JobReference { ProjectId = "p", JobId = "j" },
+            QueryId = queryId,
+            Schema = schema,
+            Rows = rows,
+            TotalRows = 1
+        };
+        return new BigQueryResults(client, response, null, null);
+    }
+
+    [Fact]
+    public void QueryId_PropagatedToRows()
+    {
+        var results = CreateResults();
+        Assert.Equal(TestQueryId, results.QueryId);
+
+        var row = results.Single();
+        Assert.Equal(TestQueryId, row.QueryId);
+    }
+
+    [Fact]
+    public void ReadPage_QueryIdPropagatedToRows()
+    {
+        var results = CreateResults();
+        var page = results.ReadPage(10);
+        var row = page.Rows.Single();
+        Assert.Equal(TestQueryId, row.QueryId);
+    }
+
+    [Fact]
+    public async Task ReadPageAsync_QueryIdPropagatedToRows()
+    {
+        var results = CreateResults();
+        var page = await results.ReadPageAsync(10);
+        var row = page.Rows.Single();
+        Assert.Equal(TestQueryId, row.QueryId);
+    }
+
     [Fact]
     public void ReadPage_NoJobReference_ThrowsException()
     {

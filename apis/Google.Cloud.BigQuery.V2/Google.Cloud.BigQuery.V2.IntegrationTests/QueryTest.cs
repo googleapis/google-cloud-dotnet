@@ -61,6 +61,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
             Assert.NotNull(results.QueryId);
+            Assert.All(rows, row => Assert.Equal(results.QueryId, row.QueryId));
         }
 
         [Theory]
@@ -73,6 +74,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = results.Single();
             Assert.Equal(expectedValue, row["val"]);
             Assert.NotNull(results.QueryId);
+            Assert.Equal(results.QueryId, row.QueryId);
         }
 
         [Fact]
@@ -85,6 +87,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = results.Single();
             Assert.Equal(95L, (long)row["score"]);
             Assert.NotNull(results.QueryId);
+            Assert.Equal(results.QueryId, row.QueryId);
         }
 
         [Fact]
@@ -99,10 +102,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var page = results.ReadPage(5);
             Assert.Equal(5, page.Rows.Count);
             Assert.NotNull(page.NextPageToken);
+            Assert.All(page.Rows, row => Assert.Equal(results.QueryId, row.QueryId));
 
             // The total count after full iteration should still be 10.
-            Assert.Equal(10, results.ToList().Count);
+            var allRows = results.ToList();
+            Assert.Equal(10, allRows.Count);
             Assert.NotNull(results.QueryId);
+            Assert.All(allRows, row => Assert.Equal(results.QueryId, row.QueryId));
         }
 
         [Fact]
@@ -131,9 +137,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var sql = "SELECT 1 AS val";
             // Simple query with compatible options should use the stateless fast path.
             var results = client.ExecuteQuery(sql, null, new QueryOptions { UseQueryCache = false });
-            Assert.Equal(1L, results.Single()["val"]);
+            var row = results.Single();
+            Assert.Equal(1L, row["val"]);
             // In the stateless path, QueryId is populated.
             Assert.NotNull(results.QueryId);
+            Assert.Equal(results.QueryId, row.QueryId);
         }
 
         [Fact]
@@ -144,9 +152,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Simple query with compatible options should use the stateless fast path.
             var results = await client.ExecuteQueryAsync(sql, null, new QueryOptions { UseQueryCache = false });
             var rows = await results.GetRowsAsync().ToListAsync();
-            Assert.Equal(1L, rows.Single()["val"]);
+            var row = rows.Single();
+            Assert.Equal(1L, row["val"]);
             // In the stateless path, QueryId is populated.
             Assert.NotNull(results.QueryId);
+            Assert.Equal(results.QueryId, row.QueryId);
         }
 
         [Fact]

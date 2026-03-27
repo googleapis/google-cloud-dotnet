@@ -352,7 +352,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         private IEnumerable<BigQueryRow> ConvertResponseRows(IList<TableRow> rows) =>
-            (rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true));
+            (rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true, QueryId));
 
         private void ThrowIfJobReferenceIsNull([CallerMemberName] string methodName = "")
         {
