@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKrsbCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKoccCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -103,12 +103,13 @@ namespace Google.Ads.DataManager.V1 {
             "X0lOR0VTVEVEX1VTRVJfTElTVF9JTkZPX0NPTkZJRxBgEjAKLFVOU1VQUE9S",
             "VEVEX0FDQ09VTlRfVFlQRVNfRk9SX1VTRVJfTElTVF9UWVBFEGESLQopVU5T",
             "VVBQT1JURURfQUNDT1VOVF9UWVBFX0ZPUl9QQVJUTkVSX0xJTksQYhIgChxN",
-            "RU1CRVJTSElQX0RVUkFUSU9OX1RPT19MT05HEGNCxwEKHWNvbS5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxQgpFcnJvclByb3RvUAFaQWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRh",
-            "bWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2ds",
-            "ZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFn",
-            "ZXI6OlYxYgZwcm90bzM="));
+            "RU1CRVJTSElQX0RVUkFUSU9OX1RPT19MT05HEGMSFwoTSU5WQUxJRF9NRVJD",
+            "SEFOVF9JRBBkEjEKLUVVX1BPTElUSUNBTF9BRFZFUlRJU0lOR19ERUNMQVJB",
+            "VElPTl9SRVFVSVJFRBBlQscBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MUIKRXJyb3JQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFt",
+            "YW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdv",
+            "b2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5h",
+            "Z2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -536,6 +537,15 @@ namespace Google.Ads.DataManager.V1 {
     /// The user list membership duration is too long.
     /// </summary>
     [pbr::OriginalName("MEMBERSHIP_DURATION_TOO_LONG")] MembershipDurationTooLong = 99,
+    /// <summary>
+    /// The `merchant_id` field is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_MERCHANT_ID")] InvalidMerchantId = 100,
+    /// <summary>
+    /// The customer contains non-exempt campaigns without the EU political
+    /// advertising declaration.
+    /// </summary>
+    [pbr::OriginalName("EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED")] EuPoliticalAdvertisingDeclarationRequired = 101,
   }
 
   #endregion

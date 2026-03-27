@@ -122,9 +122,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -147,9 +144,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -172,9 +166,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -226,9 +217,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -252,9 +240,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -276,9 +261,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -302,9 +284,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -326,9 +305,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -352,9 +328,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -376,9 +349,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -402,9 +372,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -426,9 +393,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -452,9 +416,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -476,9 +437,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -502,9 +460,6 @@ namespace Google.Ads.DataManager.V1 {
       ///   Google Account of the credentials is a user. If not set, defaults to the
       ///   account of the request. Format:
       ///   `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-      /// * `linked-account`: (Optional) The resource name of the account with an
-      ///    established product link to the `login-account`. Format:
-      ///    `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
