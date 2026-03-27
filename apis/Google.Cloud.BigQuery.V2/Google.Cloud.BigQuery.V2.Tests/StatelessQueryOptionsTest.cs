@@ -50,28 +50,26 @@ public class StatelessQueryOptionsTest
         var request = new QueryRequest();
         options.ModifyRequest(request);
 
-        var prop = Assert.Single(request.ConnectionProperties);
-        Assert.Equal("key", prop.Key);
-        Assert.Equal("value", prop.Value);
-        Assert.Equal(true, request.Continuous);
-        Assert.Equal(true, request.CreateSession);
-        Assert.Equal("b", request.DefaultDataset.DatasetId);
-        Assert.Equal("kms", request.DestinationEncryptionConfiguration.KmsKeyName);
-        Assert.Equal(true, request.DryRun);
-        Assert.Equal(false, request.FormatOptions.UseInt64Timestamp);
-        Assert.Equal("JOB_CREATION_REQUIRED", request.JobCreationMode);
-        Assert.Equal(10000L, request.JobTimeoutMs);
-        Assert.Equal(options.Labels, request.Labels);
-        Assert.Equal("us", request.Location);
-        Assert.Equal(100L, request.MaxResults);
-        Assert.Equal(1000L, request.MaximumBytesBilled);
-        Assert.Equal("positional", request.ParameterMode);
-        Assert.Equal("requestId", request.RequestId);
-        Assert.Equal("reservation", request.Reservation);
-        Assert.Equal(5000L, request.TimeoutMs);
-        Assert.Equal(true, request.UseLegacySql);
-        Assert.Equal(false, request.UseQueryCache);
-        Assert.Equal(true, request.WriteIncrementalResults);
+        Assert.Equal(options.ConnectionProperties, request.ConnectionProperties);
+        Assert.Equal(options.Continuous, request.Continuous);
+        Assert.Equal(options.CreateSession, request.CreateSession);
+        Assert.Same(options.DefaultDataset, request.DefaultDataset);
+        Assert.Same(options.DestinationEncryptionConfiguration, request.DestinationEncryptionConfiguration);
+        Assert.Equal(options.DryRun, request.DryRun);
+        Assert.Same(options.FormatOptions, request.FormatOptions);
+        Assert.Equal(EnumMap.ToApiValue(options.JobCreationMode.Value), request.JobCreationMode);
+        Assert.Equal((long)options.JobTimeout.Value.TotalMilliseconds, request.JobTimeoutMs);
+        Assert.Same(options.Labels, request.Labels);
+        Assert.Equal(options.Location, request.Location);
+        Assert.Equal(options.MaxResults, request.MaxResults);
+        Assert.Equal(options.MaximumBytesBilled, request.MaximumBytesBilled);
+        Assert.Equal(options.ParameterMode.Value.ToString().ToLowerInvariant(), request.ParameterMode);
+        Assert.Equal(options.RequestId, request.RequestId);
+        Assert.Equal(options.Reservation, request.Reservation);
+        Assert.Equal((long)options.Timeout.Value.TotalMilliseconds, request.TimeoutMs);
+        Assert.Equal(options.UseLegacySql, request.UseLegacySql);
+        Assert.Equal(options.UseQueryCache, request.UseQueryCache);
+        Assert.Equal(options.WriteIncrementalResults, request.WriteIncrementalResults);
     }
 
     [Fact]

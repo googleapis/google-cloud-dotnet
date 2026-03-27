@@ -125,6 +125,44 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void ExecuteQuery_StatelessOptimization_Compatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            // Simple query with compatible options should use the stateless fast path.
+            var results = client.ExecuteQuery(sql, null, new QueryOptions { UseQueryCache = false });
+            Assert.Equal(1L, results.Single()["val"]);
+            // In the stateless path, QueryId is populated.
+            Assert.NotNull(results.QueryId);
+        }
+
+        [Fact]
+        public async Task ExecuteQueryAsync_StatelessOptimization_Compatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            // Simple query with compatible options should use the stateless fast path.
+            var results = await client.ExecuteQueryAsync(sql, null, new QueryOptions { UseQueryCache = false });
+            var rows = await results.GetRowsAsync().ToListAsync();
+            Assert.Equal(1L, rows.Single()["val"]);
+            // In the stateless path, QueryId is populated.
+            Assert.NotNull(results.QueryId);
+        }
+
+        [Fact]
+        public void ExecuteQuery_StatelessOptimization_Incompatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            var destinationTable = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+            // Providing a DestinationTable makes the query incompatible with the stateless fast path.
+            var results = client.ExecuteQuery(sql, null, new QueryOptions { DestinationTable = destinationTable });
+            Assert.Equal(1L, results.Single()["val"]);
+            // In the standard job path, QueryId is null.
+            Assert.Null(results.QueryId);
+        }
+
+        [Fact]
         public void SynchronousTemporaryQuery()
         {
             // We create the client using our user, but then access a dataset in a public data

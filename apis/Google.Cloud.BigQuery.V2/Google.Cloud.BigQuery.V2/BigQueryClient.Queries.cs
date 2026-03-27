@@ -38,8 +38,15 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
         /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public virtual BigQueryResults ExecuteQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
-            CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);
+        public virtual BigQueryResults ExecuteQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
+        {
+            if (StatelessQueryOptions.TryCreateStatelessOptions(queryOptions, resultsOptions, out var statelessQueryOptions))
+            {
+               // Use the optimized stateless query path when compatible with the provided options.
+               return ExecuteStatelessQuery(sql, parameters, statelessQueryOptions, resultsOptions);
+            }
+            return CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);
+        }
 
         /// <summary>
         /// Asynchronously executes a query.
@@ -60,6 +67,11 @@ namespace Google.Cloud.BigQuery.V2
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
         public virtual async Task<BigQueryResults> ExecuteQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
         {
+            if (StatelessQueryOptions.TryCreateStatelessOptions(queryOptions, resultsOptions, out var statelessQueryOptions))
+            {
+               // Use the optimized stateless query path when compatible with the provided options.
+               return await ExecuteStatelessQueryAsync(sql, parameters, statelessQueryOptions, resultsOptions, cancellationToken).ConfigureAwait(false);
+            }
             var job = await CreateQueryJobAsync(sql, parameters, queryOptions, cancellationToken).ConfigureAwait(false);
             return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
         }

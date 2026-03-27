@@ -384,6 +384,68 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void ExecuteQuery_StatelessOptimization()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table";
+            
+            // Compatible options should trigger stateless optimization
+            var queryOptions = new QueryOptions { UseQueryCache = true };
+            var resultsOptions = new GetQueryResultsOptions { PageSize = 10 };
+            
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10 };
+            service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
+
+            var results = client.ExecuteQuery(sql, parameters: null, queryOptions: queryOptions, resultsOptions: resultsOptions);
+            AssertStatelessQueryResult(results, "value");
+        }
+
+        [Fact]
+        public async Task ExecuteQueryAsync_StatelessOptimization()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table";
+            
+            // Compatible options should trigger stateless optimization
+            var queryOptions = new QueryOptions { UseQueryCache = true };
+            var resultsOptions = new GetQueryResultsOptions { PageSize = 10 };
+            
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10 };
+            service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
+
+            var results = await client.ExecuteQueryAsync(sql, parameters: null, queryOptions: queryOptions, resultsOptions: resultsOptions);
+            AssertStatelessQueryResult(results, "value");
+        }
+
+        [Fact]
+        public void ExecuteQuery_StatelessOptimization_Incompatible()
+        {
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            var sql = "SELECT * FROM dataset.table";
+            var dest = new TableReference { ProjectId = "project", DatasetId = "dataset", TableId = "dest" };
+            
+            // Incompatible options (like DestinationTable) should NOT trigger stateless optimization.
+            var jobRef = new JobReference { ProjectId = "project", JobId = "testjob" };
+            var jobResponse = new Job { JobReference = jobRef, Configuration = new JobConfiguration { Query = new JobConfigurationQuery() } };
+            service.ExpectRequest(service.Jobs.Insert(new Job { Configuration = new JobConfiguration { Query = new JobConfigurationQuery { Query = sql, UseLegacySql = false, DestinationTable = dest } }, JobReference = jobRef }, "project"), jobResponse);
+            
+            var getResultsRequest = service.Jobs.GetQueryResults("project", "testjob");
+            getResultsRequest.TimeoutMs = 60000;
+            getResultsRequest.FormatOptionsUseInt64Timestamp = true;
+            service.ExpectRequest(getResultsRequest, new GetQueryResultsResponse { JobComplete = true, Rows = new[] { new TableRow { F = new[] { new TableCell { V = "value" } } } }, Schema = new TableSchema { Fields = new[] { new TableFieldSchema { Name = "col", Type = "STRING" } } } });
+
+            var results = client.ExecuteQuery(sql, parameters: null, queryOptions: new QueryOptions { DestinationTable = dest, JobId = "testjob" });
+
+            // Verify the results from the standard (job-based) path. 
+            // The Absence of a QueryId and the successful retrieval of data confirms the stateless jobs.query RPC was not used.
+            Assert.Null(results.QueryId);
+            Assert.Equal("value", (string)results.Single()["col"]);
+        }
+
+        [Fact]
         public void CreateTable()
         {
             var projectId = "project";

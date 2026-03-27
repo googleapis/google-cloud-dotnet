@@ -238,4 +238,106 @@ public sealed class StatelessQueryOptions
         }
         RequestModifier?.Invoke(query);
     }
+
+    /// <summary>
+    /// Attempts to create a <see cref="StatelessQueryOptions"/> from a <see cref="QueryOptions"/> and <see cref="GetQueryResultsOptions"/>.
+    /// </summary>
+    /// <param name="queryOptions">The query options to convert. May be null.</param>
+    /// <param name="resultsOptions">The results options to convert. May be null.</param>
+    /// <param name="statelessOptions">The created stateless options, or null if the input options are not supported by the stateless endpoint.</param>
+    /// <returns>True if the options could be converted; otherwise, false.</returns>
+    internal static bool TryCreateStatelessOptions(QueryOptions queryOptions, GetQueryResultsOptions resultsOptions, out StatelessQueryOptions statelessOptions)
+    {
+        statelessOptions = null;
+
+        // Pagination via PageToken or StartIndex requires a pre-existing job resource to reference.
+        // Since the jobs.query RPC initiates a new query execution, these options are not supported in the stateless path.
+        if (resultsOptions != null && (resultsOptions.StartIndex != null || resultsOptions.PageToken != null))
+        {
+            return false;
+        }
+
+        // At this point we know that the resultsOptions is valid so if no queryOptions are provided we just apply the
+        // result options.
+        if (queryOptions == null)
+        {
+            statelessOptions = new StatelessQueryOptions();
+            ApplyResultsOptions(statelessOptions, resultsOptions);
+            return true;
+        }
+
+        // QueryOptions.ConfigurationModifier is an Action that operates on a JobConfiguration object.
+        // To capture its effects, we must generate a JobConfiguration and apply the options here,
+        // rather than checking QueryOptions properties directly.
+        var queryConfig = new JobConfigurationQuery();
+        queryOptions.ModifyRequest(queryConfig);
+        var jobConfig = new JobConfiguration { Query = queryConfig };
+        queryOptions.ModifyJobConfiguration(jobConfig);
+
+        // These properties are not supported by the stateless jobs.query RPC; if any are set, the query must use the standard job-based path.
+        if (queryConfig.DestinationTable != null
+            || queryConfig.CreateDisposition != null
+            || queryConfig.WriteDisposition != null
+            || queryConfig.Priority != null
+            || queryConfig.AllowLargeResults != null
+            || queryConfig.FlattenResults != null
+            || queryConfig.MaximumBillingTier != null
+            || queryConfig.TimePartitioning != null
+            || queryConfig.SchemaUpdateOptions != null
+            || queryConfig.Clustering != null
+            || queryConfig.RangePartitioning != null
+            || queryConfig.ScriptOptions != null
+            || queryConfig.TableDefinitions != null
+            || queryConfig.UserDefinedFunctionResources != null
+            || queryOptions.JobId != null
+            || queryOptions.JobIdPrefix != null)
+        {
+            return false;
+        }
+
+        // All validation checks passed; the query and its options are compatible with the stateless path from here on.
+        statelessOptions = new StatelessQueryOptions
+        {
+            ConnectionProperties = queryConfig.ConnectionProperties,
+            Continuous = queryConfig.Continuous,
+            CreateSession = queryConfig.CreateSession,
+            DefaultDataset = queryConfig.DefaultDataset,
+            DestinationEncryptionConfiguration = queryConfig.DestinationEncryptionConfiguration,
+            DryRun = jobConfig.DryRun,
+            Labels = jobConfig.Labels,
+            Location = queryOptions.JobLocation,
+            MaximumBytesBilled = queryConfig.MaximumBytesBilled,
+            UseLegacySql = queryConfig.UseLegacySql,
+            UseQueryCache = queryConfig.UseQueryCache,
+            WriteIncrementalResults = queryConfig.WriteIncrementalResults,
+            ParameterMode = queryOptions.ParameterMode,
+            JobCreationMode = queryOptions.JobCreationMode,
+        };
+
+        ApplyResultsOptions(statelessOptions, resultsOptions);
+        return true;
+
+        static void ApplyResultsOptions(StatelessQueryOptions statelessOptions, GetQueryResultsOptions resultsOptions)
+        {
+            if (resultsOptions == null)
+            {
+                return;
+            }
+            if (resultsOptions.Timeout != null)
+            {
+                statelessOptions.Timeout = resultsOptions.Timeout;
+            }
+            if (resultsOptions.PageSize != null)
+            {
+                statelessOptions.MaxResults = resultsOptions.PageSize;
+            }
+            if (resultsOptions.UseInt64Timestamp != null)
+            {
+                statelessOptions.FormatOptions = new DataFormatOptions
+                {
+                    UseInt64Timestamp = resultsOptions.UseInt64Timestamp
+                };
+            }
+        }
+    }
 }
