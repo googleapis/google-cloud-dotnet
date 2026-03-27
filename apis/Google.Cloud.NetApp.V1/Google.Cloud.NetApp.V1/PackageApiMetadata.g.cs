@@ -75,6 +75,7 @@ namespace Google.Cloud.NetApp.V1
             yield return CommonReflection.Descriptor;
             yield return HostGroupReflection.Descriptor;
             yield return KmsReflection.Descriptor;
+            yield return OntapReflection.Descriptor;
             yield return QuotaRuleReflection.Descriptor;
             yield return ReplicationReflection.Descriptor;
             yield return SnapshotReflection.Descriptor;

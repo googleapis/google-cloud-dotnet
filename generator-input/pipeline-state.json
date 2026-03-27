@@ -1642,7 +1642,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-05T16:58:58.215419506Z",
-            "lastGeneratedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
+            "lastGeneratedCommit": "1161dbcb1c390c7bc0a342d880c9cd7aa7410c8b",
             "lastReleasedCommit": "760ef85838a9f9decef98fcb91e2a73891ed8f7d",
             "apiPaths": [
                 "google/firestore/admin/v1"
@@ -2227,7 +2227,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-19T14:18:33.881503640Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "a90dc55a699b916cbff59aa8112e067f6bab5bd4",
             "lastReleasedCommit": "94aa4f5ae672addf00e7970ecc47699e34989e90",
             "apiPaths": [
                 "google/cloud/netapp/v1"
@@ -4299,7 +4299,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T09:34:10.743804675Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "29214fa04adfdf39cab5cfc0f08b27b23fcfae1a",
             "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/dataform/v1"
@@ -4755,7 +4755,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-09T14:23:13.797108523Z",
-            "lastGeneratedCommit": "63b4dff954327cc212c7473c78ceb07735219f55",
+            "lastGeneratedCommit": "d3ad5e34501ded440f4355899c1a3210cb1c14a2",
             "lastReleasedCommit": "63b4dff954327cc212c7473c78ceb07735219f55",
             "apiPaths": [
                 "google/ads/datamanager/v1"
@@ -4964,7 +4964,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "77291a3c21b89ebfab5a473a5cbf0eb6eec22a30",
+            "lastGeneratedCommit": "77c78e90aeeb1c4612e9ab772c90bc40748a7a19",
             "apiPaths": [
                 "google/maps/geocode/v4"
             ],

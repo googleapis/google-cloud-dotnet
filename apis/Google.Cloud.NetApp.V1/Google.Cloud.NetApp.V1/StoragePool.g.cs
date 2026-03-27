@@ -49,7 +49,7 @@ namespace Google.Cloud.NetApp.V1 {
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
             "YWdlUG9vbCJZCh5Td2l0Y2hBY3RpdmVSZXBsaWNhWm9uZVJlcXVlc3QSNwoE",
             "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
-            "cmFnZVBvb2wirg0KC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
+            "cmFnZVBvb2wi7Q0KC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
             "Cg1zZXJ2aWNlX2xldmVsGAIgASgOMiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZCgxjYXBhY2l0eV9naWIYAyABKANCA+BB",
             "AhIgChN2b2x1bWVfY2FwYWNpdHlfZ2liGAQgASgDQgPgQQMSGQoMdm9sdW1l",
@@ -78,27 +78,29 @@ namespace Google.Cloud.NetApp.V1 {
             "aWxhYmxlX3Rocm91Z2hwdXRfbWlicHMYHyABKAFCA+BBAxIkChdjb2xkX3Rp",
             "ZXJfc2l6ZV91c2VkX2dpYhghIAEoA0ID4EEDEiMKFmhvdF90aWVyX3NpemVf",
             "dXNlZF9naWIYIiABKANCA+BBAxI/CgR0eXBlGCMgASgOMicuZ29vZ2xlLmNs",
-            "b3VkLm5ldGFwcC52MS5TdG9yYWdlUG9vbFR5cGVCA+BBAUgCiAEBGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoF",
-            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVSRUFEWRABEgwKCENS",
-            "RUFUSU5HEAISDAoIREVMRVRJTkcQAxIMCghVUERBVElORxAEEg0KCVJFU1RP",
-            "UklORxAFEgwKCERJU0FCTEVEEAYSCQoFRVJST1IQBzqHAepBgwEKIW5ldGFw",
-            "cC5nb29nbGVhcGlzLmNvbS9TdG9yYWdlUG9vbBJDcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3N0b3JhZ2VQb29scy97c3RvcmFn",
-            "ZV9wb29sfSoMc3RvcmFnZVBvb2xzMgtzdG9yYWdlUG9vbEIYChZfZ2xvYmFs",
-            "X2FjY2Vzc19hbGxvd2VkQh4KHF9lbmFibGVfaG90X3RpZXJfYXV0b19yZXNp",
-            "emVCBwoFX3R5cGUiqAEKH1ZhbGlkYXRlRGlyZWN0b3J5U2VydmljZVJlcXVl",
-            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
-            "b20vU3RvcmFnZVBvb2wSTAoWZGlyZWN0b3J5X3NlcnZpY2VfdHlwZRgCIAEo",
-            "DjIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuRGlyZWN0b3J5U2VydmljZVR5",
-            "cGVCsgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQhBTdG9yYWdlUG9v",
-            "bFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25l",
-            "dGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdv",
-            "b2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6",
-            "OlYxYgZwcm90bzM="));
+            "b3VkLm5ldGFwcC52MS5TdG9yYWdlUG9vbFR5cGVCA+BBAUgCiAEBEjQKBG1v",
+            "ZGUYJCABKA4yHC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLk1vZGVCA+BBAUgD",
+            "iAEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEiewoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVSRUFE",
+            "WRABEgwKCENSRUFUSU5HEAISDAoIREVMRVRJTkcQAxIMCghVUERBVElORxAE",
+            "Eg0KCVJFU1RPUklORxAFEgwKCERJU0FCTEVEEAYSCQoFRVJST1IQBzqHAepB",
+            "gwEKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9yYWdlUG9vbBJDcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3N0b3JhZ2VQb29s",
+            "cy97c3RvcmFnZV9wb29sfSoMc3RvcmFnZVBvb2xzMgtzdG9yYWdlUG9vbEIY",
+            "ChZfZ2xvYmFsX2FjY2Vzc19hbGxvd2VkQh4KHF9lbmFibGVfaG90X3RpZXJf",
+            "YXV0b19yZXNpemVCBwoFX3R5cGVCBwoFX21vZGUiqAEKH1ZhbGlkYXRlRGly",
+            "ZWN0b3J5U2VydmljZVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
+            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wSTAoWZGlyZWN0b3J5",
+            "X3NlcnZpY2VfdHlwZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
+            "RGlyZWN0b3J5U2VydmljZVR5cGUqNAoETW9kZRIUChBNT0RFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHREVGQVVMVBABEgkKBU9OVEFQEAJCsgEKGmNvbS5nb29nbGUu",
+            "Y2xvdWQubmV0YXBwLnYxQhBTdG9yYWdlUG9vbFByb3RvUAFaMmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIW",
+            "R29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBc",
+            "VjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Mode), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetStoragePoolRequest), global::Google.Cloud.NetApp.V1.GetStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest), global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse), global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse.Parser, new[]{ "StoragePools", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -106,13 +108,35 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest), global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi", "CustomPerformanceEnabled", "TotalThroughputMibps", "TotalIops", "HotTierSizeGib", "EnableHotTierAutoResize", "QosType", "AvailableThroughputMibps", "ColdTierSizeUsedGib", "HotTierSizeUsedGib", "Type" }, new[]{ "GlobalAccessAllowed", "EnableHotTierAutoResize", "Type" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi", "CustomPerformanceEnabled", "TotalThroughputMibps", "TotalIops", "HotTierSizeGib", "EnableHotTierAutoResize", "QosType", "AvailableThroughputMibps", "ColdTierSizeUsedGib", "HotTierSizeUsedGib", "Type", "Mode" }, new[]{ "GlobalAccessAllowed", "EnableHotTierAutoResize", "Type", "Mode" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest), global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest.Parser, new[]{ "Name", "DirectoryServiceType" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// `Mode` of the storage pool or volume. This field is used to control whether
+  /// the resource is managed by the GCNV APIs or the GCNV ONTAP Mode APIs.
+  /// </summary>
+  public enum Mode {
+    /// <summary>
+    /// The `Mode` is not specified.
+    /// </summary>
+    [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The resource is managed by the GCNV APIs.
+    /// </summary>
+    [pbr::OriginalName("DEFAULT")] Default = 1,
+    /// <summary>
+    /// The resource is managed by the GCNV ONTAP Mode APIs.
+    /// </summary>
+    [pbr::OriginalName("ONTAP")] Ontap = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// GetStoragePoolRequest gets a Storage Pool.
@@ -1935,6 +1959,7 @@ namespace Google.Cloud.NetApp.V1 {
       coldTierSizeUsedGib_ = other.coldTierSizeUsedGib_;
       hotTierSizeUsedGib_ = other.hotTierSizeUsedGib_;
       type_ = other.type_;
+      mode_ = other.mode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2465,9 +2490,7 @@ namespace Google.Cloud.NetApp.V1 {
     /// <summary>
     /// Optional. Type of the storage pool. This field is used to control whether
     /// the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
-    /// `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
-    /// volumes with large capacity. If not specified during creation, it defaults
-    /// to `FILE`.
+    /// `BLOCK`) volumes. If not specified during creation, it defaults to `FILE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2489,6 +2512,39 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearType() {
       _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 36;
+    private readonly static global::Google.Cloud.NetApp.V1.Mode ModeDefaultValue = global::Google.Cloud.NetApp.V1.Mode.Unspecified;
+
+    private global::Google.Cloud.NetApp.V1.Mode mode_;
+    /// <summary>
+    /// Optional. Mode of the storage pool. This field is used to control whether
+    /// the user can perform the ONTAP operations on the storage pool using the
+    /// GCNV ONTAP Mode APIs. If not specified during creation, it defaults to
+    /// `DEFAULT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.Mode Mode {
+      get { if ((_hasBits0 & 8) != 0) { return mode_; } else { return ModeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        mode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMode {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMode() {
+      _hasBits0 &= ~8;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2538,6 +2594,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (ColdTierSizeUsedGib != other.ColdTierSizeUsedGib) return false;
       if (HotTierSizeUsedGib != other.HotTierSizeUsedGib) return false;
       if (Type != other.Type) return false;
+      if (Mode != other.Mode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2577,6 +2634,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (ColdTierSizeUsedGib != 0L) hash ^= ColdTierSizeUsedGib.GetHashCode();
       if (HotTierSizeUsedGib != 0L) hash ^= HotTierSizeUsedGib.GetHashCode();
       if (HasType) hash ^= Type.GetHashCode();
+      if (HasMode) hash ^= Mode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2720,6 +2778,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(152, 2);
         output.WriteEnum((int) Type);
       }
+      if (HasMode) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) Mode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2855,6 +2917,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(152, 2);
         output.WriteEnum((int) Type);
       }
+      if (HasMode) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) Mode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2958,6 +3024,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasType) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (HasMode) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3067,6 +3136,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasType) {
         Type = other.Type;
+      }
+      if (other.HasMode) {
+        Mode = other.Mode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3214,6 +3286,10 @@ namespace Google.Cloud.NetApp.V1 {
             Type = (global::Google.Cloud.NetApp.V1.StoragePoolType) input.ReadEnum();
             break;
           }
+          case 288: {
+            Mode = (global::Google.Cloud.NetApp.V1.Mode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -3358,6 +3434,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 280: {
             Type = (global::Google.Cloud.NetApp.V1.StoragePoolType) input.ReadEnum();
+            break;
+          }
+          case 288: {
+            Mode = (global::Google.Cloud.NetApp.V1.Mode) input.ReadEnum();
             break;
           }
         }

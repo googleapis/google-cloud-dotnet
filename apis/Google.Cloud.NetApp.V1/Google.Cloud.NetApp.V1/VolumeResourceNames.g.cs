@@ -369,6 +369,43 @@ namespace Google.Cloud.NetApp.V1
             get => string.IsNullOrEmpty(KmsConfig) ? null : KmsConfigName.Parse(KmsConfig, allowUnparsed: true);
             set => KmsConfig = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class CloneDetails
+            {
+                /// <summary>
+                /// <see cref="SnapshotName"/>-typed view over the <see cref="SourceSnapshot"/> resource name property.
+                /// </summary>
+                public SnapshotName SourceSnapshotAsSnapshotName
+                {
+                    get => string.IsNullOrEmpty(SourceSnapshot) ? null : SnapshotName.Parse(SourceSnapshot, allowUnparsed: true);
+                    set => SourceSnapshot = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="SourceVolume"/> resource name
+                /// property.
+                /// </summary>
+                public gcnv::VolumeName SourceVolumeAsVolumeName
+                {
+                    get => string.IsNullOrEmpty(SourceVolume) ? null : gcnv::VolumeName.Parse(SourceVolume, allowUnparsed: true);
+                    set => SourceVolume = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
+    public partial class RestoreParameters
+    {
+        /// <summary>
+        /// <see cref="BackupName"/>-typed view over the <see cref="SourceBackup"/> resource name property.
+        /// </summary>
+        public BackupName SourceBackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(SourceBackup) ? null : BackupName.Parse(SourceBackup, allowUnparsed: true);
+            set => SourceBackup = value?.ToString() ?? "";
+        }
     }
 
     public partial class BackupConfig
@@ -430,6 +467,18 @@ namespace Google.Cloud.NetApp.V1
         {
             get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
             set => Backup = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EstablishVolumePeeringRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

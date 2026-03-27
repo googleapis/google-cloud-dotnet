@@ -19,6 +19,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 
@@ -43,19 +44,24 @@ namespace Google.Cloud.Dataform.V1
                     proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
                 },
                 {
-                    "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "get": "/v1/{resource=projects/*/locations/*/repositories/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:getIamPolicy" } ] }
-                    proto::ByteString.FromBase64("EkEvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyp9OmdldElhbVBvbGljeVpQEk4vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyovd29ya3NwYWNlcy8qfTpnZXRJYW1Qb2xpY3k=")
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
                 },
                 {
-                    "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/v1/{resource=projects/*/locations/*/repositories/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:setIamPolicy", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkEvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyp9OnNldElhbVBvbGljeToBKlpTIk4vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyovd29ya3NwYWNlcy8qfTpzZXRJYW1Qb2xpY3k6ASo=")
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
-                    "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/v1/{resource=projects/*/locations/*/repositories/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:testIamPermissions", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpZIlQvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwb3NpdG9yaWVzLyovd29ya3NwYWNlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/{name=projects/*/locations/*}/operations" }
+                    proto::ByteString.FromBase64("EiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9ucw==")
                 },
             });
 
@@ -66,6 +72,7 @@ namespace Google.Cloud.Dataform.V1
             yield return gciv::OptionsReflection.Descriptor;
             yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

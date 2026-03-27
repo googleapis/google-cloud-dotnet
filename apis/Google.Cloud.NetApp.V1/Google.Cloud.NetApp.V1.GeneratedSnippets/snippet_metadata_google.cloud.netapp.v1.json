@@ -3126,6 +3126,103 @@
       ]
     },
     {
+      "regionTag": "netapp_v1_generated_NetApp_EstablishVolumePeering_sync",
+      "title": "EstablishVolumePeeringRequestObject",
+      "description": "Snippet for EstablishVolumePeering",
+      "file": "NetAppClient.EstablishVolumePeeringRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EstablishVolumePeering",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.EstablishVolumePeering",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "EstablishVolumePeering",
+          "fullName": "google.cloud.netapp.v1.NetApp.EstablishVolumePeering",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_EstablishVolumePeering_async",
+      "title": "EstablishVolumePeeringRequestObjectAsync",
+      "description": "Snippet for EstablishVolumePeeringAsync",
+      "file": "NetAppClient.EstablishVolumePeeringRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EstablishVolumePeeringAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.EstablishVolumePeeringAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "EstablishVolumePeering",
+          "fullName": "google.cloud.netapp.v1.NetApp.EstablishVolumePeering",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "netapp_v1_generated_NetApp_ListSnapshots_sync",
       "title": "ListSnapshotsRequestObject",
       "description": "Snippet for ListSnapshots",
@@ -16605,6 +16702,394 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapPost_sync",
+      "title": "ExecuteOntapPostRequestObject",
+      "description": "Snippet for ExecuteOntapPost",
+      "file": "NetAppClient.ExecuteOntapPostRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapPost",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapPost",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapPostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.ExecuteOntapPostResponse",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapPost",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapPost",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapPost_async",
+      "title": "ExecuteOntapPostRequestObjectAsync",
+      "description": "Snippet for ExecuteOntapPostAsync",
+      "file": "NetAppClient.ExecuteOntapPostRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapPostAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapPostAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapPostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.ExecuteOntapPostResponse>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapPost",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapPost",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapGet_sync",
+      "title": "ExecuteOntapGetRequestObject",
+      "description": "Snippet for ExecuteOntapGet",
+      "file": "NetAppClient.ExecuteOntapGetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapGet",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapGet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapGetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.ExecuteOntapGetResponse",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapGet",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapGet",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapGet_async",
+      "title": "ExecuteOntapGetRequestObjectAsync",
+      "description": "Snippet for ExecuteOntapGetAsync",
+      "file": "NetAppClient.ExecuteOntapGetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapGetAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapGetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapGetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.ExecuteOntapGetResponse>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapGet",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapGet",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapDelete_sync",
+      "title": "ExecuteOntapDeleteRequestObject",
+      "description": "Snippet for ExecuteOntapDelete",
+      "file": "NetAppClient.ExecuteOntapDeleteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapDelete",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapDelete",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapDelete",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapDelete",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapDelete_async",
+      "title": "ExecuteOntapDeleteRequestObjectAsync",
+      "description": "Snippet for ExecuteOntapDeleteAsync",
+      "file": "NetAppClient.ExecuteOntapDeleteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapDeleteAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapDeleteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapDelete",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapDelete",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapPatch_sync",
+      "title": "ExecuteOntapPatchRequestObject",
+      "description": "Snippet for ExecuteOntapPatch",
+      "file": "NetAppClient.ExecuteOntapPatchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapPatch",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapPatch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapPatch",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapPatch",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ExecuteOntapPatch_async",
+      "title": "ExecuteOntapPatchRequestObjectAsync",
+      "description": "Snippet for ExecuteOntapPatchAsync",
+      "file": "NetAppClient.ExecuteOntapPatchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteOntapPatchAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ExecuteOntapPatchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ExecuteOntapPatch",
+          "fullName": "google.cloud.netapp.v1.NetApp.ExecuteOntapPatch",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]

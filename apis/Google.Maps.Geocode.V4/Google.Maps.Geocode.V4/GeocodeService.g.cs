@@ -1816,10 +1816,8 @@ namespace Google.Maps.Geocode.V4 {
     public const int PlaceFieldNumber = 1;
     private string place_ = "";
     /// <summary>
-    /// The fully qualified place identifier for this result.
-    /// In the format of "//places.googleapis.com/places/{placeID}". See
-    /// https://developers.google.com/maps/documentation/places/web-service/place-id.
-    /// for more details.
+    /// This Place's resource name, in `places/{placeId}` format.  Can be used to
+    /// look up the Place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1834,7 +1832,7 @@ namespace Google.Maps.Geocode.V4 {
     public const int PlaceIdFieldNumber = 2;
     private string placeId_ = "";
     /// <summary>
-    /// The place ID for this result.
+    /// The unique identifier of a place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

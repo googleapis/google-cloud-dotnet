@@ -249,9 +249,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -271,9 +268,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -293,9 +287,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -315,9 +306,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -347,9 +335,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -379,9 +364,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -407,9 +389,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -439,9 +418,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -471,9 +447,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of partner links.
@@ -499,9 +472,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -521,9 +491,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -543,9 +510,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -565,9 +529,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -594,9 +555,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -623,9 +581,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -649,9 +604,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -678,9 +630,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -707,9 +656,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the partner link to delete.
@@ -733,9 +679,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -755,9 +698,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -777,9 +717,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. Account to search for partner links. If no `filter` is specified,
@@ -827,9 +764,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. Account to search for partner links. If no `filter` is specified,
@@ -877,9 +811,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. Account to search for partner links. If no `filter` is specified,
@@ -927,9 +858,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="parent">
         /// Required. Account to search for partner links. If no `filter` is specified,
@@ -1036,9 +964,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1061,9 +986,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1086,9 +1008,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1111,9 +1030,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1136,9 +1052,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1161,9 +1074,6 @@ namespace Google.Ads.DataManager.V1
         /// Google Account of the credentials is a user. If not set, defaults to the
         /// account of the request. Format:
         /// `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
-        /// * `linked-account`: (Optional) The resource name of the account with an
-        /// established product link to the `login-account`. Format:
-        /// `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

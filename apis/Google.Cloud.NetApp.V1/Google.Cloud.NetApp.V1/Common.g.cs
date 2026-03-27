@@ -40,19 +40,18 @@ namespace Google.Cloud.NetApp.V1 {
             "aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABITCg9T",
             "RVJWSUNFX01BTkFHRUQQARINCglDTE9VRF9LTVMQAipUChREaXJlY3RvcnlT",
             "ZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklDRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKmcKD1N0b3JhZ2VQb29sVHlw",
+            "SUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKksKD1N0b3JhZ2VQb29sVHlw",
             "ZRIhCh1TVE9SQUdFX1BPT0xfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZJTEUQ",
-            "ARILCgdVTklGSUVEEAISGgoWVU5JRklFRF9MQVJHRV9DQVBBQ0lUWRADKnUK",
-            "GUh5YnJpZFJlcGxpY2F0aW9uU2NoZWR1bGUSKwonSFlCUklEX1JFUExJQ0FU",
-            "SU9OX1NDSEVEVUxFX1VOU1BFQ0lGSUVEEAASFAoQRVZFUllfMTBfTUlOVVRF",
-            "UxABEgoKBkhPVVJMWRACEgkKBURBSUxZEAMqOQoHUW9zVHlwZRIYChRRT1Nf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIKCgZNQU5VQUwQAipDCgZP",
-            "c1R5cGUSFwoTT1NfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUxJTlVYEAESCwoH",
-            "V0lORE9XUxACEggKBEVTWEkQA0KtAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjFCC0NvbW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0",
-            "YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5l",
-            "dEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNs",
-            "b3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "ARILCgdVTklGSUVEEAIqdQoZSHlicmlkUmVwbGljYXRpb25TY2hlZHVsZRIr",
+            "CidIWUJSSURfUkVQTElDQVRJT05fU0NIRURVTEVfVU5TUEVDSUZJRUQQABIU",
+            "ChBFVkVSWV8xMF9NSU5VVEVTEAESCgoGSE9VUkxZEAISCQoFREFJTFkQAyo5",
+            "CgdRb3NUeXBlEhgKFFFPU19UWVBFX1VOU1BFQ0lGSUVEEAASCAoEQVVUTxAB",
+            "EgoKBk1BTlVBTBACKkMKBk9zVHlwZRIXChNPU19UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCQoFTElOVVgQARILCgdXSU5ET1dTEAISCAoERVNYSRADQq0BChpjb20u",
+            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MUILQ29tbW9uUHJvdG9QAVoyY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKq",
+            "AhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFw",
+            "cFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.StoragePoolType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), typeof(global::Google.Cloud.NetApp.V1.OsType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,10 +155,6 @@ namespace Google.Cloud.NetApp.V1 {
     /// Storage pool type is unified.
     /// </summary>
     [pbr::OriginalName("UNIFIED")] Unified = 2,
-    /// <summary>
-    /// Storage pool type is unified large capacity.
-    /// </summary>
-    [pbr::OriginalName("UNIFIED_LARGE_CAPACITY")] UnifiedLargeCapacity = 3,
   }
 
   /// <summary>

@@ -237,6 +237,7 @@ namespace Google.Cloud.NetApp.V1 {
     private string sourceVolume_ = "";
     /// <summary>
     /// Volume full name of this backup belongs to.
+    /// Either source_volume or ontap_source should be provided.
     /// Format:
     /// `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
     /// </summary>
