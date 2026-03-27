@@ -4964,7 +4964,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "77291a3c21b89ebfab5a473a5cbf0eb6eec22a30",
+            "lastGeneratedCommit": "77c78e90aeeb1c4612e9ab772c90bc40748a7a19",
             "apiPaths": [
                 "google/maps/geocode/v4"
             ],
