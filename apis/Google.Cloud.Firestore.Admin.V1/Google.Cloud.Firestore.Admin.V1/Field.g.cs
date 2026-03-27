@@ -27,30 +27,32 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2ZpZWxkLnByb3RvEhlnb29n",
             "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiVnb29nbGUv",
-            "ZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvIsUECgVGaWVsZBIRCgRu",
-            "YW1lGAEgASgJQgPgQQISQgoMaW5kZXhfY29uZmlnGAIgASgLMiwuZ29vZ2xl",
-            "LmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZC5JbmRleENvbmZpZxI+Cgp0dGxf",
-            "Y29uZmlnGAMgASgLMiouZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVs",
-            "ZC5UdGxDb25maWcaiQEKC0luZGV4Q29uZmlnEjEKB2luZGV4ZXMYASADKAsy",
-            "IC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4EhwKFHVzZXNfYW5j",
-            "ZXN0b3JfY29uZmlnGAIgASgIEhYKDmFuY2VzdG9yX2ZpZWxkGAMgASgJEhEK",
-            "CXJldmVydGluZxgEIAEoCBqdAQoJVHRsQ29uZmlnEkQKBXN0YXRlGAEgASgO",
-            "MjAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZC5UdGxDb25maWcu",
-            "U3RhdGVCA+BBAyJKCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
-            "CENSRUFUSU5HEAESCgoGQUNUSVZFEAISEAoMTkVFRFNfUkVQQUlSEAM6eepB",
-            "dgoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0ZpZWxkElRwcm9qZWN0cy97",
-            "cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vw",
-            "cy97Y29sbGVjdGlvbn0vZmllbGRzL3tmaWVsZH1C2QEKHWNvbS5nb29nbGUu",
-            "ZmlyZXN0b3JlLmFkbWluLnYxQgpGaWVsZFByb3RvUAFaOWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FkbWlucGI7YWRtaW5w",
-            "YqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIf",
-            "R29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xv",
-            "dWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
+            "ZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvZHVyYXRpb24ucHJvdG8igAUKBUZpZWxkEhEKBG5hbWUYASABKAlCA+BB",
+            "AhJCCgxpbmRleF9jb25maWcYAiABKAsyLC5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLkZpZWxkLkluZGV4Q29uZmlnEj4KCnR0bF9jb25maWcYAyABKAsy",
+            "Ki5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkLlR0bENvbmZpZxqJ",
+            "AQoLSW5kZXhDb25maWcSMQoHaW5kZXhlcxgBIAMoCzIgLmdvb2dsZS5maXJl",
+            "c3RvcmUuYWRtaW4udjEuSW5kZXgSHAoUdXNlc19hbmNlc3Rvcl9jb25maWcY",
+            "AiABKAgSFgoOYW5jZXN0b3JfZmllbGQYAyABKAkSEQoJcmV2ZXJ0aW5nGAQg",
+            "ASgIGtgBCglUdGxDb25maWcSRAoFc3RhdGUYASABKA4yMC5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLkZpZWxkLlR0bENvbmZpZy5TdGF0ZUID4EEDEjkK",
+            "EWV4cGlyYXRpb25fb2Zmc2V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uQgPgQQEiSgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIM",
+            "CghDUkVBVElORxABEgoKBkFDVElWRRACEhAKDE5FRURTX1JFUEFJUhADOnnq",
+            "QXYKHmZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9GaWVsZBJUcHJvamVjdHMv",
+            "e3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L2NvbGxlY3Rpb25Hcm91",
+            "cHMve2NvbGxlY3Rpb259L2ZpZWxkcy97ZmllbGR9QtkBCh1jb20uZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MUIKRmllbGRQcm90b1ABWjljbG91ZC5nb29n",
+            "bGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlu",
+            "cGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoC",
+            "H0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNs",
+            "b3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig", "TtlConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Parser, new[]{ "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Parser, new[]{ "State", "ExpirationOffset" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) }, null, null)})
           }));
     }
     #endregion
@@ -703,12 +705,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// The TTL (time-to-live) configuration for documents that have this `Field`
       /// set.
       ///
-      /// Storing a timestamp value into a TTL-enabled field will be treated as
-      /// the document's absolute expiration time. For Enterprise edition databases,
-      /// the timestamp value may also be stored in an array value in the
-      /// TTL-enabled field.
+      /// A timestamp stored in a TTL-enabled field will be used to determine the
+      /// expiration time of the document. The expiration time is the sum
+      /// of the timestamp value and the `expiration_offset`.
       ///
-      /// Timestamp values in the past indicate that the document is eligible for
+      /// For Enterprise edition databases, the timestamp value may alternatively be
+      /// stored in an array value in the TTL-enabled field.
+      ///
+      /// An expiration time in the past indicates that the document is eligible for
       /// immediate expiration. Using any other data type or leaving the field absent
       /// will disable expiration for the individual document.
       /// </summary>
@@ -748,6 +752,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TtlConfig(TtlConfig other) : this() {
           state_ = other.state_;
+          expirationOffset_ = other.expirationOffset_ != null ? other.expirationOffset_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -772,6 +777,28 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
         }
 
+        /// <summary>Field number for the "expiration_offset" field.</summary>
+        public const int ExpirationOffsetFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Duration expirationOffset_;
+        /// <summary>
+        /// Optional. The offset, relative to the timestamp value from the
+        /// TTL-enabled field, used to determine the document's expiration time.
+        ///
+        /// `expiration_offset.seconds` must be between 0 and 2,147,483,647
+        /// inclusive. Values more precise than seconds are rejected.
+        ///
+        /// If unset, defaults to 0, in which case the expiration time is the same
+        /// as the timestamp value from the TTL-enabled field.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration ExpirationOffset {
+          get { return expirationOffset_; }
+          set {
+            expirationOffset_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -788,6 +815,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             return true;
           }
           if (State != other.State) return false;
+          if (!object.Equals(ExpirationOffset, other.ExpirationOffset)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -796,6 +824,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) hash ^= State.GetHashCode();
+          if (expirationOffset_ != null) hash ^= ExpirationOffset.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -818,6 +847,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) State);
           }
+          if (expirationOffset_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ExpirationOffset);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -832,6 +865,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) State);
           }
+          if (expirationOffset_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ExpirationOffset);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -844,6 +881,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           int size = 0;
           if (State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (expirationOffset_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpirationOffset);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -859,6 +899,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           if (other.State != global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State.Unspecified) {
             State = other.State;
+          }
+          if (other.expirationOffset_ != null) {
+            if (expirationOffset_ == null) {
+              ExpirationOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            ExpirationOffset.MergeFrom(other.ExpirationOffset);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -879,6 +925,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 State = (global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) input.ReadEnum();
                 break;
               }
+              case 26: {
+                if (expirationOffset_ == null) {
+                  ExpirationOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(ExpirationOffset);
+                break;
+              }
             }
           }
         #endif
@@ -896,6 +949,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 break;
               case 8: {
                 State = (global::Google.Cloud.Firestore.Admin.V1.Field.Types.TtlConfig.Types.State) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (expirationOffset_ == null) {
+                  ExpirationOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(ExpirationOffset);
                 break;
               }
             }
