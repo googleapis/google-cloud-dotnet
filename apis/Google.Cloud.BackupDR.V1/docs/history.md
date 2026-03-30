@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2026-03-30
+
+### New features
+
+- Adding new workload specific fields for AlloyDB
+
 ## Version 2.8.0, released 2026-01-29
 
 ### New features
