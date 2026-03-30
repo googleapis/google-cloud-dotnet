@@ -1413,12 +1413,12 @@
         },
         {
             "id": "Google.Cloud.Dialogflow.V2Beta1",
-            "currentVersion": "1.0.0-beta28",
+            "currentVersion": "1.0.0-beta29",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-02-02T14:12:40.658558009Z",
+            "releaseTimestamp": "2026-03-30T14:15:17.672322596Z",
             "lastGeneratedCommit": "f2cee572a7353ba94d0be161b15416ed5a37db56",
-            "lastReleasedCommit": "fa4dc54cf123a351f3215b384a7dc7c9f36005b7",
+            "lastReleasedCommit": "f2cee572a7353ba94d0be161b15416ed5a37db56",
             "apiPaths": [
                 "google/cloud/dialogflow/v2beta1"
             ],
