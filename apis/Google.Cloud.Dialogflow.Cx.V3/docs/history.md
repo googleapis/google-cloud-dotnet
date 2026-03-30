@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2026-03-30
+
+### New features
+
+- Updated v3 dialogflow client libraries with `dtmf_pattern` and `trace_blocks`
+
 ## Version 3.0.0, released 2026-01-21
 
 ### New features
