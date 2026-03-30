@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.18.0, released 2026-03-30
+
+### New features
+
+- Add `expiration_offset` to `Field`
+
+### Documentation improvements
+
+- Update documentation for `Field`
+
 ## Version 3.17.0, released 2026-02-05
 
 ### New features
