@@ -3183,10 +3183,10 @@
         },
         {
             "id": "Google.Cloud.Storage.V1",
-            "currentVersion": "4.14.0",
+            "currentVersion": "4.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-26T17:33:19.410183573Z",
+            "releaseTimestamp": "2026-03-30T14:21:45.902384995Z",
             "lastGeneratedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "lastReleasedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "sourcePaths": [
@@ -4295,12 +4295,12 @@
         },
         {
             "id": "Google.Cloud.Dataform.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T09:34:10.743804675Z",
+            "releaseTimestamp": "2026-03-30T14:49:43.931392242Z",
             "lastGeneratedCommit": "29214fa04adfdf39cab5cfc0f08b27b23fcfae1a",
-            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "29214fa04adfdf39cab5cfc0f08b27b23fcfae1a",
             "apiPaths": [
                 "google/cloud/dataform/v1"
             ],
