@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.32.0, released 2026-03-30
+
+### New features
+
+- Add locations field to AutomatedBackupPolicy
+
+### Documentation improvements
+
+- A comment for field `retention_period` in message `.google.bigtable.admin.v2.Table` is changed
+- A comment for field `frequency` in message `.google.bigtable.admin.v2.Table` is changed
+
 ## Version 3.31.0, released 2026-02-02
 
 ### New features
