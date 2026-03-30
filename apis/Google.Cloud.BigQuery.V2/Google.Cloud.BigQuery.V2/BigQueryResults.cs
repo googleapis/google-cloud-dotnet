@@ -30,18 +30,25 @@ namespace Google.Cloud.BigQuery.V2
     {
         private readonly BigQueryClient _client;
         private readonly GetQueryResultsOptions _options;
-        private readonly GetQueryResultsResponse _response;
         private readonly Dictionary<string, int> _fieldNames;
+        private readonly string _pageToken;
+        private readonly IList<TableRow> _rows;
+        private readonly IList<ErrorProto> _errors;
 
         /// <summary>
         /// The reference to the query job.
         /// </summary>
-        public JobReference JobReference => _response.JobReference;
+        public JobReference JobReference { get; }
+
+        /// <summary>
+        /// The query ID if executed as a stateless query or <c>null</c> otherwise.
+        /// </summary>
+        public string QueryId { get; }
 
         /// <summary>
         /// The schema of the query.
         /// </summary>
-        public TableSchema Schema => _response.Schema;
+        public TableSchema Schema { get; }
 
         /// <summary>
         /// The reference to the table containing the query results.
@@ -52,22 +59,22 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The total number of rows in the results, or <c>null</c> if the query results do not provide a row count.
         /// </summary>
-        public ulong? TotalRows => _response.TotalRows;
+        public ulong? TotalRows { get; }
 
         /// <summary>
         /// The total number of rows affected by a DML statement, or <c>null</c> for non-DML results.
         /// </summary>
-        public long? NumDmlAffectedRows => _response.NumDmlAffectedRows;
+        public long? NumDmlAffectedRows { get; }
 
         /// <summary>
         /// Whether the query result was fetched from the query cache.
         /// </summary>
-        public bool CacheHit => _response.CacheHit ?? false;
+        public bool CacheHit { get; }
 
         /// <summary>
         /// The rows in the response, or an empty sequence if the response contains no rows.
         /// </summary>
-        private IEnumerable<BigQueryRow> ResponseRows => ConvertResponseRows(_response);
+        private IEnumerable<BigQueryRow> ResponseRows => ConvertResponseRows(_rows);
 
         /// <summary>
         /// Returns an asynchronous sequence of rows from this set of results.
@@ -98,12 +105,48 @@ namespace Google.Cloud.BigQuery.V2
         /// May be null. (For example, script queries don't store results in tables.)</param>
         /// <param name="options">Options to use when fetching results. May be null.</param>
         public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, GetQueryResultsOptions options)
+            : this(client, options, tableReference,
+                  GaxPreconditions.CheckNotNull(response, nameof(response)).JobReference,
+                  null, response.Schema, response.TotalRows, response.NumDmlAffectedRows,
+                  response.CacheHit, response.PageToken, response.Rows, response.Errors)
+        {
+        }
+
+        internal BigQueryResults(BigQueryClient client, QueryResponse response, TableReference tableReference, GetQueryResultsOptions options)
+            : this(client, options, tableReference,
+                  GaxPreconditions.CheckNotNull(response, nameof(response)).JobReference,
+                  response.QueryId, response.Schema, response.TotalRows, response.NumDmlAffectedRows,
+                  response.CacheHit, response.PageToken, response.Rows, response.Errors)
+        {
+        }
+
+        private BigQueryResults(
+            BigQueryClient client,
+            GetQueryResultsOptions options,
+            TableReference tableReference,
+            JobReference jobReference,
+            string queryId,
+            TableSchema schema,
+            ulong? totalRows,
+            long? numDmlAffectedRows,
+            bool? cacheHit,
+            string pageToken,
+            IList<TableRow> rows,
+            IList<ErrorProto> errors)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
-            _response = GaxPreconditions.CheckNotNull(response, nameof(response));
-            TableReference = tableReference;
             _options = options;
-            _fieldNames = response.Schema?.IndexFieldNames();
+            TableReference = tableReference;
+            JobReference = jobReference;
+            QueryId = queryId;
+            Schema = schema;
+            TotalRows = totalRows;
+            NumDmlAffectedRows = numDmlAffectedRows;
+            CacheHit = cacheHit ?? false;
+            _pageToken = pageToken;
+            _rows = rows;
+            _errors = errors;
+            _fieldNames = schema?.IndexFieldNames();
         }
 
         /// <summary>
@@ -118,11 +161,11 @@ namespace Google.Cloud.BigQuery.V2
             }
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             clonedOptions.StartIndex = null;
-            clonedOptions.PageToken = _response.PageToken;
+            clonedOptions.PageToken = _pageToken;
             while (clonedOptions.PageToken != null)
             {
                 var response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
-                foreach (var row in ConvertResponseRows(response))
+                foreach (var row in ConvertResponseRows(response.Rows))
                 {
                     yield return row;
                 }
@@ -144,16 +187,18 @@ namespace Google.Cloud.BigQuery.V2
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
 
             // Work out whether to use the response we've already got, or create a new one.
-            GetQueryResultsResponse response = _response;
-            if (response.Rows?.Count > pageSize)
+            IList<TableRow> initialRows = _rows;
+            string pageToken = _pageToken;
+            if (initialRows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
-                response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                var response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                initialRows = response.Rows;
+                pageToken = response.PageToken;
             }
             // First add the rows from the existing response.
-            rows.AddRange(ConvertResponseRows(response));
-            string pageToken = response.PageToken;
+            rows.AddRange(ConvertResponseRows(initialRows));
             clonedOptions.StartIndex = null;
 
             // Now keep going until we've filled the result set or know there's no more data.
@@ -162,7 +207,7 @@ namespace Google.Cloud.BigQuery.V2
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = pageSize - rows.Count;
                 var nextResponse = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
-                rows.AddRange(ConvertResponseRows(nextResponse));
+                rows.AddRange(ConvertResponseRows(nextResponse.Rows));
                 pageToken = nextResponse.PageToken;
             }
             return new BigQueryPage(rows, Schema, JobReference, TableReference, pageToken);
@@ -184,16 +229,18 @@ namespace Google.Cloud.BigQuery.V2
             List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
 
             // Work out whether to use the response we've already got, or create a new one.
-            GetQueryResultsResponse response = _response;
-            if (response.Rows?.Count > pageSize)
+            IList<TableRow> initialRows = _rows;
+            string pageToken = _pageToken;
+            if (initialRows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = pageSize;
-                response = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                var response = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                initialRows = response.Rows;
+                pageToken = response.PageToken;
             }
             // First add the rows from the existing response.
-            rows.AddRange(ConvertResponseRows(response));
-            string pageToken = response.PageToken;
+            rows.AddRange(ConvertResponseRows(initialRows));
             clonedOptions.StartIndex = null;
 
             // Now keep going until we've filled the result set or know there's no more data.
@@ -202,7 +249,7 @@ namespace Google.Cloud.BigQuery.V2
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = pageSize - rows.Count;
                 var nextResponse = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
-                rows.AddRange(ConvertResponseRows(nextResponse));
+                rows.AddRange(ConvertResponseRows(nextResponse.Rows));
                 pageToken = nextResponse.PageToken;
             }
             return new BigQueryPage(rows, Schema, JobReference, TableReference, pageToken);
@@ -218,21 +265,20 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns><c>this</c> if the job has no errors.</returns>
         public BigQueryResults ThrowOnAnyError()
         {
-            var errors = _response.Errors;
-            if (errors?.Count > 0)
+            if (_errors?.Count > 0)
             {
                 throw new GoogleApiException(_client.Service.Name)
                 {
                     Error = new RequestError
                     {
-                        Errors = errors.Select(error => new SingleError
+                        Errors = _errors.Select(error => new SingleError
                         {
                             Location = error.Location,
                             Reason = error.Reason,
                             Message = error.Message
                         }).ToList(),
-                        Message = $"Job {JobReference.ProjectId}/{JobReference.Location}/{JobReference.JobId} contained {errors.Count} error(s). " +
-                            $"First error message: {errors.First().Message}"
+                        Message = $"Job {JobReference.ProjectId}/{JobReference.Location}/{JobReference.JobId} contained {_errors.Count} error(s). " +
+                            $"First error message: {_errors.First().Message}"
                     }
                 };
             }
@@ -262,7 +308,7 @@ namespace Google.Cloud.BigQuery.V2
                 _cancellationToken = cancellationToken;
                 _options = parent._options?.Clone() ?? new GetQueryResultsOptions();
                 _options.StartIndex = null;
-                _options.PageToken = parent._response.PageToken;
+                _options.PageToken = parent._pageToken;
                 _underlyingEnumerator = parent.ResponseRows.GetEnumerator();
             }
 
@@ -281,7 +327,7 @@ namespace Google.Cloud.BigQuery.V2
                     var nextResponse = await _parent._client.GetRawQueryResultsAsync(_parent.JobReference, _options, timeoutBase: null, _cancellationToken).ConfigureAwait(false);
                     // Set the page token for the next time we need to fetch
                     _options.PageToken = nextResponse.PageToken;
-                    _underlyingEnumerator = _parent.ConvertResponseRows(nextResponse).GetEnumerator();
+                    _underlyingEnumerator = _parent.ConvertResponseRows(nextResponse.Rows).GetEnumerator();
                 }
                 return true;
             }
@@ -289,7 +335,7 @@ namespace Google.Cloud.BigQuery.V2
             public ValueTask DisposeAsync() => default;
         }
 
-        private IEnumerable<BigQueryRow> ConvertResponseRows(GetQueryResultsResponse response) =>
-            (response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true));
+        private IEnumerable<BigQueryRow> ConvertResponseRows(IList<TableRow> rows) =>
+            (rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames, _options?.UseInt64Timestamp ?? true));
     }
 }
