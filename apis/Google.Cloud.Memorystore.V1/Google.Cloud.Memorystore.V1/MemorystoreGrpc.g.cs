@@ -3,7 +3,7 @@
 //     source: google/cloud/memorystore/v1/memorystore.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -84,6 +84,10 @@ namespace Google.Cloud.Memorystore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.CertificateAuthority> __Marshaller_google_cloud_memorystore_v1_CertificateAuthority = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.CertificateAuthority.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest> __Marshaller_google_cloud_memorystore_v1_GetSharedRegionalCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority> __Marshaller_google_cloud_memorystore_v1_SharedRegionalCertificateAuthority = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest> __Marshaller_google_cloud_memorystore_v1_RescheduleMaintenanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListBackupCollectionsRequest> __Marshaller_google_cloud_memorystore_v1_ListBackupCollectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListBackupCollectionsRequest.Parser));
@@ -155,6 +159,14 @@ namespace Google.Cloud.Memorystore.V1 {
         "GetCertificateAuthority",
         __Marshaller_google_cloud_memorystore_v1_GetCertificateAuthorityRequest,
         __Marshaller_google_cloud_memorystore_v1_CertificateAuthority);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority> __Method_GetSharedRegionalCertificateAuthority = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSharedRegionalCertificateAuthority",
+        __Marshaller_google_cloud_memorystore_v1_GetSharedRegionalCertificateAuthorityRequest,
+        __Marshaller_google_cloud_memorystore_v1_SharedRegionalCertificateAuthority);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation> __Method_RescheduleMaintenance = new grpc::Method<global::Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(
@@ -298,6 +310,19 @@ namespace Google.Cloud.Memorystore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.CertificateAuthority> GetCertificateAuthority(global::Google.Cloud.Memorystore.V1.GetCertificateAuthorityRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of shared regional certificate authority information for
+      /// Memorystore instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthority(global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -729,6 +754,58 @@ namespace Google.Cloud.Memorystore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.CertificateAuthority> GetCertificateAuthorityAsync(global::Google.Cloud.Memorystore.V1.GetCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCertificateAuthority, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of shared regional certificate authority information for
+      /// Memorystore instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSharedRegionalCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of shared regional certificate authority information for
+      /// Memorystore instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSharedRegionalCertificateAuthority, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of shared regional certificate authority information for
+      /// Memorystore instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSharedRegionalCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of shared regional certificate authority information for
+      /// Memorystore instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSharedRegionalCertificateAuthority, null, options, request);
       }
       /// <summary>
       /// Reschedules upcoming maintenance event.
@@ -1194,6 +1271,7 @@ namespace Google.Cloud.Memorystore.V1 {
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_GetCertificateAuthority, serviceImpl.GetCertificateAuthority)
+          .AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl.GetSharedRegionalCertificateAuthority)
           .AddMethod(__Method_RescheduleMaintenance, serviceImpl.RescheduleMaintenance)
           .AddMethod(__Method_ListBackupCollections, serviceImpl.ListBackupCollections)
           .AddMethod(__Method_GetBackupCollection, serviceImpl.GetBackupCollection)
@@ -1217,6 +1295,7 @@ namespace Google.Cloud.Memorystore.V1 {
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_GetCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.CertificateAuthority>(serviceImpl.GetCertificateAuthority));
+      serviceBinder.AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority>(serviceImpl.GetSharedRegionalCertificateAuthority));
       serviceBinder.AddMethod(__Method_RescheduleMaintenance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RescheduleMaintenance));
       serviceBinder.AddMethod(__Method_ListBackupCollections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListBackupCollectionsRequest, global::Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse>(serviceImpl.ListBackupCollections));
       serviceBinder.AddMethod(__Method_GetBackupCollection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetBackupCollectionRequest, global::Google.Cloud.Memorystore.V1.BackupCollection>(serviceImpl.GetBackupCollection));
