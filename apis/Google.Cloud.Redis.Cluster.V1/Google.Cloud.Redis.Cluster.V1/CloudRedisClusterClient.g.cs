@@ -58,6 +58,7 @@ namespace Google.Cloud.Redis.Cluster.V1
             CreateClusterSettings = existing.CreateClusterSettings;
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings.Clone();
             GetClusterCertificateAuthoritySettings = existing.GetClusterCertificateAuthoritySettings;
+            GetSharedRegionalCertificateAuthoritySettings = existing.GetSharedRegionalCertificateAuthoritySettings;
             RescheduleClusterMaintenanceSettings = existing.RescheduleClusterMaintenanceSettings;
             RescheduleClusterMaintenanceOperationsSettings = existing.RescheduleClusterMaintenanceOperationsSettings.Clone();
             ListBackupCollectionsSettings = existing.ListBackupCollectionsSettings;
@@ -202,6 +203,19 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetClusterCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.GetSharedRegionalCertificateAuthority</c> and
+        /// <c>CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSharedRegionalCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1567,6 +1581,132 @@ namespace Google.Cloud.Redis.Cluster.V1
             GetClusterCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthority(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthorityAsync(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(SharedRegionalCertificateAuthorityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthority(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthorityAsync(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName name, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Reschedules upcoming maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2805,6 +2945,8 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         private readonly gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> _callGetClusterCertificateAuthority;
 
+        private readonly gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> _callGetSharedRegionalCertificateAuthority;
+
         private readonly gaxgrpc::ApiCall<RescheduleClusterMaintenanceRequest, lro::Operation> _callRescheduleClusterMaintenance;
 
         private readonly gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> _callListBackupCollections;
@@ -2862,6 +3004,9 @@ namespace Google.Cloud.Redis.Cluster.V1
             _callGetClusterCertificateAuthority = clientHelper.BuildApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority>("GetClusterCertificateAuthority", grpcClient.GetClusterCertificateAuthorityAsync, grpcClient.GetClusterCertificateAuthority, effectiveSettings.GetClusterCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetClusterCertificateAuthority);
             Modify_GetClusterCertificateAuthorityApiCall(ref _callGetClusterCertificateAuthority);
+            _callGetSharedRegionalCertificateAuthority = clientHelper.BuildApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority>("GetSharedRegionalCertificateAuthority", grpcClient.GetSharedRegionalCertificateAuthorityAsync, grpcClient.GetSharedRegionalCertificateAuthority, effectiveSettings.GetSharedRegionalCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSharedRegionalCertificateAuthority);
+            Modify_GetSharedRegionalCertificateAuthorityApiCall(ref _callGetSharedRegionalCertificateAuthority);
             _callRescheduleClusterMaintenance = clientHelper.BuildApiCall<RescheduleClusterMaintenanceRequest, lro::Operation>("RescheduleClusterMaintenance", grpcClient.RescheduleClusterMaintenanceAsync, grpcClient.RescheduleClusterMaintenance, effectiveSettings.RescheduleClusterMaintenanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRescheduleClusterMaintenance);
             Modify_RescheduleClusterMaintenanceApiCall(ref _callRescheduleClusterMaintenance);
@@ -2903,6 +3048,8 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         partial void Modify_GetClusterCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> call);
 
+        partial void Modify_GetSharedRegionalCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> call);
+
         partial void Modify_RescheduleClusterMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleClusterMaintenanceRequest, lro::Operation> call);
 
         partial void Modify_ListBackupCollectionsApiCall(ref gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> call);
@@ -2938,6 +3085,8 @@ namespace Google.Cloud.Redis.Cluster.V1
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetClusterCertificateAuthorityRequest(ref GetClusterCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSharedRegionalCertificateAuthorityRequest(ref GetSharedRegionalCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RescheduleClusterMaintenanceRequest(ref RescheduleClusterMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3146,6 +3295,32 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             Modify_GetClusterCertificateAuthorityRequest(ref request, ref callSettings);
             return _callGetClusterCertificateAuthority.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSharedRegionalCertificateAuthorityRequest(ref request, ref callSettings);
+            return _callGetSharedRegionalCertificateAuthority.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of regional certificate authority information for Redis
+        /// cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSharedRegionalCertificateAuthorityRequest(ref request, ref callSettings);
+            return _callGetSharedRegionalCertificateAuthority.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>RescheduleClusterMaintenance</c>.</summary>
