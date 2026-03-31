@@ -122,8 +122,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>MessagesV1Beta3 client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The Dataflow Messages API is used for monitoring the progress of
-    /// Dataflow jobs.
+    /// The Dataflow Messages API is used to monitor the progress of Dataflow jobs.
     /// </remarks>
     public abstract partial class MessagesV1Beta3Client
     {
@@ -240,8 +239,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>MessagesV1Beta3 client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The Dataflow Messages API is used for monitoring the progress of
-    /// Dataflow jobs.
+    /// The Dataflow Messages API is used to monitor the progress of Dataflow jobs.
     /// </remarks>
     public sealed partial class MessagesV1Beta3ClientImpl : MessagesV1Beta3Client
     {

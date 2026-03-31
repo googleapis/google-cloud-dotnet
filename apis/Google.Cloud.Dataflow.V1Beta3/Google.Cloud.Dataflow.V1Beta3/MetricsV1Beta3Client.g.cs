@@ -150,8 +150,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>MetricsV1Beta3 client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The Dataflow Metrics API lets you monitor the progress of Dataflow
-    /// jobs.
+    /// The Dataflow Metrics API lets you monitor the progress of Dataflow jobs.
     /// </remarks>
     public abstract partial class MetricsV1Beta3Client
     {
@@ -329,8 +328,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>MetricsV1Beta3 client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The Dataflow Metrics API lets you monitor the progress of Dataflow
-    /// jobs.
+    /// The Dataflow Metrics API lets you monitor the progress of Dataflow jobs.
     /// </remarks>
     public sealed partial class MetricsV1Beta3ClientImpl : MetricsV1Beta3Client
     {

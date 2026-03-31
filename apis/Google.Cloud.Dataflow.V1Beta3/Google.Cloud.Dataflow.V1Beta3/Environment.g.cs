@@ -27,116 +27,119 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "Cilnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy9lbnZpcm9ubWVudC5wcm90bxIX",
             "Z29vZ2xlLmRhdGFmbG93LnYxYmV0YTMaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9wcm90b2J1Zi9hbnkucHJvdG8aHGdvb2ds",
-            "ZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8i9gYKC0Vudmlyb25tZW50EhsKE3Rl",
+            "ZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8imAcKC0Vudmlyb25tZW50EhsKE3Rl",
             "bXBfc3RvcmFnZV9wcmVmaXgYASABKAkSIwobY2x1c3Rlcl9tYW5hZ2VyX2Fw",
             "aV9zZXJ2aWNlGAIgASgJEhMKC2V4cGVyaW1lbnRzGAMgAygJEhwKD3NlcnZp",
             "Y2Vfb3B0aW9ucxgQIAMoCUID4EEBEiEKFHNlcnZpY2Vfa21zX2tleV9uYW1l",
             "GAwgASgJQgPgQQESOQoMd29ya2VyX3Bvb2xzGAQgAygLMiMuZ29vZ2xlLmRh",
-            "dGFmbG93LnYxYmV0YTMuV29ya2VyUG9vbBIrCgp1c2VyX2FnZW50GAUgASgL",
-            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIoCgd2ZXJzaW9uGAYgASgLMhcu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdBIUCgdkYXRhc2V0GAcgASgJQgPgQQES",
-            "NQoUc2RrX3BpcGVsaW5lX29wdGlvbnMYCCABKAsyFy5nb29nbGUucHJvdG9i",
-            "dWYuU3RydWN0EjIKFGludGVybmFsX2V4cGVyaW1lbnRzGAkgASgLMhQuZ29v",
-            "Z2xlLnByb3RvYnVmLkFueRIiChVzZXJ2aWNlX2FjY291bnRfZW1haWwYCiAB",
-            "KAlCA+BBARJfCh1mbGV4X3Jlc291cmNlX3NjaGVkdWxpbmdfZ29hbBgLIAEo",
-            "DjIzLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhSZXNvdXJjZVNjaGVk",
-            "dWxpbmdHb2FsQgPgQQESGgoNd29ya2VyX3JlZ2lvbhgNIAEoCUID4EEBEhgK",
-            "C3dvcmtlcl96b25lGA4gASgJQgPgQQESPwoMc2h1ZmZsZV9tb2RlGA8gASgO",
-            "MiQuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU2h1ZmZsZU1vZGVCA+BBAxJB",
-            "Cg1kZWJ1Z19vcHRpb25zGBEgASgLMiUuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
-            "YTMuRGVidWdPcHRpb25zQgPgQQESOAordXNlX3N0cmVhbWluZ19lbmdpbmVf",
-            "cmVzb3VyY2VfYmFzZWRfYmlsbGluZxgSIAEoCEID4EEDEkMKDnN0cmVhbWlu",
-            "Z19tb2RlGBMgASgOMiYuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU3RyZWFt",
-            "aW5nTW9kZUID4EEBIikKB1BhY2thZ2USDAoEbmFtZRgBIAEoCRIQCghsb2Nh",
-            "dGlvbhgCIAEoCSI/CgREaXNrEg8KB3NpemVfZ2IYASABKAUSEQoJZGlza190",
-            "eXBlGAIgASgJEhMKC21vdW50X3BvaW50GAMgASgJIqEBCg5Xb3JrZXJTZXR0",
-            "aW5ncxIQCghiYXNlX3VybBgBIAEoCRIZChFyZXBvcnRpbmdfZW5hYmxlZBgC",
-            "IAEoCBIUCgxzZXJ2aWNlX3BhdGgYAyABKAkSHAoUc2h1ZmZsZV9zZXJ2aWNl",
-            "X3BhdGgYBCABKAkSEQoJd29ya2VyX2lkGAUgASgJEhsKE3RlbXBfc3RvcmFn",
-            "ZV9wcmVmaXgYBiABKAkipAQKElRhc2tSdW5uZXJTZXR0aW5ncxIRCgl0YXNr",
-            "X3VzZXIYASABKAkSEgoKdGFza19ncm91cBgCIAEoCRIUCgxvYXV0aF9zY29w",
-            "ZXMYAyADKAkSEAoIYmFzZV91cmwYBCABKAkSHAoUZGF0YWZsb3dfYXBpX3Zl",
-            "cnNpb24YBSABKAkSSQoYcGFyYWxsZWxfd29ya2VyX3NldHRpbmdzGAYgASgL",
-            "MicuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuV29ya2VyU2V0dGluZ3MSFQoN",
-            "YmFzZV90YXNrX2RpchgHIAEoCRIdChVjb250aW51ZV9vbl9leGNlcHRpb24Y",
-            "CCABKAgSHAoUbG9nX3RvX3NlcmlhbGNvbnNvbGUYCSABKAgSFwoPYWxzb2xv",
-            "Z3Rvc3RkZXJyGAogASgIEhsKE2xvZ191cGxvYWRfbG9jYXRpb24YCyABKAkS",
-            "DwoHbG9nX2RpchgMIAEoCRIbChN0ZW1wX3N0b3JhZ2VfcHJlZml4GA0gASgJ",
-            "EhcKD2hhcm5lc3NfY29tbWFuZBgOIAEoCRIaChJ3b3JrZmxvd19maWxlX25h",
-            "bWUYDyABKAkSHgoWY29tbWFuZGxpbmVzX2ZpbGVfbmFtZRgQIAEoCRINCgV2",
-            "bV9pZBgRIAEoCRIVCg1sYW5ndWFnZV9oaW50GBIgASgJEiMKG3N0cmVhbWlu",
-            "Z193b3JrZXJfbWFpbl9jbGFzcxgTIAEoCSJwChNBdXRvc2NhbGluZ1NldHRp",
-            "bmdzEkAKCWFsZ29yaXRobRgBIAEoDjItLmdvb2dsZS5kYXRhZmxvdy52MWJl",
-            "dGEzLkF1dG9zY2FsaW5nQWxnb3JpdGhtEhcKD21heF9udW1fd29ya2VycxgC",
-            "IAEoBSKIAQoYU2RrSGFybmVzc0NvbnRhaW5lckltYWdlEhcKD2NvbnRhaW5l",
-            "cl9pbWFnZRgBIAEoCRIlCh11c2Vfc2luZ2xlX2NvcmVfcGVyX2NvbnRhaW5l",
-            "chgCIAEoCBIWCg5lbnZpcm9ubWVudF9pZBgDIAEoCRIUCgxjYXBhYmlsaXRp",
-            "ZXMYBCADKAki8gcKCldvcmtlclBvb2wSDAoEa2luZBgBIAEoCRITCgtudW1f",
-            "d29ya2VycxgCIAEoBRIyCghwYWNrYWdlcxgDIAMoCzIgLmdvb2dsZS5kYXRh",
-            "Zmxvdy52MWJldGEzLlBhY2thZ2USRwoTZGVmYXVsdF9wYWNrYWdlX3NldBgE",
-            "IAEoDjIqLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkRlZmF1bHRQYWNrYWdl",
-            "U2V0EhQKDG1hY2hpbmVfdHlwZRgFIAEoCRJACg90ZWFyZG93bl9wb2xpY3kY",
-            "BiABKA4yJy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5UZWFyZG93blBvbGlj",
-            "eRIUCgxkaXNrX3NpemVfZ2IYByABKAUSEQoJZGlza190eXBlGBAgASgJEhkK",
-            "EWRpc2tfc291cmNlX2ltYWdlGAggASgJEgwKBHpvbmUYCSABKAkSSAoTdGFz",
-            "a3J1bm5lcl9zZXR0aW5ncxgKIAEoCzIrLmdvb2dsZS5kYXRhZmxvdy52MWJl",
-            "dGEzLlRhc2tSdW5uZXJTZXR0aW5ncxIbChNvbl9ob3N0X21haW50ZW5hbmNl",
-            "GAsgASgJEjEKCmRhdGFfZGlza3MYDCADKAsyHS5nb29nbGUuZGF0YWZsb3cu",
-            "djFiZXRhMy5EaXNrEkMKCG1ldGFkYXRhGA0gAygLMjEuZ29vZ2xlLmRhdGFm",
-            "bG93LnYxYmV0YTMuV29ya2VyUG9vbC5NZXRhZGF0YUVudHJ5EkoKFGF1dG9z",
-            "Y2FsaW5nX3NldHRpbmdzGA4gASgLMiwuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
-            "YTMuQXV0b3NjYWxpbmdTZXR0aW5ncxInCglwb29sX2FyZ3MYDyABKAsyFC5n",
-            "b29nbGUucHJvdG9idWYuQW55Eg8KB25ldHdvcmsYESABKAkSEgoKc3VibmV0",
-            "d29yaxgTIAEoCRImCh53b3JrZXJfaGFybmVzc19jb250YWluZXJfaW1hZ2UY",
-            "EiABKAkSHgoWbnVtX3RocmVhZHNfcGVyX3dvcmtlchgUIAEoBRJPChBpcF9j",
-            "b25maWd1cmF0aW9uGBUgASgOMjUuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMu",
-            "V29ya2VySVBBZGRyZXNzQ29uZmlndXJhdGlvbhJXChxzZGtfaGFybmVzc19j",
-            "b250YWluZXJfaW1hZ2VzGBYgAygLMjEuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
-            "YTMuU2RrSGFybmVzc0NvbnRhaW5lckltYWdlGi8KDU1ldGFkYXRhRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLWAQoSRGF0YVNhbXBs",
-            "aW5nQ29uZmlnElMKCWJlaGF2aW9ycxgBIAMoDjJALmdvb2dsZS5kYXRhZmxv",
-            "dy52MWJldGEzLkRhdGFTYW1wbGluZ0NvbmZpZy5EYXRhU2FtcGxpbmdCZWhh",
-            "dmlvciJrChREYXRhU2FtcGxpbmdCZWhhdmlvchImCiJEQVRBX1NBTVBMSU5H",
-            "X0JFSEFWSU9SX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARINCglBTFdB",
-            "WVNfT04QAhIOCgpFWENFUFRJT05TEAMidwoMRGVidWdPcHRpb25zEiMKFmVu",
-            "YWJsZV9ob3Rfa2V5X2xvZ2dpbmcYASABKAhCA+BBARJCCg1kYXRhX3NhbXBs",
-            "aW5nGAIgASgLMisuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuRGF0YVNhbXBs",
-            "aW5nQ29uZmlnKksKB0pvYlR5cGUSFAoQSk9CX1RZUEVfVU5LTk9XThAAEhIK",
-            "DkpPQl9UWVBFX0JBVENIEAESFgoSSk9CX1RZUEVfU1RSRUFNSU5HEAIqawoa",
-            "RmxleFJlc291cmNlU2NoZWR1bGluZ0dvYWwSFgoSRkxFWFJTX1VOU1BFQ0lG",
-            "SUVEEAASGgoWRkxFWFJTX1NQRUVEX09QVElNSVpFRBABEhkKFUZMRVhSU19D",
-            "T1NUX09QVElNSVpFRBACKm8KDlRlYXJkb3duUG9saWN5EhsKF1RFQVJET1dO",
-            "X1BPTElDWV9VTktOT1dOEAASEwoPVEVBUkRPV05fQUxXQVlTEAESFwoTVEVB",
-            "UkRPV05fT05fU1VDQ0VTUxACEhIKDlRFQVJET1dOX05FVkVSEAMqkAEKEURl",
-            "ZmF1bHRQYWNrYWdlU2V0Eh8KG0RFRkFVTFRfUEFDS0FHRV9TRVRfVU5LTk9X",
-            "ThAAEhwKGERFRkFVTFRfUEFDS0FHRV9TRVRfTk9ORRABEhwKGERFRkFVTFRf",
-            "UEFDS0FHRV9TRVRfSkFWQRACEh4KGkRFRkFVTFRfUEFDS0FHRV9TRVRfUFlU",
-            "SE9OEAMqegoUQXV0b3NjYWxpbmdBbGdvcml0aG0SIQodQVVUT1NDQUxJTkdf",
-            "QUxHT1JJVEhNX1VOS05PV04QABIeChpBVVRPU0NBTElOR19BTEdPUklUSE1f",
-            "Tk9ORRABEh8KG0FVVE9TQ0FMSU5HX0FMR09SSVRITV9CQVNJQxACKmYKHFdv",
-            "cmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRpb24SGQoVV09SS0VSX0lQX1VOU1BF",
-            "Q0lGSUVEEAASFAoQV09SS0VSX0lQX1BVQkxJQxABEhUKEVdPUktFUl9JUF9Q",
-            "UklWQVRFEAIqTAoLU2h1ZmZsZU1vZGUSHAoYU0hVRkZMRV9NT0RFX1VOU1BF",
-            "Q0lGSUVEEAASDAoIVk1fQkFTRUQQARIRCg1TRVJWSUNFX0JBU0VEEAIqcgoN",
-            "U3RyZWFtaW5nTW9kZRIeChpTVFJFQU1JTkdfTU9ERV9VTlNQRUNJRklFRBAA",
-            "Eh8KG1NUUkVBTUlOR19NT0RFX0VYQUNUTFlfT05DRRABEiAKHFNUUkVBTUlO",
-            "R19NT0RFX0FUX0xFQVNUX09OQ0UQAkLTAQobY29tLmdvb2dsZS5kYXRhZmxv",
-            "dy52MWJldGEzQhBFbnZpcm9ubWVudFByb3RvUAFaPWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YWZsb3cvYXBpdjFiZXRhMy9kYXRhZmxvd3BiO2RhdGFmbG93",
-            "cGKqAh1Hb29nbGUuQ2xvdWQuRGF0YWZsb3cuVjFCZXRhM8oCHUdvb2dsZVxD",
-            "bG91ZFxEYXRhZmxvd1xWMWJldGEz6gIgR29vZ2xlOjpDbG91ZDo6RGF0YWZs",
-            "b3c6OlYxYmV0YTNiBnByb3RvMw=="));
+            "dGFmbG93LnYxYmV0YTMuV29ya2VyUG9vbBIwCgp1c2VyX2FnZW50GAUgASgL",
+            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEigKB3ZlcnNpb24YBiAB",
+            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhQKB2RhdGFzZXQYByABKAlC",
+            "A+BBARI1ChRzZGtfcGlwZWxpbmVfb3B0aW9ucxgIIAEoCzIXLmdvb2dsZS5w",
+            "cm90b2J1Zi5TdHJ1Y3QSMgoUaW50ZXJuYWxfZXhwZXJpbWVudHMYCSABKAsy",
+            "FC5nb29nbGUucHJvdG9idWYuQW55EiIKFXNlcnZpY2VfYWNjb3VudF9lbWFp",
+            "bBgKIAEoCUID4EEBEl8KHWZsZXhfcmVzb3VyY2Vfc2NoZWR1bGluZ19nb2Fs",
+            "GAsgASgOMjMuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuRmxleFJlc291cmNl",
+            "U2NoZWR1bGluZ0dvYWxCA+BBARIaCg13b3JrZXJfcmVnaW9uGA0gASgJQgPg",
+            "QQESGAoLd29ya2VyX3pvbmUYDiABKAlCA+BBARI/CgxzaHVmZmxlX21vZGUY",
+            "DyABKA4yJC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TaHVmZmxlTW9kZUID",
+            "4EEDEkEKDWRlYnVnX29wdGlvbnMYESABKAsyJS5nb29nbGUuZGF0YWZsb3cu",
+            "djFiZXRhMy5EZWJ1Z09wdGlvbnNCA+BBARI4Cit1c2Vfc3RyZWFtaW5nX2Vu",
+            "Z2luZV9yZXNvdXJjZV9iYXNlZF9iaWxsaW5nGBIgASgIQgPgQQMSQwoOc3Ry",
+            "ZWFtaW5nX21vZGUYEyABKA4yJi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5T",
+            "dHJlYW1pbmdNb2RlQgPgQQESGwoOdXNlX3B1YmxpY19pcHMYFCABKAhCA+BB",
+            "ASI+CgdQYWNrYWdlEgwKBG5hbWUYASABKAkSEAoIbG9jYXRpb24YAiABKAkS",
+            "EwoGc2hhMjU2GAMgASgJQgPgQQEiPwoERGlzaxIPCgdzaXplX2diGAEgASgF",
+            "EhEKCWRpc2tfdHlwZRgCIAEoCRITCgttb3VudF9wb2ludBgDIAEoCSKhAQoO",
+            "V29ya2VyU2V0dGluZ3MSEAoIYmFzZV91cmwYASABKAkSGQoRcmVwb3J0aW5n",
+            "X2VuYWJsZWQYAiABKAgSFAoMc2VydmljZV9wYXRoGAMgASgJEhwKFHNodWZm",
+            "bGVfc2VydmljZV9wYXRoGAQgASgJEhEKCXdvcmtlcl9pZBgFIAEoCRIbChN0",
+            "ZW1wX3N0b3JhZ2VfcHJlZml4GAYgASgJIqQEChJUYXNrUnVubmVyU2V0dGlu",
+            "Z3MSEQoJdGFza191c2VyGAEgASgJEhIKCnRhc2tfZ3JvdXAYAiABKAkSFAoM",
+            "b2F1dGhfc2NvcGVzGAMgAygJEhAKCGJhc2VfdXJsGAQgASgJEhwKFGRhdGFm",
+            "bG93X2FwaV92ZXJzaW9uGAUgASgJEkkKGHBhcmFsbGVsX3dvcmtlcl9zZXR0",
+            "aW5ncxgGIAEoCzInLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlclNl",
+            "dHRpbmdzEhUKDWJhc2VfdGFza19kaXIYByABKAkSHQoVY29udGludWVfb25f",
+            "ZXhjZXB0aW9uGAggASgIEhwKFGxvZ190b19zZXJpYWxjb25zb2xlGAkgASgI",
+            "EhcKD2Fsc29sb2d0b3N0ZGVychgKIAEoCBIbChNsb2dfdXBsb2FkX2xvY2F0",
+            "aW9uGAsgASgJEg8KB2xvZ19kaXIYDCABKAkSGwoTdGVtcF9zdG9yYWdlX3By",
+            "ZWZpeBgNIAEoCRIXCg9oYXJuZXNzX2NvbW1hbmQYDiABKAkSGgoSd29ya2Zs",
+            "b3dfZmlsZV9uYW1lGA8gASgJEh4KFmNvbW1hbmRsaW5lc19maWxlX25hbWUY",
+            "ECABKAkSDQoFdm1faWQYESABKAkSFQoNbGFuZ3VhZ2VfaGludBgSIAEoCRIj",
+            "ChtzdHJlYW1pbmdfd29ya2VyX21haW5fY2xhc3MYEyABKAkicAoTQXV0b3Nj",
+            "YWxpbmdTZXR0aW5ncxJACglhbGdvcml0aG0YASABKA4yLS5nb29nbGUuZGF0",
+            "YWZsb3cudjFiZXRhMy5BdXRvc2NhbGluZ0FsZ29yaXRobRIXCg9tYXhfbnVt",
+            "X3dvcmtlcnMYAiABKAUiiAEKGFNka0hhcm5lc3NDb250YWluZXJJbWFnZRIX",
+            "Cg9jb250YWluZXJfaW1hZ2UYASABKAkSJQoddXNlX3NpbmdsZV9jb3JlX3Bl",
+            "cl9jb250YWluZXIYAiABKAgSFgoOZW52aXJvbm1lbnRfaWQYAyABKAkSFAoM",
+            "Y2FwYWJpbGl0aWVzGAQgAygJIsYICgpXb3JrZXJQb29sEgwKBGtpbmQYASAB",
+            "KAkSEwoLbnVtX3dvcmtlcnMYAiABKAUSMgoIcGFja2FnZXMYAyADKAsyIC5n",
+            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5QYWNrYWdlEkcKE2RlZmF1bHRfcGFj",
+            "a2FnZV9zZXQYBCABKA4yKi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5EZWZh",
+            "dWx0UGFja2FnZVNldBIUCgxtYWNoaW5lX3R5cGUYBSABKAkSQAoPdGVhcmRv",
+            "d25fcG9saWN5GAYgASgOMicuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuVGVh",
+            "cmRvd25Qb2xpY3kSFAoMZGlza19zaXplX2diGAcgASgFEhEKCWRpc2tfdHlw",
+            "ZRgQIAEoCRIiChVkaXNrX3Byb3Zpc2lvbmVkX2lvcHMYFyABKANCA+BBARIu",
+            "CiFkaXNrX3Byb3Zpc2lvbmVkX3Rocm91Z2hwdXRfbWlicHMYGCABKANCA+BB",
+            "ARIZChFkaXNrX3NvdXJjZV9pbWFnZRgIIAEoCRIMCgR6b25lGAkgASgJEkgK",
+            "E3Rhc2tydW5uZXJfc2V0dGluZ3MYCiABKAsyKy5nb29nbGUuZGF0YWZsb3cu",
+            "djFiZXRhMy5UYXNrUnVubmVyU2V0dGluZ3MSGwoTb25faG9zdF9tYWludGVu",
+            "YW5jZRgLIAEoCRIxCgpkYXRhX2Rpc2tzGAwgAygLMh0uZ29vZ2xlLmRhdGFm",
+            "bG93LnYxYmV0YTMuRGlzaxJDCghtZXRhZGF0YRgNIAMoCzIxLmdvb2dsZS5k",
+            "YXRhZmxvdy52MWJldGEzLldvcmtlclBvb2wuTWV0YWRhdGFFbnRyeRJKChRh",
+            "dXRvc2NhbGluZ19zZXR0aW5ncxgOIAEoCzIsLmdvb2dsZS5kYXRhZmxvdy52",
+            "MWJldGEzLkF1dG9zY2FsaW5nU2V0dGluZ3MSJwoJcG9vbF9hcmdzGA8gASgL",
+            "MhQuZ29vZ2xlLnByb3RvYnVmLkFueRIPCgduZXR3b3JrGBEgASgJEhIKCnN1",
+            "Ym5ldHdvcmsYEyABKAkSJgoed29ya2VyX2hhcm5lc3NfY29udGFpbmVyX2lt",
+            "YWdlGBIgASgJEh4KFm51bV90aHJlYWRzX3Blcl93b3JrZXIYFCABKAUSTwoQ",
+            "aXBfY29uZmlndXJhdGlvbhgVIAEoDjI1Lmdvb2dsZS5kYXRhZmxvdy52MWJl",
+            "dGEzLldvcmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRpb24SVwocc2RrX2hhcm5l",
+            "c3NfY29udGFpbmVyX2ltYWdlcxgWIAMoCzIxLmdvb2dsZS5kYXRhZmxvdy52",
+            "MWJldGEzLlNka0hhcm5lc3NDb250YWluZXJJbWFnZRovCg1NZXRhZGF0YUVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi1gEKEkRhdGFT",
+            "YW1wbGluZ0NvbmZpZxJTCgliZWhhdmlvcnMYASADKA4yQC5nb29nbGUuZGF0",
+            "YWZsb3cudjFiZXRhMy5EYXRhU2FtcGxpbmdDb25maWcuRGF0YVNhbXBsaW5n",
+            "QmVoYXZpb3IiawoURGF0YVNhbXBsaW5nQmVoYXZpb3ISJgoiREFUQV9TQU1Q",
+            "TElOR19CRUhBVklPUl9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESDQoJ",
+            "QUxXQVlTX09OEAISDgoKRVhDRVBUSU9OUxADIncKDERlYnVnT3B0aW9ucxIj",
+            "ChZlbmFibGVfaG90X2tleV9sb2dnaW5nGAEgASgIQgPgQQESQgoNZGF0YV9z",
+            "YW1wbGluZxgCIAEoCzIrLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkRhdGFT",
+            "YW1wbGluZ0NvbmZpZypLCgdKb2JUeXBlEhQKEEpPQl9UWVBFX1VOS05PV04Q",
+            "ABISCg5KT0JfVFlQRV9CQVRDSBABEhYKEkpPQl9UWVBFX1NUUkVBTUlORxAC",
+            "KmsKGkZsZXhSZXNvdXJjZVNjaGVkdWxpbmdHb2FsEhYKEkZMRVhSU19VTlNQ",
+            "RUNJRklFRBAAEhoKFkZMRVhSU19TUEVFRF9PUFRJTUlaRUQQARIZChVGTEVY",
+            "UlNfQ09TVF9PUFRJTUlaRUQQAipvCg5UZWFyZG93blBvbGljeRIbChdURUFS",
+            "RE9XTl9QT0xJQ1lfVU5LTk9XThAAEhMKD1RFQVJET1dOX0FMV0FZUxABEhcK",
+            "E1RFQVJET1dOX09OX1NVQ0NFU1MQAhISCg5URUFSRE9XTl9ORVZFUhADKpAB",
+            "ChFEZWZhdWx0UGFja2FnZVNldBIfChtERUZBVUxUX1BBQ0tBR0VfU0VUX1VO",
+            "S05PV04QABIcChhERUZBVUxUX1BBQ0tBR0VfU0VUX05PTkUQARIcChhERUZB",
+            "VUxUX1BBQ0tBR0VfU0VUX0pBVkEQAhIeChpERUZBVUxUX1BBQ0tBR0VfU0VU",
+            "X1BZVEhPThADKnoKFEF1dG9zY2FsaW5nQWxnb3JpdGhtEiEKHUFVVE9TQ0FM",
+            "SU5HX0FMR09SSVRITV9VTktOT1dOEAASHgoaQVVUT1NDQUxJTkdfQUxHT1JJ",
+            "VEhNX05PTkUQARIfChtBVVRPU0NBTElOR19BTEdPUklUSE1fQkFTSUMQAipm",
+            "ChxXb3JrZXJJUEFkZHJlc3NDb25maWd1cmF0aW9uEhkKFVdPUktFUl9JUF9V",
+            "TlNQRUNJRklFRBAAEhQKEFdPUktFUl9JUF9QVUJMSUMQARIVChFXT1JLRVJf",
+            "SVBfUFJJVkFURRACKkwKC1NodWZmbGVNb2RlEhwKGFNIVUZGTEVfTU9ERV9V",
+            "TlNQRUNJRklFRBAAEgwKCFZNX0JBU0VEEAESEQoNU0VSVklDRV9CQVNFRBAC",
+            "KnIKDVN0cmVhbWluZ01vZGUSHgoaU1RSRUFNSU5HX01PREVfVU5TUEVDSUZJ",
+            "RUQQABIfChtTVFJFQU1JTkdfTU9ERV9FWEFDVExZX09OQ0UQARIgChxTVFJF",
+            "QU1JTkdfTU9ERV9BVF9MRUFTVF9PTkNFEAJC0wEKG2NvbS5nb29nbGUuZGF0",
+            "YWZsb3cudjFiZXRhM0IQRW52aXJvbm1lbnRQcm90b1ABWj1jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2RhdGFmbG93L2FwaXYxYmV0YTMvZGF0YWZsb3dwYjtkYXRh",
+            "Zmxvd3BiqgIdR29vZ2xlLkNsb3VkLkRhdGFmbG93LlYxQmV0YTPKAh1Hb29n",
+            "bGVcQ2xvdWRcRGF0YWZsb3dcVjFiZXRhM+oCIEdvb2dsZTo6Q2xvdWQ6OkRh",
+            "dGFmbG93OjpWMWJldGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.JobType), typeof(global::Google.Cloud.Dataflow.V1Beta3.FlexResourceSchedulingGoal), typeof(global::Google.Cloud.Dataflow.V1Beta3.TeardownPolicy), typeof(global::Google.Cloud.Dataflow.V1Beta3.DefaultPackageSet), typeof(global::Google.Cloud.Dataflow.V1Beta3.AutoscalingAlgorithm), typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerIPAddressConfiguration), typeof(global::Google.Cloud.Dataflow.V1Beta3.ShuffleMode), typeof(global::Google.Cloud.Dataflow.V1Beta3.StreamingMode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Environment), global::Google.Cloud.Dataflow.V1Beta3.Environment.Parser, new[]{ "TempStoragePrefix", "ClusterManagerApiService", "Experiments", "ServiceOptions", "ServiceKmsKeyName", "WorkerPools", "UserAgent", "Version", "Dataset", "SdkPipelineOptions", "InternalExperiments", "ServiceAccountEmail", "FlexResourceSchedulingGoal", "WorkerRegion", "WorkerZone", "ShuffleMode", "DebugOptions", "UseStreamingEngineResourceBasedBilling", "StreamingMode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Package), global::Google.Cloud.Dataflow.V1Beta3.Package.Parser, new[]{ "Name", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Environment), global::Google.Cloud.Dataflow.V1Beta3.Environment.Parser, new[]{ "TempStoragePrefix", "ClusterManagerApiService", "Experiments", "ServiceOptions", "ServiceKmsKeyName", "WorkerPools", "UserAgent", "Version", "Dataset", "SdkPipelineOptions", "InternalExperiments", "ServiceAccountEmail", "FlexResourceSchedulingGoal", "WorkerRegion", "WorkerZone", "ShuffleMode", "DebugOptions", "UseStreamingEngineResourceBasedBilling", "StreamingMode", "UsePublicIps" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Package), global::Google.Cloud.Dataflow.V1Beta3.Package.Parser, new[]{ "Name", "Location", "Sha256" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Disk), global::Google.Cloud.Dataflow.V1Beta3.Disk.Parser, new[]{ "SizeGb", "DiskType", "MountPoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerSettings), global::Google.Cloud.Dataflow.V1Beta3.WorkerSettings.Parser, new[]{ "BaseUrl", "ReportingEnabled", "ServicePath", "ShuffleServicePath", "WorkerId", "TempStoragePrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.TaskRunnerSettings), global::Google.Cloud.Dataflow.V1Beta3.TaskRunnerSettings.Parser, new[]{ "TaskUser", "TaskGroup", "OauthScopes", "BaseUrl", "DataflowApiVersion", "ParallelWorkerSettings", "BaseTaskDir", "ContinueOnException", "LogToSerialconsole", "Alsologtostderr", "LogUploadLocation", "LogDir", "TempStoragePrefix", "HarnessCommand", "WorkflowFileName", "CommandlinesFileName", "VmId", "LanguageHint", "StreamingWorkerMainClass" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.AutoscalingSettings), global::Google.Cloud.Dataflow.V1Beta3.AutoscalingSettings.Parser, new[]{ "Algorithm", "MaxNumWorkers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.SdkHarnessContainerImage), global::Google.Cloud.Dataflow.V1Beta3.SdkHarnessContainerImage.Parser, new[]{ "ContainerImage", "UseSingleCorePerContainer", "EnvironmentId", "Capabilities" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerPool), global::Google.Cloud.Dataflow.V1Beta3.WorkerPool.Parser, new[]{ "Kind", "NumWorkers", "Packages", "DefaultPackageSet", "MachineType", "TeardownPolicy", "DiskSizeGb", "DiskType", "DiskSourceImage", "Zone", "TaskrunnerSettings", "OnHostMaintenance", "DataDisks", "Metadata", "AutoscalingSettings", "PoolArgs", "Network", "Subnetwork", "WorkerHarnessContainerImage", "NumThreadsPerWorker", "IpConfiguration", "SdkHarnessContainerImages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerPool), global::Google.Cloud.Dataflow.V1Beta3.WorkerPool.Parser, new[]{ "Kind", "NumWorkers", "Packages", "DefaultPackageSet", "MachineType", "TeardownPolicy", "DiskSizeGb", "DiskType", "DiskProvisionedIops", "DiskProvisionedThroughputMibps", "DiskSourceImage", "Zone", "TaskrunnerSettings", "OnHostMaintenance", "DataDisks", "Metadata", "AutoscalingSettings", "PoolArgs", "Network", "Subnetwork", "WorkerHarnessContainerImage", "NumThreadsPerWorker", "IpConfiguration", "SdkHarnessContainerImages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.DataSamplingConfig), global::Google.Cloud.Dataflow.V1Beta3.DataSamplingConfig.Parser, new[]{ "Behaviors" }, null, new[]{ typeof(global::Google.Cloud.Dataflow.V1Beta3.DataSamplingConfig.Types.DataSamplingBehavior) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.DebugOptions), global::Google.Cloud.Dataflow.V1Beta3.DebugOptions.Parser, new[]{ "EnableHotKeyLogging", "DataSampling" }, null, null, null, null)
           }));
@@ -386,6 +389,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       debugOptions_ = other.debugOptions_ != null ? other.debugOptions_.Clone() : null;
       useStreamingEngineResourceBasedBilling_ = other.useStreamingEngineResourceBasedBilling_;
       streamingMode_ = other.streamingMode_;
+      usePublicIps_ = other.usePublicIps_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -511,7 +515,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int UserAgentFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Struct userAgent_;
     /// <summary>
-    /// A description of the process that generated the request.
+    /// Optional. A description of the process that generated the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -728,6 +732,21 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "use_public_ips" field.</summary>
+    public const int UsePublicIpsFieldNumber = 20;
+    private bool usePublicIps_;
+    /// <summary>
+    /// Optional. True when any worker pool that uses public IPs is present.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UsePublicIps {
+      get { return usePublicIps_; }
+      set {
+        usePublicIps_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -762,6 +781,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (!object.Equals(DebugOptions, other.DebugOptions)) return false;
       if (UseStreamingEngineResourceBasedBilling != other.UseStreamingEngineResourceBasedBilling) return false;
       if (StreamingMode != other.StreamingMode) return false;
+      if (UsePublicIps != other.UsePublicIps) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -788,6 +808,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (debugOptions_ != null) hash ^= DebugOptions.GetHashCode();
       if (UseStreamingEngineResourceBasedBilling != false) hash ^= UseStreamingEngineResourceBasedBilling.GetHashCode();
       if (StreamingMode != global::Google.Cloud.Dataflow.V1Beta3.StreamingMode.Unspecified) hash ^= StreamingMode.GetHashCode();
+      if (UsePublicIps != false) hash ^= UsePublicIps.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -873,6 +894,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) StreamingMode);
       }
+      if (UsePublicIps != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(UsePublicIps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -950,6 +975,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) StreamingMode);
       }
+      if (UsePublicIps != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(UsePublicIps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1010,6 +1039,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (StreamingMode != global::Google.Cloud.Dataflow.V1Beta3.StreamingMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StreamingMode);
+      }
+      if (UsePublicIps != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1088,6 +1120,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.StreamingMode != global::Google.Cloud.Dataflow.V1Beta3.StreamingMode.Unspecified) {
         StreamingMode = other.StreamingMode;
+      }
+      if (other.UsePublicIps != false) {
+        UsePublicIps = other.UsePublicIps;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1197,6 +1232,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 152: {
             StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
+            break;
+          }
+          case 160: {
+            UsePublicIps = input.ReadBool();
             break;
           }
         }
@@ -1309,6 +1348,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
             break;
           }
+          case 160: {
+            UsePublicIps = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1364,6 +1407,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public Package(Package other) : this() {
       name_ = other.name_;
       location_ = other.location_;
+      sha256_ = other.sha256_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1408,6 +1452,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "sha256" field.</summary>
+    public const int Sha256FieldNumber = 3;
+    private string sha256_ = "";
+    /// <summary>
+    /// Optional. The hex-encoded SHA256 checksum of the package.
+    /// If the checksum is provided, the worker will verify the checksum of the
+    /// package before using it. If the checksum does not match, the worker will
+    /// fail to start.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Sha256 {
+      get { return sha256_; }
+      set {
+        sha256_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1425,6 +1487,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (Name != other.Name) return false;
       if (Location != other.Location) return false;
+      if (Sha256 != other.Sha256) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1434,6 +1497,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (Sha256.Length != 0) hash ^= Sha256.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1460,6 +1524,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Location);
       }
+      if (Sha256.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Sha256);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1478,6 +1546,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Location);
       }
+      if (Sha256.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Sha256);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1493,6 +1565,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (Location.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (Sha256.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sha256);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1511,6 +1586,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.Location.Length != 0) {
         Location = other.Location;
+      }
+      if (other.Sha256.Length != 0) {
+        Sha256 = other.Sha256;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1539,6 +1617,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             Location = input.ReadString();
             break;
           }
+          case 26: {
+            Sha256 = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1564,6 +1646,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 18: {
             Location = input.ReadString();
+            break;
+          }
+          case 26: {
+            Sha256 = input.ReadString();
             break;
           }
         }
@@ -3858,6 +3944,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       teardownPolicy_ = other.teardownPolicy_;
       diskSizeGb_ = other.diskSizeGb_;
       diskType_ = other.diskType_;
+      diskProvisionedIops_ = other.diskProvisionedIops_;
+      diskProvisionedThroughputMibps_ = other.diskProvisionedThroughputMibps_;
       diskSourceImage_ = other.diskSourceImage_;
       zone_ = other.zone_;
       taskrunnerSettings_ = other.taskrunnerSettings_ != null ? other.taskrunnerSettings_.Clone() : null;
@@ -4020,6 +4108,36 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return diskType_; }
       set {
         diskType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "disk_provisioned_iops" field.</summary>
+    public const int DiskProvisionedIopsFieldNumber = 23;
+    private long diskProvisionedIops_;
+    /// <summary>
+    /// Optional. IOPS provisioned for the root disk for VMs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DiskProvisionedIops {
+      get { return diskProvisionedIops_; }
+      set {
+        diskProvisionedIops_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disk_provisioned_throughput_mibps" field.</summary>
+    public const int DiskProvisionedThroughputMibpsFieldNumber = 24;
+    private long diskProvisionedThroughputMibps_;
+    /// <summary>
+    /// Optional. Throughput provisioned for the root disk for VMs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DiskProvisionedThroughputMibps {
+      get { return diskProvisionedThroughputMibps_; }
+      set {
+        diskProvisionedThroughputMibps_ = value;
       }
     }
 
@@ -4267,6 +4385,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (TeardownPolicy != other.TeardownPolicy) return false;
       if (DiskSizeGb != other.DiskSizeGb) return false;
       if (DiskType != other.DiskType) return false;
+      if (DiskProvisionedIops != other.DiskProvisionedIops) return false;
+      if (DiskProvisionedThroughputMibps != other.DiskProvisionedThroughputMibps) return false;
       if (DiskSourceImage != other.DiskSourceImage) return false;
       if (Zone != other.Zone) return false;
       if (!object.Equals(TaskrunnerSettings, other.TaskrunnerSettings)) return false;
@@ -4296,6 +4416,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (TeardownPolicy != global::Google.Cloud.Dataflow.V1Beta3.TeardownPolicy.Unknown) hash ^= TeardownPolicy.GetHashCode();
       if (DiskSizeGb != 0) hash ^= DiskSizeGb.GetHashCode();
       if (DiskType.Length != 0) hash ^= DiskType.GetHashCode();
+      if (DiskProvisionedIops != 0L) hash ^= DiskProvisionedIops.GetHashCode();
+      if (DiskProvisionedThroughputMibps != 0L) hash ^= DiskProvisionedThroughputMibps.GetHashCode();
       if (DiskSourceImage.Length != 0) hash ^= DiskSourceImage.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (taskrunnerSettings_ != null) hash ^= TaskrunnerSettings.GetHashCode();
@@ -4404,6 +4526,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteEnum((int) IpConfiguration);
       }
       sdkHarnessContainerImages_.WriteTo(output, _repeated_sdkHarnessContainerImages_codec);
+      if (DiskProvisionedIops != 0L) {
+        output.WriteRawTag(184, 1);
+        output.WriteInt64(DiskProvisionedIops);
+      }
+      if (DiskProvisionedThroughputMibps != 0L) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt64(DiskProvisionedThroughputMibps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4490,6 +4620,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteEnum((int) IpConfiguration);
       }
       sdkHarnessContainerImages_.WriteTo(ref output, _repeated_sdkHarnessContainerImages_codec);
+      if (DiskProvisionedIops != 0L) {
+        output.WriteRawTag(184, 1);
+        output.WriteInt64(DiskProvisionedIops);
+      }
+      if (DiskProvisionedThroughputMibps != 0L) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt64(DiskProvisionedThroughputMibps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4521,6 +4659,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (DiskType.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DiskType);
+      }
+      if (DiskProvisionedIops != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(DiskProvisionedIops);
+      }
+      if (DiskProvisionedThroughputMibps != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(DiskProvisionedThroughputMibps);
       }
       if (DiskSourceImage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DiskSourceImage);
@@ -4591,6 +4735,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.DiskType.Length != 0) {
         DiskType = other.DiskType;
+      }
+      if (other.DiskProvisionedIops != 0L) {
+        DiskProvisionedIops = other.DiskProvisionedIops;
+      }
+      if (other.DiskProvisionedThroughputMibps != 0L) {
+        DiskProvisionedThroughputMibps = other.DiskProvisionedThroughputMibps;
       }
       if (other.DiskSourceImage.Length != 0) {
         DiskSourceImage = other.DiskSourceImage;
@@ -4753,6 +4903,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             sdkHarnessContainerImages_.AddEntriesFrom(input, _repeated_sdkHarnessContainerImages_codec);
             break;
           }
+          case 184: {
+            DiskProvisionedIops = input.ReadInt64();
+            break;
+          }
+          case 192: {
+            DiskProvisionedThroughputMibps = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -4867,6 +5025,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 178: {
             sdkHarnessContainerImages_.AddEntriesFrom(ref input, _repeated_sdkHarnessContainerImages_codec);
+            break;
+          }
+          case 184: {
+            DiskProvisionedIops = input.ReadInt64();
+            break;
+          }
+          case 192: {
+            DiskProvisionedThroughputMibps = input.ReadInt64();
             break;
           }
         }

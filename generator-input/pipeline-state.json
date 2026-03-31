@@ -1227,7 +1227,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T09:16:48.227698890Z",
-            "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
+            "lastGeneratedCommit": "54ba514760e90ad1d3180e28b61d5f998420bc1d",
             "lastReleasedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
             "apiPaths": [
                 "google/dataflow/v1beta3"

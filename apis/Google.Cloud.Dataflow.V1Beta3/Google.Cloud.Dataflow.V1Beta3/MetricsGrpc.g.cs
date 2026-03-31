@@ -3,7 +3,7 @@
 //     source: google/dataflow/v1beta3/metrics.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,8 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
-  /// The Dataflow Metrics API lets you monitor the progress of Dataflow
-  /// jobs.
+  /// The Dataflow Metrics API lets you monitor the progress of Dataflow jobs.
   /// </summary>
   public static partial class MetricsV1Beta3
   {
