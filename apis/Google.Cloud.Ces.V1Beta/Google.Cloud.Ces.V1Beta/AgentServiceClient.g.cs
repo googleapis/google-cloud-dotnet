@@ -103,6 +103,8 @@ namespace Google.Cloud.Ces.V1Beta
             DeleteAppVersionSettings = existing.DeleteAppVersionSettings;
             RestoreAppVersionSettings = existing.RestoreAppVersionSettings;
             RestoreAppVersionOperationsSettings = existing.RestoreAppVersionOperationsSettings.Clone();
+            GenerateAppResourceSettings = existing.GenerateAppResourceSettings;
+            GenerateAppResourceOperationsSettings = existing.GenerateAppResourceOperationsSettings.Clone();
             ListChangelogsSettings = existing.ListChangelogsSettings;
             GetChangelogSettings = existing.GetChangelogSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -1224,6 +1226,45 @@ namespace Google.Cloud.Ces.V1Beta
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RestoreAppVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentServiceClient.GenerateAppResource</c> and <c>AgentServiceClient.GenerateAppResourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateAppResourceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AgentServiceClient.GenerateAppResource</c> and
+        /// <c>AgentServiceClient.GenerateAppResourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings GenerateAppResourceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -8278,6 +8319,138 @@ namespace Google.Cloud.Ces.V1Beta
             RestoreAppVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> GenerateAppResource(GenerateAppResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(GenerateAppResourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(GenerateAppResourceRequest request, st::CancellationToken cancellationToken) =>
+            GenerateAppResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>GenerateAppResource</c>.</summary>
+        public virtual lro::OperationsClient GenerateAppResourceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>GenerateAppResource</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> PollOnceGenerateAppResource(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GenerateAppResourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>GenerateAppResource</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> PollOnceGenerateAppResourceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GenerateAppResourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> GenerateAppResource(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateAppResource(new GenerateAppResourceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateAppResourceAsync(new GenerateAppResourceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(string parent, st::CancellationToken cancellationToken) =>
+            GenerateAppResourceAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> GenerateAppResource(AppName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateAppResource(new GenerateAppResourceRequest
+            {
+                ParentAsAppName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(AppName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateAppResourceAsync(new GenerateAppResourceRequest
+            {
+                ParentAsAppName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to generate the resource for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(AppName parent, st::CancellationToken cancellationToken) =>
+            GenerateAppResourceAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists the changelogs of the specified app.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8636,6 +8809,8 @@ namespace Google.Cloud.Ces.V1Beta
 
         private readonly gaxgrpc::ApiCall<RestoreAppVersionRequest, lro::Operation> _callRestoreAppVersion;
 
+        private readonly gaxgrpc::ApiCall<GenerateAppResourceRequest, lro::Operation> _callGenerateAppResource;
+
         private readonly gaxgrpc::ApiCall<ListChangelogsRequest, ListChangelogsResponse> _callListChangelogs;
 
         private readonly gaxgrpc::ApiCall<GetChangelogRequest, Changelog> _callGetChangelog;
@@ -8661,6 +8836,7 @@ namespace Google.Cloud.Ces.V1Beta
             ImportAppOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAppOperationsSettings, logger);
             BatchDeleteConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteConversationsOperationsSettings, logger);
             RestoreAppVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAppVersionOperationsSettings, logger);
+            GenerateAppResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.GenerateAppResourceOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListApps = clientHelper.BuildApiCall<ListAppsRequest, ListAppsResponse>("ListApps", grpcClient.ListAppsAsync, grpcClient.ListApps, effectiveSettings.ListAppsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApps);
@@ -8806,6 +8982,9 @@ namespace Google.Cloud.Ces.V1Beta
             _callRestoreAppVersion = clientHelper.BuildApiCall<RestoreAppVersionRequest, lro::Operation>("RestoreAppVersion", grpcClient.RestoreAppVersionAsync, grpcClient.RestoreAppVersion, effectiveSettings.RestoreAppVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestoreAppVersion);
             Modify_RestoreAppVersionApiCall(ref _callRestoreAppVersion);
+            _callGenerateAppResource = clientHelper.BuildApiCall<GenerateAppResourceRequest, lro::Operation>("GenerateAppResource", grpcClient.GenerateAppResourceAsync, grpcClient.GenerateAppResource, effectiveSettings.GenerateAppResourceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGenerateAppResource);
+            Modify_GenerateAppResourceApiCall(ref _callGenerateAppResource);
             _callListChangelogs = clientHelper.BuildApiCall<ListChangelogsRequest, ListChangelogsResponse>("ListChangelogs", grpcClient.ListChangelogsAsync, grpcClient.ListChangelogs, effectiveSettings.ListChangelogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChangelogs);
             Modify_ListChangelogsApiCall(ref _callListChangelogs);
@@ -8912,6 +9091,8 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_DeleteAppVersionApiCall(ref gaxgrpc::ApiCall<DeleteAppVersionRequest, wkt::Empty> call);
 
         partial void Modify_RestoreAppVersionApiCall(ref gaxgrpc::ApiCall<RestoreAppVersionRequest, lro::Operation> call);
+
+        partial void Modify_GenerateAppResourceApiCall(ref gaxgrpc::ApiCall<GenerateAppResourceRequest, lro::Operation> call);
 
         partial void Modify_ListChangelogsApiCall(ref gaxgrpc::ApiCall<ListChangelogsRequest, ListChangelogsResponse> call);
 
@@ -9020,6 +9201,8 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_DeleteAppVersionRequest(ref DeleteAppVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreAppVersionRequest(ref RestoreAppVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateAppResourceRequest(ref GenerateAppResourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListChangelogsRequest(ref ListChangelogsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -10197,6 +10380,33 @@ namespace Google.Cloud.Ces.V1Beta
         {
             Modify_RestoreAppVersionRequest(ref request, ref callSettings);
             return new lro::Operation<RestoreAppVersionResponse, OperationMetadata>(await _callRestoreAppVersion.Async(request, callSettings).ConfigureAwait(false), RestoreAppVersionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>GenerateAppResource</c>.</summary>
+        public override lro::OperationsClient GenerateAppResourceOperationsClient { get; }
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> GenerateAppResource(GenerateAppResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAppResourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>(_callGenerateAppResource.Sync(request, callSettings), GenerateAppResourceOperationsClient);
+        }
+
+        /// <summary>
+        /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>> GenerateAppResourceAsync(GenerateAppResourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAppResourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata>(await _callGenerateAppResource.Async(request, callSettings).ConfigureAwait(false), GenerateAppResourceOperationsClient);
         }
 
         /// <summary>

@@ -7018,6 +7018,211 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GenerateAppResource</summary>
+        public void GenerateAppResourceRequestObject()
+        {
+            // Snippet: GenerateAppResource(GenerateAppResourceRequest, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateAppResourceRequest request = new GenerateAppResourceRequest
+            {
+                ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                Agent = new Agent(),
+                RefineInstructions =
+                {
+                    new GenerateAppResourceRequest.Types.RefineInstructions(),
+                },
+                ToolGenerationConfig = new GenerateAppResourceRequest.Types.ToolGenerationConfig(),
+                AppGenerationConfig = new GenerateAppResourceRequest.Types.AppGenerationConfig(),
+                EvaluationGenerationConfig = new GenerateAppResourceRequest.Types.EvaluationGenerationConfig(),
+                EvaluationPersonasGenerationConfig = new GenerateAppResourceRequest.Types.EvaluationPersonasGenerationConfig(),
+                QualityReportGenerationConfig = new GenerateAppResourceRequest.Types.QualityReportGenerationConfig(),
+                HillClimbingFixConfig = new GenerateAppResourceRequest.Types.HillClimbingFixConfig(),
+            };
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = agentServiceClient.GenerateAppResource(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = agentServiceClient.PollOnceGenerateAppResource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAppResourceAsync</summary>
+        public async Task GenerateAppResourceRequestObjectAsync()
+        {
+            // Snippet: GenerateAppResourceAsync(GenerateAppResourceRequest, CallSettings)
+            // Additional: GenerateAppResourceAsync(GenerateAppResourceRequest, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateAppResourceRequest request = new GenerateAppResourceRequest
+            {
+                ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                Agent = new Agent(),
+                RefineInstructions =
+                {
+                    new GenerateAppResourceRequest.Types.RefineInstructions(),
+                },
+                ToolGenerationConfig = new GenerateAppResourceRequest.Types.ToolGenerationConfig(),
+                AppGenerationConfig = new GenerateAppResourceRequest.Types.AppGenerationConfig(),
+                EvaluationGenerationConfig = new GenerateAppResourceRequest.Types.EvaluationGenerationConfig(),
+                EvaluationPersonasGenerationConfig = new GenerateAppResourceRequest.Types.EvaluationPersonasGenerationConfig(),
+                QualityReportGenerationConfig = new GenerateAppResourceRequest.Types.QualityReportGenerationConfig(),
+                HillClimbingFixConfig = new GenerateAppResourceRequest.Types.HillClimbingFixConfig(),
+            };
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = await agentServiceClient.GenerateAppResourceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = await agentServiceClient.PollOnceGenerateAppResourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAppResource</summary>
+        public void GenerateAppResource()
+        {
+            // Snippet: GenerateAppResource(string, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = agentServiceClient.GenerateAppResource(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = agentServiceClient.PollOnceGenerateAppResource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAppResourceAsync</summary>
+        public async Task GenerateAppResourceAsync()
+        {
+            // Snippet: GenerateAppResourceAsync(string, CallSettings)
+            // Additional: GenerateAppResourceAsync(string, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = await agentServiceClient.GenerateAppResourceAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = await agentServiceClient.PollOnceGenerateAppResourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAppResource</summary>
+        public void GenerateAppResourceResourceNames()
+        {
+            // Snippet: GenerateAppResource(AppName, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            AppName parent = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = agentServiceClient.GenerateAppResource(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = agentServiceClient.PollOnceGenerateAppResource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAppResourceAsync</summary>
+        public async Task GenerateAppResourceResourceNamesAsync()
+        {
+            // Snippet: GenerateAppResourceAsync(AppName, CallSettings)
+            // Additional: GenerateAppResourceAsync(AppName, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AppName parent = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            // Make the request
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> response = await agentServiceClient.GenerateAppResourceAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GenerateAppResourceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GenerateAppResourceResponse, GenerateAppResourceOperationMetadata> retrievedResponse = await agentServiceClient.PollOnceGenerateAppResourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GenerateAppResourceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListChangelogs</summary>
         public void ListChangelogsRequestObject()
         {

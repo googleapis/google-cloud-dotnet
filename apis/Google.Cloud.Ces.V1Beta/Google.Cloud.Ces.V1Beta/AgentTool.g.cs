@@ -26,16 +26,17 @@ namespace Google.Cloud.Ces.V1Beta {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9hZ2VudF90b29sLnByb3RvEhdn",
             "b29nbGUuY2xvdWQuY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJuCglBZ2Vu",
-            "dFRvb2wSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJ",
-            "QgPgQQESNAoKcm9vdF9hZ2VudBgDIAEoCUIg4EEB+kEaChhjZXMuZ29vZ2xl",
-            "YXBpcy5jb20vQWdlbnRCXgobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "Qg5BZ2VudFRvb2xQcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9h",
-            "cGl2MWJldGEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKhAQoJQWdl",
+            "bnRUb29sEhEKBG5hbWUYASABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgCIAEo",
+            "CUID4EEBEjYKCnJvb3RfYWdlbnQYAyABKAlCIhgB4EEB+kEaChhjZXMuZ29v",
+            "Z2xlYXBpcy5jb20vQWdlbnQSLwoFYWdlbnQYBCABKAlCIOBBAfpBGgoYY2Vz",
+            "Lmdvb2dsZWFwaXMuY29tL0FnZW50Ql4KG2NvbS5nb29nbGUuY2xvdWQuY2Vz",
+            "LnYxYmV0YUIOQWdlbnRUb29sUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9jZXMvYXBpdjFiZXRhL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentTool), global::Google.Cloud.Ces.V1Beta.AgentTool.Parser, new[]{ "Name", "Description", "RootAgent" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentTool), global::Google.Cloud.Ces.V1Beta.AgentTool.Parser, new[]{ "Name", "Description", "RootAgent", "Agent" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,6 +84,7 @@ namespace Google.Cloud.Ces.V1Beta {
       name_ = other.name_;
       description_ = other.description_;
       rootAgent_ = other.rootAgent_;
+      agent_ = other.agent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -126,15 +128,33 @@ namespace Google.Cloud.Ces.V1Beta {
     public const int RootAgentFieldNumber = 3;
     private string rootAgent_ = "";
     /// <summary>
-    /// Optional. The resource name of the root agent that is the entry point of
-    /// the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+    /// Optional. Deprecated: Use `agent` instead.
+    /// The resource name of the root agent that is the entry point of the tool.
+    /// Format: `projects/{project}/locations/{location}/agents/{agent}`
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootAgent {
       get { return rootAgent_; }
       set {
         rootAgent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "agent" field.</summary>
+    public const int AgentFieldNumber = 4;
+    private string agent_ = "";
+    /// <summary>
+    /// Optional. The resource name of the agent that is the entry point of the
+    /// tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Agent {
+      get { return agent_; }
+      set {
+        agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -156,6 +176,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (RootAgent != other.RootAgent) return false;
+      if (Agent != other.Agent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -166,6 +187,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (RootAgent.Length != 0) hash ^= RootAgent.GetHashCode();
+      if (Agent.Length != 0) hash ^= Agent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,6 +218,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(RootAgent);
       }
+      if (Agent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Agent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -218,6 +244,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(RootAgent);
       }
+      if (Agent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Agent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -236,6 +266,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (RootAgent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RootAgent);
+      }
+      if (Agent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Agent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -257,6 +290,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (other.RootAgent.Length != 0) {
         RootAgent = other.RootAgent;
+      }
+      if (other.Agent.Length != 0) {
+        Agent = other.Agent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,6 +325,10 @@ namespace Google.Cloud.Ces.V1Beta {
             RootAgent = input.ReadString();
             break;
           }
+          case 34: {
+            Agent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -318,6 +358,10 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 26: {
             RootAgent = input.ReadString();
+            break;
+          }
+          case 34: {
+            Agent = input.ReadString();
             break;
           }
         }

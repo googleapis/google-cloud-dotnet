@@ -124,6 +124,12 @@
                 "ExportAppAsync"
               ]
             },
+            "GenerateAppResource": {
+              "methods": [
+                "GenerateAppResource",
+                "GenerateAppResourceAsync"
+              ]
+            },
             "GetAgent": {
               "methods": [
                 "GetAgent",
