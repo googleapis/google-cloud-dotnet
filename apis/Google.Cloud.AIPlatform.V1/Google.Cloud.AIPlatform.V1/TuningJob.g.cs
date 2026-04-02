@@ -29,107 +29,126 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoo",
             "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvY29udGVudC5wcm90bxowZ29v",
             "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnByb3Rv",
-            "Gipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMv",
-            "c3RhdHVzLnByb3RvIo0JCglUdW5pbmdKb2ISFAoKYmFzZV9tb2RlbBgEIAEo",
-            "CUgAEkQKD3ByZV90dW5lZF9tb2RlbBgfIAEoCzIpLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlByZVR1bmVkTW9kZWxIABJSChZzdXBlcnZpc2VkX3R1",
-            "bmluZ19zcGVjGAUgASgLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "U3VwZXJ2aXNlZFR1bmluZ1NwZWNIARIUCgRuYW1lGAEgASgJQgbgQQjgQQMS",
-            "JQoYdHVuZWRfbW9kZWxfZGlzcGxheV9uYW1lGAIgASgJQgPgQQESGAoLZGVz",
-            "Y3JpcHRpb24YAyABKAlCA+BBARI4CgVzdGF0ZRgGIAEoDjIkLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkpvYlN0YXRlQgPgQQMSNAoLY3JlYXRlX3Rp",
-            "bWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoK",
-            "c3RhcnRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxIxCghlbmRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxImCgVlcnJvchgLIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzQgPgQQMSRgoGbGFiZWxzGAwgAygLMjEuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuVHVuaW5nSm9iLkxhYmVsc0VudHJ5QgPgQQESPQoK",
-            "ZXhwZXJpbWVudBgNIAEoCUIp4EED+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29tL0NvbnRleHQSQAoLdHVuZWRfbW9kZWwYDiABKAsyJi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5UdW5lZE1vZGVsQgPgQQMSSwoRdHVuaW5n",
-            "X2RhdGFfc3RhdHMYDyABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5UdW5pbmdEYXRhU3RhdHNCA+BBAxJDCg9lbmNyeXB0aW9uX3NwZWMYECAB",
-            "KAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3Bl",
-            "YxIXCg9zZXJ2aWNlX2FjY291bnQYFiABKAkaLQoLTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqAAepBfQojYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9UdW5pbmdKb2ISP3Byb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90dW5pbmdKb2JzL3t0dW5pbmdfam9i",
-            "fSoKdHVuaW5nSm9iczIJdHVuaW5nSm9iQg4KDHNvdXJjZV9tb2RlbEINCgt0",
-            "dW5pbmdfc3BlYyLOAQoKVHVuZWRNb2RlbBI2CgVtb2RlbBgBIAEoCUIn4EED",
-            "+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsEjwKCGVuZHBv",
-            "aW50GAIgASgJQirgQQP6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
-            "RW5kcG9pbnQSSgoLY2hlY2twb2ludHMYAyADKAsyMC5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5UdW5lZE1vZGVsQ2hlY2twb2ludEID4EEDIvICCiNT",
-            "dXBlcnZpc2VkVHVuaW5nRGF0YXNldERpc3RyaWJ1dGlvbhIQCgNzdW0YASAB",
-            "KANCA+BBAxIZCgxiaWxsYWJsZV9zdW0YCSABKANCA+BBAxIQCgNtaW4YAiAB",
-            "KAFCA+BBAxIQCgNtYXgYAyABKAFCA+BBAxIRCgRtZWFuGAQgASgBQgPgQQMS",
-            "EwoGbWVkaWFuGAUgASgBQgPgQQMSDwoCcDUYBiABKAFCA+BBAxIQCgNwOTUY",
-            "ByABKAFCA+BBAxJjCgdidWNrZXRzGAggAygLMk0uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuU3VwZXJ2aXNlZFR1bmluZ0RhdGFzZXREaXN0cmlidXRp",
-            "b24uRGF0YXNldEJ1Y2tldEID4EEDGkoKDURhdGFzZXRCdWNrZXQSEgoFY291",
-            "bnQYASABKAFCA+BBAxIRCgRsZWZ0GAIgASgBQgPgQQMSEgoFcmlnaHQYAyAB",
-            "KAFCA+BBAyL8BQoZU3VwZXJ2aXNlZFR1bmluZ0RhdGFTdGF0cxIpChx0dW5p",
-            "bmdfZGF0YXNldF9leGFtcGxlX2NvdW50GAEgASgDQgPgQQMSKQocdG90YWxf",
-            "dHVuaW5nX2NoYXJhY3Rlcl9jb3VudBgCIAEoA0ID4EEDEi0KHnRvdGFsX2Jp",
-            "bGxhYmxlX2NoYXJhY3Rlcl9jb3VudBgDIAEoA0IFGAHgQQMSJwoadG90YWxf",
-            "YmlsbGFibGVfdG9rZW5fY291bnQYCSABKANCA+BBAxIeChF0dW5pbmdfc3Rl",
-            "cF9jb3VudBgEIAEoA0ID4EEDEmsKHXVzZXJfaW5wdXRfdG9rZW5fZGlzdHJp",
-            "YnV0aW9uGAUgASgLMj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3Vw",
-            "ZXJ2aXNlZFR1bmluZ0RhdGFzZXREaXN0cmlidXRpb25CA+BBAxJsCh51c2Vy",
-            "X291dHB1dF90b2tlbl9kaXN0cmlidXRpb24YBiABKAsyPy5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5TdXBlcnZpc2VkVHVuaW5nRGF0YXNldERpc3Ry",
-            "aWJ1dGlvbkID4EEDEnMKJXVzZXJfbWVzc2FnZV9wZXJfZXhhbXBsZV9kaXN0",
-            "cmlidXRpb24YByABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
-            "dXBlcnZpc2VkVHVuaW5nRGF0YXNldERpc3RyaWJ1dGlvbkID4EEDEkcKFXVz",
-            "ZXJfZGF0YXNldF9leGFtcGxlcxgIIAMoCzIjLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkNvbnRlbnRCA+BBAxIqCh10b3RhbF90cnVuY2F0ZWRfZXhh",
-            "bXBsZV9jb3VudBgKIAEoA0ID4EEDEiYKGXRydW5jYXRlZF9leGFtcGxlX2lu",
-            "ZGljZXMYCyADKANCA+BBAxIkChdkcm9wcGVkX2V4YW1wbGVfcmVhc29ucxgM",
-            "IAMoCUID4EEDIoUBCg9UdW5pbmdEYXRhU3RhdHMSXQocc3VwZXJ2aXNlZF90",
-            "dW5pbmdfZGF0YV9zdGF0cxgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLlN1cGVydmlzZWRUdW5pbmdEYXRhU3RhdHNIAEITChF0dW5pbmdf",
-            "ZGF0YV9zdGF0cyL6AgoZU3VwZXJ2aXNlZEh5cGVyUGFyYW1ldGVycxIYCgtl",
-            "cG9jaF9jb3VudBgBIAEoA0ID4EEBEiUKGGxlYXJuaW5nX3JhdGVfbXVsdGlw",
-            "bGllchgCIAEoAUID4EEBElwKDGFkYXB0ZXJfc2l6ZRgDIAEoDjJBLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN1cGVydmlzZWRIeXBlclBhcmFtZXRl",
-            "cnMuQWRhcHRlclNpemVCA+BBASK9AQoLQWRhcHRlclNpemUSHAoYQURBUFRF",
-            "Ul9TSVpFX1VOU1BFQ0lGSUVEEAASFAoQQURBUFRFUl9TSVpFX09ORRABEhQK",
-            "EEFEQVBURVJfU0laRV9UV08QBhIVChFBREFQVEVSX1NJWkVfRk9VUhACEhYK",
-            "EkFEQVBURVJfU0laRV9FSUdIVBADEhgKFEFEQVBURVJfU0laRV9TSVhURUVO",
-            "EAQSGwoXQURBUFRFUl9TSVpFX1RISVJUWV9UV08QBSLeAQoUU3VwZXJ2aXNl",
-            "ZFR1bmluZ1NwZWMSIQoUdHJhaW5pbmdfZGF0YXNldF91cmkYASABKAlCA+BB",
-            "AhIjChZ2YWxpZGF0aW9uX2RhdGFzZXRfdXJpGAIgASgJQgPgQQESVAoQaHlw",
-            "ZXJfcGFyYW1ldGVycxgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlN1cGVydmlzZWRIeXBlclBhcmFtZXRlcnNCA+BBARIoChtleHBvcnRf",
-            "bGFzdF9jaGVja3BvaW50X29ubHkYBiABKAhCA+BBASLjAQoNVHVuZWRNb2Rl",
-            "bFJlZhI7Cgt0dW5lZF9tb2RlbBgBIAEoCUIk+kEhCh9haXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29tL01vZGVsSAASPgoKdHVuaW5nX2pvYhgCIAEoCUIo+kEl",
-            "CiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1R1bmluZ0pvYkgAEkIKDHBp",
-            "cGVsaW5lX2pvYhgDIAEoCUIq+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
-            "Y29tL1BpcGVsaW5lSm9iSABCEQoPdHVuZWRfbW9kZWxfcmVmIlwKFFR1bmVk",
-            "TW9kZWxDaGVja3BvaW50EhUKDWNoZWNrcG9pbnRfaWQYASABKAkSDQoFZXBv",
-            "Y2gYAiABKAMSDAoEc3RlcBgDIAEoAxIQCghlbmRwb2ludBgEIAEoCSKEAQoN",
-            "UHJlVHVuZWRNb2RlbBI+ChB0dW5lZF9tb2RlbF9uYW1lGAEgASgJQiT6QSEK",
-            "H2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSGgoNY2hlY2twb2lu",
-            "dF9pZBgCIAEoCUID4EEBEhcKCmJhc2VfbW9kZWwYAyABKAlCA+BBA0LMAQoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg5UdW5pbmdKb2JQcm90",
-            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlw",
-            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "GjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9ldmFsdWF0aW9uX3NlcnZp",
+            "Y2UucHJvdG8aKmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2pvYl9zdGF0",
+            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29v",
+            "Z2xlL3JwYy9zdGF0dXMucHJvdG8i4QkKCVR1bmluZ0pvYhIUCgpiYXNlX21v",
+            "ZGVsGAQgASgJSAASRAoPcHJlX3R1bmVkX21vZGVsGB8gASgLMikuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuUHJlVHVuZWRNb2RlbEgAElIKFnN1cGVy",
+            "dmlzZWRfdHVuaW5nX3NwZWMYBSABKAsyMC5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5TdXBlcnZpc2VkVHVuaW5nU3BlY0gBEhQKBG5hbWUYASABKAlC",
+            "BuBBCOBBAxIlChh0dW5lZF9tb2RlbF9kaXNwbGF5X25hbWUYAiABKAlCA+BB",
+            "ARIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEjgKBXN0YXRlGAYgASgOMiQu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSm9iU3RhdGVCA+BBAxI0Cgtj",
+            "cmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxIzCgpzdGFydF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiYKBWVycm9yGAsgASgLMhIu",
+            "Z29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJGCgZsYWJlbHMYDCADKAsyMS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UdW5pbmdKb2IuTGFiZWxzRW50cnlC",
+            "A+BBARI9CgpleHBlcmltZW50GA0gASgJQingQQP6QSMKIWFpcGxhdGZvcm0u",
+            "Z29vZ2xlYXBpcy5jb20vQ29udGV4dBJACgt0dW5lZF9tb2RlbBgOIAEoCzIm",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlR1bmVkTW9kZWxCA+BBAxJL",
+            "ChF0dW5pbmdfZGF0YV9zdGF0cxgPIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlR1bmluZ0RhdGFTdGF0c0ID4EEDEkMKD2VuY3J5cHRpb25f",
+            "c3BlYxgQIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5",
+            "cHRpb25TcGVjEhcKD3NlcnZpY2VfYWNjb3VudBgWIAEoCRJSChVldmFsdWF0",
+            "ZV9kYXRhc2V0X3J1bnMYICADKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5FdmFsdWF0ZURhdGFzZXRSdW5CA+BBAxotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOoAB6kF9CiNhaXBsYXRm",
+            "b3JtLmdvb2dsZWFwaXMuY29tL1R1bmluZ0pvYhI/cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3R1bmluZ0pvYnMve3R1bmluZ19q",
+            "b2J9Kgp0dW5pbmdKb2JzMgl0dW5pbmdKb2JCDgoMc291cmNlX21vZGVsQg0K",
+            "C3R1bmluZ19zcGVjIs4BCgpUdW5lZE1vZGVsEjYKBW1vZGVsGAEgASgJQifg",
+            "QQP6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSPAoIZW5k",
+            "cG9pbnQYAiABKAlCKuBBA/pBJAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9FbmRwb2ludBJKCgtjaGVja3BvaW50cxgDIAMoCzIwLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlR1bmVkTW9kZWxDaGVja3BvaW50QgPgQQMi8gIK",
+            "I1N1cGVydmlzZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9uEhAKA3N1bRgB",
+            "IAEoA0ID4EEDEhkKDGJpbGxhYmxlX3N1bRgJIAEoA0ID4EEDEhAKA21pbhgC",
+            "IAEoAUID4EEDEhAKA21heBgDIAEoAUID4EEDEhEKBG1lYW4YBCABKAFCA+BB",
+            "AxITCgZtZWRpYW4YBSABKAFCA+BBAxIPCgJwNRgGIAEoAUID4EEDEhAKA3A5",
+            "NRgHIAEoAUID4EEDEmMKB2J1Y2tldHMYCCADKAsyTS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5TdXBlcnZpc2VkVHVuaW5nRGF0YXNldERpc3RyaWJ1",
+            "dGlvbi5EYXRhc2V0QnVja2V0QgPgQQMaSgoNRGF0YXNldEJ1Y2tldBISCgVj",
+            "b3VudBgBIAEoAUID4EEDEhEKBGxlZnQYAiABKAFCA+BBAxISCgVyaWdodBgD",
+            "IAEoAUID4EEDIvwFChlTdXBlcnZpc2VkVHVuaW5nRGF0YVN0YXRzEikKHHR1",
+            "bmluZ19kYXRhc2V0X2V4YW1wbGVfY291bnQYASABKANCA+BBAxIpChx0b3Rh",
+            "bF90dW5pbmdfY2hhcmFjdGVyX2NvdW50GAIgASgDQgPgQQMSLQoedG90YWxf",
+            "YmlsbGFibGVfY2hhcmFjdGVyX2NvdW50GAMgASgDQgUYAeBBAxInChp0b3Rh",
+            "bF9iaWxsYWJsZV90b2tlbl9jb3VudBgJIAEoA0ID4EEDEh4KEXR1bmluZ19z",
+            "dGVwX2NvdW50GAQgASgDQgPgQQMSawoddXNlcl9pbnB1dF90b2tlbl9kaXN0",
+            "cmlidXRpb24YBSABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
+            "dXBlcnZpc2VkVHVuaW5nRGF0YXNldERpc3RyaWJ1dGlvbkID4EEDEmwKHnVz",
+            "ZXJfb3V0cHV0X3Rva2VuX2Rpc3RyaWJ1dGlvbhgGIAEoCzI/Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlN1cGVydmlzZWRUdW5pbmdEYXRhc2V0RGlz",
+            "dHJpYnV0aW9uQgPgQQMScwoldXNlcl9tZXNzYWdlX3Blcl9leGFtcGxlX2Rp",
+            "c3RyaWJ1dGlvbhgHIAEoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlN1cGVydmlzZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9uQgPgQQMSRwoV",
+            "dXNlcl9kYXRhc2V0X2V4YW1wbGVzGAggAygLMiMuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuQ29udGVudEID4EEDEioKHXRvdGFsX3RydW5jYXRlZF9l",
+            "eGFtcGxlX2NvdW50GAogASgDQgPgQQMSJgoZdHJ1bmNhdGVkX2V4YW1wbGVf",
+            "aW5kaWNlcxgLIAMoA0ID4EEDEiQKF2Ryb3BwZWRfZXhhbXBsZV9yZWFzb25z",
+            "GAwgAygJQgPgQQMihQEKD1R1bmluZ0RhdGFTdGF0cxJdChxzdXBlcnZpc2Vk",
+            "X3R1bmluZ19kYXRhX3N0YXRzGAEgASgLMjUuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuU3VwZXJ2aXNlZFR1bmluZ0RhdGFTdGF0c0gAQhMKEXR1bmlu",
+            "Z19kYXRhX3N0YXRzIvoCChlTdXBlcnZpc2VkSHlwZXJQYXJhbWV0ZXJzEhgK",
+            "C2Vwb2NoX2NvdW50GAEgASgDQgPgQQESJQoYbGVhcm5pbmdfcmF0ZV9tdWx0",
+            "aXBsaWVyGAIgASgBQgPgQQESXAoMYWRhcHRlcl9zaXplGAMgASgOMkEuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3VwZXJ2aXNlZEh5cGVyUGFyYW1l",
+            "dGVycy5BZGFwdGVyU2l6ZUID4EEBIr0BCgtBZGFwdGVyU2l6ZRIcChhBREFQ",
+            "VEVSX1NJWkVfVU5TUEVDSUZJRUQQABIUChBBREFQVEVSX1NJWkVfT05FEAES",
+            "FAoQQURBUFRFUl9TSVpFX1RXTxAGEhUKEUFEQVBURVJfU0laRV9GT1VSEAIS",
+            "FgoSQURBUFRFUl9TSVpFX0VJR0hUEAMSGAoUQURBUFRFUl9TSVpFX1NJWFRF",
+            "RU4QBBIbChdBREFQVEVSX1NJWkVfVEhJUlRZX1RXTxAFIqwCChRTdXBlcnZp",
+            "c2VkVHVuaW5nU3BlYxIhChR0cmFpbmluZ19kYXRhc2V0X3VyaRgBIAEoCUID",
+            "4EECEiMKFnZhbGlkYXRpb25fZGF0YXNldF91cmkYAiABKAlCA+BBARJUChBo",
+            "eXBlcl9wYXJhbWV0ZXJzGAMgASgLMjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU3VwZXJ2aXNlZEh5cGVyUGFyYW1ldGVyc0ID4EEBEigKG2V4cG9y",
+            "dF9sYXN0X2NoZWNrcG9pbnRfb25seRgGIAEoCEID4EEBEkwKEWV2YWx1YXRp",
+            "b25fY29uZmlnGAUgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "RXZhbHVhdGlvbkNvbmZpZ0ID4EEBIuMBCg1UdW5lZE1vZGVsUmVmEjsKC3R1",
+            "bmVkX21vZGVsGAEgASgJQiT6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
+            "b20vTW9kZWxIABI+Cgp0dW5pbmdfam9iGAIgASgJQij6QSUKI2FpcGxhdGZv",
+            "cm0uZ29vZ2xlYXBpcy5jb20vVHVuaW5nSm9iSAASQgoMcGlwZWxpbmVfam9i",
+            "GAMgASgJQir6QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUGlwZWxp",
+            "bmVKb2JIAEIRCg90dW5lZF9tb2RlbF9yZWYitgIKEEV2YWx1YXRpb25Db25m",
+            "aWcSOAoHbWV0cmljcxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLk1ldHJpY0ID4EECEkQKDW91dHB1dF9jb25maWcYAiABKAsyKC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5PdXRwdXRDb25maWdCA+BBAhJKChBh",
+            "dXRvcmF0ZXJfY29uZmlnGAMgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuQXV0b3JhdGVyQ29uZmlnQgPgQQESVgobaW5mZXJlbmNlX2dlbmVy",
+            "YXRpb25fY29uZmlnGAUgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuR2VuZXJhdGlvbkNvbmZpZ0ID4EEBIvEBChJFdmFsdWF0ZURhdGFzZXRS",
+            "dW4SHQoOb3BlcmF0aW9uX25hbWUYASABKAlCBRgB4EEDEhsKDmV2YWx1YXRp",
+            "b25fcnVuGAUgASgJQgPgQQMSGgoNY2hlY2twb2ludF9pZBgCIAEoCUID4EED",
+            "ElsKGWV2YWx1YXRlX2RhdGFzZXRfcmVzcG9uc2UYAyABKAsyMy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5FdmFsdWF0ZURhdGFzZXRSZXNwb25zZUID",
+            "4EEDEiYKBWVycm9yGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAyJc",
+            "ChRUdW5lZE1vZGVsQ2hlY2twb2ludBIVCg1jaGVja3BvaW50X2lkGAEgASgJ",
+            "Eg0KBWVwb2NoGAIgASgDEgwKBHN0ZXAYAyABKAMSEAoIZW5kcG9pbnQYBCAB",
+            "KAkihAEKDVByZVR1bmVkTW9kZWwSPgoQdHVuZWRfbW9kZWxfbmFtZRgBIAEo",
+            "CUIk+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsEhoKDWNo",
+            "ZWNrcG9pbnRfaWQYAiABKAlCA+BBARIXCgpiYXNlX21vZGVsGAMgASgJQgPg",
+            "QQNCzAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIOVHVuaW5n",
+            "Sm9iUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2Fw",
+            "aXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQu",
+            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
+            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EvaluationServiceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TuningJob), global::Google.Cloud.AIPlatform.V1.TuningJob.Parser, new[]{ "BaseModel", "PreTunedModel", "SupervisedTuningSpec", "Name", "TunedModelDisplayName", "Description", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "Experiment", "TunedModel", "TuningDataStats", "EncryptionSpec", "ServiceAccount" }, new[]{ "SourceModel", "TuningSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TuningJob), global::Google.Cloud.AIPlatform.V1.TuningJob.Parser, new[]{ "BaseModel", "PreTunedModel", "SupervisedTuningSpec", "Name", "TunedModelDisplayName", "Description", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "Experiment", "TunedModel", "TuningDataStats", "EncryptionSpec", "ServiceAccount", "EvaluateDatasetRuns" }, new[]{ "SourceModel", "TuningSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TunedModel), global::Google.Cloud.AIPlatform.V1.TunedModel.Parser, new[]{ "Model", "Endpoint", "Checkpoints" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningDatasetDistribution), global::Google.Cloud.AIPlatform.V1.SupervisedTuningDatasetDistribution.Parser, new[]{ "Sum", "BillableSum", "Min", "Max", "Mean", "Median", "P5", "P95", "Buckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningDatasetDistribution.Types.DatasetBucket), global::Google.Cloud.AIPlatform.V1.SupervisedTuningDatasetDistribution.Types.DatasetBucket.Parser, new[]{ "Count", "Left", "Right" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningDataStats), global::Google.Cloud.AIPlatform.V1.SupervisedTuningDataStats.Parser, new[]{ "TuningDatasetExampleCount", "TotalTuningCharacterCount", "TotalBillableCharacterCount", "TotalBillableTokenCount", "TuningStepCount", "UserInputTokenDistribution", "UserOutputTokenDistribution", "UserMessagePerExampleDistribution", "UserDatasetExamples", "TotalTruncatedExampleCount", "TruncatedExampleIndices", "DroppedExampleReasons" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TuningDataStats), global::Google.Cloud.AIPlatform.V1.TuningDataStats.Parser, new[]{ "SupervisedTuningDataStats" }, new[]{ "TuningDataStats" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters), global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "AdapterSize" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters.Types.AdapterSize) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters", "ExportLastCheckpointOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters", "ExportLastCheckpointOnly", "EvaluationConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TunedModelRef), global::Google.Cloud.AIPlatform.V1.TunedModelRef.Parser, new[]{ "TunedModel", "TuningJob", "PipelineJob" }, new[]{ "TunedModelRef" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EvaluationConfig), global::Google.Cloud.AIPlatform.V1.EvaluationConfig.Parser, new[]{ "Metrics", "OutputConfig", "AutoraterConfig", "InferenceGenerationConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun), global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun.Parser, new[]{ "OperationName", "EvaluationRun", "CheckpointId", "EvaluateDatasetResponse", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TunedModelCheckpoint), global::Google.Cloud.AIPlatform.V1.TunedModelCheckpoint.Parser, new[]{ "CheckpointId", "Epoch", "Step", "Endpoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PreTunedModel), global::Google.Cloud.AIPlatform.V1.PreTunedModel.Parser, new[]{ "TunedModelName", "CheckpointId", "BaseModel" }, null, null, null, null)
           }));
@@ -191,6 +210,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       tuningDataStats_ = other.tuningDataStats_ != null ? other.tuningDataStats_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
+      evaluateDatasetRuns_ = other.evaluateDatasetRuns_.Clone();
       switch (other.SourceModelCase) {
         case SourceModelOneofCase.BaseModel:
           BaseModel = other.BaseModel;
@@ -534,6 +554,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "evaluate_dataset_runs" field.</summary>
+    public const int EvaluateDatasetRunsFieldNumber = 32;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun> _repeated_evaluateDatasetRuns_codec
+        = pb::FieldCodec.ForMessage(258, global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun> evaluateDatasetRuns_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun>();
+    /// <summary>
+    /// Output only. Evaluation runs for the Tuning Job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EvaluateDatasetRun> EvaluateDatasetRuns {
+      get { return evaluateDatasetRuns_; }
+    }
+
     private object sourceModel_;
     /// <summary>Enum of possible cases for the "source_model" oneof.</summary>
     public enum SourceModelOneofCase {
@@ -608,6 +642,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(TuningDataStats, other.TuningDataStats)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
+      if(!evaluateDatasetRuns_.Equals(other.evaluateDatasetRuns_)) return false;
       if (SourceModelCase != other.SourceModelCase) return false;
       if (TuningSpecCase != other.TuningSpecCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -635,6 +670,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (tuningDataStats_ != null) hash ^= TuningDataStats.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      hash ^= evaluateDatasetRuns_.GetHashCode();
       hash ^= (int) sourceModelCase_;
       hash ^= (int) tuningSpecCase_;
       if (_unknownFields != null) {
@@ -724,6 +760,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(250, 1);
         output.WriteMessage(PreTunedModel);
       }
+      evaluateDatasetRuns_.WriteTo(output, _repeated_evaluateDatasetRuns_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -803,6 +840,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(250, 1);
         output.WriteMessage(PreTunedModel);
       }
+      evaluateDatasetRuns_.WriteTo(ref output, _repeated_evaluateDatasetRuns_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -865,6 +903,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
+      size += evaluateDatasetRuns_.CalculateSize(_repeated_evaluateDatasetRuns_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -944,6 +983,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
       }
+      evaluateDatasetRuns_.Add(other.evaluateDatasetRuns_);
       switch (other.SourceModelCase) {
         case SourceModelOneofCase.BaseModel:
           BaseModel = other.BaseModel;
@@ -1090,6 +1130,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             PreTunedModel = subBuilder;
             break;
           }
+          case 258: {
+            evaluateDatasetRuns_.AddEntriesFrom(input, _repeated_evaluateDatasetRuns_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1213,6 +1257,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             PreTunedModel = subBuilder;
+            break;
+          }
+          case 258: {
+            evaluateDatasetRuns_.AddEntriesFrom(ref input, _repeated_evaluateDatasetRuns_codec);
             break;
           }
         }
@@ -3579,6 +3627,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       validationDatasetUri_ = other.validationDatasetUri_;
       hyperParameters_ = other.hyperParameters_ != null ? other.hyperParameters_.Clone() : null;
       exportLastCheckpointOnly_ = other.exportLastCheckpointOnly_;
+      evaluationConfig_ = other.evaluationConfig_ != null ? other.evaluationConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3652,6 +3701,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "evaluation_config" field.</summary>
+    public const int EvaluationConfigFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.EvaluationConfig evaluationConfig_;
+    /// <summary>
+    /// Optional. Evaluation Config for Tuning Job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EvaluationConfig EvaluationConfig {
+      get { return evaluationConfig_; }
+      set {
+        evaluationConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3671,6 +3735,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ValidationDatasetUri != other.ValidationDatasetUri) return false;
       if (!object.Equals(HyperParameters, other.HyperParameters)) return false;
       if (ExportLastCheckpointOnly != other.ExportLastCheckpointOnly) return false;
+      if (!object.Equals(EvaluationConfig, other.EvaluationConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3682,6 +3747,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ValidationDatasetUri.Length != 0) hash ^= ValidationDatasetUri.GetHashCode();
       if (hyperParameters_ != null) hash ^= HyperParameters.GetHashCode();
       if (ExportLastCheckpointOnly != false) hash ^= ExportLastCheckpointOnly.GetHashCode();
+      if (evaluationConfig_ != null) hash ^= EvaluationConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3712,6 +3778,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(HyperParameters);
       }
+      if (evaluationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EvaluationConfig);
+      }
       if (ExportLastCheckpointOnly != false) {
         output.WriteRawTag(48);
         output.WriteBool(ExportLastCheckpointOnly);
@@ -3737,6 +3807,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (hyperParameters_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(HyperParameters);
+      }
+      if (evaluationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EvaluationConfig);
       }
       if (ExportLastCheckpointOnly != false) {
         output.WriteRawTag(48);
@@ -3764,6 +3838,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ExportLastCheckpointOnly != false) {
         size += 1 + 1;
       }
+      if (evaluationConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvaluationConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3790,6 +3867,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.ExportLastCheckpointOnly != false) {
         ExportLastCheckpointOnly = other.ExportLastCheckpointOnly;
+      }
+      if (other.evaluationConfig_ != null) {
+        if (evaluationConfig_ == null) {
+          EvaluationConfig = new global::Google.Cloud.AIPlatform.V1.EvaluationConfig();
+        }
+        EvaluationConfig.MergeFrom(other.EvaluationConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3823,6 +3906,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               HyperParameters = new global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters();
             }
             input.ReadMessage(HyperParameters);
+            break;
+          }
+          case 42: {
+            if (evaluationConfig_ == null) {
+              EvaluationConfig = new global::Google.Cloud.AIPlatform.V1.EvaluationConfig();
+            }
+            input.ReadMessage(EvaluationConfig);
             break;
           }
           case 48: {
@@ -3861,6 +3951,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               HyperParameters = new global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters();
             }
             input.ReadMessage(HyperParameters);
+            break;
+          }
+          case 42: {
+            if (evaluationConfig_ == null) {
+              EvaluationConfig = new global::Google.Cloud.AIPlatform.V1.EvaluationConfig();
+            }
+            input.ReadMessage(EvaluationConfig);
             break;
           }
           case 48: {
@@ -4239,6 +4336,733 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Evaluation Config for Tuning Job.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EvaluationConfig : pb::IMessage<EvaluationConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EvaluationConfig> _parser = new pb::MessageParser<EvaluationConfig>(() => new EvaluationConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EvaluationConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationConfig(EvaluationConfig other) : this() {
+      metrics_ = other.metrics_.Clone();
+      outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
+      autoraterConfig_ = other.autoraterConfig_ != null ? other.autoraterConfig_.Clone() : null;
+      inferenceGenerationConfig_ = other.inferenceGenerationConfig_ != null ? other.inferenceGenerationConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationConfig Clone() {
+      return new EvaluationConfig(this);
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Metric> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.Metric.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Metric> metrics_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Metric>();
+    /// <summary>
+    /// Required. The metrics used for evaluation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Metric> Metrics {
+      get { return metrics_; }
+    }
+
+    /// <summary>Field number for the "output_config" field.</summary>
+    public const int OutputConfigFieldNumber = 2;
+    private global::Google.Cloud.AIPlatform.V1.OutputConfig outputConfig_;
+    /// <summary>
+    /// Required. Config for evaluation output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.OutputConfig OutputConfig {
+      get { return outputConfig_; }
+      set {
+        outputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "autorater_config" field.</summary>
+    public const int AutoraterConfigFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1.AutoraterConfig autoraterConfig_;
+    /// <summary>
+    /// Optional. Autorater config for evaluation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.AutoraterConfig AutoraterConfig {
+      get { return autoraterConfig_; }
+      set {
+        autoraterConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inference_generation_config" field.</summary>
+    public const int InferenceGenerationConfigFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.GenerationConfig inferenceGenerationConfig_;
+    /// <summary>
+    /// Optional. Configuration options for inference generation and outputs.
+    /// If not set, default generation parameters are used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenerationConfig InferenceGenerationConfig {
+      get { return inferenceGenerationConfig_; }
+      set {
+        inferenceGenerationConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EvaluationConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EvaluationConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!metrics_.Equals(other.metrics_)) return false;
+      if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
+      if (!object.Equals(AutoraterConfig, other.AutoraterConfig)) return false;
+      if (!object.Equals(InferenceGenerationConfig, other.InferenceGenerationConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= metrics_.GetHashCode();
+      if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
+      if (autoraterConfig_ != null) hash ^= AutoraterConfig.GetHashCode();
+      if (inferenceGenerationConfig_ != null) hash ^= InferenceGenerationConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (outputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputConfig);
+      }
+      if (autoraterConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AutoraterConfig);
+      }
+      if (inferenceGenerationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InferenceGenerationConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (outputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputConfig);
+      }
+      if (autoraterConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AutoraterConfig);
+      }
+      if (inferenceGenerationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InferenceGenerationConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (outputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
+      }
+      if (autoraterConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoraterConfig);
+      }
+      if (inferenceGenerationConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InferenceGenerationConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EvaluationConfig other) {
+      if (other == null) {
+        return;
+      }
+      metrics_.Add(other.metrics_);
+      if (other.outputConfig_ != null) {
+        if (outputConfig_ == null) {
+          OutputConfig = new global::Google.Cloud.AIPlatform.V1.OutputConfig();
+        }
+        OutputConfig.MergeFrom(other.OutputConfig);
+      }
+      if (other.autoraterConfig_ != null) {
+        if (autoraterConfig_ == null) {
+          AutoraterConfig = new global::Google.Cloud.AIPlatform.V1.AutoraterConfig();
+        }
+        AutoraterConfig.MergeFrom(other.AutoraterConfig);
+      }
+      if (other.inferenceGenerationConfig_ != null) {
+        if (inferenceGenerationConfig_ == null) {
+          InferenceGenerationConfig = new global::Google.Cloud.AIPlatform.V1.GenerationConfig();
+        }
+        InferenceGenerationConfig.MergeFrom(other.InferenceGenerationConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 18: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.AIPlatform.V1.OutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+          case 26: {
+            if (autoraterConfig_ == null) {
+              AutoraterConfig = new global::Google.Cloud.AIPlatform.V1.AutoraterConfig();
+            }
+            input.ReadMessage(AutoraterConfig);
+            break;
+          }
+          case 42: {
+            if (inferenceGenerationConfig_ == null) {
+              InferenceGenerationConfig = new global::Google.Cloud.AIPlatform.V1.GenerationConfig();
+            }
+            input.ReadMessage(InferenceGenerationConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+            break;
+          }
+          case 18: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.AIPlatform.V1.OutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+          case 26: {
+            if (autoraterConfig_ == null) {
+              AutoraterConfig = new global::Google.Cloud.AIPlatform.V1.AutoraterConfig();
+            }
+            input.ReadMessage(AutoraterConfig);
+            break;
+          }
+          case 42: {
+            if (inferenceGenerationConfig_ == null) {
+              InferenceGenerationConfig = new global::Google.Cloud.AIPlatform.V1.GenerationConfig();
+            }
+            input.ReadMessage(InferenceGenerationConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Evaluate Dataset Run Result for Tuning Job.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EvaluateDatasetRun : pb::IMessage<EvaluateDatasetRun>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EvaluateDatasetRun> _parser = new pb::MessageParser<EvaluateDatasetRun>(() => new EvaluateDatasetRun());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EvaluateDatasetRun> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluateDatasetRun() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluateDatasetRun(EvaluateDatasetRun other) : this() {
+      operationName_ = other.operationName_;
+      evaluationRun_ = other.evaluationRun_;
+      checkpointId_ = other.checkpointId_;
+      evaluateDatasetResponse_ = other.evaluateDatasetResponse_ != null ? other.evaluateDatasetResponse_.Clone() : null;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluateDatasetRun Clone() {
+      return new EvaluateDatasetRun(this);
+    }
+
+    /// <summary>Field number for the "operation_name" field.</summary>
+    public const int OperationNameFieldNumber = 1;
+    private string operationName_ = "";
+    /// <summary>
+    /// Output only. Deprecated: The updated architecture uses evaluation_run
+    /// instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OperationName {
+      get { return operationName_; }
+      set {
+        operationName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "evaluation_run" field.</summary>
+    public const int EvaluationRunFieldNumber = 5;
+    private string evaluationRun_ = "";
+    /// <summary>
+    /// Output only. The resource name of the evaluation run. Format:
+    /// `projects/{project}/locations/{location}/evaluationRuns/{evaluation_run_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EvaluationRun {
+      get { return evaluationRun_; }
+      set {
+        evaluationRun_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "checkpoint_id" field.</summary>
+    public const int CheckpointIdFieldNumber = 2;
+    private string checkpointId_ = "";
+    /// <summary>
+    /// Output only. The checkpoint id used in the evaluation run. Only populated
+    /// when evaluating checkpoints.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CheckpointId {
+      get { return checkpointId_; }
+      set {
+        checkpointId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "evaluate_dataset_response" field.</summary>
+    public const int EvaluateDatasetResponseFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1.EvaluateDatasetResponse evaluateDatasetResponse_;
+    /// <summary>
+    /// Output only. Results for EvaluationService.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EvaluateDatasetResponse EvaluateDatasetResponse {
+      get { return evaluateDatasetResponse_; }
+      set {
+        evaluateDatasetResponse_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 4;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. The error of the evaluation run if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EvaluateDatasetRun);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EvaluateDatasetRun other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OperationName != other.OperationName) return false;
+      if (EvaluationRun != other.EvaluationRun) return false;
+      if (CheckpointId != other.CheckpointId) return false;
+      if (!object.Equals(EvaluateDatasetResponse, other.EvaluateDatasetResponse)) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (OperationName.Length != 0) hash ^= OperationName.GetHashCode();
+      if (EvaluationRun.Length != 0) hash ^= EvaluationRun.GetHashCode();
+      if (CheckpointId.Length != 0) hash ^= CheckpointId.GetHashCode();
+      if (evaluateDatasetResponse_ != null) hash ^= EvaluateDatasetResponse.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (OperationName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OperationName);
+      }
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CheckpointId);
+      }
+      if (evaluateDatasetResponse_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EvaluateDatasetResponse);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Error);
+      }
+      if (EvaluationRun.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(EvaluationRun);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OperationName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OperationName);
+      }
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CheckpointId);
+      }
+      if (evaluateDatasetResponse_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EvaluateDatasetResponse);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Error);
+      }
+      if (EvaluationRun.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(EvaluationRun);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (OperationName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OperationName);
+      }
+      if (EvaluationRun.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EvaluationRun);
+      }
+      if (CheckpointId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckpointId);
+      }
+      if (evaluateDatasetResponse_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvaluateDatasetResponse);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EvaluateDatasetRun other) {
+      if (other == null) {
+        return;
+      }
+      if (other.OperationName.Length != 0) {
+        OperationName = other.OperationName;
+      }
+      if (other.EvaluationRun.Length != 0) {
+        EvaluationRun = other.EvaluationRun;
+      }
+      if (other.CheckpointId.Length != 0) {
+        CheckpointId = other.CheckpointId;
+      }
+      if (other.evaluateDatasetResponse_ != null) {
+        if (evaluateDatasetResponse_ == null) {
+          EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1.EvaluateDatasetResponse();
+        }
+        EvaluateDatasetResponse.MergeFrom(other.EvaluateDatasetResponse);
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            OperationName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CheckpointId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (evaluateDatasetResponse_ == null) {
+              EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1.EvaluateDatasetResponse();
+            }
+            input.ReadMessage(EvaluateDatasetResponse);
+            break;
+          }
+          case 34: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 42: {
+            EvaluationRun = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OperationName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CheckpointId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (evaluateDatasetResponse_ == null) {
+              EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1.EvaluateDatasetResponse();
+            }
+            input.ReadMessage(EvaluateDatasetResponse);
+            break;
+          }
+          case 34: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 42: {
+            EvaluationRun = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// TunedModelCheckpoint for the Tuned Model of a Tuning Job.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4256,7 +5080,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4581,7 +5405,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
