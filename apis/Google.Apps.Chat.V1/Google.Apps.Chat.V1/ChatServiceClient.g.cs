@@ -81,6 +81,13 @@ namespace Google.Apps.Chat.V1
             ListSpaceEventsSettings = existing.ListSpaceEventsSettings;
             GetSpaceNotificationSettingSettings = existing.GetSpaceNotificationSettingSettings;
             UpdateSpaceNotificationSettingSettings = existing.UpdateSpaceNotificationSettingSettings;
+            CreateSectionSettings = existing.CreateSectionSettings;
+            DeleteSectionSettings = existing.DeleteSectionSettings;
+            UpdateSectionSettings = existing.UpdateSectionSettings;
+            ListSectionsSettings = existing.ListSectionsSettings;
+            PositionSectionSettings = existing.PositionSectionSettings;
+            ListSectionItemsSettings = existing.ListSectionItemsSettings;
+            MoveSectionItemSettings = existing.MoveSectionItemSettings;
             OnCopy(existing);
         }
 
@@ -718,6 +725,132 @@ namespace Google.Apps.Chat.V1
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSpaceNotificationSettingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.CreateSection</c> and <c>ChatServiceClient.CreateSectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.DeleteSection</c> and <c>ChatServiceClient.DeleteSectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.UpdateSection</c> and <c>ChatServiceClient.UpdateSectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.ListSections</c> and <c>ChatServiceClient.ListSectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.PositionSection</c> and <c>ChatServiceClient.PositionSectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PositionSectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.ListSectionItems</c> and <c>ChatServiceClient.ListSectionItemsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSectionItemsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.MoveSectionItem</c> and <c>ChatServiceClient.MoveSectionItemAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveSectionItemSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ChatServiceSettings"/> object.</returns>
         public ChatServiceSettings Clone() => new ChatServiceSettings(this);
@@ -798,9 +931,11 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.app.delete</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.app.memberships</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.memberships.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.app.messages.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.app.spaces</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.app.spaces.create</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.bot</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.customemojis</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.customemojis.readonly</description></item>
@@ -820,6 +955,8 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.sections</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.sections.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.spacesettings</description></item>
         /// </list>
         /// </remarks>
@@ -832,9 +969,11 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.admin.spaces.readonly",
             "https://www.googleapis.com/auth/chat.app.delete",
             "https://www.googleapis.com/auth/chat.app.memberships",
+            "https://www.googleapis.com/auth/chat.app.memberships.readonly",
             "https://www.googleapis.com/auth/chat.app.messages.readonly",
             "https://www.googleapis.com/auth/chat.app.spaces",
             "https://www.googleapis.com/auth/chat.app.spaces.create",
+            "https://www.googleapis.com/auth/chat.app.spaces.readonly",
             "https://www.googleapis.com/auth/chat.bot",
             "https://www.googleapis.com/auth/chat.customemojis",
             "https://www.googleapis.com/auth/chat.customemojis.readonly",
@@ -854,6 +993,8 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.spaces.readonly",
             "https://www.googleapis.com/auth/chat.users.readstate",
             "https://www.googleapis.com/auth/chat.users.readstate.readonly",
+            "https://www.googleapis.com/auth/chat.users.sections",
+            "https://www.googleapis.com/auth/chat.users.sections.readonly",
             "https://www.googleapis.com/auth/chat.users.spacesettings",
         });
 
@@ -1565,8 +1706,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -1602,8 +1742,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -1639,8 +1778,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -1702,8 +1840,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -1765,8 +1902,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -1828,8 +1964,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -2625,8 +2760,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2662,8 +2796,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2699,8 +2832,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2736,8 +2868,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2785,8 +2916,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2834,8 +2964,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2880,8 +3009,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2929,8 +3057,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -2978,8 +3105,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -9939,12 +10065,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -9991,12 +10118,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10043,12 +10171,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10095,12 +10224,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10154,12 +10284,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10213,12 +10344,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10269,12 +10401,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10328,12 +10461,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10387,12 +10521,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10441,12 +10576,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10490,12 +10626,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10539,12 +10676,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10671,12 +10809,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10803,12 +10942,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -10935,12 +11075,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -11415,6 +11556,1413 @@ namespace Google.Apps.Chat.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(SpaceNotificationSetting spaceNotificationSetting, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateSpaceNotificationSettingAsync(spaceNotificationSetting, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Section CreateSection(CreateSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(CreateSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(CreateSectionRequest request, st::CancellationToken cancellationToken) =>
+            CreateSectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Section CreateSection(string parent, Section section, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSection(new CreateSectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(string parent, Section section, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSectionAsync(new CreateSectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(string parent, Section section, st::CancellationToken cancellationToken) =>
+            CreateSectionAsync(parent, section, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Section CreateSection(UserName parent, Section section, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSection(new CreateSectionRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(UserName parent, Section section, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSectionAsync(new CreateSectionRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name where the section is created.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="section">
+        /// Required. The section to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> CreateSectionAsync(UserName parent, Section section, st::CancellationToken cancellationToken) =>
+            CreateSectionAsync(parent, section, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSection(DeleteSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(DeleteSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(DeleteSectionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSection(new DeleteSectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSectionAsync(new DeleteSectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSection(SectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSection(new DeleteSectionRequest
+            {
+                SectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(SectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSectionAsync(new DeleteSectionRequest
+            {
+                SectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the section to delete.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSectionAsync(SectionName name, st::CancellationToken cancellationToken) =>
+            DeleteSectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Section UpdateSection(UpdateSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> UpdateSectionAsync(UpdateSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> UpdateSectionAsync(UpdateSectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="section">
+        /// Required. The section to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The mask to specify which fields to update.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Section UpdateSection(Section section, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSection(new UpdateSectionRequest
+            {
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="section">
+        /// Required. The section to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The mask to specify which fields to update.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> UpdateSectionAsync(Section section, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSectionAsync(new UpdateSectionRequest
+            {
+                Section = gax::GaxPreconditions.CheckNotNull(section, nameof(section)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="section">
+        /// Required. The section to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The mask to specify which fields to update.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `display_name`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Section> UpdateSectionAsync(Section section, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSectionAsync(section, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionsResponse, Section> ListSections(ListSectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionsResponse, Section> ListSectionsAsync(ListSectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the user resource name that owns this
+        /// collection of sections. Only supports listing sections for the calling
+        /// user. To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me`.
+        /// 
+        /// - Their Workspace email address. For example, `users/user@example.com`.
+        /// 
+        /// - Their user id. For example, `users/123456789`.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionsResponse, Section> ListSections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the user resource name that owns this
+        /// collection of sections. Only supports listing sections for the calling
+        /// user. To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me`.
+        /// 
+        /// - Their Workspace email address. For example, `users/user@example.com`.
+        /// 
+        /// - Their user id. For example, `users/123456789`.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionsResponse, Section> ListSectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the user resource name that owns this
+        /// collection of sections. Only supports listing sections for the calling
+        /// user. To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me`.
+        /// 
+        /// - Their Workspace email address. For example, `users/user@example.com`.
+        /// 
+        /// - Their user id. For example, `users/123456789`.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionsResponse, Section> ListSections(UserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the user resource name that owns this
+        /// collection of sections. Only supports listing sections for the calling
+        /// user. To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me`.
+        /// 
+        /// - Their Workspace email address. For example, `users/user@example.com`.
+        /// 
+        /// - Their user id. For example, `users/123456789`.
+        /// 
+        /// Format: `users/{user}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Section"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionsResponse, Section> ListSectionsAsync(UserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes the sort order of a section. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PositionSectionResponse PositionSection(PositionSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the sort order of a section. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PositionSectionResponse> PositionSectionAsync(PositionSectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the sort order of a section. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PositionSectionResponse> PositionSectionAsync(PositionSectionRequest request, st::CancellationToken cancellationToken) =>
+            PositionSectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItems(ListSectionItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItemsAsync(ListSectionItemsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the section resource name that owns this
+        /// collection of section items. Only supports listing section items for the
+        /// calling user.
+        /// 
+        /// When you're filtering by space, use the wildcard `-` to search across all
+        /// sections. For example, `users/{user}/sections/-`.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItems(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionItems(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the section resource name that owns this
+        /// collection of section items. Only supports listing section items for the
+        /// calling user.
+        /// 
+        /// When you're filtering by space, use the wildcard `-` to search across all
+        /// sections. For example, `users/{user}/sections/-`.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItemsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionItemsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the section resource name that owns this
+        /// collection of section items. Only supports listing section items for the
+        /// calling user.
+        /// 
+        /// When you're filtering by space, use the wildcard `-` to search across all
+        /// sections. For example, `users/{user}/sections/-`.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItems(SectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                ParentAsSectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionItems(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which is the section resource name that owns this
+        /// collection of section items. Only supports listing section items for the
+        /// calling user.
+        /// 
+        /// When you're filtering by space, use the wildcard `-` to search across all
+        /// sections. For example, `users/{user}/sections/-`.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SectionItem"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItemsAsync(SectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                ParentAsSectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSectionItemsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MoveSectionItemResponse MoveSectionItem(MoveSectionItemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(MoveSectionItemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(MoveSectionItemRequest request, st::CancellationToken cancellationToken) =>
+            MoveSectionItemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MoveSectionItemResponse MoveSectionItem(string name, string targetSection, gaxgrpc::CallSettings callSettings = null) =>
+            MoveSectionItem(new MoveSectionItemRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TargetSection = gax::GaxPreconditions.CheckNotNullOrEmpty(targetSection, nameof(targetSection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(string name, string targetSection, gaxgrpc::CallSettings callSettings = null) =>
+            MoveSectionItemAsync(new MoveSectionItemRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TargetSection = gax::GaxPreconditions.CheckNotNullOrEmpty(targetSection, nameof(targetSection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(string name, string targetSection, st::CancellationToken cancellationToken) =>
+            MoveSectionItemAsync(name, targetSection, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MoveSectionItemResponse MoveSectionItem(SectionItemName name, SectionName targetSection, gaxgrpc::CallSettings callSettings = null) =>
+            MoveSectionItem(new MoveSectionItemRequest
+            {
+                SectionItemName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TargetSectionAsSectionName = gax::GaxPreconditions.CheckNotNull(targetSection, nameof(targetSection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(SectionItemName name, SectionName targetSection, gaxgrpc::CallSettings callSettings = null) =>
+            MoveSectionItemAsync(new MoveSectionItemRequest
+            {
+                SectionItemName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TargetSectionAsSectionName = gax::GaxPreconditions.CheckNotNull(targetSection, nameof(targetSection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the section item to move.
+        /// 
+        /// Format: `users/{user}/sections/{section}/items/{item}`
+        /// </param>
+        /// <param name="targetSection">
+        /// Required. The resource name of the section to move the section item to.
+        /// 
+        /// Format: `users/{user}/sections/{section}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(SectionItemName name, SectionName targetSection, st::CancellationToken cancellationToken) =>
+            MoveSectionItemAsync(name, targetSection, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ChatService client wrapper implementation, for convenient use.</summary>
@@ -11493,6 +13041,20 @@ namespace Google.Apps.Chat.V1
         private readonly gaxgrpc::ApiCall<GetSpaceNotificationSettingRequest, SpaceNotificationSetting> _callGetSpaceNotificationSetting;
 
         private readonly gaxgrpc::ApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting> _callUpdateSpaceNotificationSetting;
+
+        private readonly gaxgrpc::ApiCall<CreateSectionRequest, Section> _callCreateSection;
+
+        private readonly gaxgrpc::ApiCall<DeleteSectionRequest, wkt::Empty> _callDeleteSection;
+
+        private readonly gaxgrpc::ApiCall<UpdateSectionRequest, Section> _callUpdateSection;
+
+        private readonly gaxgrpc::ApiCall<ListSectionsRequest, ListSectionsResponse> _callListSections;
+
+        private readonly gaxgrpc::ApiCall<PositionSectionRequest, PositionSectionResponse> _callPositionSection;
+
+        private readonly gaxgrpc::ApiCall<ListSectionItemsRequest, ListSectionItemsResponse> _callListSectionItems;
+
+        private readonly gaxgrpc::ApiCall<MoveSectionItemRequest, MoveSectionItemResponse> _callMoveSectionItem;
 
         /// <summary>
         /// Constructs a client wrapper for the ChatService service, with the specified gRPC client and settings.
@@ -11614,6 +13176,27 @@ namespace Google.Apps.Chat.V1
             _callUpdateSpaceNotificationSetting = clientHelper.BuildApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting>("UpdateSpaceNotificationSetting", grpcClient.UpdateSpaceNotificationSettingAsync, grpcClient.UpdateSpaceNotificationSetting, effectiveSettings.UpdateSpaceNotificationSettingSettings).WithGoogleRequestParam("space_notification_setting.name", request => request.SpaceNotificationSetting?.Name);
             Modify_ApiCall(ref _callUpdateSpaceNotificationSetting);
             Modify_UpdateSpaceNotificationSettingApiCall(ref _callUpdateSpaceNotificationSetting);
+            _callCreateSection = clientHelper.BuildApiCall<CreateSectionRequest, Section>("CreateSection", grpcClient.CreateSectionAsync, grpcClient.CreateSection, effectiveSettings.CreateSectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSection);
+            Modify_CreateSectionApiCall(ref _callCreateSection);
+            _callDeleteSection = clientHelper.BuildApiCall<DeleteSectionRequest, wkt::Empty>("DeleteSection", grpcClient.DeleteSectionAsync, grpcClient.DeleteSection, effectiveSettings.DeleteSectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSection);
+            Modify_DeleteSectionApiCall(ref _callDeleteSection);
+            _callUpdateSection = clientHelper.BuildApiCall<UpdateSectionRequest, Section>("UpdateSection", grpcClient.UpdateSectionAsync, grpcClient.UpdateSection, effectiveSettings.UpdateSectionSettings).WithGoogleRequestParam("section.name", request => request.Section?.Name);
+            Modify_ApiCall(ref _callUpdateSection);
+            Modify_UpdateSectionApiCall(ref _callUpdateSection);
+            _callListSections = clientHelper.BuildApiCall<ListSectionsRequest, ListSectionsResponse>("ListSections", grpcClient.ListSectionsAsync, grpcClient.ListSections, effectiveSettings.ListSectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSections);
+            Modify_ListSectionsApiCall(ref _callListSections);
+            _callPositionSection = clientHelper.BuildApiCall<PositionSectionRequest, PositionSectionResponse>("PositionSection", grpcClient.PositionSectionAsync, grpcClient.PositionSection, effectiveSettings.PositionSectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPositionSection);
+            Modify_PositionSectionApiCall(ref _callPositionSection);
+            _callListSectionItems = clientHelper.BuildApiCall<ListSectionItemsRequest, ListSectionItemsResponse>("ListSectionItems", grpcClient.ListSectionItemsAsync, grpcClient.ListSectionItems, effectiveSettings.ListSectionItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSectionItems);
+            Modify_ListSectionItemsApiCall(ref _callListSectionItems);
+            _callMoveSectionItem = clientHelper.BuildApiCall<MoveSectionItemRequest, MoveSectionItemResponse>("MoveSectionItem", grpcClient.MoveSectionItemAsync, grpcClient.MoveSectionItem, effectiveSettings.MoveSectionItemSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMoveSectionItem);
+            Modify_MoveSectionItemApiCall(ref _callMoveSectionItem);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -11689,6 +13272,20 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_UpdateSpaceNotificationSettingApiCall(ref gaxgrpc::ApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting> call);
 
+        partial void Modify_CreateSectionApiCall(ref gaxgrpc::ApiCall<CreateSectionRequest, Section> call);
+
+        partial void Modify_DeleteSectionApiCall(ref gaxgrpc::ApiCall<DeleteSectionRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateSectionApiCall(ref gaxgrpc::ApiCall<UpdateSectionRequest, Section> call);
+
+        partial void Modify_ListSectionsApiCall(ref gaxgrpc::ApiCall<ListSectionsRequest, ListSectionsResponse> call);
+
+        partial void Modify_PositionSectionApiCall(ref gaxgrpc::ApiCall<PositionSectionRequest, PositionSectionResponse> call);
+
+        partial void Modify_ListSectionItemsApiCall(ref gaxgrpc::ApiCall<ListSectionItemsRequest, ListSectionItemsResponse> call);
+
+        partial void Modify_MoveSectionItemApiCall(ref gaxgrpc::ApiCall<MoveSectionItemRequest, MoveSectionItemResponse> call);
+
         partial void OnConstruction(ChatService.ChatServiceClient grpcClient, ChatServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ChatService client</summary>
@@ -11763,6 +13360,20 @@ namespace Google.Apps.Chat.V1
         partial void Modify_GetSpaceNotificationSettingRequest(ref GetSpaceNotificationSettingRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSpaceNotificationSettingRequest(ref UpdateSpaceNotificationSettingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSectionRequest(ref CreateSectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSectionRequest(ref DeleteSectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSectionRequest(ref UpdateSectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSectionsRequest(ref ListSectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PositionSectionRequest(ref PositionSectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSectionItemsRequest(ref ListSectionItemsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveSectionItemRequest(ref MoveSectionItemRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a message in a Google Chat space. For an example, see [Send a
@@ -11890,8 +13501,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -11930,8 +13540,7 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with the authorization scope:
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When
         /// using this authentication scope, this method only returns public
@@ -12132,8 +13741,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -12172,8 +13780,7 @@ namespace Google.Apps.Chat.V1
         /// that invoke the Chat app.
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) (available in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)).
+        /// approval](https://support.google.com/a?p=chat-app-auth).
         /// When using this authentication scope,
         /// this method returns details about a public message in a space.
         /// 
@@ -13955,12 +15562,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -14010,12 +15618,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -14063,12 +15672,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -14115,12 +15725,13 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator
-        /// approval](https://support.google.com/a?p=chat-app-auth) in
-        /// [Developer Preview](https://developers.google.com/workspace/preview)
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// with one of the following authorization scopes:
         /// - `https://www.googleapis.com/auth/chat.app.spaces`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.messages.readonly`
         /// - `https://www.googleapis.com/auth/chat.app.memberships`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships.readonly`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
@@ -14231,6 +15842,320 @@ namespace Google.Apps.Chat.V1
             Modify_UpdateSpaceNotificationSettingRequest(ref request, ref callSettings);
             return _callUpdateSpaceNotificationSetting.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Section CreateSection(CreateSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSectionRequest(ref request, ref callSettings);
+            return _callCreateSection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a section in Google Chat. Sections help users group conversations
+        /// and customize the list of spaces displayed in Chat navigation panel. Only
+        /// sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+        /// and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Section> CreateSectionAsync(CreateSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSectionRequest(ref request, ref callSettings);
+            return _callCreateSection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSection(DeleteSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSectionRequest(ref request, ref callSettings);
+            _callDeleteSection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a section of type `CUSTOM_SECTION`.
+        /// 
+        /// If the section contains items, such as spaces, the items are moved to
+        /// Google Chat's default sections and are not deleted.
+        /// 
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSectionAsync(DeleteSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSectionRequest(ref request, ref callSettings);
+            return _callDeleteSection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Section UpdateSection(UpdateSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSectionRequest(ref request, ref callSettings);
+            return _callUpdateSection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a section. Only sections of type `CUSTOM_SECTION` can be updated.
+        /// For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Section> UpdateSectionAsync(UpdateSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSectionRequest(ref request, ref callSettings);
+            return _callUpdateSection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Section"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSectionsResponse, Section> ListSections(ListSectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSectionsRequest, ListSectionsResponse, Section>(_callListSections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists sections available to the Chat user. Sections help users group their
+        /// conversations and customize the list of spaces displayed in Chat
+        /// navigation panel. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Section"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSectionsResponse, Section> ListSectionsAsync(ListSectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSectionsRequest, ListSectionsResponse, Section>(_callListSections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes the sort order of a section. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PositionSectionResponse PositionSection(PositionSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PositionSectionRequest(ref request, ref callSettings);
+            return _callPositionSection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes the sort order of a section. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PositionSectionResponse> PositionSectionAsync(PositionSectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PositionSectionRequest(ref request, ref callSettings);
+            return _callPositionSection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SectionItem"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItems(ListSectionItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSectionItemsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSectionItemsRequest, ListSectionItemsResponse, SectionItem>(_callListSectionItems, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists items in a section.
+        /// 
+        /// Only spaces can be section items. For details, see [Create and organize
+        /// sections in Google Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// - `https://www.googleapis.com/auth/chat.users.sections.readonly`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SectionItem"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> ListSectionItemsAsync(ListSectionItemsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSectionItemsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSectionItemsRequest, ListSectionItemsResponse, SectionItem>(_callListSectionItems, request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MoveSectionItemResponse MoveSectionItem(MoveSectionItemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveSectionItemRequest(ref request, ref callSettings);
+            return _callMoveSectionItem.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves an item from one section to another. For example, if a section
+        /// contains spaces, this method can be used to move a space to a different
+        /// section. For details, see [Create and organize sections in Google
+        /// Chat](https://support.google.com/chat/answer/16059854).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.sections`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MoveSectionItemResponse> MoveSectionItemAsync(MoveSectionItemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveSectionItemRequest(ref request, ref callSettings);
+            return _callMoveSectionItem.Async(request, callSettings);
+        }
     }
 
     public partial class ListMessagesRequest : gaxgrpc::IPageRequest
@@ -14258,6 +16183,14 @@ namespace Google.Apps.Chat.V1
     }
 
     public partial class ListSpaceEventsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSectionItemsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -14313,6 +16246,22 @@ namespace Google.Apps.Chat.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<SpaceEvent> GetEnumerator() => SpaceEvents.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSectionsResponse : gaxgrpc::IPageResponse<Section>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Section> GetEnumerator() => Sections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSectionItemsResponse : gaxgrpc::IPageResponse<SectionItem>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SectionItem> GetEnumerator() => SectionItems.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

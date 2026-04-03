@@ -8604,6 +8604,1831 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_sync",
+      "title": "CreateSectionRequestObject",
+      "description": "Snippet for CreateSection",
+      "file": "ChatServiceClient.CreateSectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CreateSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Section",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_async",
+      "title": "CreateSectionRequestObjectAsync",
+      "description": "Snippet for CreateSectionAsync",
+      "file": "ChatServiceClient.CreateSectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CreateSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_sync_flattened",
+      "title": "CreateSection",
+      "description": "Snippet for CreateSection",
+      "file": "ChatServiceClient.CreateSectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Section",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_async_flattened",
+      "title": "CreateSectionAsync",
+      "description": "Snippet for CreateSectionAsync",
+      "file": "ChatServiceClient.CreateSectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_sync_flattened_resourceNames",
+      "title": "CreateSectionResourceNames",
+      "description": "Snippet for CreateSection",
+      "file": "ChatServiceClient.CreateSectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Section",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateSection_async_flattened_resourceNames",
+      "title": "CreateSectionResourceNamesAsync",
+      "description": "Snippet for CreateSectionAsync",
+      "file": "ChatServiceClient.CreateSectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSection",
+          "fullName": "google.chat.v1.ChatService.CreateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_sync",
+      "title": "DeleteSectionRequestObject",
+      "description": "Snippet for DeleteSection",
+      "file": "ChatServiceClient.DeleteSectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.DeleteSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_async",
+      "title": "DeleteSectionRequestObjectAsync",
+      "description": "Snippet for DeleteSectionAsync",
+      "file": "ChatServiceClient.DeleteSectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.DeleteSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_sync_flattened",
+      "title": "DeleteSection",
+      "description": "Snippet for DeleteSection",
+      "file": "ChatServiceClient.DeleteSectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_async_flattened",
+      "title": "DeleteSectionAsync",
+      "description": "Snippet for DeleteSectionAsync",
+      "file": "ChatServiceClient.DeleteSectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_sync_flattened_resourceNames",
+      "title": "DeleteSectionResourceNames",
+      "description": "Snippet for DeleteSection",
+      "file": "ChatServiceClient.DeleteSectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteSection_async_flattened_resourceNames",
+      "title": "DeleteSectionResourceNamesAsync",
+      "description": "Snippet for DeleteSectionAsync",
+      "file": "ChatServiceClient.DeleteSectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSection",
+          "fullName": "google.chat.v1.ChatService.DeleteSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSection_sync",
+      "title": "UpdateSectionRequestObject",
+      "description": "Snippet for UpdateSection",
+      "file": "ChatServiceClient.UpdateSectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Section",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSection",
+          "fullName": "google.chat.v1.ChatService.UpdateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSection_async",
+      "title": "UpdateSectionRequestObjectAsync",
+      "description": "Snippet for UpdateSectionAsync",
+      "file": "ChatServiceClient.UpdateSectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSection",
+          "fullName": "google.chat.v1.ChatService.UpdateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSection_sync_flattened",
+      "title": "UpdateSection",
+      "description": "Snippet for UpdateSection",
+      "file": "ChatServiceClient.UpdateSectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Section",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSection",
+          "fullName": "google.chat.v1.ChatService.UpdateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSection_async_flattened",
+      "title": "UpdateSectionAsync",
+      "description": "Snippet for UpdateSectionAsync",
+      "file": "ChatServiceClient.UpdateSectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Section",
+            "name": "section"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSection",
+          "fullName": "google.chat.v1.ChatService.UpdateSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_sync",
+      "title": "ListSectionsRequestObject",
+      "description": "Snippet for ListSections",
+      "file": "ChatServiceClient.ListSectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSections",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSections",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_async",
+      "title": "ListSectionsRequestObjectAsync",
+      "description": "Snippet for ListSectionsAsync",
+      "file": "ChatServiceClient.ListSectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_sync_flattened",
+      "title": "ListSections",
+      "description": "Snippet for ListSections",
+      "file": "ChatServiceClient.ListSectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSections",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_async_flattened",
+      "title": "ListSectionsAsync",
+      "description": "Snippet for ListSectionsAsync",
+      "file": "ChatServiceClient.ListSectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_sync_flattened_resourceNames",
+      "title": "ListSectionsResourceNames",
+      "description": "Snippet for ListSections",
+      "file": "ChatServiceClient.ListSectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSections",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSections",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSections_async_flattened_resourceNames",
+      "title": "ListSectionsResourceNamesAsync",
+      "description": "Snippet for ListSectionsAsync",
+      "file": "ChatServiceClient.ListSectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionsResponse, Google.Apps.Chat.V1.Section>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSections",
+          "fullName": "google.chat.v1.ChatService.ListSections",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_PositionSection_sync",
+      "title": "PositionSectionRequestObject",
+      "description": "Snippet for PositionSection",
+      "file": "ChatServiceClient.PositionSectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PositionSection",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.PositionSection",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.PositionSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.PositionSectionResponse",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "PositionSection",
+          "fullName": "google.chat.v1.ChatService.PositionSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_PositionSection_async",
+      "title": "PositionSectionRequestObjectAsync",
+      "description": "Snippet for PositionSectionAsync",
+      "file": "ChatServiceClient.PositionSectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PositionSectionAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.PositionSectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.PositionSectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.PositionSectionResponse>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "PositionSection",
+          "fullName": "google.chat.v1.ChatService.PositionSection",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_sync",
+      "title": "ListSectionItemsRequestObject",
+      "description": "Snippet for ListSectionItems",
+      "file": "ChatServiceClient.ListSectionItemsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItems",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItems",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSectionItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_async",
+      "title": "ListSectionItemsRequestObjectAsync",
+      "description": "Snippet for ListSectionItemsAsync",
+      "file": "ChatServiceClient.ListSectionItemsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItemsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListSectionItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_sync_flattened",
+      "title": "ListSectionItems",
+      "description": "Snippet for ListSectionItems",
+      "file": "ChatServiceClient.ListSectionItemsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItems",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItems",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_async_flattened",
+      "title": "ListSectionItemsAsync",
+      "description": "Snippet for ListSectionItemsAsync",
+      "file": "ChatServiceClient.ListSectionItemsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItemsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_sync_flattened_resourceNames",
+      "title": "ListSectionItemsResourceNames",
+      "description": "Snippet for ListSectionItems",
+      "file": "ChatServiceClient.ListSectionItemsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItems",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItems",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListSectionItems_async_flattened_resourceNames",
+      "title": "ListSectionItemsResourceNamesAsync",
+      "description": "Snippet for ListSectionItemsAsync",
+      "file": "ChatServiceClient.ListSectionItemsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSectionItemsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListSectionItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListSectionItemsResponse, Google.Apps.Chat.V1.SectionItem>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListSectionItems",
+          "fullName": "google.chat.v1.ChatService.ListSectionItems",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_sync",
+      "title": "MoveSectionItemRequestObject",
+      "description": "Snippet for MoveSectionItem",
+      "file": "ChatServiceClient.MoveSectionItemRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItem",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItem",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MoveSectionItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.MoveSectionItemResponse",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_async",
+      "title": "MoveSectionItemRequestObjectAsync",
+      "description": "Snippet for MoveSectionItemAsync",
+      "file": "ChatServiceClient.MoveSectionItemRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItemAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MoveSectionItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.MoveSectionItemResponse>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_sync_flattened",
+      "title": "MoveSectionItem",
+      "description": "Snippet for MoveSectionItem",
+      "file": "ChatServiceClient.MoveSectionItemSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItem",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetSection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.MoveSectionItemResponse",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_async_flattened",
+      "title": "MoveSectionItemAsync",
+      "description": "Snippet for MoveSectionItemAsync",
+      "file": "ChatServiceClient.MoveSectionItemAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItemAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetSection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.MoveSectionItemResponse>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_sync_flattened_resourceNames",
+      "title": "MoveSectionItemResourceNames",
+      "description": "Snippet for MoveSectionItem",
+      "file": "ChatServiceClient.MoveSectionItemResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItem",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItem",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "targetSection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.MoveSectionItemResponse",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MoveSectionItem_async_flattened_resourceNames",
+      "title": "MoveSectionItemResourceNamesAsync",
+      "description": "Snippet for MoveSectionItemAsync",
+      "file": "ChatServiceClient.MoveSectionItemResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveSectionItemAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MoveSectionItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SectionItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Apps.Chat.V1.SectionName",
+            "name": "targetSection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.MoveSectionItemResponse>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MoveSectionItem",
+          "fullName": "google.chat.v1.ChatService.MoveSectionItem",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

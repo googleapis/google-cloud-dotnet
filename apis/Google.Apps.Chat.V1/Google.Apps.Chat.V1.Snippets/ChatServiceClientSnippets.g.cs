@@ -3787,5 +3787,931 @@ namespace GoogleCSharpSnippets
             SpaceNotificationSetting response = await chatServiceClient.UpdateSpaceNotificationSettingAsync(spaceNotificationSetting, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateSection</summary>
+        public void CreateSectionRequestObject()
+        {
+            // Snippet: CreateSection(CreateSectionRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSectionRequest request = new CreateSectionRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+                Section = new Section(),
+            };
+            // Make the request
+            Section response = chatServiceClient.CreateSection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSectionAsync</summary>
+        public async Task CreateSectionRequestObjectAsync()
+        {
+            // Snippet: CreateSectionAsync(CreateSectionRequest, CallSettings)
+            // Additional: CreateSectionAsync(CreateSectionRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSectionRequest request = new CreateSectionRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+                Section = new Section(),
+            };
+            // Make the request
+            Section response = await chatServiceClient.CreateSectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSection</summary>
+        public void CreateSection()
+        {
+            // Snippet: CreateSection(string, Section, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            Section section = new Section();
+            // Make the request
+            Section response = chatServiceClient.CreateSection(parent, section);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSectionAsync</summary>
+        public async Task CreateSectionAsync()
+        {
+            // Snippet: CreateSectionAsync(string, Section, CallSettings)
+            // Additional: CreateSectionAsync(string, Section, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            Section section = new Section();
+            // Make the request
+            Section response = await chatServiceClient.CreateSectionAsync(parent, section);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSection</summary>
+        public void CreateSectionResourceNames()
+        {
+            // Snippet: CreateSection(UserName, Section, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            Section section = new Section();
+            // Make the request
+            Section response = chatServiceClient.CreateSection(parent, section);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSectionAsync</summary>
+        public async Task CreateSectionResourceNamesAsync()
+        {
+            // Snippet: CreateSectionAsync(UserName, Section, CallSettings)
+            // Additional: CreateSectionAsync(UserName, Section, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            Section section = new Section();
+            // Make the request
+            Section response = await chatServiceClient.CreateSectionAsync(parent, section);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSection</summary>
+        public void DeleteSectionRequestObject()
+        {
+            // Snippet: DeleteSection(DeleteSectionRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSectionRequest request = new DeleteSectionRequest
+            {
+                SectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+            };
+            // Make the request
+            chatServiceClient.DeleteSection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSectionAsync</summary>
+        public async Task DeleteSectionRequestObjectAsync()
+        {
+            // Snippet: DeleteSectionAsync(DeleteSectionRequest, CallSettings)
+            // Additional: DeleteSectionAsync(DeleteSectionRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSectionRequest request = new DeleteSectionRequest
+            {
+                SectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+            };
+            // Make the request
+            await chatServiceClient.DeleteSectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSection</summary>
+        public void DeleteSection()
+        {
+            // Snippet: DeleteSection(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            chatServiceClient.DeleteSection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSectionAsync</summary>
+        public async Task DeleteSectionAsync()
+        {
+            // Snippet: DeleteSectionAsync(string, CallSettings)
+            // Additional: DeleteSectionAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            await chatServiceClient.DeleteSectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSection</summary>
+        public void DeleteSectionResourceNames()
+        {
+            // Snippet: DeleteSection(SectionName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SectionName name = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            chatServiceClient.DeleteSection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSectionAsync</summary>
+        public async Task DeleteSectionResourceNamesAsync()
+        {
+            // Snippet: DeleteSectionAsync(SectionName, CallSettings)
+            // Additional: DeleteSectionAsync(SectionName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SectionName name = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            await chatServiceClient.DeleteSectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSection</summary>
+        public void UpdateSectionRequestObject()
+        {
+            // Snippet: UpdateSection(UpdateSectionRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSectionRequest request = new UpdateSectionRequest
+            {
+                Section = new Section(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Section response = chatServiceClient.UpdateSection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSectionAsync</summary>
+        public async Task UpdateSectionRequestObjectAsync()
+        {
+            // Snippet: UpdateSectionAsync(UpdateSectionRequest, CallSettings)
+            // Additional: UpdateSectionAsync(UpdateSectionRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSectionRequest request = new UpdateSectionRequest
+            {
+                Section = new Section(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Section response = await chatServiceClient.UpdateSectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSection</summary>
+        public void UpdateSection()
+        {
+            // Snippet: UpdateSection(Section, FieldMask, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            Section section = new Section();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Section response = chatServiceClient.UpdateSection(section, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSectionAsync</summary>
+        public async Task UpdateSectionAsync()
+        {
+            // Snippet: UpdateSectionAsync(Section, FieldMask, CallSettings)
+            // Additional: UpdateSectionAsync(Section, FieldMask, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Section section = new Section();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Section response = await chatServiceClient.UpdateSectionAsync(section, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSections</summary>
+        public void ListSectionsRequestObject()
+        {
+            // Snippet: ListSections(ListSectionsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionsAsync</summary>
+        public async Task ListSectionsRequestObjectAsync()
+        {
+            // Snippet: ListSectionsAsync(ListSectionsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSectionsRequest request = new ListSectionsRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSections</summary>
+        public void ListSections()
+        {
+            // Snippet: ListSections(string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            // Make the request
+            PagedEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionsAsync</summary>
+        public async Task ListSectionsAsync()
+        {
+            // Snippet: ListSectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            // Make the request
+            PagedAsyncEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSections</summary>
+        public void ListSectionsResourceNames()
+        {
+            // Snippet: ListSections(UserName, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            // Make the request
+            PagedEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionsAsync</summary>
+        public async Task ListSectionsResourceNamesAsync()
+        {
+            // Snippet: ListSectionsAsync(UserName, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            // Make the request
+            PagedAsyncEnumerable<ListSectionsResponse, Section> response = chatServiceClient.ListSectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Section item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Section item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Section> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Section item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for PositionSection</summary>
+        public void PositionSectionRequestObject()
+        {
+            // Snippet: PositionSection(PositionSectionRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            PositionSectionRequest request = new PositionSectionRequest
+            {
+                SectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+                SortOrder = 0,
+            };
+            // Make the request
+            PositionSectionResponse response = chatServiceClient.PositionSection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PositionSectionAsync</summary>
+        public async Task PositionSectionRequestObjectAsync()
+        {
+            // Snippet: PositionSectionAsync(PositionSectionRequest, CallSettings)
+            // Additional: PositionSectionAsync(PositionSectionRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PositionSectionRequest request = new PositionSectionRequest
+            {
+                SectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+                SortOrder = 0,
+            };
+            // Make the request
+            PositionSectionResponse response = await chatServiceClient.PositionSectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItems</summary>
+        public void ListSectionItemsRequestObject()
+        {
+            // Snippet: ListSectionItems(ListSectionItemsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                ParentAsSectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItems(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItemsAsync</summary>
+        public async Task ListSectionItemsRequestObjectAsync()
+        {
+            // Snippet: ListSectionItemsAsync(ListSectionItemsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSectionItemsRequest request = new ListSectionItemsRequest
+            {
+                ParentAsSectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItemsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItems</summary>
+        public void ListSectionItems()
+        {
+            // Snippet: ListSectionItems(string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            PagedEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItems(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItemsAsync</summary>
+        public async Task ListSectionItemsAsync()
+        {
+            // Snippet: ListSectionItemsAsync(string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItemsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItems</summary>
+        public void ListSectionItemsResourceNames()
+        {
+            // Snippet: ListSectionItems(SectionName, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SectionName parent = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            PagedEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItems(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSectionItemsAsync</summary>
+        public async Task ListSectionItemsResourceNamesAsync()
+        {
+            // Snippet: ListSectionItemsAsync(SectionName, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SectionName parent = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSectionItemsResponse, SectionItem> response = chatServiceClient.ListSectionItemsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SectionItem item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSectionItemsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SectionItem item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SectionItem> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SectionItem item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItem</summary>
+        public void MoveSectionItemRequestObject()
+        {
+            // Snippet: MoveSectionItem(MoveSectionItemRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            MoveSectionItemRequest request = new MoveSectionItemRequest
+            {
+                SectionItemName = SectionItemName.FromUserSectionItem("[USER]", "[SECTION]", "[ITEM]"),
+                TargetSectionAsSectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+            };
+            // Make the request
+            MoveSectionItemResponse response = chatServiceClient.MoveSectionItem(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItemAsync</summary>
+        public async Task MoveSectionItemRequestObjectAsync()
+        {
+            // Snippet: MoveSectionItemAsync(MoveSectionItemRequest, CallSettings)
+            // Additional: MoveSectionItemAsync(MoveSectionItemRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveSectionItemRequest request = new MoveSectionItemRequest
+            {
+                SectionItemName = SectionItemName.FromUserSectionItem("[USER]", "[SECTION]", "[ITEM]"),
+                TargetSectionAsSectionName = SectionName.FromUserSection("[USER]", "[SECTION]"),
+            };
+            // Make the request
+            MoveSectionItemResponse response = await chatServiceClient.MoveSectionItemAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItem</summary>
+        public void MoveSectionItem()
+        {
+            // Snippet: MoveSectionItem(string, string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/sections/[SECTION]/items/[ITEM]";
+            string targetSection = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            MoveSectionItemResponse response = chatServiceClient.MoveSectionItem(name, targetSection);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItemAsync</summary>
+        public async Task MoveSectionItemAsync()
+        {
+            // Snippet: MoveSectionItemAsync(string, string, CallSettings)
+            // Additional: MoveSectionItemAsync(string, string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/sections/[SECTION]/items/[ITEM]";
+            string targetSection = "users/[USER]/sections/[SECTION]";
+            // Make the request
+            MoveSectionItemResponse response = await chatServiceClient.MoveSectionItemAsync(name, targetSection);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItem</summary>
+        public void MoveSectionItemResourceNames()
+        {
+            // Snippet: MoveSectionItem(SectionItemName, SectionName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SectionItemName name = SectionItemName.FromUserSectionItem("[USER]", "[SECTION]", "[ITEM]");
+            SectionName targetSection = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            MoveSectionItemResponse response = chatServiceClient.MoveSectionItem(name, targetSection);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveSectionItemAsync</summary>
+        public async Task MoveSectionItemResourceNamesAsync()
+        {
+            // Snippet: MoveSectionItemAsync(SectionItemName, SectionName, CallSettings)
+            // Additional: MoveSectionItemAsync(SectionItemName, SectionName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SectionItemName name = SectionItemName.FromUserSectionItem("[USER]", "[SECTION]", "[ITEM]");
+            SectionName targetSection = SectionName.FromUserSection("[USER]", "[SECTION]");
+            // Make the request
+            MoveSectionItemResponse response = await chatServiceClient.MoveSectionItemAsync(name, targetSection);
+            // End snippet
+        }
     }
 }

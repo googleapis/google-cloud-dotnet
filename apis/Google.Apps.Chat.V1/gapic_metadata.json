@@ -40,6 +40,12 @@
                 "CreateReactionAsync"
               ]
             },
+            "CreateSection": {
+              "methods": [
+                "CreateSection",
+                "CreateSectionAsync"
+              ]
+            },
             "CreateSpace": {
               "methods": [
                 "CreateSpace",
@@ -68,6 +74,12 @@
               "methods": [
                 "DeleteReaction",
                 "DeleteReactionAsync"
+              ]
+            },
+            "DeleteSection": {
+              "methods": [
+                "DeleteSection",
+                "DeleteSectionAsync"
               ]
             },
             "DeleteSpace": {
@@ -160,6 +172,18 @@
                 "ListReactionsAsync"
               ]
             },
+            "ListSectionItems": {
+              "methods": [
+                "ListSectionItems",
+                "ListSectionItemsAsync"
+              ]
+            },
+            "ListSections": {
+              "methods": [
+                "ListSections",
+                "ListSectionsAsync"
+              ]
+            },
             "ListSpaceEvents": {
               "methods": [
                 "ListSpaceEvents",
@@ -170,6 +194,18 @@
               "methods": [
                 "ListSpaces",
                 "ListSpacesAsync"
+              ]
+            },
+            "MoveSectionItem": {
+              "methods": [
+                "MoveSectionItem",
+                "MoveSectionItemAsync"
+              ]
+            },
+            "PositionSection": {
+              "methods": [
+                "PositionSection",
+                "PositionSectionAsync"
               ]
             },
             "SearchSpaces": {
@@ -194,6 +230,12 @@
               "methods": [
                 "UpdateMessage",
                 "UpdateMessageAsync"
+              ]
+            },
+            "UpdateSection": {
+              "methods": [
+                "UpdateSection",
+                "UpdateSectionAsync"
               ]
             },
             "UpdateSpace": {
