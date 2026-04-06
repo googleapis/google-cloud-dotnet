@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta07</Version>
+    <Version>1.0.0-beta08</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Vertex AI implementation of Microsoft.Extensions.AI.</Description>
@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Cloud.AIPlatform.V1" VersionOverride="[3.63.0, 4.0.0)" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" VersionOverride="10.0.4" Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net462'" />
     <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
   </ItemGroup>
 </Project>

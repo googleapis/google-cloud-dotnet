@@ -21,12 +21,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Struct = Google.Protobuf.WellKnownTypes.Struct;
+using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
@@ -250,7 +250,7 @@ public class BuildIChatClientTest
 
         Assert.NotNull(result);
         Assert.Equal(9, result.Messages[0].Contents.Count);
-        
+
         // Verify each content has the correct Part as its RawRepresentation
         Assert.Same(textPart, result.Messages[0].Contents[0].RawRepresentation);
         Assert.Same(inlineDataPart, result.Messages[0].Contents[1].RawRepresentation);
@@ -330,10 +330,12 @@ public class BuildIChatClientTest
         Assert.Equal("get_weather", functionCall.CallId);
         Assert.NotNull(functionCall.Arguments);
         Assert.Null(functionCall.Exception);
+        Assert.True(functionCall.Arguments!.TryGetValue("location", out object? location));
+        Assert.Equal("San Francisco", location?.ToString());
     }
 
     [Fact]
-    public async Task IChatClient_GetResponseAsync_FunctionCallContent_WithInvalidJson()
+    public async Task IChatClient_GetResponseAsync_FunctionCallContent_WithTooDeepArgs_SetsException()
     {
         DelegateCallInvoker invoker = new()
         {
@@ -343,17 +345,16 @@ public class BuildIChatClientTest
                     Role = "model",
                     Parts =
                     {
-                        new Part()
-                        {
-                            FunctionCall = new()
+                            new Part()
                             {
-                                Name = "get_weather",
-                                // Create JSON that will fail when deserializing to Dictionary<string, object?>
-                                // Using a very deep nesting that exceeds default max depth
-                                Args = Struct.Parser.ParseJson(CreateDeeplyNestedJson(100))
+                                FunctionCall = new()
+                                {
+                                    Name = "get_weather",
+                                    // Use a deeply nested payload to verify we fail gracefully instead of recursing indefinitely.
+                                    Args = Struct.Parser.ParseJson(CreateDeeplyNestedJson(100))
+                                }
                             }
                         }
-                    }
                 }),
         };
 
@@ -364,14 +365,13 @@ public class BuildIChatClientTest
 
         Assert.NotNull(result);
         FunctionCallContent functionCall = Assert.IsType<FunctionCallContent>(Assert.Single(result.Messages[0].Contents));
-        
+
         Assert.Equal("get_weather", functionCall.Name);
         Assert.Equal("get_weather", functionCall.CallId);
         Assert.Null(functionCall.Arguments);
         Assert.NotNull(functionCall.Exception);
-        // The exception could be JsonException or InvalidOperationException depending on max depth handling
-        Assert.True(functionCall.Exception is JsonException or InvalidOperationException);
-        
+        Assert.IsType<InvalidOperationException>(functionCall.Exception);
+
         static string CreateDeeplyNestedJson(int depth)
         {
             StringBuilder result = new("""{"level0":""");
@@ -405,6 +405,10 @@ public class BuildIChatClientTest
                 Assert.Single(request.Contents[0].Parts);
                 Assert.NotNull(request.Contents[0].Parts[0].FunctionResponse);
                 Assert.Equal("call_123", request.Contents[0].Parts[0].FunctionResponse.Name);
+                Assert.True(request.Contents[0].Parts[0].FunctionResponse.Response.Fields.TryGetValue("result", out Value resultValue));
+                Assert.Equal(Value.KindOneofCase.StructValue, resultValue.KindCase);
+                Assert.Equal(72, resultValue.StructValue.Fields["temperature"].NumberValue);
+                Assert.Equal("sunny", resultValue.StructValue.Fields["condition"].StringValue);
 
                 return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Based on the weather data, it's sunny." } } });
             }
@@ -437,7 +441,7 @@ public class BuildIChatClientTest
                 Assert.Single(request.Contents);
                 Assert.Equal("user", request.Contents[0].Role);
                 Assert.Single(request.Contents[0].Parts);
-                
+
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
                 Assert.NotNull(funcResponse);
                 Assert.Equal("call_456", funcResponse.Name);
@@ -514,10 +518,10 @@ public class BuildIChatClientTest
                 Assert.NotNull(funcResponse);
                 Assert.Equal("call_multi", funcResponse.Name);
                 Assert.Equal(2, funcResponse.Parts.Count);
-                
+
                 Assert.NotNull(funcResponse.Parts[0].InlineData);
                 Assert.True(funcResponse.Parts[0].InlineData.Data.ToByteArray().SequenceEqual(data));
-                
+
                 Assert.NotNull(funcResponse.Parts[1].FileData);
                 Assert.Equal("https://example.com/file.pdf", funcResponse.Parts[1].FileData.FileUri);
 
@@ -526,8 +530,8 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
-        List<AIContent> multiContent = 
+
+        List<AIContent> multiContent =
         [
             new DataContent(data, "image/png"),
             new UriContent(new Uri("https://example.com/file.pdf"), "application/pdf")
@@ -558,7 +562,7 @@ public class BuildIChatClientTest
                 Assert.NotNull(funcResponse);
                 Assert.Equal("call_text", funcResponse.Name);
                 Assert.NotNull(funcResponse.Response);
-                
+
                 var responseStr = funcResponse.Response.ToString();
                 Assert.Contains("\"result\"", responseStr);
                 Assert.Contains("Simple text result", responseStr);
@@ -594,21 +598,21 @@ public class BuildIChatClientTest
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
                 Assert.NotNull(funcResponse);
                 Assert.Equal("call_mixed", funcResponse.Name);
-                
+
                 // Should have 2 parts (DataContent and UriContent) plus the Response with TextContent
                 Assert.Equal(2, funcResponse.Parts.Count);
                 Assert.NotNull(funcResponse.Response);
-                
+
                 // Verify DataContent was added as InlineData
                 Assert.NotNull(funcResponse.Parts[0].InlineData);
                 Assert.Equal("image/jpeg", funcResponse.Parts[0].InlineData.MimeType);
                 Assert.True(funcResponse.Parts[0].InlineData.Data.ToByteArray().SequenceEqual(imageData));
-                
+
                 // Verify UriContent was added as FileData
                 Assert.NotNull(funcResponse.Parts[1].FileData);
                 Assert.Equal("https://example.com/doc.pdf", funcResponse.Parts[1].FileData.FileUri);
                 Assert.Equal("application/pdf", funcResponse.Parts[1].FileData.MimeType);
-                
+
                 // Verify TextContent was added to Response
                 var responseStr = funcResponse.Response.ToString();
                 Assert.Contains("\"result\"", responseStr);
@@ -619,8 +623,8 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
-        List<AIContent> mixedContent = 
+
+        List<AIContent> mixedContent =
         [
             new DataContent(imageData, "image/jpeg"),
             new TextContent("Here is the analysis"),
@@ -641,6 +645,36 @@ public class BuildIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_FunctionResultContent_TooDeep_Throws()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = _ => throw new InvalidOperationException("The request should fail before reaching the transport."),
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        Dictionary<string, object?> payload = new();
+        IDictionary<string, object?> current = payload;
+        for (int i = 0; i < 80; i++)
+        {
+            Dictionary<string, object?> next = new();
+            current[$"level{i}"] = next;
+            current = next;
+        }
+
+        ChatMessage[] messages =
+        [
+            new(ChatRole.User,
+            [
+                new FunctionResultContent("call_deep", payload)
+            ])
+        ];
+
+        await Assert.ThrowsAsync<InvalidOperationException>(() => chatClient.GetResponseAsync(messages));
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_FunctionResultContent_WithUnsupportedMimeTypes()
     {
         byte[] videoData = [1, 2, 3, 4, 5];
@@ -653,11 +687,11 @@ public class BuildIChatClientTest
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
                 Assert.NotNull(funcResponse);
                 Assert.Equal("call_unsupported", funcResponse.Name);
-                
+
                 // Unsupported MIME types should be in Response, not Parts
                 Assert.Empty(funcResponse.Parts);
                 Assert.NotNull(funcResponse.Response);
-                
+
                 // All unsupported content should be in the result field
                 var responseStr = funcResponse.Response.ToString();
                 Assert.Contains("\"result\"", responseStr);
@@ -667,8 +701,8 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
-        List<AIContent> unsupportedContent = 
+
+        List<AIContent> unsupportedContent =
         [
             new DataContent(videoData, "video/mp4"),
             new UriContent(new Uri("https://example.com/file.bin"), "application/octet-stream")
@@ -702,7 +736,7 @@ public class BuildIChatClientTest
             OnGenerateContentRequest = request =>
             {
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
-                
+
                 // Supported MIME types should be in Parts
                 Assert.Single(funcResponse.Parts);
                 Assert.NotNull(funcResponse.Parts[0].InlineData);
@@ -713,7 +747,7 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
+
         ChatMessage[] messages =
         [
             new(ChatRole.User,
@@ -739,10 +773,10 @@ public class BuildIChatClientTest
             OnGenerateContentRequest = request =>
             {
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
-                
+
                 // Unsupported MIME types should NOT be in Parts
                 Assert.Empty(funcResponse.Parts);
-                
+
                 // Should be serialized into Response instead
                 Assert.NotNull(funcResponse.Response);
                 string responseStr = funcResponse.Response.ToString();
@@ -753,7 +787,7 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
+
         ChatMessage[] messages =
         [
             new(ChatRole.User,
@@ -777,7 +811,7 @@ public class BuildIChatClientTest
             OnGenerateContentRequest = request =>
             {
                 var funcResponse = request.Contents[0].Parts[0].FunctionResponse;
-                
+
                 Assert.Single(funcResponse.Parts);
                 Assert.NotNull(funcResponse.Parts[0].InlineData);
                 Assert.Equal("image/png", funcResponse.Parts[0].InlineData.MimeType);
@@ -789,9 +823,9 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
+
         var dataContent = new DataContent(data, "image/png") { Name = displayName };
-        
+
         ChatMessage[] messages =
         [
             new(ChatRole.User,
@@ -808,7 +842,7 @@ public class BuildIChatClientTest
     public async Task IChatClient_GetResponseAsync_ReceivesFunctionResponseWithParts()
     {
         byte[] imageData = [0x89, 0x50, 0x4E, 0x47];
-        
+
         DelegateCallInvoker invoker = new()
         {
             OnGenerateContentRequest = request => CreateResponse(
@@ -848,7 +882,7 @@ public class BuildIChatClientTest
         Assert.NotNull(result);
         var functionResult = Assert.IsType<FunctionResultContent>(Assert.Single(result.Messages[0].Contents));
         Assert.Equal("get_image", functionResult.CallId);
-        
+
         // The result should contain the parts - but since FunctionResponse parsing isn't fully implemented,
         // this might just be null or a basic object
         // We're mainly testing that it doesn't crash
@@ -880,16 +914,16 @@ public class BuildIChatClientTest
 
         Assert.NotNull(result);
         Assert.Equal(3, result.Messages[0].Contents.Count);
-        
+
         Assert.IsType<TextContent>(result.Messages[0].Contents[0]);
         Assert.Equal("Before", ((TextContent)result.Messages[0].Contents[0]).Text);
-        
+
         // Middle content should be an empty AIContent but still have RawRepresentation
         AIContent unknownContent = result.Messages[0].Contents[1];
         Assert.Equal(typeof(AIContent), unknownContent.GetType());  // Exact type, not derived
         Assert.NotNull(unknownContent.RawRepresentation);
         Assert.IsType<Part>(unknownContent.RawRepresentation);
-        
+
         Assert.IsType<TextContent>(result.Messages[0].Contents[2]);
         Assert.Equal("After", ((TextContent)result.Messages[0].Contents[2]).Text);
     }
@@ -961,11 +995,11 @@ public class BuildIChatClientTest
 
         Assert.NotNull(result);
         Assert.Equal(2, result.Messages[0].Contents.Count);
-        
+
         // First content should have the reasoning text
         TextReasoningContent firstContent = Assert.IsType<TextReasoningContent>(result.Messages[0].Contents[0]);
         Assert.Equal(reasoningText, firstContent.Text);
-        
+
         // Second content should have the signature
         TextReasoningContent secondContent = Assert.IsType<TextReasoningContent>(result.Messages[0].Contents[1]);
         Assert.Equal(reasoningData, secondContent.ProtectedData);
@@ -982,14 +1016,14 @@ public class BuildIChatClientTest
             OnGenerateContentRequest = request =>
             {
                 Assert.Equal(2, request.Contents.Count);
-                
+
                 // First message is user
                 Assert.Equal("user", request.Contents[0].Role);
-                
+
                 // Second message should be model with reasoning
                 Assert.Equal("model", request.Contents[1].Role);
                 Assert.Single(request.Contents[1].Parts);
-                
+
                 Part reasoningPart = request.Contents[1].Parts[0];
                 Assert.True(reasoningPart.Thought);
                 Assert.Equal(reasoningText, reasoningPart.Text);
@@ -1000,7 +1034,7 @@ public class BuildIChatClientTest
         };
 
         IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
-        
+
         ChatMessage[] messages =
         [
             new(ChatRole.User, "Question"),
@@ -1115,11 +1149,11 @@ public class BuildIChatClientTest
         var codeContent = Assert.IsType<CodeInterpreterToolCallContent>(Assert.Single(result.Messages[0].Contents));
         Assert.NotNull(codeContent.Inputs);
         Assert.Single(codeContent.Inputs);
-        
+
         var dataContent = Assert.IsType<DataContent>(codeContent.Inputs[0]);
         Assert.Equal("text/python", dataContent.MediaType);
         Assert.Equal("print('Hello, World!')", System.Text.Encoding.UTF8.GetString(dataContent.Data.ToArray()));
-        
+
         Assert.IsType<Part>(codeContent.RawRepresentation);
     }
 
@@ -1155,10 +1189,10 @@ public class BuildIChatClientTest
         var codeResultContent = Assert.IsType<CodeInterpreterToolResultContent>(Assert.Single(result.Messages[0].Contents));
         Assert.NotNull(codeResultContent.Outputs);
         Assert.Single(codeResultContent.Outputs);
-        
+
         var textContent = Assert.IsType<TextContent>(codeResultContent.Outputs[0]);
         Assert.Equal("Hello, World!\n", textContent.Text);
-        
+
         Assert.IsType<Part>(codeResultContent.RawRepresentation);
     }
 
@@ -1194,11 +1228,11 @@ public class BuildIChatClientTest
         var codeResultContent = Assert.IsType<CodeInterpreterToolResultContent>(Assert.Single(result.Messages[0].Contents));
         Assert.NotNull(codeResultContent.Outputs);
         Assert.Single(codeResultContent.Outputs);
-        
+
         var errorContent = Assert.IsType<ErrorContent>(codeResultContent.Outputs[0]);
         Assert.Equal("NameError: name 'x' is not defined", errorContent.Message);
         Assert.Equal("Failed", errorContent.ErrorCode);
-        
+
         Assert.IsType<Part>(codeResultContent.RawRepresentation);
     }
 
@@ -1233,7 +1267,7 @@ public class BuildIChatClientTest
         Assert.NotNull(result);
         var codeContent = Assert.IsType<CodeInterpreterToolCallContent>(Assert.Single(result.Messages[0].Contents));
         Assert.NotNull(codeContent.Inputs);
-        
+
         var dataContent = Assert.IsType<DataContent>(codeContent.Inputs[0]);
         Assert.Equal("text/x-source-code", dataContent.MediaType);
         Assert.Equal("console.log('Hello');", System.Text.Encoding.UTF8.GetString(dataContent.Data.ToArray()));
@@ -1501,7 +1535,7 @@ public class BuildIChatClientTest
             OnGenerateContentRequest = request =>
             {
                 Assert.Equal(2, request.Tools.Count);
-                
+
                 Assert.Contains(request.Tools, t => t.FunctionDeclarations.Any(f => f.Name == "custom_tool"));
                 Assert.Contains(request.Tools, t => t.FunctionDeclarations.Any(f => f.Name == "search"));
 
@@ -1531,9 +1565,9 @@ public class BuildIChatClientTest
     public void AsAITool_ValidTool_ReturnsAITool()
     {
         Tool tool = new() { FunctionDeclarations = { new FunctionDeclaration { Name = "test" } } };
-        
+
         AITool aiTool = tool.AsAITool();
-        
+
         Assert.NotNull(aiTool);
         Assert.Equal("Tool", aiTool.Name);
         Assert.Same(tool, aiTool.GetService<Tool>());

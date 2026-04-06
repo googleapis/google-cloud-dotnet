@@ -19,7 +19,9 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using Microsoft.Extensions.AI;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -40,6 +42,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     /// This is more common in agentic scenarios, where a chat history is built up across multiple providers/models.
     /// </remarks>
     private static readonly ByteString s_skipThoughtValidation = ByteString.CopyFromUtf8("skip_thought_signature_validator");
+    private const int MaxToolPayloadDepth = 64;
 
     /// <summary>The wrapped <see cref="PredictionServiceClient"/> instance.</summary>
     private readonly PredictionServiceClient _client = client;
@@ -447,7 +450,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             Name = functionCallContent.Name,
                             Args = functionCallContent.Arguments is not null ?
-                                Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments, AIJsonUtilities.DefaultOptions)) :
+                                ConvertObjectToStruct(functionCallContent.Arguments) :
                                 new(),
                         },
                         ThoughtSignature = thoughtSignature is not null ? ByteString.CopyFrom(thoughtSignature) : s_skipThoughtValidation,
@@ -486,20 +489,20 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             }
 
                             funcResponse.Response = nonBlobContent is { Count: > 0 } ?
-                                Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = nonBlobContent }, AIJsonUtilities.DefaultOptions)) :
+                                CreateFunctionResponseStruct(nonBlobContent) :
                                 new();
                             break;
 
                         case TextContent textContent:
-                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = textContent.Text }, AIJsonUtilities.DefaultOptions));
+                            funcResponse.Response = CreateFunctionResponseStruct(textContent.Text);
                             break;
 
                         case TextReasoningContent textContent:
-                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = textContent.Text }, AIJsonUtilities.DefaultOptions));
+                            funcResponse.Response = CreateFunctionResponseStruct(textContent.Text);
                             break;
 
                         default:
-                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result }, AIJsonUtilities.DefaultOptions));
+                            funcResponse.Response = CreateFunctionResponseStruct(functionResultContent.Result);
                             break;
                     }
 
@@ -605,13 +608,15 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     part.FunctionCall.Args is not null ?
                         FunctionCallContent.CreateFromParsedArguments(
                             part.FunctionCall.Args, part.FunctionCall!.Name, part.FunctionCall.Name,
-                            static args => JsonSerializer.Deserialize<Dictionary<string, object?>>(args.ToString(), AIJsonUtilities.DefaultOptions)) :
+                            static args => args is Struct structArgs ? ConvertStructToDictionary(structArgs) : null) :
                         new FunctionCallContent(part.FunctionCall!.Name, part.FunctionCall.Name, null),
 
                 Part.DataOneofCase.FunctionResponse => new FunctionResultContent(part.FunctionResponse!.Name,
-                    part.FunctionResponse.Response is not null ?
-                        JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) :
-                        null),
+                    part.FunctionResponse.Response?.Fields.TryGetValue("output", out Value output) is true ? ConvertValueToObject(output) :
+                    part.FunctionResponse.Response?.Fields.TryGetValue("error", out Value error) is true ? ConvertValueToObject(error) :
+                    part.FunctionResponse.Response?.Fields.TryGetValue("result", out Value result) is true ? ConvertValueToObject(result) :
+                    part.FunctionResponse.Response is not null ? ConvertStructToDictionary(part.FunctionResponse.Response) :
+                    null),
 
                 Part.DataOneofCase.ExecutableCode when part.ExecutableCode is { } execCode =>
                     new CodeInterpreterToolCallContent(lastCodeInterpreterCallId = Guid.NewGuid().ToString())
@@ -649,6 +654,237 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
             ExecutableCode.Types.Language.Python => "text/python",
             _ => "text/x-source-code",
         };
+    }
+
+    private static Struct CreateFunctionResponseStruct(object? result)
+    {
+        Struct response = new();
+        if (result is not null)
+        {
+            response.Fields["result"] = ConvertObjectToValue(result, 0);
+        }
+        return response;
+    }
+
+    private static Struct ConvertObjectToStruct(object value, int depth = 0)
+    {
+        GaxPreconditions.CheckNotNull(value, nameof(value));
+        ValidateToolPayloadDepth(depth);
+
+        if (value is Struct structValue)
+        {
+            return structValue.Clone();
+        }
+
+        if (value is JsonElement element)
+        {
+            return ConvertJsonElementToStruct(element, depth + 1);
+        }
+
+        if (value is JsonDocument document)
+        {
+            return ConvertJsonElementToStruct(document.RootElement, depth + 1);
+        }
+
+        if (value is IEnumerable<KeyValuePair<string, object?>> nullablePairs)
+        {
+            Struct response = new();
+            foreach (KeyValuePair<string, object?> pair in nullablePairs)
+            {
+                response.Fields[pair.Key] = ConvertObjectToValue(pair.Value, depth + 1);
+            }
+            return response;
+        }
+
+        if (value is IEnumerable<KeyValuePair<string, object>> pairs)
+        {
+            Struct response = new();
+            foreach (KeyValuePair<string, object> pair in pairs)
+            {
+                response.Fields[pair.Key] = ConvertObjectToValue(pair.Value, depth + 1);
+            }
+            return response;
+        }
+
+        if (value is IDictionary dictionary)
+        {
+            Struct response = new();
+            foreach (DictionaryEntry entry in dictionary)
+            {
+                if (entry.Key is string key)
+                {
+                    response.Fields[key] = ConvertObjectToValue(entry.Value, depth + 1);
+                }
+            }
+            return response;
+        }
+
+        // Defer to the shared AI JSON options only for consumer-supplied POCOs after handling the
+        // common JSON-shaped cases directly, which avoids extra reflection-heavy round-tripping in the provider.
+        JsonElement serialized = JsonSerializer.SerializeToElement(value, AIJsonUtilities.DefaultOptions);
+        return ConvertJsonElementToStruct(serialized, depth + 1);
+    }
+
+    private static Dictionary<string, object?> ConvertStructToDictionary(Struct structValue, int depth = 0)
+    {
+        ValidateToolPayloadDepth(depth);
+        return structValue.Fields.ToDictionary(pair => pair.Key, pair => ConvertValueToObject(pair.Value, depth + 1));
+    }
+
+    private static Value ConvertObjectToValue(object? value, int depth = 0)
+    {
+        ValidateToolPayloadDepth(depth);
+
+        switch (value)
+        {
+            case null:
+                return new Value { NullValue = Google.Protobuf.WellKnownTypes.NullValue.NullValue };
+
+            case Value protobufValue:
+                return protobufValue.Clone();
+
+            case Struct protobufStruct:
+                return new Value { StructValue = protobufStruct.Clone() };
+
+            case JsonElement element:
+                return ConvertJsonElementToValue(element, depth + 1);
+
+            case JsonDocument document:
+                return ConvertJsonElementToValue(document.RootElement, depth + 1);
+
+            case string stringValue:
+                return Value.ForString(stringValue);
+
+            case bool boolValue:
+                return Value.ForBool(boolValue);
+
+            case byte[] byteArray:
+                return Value.ForString(Convert.ToBase64String(byteArray));
+
+            case ReadOnlyMemory<byte> readOnlyMemory:
+                return Value.ForString(Convert.ToBase64String(readOnlyMemory.ToArray()));
+
+            case Memory<byte> memory:
+                return Value.ForString(Convert.ToBase64String(memory.ToArray()));
+
+            case Enum enumValue:
+                return Value.ForString(enumValue.ToString());
+
+            case IEnumerable<KeyValuePair<string, object?>> or IEnumerable<KeyValuePair<string, object>> or IDictionary:
+                return new Value { StructValue = ConvertObjectToStruct(value, depth + 1) };
+
+            case IEnumerable enumerable when value is not string:
+                var listValue = new Google.Protobuf.WellKnownTypes.ListValue();
+                foreach (object? item in enumerable)
+                {
+                    listValue.Values.Add(ConvertObjectToValue(item, depth + 1));
+                }
+                return new Value { ListValue = listValue };
+        }
+
+        if (TryConvertToDouble(value, out double numberValue))
+        {
+            return Value.ForNumber(numberValue);
+        }
+
+        JsonElement serialized = JsonSerializer.SerializeToElement(value, AIJsonUtilities.DefaultOptions);
+        return ConvertJsonElementToValue(serialized, depth + 1);
+    }
+
+    private static object? ConvertValueToObject(Value value, int depth = 0)
+    {
+        ValidateToolPayloadDepth(depth);
+        return value.KindCase switch
+        {
+            Value.KindOneofCase.NullValue => null,
+            Value.KindOneofCase.NumberValue => value.NumberValue,
+            Value.KindOneofCase.StringValue => value.StringValue,
+            Value.KindOneofCase.BoolValue => value.BoolValue,
+            Value.KindOneofCase.StructValue => ConvertStructToDictionary(value.StructValue, depth + 1),
+            Value.KindOneofCase.ListValue => value.ListValue.Values.Select(item => ConvertValueToObject(item, depth + 1)).ToList(),
+            _ => null,
+        };
+    }
+
+    private static Struct ConvertJsonElementToStruct(JsonElement element, int depth = 0)
+    {
+        ValidateToolPayloadDepth(depth);
+
+        if (element.ValueKind == JsonValueKind.Null || element.ValueKind == JsonValueKind.Undefined)
+        {
+            return new Struct();
+        }
+
+        if (element.ValueKind != JsonValueKind.Object)
+        {
+            throw new InvalidOperationException("Function call arguments and structured function results must serialize to a JSON object.");
+        }
+
+        Struct response = new();
+        foreach (JsonProperty property in element.EnumerateObject())
+        {
+            response.Fields[property.Name] = ConvertJsonElementToValue(property.Value, depth + 1);
+        }
+        return response;
+    }
+
+    private static Value ConvertJsonElementToValue(JsonElement element, int depth = 0)
+    {
+        ValidateToolPayloadDepth(depth);
+
+        switch (element.ValueKind)
+        {
+            case JsonValueKind.Object:
+                return new Value { StructValue = ConvertJsonElementToStruct(element, depth + 1) };
+
+            case JsonValueKind.Array:
+                var listValue = new Google.Protobuf.WellKnownTypes.ListValue();
+                foreach (JsonElement item in element.EnumerateArray())
+                {
+                    listValue.Values.Add(ConvertJsonElementToValue(item, depth + 1));
+                }
+                return new Value { ListValue = listValue };
+
+            case JsonValueKind.String:
+                return Value.ForString(element.GetString() ?? "");
+
+            case JsonValueKind.Number:
+                return Value.ForNumber(element.GetDouble());
+
+            case JsonValueKind.True:
+                return Value.ForBool(true);
+
+            case JsonValueKind.False:
+                return Value.ForBool(false);
+
+            case JsonValueKind.Null:
+            case JsonValueKind.Undefined:
+            default:
+                return new Value { NullValue = Google.Protobuf.WellKnownTypes.NullValue.NullValue };
+        }
+    }
+
+    private static bool TryConvertToDouble(object value, out double numberValue)
+    {
+        switch (value)
+        {
+            case byte or sbyte or short or ushort or int or uint or long or ulong or float or double or decimal:
+                numberValue = Convert.ToDouble(value, CultureInfo.InvariantCulture);
+                return true;
+
+            default:
+                numberValue = default;
+                return false;
+        }
+    }
+
+    private static void ValidateToolPayloadDepth(int depth)
+    {
+        if (depth > MaxToolPayloadDepth)
+        {
+            throw new InvalidOperationException(
+                $"Function arguments or results exceed the maximum supported nesting depth of {MaxToolPayloadDepth}.");
+        }
     }
 
     private static ChatFinishReason? PopulateResponseContents(GenerateContentResponse generateResult, IList<AIContent> responseContents)

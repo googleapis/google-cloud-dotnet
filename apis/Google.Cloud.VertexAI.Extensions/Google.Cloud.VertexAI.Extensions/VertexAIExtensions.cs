@@ -75,6 +75,58 @@ public static class VertexAIExtensions
     }
 
     /// <summary>
+    /// Creates an <see cref="IRealtimeClient"/> wrapper for Vertex AI live models.
+    /// </summary>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> whose credentials and endpoint are used to configure the realtime client.</param>
+    /// <param name="defaultModelId">
+    /// The default model ID to use for realtime sessions if not specified in <see cref="RealtimeSessionOptions.Model"/>.
+    /// This should generally be the full resource name of the model, e.g.
+    /// "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
+    /// </param>
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IRealtimeClient"/> that wraps the configured Vertex AI live connection.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+#if NET8_0_OR_GREATER
+    [System.Diagnostics.CodeAnalysis.Experimental("MEAI001")]
+#endif
+    public static IRealtimeClient BuildIRealtimeClient(
+        this PredictionServiceClientBuilder builder,
+        string? defaultModelId = null, IServiceProvider? provider = null)
+    {
+        _ = provider;
+        builder = builder.WithAssemblyVersionHeader();
+        return new PredictionServiceRealtimeClient(builder, defaultModelId);
+    }
+
+    /// <summary>
+    /// Creates an <see cref="IRealtimeClient"/> wrapper for Vertex AI live models.
+    /// </summary>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> whose credentials and endpoint are used to configure the realtime client.</param>
+    /// <param name="defaultModelId">
+    /// The default model ID to use for realtime sessions if not specified in <see cref="RealtimeSessionOptions.Model"/>.
+    /// This should generally be the full resource name of the model, e.g.
+    /// "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
+    /// </param>
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <param name="cancellationToken">A token to cancel the async operation.</param>
+    /// <returns>An <see cref="IRealtimeClient"/> that wraps the configured Vertex AI live connection.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+#if NET8_0_OR_GREATER
+    [System.Diagnostics.CodeAnalysis.Experimental("MEAI001")]
+#endif
+    public static Task<IRealtimeClient> BuildIRealtimeClientAsync(
+        this PredictionServiceClientBuilder builder,
+        string? defaultModelId = null, IServiceProvider? provider = null,
+        CancellationToken cancellationToken = default)
+    {
+        if (cancellationToken.IsCancellationRequested)
+        {
+            return Task.FromCanceled<IRealtimeClient>(cancellationToken);
+        }
+        return Task.FromResult(builder.BuildIRealtimeClient(defaultModelId, provider));
+    }
+
+    /// <summary>
     /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around it.
     /// </summary>
     /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
