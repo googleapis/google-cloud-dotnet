@@ -101,7 +101,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
         /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public virtual BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) => throw new NotImplementedException();
+        internal virtual BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) => throw new NotImplementedException();
 
         /// <summary>
         /// Asynchronously executes a query using the <c>jobs.query</c> RPC path.
@@ -128,7 +128,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+        internal virtual Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default) => throw new NotImplementedException();
         #endregion
 
         #region CreateQueryJob

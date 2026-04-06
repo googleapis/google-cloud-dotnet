@@ -33,6 +33,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         private BigQueryClient Client => BigQueryClient.Create(_fixture.ProjectId);
         private BigQueryTable GetShakespeareTable() => Client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+        private static void AssertExecutedAsStatelessQuery(BigQueryResults results)
+        {
+            // We verify the Jobs.Query endpoint was called by checking Query Id was populated
+            // in the response.
+            Assert.NotNull(results.QueryId);
+            Assert.All(results.ToList(), row => Assert.Equal(results.QueryId, row.QueryId));
+        }
 
         public QueryTest(BigQueryFixture fixture)
         {
@@ -43,25 +50,24 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public void SynchronousStatelessQuery()
         {
             var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {GetShakespeareTable()} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            var results = Client.ExecuteStatelessQuery(sql, parameters: null);
+            var results = Client.ExecuteQuery(sql, parameters: null);
             var rows = results.ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
-            Assert.NotNull(results.QueryId);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]
         public async Task AsynchronousStatelessQuery()
         {
             var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {GetShakespeareTable()} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            var results = await Client.ExecuteStatelessQueryAsync(sql, parameters: null);
+            var results = await Client.ExecuteQueryAsync(sql, parameters: null);
             var rows = results.ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
-            Assert.NotNull(results.QueryId);
-            Assert.All(rows, row => Assert.Equal(results.QueryId, row.QueryId));
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Theory]
@@ -70,11 +76,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         [InlineData("SELECT TRUE AS val", true)]
         public void StatelessQuery_Types(string sql, object expectedValue)
         {
-            var results = Client.ExecuteStatelessQuery(sql, null);
+            var results = Client.ExecuteQuery(sql, null);
             var row = results.Single();
             Assert.Equal(expectedValue, row["val"]);
-            Assert.NotNull(results.QueryId);
-            Assert.Equal(results.QueryId, row.QueryId);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]
@@ -83,11 +88,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = Client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             string sql = $"SELECT score FROM {table} WHERE player=@player";
             var parameters = new[] { new BigQueryParameter("player", BigQueryDbType.String, "Angela") };
-            var results = Client.ExecuteStatelessQuery(sql, parameters);
+            var results = Client.ExecuteQuery(sql, parameters);
             var row = results.Single();
             Assert.Equal(95L, (long)row["score"]);
-            Assert.NotNull(results.QueryId);
-            Assert.Equal(results.QueryId, row.QueryId);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]
@@ -96,38 +100,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var sql = $"SELECT corpus as title FROM {GetShakespeareTable()} LIMIT 10";
             // MaxResults = 5 sets the initial page size.
             // BigQueryResults will fetch the remaining rows automatically when iterating.
-            var results = Client.ExecuteStatelessQuery(sql, parameters: null, queryOptions: new StatelessQueryOptions { MaxResults = 5 });
+            var results = Client.ExecuteQuery(sql, parameters: null, resultsOptions: new GetQueryResultsOptions { PageSize = 5 });
 
             // Verifying pagination: the first page should have 5 rows and a next page token.
             var page = results.ReadPage(5);
             Assert.Equal(5, page.Rows.Count);
             Assert.NotNull(page.NextPageToken);
-            Assert.All(page.Rows, row => Assert.Equal(results.QueryId, row.QueryId));
 
             // The total count after full iteration should still be 10.
             var allRows = results.ToList();
             Assert.Equal(10, allRows.Count);
-            Assert.NotNull(results.QueryId);
-            Assert.All(allRows, row => Assert.Equal(results.QueryId, row.QueryId));
-        }
-
-        [Fact]
-        public void StatelessQuery_DryRun()
-        {
-            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {GetShakespeareTable()} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            var results = Client.ExecuteStatelessQuery(sql, parameters: null, queryOptions: new StatelessQueryOptions { DryRun = true });
-            Assert.Empty(results);
-            Assert.NotNull(results.Schema);
-
-            // Verify we received statistics
-            var fields = results.Schema.Fields;
-            Assert.Equal(2, fields.Count);
-
-            Assert.Equal("title", fields[0].Name);
-            Assert.Equal("STRING", fields[0].Type);
-
-            Assert.Equal("unique_words", fields[1].Name);
-            Assert.Equal("INTEGER", fields[1].Type);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]
@@ -140,8 +123,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = results.Single();
             Assert.Equal(1L, row["val"]);
             // In the stateless path, QueryId is populated.
-            Assert.NotNull(results.QueryId);
-            Assert.Equal(results.QueryId, row.QueryId);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]
@@ -155,8 +137,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = rows.Single();
             Assert.Equal(1L, row["val"]);
             // In the stateless path, QueryId is populated.
-            Assert.NotNull(results.QueryId);
-            Assert.Equal(results.QueryId, row.QueryId);
+            AssertExecutedAsStatelessQuery(results);
         }
 
         [Fact]

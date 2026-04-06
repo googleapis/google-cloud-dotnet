@@ -27,7 +27,7 @@ namespace Google.Cloud.BigQuery.V2
     public partial class BigQueryClientImpl
     {
         /// <inheritdoc />
-        public override BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
+        internal override BigQueryResults ExecuteStatelessQuery(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)
         {
             var request = CreateQueryRequest(sql, parameters, queryOptions);
             var queryRestRequest = Service.Jobs.Query(request, ProjectId);
@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
+        internal override async Task<BigQueryResults> ExecuteStatelessQueryAsync(string sql, IEnumerable<BigQueryParameter> parameters, StatelessQueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
         {
             var request = CreateQueryRequest(sql, parameters, queryOptions);
             var queryRestRequest = Service.Jobs.Query(request, ProjectId);

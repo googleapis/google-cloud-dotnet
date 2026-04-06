@@ -21,81 +21,81 @@ namespace Google.Cloud.BigQuery.V2;
 /// <summary>
 /// Options for <c>ExecuteStatelessQuery</c> operations.
 /// </summary>
-public sealed class StatelessQueryOptions
+internal sealed class StatelessQueryOptions
 {
     /// <summary>
     /// Optional connection properties which can modify the query behavior.
     /// </summary>
-    public IList<ConnectionProperty> ConnectionProperties { get; set; }
+    internal IList<ConnectionProperty> ConnectionProperties { get; set; }
 
     /// <summary>
     /// Specifies whether the query should be executed as a continuous query.
     /// If not set, this is effectively <c>false</c>.
     /// </summary>
-    public bool? Continuous { get; set; }
+    internal bool? Continuous { get; set; }
 
     /// <summary>
     /// If <c>true</c>, creates a new session using a randomly generated session ID.
     /// If <c>false</c>, runs the query in non-session mode unless a session ID is provided in <see cref="ConnectionProperties"/>.
     /// </summary>
-    public bool? CreateSession { get; set; }
+    internal bool? CreateSession { get; set; }
 
     /// <summary>
     /// The default dataset to assume for any unqualified table names in the query.
     /// If this is not set, all table names must be fully qualified.
     /// </summary>
-    public DatasetReference DefaultDataset { get; set; }
+    internal DatasetReference DefaultDataset { get; set; }
 
     /// <summary>
     /// The encryption configuration to apply to the destination table, if any.
     /// </summary>
-    public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
+    internal EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
     /// <summary>
     /// If set to true, don't actually run this query. A valid query will return a mostly empty response
     /// with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run.
     /// This option can be used to determine the schema of the query without running it.
     /// </summary>
-    public bool? DryRun { get; set; }
+    internal bool? DryRun { get; set; }
 
     /// <summary>
     /// Optional output format adjustments.
     /// </summary>
-    public DataFormatOptions FormatOptions { get; set; }
+    internal DataFormatOptions FormatOptions { get; set; }
 
     /// <summary>
     /// Specifies whether a job is required to be created.
     /// If not set, this is effectively <see cref="JobCreationMode.Required"/>.
     /// </summary>
-    public JobCreationMode? JobCreationMode { get; set; }
+    internal JobCreationMode? JobCreationMode { get; set; }
 
     /// <summary>
     /// The job timeout. If this limit is exceeded, BigQuery will attempt to stop the job,
     /// but cancellation is not guaranteed. This timeout applies even if a job does not need to be created.
     /// </summary>
-    public TimeSpan? JobTimeout { get; set; }
+    internal TimeSpan? JobTimeout { get; set; }
 
     /// <summary>
     /// The labels associated with this query. Labels can be used to organize and group query jobs.
     /// </summary>
-    public IDictionary<string, string> Labels { get; set; }
+    internal IDictionary<string, string> Labels { get; set; }
 
     /// <summary>
     /// The geographic location where the job should run.
     /// </summary>
-    public string Location { get; set; }
+    internal string Location { get; set; }
 
     /// <summary>
     /// The maximum number of rows of data to return per page of results.
     /// This does not affect the total number of results returned.
     /// </summary>
-    public long? MaxResults { get; set; }
+    internal long? MaxResults { get; set; }
 
     /// <summary>
     /// Limits the bytes billed for this query.
     /// If not set, this is effectively the project default.
     /// </summary>
-    public long? MaximumBytesBilled { get; set; }
+    internal long? MaximumBytesBilled { get; set; }
 
     /// <summary>
     /// If set, determines whether parameters are named or positional. If not set,
@@ -103,42 +103,42 @@ public sealed class StatelessQueryOptions
     /// must have a name. When positional parameters are used, parameters may still have names,
     /// but don't have to.
     /// </summary>
-    public BigQueryParameterMode? ParameterMode { get; set; }
+    internal BigQueryParameterMode? ParameterMode { get; set; }
 
     /// <summary>
     /// A unique user-provided identifier to ensure idempotent behavior for queries.
     /// This is case-sensitive and limited to 36 ASCII characters; a UUID is recommended.
     /// </summary>
-    public string RequestId { get; set; }
+    internal string RequestId { get; set; }
 
     /// <summary>
     /// The reservation that the query request should use, in the format
     /// <c>projects/{project}/locations/{location}/reservations/{reservation}</c>.
     /// </summary>
-    public string Reservation { get; set; }
+    internal string Reservation { get; set; }
 
     /// <summary>
     /// The maximum amount of time the client is willing to wait for the query to complete.
     /// If not set, this defaults to 10 seconds.
     /// </summary>
-    public TimeSpan? Timeout { get; set; }
+    internal TimeSpan? Timeout { get; set; }
 
     /// <summary>
     /// Set to true to use legacy SQL instead of standard SQL.
     /// </summary>
-    public bool? UseLegacySql { get; set; }
+    internal bool? UseLegacySql { get; set; }
 
     /// <summary>
     /// Whether to look for the result in the query cache.
     /// If not set, this is effectively true.
     /// </summary>
-    public bool? UseQueryCache { get; set; }
+    internal bool? UseQueryCache { get; set; }
 
     /// <summary>
     /// If set to <c>true</c>, the query is allowed to write results incrementally to the temporary result table.
     /// This is only supported for <c>SELECT</c> queries.
     /// </summary>
-    public bool? WriteIncrementalResults { get; set; }
+    internal bool? WriteIncrementalResults { get; set; }
 
     /// <summary>
     /// Optional action to perform after preparing the request. If this property is non-null,
@@ -152,7 +152,7 @@ public sealed class StatelessQueryOptions
     /// This modifier is applied to the request after all properties on this type have been applied.
     /// The delegate is only called once per operation, even if the request is automatically retried.
     /// </remarks>
-    public Action<QueryRequest> RequestModifier { get; set; }
+    internal Action<QueryRequest> RequestModifier { get; set; }
 
     internal void ModifyRequest(QueryRequest query)
     {
