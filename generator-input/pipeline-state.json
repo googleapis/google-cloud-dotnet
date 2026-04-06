@@ -2748,12 +2748,12 @@
         },
         {
             "id": "Google.Cloud.Redis.Cluster.V1",
-            "currentVersion": "1.5.0",
+            "currentVersion": "1.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T09:27:51.304153049Z",
+            "releaseTimestamp": "2026-04-06T14:13:39.182175707Z",
             "lastGeneratedCommit": "96eea0c3ab6e7d104e26d04914ce26a93959ba1a",
-            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "96eea0c3ab6e7d104e26d04914ce26a93959ba1a",
             "apiPaths": [
                 "google/cloud/redis/cluster/v1"
             ],
