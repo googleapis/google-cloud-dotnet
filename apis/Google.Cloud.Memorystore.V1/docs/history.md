@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-04-06
+
+### New features
+
+- [Memorystore for Valkey] Add support for Flexible CA feature
+
 ## Version 1.0.0-beta05, released 2026-01-05
 
 ### New features
