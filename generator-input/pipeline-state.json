@@ -1458,12 +1458,12 @@
         },
         {
             "id": "Google.Cloud.Dlp.V2",
-            "currentVersion": "4.23.0",
+            "currentVersion": "4.24.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-23T14:13:00.754483846Z",
+            "releaseTimestamp": "2026-04-06T14:10:22.137500489Z",
             "lastGeneratedCommit": "544bab0c27830b8e4d4a2c1dfc87a3b2c0cdc118",
-            "lastReleasedCommit": "dfcbe6807e8c0bb8d5abb2b5e875a2a03af8d874",
+            "lastReleasedCommit": "544bab0c27830b8e4d4a2c1dfc87a3b2c0cdc118",
             "apiPaths": [
                 "google/privacy/dlp/v2"
             ],
