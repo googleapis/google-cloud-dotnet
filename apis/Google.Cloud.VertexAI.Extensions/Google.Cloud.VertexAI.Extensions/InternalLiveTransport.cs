@@ -187,6 +187,7 @@ internal sealed class AsyncSession(WebSocket webSocket) : IAsyncDisposable
     private readonly WebSocket _webSocket = webSocket;
     private readonly SemaphoreSlim _sendLock = new(1, 1);
     private readonly SemaphoreSlim _receiveLock = new(1, 1);
+    private readonly byte[] _receiveBuffer = new byte[4096];
     private int _isDisposed;
 
     public Task SendRealtimeInputAsync(LiveSendRealtimeInputParameters realtimeInput, CancellationToken cancellationToken = default) =>
@@ -259,13 +260,12 @@ internal sealed class AsyncSession(WebSocket webSocket) : IAsyncDisposable
                     return null;
             }
 
-            byte[] buffer = new byte[4096];
             using var messageStream = new MemoryStream();
             WebSocketReceiveResult result;
 
             do
             {
-                result = await _webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), cancellationToken).ConfigureAwait(false);
+                result = await _webSocket.ReceiveAsync(new ArraySegment<byte>(_receiveBuffer), cancellationToken).ConfigureAwait(false);
                 if (result.MessageType == WebSocketMessageType.Close)
                 {
                     return null;
@@ -273,7 +273,7 @@ internal sealed class AsyncSession(WebSocket webSocket) : IAsyncDisposable
 
                 if (result.Count > 0)
                 {
-                    messageStream.Write(buffer, 0, result.Count);
+                    messageStream.Write(_receiveBuffer, 0, result.Count);
                 }
             } while (!result.EndOfMessage);
 
@@ -282,8 +282,8 @@ internal sealed class AsyncSession(WebSocket webSocket) : IAsyncDisposable
                 return null;
             }
 
-            string json = Encoding.UTF8.GetString(messageStream.ToArray());
-            return JsonSerializer.Deserialize(json, LiveJsonContext.Default.LiveServerMessage);
+            messageStream.Position = 0;
+            return JsonSerializer.Deserialize(messageStream, LiveJsonContext.Default.LiveServerMessage);
         }
         finally
         {

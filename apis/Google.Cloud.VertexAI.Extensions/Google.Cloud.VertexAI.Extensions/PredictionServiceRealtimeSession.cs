@@ -630,7 +630,8 @@ internal sealed class PredictionServiceRealtimeSession : IRealtimeClientSession
                 return list;
 
             default:
-                return value.ToString();
+                JsonElement serialized = JsonSerializer.SerializeToElement(value, AIJsonUtilities.DefaultOptions);
+                return ConvertJsonElementToToolPayload(serialized, depth + 1);
         }
     }
 
