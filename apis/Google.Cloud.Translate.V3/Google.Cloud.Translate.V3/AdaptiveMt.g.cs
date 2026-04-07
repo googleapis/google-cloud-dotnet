@@ -53,85 +53,86 @@ namespace Google.Cloud.Translate.V3 {
             "c3RBZGFwdGl2ZU10RGF0YXNldHNSZXNwb25zZRJRChRhZGFwdGl2ZV9tdF9k",
             "YXRhc2V0cxgBIAMoCzIuLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5B",
             "ZGFwdGl2ZU10RGF0YXNldEID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CUID4EEBIosIChpBZGFwdGl2ZU10VHJhbnNsYXRlUmVxdWVzdBI5CgZwYXJl",
+            "CUID4EEBIp4IChpBZGFwdGl2ZU10VHJhbnNsYXRlUmVxdWVzdBI5CgZwYXJl",
             "bnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
             "Y2F0aW9uEkMKB2RhdGFzZXQYAiABKAlCMuBBAvpBLAoqdHJhbnNsYXRlLmdv",
             "b2dsZWFwaXMuY29tL0FkYXB0aXZlTXREYXRhc2V0EhQKB2NvbnRlbnQYAyAD",
-            "KAlCA+BBAhJ3ChlyZWZlcmVuY2Vfc2VudGVuY2VfY29uZmlnGAYgASgLMk8u",
-            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkFkYXB0aXZlTXRUcmFuc2xh",
-            "dGVSZXF1ZXN0LlJlZmVyZW5jZVNlbnRlbmNlQ29uZmlnSACIAQESaQoPZ2xv",
-            "c3NhcnlfY29uZmlnGAcgASgLMkYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9u",
-            "LnYzLkFkYXB0aXZlTXRUcmFuc2xhdGVSZXF1ZXN0Lkdsb3NzYXJ5Q29uZmln",
-            "QgPgQQFIAYgBARpJChVSZWZlcmVuY2VTZW50ZW5jZVBhaXISFwoPc291cmNl",
-            "X3NlbnRlbmNlGAEgASgJEhcKD3RhcmdldF9zZW50ZW5jZRgCIAEoCRqMAQoZ",
-            "UmVmZXJlbmNlU2VudGVuY2VQYWlyTGlzdBJvChhyZWZlcmVuY2Vfc2VudGVu",
-            "Y2VfcGFpcnMYASADKAsyTS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
-            "QWRhcHRpdmVNdFRyYW5zbGF0ZVJlcXVlc3QuUmVmZXJlbmNlU2VudGVuY2VQ",
-            "YWlyGs8BChdSZWZlcmVuY2VTZW50ZW5jZUNvbmZpZxJ4Ch1yZWZlcmVuY2Vf",
-            "c2VudGVuY2VfcGFpcl9saXN0cxgBIAMoCzJRLmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5BZGFwdGl2ZU10VHJhbnNsYXRlUmVxdWVzdC5SZWZlcmVu",
-            "Y2VTZW50ZW5jZVBhaXJMaXN0EhwKFHNvdXJjZV9sYW5ndWFnZV9jb2RlGAIg",
-            "ASgJEhwKFHRhcmdldF9sYW5ndWFnZV9jb2RlGAMgASgJGpQBCg5HbG9zc2Fy",
-            "eUNvbmZpZxI7CghnbG9zc2FyeRgBIAEoCUIp4EEC+kEjCiF0cmFuc2xhdGUu",
-            "Z29vZ2xlYXBpcy5jb20vR2xvc3NhcnkSGAoLaWdub3JlX2Nhc2UYAiABKAhC",
-            "A+BBARIrCh5jb250ZXh0dWFsX3RyYW5zbGF0aW9uX2VuYWJsZWQYBCABKAhC",
-            "A+BBAUIcChpfcmVmZXJlbmNlX3NlbnRlbmNlX2NvbmZpZ0ISChBfZ2xvc3Nh",
-            "cnlfY29uZmlnIjUKFUFkYXB0aXZlTXRUcmFuc2xhdGlvbhIcCg90cmFuc2xh",
-            "dGVkX3RleHQYASABKAlCA+BBAyLbAQobQWRhcHRpdmVNdFRyYW5zbGF0ZVJl",
-            "c3BvbnNlEk0KDHRyYW5zbGF0aW9ucxgBIAMoCzIyLmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5BZGFwdGl2ZU10VHJhbnNsYXRpb25CA+BBAxIaCg1s",
-            "YW5ndWFnZV9jb2RlGAIgASgJQgPgQQMSUQoVZ2xvc3NhcnlfdHJhbnNsYXRp",
-            "b25zGAQgAygLMjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkFkYXB0",
-            "aXZlTXRUcmFuc2xhdGlvbiKUAwoOQWRhcHRpdmVNdEZpbGUSPQoEbmFtZRgB",
-            "IAEoCUIv4EEC+kEpCid0cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb20vQWRhcHRp",
-            "dmVNdEZpbGUSFAoMZGlzcGxheV9uYW1lGAIgASgJEhMKC2VudHJ5X2NvdW50",
-            "GAMgASgFEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOqsB6kGnAQondHJhbnNsYXRlLmdv",
-            "b2dsZWFwaXMuY29tL0FkYXB0aXZlTXRGaWxlEltwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWRhcHRpdmVNdERhdGFzZXRzL3tk",
-            "YXRhc2V0fS9hZGFwdGl2ZU10RmlsZXMve2ZpbGV9Kg9hZGFwdGl2ZU10Rmls",
-            "ZXMyDmFkYXB0aXZlTXRGaWxlIlkKGEdldEFkYXB0aXZlTXRGaWxlUmVxdWVz",
-            "dBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ3RyYW5zbGF0ZS5nb29nbGVhcGlz",
-            "LmNvbS9BZGFwdGl2ZU10RmlsZSJcChtEZWxldGVBZGFwdGl2ZU10RmlsZVJl",
-            "cXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCid0cmFuc2xhdGUuZ29vZ2xl",
-            "YXBpcy5jb20vQWRhcHRpdmVNdEZpbGUi/wEKG0ltcG9ydEFkYXB0aXZlTXRG",
-            "aWxlUmVxdWVzdBJCCgZwYXJlbnQYASABKAlCMuBBAvpBLAoqdHJhbnNsYXRl",
-            "Lmdvb2dsZWFwaXMuY29tL0FkYXB0aXZlTXREYXRhc2V0EkkKEWZpbGVfaW5w",
-            "dXRfc291cmNlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYz",
-            "LkZpbGVJbnB1dFNvdXJjZUgAEkcKEGdjc19pbnB1dF9zb3VyY2UYAyABKAsy",
-            "Ky5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2NzSW5wdXRTb3VyY2VI",
-            "AEIICgZzb3VyY2UiagocSW1wb3J0QWRhcHRpdmVNdEZpbGVSZXNwb25zZRJK",
-            "ChBhZGFwdGl2ZV9tdF9maWxlGAEgASgLMisuZ29vZ2xlLmNsb3VkLnRyYW5z",
-            "bGF0aW9uLnYzLkFkYXB0aXZlTXRGaWxlQgPgQQMikQEKGkxpc3RBZGFwdGl2",
-            "ZU10RmlsZXNSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC+kEsCip0cmFu",
-            "c2xhdGUuZ29vZ2xlYXBpcy5jb20vQWRhcHRpdmVNdERhdGFzZXQSFgoJcGFn",
-            "ZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIogB",
-            "ChtMaXN0QWRhcHRpdmVNdEZpbGVzUmVzcG9uc2USSwoRYWRhcHRpdmVfbXRf",
-            "ZmlsZXMYASADKAsyKy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQWRh",
-            "cHRpdmVNdEZpbGVCA+BBAxIcCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAlCA+BB",
-            "ASLYAwoSQWRhcHRpdmVNdFNlbnRlbmNlEkEKBG5hbWUYASABKAlCM+BBAvpB",
-            "LQordHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0FkYXB0aXZlTXRTZW50ZW5j",
-            "ZRIcCg9zb3VyY2Vfc2VudGVuY2UYAiABKAlCA+BBAhIcCg90YXJnZXRfc2Vu",
-            "dGVuY2UYAyABKAlCA+BBAhI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzrWAepB0gEKK3Ry",
-            "YW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9BZGFwdGl2ZU10U2VudGVuY2USenBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hZGFwdGl2",
-            "ZU10RGF0YXNldHMve2RhdGFzZXR9L2FkYXB0aXZlTXRGaWxlcy97ZmlsZX0v",
-            "YWRhcHRpdmVNdFNlbnRlbmNlcy97c2VudGVuY2V9KhNhZGFwdGl2ZU10U2Vu",
-            "dGVuY2VzMhJhZGFwdGl2ZU10U2VudGVuY2UiiAEKHkxpc3RBZGFwdGl2ZU10",
-            "U2VudGVuY2VzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+BBAvpBKQondHJh",
-            "bnNsYXRlLmdvb2dsZWFwaXMuY29tL0FkYXB0aXZlTXRGaWxlEhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIpQBCh9MaXN0QWRhcHRp",
-            "dmVNdFNlbnRlbmNlc1Jlc3BvbnNlElMKFWFkYXB0aXZlX210X3NlbnRlbmNl",
-            "cxgBIAMoCzIvLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5BZGFwdGl2",
-            "ZU10U2VudGVuY2VCA+BBAxIcCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BB",
-            "AULGAQodY29tLmdvb2dsZS5jbG91ZC50cmFuc2xhdGUudjNCD0FkYXB0aXZl",
-            "TXRQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL3RyYW5zbGF0ZS9hcGl2",
-            "My90cmFuc2xhdGVwYjt0cmFuc2xhdGVwYqoCGUdvb2dsZS5DbG91ZC5UcmFu",
-            "c2xhdGUuVjPKAhlHb29nbGVcQ2xvdWRcVHJhbnNsYXRlXFYz6gIcR29vZ2xl",
-            "OjpDbG91ZDo6VHJhbnNsYXRlOjpWM2IGcHJvdG8z"));
+            "KAlCA+BBAhIRCgltaW1lX3R5cGUYBCABKAkSdwoZcmVmZXJlbmNlX3NlbnRl",
+            "bmNlX2NvbmZpZxgGIAEoCzJPLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52",
+            "My5BZGFwdGl2ZU10VHJhbnNsYXRlUmVxdWVzdC5SZWZlcmVuY2VTZW50ZW5j",
+            "ZUNvbmZpZ0gAiAEBEmkKD2dsb3NzYXJ5X2NvbmZpZxgHIAEoCzJGLmdvb2ds",
+            "ZS5jbG91ZC50cmFuc2xhdGlvbi52My5BZGFwdGl2ZU10VHJhbnNsYXRlUmVx",
+            "dWVzdC5HbG9zc2FyeUNvbmZpZ0ID4EEBSAGIAQEaSQoVUmVmZXJlbmNlU2Vu",
+            "dGVuY2VQYWlyEhcKD3NvdXJjZV9zZW50ZW5jZRgBIAEoCRIXCg90YXJnZXRf",
+            "c2VudGVuY2UYAiABKAkajAEKGVJlZmVyZW5jZVNlbnRlbmNlUGFpckxpc3QS",
+            "bwoYcmVmZXJlbmNlX3NlbnRlbmNlX3BhaXJzGAEgAygLMk0uZ29vZ2xlLmNs",
+            "b3VkLnRyYW5zbGF0aW9uLnYzLkFkYXB0aXZlTXRUcmFuc2xhdGVSZXF1ZXN0",
+            "LlJlZmVyZW5jZVNlbnRlbmNlUGFpchrPAQoXUmVmZXJlbmNlU2VudGVuY2VD",
+            "b25maWcSeAodcmVmZXJlbmNlX3NlbnRlbmNlX3BhaXJfbGlzdHMYASADKAsy",
+            "US5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQWRhcHRpdmVNdFRyYW5z",
+            "bGF0ZVJlcXVlc3QuUmVmZXJlbmNlU2VudGVuY2VQYWlyTGlzdBIcChRzb3Vy",
+            "Y2VfbGFuZ3VhZ2VfY29kZRgCIAEoCRIcChR0YXJnZXRfbGFuZ3VhZ2VfY29k",
+            "ZRgDIAEoCRqUAQoOR2xvc3NhcnlDb25maWcSOwoIZ2xvc3NhcnkYASABKAlC",
+            "KeBBAvpBIwohdHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0dsb3NzYXJ5EhgK",
+            "C2lnbm9yZV9jYXNlGAIgASgIQgPgQQESKwoeY29udGV4dHVhbF90cmFuc2xh",
+            "dGlvbl9lbmFibGVkGAQgASgIQgPgQQFCHAoaX3JlZmVyZW5jZV9zZW50ZW5j",
+            "ZV9jb25maWdCEgoQX2dsb3NzYXJ5X2NvbmZpZyI1ChVBZGFwdGl2ZU10VHJh",
+            "bnNsYXRpb24SHAoPdHJhbnNsYXRlZF90ZXh0GAEgASgJQgPgQQMi2wEKG0Fk",
+            "YXB0aXZlTXRUcmFuc2xhdGVSZXNwb25zZRJNCgx0cmFuc2xhdGlvbnMYASAD",
+            "KAsyMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQWRhcHRpdmVNdFRy",
+            "YW5zbGF0aW9uQgPgQQMSGgoNbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEDElEK",
+            "FWdsb3NzYXJ5X3RyYW5zbGF0aW9ucxgEIAMoCzIyLmdvb2dsZS5jbG91ZC50",
+            "cmFuc2xhdGlvbi52My5BZGFwdGl2ZU10VHJhbnNsYXRpb24ilAMKDkFkYXB0",
+            "aXZlTXRGaWxlEj0KBG5hbWUYASABKAlCL+BBAvpBKQondHJhbnNsYXRlLmdv",
+            "b2dsZWFwaXMuY29tL0FkYXB0aXZlTXRGaWxlEhQKDGRpc3BsYXlfbmFtZRgC",
+            "IAEoCRITCgtlbnRyeV9jb3VudBgDIAEoBRI0CgtjcmVhdGVfdGltZRgEIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
+            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzqr",
+            "AepBpwEKJ3RyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9BZGFwdGl2ZU10Rmls",
+            "ZRJbcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Fk",
+            "YXB0aXZlTXREYXRhc2V0cy97ZGF0YXNldH0vYWRhcHRpdmVNdEZpbGVzL3tm",
+            "aWxlfSoPYWRhcHRpdmVNdEZpbGVzMg5hZGFwdGl2ZU10RmlsZSJZChhHZXRB",
+            "ZGFwdGl2ZU10RmlsZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCid0",
+            "cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb20vQWRhcHRpdmVNdEZpbGUiXAobRGVs",
+            "ZXRlQWRhcHRpdmVNdEZpbGVSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpB",
+            "KQondHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0FkYXB0aXZlTXRGaWxlIv8B",
+            "ChtJbXBvcnRBZGFwdGl2ZU10RmlsZVJlcXVlc3QSQgoGcGFyZW50GAEgASgJ",
+            "QjLgQQL6QSwKKnRyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9BZGFwdGl2ZU10",
+            "RGF0YXNldBJJChFmaWxlX2lucHV0X3NvdXJjZRgCIAEoCzIsLmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5GaWxlSW5wdXRTb3VyY2VIABJHChBnY3Nf",
+            "aW5wdXRfc291cmNlGAMgASgLMisuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9u",
+            "LnYzLkdjc0lucHV0U291cmNlSABCCAoGc291cmNlImoKHEltcG9ydEFkYXB0",
+            "aXZlTXRGaWxlUmVzcG9uc2USSgoQYWRhcHRpdmVfbXRfZmlsZRgBIAEoCzIr",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5BZGFwdGl2ZU10RmlsZUID",
+            "4EEDIpEBChpMaXN0QWRhcHRpdmVNdEZpbGVzUmVxdWVzdBJCCgZwYXJlbnQY",
+            "ASABKAlCMuBBAvpBLAoqdHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0FkYXB0",
+            "aXZlTXREYXRhc2V0EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2Vf",
+            "dG9rZW4YAyABKAlCA+BBASKIAQobTGlzdEFkYXB0aXZlTXRGaWxlc1Jlc3Bv",
+            "bnNlEksKEWFkYXB0aXZlX210X2ZpbGVzGAEgAygLMisuZ29vZ2xlLmNsb3Vk",
+            "LnRyYW5zbGF0aW9uLnYzLkFkYXB0aXZlTXRGaWxlQgPgQQMSHAoPbmV4dF9w",
+            "YWdlX3Rva2VuGAMgASgJQgPgQQEi2AMKEkFkYXB0aXZlTXRTZW50ZW5jZRJB",
+            "CgRuYW1lGAEgASgJQjPgQQL6QS0KK3RyYW5zbGF0ZS5nb29nbGVhcGlzLmNv",
+            "bS9BZGFwdGl2ZU10U2VudGVuY2USHAoPc291cmNlX3NlbnRlbmNlGAIgASgJ",
+            "QgPgQQISHAoPdGFyZ2V0X3NlbnRlbmNlGAMgASgJQgPgQQISNAoLY3JlYXRl",
+            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQM61gHqQdIBCit0cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb20vQWRh",
+            "cHRpdmVNdFNlbnRlbmNlEnpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vYWRhcHRpdmVNdERhdGFzZXRzL3tkYXRhc2V0fS9hZGFw",
+            "dGl2ZU10RmlsZXMve2ZpbGV9L2FkYXB0aXZlTXRTZW50ZW5jZXMve3NlbnRl",
+            "bmNlfSoTYWRhcHRpdmVNdFNlbnRlbmNlczISYWRhcHRpdmVNdFNlbnRlbmNl",
+            "IogBCh5MaXN0QWRhcHRpdmVNdFNlbnRlbmNlc1JlcXVlc3QSPwoGcGFyZW50",
+            "GAEgASgJQi/gQQL6QSkKJ3RyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9BZGFw",
+            "dGl2ZU10RmlsZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCSKUAQofTGlzdEFkYXB0aXZlTXRTZW50ZW5jZXNSZXNwb25zZRJTChVh",
+            "ZGFwdGl2ZV9tdF9zZW50ZW5jZXMYASADKAsyLy5nb29nbGUuY2xvdWQudHJh",
+            "bnNsYXRpb24udjMuQWRhcHRpdmVNdFNlbnRlbmNlQgPgQQMSHAoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJQgPgQQFCxgEKHWNvbS5nb29nbGUuY2xvdWQudHJh",
+            "bnNsYXRlLnYzQg9BZGFwdGl2ZU10UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby90cmFuc2xhdGUvYXBpdjMvdHJhbnNsYXRlcGI7dHJhbnNsYXRlcGKq",
+            "AhlHb29nbGUuQ2xvdWQuVHJhbnNsYXRlLlYzygIZR29vZ2xlXENsb3VkXFRy",
+            "YW5zbGF0ZVxWM+oCHEdvb2dsZTo6Q2xvdWQ6OlRyYW5zbGF0ZTo6VjNiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Translate.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -141,7 +142,7 @@ namespace Google.Cloud.Translate.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest), global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest), global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse), global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse.Parser, new[]{ "AdaptiveMtDatasets", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Parser, new[]{ "Parent", "Dataset", "Content", "ReferenceSentenceConfig", "GlossaryConfig" }, new[]{ "ReferenceSentenceConfig", "GlossaryConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePair), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePair.Parser, new[]{ "SourceSentence", "TargetSentence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Parser, new[]{ "Parent", "Dataset", "Content", "MimeType", "ReferenceSentenceConfig", "GlossaryConfig" }, new[]{ "ReferenceSentenceConfig", "GlossaryConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePair), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePair.Parser, new[]{ "SourceSentence", "TargetSentence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePairList), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentencePairList.Parser, new[]{ "ReferenceSentencePairs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig.Parser, new[]{ "ReferenceSentencePairLists", "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.GlossaryConfig), global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.GlossaryConfig.Parser, new[]{ "Glossary", "IgnoreCase", "ContextualTranslationEnabled" }, null, null, null, null)}),
@@ -1900,6 +1901,7 @@ namespace Google.Cloud.Translate.V3 {
       parent_ = other.parent_;
       dataset_ = other.dataset_;
       content_ = other.content_.Clone();
+      mimeType_ = other.mimeType_;
       referenceSentenceConfig_ = other.referenceSentenceConfig_ != null ? other.referenceSentenceConfig_.Clone() : null;
       glossaryConfig_ = other.glossaryConfig_ != null ? other.glossaryConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1958,6 +1960,21 @@ namespace Google.Cloud.Translate.V3 {
       get { return content_; }
     }
 
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 4;
+    private string mimeType_ = "";
+    /// <summary>
+    /// The format of the source text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "reference_sentence_config" field.</summary>
     public const int ReferenceSentenceConfigFieldNumber = 6;
     private global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig referenceSentenceConfig_;
@@ -2008,6 +2025,7 @@ namespace Google.Cloud.Translate.V3 {
       if (Parent != other.Parent) return false;
       if (Dataset != other.Dataset) return false;
       if(!content_.Equals(other.content_)) return false;
+      if (MimeType != other.MimeType) return false;
       if (!object.Equals(ReferenceSentenceConfig, other.ReferenceSentenceConfig)) return false;
       if (!object.Equals(GlossaryConfig, other.GlossaryConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2020,6 +2038,7 @@ namespace Google.Cloud.Translate.V3 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
       hash ^= content_.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       if (referenceSentenceConfig_ != null) hash ^= ReferenceSentenceConfig.GetHashCode();
       if (glossaryConfig_ != null) hash ^= GlossaryConfig.GetHashCode();
       if (_unknownFields != null) {
@@ -2049,6 +2068,10 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteString(Dataset);
       }
       content_.WriteTo(output, _repeated_content_codec);
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MimeType);
+      }
       if (referenceSentenceConfig_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(ReferenceSentenceConfig);
@@ -2076,6 +2099,10 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteString(Dataset);
       }
       content_.WriteTo(ref output, _repeated_content_codec);
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MimeType);
+      }
       if (referenceSentenceConfig_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(ReferenceSentenceConfig);
@@ -2101,6 +2128,9 @@ namespace Google.Cloud.Translate.V3 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
       }
       size += content_.CalculateSize(_repeated_content_codec);
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
       if (referenceSentenceConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReferenceSentenceConfig);
       }
@@ -2126,6 +2156,9 @@ namespace Google.Cloud.Translate.V3 {
         Dataset = other.Dataset;
       }
       content_.Add(other.content_);
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
       if (other.referenceSentenceConfig_ != null) {
         if (referenceSentenceConfig_ == null) {
           ReferenceSentenceConfig = new global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig();
@@ -2167,6 +2200,10 @@ namespace Google.Cloud.Translate.V3 {
           }
           case 26: {
             content_.AddEntriesFrom(input, _repeated_content_codec);
+            break;
+          }
+          case 34: {
+            MimeType = input.ReadString();
             break;
           }
           case 50: {
@@ -2212,6 +2249,10 @@ namespace Google.Cloud.Translate.V3 {
           }
           case 26: {
             content_.AddEntriesFrom(ref input, _repeated_content_codec);
+            break;
+          }
+          case 34: {
+            MimeType = input.ReadString();
             break;
           }
           case 50: {
