@@ -4971,6 +4971,18 @@
             "sourcePaths": [
                 "apis/Google.Maps.Geocode.V4/Google.Maps.Geocode.V4"
             ]
+        },
+        {
+            "id": "Google.Cloud.Appoptimize.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/appoptimize/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Appoptimize.V1Beta/Google.Cloud.Appoptimize.V1Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [
@@ -4984,6 +4996,7 @@
         "google/shopping/merchant/reports/v1alpha",
         "google/cloud/networksecurity/v1alpha1",
         "google/cloud/securesourcemanager/v1",
-        "google/maps/weather/v1"
+        "google/maps/weather/v1",
+        "google/cloud/appoptimize/v1alpha"
     ]
 }

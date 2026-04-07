@@ -658,6 +658,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Appoptimize.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "App Optimize",
+      "productUrl": "https://docs.cloud.google.com/app-optimize/overview",
+      "description": "The App Optimize API provides developers and platform teams with tools to monitor, analyze, and improve the performance and cost-efficiency of their cloud applications.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/appoptimize/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "appoptimize",
+      "serviceConfigFile": "appoptimize_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ArtifactRegistry.V1",
       "version": "2.15.0",
       "type": "grpc",
