@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-03-30
+
+### New features
+
+- Add INVALID_MERCHANT_ID to the ErrorReason enum for when the merchant_id field is not valid
+- Add EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED to the ErrorReason enum for campaigns missing the EU political advertising declaration
+
 ## Version 1.0.0-beta05, released 2026-03-09
 
 ### New features

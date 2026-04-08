@@ -43,6 +43,7 @@ namespace Google.Apps.Chat.V1
             yield return MembershipReflection.Descriptor;
             yield return MessageReflection.Descriptor;
             yield return ReactionReflection.Descriptor;
+            yield return SectionReflection.Descriptor;
             yield return SlashCommandReflection.Descriptor;
             yield return SpaceReflection.Descriptor;
             yield return SpaceEventReflection.Descriptor;

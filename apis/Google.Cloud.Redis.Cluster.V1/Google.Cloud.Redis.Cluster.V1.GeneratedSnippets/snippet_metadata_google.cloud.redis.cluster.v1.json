@@ -1710,6 +1710,293 @@
       ]
     },
     {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_sync",
+      "title": "GetSharedRegionalCertificateAuthorityRequestObject",
+      "description": "Snippet for GetSharedRegionalCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetSharedRegionalCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_async",
+      "title": "GetSharedRegionalCertificateAuthorityRequestObjectAsync",
+      "description": "Snippet for GetSharedRegionalCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetSharedRegionalCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_sync_flattened",
+      "title": "GetSharedRegionalCertificateAuthority",
+      "description": "Snippet for GetSharedRegionalCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthoritySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_async_flattened",
+      "title": "GetSharedRegionalCertificateAuthorityAsync",
+      "description": "Snippet for GetSharedRegionalCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_sync_flattened_resourceNames",
+      "title": "GetSharedRegionalCertificateAuthorityResourceNames",
+      "description": "Snippet for GetSharedRegionalCertificateAuthority",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthority",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetSharedRegionalCertificateAuthority_async_flattened_resourceNames",
+      "title": "GetSharedRegionalCertificateAuthorityResourceNamesAsync",
+      "description": "Snippet for GetSharedRegionalCertificateAuthorityAsync",
+      "file": "CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSharedRegionalCertificateAuthorityAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetSharedRegionalCertificateAuthority",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetSharedRegionalCertificateAuthority",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "redis_v1_generated_CloudRedisCluster_RescheduleClusterMaintenance_sync",
       "title": "RescheduleClusterMaintenanceRequestObject",
       "description": "Snippet for RescheduleClusterMaintenance",

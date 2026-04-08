@@ -989,6 +989,93 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthority</summary>
+        public void GetSharedRegionalCertificateAuthorityRequestObject()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthority(GetSharedRegionalCertificateAuthorityRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            GetSharedRegionalCertificateAuthorityRequest request = new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = SharedRegionalCertificateAuthorityName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            SharedRegionalCertificateAuthority response = cloudRedisClusterClient.GetSharedRegionalCertificateAuthority(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthorityAsync</summary>
+        public async Task GetSharedRegionalCertificateAuthorityRequestObjectAsync()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest, CallSettings)
+            // Additional: GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSharedRegionalCertificateAuthorityRequest request = new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = SharedRegionalCertificateAuthorityName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            SharedRegionalCertificateAuthority response = await cloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthority</summary>
+        public void GetSharedRegionalCertificateAuthority()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthority(string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sharedRegionalCertificateAuthority";
+            // Make the request
+            SharedRegionalCertificateAuthority response = cloudRedisClusterClient.GetSharedRegionalCertificateAuthority(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthorityAsync</summary>
+        public async Task GetSharedRegionalCertificateAuthorityAsync()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthorityAsync(string, CallSettings)
+            // Additional: GetSharedRegionalCertificateAuthorityAsync(string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sharedRegionalCertificateAuthority";
+            // Make the request
+            SharedRegionalCertificateAuthority response = await cloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthority</summary>
+        public void GetSharedRegionalCertificateAuthorityResourceNames()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthority(SharedRegionalCertificateAuthorityName, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            SharedRegionalCertificateAuthorityName name = SharedRegionalCertificateAuthorityName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            SharedRegionalCertificateAuthority response = cloudRedisClusterClient.GetSharedRegionalCertificateAuthority(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSharedRegionalCertificateAuthorityAsync</summary>
+        public async Task GetSharedRegionalCertificateAuthorityResourceNamesAsync()
+        {
+            // Snippet: GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName, CallSettings)
+            // Additional: GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            SharedRegionalCertificateAuthorityName name = SharedRegionalCertificateAuthorityName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            SharedRegionalCertificateAuthority response = await cloudRedisClusterClient.GetSharedRegionalCertificateAuthorityAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for RescheduleClusterMaintenance</summary>
         public void RescheduleClusterMaintenanceRequestObject()
         {

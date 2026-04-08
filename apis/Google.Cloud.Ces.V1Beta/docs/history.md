@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-04-06
+
+### New features
+
+- Update public libraries for CES v1beta
+- Add support for generating app resources with LLM
+- Deprecate `root_agent` in message `.google.cloud.ces.v1beta.AgentTool` in favor of new `agent` field.
+- [Memorystore for Redis Cluster] Add support for Flexible CA feature
+- Update public libraries for CES v1beta
+- Add support for generating app resources with LLM
+- Deprecate `root_agent` in message `.google.cloud.ces.v1beta.AgentTool` in favor of new `agent` field.
+
+### Documentation improvements
+
+- A comment for field `root_agent` in message `.google.cloud.ces.v1beta.AgentTool` is changed
+- A comment for field `root_agent` in message `.google.cloud.ces.v1beta.AgentTool` is changed
+
 ## Version 1.0.0-beta03, released 2026-03-23
 
 ### New features

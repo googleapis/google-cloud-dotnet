@@ -728,6 +728,56 @@ namespace Google.Cloud.Ces.V1Beta
         }
     }
 
+    public partial class GenerateAppResourceRequest
+    {
+        /// <summary><see cref="AppName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AppName ParentAsAppName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AppName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class AppGenerationConfig
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="DatasetId"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetIdAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(DatasetId) ? null : DatasetName.Parse(DatasetId, allowUnparsed: true);
+                    set => DatasetId = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class EvaluationGenerationConfig
+            {
+                /// <summary>
+                /// <see cref="DatasetName"/>-typed view over the <see cref="DatasetId"/> resource name property.
+                /// </summary>
+                public DatasetName DatasetIdAsDatasetName
+                {
+                    get => string.IsNullOrEmpty(DatasetId) ? null : DatasetName.Parse(DatasetId, allowUnparsed: true);
+                    set => DatasetId = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class QualityReportGenerationConfig
+            {
+                /// <summary>
+                /// <see cref="EvaluationRunName"/>-typed view over the <see cref="EvaluationRun"/> resource name
+                /// property.
+                /// </summary>
+                public EvaluationRunName EvaluationRunAsEvaluationRunName
+                {
+                    get => string.IsNullOrEmpty(EvaluationRun) ? null : EvaluationRunName.Parse(EvaluationRun, allowUnparsed: true);
+                    set => EvaluationRun = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class ListChangelogsRequest
     {
         /// <summary><see cref="AppName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

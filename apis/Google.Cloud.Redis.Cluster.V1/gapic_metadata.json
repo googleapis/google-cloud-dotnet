@@ -64,6 +64,12 @@
                 "GetClusterCertificateAuthorityAsync"
               ]
             },
+            "GetSharedRegionalCertificateAuthority": {
+              "methods": [
+                "GetSharedRegionalCertificateAuthority",
+                "GetSharedRegionalCertificateAuthorityAsync"
+              ]
+            },
             "ListBackupCollections": {
               "methods": [
                 "ListBackupCollections",

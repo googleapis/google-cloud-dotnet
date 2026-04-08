@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.24.0, released 2026-04-06
+
+### New features
+
+- Added support for detecting key-value pairs in client provided metadata
+
 ## Version 4.23.0, released 2026-03-23
 
 ### New features

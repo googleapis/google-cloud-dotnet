@@ -134,6 +134,11 @@ namespace Google.Cloud.BigQuery.V2
         public TimePartitioning TimePartitioning { get; set; }
 
         /// <summary>
+        /// Specifies whether a job is required to be created
+        /// </summary>
+        public JobCreationMode? JobCreationMode { get; set; }
+
+        /// <summary>
         /// Optional action to perform after preparing the request. If this property is non-null,
         /// the <see cref="JobConfigurationQuery"/> used for a request will be passed to the delegate
         /// before the request is executed. This allows for fine-grained modifications which aren't

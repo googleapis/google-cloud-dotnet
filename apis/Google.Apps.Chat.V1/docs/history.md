@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta22, released 2026-04-06
+
+### New features
+
+- Addition of Section and SectionItem APIs
+- Support app authentication with admin-consent scopes for Chat API ListMessages, GetMessage, GetSpaceEvent and ListSpaceEvents
+
+### Documentation improvements
+
+- Update reference documentation for Chat API ListMessages, GetMessage, GetSpaceEvent and ListSpaceEvents.
+
 ## Version 1.0.0-beta21, released 2026-02-05
 
 ### New features

@@ -199,8 +199,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>JobsV1Beta3 client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides a method to create and modify Google Cloud Dataflow jobs.
-    /// A Job is a multi-stage computation graph run by the Cloud Dataflow service.
+    /// Provides a method to create and modify Dataflow jobs.
+    /// A Job is a multi-stage computation graph run by the Dataflow service.
     /// </remarks>
     public abstract partial class JobsV1Beta3Client
     {
@@ -285,7 +285,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
         public virtual JobsV1Beta3.JobsV1Beta3Client GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Cloud Dataflow job.
+        /// Creates a Dataflow job.
         /// 
         /// To create a job, we recommend using `projects.locations.jobs.create` with a
         /// [regional endpoint]
@@ -303,7 +303,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Cloud Dataflow job.
+        /// Creates a Dataflow job.
         /// 
         /// To create a job, we recommend using `projects.locations.jobs.create` with a
         /// [regional endpoint]
@@ -321,7 +321,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Cloud Dataflow job.
+        /// Creates a Dataflow job.
         /// 
         /// To create a job, we recommend using `projects.locations.jobs.create` with a
         /// [regional endpoint]
@@ -549,8 +549,8 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
     /// <summary>JobsV1Beta3 client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides a method to create and modify Google Cloud Dataflow jobs.
-    /// A Job is a multi-stage computation graph run by the Cloud Dataflow service.
+    /// Provides a method to create and modify Dataflow jobs.
+    /// A Job is a multi-stage computation graph run by the Dataflow service.
     /// </remarks>
     public sealed partial class JobsV1Beta3ClientImpl : JobsV1Beta3Client
     {
@@ -641,7 +641,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
         partial void Modify_SnapshotJobRequest(ref SnapshotJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a Cloud Dataflow job.
+        /// Creates a Dataflow job.
         /// 
         /// To create a job, we recommend using `projects.locations.jobs.create` with a
         /// [regional endpoint]
@@ -662,7 +662,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
         }
 
         /// <summary>
-        /// Creates a Cloud Dataflow job.
+        /// Creates a Dataflow job.
         /// 
         /// To create a job, we recommend using `projects.locations.jobs.create` with a
         /// [regional endpoint]

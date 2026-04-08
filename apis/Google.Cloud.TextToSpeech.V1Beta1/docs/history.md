@@ -1,5 +1,28 @@
 # Version history
 
+## Version 2.0.0-beta18, released 2026-04-06
+
+### New features
+
+- Support safety settings for Gemini voices and deprecate `relax_safety_filters`
+- Support `enable_textnorm` for Gemini voices.
+- Mark `advanced_voice_options` as optional.
+- [Memorystore for Redis Cluster] Add support for Flexible CA feature
+- Support safety settings for Gemini voices and deprecate `relax_safety_filters`
+- Support `enable_textnorm` for Gemini voices.
+- Mark `advanced_voice_options` as optional.
+
+### Documentation improvements
+
+- A comment for field `relax_safety_filters` in message `.google.cloud.texttospeech.v1beta1.AdvancedVoiceOptions` is changed
+- A comment for field `advanced_voice_options` in message `.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest` is changed
+- A comment for field `markup` in message `.google.cloud.texttospeech.v1beta1.SynthesisInput` is changed
+- A comment for field `markup` in message `.google.cloud.texttospeech.v1beta1.StreamingSynthesisInput` is changed
+- A comment for field `relax_safety_filters` in message `.google.cloud.texttospeech.v1beta1.AdvancedVoiceOptions` is changed
+- A comment for field `advanced_voice_options` in message `.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest` is changed
+- A comment for field `markup` in message `.google.cloud.texttospeech.v1beta1.SynthesisInput` is changed
+- A comment for field `markup` in message `.google.cloud.texttospeech.v1beta1.StreamingSynthesisInput` is changed
+
 ## Version 2.0.0-beta17, released 2025-11-06
 
 ### New features

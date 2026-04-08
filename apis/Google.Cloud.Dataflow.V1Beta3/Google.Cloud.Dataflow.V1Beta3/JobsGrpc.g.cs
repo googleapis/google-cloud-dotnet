@@ -3,7 +3,7 @@
 //     source: google/dataflow/v1beta3/jobs.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
-  /// Provides a method to create and modify Google Cloud Dataflow jobs.
-  /// A Job is a multi-stage computation graph run by the Cloud Dataflow service.
+  /// Provides a method to create and modify Dataflow jobs.
+  /// A Job is a multi-stage computation graph run by the Dataflow service.
   /// </summary>
   public static partial class JobsV1Beta3
   {
@@ -152,7 +152,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public abstract partial class JobsV1Beta3Base
     {
       /// <summary>
-      /// Creates a Cloud Dataflow job.
+      /// Creates a Dataflow job.
       ///
       /// To create a job, we recommend using `projects.locations.jobs.create` with a
       /// [regional endpoint]
@@ -300,7 +300,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
 
       /// <summary>
-      /// Creates a Cloud Dataflow job.
+      /// Creates a Dataflow job.
       ///
       /// To create a job, we recommend using `projects.locations.jobs.create` with a
       /// [regional endpoint]
@@ -322,7 +322,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CreateJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job.
+      /// Creates a Dataflow job.
       ///
       /// To create a job, we recommend using `projects.locations.jobs.create` with a
       /// [regional endpoint]
@@ -342,7 +342,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateJob, null, options, request);
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job.
+      /// Creates a Dataflow job.
       ///
       /// To create a job, we recommend using `projects.locations.jobs.create` with a
       /// [regional endpoint]
@@ -364,7 +364,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CreateJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job.
+      /// Creates a Dataflow job.
       ///
       /// To create a job, we recommend using `projects.locations.jobs.create` with a
       /// [regional endpoint]

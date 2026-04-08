@@ -58,6 +58,7 @@ namespace Google.Cloud.Memorystore.V1Beta
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             GetCertificateAuthoritySettings = existing.GetCertificateAuthoritySettings;
+            GetSharedRegionalCertificateAuthoritySettings = existing.GetSharedRegionalCertificateAuthoritySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -207,6 +208,19 @@ namespace Google.Cloud.Memorystore.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetSharedRegionalCertificateAuthority</c> and
+        /// <c>MemorystoreClient.GetSharedRegionalCertificateAuthorityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSharedRegionalCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1215,6 +1229,132 @@ namespace Google.Cloud.Memorystore.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CertificateAuthority> GetCertificateAuthorityAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             GetCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthority(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthorityAsync(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(SharedRegionalCertificateAuthorityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthority(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSharedRegionalCertificateAuthorityAsync(new GetSharedRegionalCertificateAuthorityRequest
+            {
+                SharedRegionalCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Regional certificate authority resource name using the form:
+        /// `projects/{project}/locations/{location}/sharedRegionalCertificateAuthority`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName name, st::CancellationToken cancellationToken) =>
+            GetSharedRegionalCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Memorystore client wrapper implementation, for convenient use.</summary>
@@ -1234,6 +1374,8 @@ namespace Google.Cloud.Memorystore.V1Beta
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
         private readonly gaxgrpc::ApiCall<GetCertificateAuthorityRequest, CertificateAuthority> _callGetCertificateAuthority;
+
+        private readonly gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> _callGetSharedRegionalCertificateAuthority;
 
         /// <summary>
         /// Constructs a client wrapper for the Memorystore service, with the specified gRPC client and settings.
@@ -1272,6 +1414,9 @@ namespace Google.Cloud.Memorystore.V1Beta
             _callGetCertificateAuthority = clientHelper.BuildApiCall<GetCertificateAuthorityRequest, CertificateAuthority>("GetCertificateAuthority", grpcClient.GetCertificateAuthorityAsync, grpcClient.GetCertificateAuthority, effectiveSettings.GetCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificateAuthority);
             Modify_GetCertificateAuthorityApiCall(ref _callGetCertificateAuthority);
+            _callGetSharedRegionalCertificateAuthority = clientHelper.BuildApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority>("GetSharedRegionalCertificateAuthority", grpcClient.GetSharedRegionalCertificateAuthorityAsync, grpcClient.GetSharedRegionalCertificateAuthority, effectiveSettings.GetSharedRegionalCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSharedRegionalCertificateAuthority);
+            Modify_GetSharedRegionalCertificateAuthorityApiCall(ref _callGetSharedRegionalCertificateAuthority);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1288,6 +1433,8 @@ namespace Google.Cloud.Memorystore.V1Beta
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
         partial void Modify_GetCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetCertificateAuthorityRequest, CertificateAuthority> call);
+
+        partial void Modify_GetSharedRegionalCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> call);
 
         partial void OnConstruction(Memorystore.MemorystoreClient grpcClient, MemorystoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1308,6 +1455,8 @@ namespace Google.Cloud.Memorystore.V1Beta
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetCertificateAuthorityRequest(ref GetCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSharedRegionalCertificateAuthorityRequest(ref GetSharedRegionalCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given project and location.
@@ -1460,6 +1609,32 @@ namespace Google.Cloud.Memorystore.V1Beta
         {
             Modify_GetCertificateAuthorityRequest(ref request, ref callSettings);
             return _callGetCertificateAuthority.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SharedRegionalCertificateAuthority GetSharedRegionalCertificateAuthority(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSharedRegionalCertificateAuthorityRequest(ref request, ref callSettings);
+            return _callGetSharedRegionalCertificateAuthority.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of shared regional certificate authority information for
+        /// Memorystore instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(GetSharedRegionalCertificateAuthorityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSharedRegionalCertificateAuthorityRequest(ref request, ref callSettings);
+            return _callGetSharedRegionalCertificateAuthority.Async(request, callSettings);
         }
     }
 

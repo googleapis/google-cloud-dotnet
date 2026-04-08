@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta76, released 2026-04-06
+
+### New features
+
+- Add container_spec to Reasoning Engine public protos
+
 ## Version 1.0.0-beta75, released 2026-03-23
 
 ### New features

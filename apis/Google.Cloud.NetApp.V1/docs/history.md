@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.15.0, released 2026-03-30
+
+### New features
+
+- Add ONTAP passthrough APIs
+
+### Bug fixes
+
+- An existing value `UNIFIED_LARGE_CAPACITY` is removed from enum `StoragePoolType`
+
+### Documentation improvements
+
+- A comment for field `source_volume` in message `.google.cloud.netapp.v1.Backup` is changed
+- A comment for field `type` in message `.google.cloud.netapp.v1.StoragePool` is changed
+- A comment for field `source_backup` in message `.google.cloud.netapp.v1.RestoreParameters` is changed
+
 ## Version 1.14.0, released 2026-01-19
 
 ### New features

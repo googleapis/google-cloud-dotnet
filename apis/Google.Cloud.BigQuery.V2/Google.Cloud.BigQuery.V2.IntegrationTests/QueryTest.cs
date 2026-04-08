@@ -31,9 +31,126 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         private const string ShakespeareTable = "shakespeare";
         private readonly BigQueryFixture _fixture;
 
+        private BigQueryClient Client => BigQueryClient.Create(_fixture.ProjectId);
+        private BigQueryTable GetShakespeareTable() => Client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+        private static void AssertExecutedAsStatelessQuery(BigQueryResults results)
+        {
+            // We verify the Jobs.Query endpoint was called by checking Query Id was populated
+            // in the response.
+            Assert.NotNull(results.QueryId);
+            Assert.All(results.ToList(), row => Assert.Equal(results.QueryId, row.QueryId));
+        }
+
         public QueryTest(BigQueryFixture fixture)
         {
             _fixture = fixture;
+        }
+
+        [Fact]
+        public void SynchronousStatelessQuery()
+        {
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {GetShakespeareTable()} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            var results = Client.ExecuteQuery(sql, parameters: null);
+            var rows = results.ToList();
+            Assert.Equal(10, rows.Count);
+            Assert.Equal("hamlet", (string)rows[0]["title"]);
+            Assert.Equal(5318, (long)rows[0]["unique_words"]);
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public async Task AsynchronousStatelessQuery()
+        {
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {GetShakespeareTable()} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            var results = await Client.ExecuteQueryAsync(sql, parameters: null);
+            var rows = results.ToList();
+            Assert.Equal(10, rows.Count);
+            Assert.Equal("hamlet", (string)rows[0]["title"]);
+            Assert.Equal(5318, (long)rows[0]["unique_words"]);
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Theory]
+        [InlineData("SELECT 1 AS val", 1L)]
+        [InlineData("SELECT 'foo' AS val", "foo")]
+        [InlineData("SELECT TRUE AS val", true)]
+        public void StatelessQuery_Types(string sql, object expectedValue)
+        {
+            var results = Client.ExecuteQuery(sql, null);
+            var row = results.Single();
+            Assert.Equal(expectedValue, row["val"]);
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public void StatelessQuery_Parameters()
+        {
+            var table = Client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            string sql = $"SELECT score FROM {table} WHERE player=@player";
+            var parameters = new[] { new BigQueryParameter("player", BigQueryDbType.String, "Angela") };
+            var results = Client.ExecuteQuery(sql, parameters);
+            var row = results.Single();
+            Assert.Equal(95L, (long)row["score"]);
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public void StatelessQuery_MaxResults()
+        {
+            var sql = $"SELECT corpus as title FROM {GetShakespeareTable()} LIMIT 10";
+            // MaxResults = 5 sets the initial page size.
+            // BigQueryResults will fetch the remaining rows automatically when iterating.
+            var results = Client.ExecuteQuery(sql, parameters: null, resultsOptions: new GetQueryResultsOptions { PageSize = 5 });
+
+            // Verifying pagination: the first page should have 5 rows and a next page token.
+            var page = results.ReadPage(5);
+            Assert.Equal(5, page.Rows.Count);
+            Assert.NotNull(page.NextPageToken);
+
+            // The total count after full iteration should still be 10.
+            var allRows = results.ToList();
+            Assert.Equal(10, allRows.Count);
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public void ExecuteQuery_StatelessOptimization_Compatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            // Simple query with compatible options should use the stateless fast path.
+            var results = client.ExecuteQuery(sql, null, new QueryOptions { UseQueryCache = false });
+            var row = results.Single();
+            Assert.Equal(1L, row["val"]);
+            // In the stateless path, QueryId is populated.
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public async Task ExecuteQueryAsync_StatelessOptimization_Compatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            // Simple query with compatible options should use the stateless fast path.
+            var results = await client.ExecuteQueryAsync(sql, null, new QueryOptions { UseQueryCache = false });
+            var rows = await results.GetRowsAsync().ToListAsync();
+            var row = rows.Single();
+            Assert.Equal(1L, row["val"]);
+            // In the stateless path, QueryId is populated.
+            AssertExecutedAsStatelessQuery(results);
+        }
+
+        [Fact]
+        public void ExecuteQuery_StatelessOptimization_Incompatible()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var sql = "SELECT 1 AS val";
+            var destinationTable = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+            // Providing a DestinationTable makes the query incompatible with the stateless fast path.
+            var results = client.ExecuteQuery(sql, null, new QueryOptions { DestinationTable = destinationTable });
+            Assert.Equal(1L, results.Single()["val"]);
+            // In the standard job path, QueryId is null.
+            Assert.Null(results.QueryId);
         }
 
         [Fact]

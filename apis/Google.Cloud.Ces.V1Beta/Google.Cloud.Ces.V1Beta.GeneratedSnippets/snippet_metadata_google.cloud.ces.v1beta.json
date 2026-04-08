@@ -15291,6 +15291,293 @@
       ]
     },
     {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_sync",
+      "title": "GenerateAppResourceRequestObject",
+      "description": "Snippet for GenerateAppResource",
+      "file": "AgentServiceClient.GenerateAppResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResource",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 72,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 70,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_async",
+      "title": "GenerateAppResourceRequestObjectAsync",
+      "description": "Snippet for GenerateAppResourceAsync",
+      "file": "AgentServiceClient.GenerateAppResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResourceAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 73,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 71,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_sync_flattened",
+      "title": "GenerateAppResource",
+      "description": "Snippet for GenerateAppResource",
+      "file": "AgentServiceClient.GenerateAppResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResource",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_async_flattened",
+      "title": "GenerateAppResourceAsync",
+      "description": "Snippet for GenerateAppResourceAsync",
+      "file": "AgentServiceClient.GenerateAppResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResourceAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_sync_flattened_resourceNames",
+      "title": "GenerateAppResourceResourceNames",
+      "description": "Snippet for GenerateAppResource",
+      "file": "AgentServiceClient.GenerateAppResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResource",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_GenerateAppResource_async_flattened_resourceNames",
+      "title": "GenerateAppResourceResourceNamesAsync",
+      "description": "Snippet for GenerateAppResourceAsync",
+      "file": "AgentServiceClient.GenerateAppResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAppResourceAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.GenerateAppResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.GenerateAppResourceResponse, Google.Cloud.Ces.V1Beta.GenerateAppResourceOperationMetadata>>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateAppResource",
+          "fullName": "google.cloud.ces.v1beta.AgentService.GenerateAppResource",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "ces_v1beta_generated_AgentService_ListChangelogs_sync",
       "title": "ListChangelogsRequestObject",
       "description": "Snippet for ListChangelogs",

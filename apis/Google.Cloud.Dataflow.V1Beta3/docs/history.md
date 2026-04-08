@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta10, released 2026-04-06
+
+### New features
+
+- Add Pausing/Yaml capabilities to public protos
+- Add sha256 field to Package proto
+
 ## Version 2.0.0-beta09, released 2025-11-05
 
 ### New features

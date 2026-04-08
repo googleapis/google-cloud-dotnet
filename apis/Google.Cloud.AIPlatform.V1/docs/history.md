@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.70.0, released 2026-04-06
+
+### New features
+
+- Add evaluation metrics and autorater configuration to the AI Platform v1 API
+- Add evaluation configuration and dataset runs to TuningJob
+- Add multimodal input support and custom output formats to evaluation metrics
+- Add container_spec to Reasoning Engine public protos
+
 ## Version 3.69.0, released 2026-03-23
 
 ### New features

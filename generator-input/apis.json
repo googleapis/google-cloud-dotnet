@@ -24,7 +24,7 @@
     },
     {
       "id": "Google.Ads.DataManager.V1",
-      "version": "1.0.0-beta05",
+      "version": "1.0.0-beta06",
       "type": "grpc",
       "productName": "Ads Data Manager",
       "productUrl": "https://developers.google.com/data-manager",
@@ -136,7 +136,7 @@
     },
     {
       "id": "Google.Apps.Chat.V1",
-      "version": "1.0.0-beta21",
+      "version": "1.0.0-beta22",
       "type": "grpc",
       "productName": "Google Chat",
       "productUrl": "https://developers.google.com/chat/concepts",
@@ -412,7 +412,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1Beta1",
-      "version": "1.0.0-beta75",
+      "version": "1.0.0-beta76",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
@@ -436,7 +436,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "3.69.0",
+      "version": "3.70.0",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
@@ -838,7 +838,7 @@
     },
     {
       "id": "Google.Cloud.BackupDR.V1",
-      "version": "2.8.0",
+      "version": "2.9.0",
       "type": "grpc",
       "productName": "Backup and DR Service",
       "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr",
@@ -1257,7 +1257,7 @@
       "protoPath": "google/bigtable/admin/v2",
       "productName": "Google Cloud Bigtable Administration",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "3.31.0",
+      "version": "3.32.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
@@ -1480,7 +1480,7 @@
     },
     {
       "id": "Google.Cloud.Ces.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
@@ -1500,7 +1500,7 @@
     },
     {
       "id": "Google.Cloud.Ces.V1Beta",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
@@ -2076,7 +2076,7 @@
     },
     {
       "id": "Google.Cloud.Dataflow.V1Beta3",
-      "version": "2.0.0-beta09",
+      "version": "2.0.0-beta10",
       "type": "grpc",
       "productName": "Dataflow",
       "productUrl": "https://cloud.google.com/dataflow/docs/",
@@ -2095,7 +2095,7 @@
     },
     {
       "id": "Google.Cloud.Dataform.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Dataform",
       "productUrl": "https://cloud.google.com/dataform/docs/overview",
@@ -2471,7 +2471,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
@@ -2499,7 +2499,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "4.28.0",
+      "version": "4.29.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API (v2).",
       "tags": [
@@ -2521,7 +2521,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.V2Beta1",
-      "version": "1.0.0-beta28",
+      "version": "1.0.0-beta29",
       "type": "grpc",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
@@ -2591,7 +2591,7 @@
       "protoPath": "google/privacy/dlp/v2",
       "productName": "Google Cloud Data Loss Prevention",
       "productUrl": "https://cloud.google.com/dlp/",
-      "version": "4.23.0",
+      "version": "4.24.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Data Loss Prevention API, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
       "dependencies": {
@@ -2611,7 +2611,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
-      "version": "3.24.0",
+      "version": "3.25.0",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
@@ -2887,7 +2887,7 @@
       "listingDescription": "Firestore Administration (e.g. index management)",
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
-      "version": "3.17.0",
+      "version": "3.18.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
       "tags": [
@@ -3944,7 +3944,7 @@
     },
     {
       "id": "Google.Cloud.Memorystore.V1",
-      "version": "1.0.0-beta05",
+      "version": "1.0.0-beta06",
       "type": "grpc",
       "productName": "Memorystore",
       "productUrl": "https://cloud.google.com/memorystore/docs/valkey",
@@ -3968,7 +3968,7 @@
     },
     {
       "id": "Google.Cloud.Memorystore.V1Beta",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Memorystore",
       "productUrl": "https://cloud.google.com/memorystore/docs/valkey",
@@ -4150,7 +4150,7 @@
     },
     {
       "id": "Google.Cloud.NetApp.V1",
-      "version": "1.14.0",
+      "version": "1.15.0",
       "type": "grpc",
       "productName": "NetApp",
       "productUrl": "https://cloud.google.com/netapp/volumes/docs/discover/overview",
@@ -4962,7 +4962,7 @@
     },
     {
       "id": "Google.Cloud.Redis.Cluster.V1",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "productName": "Google Cloud Memorystore for Redis (cluster management)",
       "productUrl": "https://cloud.google.com/memorystore/docs/redis",
@@ -6044,7 +6044,7 @@
       "protoPath": "google/cloud/texttospeech/v1",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
-      "version": "3.17.0",
+      "version": "3.18.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1, synthesizes natural-sounding speech by applying powerful neural network models.",
       "dependencies": {
@@ -6062,7 +6062,7 @@
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1Beta1",
-      "version": "2.0.0-beta17",
+      "version": "2.0.0-beta18",
       "type": "grpc",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",

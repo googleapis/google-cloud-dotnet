@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.25.0, released 2026-04-06
+
+### New features
+
+- Added a fields for image and table annotation output
+- Update comments for proto fields
+
 ## Version 3.24.0, released 2026-03-05
 
 ### New features

@@ -3669,6 +3669,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 Content = { "", },
+                MimeType = "",
                 ReferenceSentenceConfig = new AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig(),
                 GlossaryConfig = new AdaptiveMtTranslateRequest.Types.GlossaryConfig(),
             };
@@ -3690,6 +3691,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 Content = { "", },
+                MimeType = "",
                 ReferenceSentenceConfig = new AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig(),
                 GlossaryConfig = new AdaptiveMtTranslateRequest.Types.GlossaryConfig(),
             };

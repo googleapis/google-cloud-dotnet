@@ -87,6 +87,7 @@ namespace Google.Cloud.Ces.V1Beta
             yield return EvaluationServiceReflection.Descriptor;
             yield return ExampleReflection.Descriptor;
             yield return FakesReflection.Descriptor;
+            yield return FileContextReflection.Descriptor;
             yield return FileSearchToolReflection.Descriptor;
             yield return GoldenRunReflection.Descriptor;
             yield return GoogleSearchToolReflection.Descriptor;

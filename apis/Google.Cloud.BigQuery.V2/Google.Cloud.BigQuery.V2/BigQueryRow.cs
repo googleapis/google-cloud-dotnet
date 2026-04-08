@@ -37,6 +37,11 @@ namespace Google.Cloud.BigQuery.V2
         public TableSchema Schema { get; }
 
         /// <summary>
+        /// The query ID, if this row is returned from a stateless query via jobs.query otherwise null.
+        /// </summary>
+        public string QueryId { get; }
+
+        /// <summary>
         /// How to interpret timestamps: when this is true, timestamps are parsed
         /// as "integer number of microseconds since the Unix epoch"; when this is false,
         /// timestamps are parsed as "floating point number of seconds since the Unix epoch".
@@ -56,14 +61,15 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="rawRow">The underlying REST-ful row resource. Must not be null.</param>
         /// <param name="schema">The table schema. Must not be null.</param>
-        public BigQueryRow(TableRow rawRow, TableSchema schema) : this(rawRow, schema, schema?.IndexFieldNames(), false)
+        public BigQueryRow(TableRow rawRow, TableSchema schema) : this(rawRow, schema, schema?.IndexFieldNames(), false, null)
         {
         }
 
-        internal BigQueryRow(TableRow rawRow, TableSchema schema, IDictionary<string, int> fieldNameIndexMap, bool useInt64Timestamp)
+        internal BigQueryRow(TableRow rawRow, TableSchema schema, IDictionary<string, int> fieldNameIndexMap, bool useInt64Timestamp, string queryId = null)
         {
             RawRow = GaxPreconditions.CheckNotNull(rawRow, nameof(rawRow));
             Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
+            QueryId = queryId;
             _fieldNameIndexMap = fieldNameIndexMap;
             _useInt64Timestamp = useInt64Timestamp;
         }

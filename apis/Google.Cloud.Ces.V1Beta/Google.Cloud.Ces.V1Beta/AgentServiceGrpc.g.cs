@@ -203,6 +203,8 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest> __Marshaller_google_cloud_ces_v1beta_RestoreAppVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest> __Marshaller_google_cloud_ces_v1beta_GenerateAppResourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ListChangelogsRequest> __Marshaller_google_cloud_ces_v1beta_ListChangelogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ListChangelogsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ListChangelogsResponse> __Marshaller_google_cloud_ces_v1beta_ListChangelogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ListChangelogsResponse.Parser));
@@ -593,6 +595,14 @@ namespace Google.Cloud.Ces.V1Beta {
         __ServiceName,
         "RestoreAppVersion",
         __Marshaller_google_cloud_ces_v1beta_RestoreAppVersionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest, global::Google.LongRunning.Operation> __Method_GenerateAppResource = new grpc::Method<global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateAppResource",
+        __Marshaller_google_cloud_ces_v1beta_GenerateAppResourceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1195,6 +1205,18 @@ namespace Google.Cloud.Ces.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreAppVersion(global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> GenerateAppResource(global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3565,6 +3587,54 @@ namespace Google.Cloud.Ces.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreAppVersion, null, options, request);
       }
       /// <summary>
+      /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation GenerateAppResource(global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAppResource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation GenerateAppResource(global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateAppResource, null, options, request);
+      }
+      /// <summary>
+      /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> GenerateAppResourceAsync(global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAppResourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates specific resources (e.g. agent) in the app using LLM assistant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> GenerateAppResourceAsync(global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateAppResource, null, options, request);
+      }
+      /// <summary>
       /// Lists the changelogs of the specified app.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3722,6 +3792,7 @@ namespace Google.Cloud.Ces.V1Beta {
           .AddMethod(__Method_CreateAppVersion, serviceImpl.CreateAppVersion)
           .AddMethod(__Method_DeleteAppVersion, serviceImpl.DeleteAppVersion)
           .AddMethod(__Method_RestoreAppVersion, serviceImpl.RestoreAppVersion)
+          .AddMethod(__Method_GenerateAppResource, serviceImpl.GenerateAppResource)
           .AddMethod(__Method_ListChangelogs, serviceImpl.ListChangelogs)
           .AddMethod(__Method_GetChangelog, serviceImpl.GetChangelog).Build();
     }
@@ -3781,6 +3852,7 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceBinder.AddMethod(__Method_CreateAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.CreateAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion>(serviceImpl.CreateAppVersion));
       serviceBinder.AddMethod(__Method_DeleteAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.DeleteAppVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAppVersion));
       serviceBinder.AddMethod(__Method_RestoreAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreAppVersion));
+      serviceBinder.AddMethod(__Method_GenerateAppResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest, global::Google.LongRunning.Operation>(serviceImpl.GenerateAppResource));
       serviceBinder.AddMethod(__Method_ListChangelogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ListChangelogsRequest, global::Google.Cloud.Ces.V1Beta.ListChangelogsResponse>(serviceImpl.ListChangelogs));
       serviceBinder.AddMethod(__Method_GetChangelog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GetChangelogRequest, global::Google.Cloud.Ces.V1Beta.Changelog>(serviceImpl.GetChangelog));
     }
