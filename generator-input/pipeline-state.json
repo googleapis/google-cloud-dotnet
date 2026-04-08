@@ -4977,6 +4977,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "cd090841ab172574e740c214c99df00aef9c0dee",
             "apiPaths": [
                 "google/cloud/appoptimize/v1beta"
             ],
