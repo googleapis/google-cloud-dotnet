@@ -193,8 +193,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public async Task CommandIncludesClientContext()
         {
-            var clientContext = new RequestOptions.Types.ClientContext();
-            clientContext.SecureContext["key1"] = Value.ForString("value1");
+            var clientContext = new ClientContext();
+            clientContext.ClientContextModifier = proto => proto.SecureContext["key1"] = Value.ForString("value1");
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupCreateSessionAsync()

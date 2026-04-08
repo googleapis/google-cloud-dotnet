@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Data
         /// Client context to be attached to the request. This can be used to pass values that can be read 
         /// by any SECURE_CONTEXT() calls invoked by this request (e.g., by queries against Parameterized Secure Views).
         /// </summary>
-        public Google.Cloud.Spanner.V1.RequestOptions.Types.ClientContext ClientContext { get; set; }
+        public ClientContext ClientContext { get; set; }
 
         /// <summary>
         /// Options to be used for creating the ephemeral transaction under which this command will be executed

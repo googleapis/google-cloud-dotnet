@@ -36,7 +36,7 @@ public sealed partial class SpannerBatchWriteCommand
         internal int CommandTimeout { get; }
         internal Priority Priority { get; }
         internal string Tag { get; }
-        internal RequestOptions.Types.ClientContext ClientContext { get; }
+        internal ClientContext ClientContext { get; }
 
         public ExecutableCommand(SpannerBatchWriteCommand command)
         {
@@ -90,7 +90,7 @@ public sealed partial class SpannerBatchWriteCommand
             {
                 RequestTag = Tag ?? "",
                 Priority = PriorityConverter.ToProto(Priority),
-                ClientContext = ClientContext
+                ClientContext = ClientContext?.ToProto()
             };
         }
 

@@ -41,7 +41,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerBatchCommandType CommandType { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
-            internal RequestOptions.Types.ClientContext ClientContext { get; }
+            internal ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
             internal SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; }
             internal SpannerTransactionOptions EphemeralTransactionOptions { get; }
@@ -116,7 +116,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Priority = PriorityConverter.ToProto(Priority),
                     RequestTag = Tag ?? "",
-                    ClientContext = ClientContext
+                    ClientContext = ClientContext?.ToProto()
                 };
 
             private void ValidateConnectionAndCommandCount()

@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data
             internal Priority Priority { get; }
             internal string Tag { get; }
             internal DirectedReadOptions DirectedReadOptions { get; }
-            internal RequestOptions.Types.ClientContext ClientContext { get; }
+            internal ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
 
             public ExecutableCommand(SpannerCommand command)
@@ -464,7 +464,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Priority = PriorityConverter.ToProto(Priority),
                     RequestTag = Tag ?? "",
-                    ClientContext = ClientContext
+                    ClientContext = ClientContext?.ToProto()
                 };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
