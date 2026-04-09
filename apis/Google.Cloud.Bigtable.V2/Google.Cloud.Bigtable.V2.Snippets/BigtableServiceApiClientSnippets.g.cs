@@ -1778,5 +1778,181 @@ namespace GoogleCSharpSnippets
             // The response stream has completed
             // End snippet
         }
+
+        /// <summary>Snippet for GetClientConfiguration</summary>
+        public void GetClientConfigurationRequestObject()
+        {
+            // Snippet: GetClientConfiguration(GetClientConfigurationRequest, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            gcbv::GetClientConfigurationRequest request = new gcbv::GetClientConfigurationRequest
+            {
+                InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+            };
+            // Make the request
+            gcbv::ClientConfiguration response = bigtableServiceApiClient.GetClientConfiguration(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClientConfigurationAsync</summary>
+        public async Task GetClientConfigurationRequestObjectAsync()
+        {
+            // Snippet: GetClientConfigurationAsync(GetClientConfigurationRequest, CallSettings)
+            // Additional: GetClientConfigurationAsync(GetClientConfigurationRequest, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::GetClientConfigurationRequest request = new gcbv::GetClientConfigurationRequest
+            {
+                InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+            };
+            // Make the request
+            gcbv::ClientConfiguration response = await bigtableServiceApiClient.GetClientConfigurationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for OpenTable</summary>
+        public async Task OpenTable()
+        {
+            // Snippet: OpenTable(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using gcbv::BigtableServiceApiClient.OpenTableStream response = bigtableServiceApiClient.OpenTable();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<gcbv::SessionResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    gcbv::SessionResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                gcbv::SessionRequest request = new gcbv::SessionRequest
+                {
+                    OpenSession = new gcbv::OpenSessionRequest(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for OpenAuthorizedView</summary>
+        public async Task OpenAuthorizedView()
+        {
+            // Snippet: OpenAuthorizedView(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using gcbv::BigtableServiceApiClient.OpenAuthorizedViewStream response = bigtableServiceApiClient.OpenAuthorizedView();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<gcbv::SessionResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    gcbv::SessionResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                gcbv::SessionRequest request = new gcbv::SessionRequest
+                {
+                    OpenSession = new gcbv::OpenSessionRequest(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for OpenMaterializedView</summary>
+        public async Task OpenMaterializedView()
+        {
+            // Snippet: OpenMaterializedView(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using gcbv::BigtableServiceApiClient.OpenMaterializedViewStream response = bigtableServiceApiClient.OpenMaterializedView();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<gcbv::SessionResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    gcbv::SessionResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                gcbv::SessionRequest request = new gcbv::SessionRequest
+                {
+                    OpenSession = new gcbv::OpenSessionRequest(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
     }
 }

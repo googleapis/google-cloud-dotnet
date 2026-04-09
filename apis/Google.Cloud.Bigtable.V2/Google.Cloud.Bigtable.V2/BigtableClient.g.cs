@@ -1144,6 +1144,72 @@ namespace Google.Cloud.Bigtable.V2
                 AppProfileId = appProfileId ?? "",
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
             }, callSettings);
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="GetClientConfigurationRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ClientConfiguration GetClientConfiguration(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="GetClientConfigurationRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="GetClientConfigurationRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, st::CancellationToken cancellationToken) =>
+            GetClientConfigurationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual BigtableServiceApiClient.OpenTableStream OpenTable(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual BigtableServiceApiClient.OpenAuthorizedViewStream OpenAuthorizedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual BigtableServiceApiClient.OpenMaterializedViewStream OpenMaterializedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
@@ -1202,5 +1268,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ExecuteQuery(request, callSettings);
+
+        /// <inheritdoc/>
+        public override ClientConfiguration GetClientConfiguration(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) => _client.GetClientConfiguration(request, callSettings);
+
+        /// <inheritdoc/>
+        public override stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) => _client.GetClientConfigurationAsync(request, callSettings);
     }
 }

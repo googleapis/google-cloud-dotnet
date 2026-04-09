@@ -3,7 +3,7 @@
 //     source: google/bigtable/v2/bigtable.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -107,6 +107,14 @@ namespace Google.Cloud.Bigtable.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest> __Marshaller_google_bigtable_v2_ExecuteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse> __Marshaller_google_bigtable_v2_ExecuteQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest> __Marshaller_google_bigtable_v2_GetClientConfigurationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ClientConfiguration> __Marshaller_google_bigtable_v2_ClientConfiguration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ClientConfiguration.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SessionRequest> __Marshaller_google_bigtable_v2_SessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SessionResponse> __Marshaller_google_bigtable_v2_SessionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SessionResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Method_ReadRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse>(
@@ -195,6 +203,38 @@ namespace Google.Cloud.Bigtable.V2 {
         "ExecuteQuery",
         __Marshaller_google_bigtable_v2_ExecuteQueryRequest,
         __Marshaller_google_bigtable_v2_ExecuteQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest, global::Google.Cloud.Bigtable.V2.ClientConfiguration> __Method_GetClientConfiguration = new grpc::Method<global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest, global::Google.Cloud.Bigtable.V2.ClientConfiguration>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetClientConfiguration",
+        __Marshaller_google_bigtable_v2_GetClientConfigurationRequest,
+        __Marshaller_google_bigtable_v2_ClientConfiguration);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> __Method_OpenTable = new grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "OpenTable",
+        __Marshaller_google_bigtable_v2_SessionRequest,
+        __Marshaller_google_bigtable_v2_SessionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> __Method_OpenAuthorizedView = new grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "OpenAuthorizedView",
+        __Marshaller_google_bigtable_v2_SessionRequest,
+        __Marshaller_google_bigtable_v2_SessionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> __Method_OpenMaterializedView = new grpc::Method<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "OpenMaterializedView",
+        __Marshaller_google_bigtable_v2_SessionRequest,
+        __Marshaller_google_bigtable_v2_SessionResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -361,6 +401,65 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task ExecuteQuery(global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ClientConfiguration> GetClientConfiguration(global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task OpenTable(grpc::IAsyncStreamReader<global::Google.Cloud.Bigtable.V2.SessionRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.SessionResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task OpenAuthorizedView(grpc::IAsyncStreamReader<global::Google.Cloud.Bigtable.V2.SessionRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.SessionResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task OpenMaterializedView(grpc::IAsyncStreamReader<global::Google.Cloud.Bigtable.V2.SessionRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.SessionResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -832,6 +931,140 @@ namespace Google.Cloud.Bigtable.V2 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ExecuteQuery, null, options, request);
       }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.ClientConfiguration GetClientConfiguration(global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetClientConfiguration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.ClientConfiguration GetClientConfiguration(global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetClientConfiguration, null, options, request);
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ClientConfiguration> GetClientConfigurationAsync(global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetClientConfigurationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ClientConfiguration> GetClientConfigurationAsync(global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetClientConfiguration, null, options, request);
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenTable(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenTable(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenTable(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenTable, null, options);
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenAuthorizedView(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenAuthorizedView(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenAuthorizedView(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenAuthorizedView, null, options);
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenMaterializedView(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenMaterializedView(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This RPC is only intended to be used by the official Cloud Bigtable client
+      /// libraries to implement the Bigtable Session based protocol. It is subject
+      /// to change without notice.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse> OpenMaterializedView(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenMaterializedView, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BigtableClient NewInstance(ClientBaseConfiguration configuration)
@@ -856,7 +1089,11 @@ namespace Google.Cloud.Bigtable.V2 {
           .AddMethod(__Method_GenerateInitialChangeStreamPartitions, serviceImpl.GenerateInitialChangeStreamPartitions)
           .AddMethod(__Method_ReadChangeStream, serviceImpl.ReadChangeStream)
           .AddMethod(__Method_PrepareQuery, serviceImpl.PrepareQuery)
-          .AddMethod(__Method_ExecuteQuery, serviceImpl.ExecuteQuery).Build();
+          .AddMethod(__Method_ExecuteQuery, serviceImpl.ExecuteQuery)
+          .AddMethod(__Method_GetClientConfiguration, serviceImpl.GetClientConfiguration)
+          .AddMethod(__Method_OpenTable, serviceImpl.OpenTable)
+          .AddMethod(__Method_OpenAuthorizedView, serviceImpl.OpenAuthorizedView)
+          .AddMethod(__Method_OpenMaterializedView, serviceImpl.OpenMaterializedView).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -877,6 +1114,10 @@ namespace Google.Cloud.Bigtable.V2 {
       serviceBinder.AddMethod(__Method_ReadChangeStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse>(serviceImpl.ReadChangeStream));
       serviceBinder.AddMethod(__Method_PrepareQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.PrepareQueryRequest, global::Google.Cloud.Bigtable.V2.PrepareQueryResponse>(serviceImpl.PrepareQuery));
       serviceBinder.AddMethod(__Method_ExecuteQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse>(serviceImpl.ExecuteQuery));
+      serviceBinder.AddMethod(__Method_GetClientConfiguration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.GetClientConfigurationRequest, global::Google.Cloud.Bigtable.V2.ClientConfiguration>(serviceImpl.GetClientConfiguration));
+      serviceBinder.AddMethod(__Method_OpenTable, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(serviceImpl.OpenTable));
+      serviceBinder.AddMethod(__Method_OpenAuthorizedView, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(serviceImpl.OpenAuthorizedView));
+      serviceBinder.AddMethod(__Method_OpenMaterializedView, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Bigtable.V2.SessionRequest, global::Google.Cloud.Bigtable.V2.SessionResponse>(serviceImpl.OpenMaterializedView));
     }
 
   }

@@ -36,6 +36,7 @@ namespace Google.Cloud.Bigtable.V2
             yield return PeerInfoReflection.Descriptor;
             yield return RequestStatsReflection.Descriptor;
             yield return ResponseParamsReflection.Descriptor;
+            yield return SessionReflection.Descriptor;
             yield return TypesReflection.Descriptor;
         }
     }

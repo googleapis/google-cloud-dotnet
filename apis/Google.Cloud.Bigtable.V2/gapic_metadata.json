@@ -28,6 +28,12 @@
                 "GenerateInitialChangeStreamPartitionsAsync"
               ]
             },
+            "GetClientConfiguration": {
+              "methods": [
+                "GetClientConfiguration",
+                "GetClientConfigurationAsync"
+              ]
+            },
             "MutateRow": {
               "methods": [
                 "MutateRow",
@@ -38,6 +44,24 @@
               "methods": [
                 "MutateRows",
                 "MutateRowsAsync"
+              ]
+            },
+            "OpenAuthorizedView": {
+              "methods": [
+                "OpenAuthorizedView",
+                "OpenAuthorizedViewAsync"
+              ]
+            },
+            "OpenMaterializedView": {
+              "methods": [
+                "OpenMaterializedView",
+                "OpenMaterializedViewAsync"
+              ]
+            },
+            "OpenTable": {
+              "methods": [
+                "OpenTable",
+                "OpenTableAsync"
               ]
             },
             "PingAndWarm": {

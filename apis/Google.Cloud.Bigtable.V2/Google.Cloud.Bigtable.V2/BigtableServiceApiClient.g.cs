@@ -57,6 +57,13 @@ namespace Google.Cloud.Bigtable.V2
             ReadChangeStreamSettings = existing.ReadChangeStreamSettings;
             PrepareQuerySettings = existing.PrepareQuerySettings;
             ExecuteQuerySettings = existing.ExecuteQuerySettings;
+            GetClientConfigurationSettings = existing.GetClientConfigurationSettings;
+            OpenTableSettings = existing.OpenTableSettings;
+            OpenTableStreamingSettings = existing.OpenTableStreamingSettings;
+            OpenAuthorizedViewSettings = existing.OpenAuthorizedViewSettings;
+            OpenAuthorizedViewStreamingSettings = existing.OpenAuthorizedViewStreamingSettings;
+            OpenMaterializedViewSettings = existing.OpenMaterializedViewSettings;
+            OpenMaterializedViewStreamingSettings = existing.OpenMaterializedViewStreamingSettings;
             OnCopy(existing);
         }
 
@@ -200,6 +207,80 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>Timeout: 43200 seconds.</remarks>
         public gaxgrpc::CallSettings ExecuteQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(43200000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.GetClientConfiguration</c> and
+        /// <c>BigtableServiceApiClient.GetClientConfigurationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetClientConfigurationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.OpenTable</c> and <c>BigtableServiceApiClient.OpenTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings OpenTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>BigtableServiceApiClient.OpenTable</c>
+        /// and <c>BigtableServiceApiClient.OpenTableAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings OpenTableStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.OpenAuthorizedView</c> and <c>BigtableServiceApiClient.OpenAuthorizedViewAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings OpenAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>BigtableServiceApiClient.OpenAuthorizedView</c> and <c>BigtableServiceApiClient.OpenAuthorizedViewAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings OpenAuthorizedViewStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.OpenMaterializedView</c> and
+        /// <c>BigtableServiceApiClient.OpenMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings OpenMaterializedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>BigtableServiceApiClient.OpenMaterializedView</c> and
+        /// <c>BigtableServiceApiClient.OpenMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings OpenMaterializedViewStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableServiceApiSettings"/> object.</returns>
@@ -3138,6 +3219,96 @@ namespace Google.Cloud.Bigtable.V2
                 AppProfileId = appProfileId ?? "",
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
             }, callSettings);
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ClientConfiguration GetClientConfiguration(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, st::CancellationToken cancellationToken) =>
+            GetClientConfigurationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="OpenTable(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class OpenTableStream : gaxgrpc::BidirectionalStreamingBase<SessionRequest, SessionResponse>
+        {
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual OpenTableStream OpenTable(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="OpenAuthorizedView(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class OpenAuthorizedViewStream : gaxgrpc::BidirectionalStreamingBase<SessionRequest, SessionResponse>
+        {
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual OpenAuthorizedViewStream OpenAuthorizedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="OpenMaterializedView(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class OpenMaterializedViewStream : gaxgrpc::BidirectionalStreamingBase<SessionRequest, SessionResponse>
+        {
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual OpenMaterializedViewStream OpenMaterializedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>BigtableServiceApi client wrapper implementation, for convenient use.</summary>
@@ -3167,6 +3338,14 @@ namespace Google.Cloud.Bigtable.V2
         private readonly gaxgrpc::ApiCall<PrepareQueryRequest, PrepareQueryResponse> _callPrepareQuery;
 
         private readonly gaxgrpc::ApiServerStreamingCall<ExecuteQueryRequest, ExecuteQueryResponse> _callExecuteQuery;
+
+        private readonly gaxgrpc::ApiCall<GetClientConfigurationRequest, ClientConfiguration> _callGetClientConfiguration;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> _callOpenTable;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> _callOpenAuthorizedView;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> _callOpenMaterializedView;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableServiceApi service, with the specified gRPC client and settings.
@@ -3216,10 +3395,24 @@ namespace Google.Cloud.Bigtable.V2
             _callExecuteQuery = clientHelper.BuildApiCall<ExecuteQueryRequest, ExecuteQueryResponse>("ExecuteQuery", grpcClient.ExecuteQuery, effectiveSettings.ExecuteQuerySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ExecuteQueryRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.InstanceName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callExecuteQuery);
             Modify_ExecuteQueryApiCall(ref _callExecuteQuery);
+            _callGetClientConfiguration = clientHelper.BuildApiCall<GetClientConfigurationRequest, ClientConfiguration>("GetClientConfiguration", grpcClient.GetClientConfigurationAsync, grpcClient.GetClientConfiguration, effectiveSettings.GetClientConfigurationSettings);
+            Modify_ApiCall(ref _callGetClientConfiguration);
+            Modify_GetClientConfigurationApiCall(ref _callGetClientConfiguration);
+            _callOpenTable = clientHelper.BuildApiCall<SessionRequest, SessionResponse>("OpenTable", grpcClient.OpenTable, effectiveSettings.OpenTableSettings, effectiveSettings.OpenTableStreamingSettings);
+            Modify_ApiCall(ref _callOpenTable);
+            Modify_OpenTableApiCall(ref _callOpenTable);
+            _callOpenAuthorizedView = clientHelper.BuildApiCall<SessionRequest, SessionResponse>("OpenAuthorizedView", grpcClient.OpenAuthorizedView, effectiveSettings.OpenAuthorizedViewSettings, effectiveSettings.OpenAuthorizedViewStreamingSettings);
+            Modify_ApiCall(ref _callOpenAuthorizedView);
+            Modify_OpenAuthorizedViewApiCall(ref _callOpenAuthorizedView);
+            _callOpenMaterializedView = clientHelper.BuildApiCall<SessionRequest, SessionResponse>("OpenMaterializedView", grpcClient.OpenMaterializedView, effectiveSettings.OpenMaterializedViewSettings, effectiveSettings.OpenMaterializedViewStreamingSettings);
+            Modify_ApiCall(ref _callOpenMaterializedView);
+            Modify_OpenMaterializedViewApiCall(ref _callOpenMaterializedView);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
@@ -3244,6 +3437,14 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_PrepareQueryApiCall(ref gaxgrpc::ApiCall<PrepareQueryRequest, PrepareQueryResponse> call);
 
         partial void Modify_ExecuteQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<ExecuteQueryRequest, ExecuteQueryResponse> call);
+
+        partial void Modify_GetClientConfigurationApiCall(ref gaxgrpc::ApiCall<GetClientConfigurationRequest, ClientConfiguration> call);
+
+        partial void Modify_OpenTableApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> call);
+
+        partial void Modify_OpenAuthorizedViewApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> call);
+
+        partial void Modify_OpenMaterializedViewApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<SessionRequest, SessionResponse> call);
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3271,6 +3472,12 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_PrepareQueryRequest(ref PrepareQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExecuteQueryRequest(ref ExecuteQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetClientConfigurationRequest(ref GetClientConfigurationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SessionRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SessionRequestRequest(ref SessionRequest request);
 
         internal sealed partial class ReadRowsStreamImpl : ReadRowsStream
         {
@@ -3545,6 +3752,217 @@ namespace Google.Cloud.Bigtable.V2
         {
             Modify_ExecuteQueryRequest(ref request, ref callSettings);
             return new ExecuteQueryStreamImpl(_callExecuteQuery.Call(request, callSettings));
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ClientConfiguration GetClientConfiguration(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetClientConfigurationRequest(ref request, ref callSettings);
+            return _callGetClientConfiguration.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ClientConfiguration> GetClientConfigurationAsync(GetClientConfigurationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetClientConfigurationRequest(ref request, ref callSettings);
+            return _callGetClientConfiguration.Async(request, callSettings);
+        }
+
+        internal sealed partial class OpenTableStreamImpl : OpenTableStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>OpenTable</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{SessionRequest}"/> instance associated with this
+            /// streaming call.
+            /// </param>
+            public OpenTableStreamImpl(BigtableServiceApiClientImpl service, grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call, gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private BigtableServiceApiClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<SessionRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> GrpcCall { get; }
+
+            private SessionRequest ModifyRequest(SessionRequest request)
+            {
+                _service.Modify_SessionRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(SessionRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(SessionRequest message) => _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override BigtableServiceApiClient.OpenTableStream OpenTable(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_SessionRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callOpenTable.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call = _callOpenTable.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<SessionRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new OpenTableStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class OpenAuthorizedViewStreamImpl : OpenAuthorizedViewStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>OpenAuthorizedView</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{SessionRequest}"/> instance associated with this
+            /// streaming call.
+            /// </param>
+            public OpenAuthorizedViewStreamImpl(BigtableServiceApiClientImpl service, grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call, gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private BigtableServiceApiClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<SessionRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> GrpcCall { get; }
+
+            private SessionRequest ModifyRequest(SessionRequest request)
+            {
+                _service.Modify_SessionRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(SessionRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(SessionRequest message) => _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override BigtableServiceApiClient.OpenAuthorizedViewStream OpenAuthorizedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_SessionRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callOpenAuthorizedView.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call = _callOpenAuthorizedView.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<SessionRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new OpenAuthorizedViewStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class OpenMaterializedViewStreamImpl : OpenMaterializedViewStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>OpenMaterializedView</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{SessionRequest}"/> instance associated with this
+            /// streaming call.
+            /// </param>
+            public OpenMaterializedViewStreamImpl(BigtableServiceApiClientImpl service, grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call, gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private BigtableServiceApiClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<SessionRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> GrpcCall { get; }
+
+            private SessionRequest ModifyRequest(SessionRequest request)
+            {
+                _service.Modify_SessionRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(SessionRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(SessionRequest message) => _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(SessionRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// This RPC is only intended to be used by the official Cloud Bigtable client
+        /// libraries to implement the Bigtable Session based protocol. It is subject
+        /// to change without notice.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override BigtableServiceApiClient.OpenMaterializedViewStream OpenMaterializedView(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_SessionRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callOpenMaterializedView.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<SessionRequest, SessionResponse> call = _callOpenMaterializedView.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<SessionRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<SessionRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new OpenMaterializedViewStreamImpl(this, call, writeBuffer);
         }
     }
 }

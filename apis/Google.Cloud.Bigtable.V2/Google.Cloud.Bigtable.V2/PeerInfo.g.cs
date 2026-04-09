@@ -25,26 +25,27 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvYmlndGFibGUvdjIvcGVlcl9pbmZvLnByb3RvEhJnb29nbGUu",
-            "YmlndGFibGUudjIi+gMKCFBlZXJJbmZvEhoKEmdvb2dsZV9mcm9udGVuZF9p",
-            "ZBgBIAEoAxIfChdhcHBsaWNhdGlvbl9mcm9udGVuZF9pZBgCIAEoAxIhChlh",
-            "cHBsaWNhdGlvbl9mcm9udGVuZF96b25lGAMgASgJEiQKHGFwcGxpY2F0aW9u",
-            "X2Zyb250ZW5kX3N1YnpvbmUYBCABKAkSQgoOdHJhbnNwb3J0X3R5cGUYBSAB",
-            "KA4yKi5nb29nbGUuYmlndGFibGUudjIuUGVlckluZm8uVHJhbnNwb3J0VHlw",
-            "ZSKjAgoNVHJhbnNwb3J0VHlwZRIaChZUUkFOU1BPUlRfVFlQRV9VTktOT1dO",
-            "EAASGwoXVFJBTlNQT1JUX1RZUEVfRVhURVJOQUwQARIdChlUUkFOU1BPUlRf",
-            "VFlQRV9DTE9VRF9QQVRIEAISIAocVFJBTlNQT1JUX1RZUEVfRElSRUNUX0FD",
-            "Q0VTUxADEiIKHlRSQU5TUE9SVF9UWVBFX1NFU1NJT05fVU5LTk9XThAEEiMK",
-            "H1RSQU5TUE9SVF9UWVBFX1NFU1NJT05fRVhURVJOQUwQBRIlCiFUUkFOU1BP",
-            "UlRfVFlQRV9TRVNTSU9OX0NMT1VEX1BBVEgQBhIoCiRUUkFOU1BPUlRfVFlQ",
-            "RV9TRVNTSU9OX0RJUkVDVF9BQ0NFU1MQB0K3AQoWY29tLmdvb2dsZS5iaWd0",
-            "YWJsZS52MkINUGVlckluZm9Qcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2JpZ3RhYmxlL2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoCGEdvb2ds",
-            "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
-            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
+            "YmlndGFibGUudjIiowQKCFBlZXJJbmZvEhoKEmdvb2dsZV9mcm9udGVuZF9p",
+            "ZBgBIAEoAxIfChdhcHBsaWNhdGlvbl9mcm9udGVuZF9pZBgCIAEoAxIjChth",
+            "cHBsaWNhdGlvbl9mcm9udGVuZF9yZWdpb24YBiABKAkSJQoZYXBwbGljYXRp",
+            "b25fZnJvbnRlbmRfem9uZRgDIAEoCUICGAESJAocYXBwbGljYXRpb25fZnJv",
+            "bnRlbmRfc3Viem9uZRgEIAEoCRJCCg50cmFuc3BvcnRfdHlwZRgFIAEoDjIq",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5QZWVySW5mby5UcmFuc3BvcnRUeXBlIqMC",
+            "Cg1UcmFuc3BvcnRUeXBlEhoKFlRSQU5TUE9SVF9UWVBFX1VOS05PV04QABIb",
+            "ChdUUkFOU1BPUlRfVFlQRV9FWFRFUk5BTBABEh0KGVRSQU5TUE9SVF9UWVBF",
+            "X0NMT1VEX1BBVEgQAhIgChxUUkFOU1BPUlRfVFlQRV9ESVJFQ1RfQUNDRVNT",
+            "EAMSIgoeVFJBTlNQT1JUX1RZUEVfU0VTU0lPTl9VTktOT1dOEAQSIwofVFJB",
+            "TlNQT1JUX1RZUEVfU0VTU0lPTl9FWFRFUk5BTBAFEiUKIVRSQU5TUE9SVF9U",
+            "WVBFX1NFU1NJT05fQ0xPVURfUEFUSBAGEigKJFRSQU5TUE9SVF9UWVBFX1NF",
+            "U1NJT05fRElSRUNUX0FDQ0VTUxAHQrcBChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyQg1QZWVySW5mb1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmln",
+            "dGFibGUvYXBpdjIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNs",
+            "b3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIb",
+            "R29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PeerInfo), global::Google.Cloud.Bigtable.V2.PeerInfo.Parser, new[]{ "GoogleFrontendId", "ApplicationFrontendId", "ApplicationFrontendZone", "ApplicationFrontendSubzone", "TransportType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.PeerInfo.Types.TransportType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PeerInfo), global::Google.Cloud.Bigtable.V2.PeerInfo.Parser, new[]{ "GoogleFrontendId", "ApplicationFrontendId", "ApplicationFrontendRegion", "ApplicationFrontendZone", "ApplicationFrontendSubzone", "TransportType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.PeerInfo.Types.TransportType) }, null, null)
           }));
     }
     #endregion
@@ -92,6 +93,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public PeerInfo(PeerInfo other) : this() {
       googleFrontendId_ = other.googleFrontendId_;
       applicationFrontendId_ = other.applicationFrontendId_;
+      applicationFrontendRegion_ = other.applicationFrontendRegion_;
       applicationFrontendZone_ = other.applicationFrontendZone_;
       applicationFrontendSubzone_ = other.applicationFrontendSubzone_;
       transportType_ = other.transportType_;
@@ -136,12 +138,28 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "application_frontend_region" field.</summary>
+    public const int ApplicationFrontendRegionFieldNumber = 6;
+    private string applicationFrontendRegion_ = "";
+    /// <summary>
+    /// The Cloud region of the application frontend that served this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ApplicationFrontendRegion {
+      get { return applicationFrontendRegion_; }
+      set {
+        applicationFrontendRegion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "application_frontend_zone" field.</summary>
     public const int ApplicationFrontendZoneFieldNumber = 3;
     private string applicationFrontendZone_ = "";
     /// <summary>
     /// The Cloud zone of the application frontend that served this request.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplicationFrontendZone {
@@ -156,7 +174,8 @@ namespace Google.Cloud.Bigtable.V2 {
     private string applicationFrontendSubzone_ = "";
     /// <summary>
     /// The subzone of the application frontend that served this request, e.g. an
-    /// identifier for where within the zone the application frontend is.
+    /// identifier for where within a zone (within the reported region) the
+    /// application frontend is.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -196,6 +215,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (GoogleFrontendId != other.GoogleFrontendId) return false;
       if (ApplicationFrontendId != other.ApplicationFrontendId) return false;
+      if (ApplicationFrontendRegion != other.ApplicationFrontendRegion) return false;
       if (ApplicationFrontendZone != other.ApplicationFrontendZone) return false;
       if (ApplicationFrontendSubzone != other.ApplicationFrontendSubzone) return false;
       if (TransportType != other.TransportType) return false;
@@ -208,6 +228,7 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (GoogleFrontendId != 0L) hash ^= GoogleFrontendId.GetHashCode();
       if (ApplicationFrontendId != 0L) hash ^= ApplicationFrontendId.GetHashCode();
+      if (ApplicationFrontendRegion.Length != 0) hash ^= ApplicationFrontendRegion.GetHashCode();
       if (ApplicationFrontendZone.Length != 0) hash ^= ApplicationFrontendZone.GetHashCode();
       if (ApplicationFrontendSubzone.Length != 0) hash ^= ApplicationFrontendSubzone.GetHashCode();
       if (TransportType != global::Google.Cloud.Bigtable.V2.PeerInfo.Types.TransportType.Unknown) hash ^= TransportType.GetHashCode();
@@ -249,6 +270,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) TransportType);
       }
+      if (ApplicationFrontendRegion.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ApplicationFrontendRegion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -279,6 +304,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) TransportType);
       }
+      if (ApplicationFrontendRegion.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ApplicationFrontendRegion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -294,6 +323,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (ApplicationFrontendId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ApplicationFrontendId);
+      }
+      if (ApplicationFrontendRegion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationFrontendRegion);
       }
       if (ApplicationFrontendZone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationFrontendZone);
@@ -321,6 +353,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.ApplicationFrontendId != 0L) {
         ApplicationFrontendId = other.ApplicationFrontendId;
+      }
+      if (other.ApplicationFrontendRegion.Length != 0) {
+        ApplicationFrontendRegion = other.ApplicationFrontendRegion;
       }
       if (other.ApplicationFrontendZone.Length != 0) {
         ApplicationFrontendZone = other.ApplicationFrontendZone;
@@ -370,6 +405,10 @@ namespace Google.Cloud.Bigtable.V2 {
             TransportType = (global::Google.Cloud.Bigtable.V2.PeerInfo.Types.TransportType) input.ReadEnum();
             break;
           }
+          case 50: {
+            ApplicationFrontendRegion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -407,6 +446,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 40: {
             TransportType = (global::Google.Cloud.Bigtable.V2.PeerInfo.Types.TransportType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ApplicationFrontendRegion = input.ReadString();
             break;
           }
         }

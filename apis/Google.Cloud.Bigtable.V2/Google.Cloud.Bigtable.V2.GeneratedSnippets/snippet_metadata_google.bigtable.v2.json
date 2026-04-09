@@ -4258,6 +4258,247 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_GetClientConfiguration_sync",
+      "title": "GetClientConfigurationRequestObject",
+      "description": "Snippet for GetClientConfiguration",
+      "file": "BigtableServiceApiClient.GetClientConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConfiguration",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GetClientConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.GetClientConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.ClientConfiguration",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GetClientConfiguration",
+          "fullName": "google.bigtable.v2.Bigtable.GetClientConfiguration",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_GetClientConfiguration_async",
+      "title": "GetClientConfigurationRequestObjectAsync",
+      "description": "Snippet for GetClientConfigurationAsync",
+      "file": "BigtableServiceApiClient.GetClientConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientConfigurationAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GetClientConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.GetClientConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ClientConfiguration>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GetClientConfiguration",
+          "fullName": "google.bigtable.v2.Bigtable.GetClientConfiguration",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_OpenTable_sync",
+      "title": "OpenTable",
+      "description": "Snippet for OpenTable",
+      "file": "BigtableServiceApiClient.OpenTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OpenTable",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.OpenTable",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+OpenTableStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "OpenTable",
+          "fullName": "google.bigtable.v2.Bigtable.OpenTable",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_OpenAuthorizedView_sync",
+      "title": "OpenAuthorizedView",
+      "description": "Snippet for OpenAuthorizedView",
+      "file": "BigtableServiceApiClient.OpenAuthorizedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OpenAuthorizedView",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.OpenAuthorizedView",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+OpenAuthorizedViewStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "OpenAuthorizedView",
+          "fullName": "google.bigtable.v2.Bigtable.OpenAuthorizedView",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_OpenMaterializedView_sync",
+      "title": "OpenMaterializedView",
+      "description": "Snippet for OpenMaterializedView",
+      "file": "BigtableServiceApiClient.OpenMaterializedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OpenMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.OpenMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+OpenMaterializedViewStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "OpenMaterializedView",
+          "fullName": "google.bigtable.v2.Bigtable.OpenMaterializedView",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

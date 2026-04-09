@@ -25,22 +25,23 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIrECCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Z2xlLmJpZ3RhYmxlLnYyIukCCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
             "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
             "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
             "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
             "EhIKCnJldHJ5X2luZm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19l",
             "bmFibGVkGAggASgIEiAKGHRyYWZmaWNfZGlyZWN0b3JfZW5hYmxlZBgJIAEo",
             "CBIfChdkaXJlY3RfYWNjZXNzX3JlcXVlc3RlZBgKIAEoCBIRCglwZWVyX2lu",
-            "Zm8YCyABKAhCuwEKFmNvbS5nb29nbGUuYmlndGFibGUudjJCEUZlYXR1cmVG",
-            "bGFnc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYXBp",
-            "djIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJpZ3Rh",
-            "YmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpD",
-            "bG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "Zm8YCyABKAgSGwoTc2Vzc2lvbnNfY29tcGF0aWJsZRgMIAEoCBIZChFzZXNz",
+            "aW9uc19yZXF1aXJlZBgNIAEoCEK7AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52",
+            "MkIRRmVhdHVyZUZsYWdzUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "aWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUu",
+            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLq",
+            "AhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo", "SessionsCompatible", "SessionsRequired" }, null, null, null, null)
           }));
     }
     #endregion
@@ -102,6 +103,8 @@ namespace Google.Cloud.Bigtable.V2 {
       trafficDirectorEnabled_ = other.trafficDirectorEnabled_;
       directAccessRequested_ = other.directAccessRequested_;
       peerInfo_ = other.peerInfo_;
+      sessionsCompatible_ = other.sessionsCompatible_;
+      sessionsRequired_ = other.sessionsRequired_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -269,6 +272,36 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "sessions_compatible" field.</summary>
+    public const int SessionsCompatibleFieldNumber = 12;
+    private bool sessionsCompatible_;
+    /// <summary>
+    /// Indicates whether the client supports the Bigtable Sessions API.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SessionsCompatible {
+      get { return sessionsCompatible_; }
+      set {
+        sessionsCompatible_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sessions_required" field.</summary>
+    public const int SessionsRequiredFieldNumber = 13;
+    private bool sessionsRequired_;
+    /// <summary>
+    /// Internal flag to force sessions for internal projects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SessionsRequired {
+      get { return sessionsRequired_; }
+      set {
+        sessionsRequired_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -294,6 +327,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (TrafficDirectorEnabled != other.TrafficDirectorEnabled) return false;
       if (DirectAccessRequested != other.DirectAccessRequested) return false;
       if (PeerInfo != other.PeerInfo) return false;
+      if (SessionsCompatible != other.SessionsCompatible) return false;
+      if (SessionsRequired != other.SessionsRequired) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -311,6 +346,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (TrafficDirectorEnabled != false) hash ^= TrafficDirectorEnabled.GetHashCode();
       if (DirectAccessRequested != false) hash ^= DirectAccessRequested.GetHashCode();
       if (PeerInfo != false) hash ^= PeerInfo.GetHashCode();
+      if (SessionsCompatible != false) hash ^= SessionsCompatible.GetHashCode();
+      if (SessionsRequired != false) hash ^= SessionsRequired.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -369,6 +406,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(88);
         output.WriteBool(PeerInfo);
       }
+      if (SessionsCompatible != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SessionsCompatible);
+      }
+      if (SessionsRequired != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(SessionsRequired);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -419,6 +464,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(88);
         output.WriteBool(PeerInfo);
       }
+      if (SessionsCompatible != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SessionsCompatible);
+      }
+      if (SessionsRequired != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(SessionsRequired);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -457,6 +510,12 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (PeerInfo != false) {
+        size += 1 + 1;
+      }
+      if (SessionsCompatible != false) {
+        size += 1 + 1;
+      }
+      if (SessionsRequired != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -500,6 +559,12 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.PeerInfo != false) {
         PeerInfo = other.PeerInfo;
+      }
+      if (other.SessionsCompatible != false) {
+        SessionsCompatible = other.SessionsCompatible;
+      }
+      if (other.SessionsRequired != false) {
+        SessionsRequired = other.SessionsRequired;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -560,6 +625,14 @@ namespace Google.Cloud.Bigtable.V2 {
             PeerInfo = input.ReadBool();
             break;
           }
+          case 96: {
+            SessionsCompatible = input.ReadBool();
+            break;
+          }
+          case 104: {
+            SessionsRequired = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -617,6 +690,14 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 88: {
             PeerInfo = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SessionsCompatible = input.ReadBool();
+            break;
+          }
+          case 104: {
+            SessionsRequired = input.ReadBool();
             break;
           }
         }
