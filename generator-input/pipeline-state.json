@@ -4973,7 +4973,7 @@
             ]
         },
         {
-            "id": "Google.Cloud.Appoptimize.V1Beta",
+            "id": "Google.Cloud.AppOptimize.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",

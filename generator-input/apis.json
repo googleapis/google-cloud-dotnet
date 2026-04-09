@@ -658,7 +658,7 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Cloud.Appoptimize.V1Beta",
+      "id": "Google.Cloud.AppOptimize.V1Beta",
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "App Optimize",
