@@ -162,6 +162,32 @@ namespace Google.Cloud.Config.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.AutoMigrationConfig> __Marshaller_google_cloud_config_v1_AutoMigrationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.AutoMigrationConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest> __Marshaller_google_cloud_config_v1_UpdateAutoMigrationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_GetDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.DeploymentGroup> __Marshaller_google_cloud_config_v1_DeploymentGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.DeploymentGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_CreateDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_UpdateDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_DeleteDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest> __Marshaller_google_cloud_config_v1_ListDeploymentGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse> __Marshaller_google_cloud_config_v1_ListDeploymentGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_ProvisionDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest> __Marshaller_google_cloud_config_v1_DeprovisionDeploymentGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest> __Marshaller_google_cloud_config_v1_GetDeploymentGroupRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.DeploymentGroupRevision> __Marshaller_google_cloud_config_v1_DeploymentGroupRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.DeploymentGroupRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest> __Marshaller_google_cloud_config_v1_ListDeploymentGroupRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse> __Marshaller_google_cloud_config_v1_ListDeploymentGroupRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse>(
@@ -394,6 +420,78 @@ namespace Google.Cloud.Config.V1 {
         "UpdateAutoMigrationConfig",
         __Marshaller_google_cloud_config_v1_UpdateAutoMigrationConfigRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetDeploymentGroupRequest, global::Google.Cloud.Config.V1.DeploymentGroup> __Method_GetDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.GetDeploymentGroupRequest, global::Google.Cloud.Config.V1.DeploymentGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_GetDeploymentGroupRequest,
+        __Marshaller_google_cloud_config_v1_DeploymentGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest, global::Google.LongRunning.Operation> __Method_CreateDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_CreateDeploymentGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest, global::Google.LongRunning.Operation> __Method_UpdateDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_UpdateDeploymentGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest, global::Google.LongRunning.Operation> __Method_DeleteDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_DeleteDeploymentGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse> __Method_ListDeploymentGroups = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDeploymentGroups",
+        __Marshaller_google_cloud_config_v1_ListDeploymentGroupsRequest,
+        __Marshaller_google_cloud_config_v1_ListDeploymentGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest, global::Google.LongRunning.Operation> __Method_ProvisionDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ProvisionDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_ProvisionDeploymentGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest, global::Google.LongRunning.Operation> __Method_DeprovisionDeploymentGroup = new grpc::Method<global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeprovisionDeploymentGroup",
+        __Marshaller_google_cloud_config_v1_DeprovisionDeploymentGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest, global::Google.Cloud.Config.V1.DeploymentGroupRevision> __Method_GetDeploymentGroupRevision = new grpc::Method<global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest, global::Google.Cloud.Config.V1.DeploymentGroupRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDeploymentGroupRevision",
+        __Marshaller_google_cloud_config_v1_GetDeploymentGroupRevisionRequest,
+        __Marshaller_google_cloud_config_v1_DeploymentGroupRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse> __Method_ListDeploymentGroupRevisions = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDeploymentGroupRevisions",
+        __Marshaller_google_cloud_config_v1_ListDeploymentGroupRevisionsRequest,
+        __Marshaller_google_cloud_config_v1_ListDeploymentGroupRevisionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -755,6 +853,137 @@ namespace Google.Cloud.Config.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAutoMigrationConfig(global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a DeploymentGroup for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.DeploymentGroup> GetDeploymentGroup(global::Google.Cloud.Config.V1.GetDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// The newly created DeploymentGroup will be in the `CREATING` state
+      /// and can be retrieved via Get and List calls.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDeploymentGroup(global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDeploymentGroup(global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDeploymentGroup(global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List DeploymentGroups for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse> ListDeploymentGroups(global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Provisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ProvisionDeploymentGroup(global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deprovisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeprovisionDeploymentGroup(global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.DeploymentGroupRevision> GetDeploymentGroupRevision(global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+      /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse> ListDeploymentGroupRevisions(global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2204,6 +2433,530 @@ namespace Google.Cloud.Config.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAutoMigrationConfig, null, options, request);
       }
+      /// <summary>
+      /// Get a DeploymentGroup for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.DeploymentGroup GetDeploymentGroup(global::Google.Cloud.Config.V1.GetDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a DeploymentGroup for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.DeploymentGroup GetDeploymentGroup(global::Google.Cloud.Config.V1.GetDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Get a DeploymentGroup for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.DeploymentGroup> GetDeploymentGroupAsync(global::Google.Cloud.Config.V1.GetDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a DeploymentGroup for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.DeploymentGroup> GetDeploymentGroupAsync(global::Google.Cloud.Config.V1.GetDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// The newly created DeploymentGroup will be in the `CREATING` state
+      /// and can be retrieved via Get and List calls.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDeploymentGroup(global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// The newly created DeploymentGroup will be in the `CREATING` state
+      /// and can be retrieved via Get and List calls.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDeploymentGroup(global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// The newly created DeploymentGroup will be in the `CREATING` state
+      /// and can be retrieved via Get and List calls.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDeploymentGroupAsync(global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// The newly created DeploymentGroup will be in the `CREATING` state
+      /// and can be retrieved via Get and List calls.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDeploymentGroupAsync(global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeploymentGroup(global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeploymentGroup(global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeploymentGroupAsync(global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeploymentGroupAsync(global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDeploymentGroup(global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDeploymentGroup(global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDeploymentGroupAsync(global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDeploymentGroupAsync(global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// List DeploymentGroups for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse ListDeploymentGroups(global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List DeploymentGroups for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse ListDeploymentGroups(global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDeploymentGroups, null, options, request);
+      }
+      /// <summary>
+      /// List DeploymentGroups for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse> ListDeploymentGroupsAsync(global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List DeploymentGroups for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse> ListDeploymentGroupsAsync(global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDeploymentGroups, null, options, request);
+      }
+      /// <summary>
+      /// Provisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ProvisionDeploymentGroup(global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Provisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ProvisionDeploymentGroup(global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ProvisionDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Provisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ProvisionDeploymentGroupAsync(global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Provisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ProvisionDeploymentGroupAsync(global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ProvisionDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deprovisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeprovisionDeploymentGroup(global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeprovisionDeploymentGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprovisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeprovisionDeploymentGroup(global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeprovisionDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deprovisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeprovisionDeploymentGroupAsync(global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeprovisionDeploymentGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprovisions a deployment group.
+      ///
+      /// NOTE: As a first step of this operation, Infra Manager will
+      /// automatically delete any Deployments that were part of the
+      /// *last successful*
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+      /// but are *no longer* included in the *current*
+      /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+      /// following an `UpdateDeploymentGroup` call), along with their actuated
+      /// resources.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeprovisionDeploymentGroupAsync(global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeprovisionDeploymentGroup, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.DeploymentGroupRevision GetDeploymentGroupRevision(global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentGroupRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.DeploymentGroupRevision GetDeploymentGroupRevision(global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDeploymentGroupRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeploymentGroupRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDeploymentGroupRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+      /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse ListDeploymentGroupRevisions(global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentGroupRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+      /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse ListDeploymentGroupRevisions(global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDeploymentGroupRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+      /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse> ListDeploymentGroupRevisionsAsync(global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeploymentGroupRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists
+      /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+      /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse> ListDeploymentGroupRevisionsAsync(global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDeploymentGroupRevisions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConfigClient NewInstance(ClientBaseConfiguration configuration)
@@ -2246,7 +2999,16 @@ namespace Google.Cloud.Config.V1 {
           .AddMethod(__Method_ListResourceDrifts, serviceImpl.ListResourceDrifts)
           .AddMethod(__Method_GetResourceDrift, serviceImpl.GetResourceDrift)
           .AddMethod(__Method_GetAutoMigrationConfig, serviceImpl.GetAutoMigrationConfig)
-          .AddMethod(__Method_UpdateAutoMigrationConfig, serviceImpl.UpdateAutoMigrationConfig).Build();
+          .AddMethod(__Method_UpdateAutoMigrationConfig, serviceImpl.UpdateAutoMigrationConfig)
+          .AddMethod(__Method_GetDeploymentGroup, serviceImpl.GetDeploymentGroup)
+          .AddMethod(__Method_CreateDeploymentGroup, serviceImpl.CreateDeploymentGroup)
+          .AddMethod(__Method_UpdateDeploymentGroup, serviceImpl.UpdateDeploymentGroup)
+          .AddMethod(__Method_DeleteDeploymentGroup, serviceImpl.DeleteDeploymentGroup)
+          .AddMethod(__Method_ListDeploymentGroups, serviceImpl.ListDeploymentGroups)
+          .AddMethod(__Method_ProvisionDeploymentGroup, serviceImpl.ProvisionDeploymentGroup)
+          .AddMethod(__Method_DeprovisionDeploymentGroup, serviceImpl.DeprovisionDeploymentGroup)
+          .AddMethod(__Method_GetDeploymentGroupRevision, serviceImpl.GetDeploymentGroupRevision)
+          .AddMethod(__Method_ListDeploymentGroupRevisions, serviceImpl.ListDeploymentGroupRevisions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2285,6 +3047,15 @@ namespace Google.Cloud.Config.V1 {
       serviceBinder.AddMethod(__Method_GetResourceDrift, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetResourceDriftRequest, global::Google.Cloud.Config.V1.ResourceDrift>(serviceImpl.GetResourceDrift));
       serviceBinder.AddMethod(__Method_GetAutoMigrationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetAutoMigrationConfigRequest, global::Google.Cloud.Config.V1.AutoMigrationConfig>(serviceImpl.GetAutoMigrationConfig));
       serviceBinder.AddMethod(__Method_UpdateAutoMigrationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.UpdateAutoMigrationConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAutoMigrationConfig));
+      serviceBinder.AddMethod(__Method_GetDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetDeploymentGroupRequest, global::Google.Cloud.Config.V1.DeploymentGroup>(serviceImpl.GetDeploymentGroup));
+      serviceBinder.AddMethod(__Method_CreateDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.CreateDeploymentGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDeploymentGroup));
+      serviceBinder.AddMethod(__Method_UpdateDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.UpdateDeploymentGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDeploymentGroup));
+      serviceBinder.AddMethod(__Method_DeleteDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.DeleteDeploymentGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDeploymentGroup));
+      serviceBinder.AddMethod(__Method_ListDeploymentGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListDeploymentGroupsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupsResponse>(serviceImpl.ListDeploymentGroups));
+      serviceBinder.AddMethod(__Method_ProvisionDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.ProvisionDeploymentGroup));
+      serviceBinder.AddMethod(__Method_DeprovisionDeploymentGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeprovisionDeploymentGroup));
+      serviceBinder.AddMethod(__Method_GetDeploymentGroupRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest, global::Google.Cloud.Config.V1.DeploymentGroupRevision>(serviceImpl.GetDeploymentGroupRevision));
+      serviceBinder.AddMethod(__Method_ListDeploymentGroupRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest, global::Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse>(serviceImpl.ListDeploymentGroupRevisions));
     }
 
   }

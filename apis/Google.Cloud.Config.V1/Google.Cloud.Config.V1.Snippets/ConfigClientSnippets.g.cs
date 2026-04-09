@@ -4448,5 +4448,1635 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetDeploymentGroup</summary>
+        public void GetDeploymentGroupRequestObject()
+        {
+            // Snippet: GetDeploymentGroup(GetDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetDeploymentGroupRequest request = new GetDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+            };
+            // Make the request
+            DeploymentGroup response = configClient.GetDeploymentGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupAsync</summary>
+        public async Task GetDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: GetDeploymentGroupAsync(GetDeploymentGroupRequest, CallSettings)
+            // Additional: GetDeploymentGroupAsync(GetDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDeploymentGroupRequest request = new GetDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+            };
+            // Make the request
+            DeploymentGroup response = await configClient.GetDeploymentGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroup</summary>
+        public void GetDeploymentGroup()
+        {
+            // Snippet: GetDeploymentGroup(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            DeploymentGroup response = configClient.GetDeploymentGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupAsync</summary>
+        public async Task GetDeploymentGroupAsync()
+        {
+            // Snippet: GetDeploymentGroupAsync(string, CallSettings)
+            // Additional: GetDeploymentGroupAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            DeploymentGroup response = await configClient.GetDeploymentGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroup</summary>
+        public void GetDeploymentGroupResourceNames()
+        {
+            // Snippet: GetDeploymentGroup(DeploymentGroupName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            DeploymentGroup response = configClient.GetDeploymentGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupAsync</summary>
+        public async Task GetDeploymentGroupResourceNamesAsync()
+        {
+            // Snippet: GetDeploymentGroupAsync(DeploymentGroupName, CallSettings)
+            // Additional: GetDeploymentGroupAsync(DeploymentGroupName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            DeploymentGroup response = await configClient.GetDeploymentGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroup</summary>
+        public void CreateDeploymentGroupRequestObject()
+        {
+            // Snippet: CreateDeploymentGroup(CreateDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            CreateDeploymentGroupRequest request = new CreateDeploymentGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DeploymentGroupId = "",
+                DeploymentGroup = new DeploymentGroup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.CreateDeploymentGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceCreateDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroupAsync</summary>
+        public async Task CreateDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: CreateDeploymentGroupAsync(CreateDeploymentGroupRequest, CallSettings)
+            // Additional: CreateDeploymentGroupAsync(CreateDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDeploymentGroupRequest request = new CreateDeploymentGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DeploymentGroupId = "",
+                DeploymentGroup = new DeploymentGroup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.CreateDeploymentGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceCreateDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroup</summary>
+        public void CreateDeploymentGroup()
+        {
+            // Snippet: CreateDeploymentGroup(string, DeploymentGroup, string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            string deploymentGroupId = "";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.CreateDeploymentGroup(parent, deploymentGroup, deploymentGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceCreateDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroupAsync</summary>
+        public async Task CreateDeploymentGroupAsync()
+        {
+            // Snippet: CreateDeploymentGroupAsync(string, DeploymentGroup, string, CallSettings)
+            // Additional: CreateDeploymentGroupAsync(string, DeploymentGroup, string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            string deploymentGroupId = "";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.CreateDeploymentGroupAsync(parent, deploymentGroup, deploymentGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceCreateDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroup</summary>
+        public void CreateDeploymentGroupResourceNames()
+        {
+            // Snippet: CreateDeploymentGroup(LocationName, DeploymentGroup, string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            string deploymentGroupId = "";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.CreateDeploymentGroup(parent, deploymentGroup, deploymentGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceCreateDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeploymentGroupAsync</summary>
+        public async Task CreateDeploymentGroupResourceNamesAsync()
+        {
+            // Snippet: CreateDeploymentGroupAsync(LocationName, DeploymentGroup, string, CallSettings)
+            // Additional: CreateDeploymentGroupAsync(LocationName, DeploymentGroup, string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            string deploymentGroupId = "";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.CreateDeploymentGroupAsync(parent, deploymentGroup, deploymentGroupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceCreateDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentGroup</summary>
+        public void UpdateDeploymentGroupRequestObject()
+        {
+            // Snippet: UpdateDeploymentGroup(UpdateDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            UpdateDeploymentGroupRequest request = new UpdateDeploymentGroupRequest
+            {
+                UpdateMask = new FieldMask(),
+                DeploymentGroup = new DeploymentGroup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.UpdateDeploymentGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceUpdateDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentGroupAsync</summary>
+        public async Task UpdateDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: UpdateDeploymentGroupAsync(UpdateDeploymentGroupRequest, CallSettings)
+            // Additional: UpdateDeploymentGroupAsync(UpdateDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDeploymentGroupRequest request = new UpdateDeploymentGroupRequest
+            {
+                UpdateMask = new FieldMask(),
+                DeploymentGroup = new DeploymentGroup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.UpdateDeploymentGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceUpdateDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentGroup</summary>
+        public void UpdateDeploymentGroup()
+        {
+            // Snippet: UpdateDeploymentGroup(DeploymentGroup, FieldMask, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.UpdateDeploymentGroup(deploymentGroup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceUpdateDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeploymentGroupAsync</summary>
+        public async Task UpdateDeploymentGroupAsync()
+        {
+            // Snippet: UpdateDeploymentGroupAsync(DeploymentGroup, FieldMask, CallSettings)
+            // Additional: UpdateDeploymentGroupAsync(DeploymentGroup, FieldMask, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroup deploymentGroup = new DeploymentGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.UpdateDeploymentGroupAsync(deploymentGroup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceUpdateDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroup</summary>
+        public void DeleteDeploymentGroupRequestObject()
+        {
+            // Snippet: DeleteDeploymentGroup(DeleteDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeleteDeploymentGroupRequest request = new DeleteDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                RequestId = "",
+                Force = false,
+                DeploymentReferencePolicy = DeleteDeploymentGroupRequest.Types.DeploymentReferencePolicy.Unspecified,
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeleteDeploymentGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeleteDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroupAsync</summary>
+        public async Task DeleteDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: DeleteDeploymentGroupAsync(DeleteDeploymentGroupRequest, CallSettings)
+            // Additional: DeleteDeploymentGroupAsync(DeleteDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDeploymentGroupRequest request = new DeleteDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                RequestId = "",
+                Force = false,
+                DeploymentReferencePolicy = DeleteDeploymentGroupRequest.Types.DeploymentReferencePolicy.Unspecified,
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeleteDeploymentGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeleteDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroup</summary>
+        public void DeleteDeploymentGroup()
+        {
+            // Snippet: DeleteDeploymentGroup(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeleteDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeleteDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroupAsync</summary>
+        public async Task DeleteDeploymentGroupAsync()
+        {
+            // Snippet: DeleteDeploymentGroupAsync(string, CallSettings)
+            // Additional: DeleteDeploymentGroupAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeleteDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeleteDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroup</summary>
+        public void DeleteDeploymentGroupResourceNames()
+        {
+            // Snippet: DeleteDeploymentGroup(DeploymentGroupName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeleteDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeleteDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeploymentGroupAsync</summary>
+        public async Task DeleteDeploymentGroupResourceNamesAsync()
+        {
+            // Snippet: DeleteDeploymentGroupAsync(DeploymentGroupName, CallSettings)
+            // Additional: DeleteDeploymentGroupAsync(DeploymentGroupName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeleteDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeleteDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroups</summary>
+        public void ListDeploymentGroupsRequestObject()
+        {
+            // Snippet: ListDeploymentGroups(ListDeploymentGroupsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupsAsync</summary>
+        public async Task ListDeploymentGroupsRequestObjectAsync()
+        {
+            // Snippet: ListDeploymentGroupsAsync(ListDeploymentGroupsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroups</summary>
+        public void ListDeploymentGroups()
+        {
+            // Snippet: ListDeploymentGroups(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupsAsync</summary>
+        public async Task ListDeploymentGroupsAsync()
+        {
+            // Snippet: ListDeploymentGroupsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroups</summary>
+        public void ListDeploymentGroupsResourceNames()
+        {
+            // Snippet: ListDeploymentGroups(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupsAsync</summary>
+        public async Task ListDeploymentGroupsResourceNamesAsync()
+        {
+            // Snippet: ListDeploymentGroupsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> response = configClient.ListDeploymentGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroup</summary>
+        public void ProvisionDeploymentGroupRequestObject()
+        {
+            // Snippet: ProvisionDeploymentGroup(ProvisionDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ProvisionDeploymentGroupRequest request = new ProvisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                DeploymentSpecs =
+                {
+                    {
+                        "",
+                        new DeploymentSpec()
+                    },
+                },
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.ProvisionDeploymentGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceProvisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroupAsync</summary>
+        public async Task ProvisionDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: ProvisionDeploymentGroupAsync(ProvisionDeploymentGroupRequest, CallSettings)
+            // Additional: ProvisionDeploymentGroupAsync(ProvisionDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ProvisionDeploymentGroupRequest request = new ProvisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                DeploymentSpecs =
+                {
+                    {
+                        "",
+                        new DeploymentSpec()
+                    },
+                },
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.ProvisionDeploymentGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceProvisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroup</summary>
+        public void ProvisionDeploymentGroup()
+        {
+            // Snippet: ProvisionDeploymentGroup(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.ProvisionDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceProvisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroupAsync</summary>
+        public async Task ProvisionDeploymentGroupAsync()
+        {
+            // Snippet: ProvisionDeploymentGroupAsync(string, CallSettings)
+            // Additional: ProvisionDeploymentGroupAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.ProvisionDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceProvisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroup</summary>
+        public void ProvisionDeploymentGroupResourceNames()
+        {
+            // Snippet: ProvisionDeploymentGroup(DeploymentGroupName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.ProvisionDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceProvisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionDeploymentGroupAsync</summary>
+        public async Task ProvisionDeploymentGroupResourceNamesAsync()
+        {
+            // Snippet: ProvisionDeploymentGroupAsync(DeploymentGroupName, CallSettings)
+            // Additional: ProvisionDeploymentGroupAsync(DeploymentGroupName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.ProvisionDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceProvisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroup</summary>
+        public void DeprovisionDeploymentGroupRequestObject()
+        {
+            // Snippet: DeprovisionDeploymentGroup(DeprovisionDeploymentGroupRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeprovisionDeploymentGroupRequest request = new DeprovisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                Force = false,
+                DeletePolicy = DeleteDeploymentRequest.Types.DeletePolicy.Unspecified,
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeprovisionDeploymentGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeprovisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroupAsync</summary>
+        public async Task DeprovisionDeploymentGroupRequestObjectAsync()
+        {
+            // Snippet: DeprovisionDeploymentGroupAsync(DeprovisionDeploymentGroupRequest, CallSettings)
+            // Additional: DeprovisionDeploymentGroupAsync(DeprovisionDeploymentGroupRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeprovisionDeploymentGroupRequest request = new DeprovisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+                Force = false,
+                DeletePolicy = DeleteDeploymentRequest.Types.DeletePolicy.Unspecified,
+            };
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeprovisionDeploymentGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeprovisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroup</summary>
+        public void DeprovisionDeploymentGroup()
+        {
+            // Snippet: DeprovisionDeploymentGroup(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeprovisionDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeprovisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroupAsync</summary>
+        public async Task DeprovisionDeploymentGroupAsync()
+        {
+            // Snippet: DeprovisionDeploymentGroupAsync(string, CallSettings)
+            // Additional: DeprovisionDeploymentGroupAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeprovisionDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeprovisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroup</summary>
+        public void DeprovisionDeploymentGroupResourceNames()
+        {
+            // Snippet: DeprovisionDeploymentGroup(DeploymentGroupName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = configClient.DeprovisionDeploymentGroup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = configClient.PollOnceDeprovisionDeploymentGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeprovisionDeploymentGroupAsync</summary>
+        public async Task DeprovisionDeploymentGroupResourceNamesAsync()
+        {
+            // Snippet: DeprovisionDeploymentGroupAsync(DeploymentGroupName, CallSettings)
+            // Additional: DeprovisionDeploymentGroupAsync(DeploymentGroupName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupName name = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            Operation<DeploymentGroup, OperationMetadata> response = await configClient.DeprovisionDeploymentGroupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeploymentGroup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeploymentGroup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeploymentGroup, OperationMetadata> retrievedResponse = await configClient.PollOnceDeprovisionDeploymentGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeploymentGroup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevision</summary>
+        public void GetDeploymentGroupRevisionRequestObject()
+        {
+            // Snippet: GetDeploymentGroupRevision(GetDeploymentGroupRevisionRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetDeploymentGroupRevisionRequest request = new GetDeploymentGroupRevisionRequest
+            {
+                DeploymentGroupRevisionName = DeploymentGroupRevisionName.FromProjectLocationDeploymentGroupRevision("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]", "[REVISION]"),
+            };
+            // Make the request
+            DeploymentGroupRevision response = configClient.GetDeploymentGroupRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevisionAsync</summary>
+        public async Task GetDeploymentGroupRevisionRequestObjectAsync()
+        {
+            // Snippet: GetDeploymentGroupRevisionAsync(GetDeploymentGroupRevisionRequest, CallSettings)
+            // Additional: GetDeploymentGroupRevisionAsync(GetDeploymentGroupRevisionRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDeploymentGroupRevisionRequest request = new GetDeploymentGroupRevisionRequest
+            {
+                DeploymentGroupRevisionName = DeploymentGroupRevisionName.FromProjectLocationDeploymentGroupRevision("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]", "[REVISION]"),
+            };
+            // Make the request
+            DeploymentGroupRevision response = await configClient.GetDeploymentGroupRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevision</summary>
+        public void GetDeploymentGroupRevision()
+        {
+            // Snippet: GetDeploymentGroupRevision(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]/revisions/[REVISION]";
+            // Make the request
+            DeploymentGroupRevision response = configClient.GetDeploymentGroupRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevisionAsync</summary>
+        public async Task GetDeploymentGroupRevisionAsync()
+        {
+            // Snippet: GetDeploymentGroupRevisionAsync(string, CallSettings)
+            // Additional: GetDeploymentGroupRevisionAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]/revisions/[REVISION]";
+            // Make the request
+            DeploymentGroupRevision response = await configClient.GetDeploymentGroupRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevision</summary>
+        public void GetDeploymentGroupRevisionResourceNames()
+        {
+            // Snippet: GetDeploymentGroupRevision(DeploymentGroupRevisionName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupRevisionName name = DeploymentGroupRevisionName.FromProjectLocationDeploymentGroupRevision("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]", "[REVISION]");
+            // Make the request
+            DeploymentGroupRevision response = configClient.GetDeploymentGroupRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeploymentGroupRevisionAsync</summary>
+        public async Task GetDeploymentGroupRevisionResourceNamesAsync()
+        {
+            // Snippet: GetDeploymentGroupRevisionAsync(DeploymentGroupRevisionName, CallSettings)
+            // Additional: GetDeploymentGroupRevisionAsync(DeploymentGroupRevisionName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupRevisionName name = DeploymentGroupRevisionName.FromProjectLocationDeploymentGroupRevision("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]", "[REVISION]");
+            // Make the request
+            DeploymentGroupRevision response = await configClient.GetDeploymentGroupRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisions</summary>
+        public void ListDeploymentGroupRevisionsRequestObject()
+        {
+            // Snippet: ListDeploymentGroupRevisions(ListDeploymentGroupRevisionsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                ParentAsDeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisionsAsync</summary>
+        public async Task ListDeploymentGroupRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListDeploymentGroupRevisionsAsync(ListDeploymentGroupRevisionsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                ParentAsDeploymentGroupName = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisions</summary>
+        public void ListDeploymentGroupRevisions()
+        {
+            // Snippet: ListDeploymentGroupRevisions(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisionsAsync</summary>
+        public async Task ListDeploymentGroupRevisionsAsync()
+        {
+            // Snippet: ListDeploymentGroupRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deploymentGroups/[DEPLOYMENT_GROUP]";
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisions</summary>
+        public void ListDeploymentGroupRevisionsResourceNames()
+        {
+            // Snippet: ListDeploymentGroupRevisions(DeploymentGroupName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeploymentGroupName parent = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeploymentGroupRevisionsAsync</summary>
+        public async Task ListDeploymentGroupRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListDeploymentGroupRevisionsAsync(DeploymentGroupName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeploymentGroupName parent = DeploymentGroupName.FromProjectLocationDeploymentGroup("[PROJECT]", "[LOCATION]", "[DEPLOYMENT_GROUP]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> response = configClient.ListDeploymentGroupRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DeploymentGroupRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDeploymentGroupRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeploymentGroupRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeploymentGroupRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeploymentGroupRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

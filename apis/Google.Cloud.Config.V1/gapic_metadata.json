@@ -16,6 +16,12 @@
                 "CreateDeploymentAsync"
               ]
             },
+            "CreateDeploymentGroup": {
+              "methods": [
+                "CreateDeploymentGroup",
+                "CreateDeploymentGroupAsync"
+              ]
+            },
             "CreatePreview": {
               "methods": [
                 "CreatePreview",
@@ -28,6 +34,12 @@
                 "DeleteDeploymentAsync"
               ]
             },
+            "DeleteDeploymentGroup": {
+              "methods": [
+                "DeleteDeploymentGroup",
+                "DeleteDeploymentGroupAsync"
+              ]
+            },
             "DeletePreview": {
               "methods": [
                 "DeletePreview",
@@ -38,6 +50,12 @@
               "methods": [
                 "DeleteStatefile",
                 "DeleteStatefileAsync"
+              ]
+            },
+            "DeprovisionDeploymentGroup": {
+              "methods": [
+                "DeprovisionDeploymentGroup",
+                "DeprovisionDeploymentGroupAsync"
               ]
             },
             "ExportDeploymentStatefile": {
@@ -74,6 +92,18 @@
               "methods": [
                 "GetDeployment",
                 "GetDeploymentAsync"
+              ]
+            },
+            "GetDeploymentGroup": {
+              "methods": [
+                "GetDeploymentGroup",
+                "GetDeploymentGroupAsync"
+              ]
+            },
+            "GetDeploymentGroupRevision": {
+              "methods": [
+                "GetDeploymentGroupRevision",
+                "GetDeploymentGroupRevisionAsync"
               ]
             },
             "GetPreview": {
@@ -116,6 +146,18 @@
               "methods": [
                 "ImportStatefile",
                 "ImportStatefileAsync"
+              ]
+            },
+            "ListDeploymentGroupRevisions": {
+              "methods": [
+                "ListDeploymentGroupRevisions",
+                "ListDeploymentGroupRevisionsAsync"
+              ]
+            },
+            "ListDeploymentGroups": {
+              "methods": [
+                "ListDeploymentGroups",
+                "ListDeploymentGroupsAsync"
               ]
             },
             "ListDeployments": {
@@ -166,6 +208,12 @@
                 "LockDeploymentAsync"
               ]
             },
+            "ProvisionDeploymentGroup": {
+              "methods": [
+                "ProvisionDeploymentGroup",
+                "ProvisionDeploymentGroupAsync"
+              ]
+            },
             "UnlockDeployment": {
               "methods": [
                 "UnlockDeployment",
@@ -182,6 +230,12 @@
               "methods": [
                 "UpdateDeployment",
                 "UpdateDeploymentAsync"
+              ]
+            },
+            "UpdateDeploymentGroup": {
+              "methods": [
+                "UpdateDeploymentGroup",
+                "UpdateDeploymentGroupAsync"
               ]
             }
           }

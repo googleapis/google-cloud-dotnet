@@ -2126,6 +2126,549 @@ namespace Google.Cloud.Config.V1
         public static bool operator !=(AutoMigrationConfigName a, AutoMigrationConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DeploymentGroup</c> resource.</summary>
+    public sealed partial class DeploymentGroupName : gax::IResourceName, sys::IEquatable<DeploymentGroupName>
+    {
+        /// <summary>The possible contents of <see cref="DeploymentGroupName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+            /// </summary>
+            ProjectLocationDeploymentGroup = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDeploymentGroup = new gax::PathTemplate("projects/{project}/locations/{location}/deploymentGroups/{deployment_group}");
+
+        /// <summary>Creates a <see cref="DeploymentGroupName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DeploymentGroupName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DeploymentGroupName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DeploymentGroupName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DeploymentGroupName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DeploymentGroupName"/> constructed from the provided ids.</returns>
+        public static DeploymentGroupName FromProjectLocationDeploymentGroup(string projectId, string locationId, string deploymentGroupId) =>
+            new DeploymentGroupName(ResourceNameType.ProjectLocationDeploymentGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), deploymentGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DeploymentGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DeploymentGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string deploymentGroupId) =>
+            FormatProjectLocationDeploymentGroup(projectId, locationId, deploymentGroupId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DeploymentGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DeploymentGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDeploymentGroup(string projectId, string locationId, string deploymentGroupId) =>
+            s_projectLocationDeploymentGroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DeploymentGroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="deploymentGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DeploymentGroupName"/> if successful.</returns>
+        public static DeploymentGroupName Parse(string deploymentGroupName) => Parse(deploymentGroupName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DeploymentGroupName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="deploymentGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DeploymentGroupName"/> if successful.</returns>
+        public static DeploymentGroupName Parse(string deploymentGroupName, bool allowUnparsed) =>
+            TryParse(deploymentGroupName, allowUnparsed, out DeploymentGroupName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DeploymentGroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="deploymentGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DeploymentGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string deploymentGroupName, out DeploymentGroupName result) =>
+            TryParse(deploymentGroupName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DeploymentGroupName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="deploymentGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DeploymentGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string deploymentGroupName, bool allowUnparsed, out DeploymentGroupName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(deploymentGroupName, nameof(deploymentGroupName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDeploymentGroup.TryParseName(deploymentGroupName, out resourceName))
+            {
+                result = FromProjectLocationDeploymentGroup(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(deploymentGroupName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DeploymentGroupName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string deploymentGroupId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DeploymentGroupId = deploymentGroupId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DeploymentGroupName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        public DeploymentGroupName(string projectId, string locationId, string deploymentGroupId) : this(ResourceNameType.ProjectLocationDeploymentGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), deploymentGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DeploymentGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string DeploymentGroupId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDeploymentGroup: return s_projectLocationDeploymentGroup.Expand(ProjectId, LocationId, DeploymentGroupId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DeploymentGroupName);
+
+        /// <inheritdoc/>
+        public bool Equals(DeploymentGroupName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(DeploymentGroupName a, DeploymentGroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(DeploymentGroupName a, DeploymentGroupName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>DeploymentGroupRevision</c> resource.</summary>
+    public sealed partial class DeploymentGroupRevisionName : gax::IResourceName, sys::IEquatable<DeploymentGroupRevisionName>
+    {
+        /// <summary>The possible contents of <see cref="DeploymentGroupRevisionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>.
+            /// </summary>
+            ProjectLocationDeploymentGroupRevision = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDeploymentGroupRevision = new gax::PathTemplate("projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}");
+
+        /// <summary>Creates a <see cref="DeploymentGroupRevisionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DeploymentGroupRevisionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DeploymentGroupRevisionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DeploymentGroupRevisionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DeploymentGroupRevisionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="DeploymentGroupRevisionName"/> constructed from the provided ids.
+        /// </returns>
+        public static DeploymentGroupRevisionName FromProjectLocationDeploymentGroupRevision(string projectId, string locationId, string deploymentGroupId, string revisionId) =>
+            new DeploymentGroupRevisionName(ResourceNameType.ProjectLocationDeploymentGroupRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), deploymentGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DeploymentGroupRevisionName"/> with
+        /// pattern <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DeploymentGroupRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string deploymentGroupId, string revisionId) =>
+            FormatProjectLocationDeploymentGroupRevision(projectId, locationId, deploymentGroupId, revisionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DeploymentGroupRevisionName"/> with
+        /// pattern <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DeploymentGroupRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDeploymentGroupRevision(string projectId, string locationId, string deploymentGroupId, string revisionId) =>
+            s_projectLocationDeploymentGroupRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)), gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DeploymentGroupRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="deploymentGroupRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DeploymentGroupRevisionName"/> if successful.</returns>
+        public static DeploymentGroupRevisionName Parse(string deploymentGroupRevisionName) =>
+            Parse(deploymentGroupRevisionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DeploymentGroupRevisionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="deploymentGroupRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DeploymentGroupRevisionName"/> if successful.</returns>
+        public static DeploymentGroupRevisionName Parse(string deploymentGroupRevisionName, bool allowUnparsed) =>
+            TryParse(deploymentGroupRevisionName, allowUnparsed, out DeploymentGroupRevisionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DeploymentGroupRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="deploymentGroupRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DeploymentGroupRevisionName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string deploymentGroupRevisionName, out DeploymentGroupRevisionName result) =>
+            TryParse(deploymentGroupRevisionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DeploymentGroupRevisionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="deploymentGroupRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DeploymentGroupRevisionName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string deploymentGroupRevisionName, bool allowUnparsed, out DeploymentGroupRevisionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(deploymentGroupRevisionName, nameof(deploymentGroupRevisionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDeploymentGroupRevision.TryParseName(deploymentGroupRevisionName, out resourceName))
+            {
+                result = FromProjectLocationDeploymentGroupRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(deploymentGroupRevisionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DeploymentGroupRevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string deploymentGroupId = null, string locationId = null, string projectId = null, string revisionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DeploymentGroupId = deploymentGroupId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RevisionId = revisionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DeploymentGroupRevisionName"/> class from the component parts of
+        /// pattern <c>projects/{project}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="deploymentGroupId">The <c>DeploymentGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        public DeploymentGroupRevisionName(string projectId, string locationId, string deploymentGroupId, string revisionId) : this(ResourceNameType.ProjectLocationDeploymentGroupRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), deploymentGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DeploymentGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string DeploymentGroupId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Revision</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RevisionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDeploymentGroupRevision: return s_projectLocationDeploymentGroupRevision.Expand(ProjectId, LocationId, DeploymentGroupId, RevisionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DeploymentGroupRevisionName);
+
+        /// <inheritdoc/>
+        public bool Equals(DeploymentGroupRevisionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(DeploymentGroupRevisionName a, DeploymentGroupRevisionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(DeploymentGroupRevisionName a, DeploymentGroupRevisionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ServiceAccount</c> resource.</summary>
     public sealed partial class ServiceAccountName : gax::IResourceName, sys::IEquatable<ServiceAccountName>
     {
@@ -2643,6 +3186,18 @@ namespace Google.Cloud.Config.V1
         }
     }
 
+    public partial class DeploymentSource
+    {
+        /// <summary>
+        /// <see cref="DeploymentName"/>-typed view over the <see cref="Deployment"/> resource name property.
+        /// </summary>
+        public DeploymentName DeploymentAsDeploymentName
+        {
+            get => string.IsNullOrEmpty(Deployment) ? null : DeploymentName.Parse(Deployment, allowUnparsed: true);
+            set => Deployment = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListDeploymentsRequest
     {
         /// <summary>
@@ -2700,6 +3255,30 @@ namespace Google.Cloud.Config.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDeploymentGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDeploymentGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::DeploymentGroupName DeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -3093,6 +3672,128 @@ namespace Google.Cloud.Config.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::AutoMigrationConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeploymentGroup
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::DeploymentGroupName DeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeploymentUnit
+    {
+        /// <summary>
+        /// <see cref="DeploymentName"/>-typed view over the <see cref="Deployment"/> resource name property.
+        /// </summary>
+        public DeploymentName DeploymentAsDeploymentName
+        {
+            get => string.IsNullOrEmpty(Deployment) ? null : DeploymentName.Parse(Deployment, allowUnparsed: true);
+            set => Deployment = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDeploymentGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::DeploymentGroupName DeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDeploymentGroupsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ProvisionDeploymentGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::DeploymentGroupName DeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeprovisionDeploymentGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::DeploymentGroupName DeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeploymentUnitProgress
+    {
+        /// <summary>
+        /// <see cref="DeploymentName"/>-typed view over the <see cref="Deployment"/> resource name property.
+        /// </summary>
+        public DeploymentName DeploymentAsDeploymentName
+        {
+            get => string.IsNullOrEmpty(Deployment) ? null : DeploymentName.Parse(Deployment, allowUnparsed: true);
+            set => Deployment = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeploymentGroupRevision
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupRevisionName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::DeploymentGroupRevisionName DeploymentGroupRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDeploymentGroupRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::DeploymentGroupRevisionName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::DeploymentGroupRevisionName DeploymentGroupRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::DeploymentGroupRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDeploymentGroupRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="DeploymentGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DeploymentGroupName ParentAsDeploymentGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DeploymentGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

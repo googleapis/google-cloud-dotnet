@@ -7889,6 +7889,2598 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_sync",
+      "title": "GetDeploymentGroupRequestObject",
+      "description": "Snippet for GetDeploymentGroup",
+      "file": "ConfigClient.GetDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroup",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_async",
+      "title": "GetDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for GetDeploymentGroupAsync",
+      "file": "ConfigClient.GetDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_sync_flattened",
+      "title": "GetDeploymentGroup",
+      "description": "Snippet for GetDeploymentGroup",
+      "file": "ConfigClient.GetDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroup",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_async_flattened",
+      "title": "GetDeploymentGroupAsync",
+      "description": "Snippet for GetDeploymentGroupAsync",
+      "file": "ConfigClient.GetDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_sync_flattened_resourceNames",
+      "title": "GetDeploymentGroupResourceNames",
+      "description": "Snippet for GetDeploymentGroup",
+      "file": "ConfigClient.GetDeploymentGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroup",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroup_async_flattened_resourceNames",
+      "title": "GetDeploymentGroupResourceNamesAsync",
+      "description": "Snippet for GetDeploymentGroupAsync",
+      "file": "ConfigClient.GetDeploymentGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_sync",
+      "title": "CreateDeploymentGroupRequestObject",
+      "description": "Snippet for CreateDeploymentGroup",
+      "file": "ConfigClient.CreateDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.CreateDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_async",
+      "title": "CreateDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for CreateDeploymentGroupAsync",
+      "file": "ConfigClient.CreateDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.CreateDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_sync_flattened",
+      "title": "CreateDeploymentGroup",
+      "description": "Snippet for CreateDeploymentGroup",
+      "file": "ConfigClient.CreateDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_async_flattened",
+      "title": "CreateDeploymentGroupAsync",
+      "description": "Snippet for CreateDeploymentGroupAsync",
+      "file": "ConfigClient.CreateDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_sync_flattened_resourceNames",
+      "title": "CreateDeploymentGroupResourceNames",
+      "description": "Snippet for CreateDeploymentGroup",
+      "file": "ConfigClient.CreateDeploymentGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreateDeploymentGroup_async_flattened_resourceNames",
+      "title": "CreateDeploymentGroupResourceNamesAsync",
+      "description": "Snippet for CreateDeploymentGroupAsync",
+      "file": "ConfigClient.CreateDeploymentGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreateDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.CreateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateDeploymentGroup_sync",
+      "title": "UpdateDeploymentGroupRequestObject",
+      "description": "Snippet for UpdateDeploymentGroup",
+      "file": "ConfigClient.UpdateDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.UpdateDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.UpdateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateDeploymentGroup_async",
+      "title": "UpdateDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for UpdateDeploymentGroupAsync",
+      "file": "ConfigClient.UpdateDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.UpdateDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.UpdateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateDeploymentGroup_sync_flattened",
+      "title": "UpdateDeploymentGroup",
+      "description": "Snippet for UpdateDeploymentGroup",
+      "file": "ConfigClient.UpdateDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.UpdateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_UpdateDeploymentGroup_async_flattened",
+      "title": "UpdateDeploymentGroupAsync",
+      "description": "Snippet for UpdateDeploymentGroupAsync",
+      "file": "ConfigClient.UpdateDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.UpdateDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroup",
+            "name": "deploymentGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.UpdateDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_sync",
+      "title": "DeleteDeploymentGroupRequestObject",
+      "description": "Snippet for DeleteDeploymentGroup",
+      "file": "ConfigClient.DeleteDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeleteDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_async",
+      "title": "DeleteDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for DeleteDeploymentGroupAsync",
+      "file": "ConfigClient.DeleteDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeleteDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_sync_flattened",
+      "title": "DeleteDeploymentGroup",
+      "description": "Snippet for DeleteDeploymentGroup",
+      "file": "ConfigClient.DeleteDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_async_flattened",
+      "title": "DeleteDeploymentGroupAsync",
+      "description": "Snippet for DeleteDeploymentGroupAsync",
+      "file": "ConfigClient.DeleteDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_sync_flattened_resourceNames",
+      "title": "DeleteDeploymentGroupResourceNames",
+      "description": "Snippet for DeleteDeploymentGroup",
+      "file": "ConfigClient.DeleteDeploymentGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeleteDeploymentGroup_async_flattened_resourceNames",
+      "title": "DeleteDeploymentGroupResourceNamesAsync",
+      "description": "Snippet for DeleteDeploymentGroupAsync",
+      "file": "ConfigClient.DeleteDeploymentGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeleteDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeleteDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_sync",
+      "title": "ListDeploymentGroupsRequestObject",
+      "description": "Snippet for ListDeploymentGroups",
+      "file": "ConfigClient.ListDeploymentGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroups",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListDeploymentGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_async",
+      "title": "ListDeploymentGroupsRequestObjectAsync",
+      "description": "Snippet for ListDeploymentGroupsAsync",
+      "file": "ConfigClient.ListDeploymentGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListDeploymentGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_sync_flattened",
+      "title": "ListDeploymentGroups",
+      "description": "Snippet for ListDeploymentGroups",
+      "file": "ConfigClient.ListDeploymentGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroups",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_async_flattened",
+      "title": "ListDeploymentGroupsAsync",
+      "description": "Snippet for ListDeploymentGroupsAsync",
+      "file": "ConfigClient.ListDeploymentGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_sync_flattened_resourceNames",
+      "title": "ListDeploymentGroupsResourceNames",
+      "description": "Snippet for ListDeploymentGroups",
+      "file": "ConfigClient.ListDeploymentGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroups",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroups_async_flattened_resourceNames",
+      "title": "ListDeploymentGroupsResourceNamesAsync",
+      "description": "Snippet for ListDeploymentGroupsAsync",
+      "file": "ConfigClient.ListDeploymentGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupsResponse, Google.Cloud.Config.V1.DeploymentGroup>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroups",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroups",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_sync",
+      "title": "ProvisionDeploymentGroupRequestObject",
+      "description": "Snippet for ProvisionDeploymentGroup",
+      "file": "ConfigClient.ProvisionDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_async",
+      "title": "ProvisionDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for ProvisionDeploymentGroupAsync",
+      "file": "ConfigClient.ProvisionDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ProvisionDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_sync_flattened",
+      "title": "ProvisionDeploymentGroup",
+      "description": "Snippet for ProvisionDeploymentGroup",
+      "file": "ConfigClient.ProvisionDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_async_flattened",
+      "title": "ProvisionDeploymentGroupAsync",
+      "description": "Snippet for ProvisionDeploymentGroupAsync",
+      "file": "ConfigClient.ProvisionDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_sync_flattened_resourceNames",
+      "title": "ProvisionDeploymentGroupResourceNames",
+      "description": "Snippet for ProvisionDeploymentGroup",
+      "file": "ConfigClient.ProvisionDeploymentGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ProvisionDeploymentGroup_async_flattened_resourceNames",
+      "title": "ProvisionDeploymentGroupResourceNamesAsync",
+      "description": "Snippet for ProvisionDeploymentGroupAsync",
+      "file": "ConfigClient.ProvisionDeploymentGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ProvisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ProvisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.ProvisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_sync",
+      "title": "DeprovisionDeploymentGroupRequestObject",
+      "description": "Snippet for DeprovisionDeploymentGroup",
+      "file": "ConfigClient.DeprovisionDeploymentGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_async",
+      "title": "DeprovisionDeploymentGroupRequestObjectAsync",
+      "description": "Snippet for DeprovisionDeploymentGroupAsync",
+      "file": "ConfigClient.DeprovisionDeploymentGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeprovisionDeploymentGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_sync_flattened",
+      "title": "DeprovisionDeploymentGroup",
+      "description": "Snippet for DeprovisionDeploymentGroup",
+      "file": "ConfigClient.DeprovisionDeploymentGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_async_flattened",
+      "title": "DeprovisionDeploymentGroupAsync",
+      "description": "Snippet for DeprovisionDeploymentGroupAsync",
+      "file": "ConfigClient.DeprovisionDeploymentGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_sync_flattened_resourceNames",
+      "title": "DeprovisionDeploymentGroupResourceNames",
+      "description": "Snippet for DeprovisionDeploymentGroup",
+      "file": "ConfigClient.DeprovisionDeploymentGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroup",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeprovisionDeploymentGroup_async_flattened_resourceNames",
+      "title": "DeprovisionDeploymentGroupResourceNamesAsync",
+      "description": "Snippet for DeprovisionDeploymentGroupAsync",
+      "file": "ConfigClient.DeprovisionDeploymentGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeprovisionDeploymentGroupAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeprovisionDeploymentGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.DeploymentGroup, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeprovisionDeploymentGroup",
+          "fullName": "google.cloud.config.v1.Config.DeprovisionDeploymentGroup",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_sync",
+      "title": "GetDeploymentGroupRevisionRequestObject",
+      "description": "Snippet for GetDeploymentGroupRevision",
+      "file": "ConfigClient.GetDeploymentGroupRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevision",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroupRevision",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_async",
+      "title": "GetDeploymentGroupRevisionRequestObjectAsync",
+      "description": "Snippet for GetDeploymentGroupRevisionAsync",
+      "file": "ConfigClient.GetDeploymentGroupRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevisionAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetDeploymentGroupRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_sync_flattened",
+      "title": "GetDeploymentGroupRevision",
+      "description": "Snippet for GetDeploymentGroupRevision",
+      "file": "ConfigClient.GetDeploymentGroupRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevision",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroupRevision",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_async_flattened",
+      "title": "GetDeploymentGroupRevisionAsync",
+      "description": "Snippet for GetDeploymentGroupRevisionAsync",
+      "file": "ConfigClient.GetDeploymentGroupRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevisionAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_sync_flattened_resourceNames",
+      "title": "GetDeploymentGroupRevisionResourceNames",
+      "description": "Snippet for GetDeploymentGroupRevision",
+      "file": "ConfigClient.GetDeploymentGroupRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevision",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.DeploymentGroupRevision",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetDeploymentGroupRevision_async_flattened_resourceNames",
+      "title": "GetDeploymentGroupRevisionResourceNamesAsync",
+      "description": "Snippet for GetDeploymentGroupRevisionAsync",
+      "file": "ConfigClient.GetDeploymentGroupRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentGroupRevisionAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetDeploymentGroupRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetDeploymentGroupRevision",
+          "fullName": "google.cloud.config.v1.Config.GetDeploymentGroupRevision",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_sync",
+      "title": "ListDeploymentGroupRevisionsRequestObject",
+      "description": "Snippet for ListDeploymentGroupRevisions",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisions",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_async",
+      "title": "ListDeploymentGroupRevisionsRequestObjectAsync",
+      "description": "Snippet for ListDeploymentGroupRevisionsAsync",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisionsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListDeploymentGroupRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_sync_flattened",
+      "title": "ListDeploymentGroupRevisions",
+      "description": "Snippet for ListDeploymentGroupRevisions",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisions",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_async_flattened",
+      "title": "ListDeploymentGroupRevisionsAsync",
+      "description": "Snippet for ListDeploymentGroupRevisionsAsync",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisionsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_sync_flattened_resourceNames",
+      "title": "ListDeploymentGroupRevisionsResourceNames",
+      "description": "Snippet for ListDeploymentGroupRevisions",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisions",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListDeploymentGroupRevisions_async_flattened_resourceNames",
+      "title": "ListDeploymentGroupRevisionsResourceNamesAsync",
+      "description": "Snippet for ListDeploymentGroupRevisionsAsync",
+      "file": "ConfigClient.ListDeploymentGroupRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentGroupRevisionsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListDeploymentGroupRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeploymentGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListDeploymentGroupRevisionsResponse, Google.Cloud.Config.V1.DeploymentGroupRevision>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListDeploymentGroupRevisions",
+          "fullName": "google.cloud.config.v1.Config.ListDeploymentGroupRevisions",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

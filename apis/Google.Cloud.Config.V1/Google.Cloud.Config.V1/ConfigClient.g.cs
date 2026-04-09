@@ -87,6 +87,20 @@ namespace Google.Cloud.Config.V1
             GetAutoMigrationConfigSettings = existing.GetAutoMigrationConfigSettings;
             UpdateAutoMigrationConfigSettings = existing.UpdateAutoMigrationConfigSettings;
             UpdateAutoMigrationConfigOperationsSettings = existing.UpdateAutoMigrationConfigOperationsSettings.Clone();
+            GetDeploymentGroupSettings = existing.GetDeploymentGroupSettings;
+            CreateDeploymentGroupSettings = existing.CreateDeploymentGroupSettings;
+            CreateDeploymentGroupOperationsSettings = existing.CreateDeploymentGroupOperationsSettings.Clone();
+            UpdateDeploymentGroupSettings = existing.UpdateDeploymentGroupSettings;
+            UpdateDeploymentGroupOperationsSettings = existing.UpdateDeploymentGroupOperationsSettings.Clone();
+            DeleteDeploymentGroupSettings = existing.DeleteDeploymentGroupSettings;
+            DeleteDeploymentGroupOperationsSettings = existing.DeleteDeploymentGroupOperationsSettings.Clone();
+            ListDeploymentGroupsSettings = existing.ListDeploymentGroupsSettings;
+            ProvisionDeploymentGroupSettings = existing.ProvisionDeploymentGroupSettings;
+            ProvisionDeploymentGroupOperationsSettings = existing.ProvisionDeploymentGroupOperationsSettings.Clone();
+            DeprovisionDeploymentGroupSettings = existing.DeprovisionDeploymentGroupSettings;
+            DeprovisionDeploymentGroupOperationsSettings = existing.DeprovisionDeploymentGroupOperationsSettings.Clone();
+            GetDeploymentGroupRevisionSettings = existing.GetDeploymentGroupRevisionSettings;
+            ListDeploymentGroupRevisionsSettings = existing.ListDeploymentGroupRevisionsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -759,6 +773,258 @@ namespace Google.Cloud.Config.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetDeploymentGroup</c> and <c>ConfigClient.GetDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.CreateDeploymentGroup</c> and <c>ConfigClient.CreateDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.CreateDeploymentGroup</c> and
+        /// <c>ConfigClient.CreateDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDeploymentGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.UpdateDeploymentGroup</c> and <c>ConfigClient.UpdateDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.UpdateDeploymentGroup</c> and
+        /// <c>ConfigClient.UpdateDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDeploymentGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.DeleteDeploymentGroup</c> and <c>ConfigClient.DeleteDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.DeleteDeploymentGroup</c> and
+        /// <c>ConfigClient.DeleteDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDeploymentGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ListDeploymentGroups</c> and <c>ConfigClient.ListDeploymentGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDeploymentGroupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ProvisionDeploymentGroup</c> and <c>ConfigClient.ProvisionDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ProvisionDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.ProvisionDeploymentGroup</c> and
+        /// <c>ConfigClient.ProvisionDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ProvisionDeploymentGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.DeprovisionDeploymentGroup</c> and <c>ConfigClient.DeprovisionDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeprovisionDeploymentGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.DeprovisionDeploymentGroup</c> and
+        /// <c>ConfigClient.DeprovisionDeploymentGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeprovisionDeploymentGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetDeploymentGroupRevision</c> and <c>ConfigClient.GetDeploymentGroupRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDeploymentGroupRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ListDeploymentGroupRevisions</c> and <c>ConfigClient.ListDeploymentGroupRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDeploymentGroupRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -4569,6 +4835,1495 @@ namespace Google.Cloud.Config.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<AutoMigrationConfig, OperationMetadata>> UpdateAutoMigrationConfigAsync(AutoMigrationConfig autoMigrationConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateAutoMigrationConfigAsync(autoMigrationConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroup GetDeploymentGroup(GetDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(GetDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(GetDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroup GetDeploymentGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroup(new GetDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupAsync(new GetDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroup GetDeploymentGroup(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroup(new GetDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupAsync(new GetDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroup> GetDeploymentGroupAsync(DeploymentGroupName name, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> CreateDeploymentGroup(CreateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(CreateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(CreateDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            CreateDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDeploymentGroup</c>.</summary>
+        public virtual lro::OperationsClient CreateDeploymentGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDeploymentGroup</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> PollOnceCreateDeploymentGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> PollOnceCreateDeploymentGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> CreateDeploymentGroup(string parent, DeploymentGroup deploymentGroup, string deploymentGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeploymentGroup(new CreateDeploymentGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DeploymentGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)),
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(string parent, DeploymentGroup deploymentGroup, string deploymentGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeploymentGroupAsync(new CreateDeploymentGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DeploymentGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)),
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(string parent, DeploymentGroup deploymentGroup, string deploymentGroupId, st::CancellationToken cancellationToken) =>
+            CreateDeploymentGroupAsync(parent, deploymentGroup, deploymentGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> CreateDeploymentGroup(gagr::LocationName parent, DeploymentGroup deploymentGroup, string deploymentGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeploymentGroup(new CreateDeploymentGroupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DeploymentGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)),
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(gagr::LocationName parent, DeploymentGroup deploymentGroup, string deploymentGroupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDeploymentGroupAsync(new CreateDeploymentGroupRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DeploymentGroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(deploymentGroupId, nameof(deploymentGroupId)),
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Deployment Group is created. The
+        /// parent value is in the format: 'projects/{project_id}/locations/{location}'
+        /// </param>
+        /// <param name="deploymentGroup">
+        /// Required. [Deployment Group][] resource to create
+        /// </param>
+        /// <param name="deploymentGroupId">
+        /// Required. The deployment group ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(gagr::LocationName parent, DeploymentGroup deploymentGroup, string deploymentGroupId, st::CancellationToken cancellationToken) =>
+            CreateDeploymentGroupAsync(parent, deploymentGroup, deploymentGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> UpdateDeploymentGroup(UpdateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> UpdateDeploymentGroupAsync(UpdateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> UpdateDeploymentGroupAsync(UpdateDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDeploymentGroup</c>.</summary>
+        public virtual lro::OperationsClient UpdateDeploymentGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDeploymentGroup</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> PollOnceUpdateDeploymentGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> PollOnceUpdateDeploymentGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="deploymentGroup">
+        /// Required. [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] to
+        /// update.
+        /// 
+        /// The deployment group's `name` field is used to identify the resource to be
+        /// updated. Format:
+        /// `projects/{project}/locations/{location}/deploymentGroups/{deployment_group_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be overwritten in the
+        /// Deployment Group resource by the update.
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> UpdateDeploymentGroup(DeploymentGroup deploymentGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDeploymentGroup(new UpdateDeploymentGroupRequest
+            {
+                UpdateMask = updateMask,
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="deploymentGroup">
+        /// Required. [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] to
+        /// update.
+        /// 
+        /// The deployment group's `name` field is used to identify the resource to be
+        /// updated. Format:
+        /// `projects/{project}/locations/{location}/deploymentGroups/{deployment_group_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be overwritten in the
+        /// Deployment Group resource by the update.
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> UpdateDeploymentGroupAsync(DeploymentGroup deploymentGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDeploymentGroupAsync(new UpdateDeploymentGroupRequest
+            {
+                UpdateMask = updateMask,
+                DeploymentGroup = gax::GaxPreconditions.CheckNotNull(deploymentGroup, nameof(deploymentGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="deploymentGroup">
+        /// Required. [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] to
+        /// update.
+        /// 
+        /// The deployment group's `name` field is used to identify the resource to be
+        /// updated. Format:
+        /// `projects/{project}/locations/{location}/deploymentGroups/{deployment_group_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be overwritten in the
+        /// Deployment Group resource by the update.
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> UpdateDeploymentGroupAsync(DeploymentGroup deploymentGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDeploymentGroupAsync(deploymentGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeleteDeploymentGroup(DeleteDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(DeleteDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(DeleteDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDeploymentGroup</c>.</summary>
+        public virtual lro::OperationsClient DeleteDeploymentGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDeploymentGroup</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> PollOnceDeleteDeploymentGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> PollOnceDeleteDeploymentGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeleteDeploymentGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeploymentGroup(new DeleteDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeploymentGroupAsync(new DeleteDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeleteDeploymentGroup(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeploymentGroup(new DeleteDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeploymentGroupAsync(new DeleteDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of DeploymentGroup in the format
+        /// projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(DeploymentGroupName name, st::CancellationToken cancellationToken) =>
+            DeleteDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroups(ListDeploymentGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroupsAsync(ListDeploymentGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment groups.
+        /// Format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment groups.
+        /// Format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment groups.
+        /// Format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment groups.
+        /// Format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupsRequest request = new ListDeploymentGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> ProvisionDeploymentGroup(ProvisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(ProvisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(ProvisionDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            ProvisionDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ProvisionDeploymentGroup</c>.</summary>
+        public virtual lro::OperationsClient ProvisionDeploymentGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ProvisionDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> PollOnceProvisionDeploymentGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ProvisionDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ProvisionDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> PollOnceProvisionDeploymentGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ProvisionDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> ProvisionDeploymentGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ProvisionDeploymentGroup(new ProvisionDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ProvisionDeploymentGroupAsync(new ProvisionDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            ProvisionDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> ProvisionDeploymentGroup(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            ProvisionDeploymentGroup(new ProvisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            ProvisionDeploymentGroupAsync(new ProvisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to provision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(DeploymentGroupName name, st::CancellationToken cancellationToken) =>
+            ProvisionDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeprovisionDeploymentGroup(DeprovisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(DeprovisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(DeprovisionDeploymentGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeprovisionDeploymentGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeprovisionDeploymentGroup</c>.</summary>
+        public virtual lro::OperationsClient DeprovisionDeploymentGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeprovisionDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> PollOnceDeprovisionDeploymentGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeprovisionDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeprovisionDeploymentGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> PollOnceDeprovisionDeploymentGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeploymentGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeprovisionDeploymentGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeprovisionDeploymentGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeprovisionDeploymentGroup(new DeprovisionDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeprovisionDeploymentGroupAsync(new DeprovisionDeploymentGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeprovisionDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeploymentGroup, OperationMetadata> DeprovisionDeploymentGroup(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeprovisionDeploymentGroup(new DeprovisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(DeploymentGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeprovisionDeploymentGroupAsync(new DeprovisionDeploymentGroupRequest
+            {
+                DeploymentGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group to deprovision.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(DeploymentGroupName name, st::CancellationToken cancellationToken) =>
+            DeprovisionDeploymentGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroupRevision GetDeploymentGroupRevision(GetDeploymentGroupRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(GetDeploymentGroupRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(GetDeploymentGroupRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroupRevision GetDeploymentGroupRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupRevision(new GetDeploymentGroupRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupRevisionAsync(new GetDeploymentGroupRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeploymentGroupRevision GetDeploymentGroupRevision(DeploymentGroupRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupRevision(new GetDeploymentGroupRevisionRequest
+            {
+                DeploymentGroupRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(DeploymentGroupRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDeploymentGroupRevisionAsync(new GetDeploymentGroupRevisionRequest
+            {
+                DeploymentGroupRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the deployment group revision to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(DeploymentGroupRevisionName name, st::CancellationToken cancellationToken) =>
+            GetDeploymentGroupRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisions(ListDeploymentGroupRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisionsAsync(ListDeploymentGroupRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment group
+        /// revisions. Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment group
+        /// revisions. Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment group
+        /// revisions. Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisions(DeploymentGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                ParentAsDeploymentGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of deployment group
+        /// revisions. Format:
+        /// 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisionsAsync(DeploymentGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentGroupRevisionsRequest request = new ListDeploymentGroupRevisionsRequest
+            {
+                ParentAsDeploymentGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentGroupRevisionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>Config client wrapper implementation, for convenient use.</summary>
@@ -4636,6 +6391,24 @@ namespace Google.Cloud.Config.V1
 
         private readonly gaxgrpc::ApiCall<UpdateAutoMigrationConfigRequest, lro::Operation> _callUpdateAutoMigrationConfig;
 
+        private readonly gaxgrpc::ApiCall<GetDeploymentGroupRequest, DeploymentGroup> _callGetDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<CreateDeploymentGroupRequest, lro::Operation> _callCreateDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<UpdateDeploymentGroupRequest, lro::Operation> _callUpdateDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<DeleteDeploymentGroupRequest, lro::Operation> _callDeleteDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<ListDeploymentGroupsRequest, ListDeploymentGroupsResponse> _callListDeploymentGroups;
+
+        private readonly gaxgrpc::ApiCall<ProvisionDeploymentGroupRequest, lro::Operation> _callProvisionDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<DeprovisionDeploymentGroupRequest, lro::Operation> _callDeprovisionDeploymentGroup;
+
+        private readonly gaxgrpc::ApiCall<GetDeploymentGroupRevisionRequest, DeploymentGroupRevision> _callGetDeploymentGroupRevision;
+
+        private readonly gaxgrpc::ApiCall<ListDeploymentGroupRevisionsRequest, ListDeploymentGroupRevisionsResponse> _callListDeploymentGroupRevisions;
+
         /// <summary>
         /// Constructs a client wrapper for the Config service, with the specified gRPC client and settings.
         /// </summary>
@@ -4659,6 +6432,11 @@ namespace Google.Cloud.Config.V1
             CreatePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePreviewOperationsSettings, logger);
             DeletePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePreviewOperationsSettings, logger);
             UpdateAutoMigrationConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAutoMigrationConfigOperationsSettings, logger);
+            CreateDeploymentGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeploymentGroupOperationsSettings, logger);
+            UpdateDeploymentGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDeploymentGroupOperationsSettings, logger);
+            DeleteDeploymentGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeploymentGroupOperationsSettings, logger);
+            ProvisionDeploymentGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ProvisionDeploymentGroupOperationsSettings, logger);
+            DeprovisionDeploymentGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeprovisionDeploymentGroupOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListDeployments = clientHelper.BuildApiCall<ListDeploymentsRequest, ListDeploymentsResponse>("ListDeployments", grpcClient.ListDeploymentsAsync, grpcClient.ListDeployments, effectiveSettings.ListDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4748,6 +6526,33 @@ namespace Google.Cloud.Config.V1
             _callUpdateAutoMigrationConfig = clientHelper.BuildApiCall<UpdateAutoMigrationConfigRequest, lro::Operation>("UpdateAutoMigrationConfig", grpcClient.UpdateAutoMigrationConfigAsync, grpcClient.UpdateAutoMigrationConfig, effectiveSettings.UpdateAutoMigrationConfigSettings).WithGoogleRequestParam("auto_migration_config.name", request => request.AutoMigrationConfig?.Name);
             Modify_ApiCall(ref _callUpdateAutoMigrationConfig);
             Modify_UpdateAutoMigrationConfigApiCall(ref _callUpdateAutoMigrationConfig);
+            _callGetDeploymentGroup = clientHelper.BuildApiCall<GetDeploymentGroupRequest, DeploymentGroup>("GetDeploymentGroup", grpcClient.GetDeploymentGroupAsync, grpcClient.GetDeploymentGroup, effectiveSettings.GetDeploymentGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDeploymentGroup);
+            Modify_GetDeploymentGroupApiCall(ref _callGetDeploymentGroup);
+            _callCreateDeploymentGroup = clientHelper.BuildApiCall<CreateDeploymentGroupRequest, lro::Operation>("CreateDeploymentGroup", grpcClient.CreateDeploymentGroupAsync, grpcClient.CreateDeploymentGroup, effectiveSettings.CreateDeploymentGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDeploymentGroup);
+            Modify_CreateDeploymentGroupApiCall(ref _callCreateDeploymentGroup);
+            _callUpdateDeploymentGroup = clientHelper.BuildApiCall<UpdateDeploymentGroupRequest, lro::Operation>("UpdateDeploymentGroup", grpcClient.UpdateDeploymentGroupAsync, grpcClient.UpdateDeploymentGroup, effectiveSettings.UpdateDeploymentGroupSettings).WithGoogleRequestParam("deployment_group.name", request => request.DeploymentGroup?.Name);
+            Modify_ApiCall(ref _callUpdateDeploymentGroup);
+            Modify_UpdateDeploymentGroupApiCall(ref _callUpdateDeploymentGroup);
+            _callDeleteDeploymentGroup = clientHelper.BuildApiCall<DeleteDeploymentGroupRequest, lro::Operation>("DeleteDeploymentGroup", grpcClient.DeleteDeploymentGroupAsync, grpcClient.DeleteDeploymentGroup, effectiveSettings.DeleteDeploymentGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDeploymentGroup);
+            Modify_DeleteDeploymentGroupApiCall(ref _callDeleteDeploymentGroup);
+            _callListDeploymentGroups = clientHelper.BuildApiCall<ListDeploymentGroupsRequest, ListDeploymentGroupsResponse>("ListDeploymentGroups", grpcClient.ListDeploymentGroupsAsync, grpcClient.ListDeploymentGroups, effectiveSettings.ListDeploymentGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDeploymentGroups);
+            Modify_ListDeploymentGroupsApiCall(ref _callListDeploymentGroups);
+            _callProvisionDeploymentGroup = clientHelper.BuildApiCall<ProvisionDeploymentGroupRequest, lro::Operation>("ProvisionDeploymentGroup", grpcClient.ProvisionDeploymentGroupAsync, grpcClient.ProvisionDeploymentGroup, effectiveSettings.ProvisionDeploymentGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callProvisionDeploymentGroup);
+            Modify_ProvisionDeploymentGroupApiCall(ref _callProvisionDeploymentGroup);
+            _callDeprovisionDeploymentGroup = clientHelper.BuildApiCall<DeprovisionDeploymentGroupRequest, lro::Operation>("DeprovisionDeploymentGroup", grpcClient.DeprovisionDeploymentGroupAsync, grpcClient.DeprovisionDeploymentGroup, effectiveSettings.DeprovisionDeploymentGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeprovisionDeploymentGroup);
+            Modify_DeprovisionDeploymentGroupApiCall(ref _callDeprovisionDeploymentGroup);
+            _callGetDeploymentGroupRevision = clientHelper.BuildApiCall<GetDeploymentGroupRevisionRequest, DeploymentGroupRevision>("GetDeploymentGroupRevision", grpcClient.GetDeploymentGroupRevisionAsync, grpcClient.GetDeploymentGroupRevision, effectiveSettings.GetDeploymentGroupRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDeploymentGroupRevision);
+            Modify_GetDeploymentGroupRevisionApiCall(ref _callGetDeploymentGroupRevision);
+            _callListDeploymentGroupRevisions = clientHelper.BuildApiCall<ListDeploymentGroupRevisionsRequest, ListDeploymentGroupRevisionsResponse>("ListDeploymentGroupRevisions", grpcClient.ListDeploymentGroupRevisionsAsync, grpcClient.ListDeploymentGroupRevisions, effectiveSettings.ListDeploymentGroupRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDeploymentGroupRevisions);
+            Modify_ListDeploymentGroupRevisionsApiCall(ref _callListDeploymentGroupRevisions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4810,6 +6615,24 @@ namespace Google.Cloud.Config.V1
         partial void Modify_GetAutoMigrationConfigApiCall(ref gaxgrpc::ApiCall<GetAutoMigrationConfigRequest, AutoMigrationConfig> call);
 
         partial void Modify_UpdateAutoMigrationConfigApiCall(ref gaxgrpc::ApiCall<UpdateAutoMigrationConfigRequest, lro::Operation> call);
+
+        partial void Modify_GetDeploymentGroupApiCall(ref gaxgrpc::ApiCall<GetDeploymentGroupRequest, DeploymentGroup> call);
+
+        partial void Modify_CreateDeploymentGroupApiCall(ref gaxgrpc::ApiCall<CreateDeploymentGroupRequest, lro::Operation> call);
+
+        partial void Modify_UpdateDeploymentGroupApiCall(ref gaxgrpc::ApiCall<UpdateDeploymentGroupRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDeploymentGroupApiCall(ref gaxgrpc::ApiCall<DeleteDeploymentGroupRequest, lro::Operation> call);
+
+        partial void Modify_ListDeploymentGroupsApiCall(ref gaxgrpc::ApiCall<ListDeploymentGroupsRequest, ListDeploymentGroupsResponse> call);
+
+        partial void Modify_ProvisionDeploymentGroupApiCall(ref gaxgrpc::ApiCall<ProvisionDeploymentGroupRequest, lro::Operation> call);
+
+        partial void Modify_DeprovisionDeploymentGroupApiCall(ref gaxgrpc::ApiCall<DeprovisionDeploymentGroupRequest, lro::Operation> call);
+
+        partial void Modify_GetDeploymentGroupRevisionApiCall(ref gaxgrpc::ApiCall<GetDeploymentGroupRevisionRequest, DeploymentGroupRevision> call);
+
+        partial void Modify_ListDeploymentGroupRevisionsApiCall(ref gaxgrpc::ApiCall<ListDeploymentGroupRevisionsRequest, ListDeploymentGroupRevisionsResponse> call);
 
         partial void OnConstruction(Config.ConfigClient grpcClient, ConfigSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4879,6 +6702,24 @@ namespace Google.Cloud.Config.V1
         partial void Modify_GetAutoMigrationConfigRequest(ref GetAutoMigrationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAutoMigrationConfigRequest(ref UpdateAutoMigrationConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDeploymentGroupRequest(ref GetDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDeploymentGroupRequest(ref CreateDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDeploymentGroupRequest(ref UpdateDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDeploymentGroupRequest(ref DeleteDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDeploymentGroupsRequest(ref ListDeploymentGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ProvisionDeploymentGroupRequest(ref ProvisionDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeprovisionDeploymentGroupRequest(ref DeprovisionDeploymentGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDeploymentGroupRevisionRequest(ref GetDeploymentGroupRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDeploymentGroupRevisionsRequest(ref ListDeploymentGroupRevisionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -5611,6 +7452,283 @@ namespace Google.Cloud.Config.V1
             Modify_UpdateAutoMigrationConfigRequest(ref request, ref callSettings);
             return new lro::Operation<AutoMigrationConfig, OperationMetadata>(await _callUpdateAutoMigrationConfig.Async(request, callSettings).ConfigureAwait(false), UpdateAutoMigrationConfigOperationsClient);
         }
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DeploymentGroup GetDeploymentGroup(GetDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentGroupRequest(ref request, ref callSettings);
+            return _callGetDeploymentGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a DeploymentGroup for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DeploymentGroup> GetDeploymentGroupAsync(GetDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentGroupRequest(ref request, ref callSettings);
+            return _callGetDeploymentGroup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDeploymentGroup</c>.</summary>
+        public override lro::OperationsClient CreateDeploymentGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentGroup, OperationMetadata> CreateDeploymentGroup(CreateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(_callCreateDeploymentGroup.Sync(request, callSettings), CreateDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// The newly created DeploymentGroup will be in the `CREATING` state
+        /// and can be retrieved via Get and List calls.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> CreateDeploymentGroupAsync(CreateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(await _callCreateDeploymentGroup.Async(request, callSettings).ConfigureAwait(false), CreateDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDeploymentGroup</c>.</summary>
+        public override lro::OperationsClient UpdateDeploymentGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentGroup, OperationMetadata> UpdateDeploymentGroup(UpdateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(_callUpdateDeploymentGroup.Sync(request, callSettings), UpdateDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> UpdateDeploymentGroupAsync(UpdateDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(await _callUpdateDeploymentGroup.Async(request, callSettings).ConfigureAwait(false), UpdateDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDeploymentGroup</c>.</summary>
+        public override lro::OperationsClient DeleteDeploymentGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentGroup, OperationMetadata> DeleteDeploymentGroup(DeleteDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(_callDeleteDeploymentGroup.Sync(request, callSettings), DeleteDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a [DeploymentGroup][google.cloud.config.v1.DeploymentGroup]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeleteDeploymentGroupAsync(DeleteDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(await _callDeleteDeploymentGroup.Async(request, callSettings).ConfigureAwait(false), DeleteDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroups(ListDeploymentGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDeploymentGroupsRequest, ListDeploymentGroupsResponse, DeploymentGroup>(_callListDeploymentGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// List DeploymentGroups for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDeploymentGroupsResponse, DeploymentGroup> ListDeploymentGroupsAsync(ListDeploymentGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDeploymentGroupsRequest, ListDeploymentGroupsResponse, DeploymentGroup>(_callListDeploymentGroups, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ProvisionDeploymentGroup</c>.</summary>
+        public override lro::OperationsClient ProvisionDeploymentGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentGroup, OperationMetadata> ProvisionDeploymentGroup(ProvisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ProvisionDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(_callProvisionDeploymentGroup.Sync(request, callSettings), ProvisionDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Provisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> ProvisionDeploymentGroupAsync(ProvisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ProvisionDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(await _callProvisionDeploymentGroup.Async(request, callSettings).ConfigureAwait(false), ProvisionDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeprovisionDeploymentGroup</c>.</summary>
+        public override lro::OperationsClient DeprovisionDeploymentGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeploymentGroup, OperationMetadata> DeprovisionDeploymentGroup(DeprovisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeprovisionDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(_callDeprovisionDeploymentGroup.Sync(request, callSettings), DeprovisionDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deprovisions a deployment group.
+        /// 
+        /// NOTE: As a first step of this operation, Infra Manager will
+        /// automatically delete any Deployments that were part of the
+        /// *last successful*
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]
+        /// but are *no longer* included in the *current*
+        /// [DeploymentGroup][google.cloud.config.v1.DeploymentGroup] definition (e.g.,
+        /// following an `UpdateDeploymentGroup` call), along with their actuated
+        /// resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeploymentGroup, OperationMetadata>> DeprovisionDeploymentGroupAsync(DeprovisionDeploymentGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeprovisionDeploymentGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<DeploymentGroup, OperationMetadata>(await _callDeprovisionDeploymentGroup.Async(request, callSettings).ConfigureAwait(false), DeprovisionDeploymentGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DeploymentGroupRevision GetDeploymentGroupRevision(GetDeploymentGroupRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentGroupRevisionRequest(ref request, ref callSettings);
+            return _callGetDeploymentGroupRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DeploymentGroupRevision> GetDeploymentGroupRevisionAsync(GetDeploymentGroupRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDeploymentGroupRevisionRequest(ref request, ref callSettings);
+            return _callGetDeploymentGroupRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisions(ListDeploymentGroupRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentGroupRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDeploymentGroupRevisionsRequest, ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision>(_callListDeploymentGroupRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists
+        /// [DeploymentGroupRevision][google.cloud.config.v1.DeploymentGroupRevision]s
+        /// in a given [DeploymentGroup][google.cloud.config.v1.DeploymentGroup].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DeploymentGroupRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision> ListDeploymentGroupRevisionsAsync(ListDeploymentGroupRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDeploymentGroupRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDeploymentGroupRevisionsRequest, ListDeploymentGroupRevisionsResponse, DeploymentGroupRevision>(_callListDeploymentGroupRevisions, request, callSettings);
+        }
     }
 
     public partial class ListDeploymentsRequest : gaxgrpc::IPageRequest
@@ -5638,6 +7756,14 @@ namespace Google.Cloud.Config.V1
     }
 
     public partial class ListResourceDriftsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDeploymentGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDeploymentGroupRevisionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5693,6 +7819,22 @@ namespace Google.Cloud.Config.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ResourceDrift> GetEnumerator() => ResourceDrifts.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDeploymentGroupsResponse : gaxgrpc::IPageResponse<DeploymentGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DeploymentGroup> GetEnumerator() => DeploymentGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDeploymentGroupRevisionsResponse : gaxgrpc::IPageResponse<DeploymentGroupRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DeploymentGroupRevision> GetEnumerator() => DeploymentGroupRevisions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
