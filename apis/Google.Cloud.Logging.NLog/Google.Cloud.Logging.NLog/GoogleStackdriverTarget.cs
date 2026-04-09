@@ -64,8 +64,6 @@ namespace Google.Cloud.Logging.NLog
         private long _pendingTaskCount;
         private CancellationTokenSource _cancelTokenSource;
         private Func<object, Value> _jsonConvertFunction;
-        private readonly Func<Task, object, Task> _writeLogEntriesBegin;
-        private readonly Action<Task, object> _writeLogEntriesCompleted;
 
         /// <summary>
         /// Construct a Google Cloud loggin target.
@@ -81,8 +79,6 @@ namespace Google.Cloud.Logging.NLog
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;
             _platform = platform;
-            _writeLogEntriesBegin = WriteLogEntriesBegin;
-            _writeLogEntriesCompleted = WriteLogEntriesCompleted;
         }
 
         /// <summary>
@@ -426,17 +422,7 @@ namespace Google.Cloud.Logging.NLog
                         InternalLogger.Info("GoogleStackdriver(Name={0}): Throttle timeout but {1} tasks are still pending", Name, _pendingTaskCount);
                     }
                 }
-
-                if (withinTaskLimit && _prevTask != null)
-                {
-                    _prevTask = _prevTask.ContinueWith(_writeLogEntriesBegin, logEntries, _cancelTokenSource.Token);
-                }
-                else
-                {
-                    _prevTask = WriteLogEntriesBegin(null, logEntries);
-                }
-
-                _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList);
+                _prevTask = ChainNextWriteAsync(_prevTask);
             }
             catch (Exception ex)
             {
@@ -444,11 +430,33 @@ namespace Google.Cloud.Logging.NLog
                 InternalLogger.Error(ex, "GoogleStackdriver(Name={0}): Failed to begin writing {1} LogEntries", Name, logEntries.Count);
                 throw;
             }
+
+            async Task ChainNextWriteAsync(Task previousTask)
+            {
+                if (withinTaskLimit && previousTask != null)
+                {
+                    await previousTask.ConfigureAwait(false);
+                }
+
+                // Return the completed task to WriteLogEntriesCompleted, which handles the results and any exceptions.
+                Task writeTask = WriteLogEntriesBegin(logEntries);
+                try
+                {
+                    await writeTask.ConfigureAwait(false);
+                }
+                catch
+                {
+                    // Exception is handled in WriteLogEntriesCompleted.
+                }
+                finally
+                {
+                    WriteLogEntriesCompleted(writeTask, continuationList);
+                }
+            }
         }
 
-        private async Task WriteLogEntriesBegin(Task _, object state)
+        private async Task WriteLogEntriesBegin(IList<LogEntry> logEntries)
         {
-            var logEntries = state as IList<LogEntry>;
             await _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, logEntries, _cancelTokenSource.Token).ConfigureAwait(false);
         }
 

@@ -770,6 +770,37 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("gae_project_id", uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
 
+        [Fact]
+        public async Task Flush_AwaitsAllTasks()
+        {
+            var pendingUpload = new TaskCompletionSource<WriteLogEntriesResponse>();
+            int uploadCount = 0;
+
+            await RunTest(
+                entries => Interlocked.Increment(ref uploadCount) == 1
+                    ? Task.FromResult(new WriteLogEntriesResponse()) // Msg 1: Completes immediately
+                    : pendingUpload.Task,                            // Msg 2: Remains pending
+                async target =>
+                {
+                    var logger = LogManager.GetLogger("testlogger");
+                    logger.Info("Msg 1");
+                    logger.Info("Msg 2");
+
+                    var flushFinished = new TaskCompletionSource<bool>();
+                    target.Flush(_ => flushFinished.SetResult(true));
+
+                    // Verify Flush is still waiting for Msg 2.
+                    await Task.Delay(100);
+                    Assert.False(flushFinished.Task.IsCompleted, "Flush must wait for pending chained uploads.");
+
+                    // Complete Msg 2; Flush should now finish.
+                    pendingUpload.SetResult(new WriteLogEntriesResponse());
+                    await flushFinished.Task.WaitAsync(TimeSpan.FromSeconds(2));
+
+                    Assert.Equal(2, uploadCount);
+                });
+        }
+
         private class ProblemTypeBase
         {
             internal const string RegularPropertyValue = "Regular property value";
