@@ -1,0 +1,1542 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AppOptimize.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.appoptimize.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_sync",
+      "title": "CreateReportRequestObject",
+      "description": "Snippet for CreateReport",
+      "file": "AppOptimizeClient.CreateReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.CreateReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_async",
+      "title": "CreateReportRequestObjectAsync",
+      "description": "Snippet for CreateReportAsync",
+      "file": "AppOptimizeClient.CreateReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.CreateReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_sync_flattened",
+      "title": "CreateReport",
+      "description": "Snippet for CreateReport",
+      "file": "AppOptimizeClient.CreateReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.Report",
+            "name": "report"
+          },
+          {
+            "type": "System.String",
+            "name": "reportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_async_flattened",
+      "title": "CreateReportAsync",
+      "description": "Snippet for CreateReportAsync",
+      "file": "AppOptimizeClient.CreateReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.Report",
+            "name": "report"
+          },
+          {
+            "type": "System.String",
+            "name": "reportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_sync_flattened_resourceNames",
+      "title": "CreateReportResourceNames",
+      "description": "Snippet for CreateReport",
+      "file": "AppOptimizeClient.CreateReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReport",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.Report",
+            "name": "report"
+          },
+          {
+            "type": "System.String",
+            "name": "reportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_CreateReport_async_flattened_resourceNames",
+      "title": "CreateReportResourceNamesAsync",
+      "description": "Snippet for CreateReportAsync",
+      "file": "AppOptimizeClient.CreateReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.CreateReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.Report",
+            "name": "report"
+          },
+          {
+            "type": "System.String",
+            "name": "reportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppOptimize.V1Beta.Report, Google.Cloud.AppOptimize.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "CreateReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.CreateReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_sync",
+      "title": "GetReportRequestObject",
+      "description": "Snippet for GetReport",
+      "file": "AppOptimizeClient.GetReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.GetReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppOptimize.V1Beta.Report",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_async",
+      "title": "GetReportRequestObjectAsync",
+      "description": "Snippet for GetReportAsync",
+      "file": "AppOptimizeClient.GetReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.GetReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_sync_flattened",
+      "title": "GetReport",
+      "description": "Snippet for GetReport",
+      "file": "AppOptimizeClient.GetReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppOptimize.V1Beta.Report",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_async_flattened",
+      "title": "GetReportAsync",
+      "description": "Snippet for GetReportAsync",
+      "file": "AppOptimizeClient.GetReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_sync_flattened_resourceNames",
+      "title": "GetReportResourceNames",
+      "description": "Snippet for GetReport",
+      "file": "AppOptimizeClient.GetReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppOptimize.V1Beta.Report",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_GetReport_async_flattened_resourceNames",
+      "title": "GetReportResourceNamesAsync",
+      "description": "Snippet for GetReportAsync",
+      "file": "AppOptimizeClient.GetReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.GetReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "GetReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.GetReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_sync",
+      "title": "ListReportsRequestObject",
+      "description": "Snippet for ListReports",
+      "file": "AppOptimizeClient.ListReportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReports",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ListReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_async",
+      "title": "ListReportsRequestObjectAsync",
+      "description": "Snippet for ListReportsAsync",
+      "file": "AppOptimizeClient.ListReportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportsAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ListReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_sync_flattened",
+      "title": "ListReports",
+      "description": "Snippet for ListReports",
+      "file": "AppOptimizeClient.ListReportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReports",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_async_flattened",
+      "title": "ListReportsAsync",
+      "description": "Snippet for ListReportsAsync",
+      "file": "AppOptimizeClient.ListReportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportsAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_sync_flattened_resourceNames",
+      "title": "ListReportsResourceNames",
+      "description": "Snippet for ListReports",
+      "file": "AppOptimizeClient.ListReportsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReports",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReports",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ListReports_async_flattened_resourceNames",
+      "title": "ListReportsResourceNamesAsync",
+      "description": "Snippet for ListReportsAsync",
+      "file": "AppOptimizeClient.ListReportsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportsAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ListReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ListReportsResponse, Google.Cloud.AppOptimize.V1Beta.Report>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ListReports",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ListReports",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_sync",
+      "title": "DeleteReportRequestObject",
+      "description": "Snippet for DeleteReport",
+      "file": "AppOptimizeClient.DeleteReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.DeleteReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_async",
+      "title": "DeleteReportRequestObjectAsync",
+      "description": "Snippet for DeleteReportAsync",
+      "file": "AppOptimizeClient.DeleteReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.DeleteReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_sync_flattened",
+      "title": "DeleteReport",
+      "description": "Snippet for DeleteReport",
+      "file": "AppOptimizeClient.DeleteReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_async_flattened",
+      "title": "DeleteReportAsync",
+      "description": "Snippet for DeleteReportAsync",
+      "file": "AppOptimizeClient.DeleteReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_sync_flattened_resourceNames",
+      "title": "DeleteReportResourceNames",
+      "description": "Snippet for DeleteReport",
+      "file": "AppOptimizeClient.DeleteReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_DeleteReport_async_flattened_resourceNames",
+      "title": "DeleteReportResourceNamesAsync",
+      "description": "Snippet for DeleteReportAsync",
+      "file": "AppOptimizeClient.DeleteReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.DeleteReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "DeleteReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.DeleteReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_sync",
+      "title": "ReadReportRequestObject",
+      "description": "Snippet for ReadReport",
+      "file": "AppOptimizeClient.ReadReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReadReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_async",
+      "title": "ReadReportRequestObjectAsync",
+      "description": "Snippet for ReadReportAsync",
+      "file": "AppOptimizeClient.ReadReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReadReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_sync_flattened",
+      "title": "ReadReport",
+      "description": "Snippet for ReadReport",
+      "file": "AppOptimizeClient.ReadReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_async_flattened",
+      "title": "ReadReportAsync",
+      "description": "Snippet for ReadReportAsync",
+      "file": "AppOptimizeClient.ReadReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_sync_flattened_resourceNames",
+      "title": "ReadReportResourceNames",
+      "description": "Snippet for ReadReport",
+      "file": "AppOptimizeClient.ReadReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReport",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "appoptimize_v1beta_generated_AppOptimize_ReadReport_async_flattened_resourceNames",
+      "title": "ReadReportResourceNamesAsync",
+      "description": "Snippet for ReadReportAsync",
+      "file": "AppOptimizeClient.ReadReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadReportAsync",
+        "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient.ReadReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppOptimize.V1Beta.ReportName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppOptimize.V1Beta.ReadReportResponse, Google.Protobuf.WellKnownTypes.ListValue>",
+        "client": {
+          "shortName": "AppOptimizeClient",
+          "fullName": "Google.Cloud.AppOptimize.V1Beta.AppOptimizeClient"
+        },
+        "method": {
+          "shortName": "ReadReport",
+          "fullName": "google.cloud.appoptimize.v1beta.AppOptimize.ReadReport",
+          "service": {
+            "shortName": "AppOptimize",
+            "fullName": "google.cloud.appoptimize.v1beta.AppOptimize"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

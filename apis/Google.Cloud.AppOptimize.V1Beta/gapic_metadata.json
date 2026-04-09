@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.appoptimize.v1beta",
+  "libraryPackage": "Google.Cloud.AppOptimize.V1Beta",
+  "services": {
+    "AppOptimize": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AppOptimizeClient",
+          "rpcs": {
+            "CreateReport": {
+              "methods": [
+                "CreateReport",
+                "CreateReportAsync"
+              ]
+            },
+            "DeleteReport": {
+              "methods": [
+                "DeleteReport",
+                "DeleteReportAsync"
+              ]
+            },
+            "GetReport": {
+              "methods": [
+                "GetReport",
+                "GetReportAsync"
+              ]
+            },
+            "ListReports": {
+              "methods": [
+                "ListReports",
+                "ListReportsAsync"
+              ]
+            },
+            "ReadReport": {
+              "methods": [
+                "ReadReport",
+                "ReadReportAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

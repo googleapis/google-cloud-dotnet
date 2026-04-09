@@ -39,7 +39,7 @@
     "apis/Google.Cloud.AppEngine.Logging.V1/Google.Cloud.AppEngine.Logging.V1/**",
     "apis/Google.Cloud.AppEngine.V1/Google.Cloud.AppEngine.V1/**",
     "apis/Google.Cloud.AppHub.V1/Google.Cloud.AppHub.V1/**",
-    "apis/Google.Cloud.Appoptimize.V1Beta/Google.Cloud.Appoptimize.V1Beta/**",
+    "apis/Google.Cloud.AppOptimize.V1Beta/Google.Cloud.AppOptimize.V1Beta/**",
     "apis/Google.Cloud.ArtifactRegistry.V1/Google.Cloud.ArtifactRegistry.V1/**",
     "apis/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2/**",
     "apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1/**",
