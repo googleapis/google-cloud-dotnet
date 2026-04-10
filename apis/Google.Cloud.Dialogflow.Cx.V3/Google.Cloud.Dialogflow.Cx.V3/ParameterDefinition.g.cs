@@ -44,9 +44,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZW1zGAIgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVHlw",
             "ZVNjaGVtYSpVCghEYXRhVHlwZRIZChVEQVRBX1RZUEVfVU5TUEVDSUZJRUQQ",
             "ABIKCgZTVFJJTkcQARIKCgZOVU1CRVIQAhILCgdCT09MRUFOEAMSCQoFQVJS",
-            "QVkQBkJyCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCGFBh",
-            "cmFtZXRlckRlZmluaXRpb25Qcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBiYgZwcm90bzM="));
+            "QVkQBkKWAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhhQ",
+            "YXJhbWV0ZXJEZWZpbml0aW9uUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYuoCIUdvb2dsZTo6Q2xv",
+            "dWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataType), }, null, new pbr::GeneratedClrTypeInfo[] {

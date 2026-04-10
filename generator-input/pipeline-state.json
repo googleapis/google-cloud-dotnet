@@ -1387,7 +1387,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-30T14:12:16.979267538Z",
-            "lastGeneratedCommit": "59d5f2b46924714af627ac29ea6de78641a00835",
+            "lastGeneratedCommit": "b6669d761c84c04682270ae5610106eb81ce1706",
             "lastReleasedCommit": "59d5f2b46924714af627ac29ea6de78641a00835",
             "apiPaths": [
                 "google/cloud/dialogflow/cx/v3"
