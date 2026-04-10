@@ -5452,7 +5452,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED
     /// routes only. If set for POLICY_BASED route, this is a region of VLAN
-    /// attachments for Cloud Interconnect the route applies to.
+    /// attachments for Cloud Interconnect the route applies to. If set to "all"
+    /// for POLICY_BASED route, the route applies to VLAN attachments of Cloud
+    /// Interconnect in all regions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
