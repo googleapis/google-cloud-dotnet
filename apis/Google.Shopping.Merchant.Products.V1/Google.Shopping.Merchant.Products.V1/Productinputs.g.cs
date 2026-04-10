@@ -32,56 +32,57 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "YnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
             "cm90bxo6Z29vZ2xlL3Nob3BwaW5nL21lcmNoYW50L3Byb2R1Y3RzL3YxL3By",
             "b2R1Y3RzX2NvbW1vbi5wcm90bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlw",
-            "ZXMucHJvdG8i/wMKDFByb2R1Y3RJbnB1dBIRCgRuYW1lGAEgASgJQgPgQQgS",
-            "FAoHcHJvZHVjdBgCIAEoCUID4EEDEhkKDGxlZ2FjeV9sb2NhbBgKIAEoCEID",
-            "4EEFEhgKCG9mZmVyX2lkGAQgASgJQgbgQQLgQQUSIAoQY29udGVudF9sYW5n",
-            "dWFnZRgFIAEoCUIG4EEC4EEFEhoKCmZlZWRfbGFiZWwYBiABKAlCBuBBAuBB",
-            "BRIjCg52ZXJzaW9uX251bWJlchgHIAEoA0IG4EEB4EEFSACIAQESWAoScHJv",
-            "ZHVjdF9hdHRyaWJ1dGVzGAsgASgLMjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
-            "YW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzQgPgQQESRQoRY3Vz",
-            "dG9tX2F0dHJpYnV0ZXMYCSADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5D",
-            "dXN0b21BdHRyaWJ1dGVCA+BBATp66kF3CidtZXJjaGFudGFwaS5nb29nbGVh",
-            "cGlzLmNvbS9Qcm9kdWN0SW5wdXQSL2FjY291bnRzL3thY2NvdW50fS9wcm9k",
-            "dWN0SW5wdXRzL3twcm9kdWN0aW5wdXR9Kg1wcm9kdWN0SW5wdXRzMgxwcm9k",
-            "dWN0SW5wdXRCEQoPX3ZlcnNpb25fbnVtYmVyIsEBChlJbnNlcnRQcm9kdWN0",
-            "SW5wdXRSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJtZXJjaGFu",
-            "dGFwaS5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0Ek4KDXByb2R1Y3RfaW5wdXQY",
-            "AiABKAsyMi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
-            "UHJvZHVjdElucHV0QgPgQQISGAoLZGF0YV9zb3VyY2UYAyABKAlCA+BBAiK7",
-            "AQoZVXBkYXRlUHJvZHVjdElucHV0UmVxdWVzdBJOCg1wcm9kdWN0X2lucHV0",
-            "GAEgASgLMjIuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYx",
-            "LlByb2R1Y3RJbnB1dEID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEhgKC2RhdGFfc291cmNlGAMg",
-            "ASgJQgPgQQIidAoZRGVsZXRlUHJvZHVjdElucHV0UmVxdWVzdBI9CgRuYW1l",
-            "GAEgASgJQi/gQQL6QSkKJ21lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1By",
-            "b2R1Y3RJbnB1dBIYCgtkYXRhX3NvdXJjZRgCIAEoCUID4EECMuUFChRQcm9k",
-            "dWN0SW5wdXRzU2VydmljZRLXAQoSSW5zZXJ0UHJvZHVjdElucHV0Ej8uZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkluc2VydFByb2R1",
-            "Y3RJbnB1dFJlcXVlc3QaMi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJv",
-            "ZHVjdHMudjEuUHJvZHVjdElucHV0IkyC0+STAkYiNS9wcm9kdWN0cy92MS97",
-            "cGFyZW50PWFjY291bnRzLyp9L3Byb2R1Y3RJbnB1dHM6aW5zZXJ0Og1wcm9k",
-            "dWN0X2lucHV0EvoBChJVcGRhdGVQcm9kdWN0SW5wdXQSPy5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuVXBkYXRlUHJvZHVjdElucHV0",
-            "UmVxdWVzdBoyLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MS5Qcm9kdWN0SW5wdXQib9pBGXByb2R1Y3RfaW5wdXQsdXBkYXRlX21hc2uC",
-            "0+STAk0yPC9wcm9kdWN0cy92MS97cHJvZHVjdF9pbnB1dC5uYW1lPWFjY291",
-            "bnRzLyovcHJvZHVjdElucHV0cy8qfToNcHJvZHVjdF9pbnB1dBKsAQoSRGVs",
-            "ZXRlUHJvZHVjdElucHV0Ej8uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnBy",
-            "b2R1Y3RzLnYxLkRlbGV0ZVByb2R1Y3RJbnB1dFJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiPdpBBG5hbWWC0+STAjAqLi9wcm9kdWN0cy92MS97",
-            "bmFtZT1hY2NvdW50cy8qL3Byb2R1Y3RJbnB1dHMvKn0aR8pBGm1lcmNoYW50",
-            "YXBpLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jb250ZW50QoUCCihjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
-            "YW50LnByb2R1Y3RzLnYxQhJQcm9kdWN0SW5wdXRzUHJvdG9QAVpKY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9wcm9kdWN0cy9hcGl2",
-            "MS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGKqAiRHb29nbGUuU2hvcHBpbmcuTWVy",
-            "Y2hhbnQuUHJvZHVjdHMuVjHKAiRHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRc",
-            "UHJvZHVjdHNcVjHqAihHb29nbGU6OlNob3BwaW5nOjpNZXJjaGFudDo6UHJv",
-            "ZHVjdHM6OlYxYgZwcm90bzM="));
+            "ZXMucHJvdG8ixgQKDFByb2R1Y3RJbnB1dBIRCgRuYW1lGAEgASgJQgPgQQgS",
+            "IAoTYmFzZTY0X2VuY29kZWRfbmFtZRgMIAEoCUID4EEDEhQKB3Byb2R1Y3QY",
+            "AiABKAlCA+BBAxIjChZiYXNlNjRfZW5jb2RlZF9wcm9kdWN0GA0gASgJQgPg",
+            "QQMSGQoMbGVnYWN5X2xvY2FsGAogASgIQgPgQQUSGAoIb2ZmZXJfaWQYBCAB",
+            "KAlCBuBBAuBBBRIgChBjb250ZW50X2xhbmd1YWdlGAUgASgJQgbgQQLgQQUS",
+            "GgoKZmVlZF9sYWJlbBgGIAEoCUIG4EEC4EEFEiMKDnZlcnNpb25fbnVtYmVy",
+            "GAcgASgDQgbgQQHgQQVIAIgBARJYChJwcm9kdWN0X2F0dHJpYnV0ZXMYCyAB",
+            "KAsyNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJv",
+            "ZHVjdEF0dHJpYnV0ZXNCA+BBARJFChFjdXN0b21fYXR0cmlidXRlcxgJIAMo",
+            "CzIlLmdvb2dsZS5zaG9wcGluZy50eXBlLkN1c3RvbUF0dHJpYnV0ZUID4EEB",
+            "OnrqQXcKJ21lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3RJbnB1",
+            "dBIvYWNjb3VudHMve2FjY291bnR9L3Byb2R1Y3RJbnB1dHMve3Byb2R1Y3Rp",
+            "bnB1dH0qDXByb2R1Y3RJbnB1dHMyDHByb2R1Y3RJbnB1dEIRCg9fdmVyc2lv",
+            "bl9udW1iZXIiwQEKGUluc2VydFByb2R1Y3RJbnB1dFJlcXVlc3QSOgoGcGFy",
+            "ZW50GAEgASgJQirgQQL6QSQSIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29t",
+            "L1Byb2R1Y3QSTgoNcHJvZHVjdF9pbnB1dBgCIAEoCzIyLmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0SW5wdXRCA+BBAhIY",
+            "CgtkYXRhX3NvdXJjZRgDIAEoCUID4EECIrsBChlVcGRhdGVQcm9kdWN0SW5w",
+            "dXRSZXF1ZXN0Ek4KDXByb2R1Y3RfaW5wdXQYASABKAsyMi5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdElucHV0QgPgQQIS",
+            "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrQgPgQQESGAoLZGF0YV9zb3VyY2UYAyABKAlCA+BBAiJ0ChlEZWxldGVQ",
+            "cm9kdWN0SW5wdXRSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonbWVy",
+            "Y2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdElucHV0EhgKC2RhdGFf",
+            "c291cmNlGAIgASgJQgPgQQIy5QUKFFByb2R1Y3RJbnB1dHNTZXJ2aWNlEtcB",
+            "ChJJbnNlcnRQcm9kdWN0SW5wdXQSPy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuSW5zZXJ0UHJvZHVjdElucHV0UmVxdWVzdBoyLmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0SW5w",
+            "dXQiTILT5JMCRiI1L3Byb2R1Y3RzL3YxL3twYXJlbnQ9YWNjb3VudHMvKn0v",
+            "cHJvZHVjdElucHV0czppbnNlcnQ6DXByb2R1Y3RfaW5wdXQS+gEKElVwZGF0",
+            "ZVByb2R1Y3RJbnB1dBI/Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
+            "dWN0cy52MS5VcGRhdGVQcm9kdWN0SW5wdXRSZXF1ZXN0GjIuZ29vZ2xlLnNo",
+            "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RJbnB1dCJv2kEZ",
+            "cHJvZHVjdF9pbnB1dCx1cGRhdGVfbWFza4LT5JMCTTI8L3Byb2R1Y3RzL3Yx",
+            "L3twcm9kdWN0X2lucHV0Lm5hbWU9YWNjb3VudHMvKi9wcm9kdWN0SW5wdXRz",
+            "Lyp9Og1wcm9kdWN0X2lucHV0EqwBChJEZWxldGVQcm9kdWN0SW5wdXQSPy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRGVsZXRlUHJv",
+            "ZHVjdElucHV0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI92kEE",
+            "bmFtZYLT5JMCMCouL3Byb2R1Y3RzL3YxL3tuYW1lPWFjY291bnRzLyovcHJv",
+            "ZHVjdElucHV0cy8qfRpHykEabWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb23S",
+            "QSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbnRlbnRChQIK",
+            "KGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFCElBy",
+            "b2R1Y3RJbnB1dHNQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nob3Bw",
+            "aW5nL21lcmNoYW50L3Byb2R1Y3RzL2FwaXYxL3Byb2R1Y3RzcGI7cHJvZHVj",
+            "dHNwYqoCJEdvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5Qcm9kdWN0cy5WMcoC",
+            "JEdvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxQcm9kdWN0c1xWMeoCKEdvb2ds",
+            "ZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpQcm9kdWN0czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductInput), global::Google.Shopping.Merchant.Products.V1.ProductInput.Parser, new[]{ "Name", "Product", "LegacyLocal", "OfferId", "ContentLanguage", "FeedLabel", "VersionNumber", "ProductAttributes", "CustomAttributes" }, new[]{ "VersionNumber" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductInput), global::Google.Shopping.Merchant.Products.V1.ProductInput.Parser, new[]{ "Name", "Base64EncodedName", "Product", "Base64EncodedProduct", "LegacyLocal", "OfferId", "ContentLanguage", "FeedLabel", "VersionNumber", "ProductAttributes", "CustomAttributes" }, new[]{ "VersionNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.InsertProductInputRequest), global::Google.Shopping.Merchant.Products.V1.InsertProductInputRequest.Parser, new[]{ "Parent", "ProductInput", "DataSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.UpdateProductInputRequest), global::Google.Shopping.Merchant.Products.V1.UpdateProductInputRequest.Parser, new[]{ "ProductInput", "UpdateMask", "DataSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.DeleteProductInputRequest), global::Google.Shopping.Merchant.Products.V1.DeleteProductInputRequest.Parser, new[]{ "Name", "DataSource" }, null, null, null, null)
@@ -157,7 +158,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
     public ProductInput(ProductInput other) : this() {
       _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      base64EncodedName_ = other.base64EncodedName_;
       product_ = other.product_;
+      base64EncodedProduct_ = other.base64EncodedProduct_;
       legacyLocal_ = other.legacyLocal_;
       offerId_ = other.offerId_;
       contentLanguage_ = other.contentLanguage_;
@@ -197,10 +200,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
     ///     MUST be used if any part of the product identifier (like `offer_id`)
     ///     contains characters such as `/`, `%`, or `~`.
     ///     *   Example: To represent the product ID `en~US~sku/123`, the
-    ///         `{productinput}` segment must be the base64url encoding of this
-    ///         string, which is `ZW5-VVMtc2t1LzEyMw`. The full resource name
+    ///         `{productinput}` segment must be the unpadded base64url encoding of
+    ///         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name
     ///         for the product would be
-    ///         `accounts/123/productinputs/ZW5-VVMtc2t1LzEyMw`.
+    ///         `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`.
     ///
     /// 2.  **Plain Format**: The `{productinput}` segment is the tilde-separated
     /// string
@@ -212,10 +215,6 @@ namespace Google.Shopping.Merchant.Products.V1 {
     /// correct parsing, especially those containing special characters. The
     /// presence of tilde (`~`) characters in the `{productinput}` segment is used
     /// to differentiate between the two formats.
-    ///
-    /// Note: For calls to the v1beta version, the plain format is
-    ///     `channel~content_language~feed_label~offer_id`, for example:
-    ///     `accounts/123/productinputs/online~en~US~sku123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -223,6 +222,30 @@ namespace Google.Shopping.Merchant.Products.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "base64_encoded_name" field.</summary>
+    public const int Base64EncodedNameFieldNumber = 12;
+    private string base64EncodedName_ = "";
+    /// <summary>
+    /// Output only. The **unpadded base64url encoded name** of the product input.
+    /// Format:
+    /// `accounts/{account}/productInputs/{productinput}` where the last
+    /// section `productinput` is the unpadded base64url encoding of the
+    /// `content_language~feed_label~offer_id` name.
+    /// Example: `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw` for the decoded
+    /// product input name `accounts/123/productInputs/en~US~sku/123`. This field
+    /// can be used directly as input to the API methods that require the product
+    /// input name to be encoded if it contains special characters, for example
+    /// [`GetProductInput`](https://developers.google.com/merchant/api/reference/rest/products_v1/accounts.productInputs/get).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Base64EncodedName {
+      get { return base64EncodedName_; }
+      set {
+        base64EncodedName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -239,6 +262,29 @@ namespace Google.Shopping.Merchant.Products.V1 {
       get { return product_; }
       set {
         product_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "base64_encoded_product" field.</summary>
+    public const int Base64EncodedProductFieldNumber = 13;
+    private string base64EncodedProduct_ = "";
+    /// <summary>
+    /// Output only. The **unpadded base64url encoded name** of the processed
+    /// product. Format: `accounts/{account}/products/{product}` where the last
+    /// section `product` is the unpadded base64url encoding of the
+    /// `content_language~feed_label~offer_id` name.
+    /// Example: `accounts/123/products/ZW5-VVN-c2t1LzEyMw` for the decoded
+    /// product name `accounts/123/products/en~US~sku/123`. This field can be used
+    /// directly as input to the API methods that require the product name to be
+    /// encoded if it contains special characters, for example
+    /// [`GetProduct`](https://developers.google.com/merchant/api/reference/rest/products_v1/accounts.products/get).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Base64EncodedProduct {
+      get { return base64EncodedProduct_; }
+      set {
+        base64EncodedProduct_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -418,7 +464,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Base64EncodedName != other.Base64EncodedName) return false;
       if (Product != other.Product) return false;
+      if (Base64EncodedProduct != other.Base64EncodedProduct) return false;
       if (LegacyLocal != other.LegacyLocal) return false;
       if (OfferId != other.OfferId) return false;
       if (ContentLanguage != other.ContentLanguage) return false;
@@ -434,7 +482,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Base64EncodedName.Length != 0) hash ^= Base64EncodedName.GetHashCode();
       if (Product.Length != 0) hash ^= Product.GetHashCode();
+      if (Base64EncodedProduct.Length != 0) hash ^= Base64EncodedProduct.GetHashCode();
       if (LegacyLocal != false) hash ^= LegacyLocal.GetHashCode();
       if (OfferId.Length != 0) hash ^= OfferId.GetHashCode();
       if (ContentLanguage.Length != 0) hash ^= ContentLanguage.GetHashCode();
@@ -493,6 +543,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ProductAttributes);
       }
+      if (Base64EncodedName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Base64EncodedName);
+      }
+      if (Base64EncodedProduct.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Base64EncodedProduct);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -536,6 +594,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ProductAttributes);
       }
+      if (Base64EncodedName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Base64EncodedName);
+      }
+      if (Base64EncodedProduct.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Base64EncodedProduct);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -549,8 +615,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (Base64EncodedName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Base64EncodedName);
+      }
       if (Product.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Product);
+      }
+      if (Base64EncodedProduct.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Base64EncodedProduct);
       }
       if (LegacyLocal != false) {
         size += 1 + 1;
@@ -586,8 +658,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.Base64EncodedName.Length != 0) {
+        Base64EncodedName = other.Base64EncodedName;
+      }
       if (other.Product.Length != 0) {
         Product = other.Product;
+      }
+      if (other.Base64EncodedProduct.Length != 0) {
+        Base64EncodedProduct = other.Base64EncodedProduct;
       }
       if (other.LegacyLocal != false) {
         LegacyLocal = other.LegacyLocal;
@@ -669,6 +747,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
             input.ReadMessage(ProductAttributes);
             break;
           }
+          case 98: {
+            Base64EncodedName = input.ReadString();
+            break;
+          }
+          case 106: {
+            Base64EncodedProduct = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -725,6 +811,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
               ProductAttributes = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes();
             }
             input.ReadMessage(ProductAttributes);
+            break;
+          }
+          case 98: {
+            Base64EncodedName = input.ReadString();
+            break;
+          }
+          case 106: {
+            Base64EncodedProduct = input.ReadString();
             break;
           }
         }
@@ -1436,10 +1530,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
     ///     MUST be used if any part of the product identifier (like `offer_id`)
     ///     contains characters such as `/`, `%`, or `~`.
     ///     *   Example: To represent the product ID `en~US~sku/123`, the
-    ///         `{productInput}` segment must be the base64url encoding of this
-    ///         string, which is `ZW5-VVMtc2t1LzEyMw`. The full resource name
+    ///         `{productInput}` segment must be the unpadded base64url encoding of
+    ///         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name
     ///         for the product would be
-    ///         `accounts/123/productInputs/ZW5-VVMtc2t1LzEyMw`.
+    ///         `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`.
     ///
     /// 2.  **Plain Format**: The `{productInput}` segment is the tilde-separated
     /// string
@@ -1451,10 +1545,6 @@ namespace Google.Shopping.Merchant.Products.V1 {
     /// correct parsing, especially those containing special characters. The
     /// presence of tilde (`~`) characters in the `{productInput}` segment is used
     /// to differentiate between the two formats.
-    ///
-    /// Note: For calls to the v1beta version, the plain format is
-    ///     `channel~content_language~feed_label~offer_id`, for example:
-    ///     `accounts/123/productinputs/online~en~US~sku123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
