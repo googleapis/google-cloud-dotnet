@@ -17,14 +17,13 @@
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.AIPlatform.V1;
-using Google.GenAI;
 using Microsoft.Extensions.AI;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using GenAIHttpOptions = Google.GenAI.Types.HttpOptions;
-using GTypes = Google.GenAI.Types;
+using GenAIHttpOptions = Google.Cloud.VertexAI.Extensions.Live.HttpOptions;
+using GTypes = Google.Cloud.VertexAI.Extensions.Live;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -47,8 +46,8 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
             throw new InvalidOperationException(
                 "No model specified. Provide a model via RealtimeSessionOptions.Model or the defaultModelId parameter.");
 
-        Client client = CreateLiveClient(requestedModel);
-        AsyncSession? asyncSession = null;
+        GTypes.Client client = CreateLiveClient(requestedModel);
+        GTypes.AsyncSession? asyncSession = null;
         try
         {
             GTypes.LiveConnectConfig config = BuildLiveConnectConfig(options);
@@ -107,7 +106,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
     /// <inheritdoc />
     void IDisposable.Dispose() { /* nop */ }
 
-    /// <summary>Converts MEAI session options to a Google GenAI <see cref="Google.GenAI.Types.LiveConnectConfig"/>.</summary>
+    /// <summary>Converts MEAI session options to a Google GenAI <see cref="GTypes.LiveConnectConfig"/>.</summary>
     internal static GTypes.LiveConnectConfig BuildLiveConnectConfig(RealtimeSessionOptions? options)
     {
         var config = new GTypes.LiveConnectConfig();
@@ -224,7 +223,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
         return config;
     }
 
-    private Client CreateLiveClient(string model)
+    private GTypes.Client CreateLiveClient(string model)
     {
         EndpointName.TryParse(model, out EndpointName? endpointName);
 
@@ -284,7 +283,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
             (httpOptions.Headers ??= [])[ "x-goog-api-client" ] = versionHeader!;
         }
 
-        return new Client(
+        return new GTypes.Client(
             vertexAI: true,
             credential: credential,
             project: project,
@@ -315,7 +314,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
             null;
     }
 
-    /// <summary>Builds a minimal <see cref="Google.GenAI.Types.LiveConnectConfig"/> for transcription-only sessions.</summary>
+    /// <summary>Builds a minimal <see cref="GTypes.LiveConnectConfig"/> for transcription-only sessions.</summary>
     private static GTypes.LiveConnectConfig BuildTranscriptionConnectConfig(RealtimeSessionOptions options)
     {
         var config = new GTypes.LiveConnectConfig

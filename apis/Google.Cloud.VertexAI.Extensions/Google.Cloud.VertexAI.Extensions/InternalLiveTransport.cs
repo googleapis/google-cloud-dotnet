@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
-using Google.GenAI.Types;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +22,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.GenAI;
+namespace Google.Cloud.VertexAI.Extensions.Live;
 
 internal sealed class Client : IAsyncDisposable
 {

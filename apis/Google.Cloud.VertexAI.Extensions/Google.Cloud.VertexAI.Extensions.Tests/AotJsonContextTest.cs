@@ -23,7 +23,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Xunit;
 
-namespace Google.Cloud.VertexAI.Extensions.Tests;
+namespace Google.Cloud.VertexAI.Extensions.Live.Tests;
 
 public class AotJsonContextTest
 {
@@ -35,23 +35,23 @@ public class AotJsonContextTest
         JsonSerializerContext context = GetContext();
         System.Type[] requiredTypes =
         [
-            GetRequiredType("Google.GenAI.Types.LiveConnectConfig"),
-            GetRequiredType("Google.GenAI.Types.LiveClientMessage"),
-            GetRequiredType("Google.GenAI.Types.LiveClientSetup"),
-            GetRequiredType("Google.GenAI.Types.LiveSendRealtimeInputParameters"),
-            GetRequiredType("Google.GenAI.Types.LiveSendToolResponseParameters"),
-            GetRequiredType("Google.GenAI.Types.LiveServerMessage"),
-            GetRequiredType("Google.GenAI.Types.LiveServerContent"),
-            GetRequiredType("Google.GenAI.Types.LiveServerToolCall"),
-            GetRequiredType("Google.GenAI.Types.LiveServerToolCallCancellation"),
-            GetRequiredType("Google.GenAI.Types.Content"),
-            GetRequiredType("Google.GenAI.Types.Part"),
-            GetRequiredType("Google.GenAI.Types.Blob"),
-            GetRequiredType("Google.GenAI.Types.Tool"),
-            GetRequiredType("Google.GenAI.Types.FunctionDeclaration"),
-            GetRequiredType("Google.GenAI.Types.FunctionResponse"),
-            GetRequiredType("Google.GenAI.Types.FunctionCall"),
-            GetRequiredType("Google.GenAI.Types.Schema"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveConnectConfig"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveClientMessage"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveClientSetup"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveSendRealtimeInputParameters"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveSendToolResponseParameters"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerMessage"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerContent"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerToolCall"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerToolCallCancellation"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Content"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Part"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Blob"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Tool"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.FunctionDeclaration"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.FunctionResponse"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.FunctionCall"),
+            GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Schema"),
         ];
 
         List<string> missingTypes = requiredTypes
@@ -69,10 +69,10 @@ public class AotJsonContextTest
     public void LiveJsonContext_RoundTripsLiveServerMessage()
     {
         JsonSerializerContext context = GetContext();
-        System.Type liveServerMessageType = GetRequiredType("Google.GenAI.Types.LiveServerMessage");
-        System.Type liveServerContentType = GetRequiredType("Google.GenAI.Types.LiveServerContent");
-        System.Type contentType = GetRequiredType("Google.GenAI.Types.Content");
-        System.Type partType = GetRequiredType("Google.GenAI.Types.Part");
+        System.Type liveServerMessageType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerMessage");
+        System.Type liveServerContentType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveServerContent");
+        System.Type contentType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Content");
+        System.Type partType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.Part");
 
         object message = Activator.CreateInstance(liveServerMessageType)!;
         object serverContent = Activator.CreateInstance(liveServerContentType)!;
@@ -111,9 +111,9 @@ public class AotJsonContextTest
     public void LiveJsonContext_RoundTripsToolResponseMessage()
     {
         JsonSerializerContext context = GetContext();
-        System.Type liveClientMessageType = GetRequiredType("Google.GenAI.Types.LiveClientMessage");
-        System.Type liveClientToolResponseType = GetRequiredType("Google.GenAI.Types.LiveClientToolResponse");
-        System.Type functionResponseType = GetRequiredType("Google.GenAI.Types.FunctionResponse");
+        System.Type liveClientMessageType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveClientMessage");
+        System.Type liveClientToolResponseType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.LiveClientToolResponse");
+        System.Type functionResponseType = GetRequiredType("Google.Cloud.VertexAI.Extensions.Live.FunctionResponse");
 
         object message = Activator.CreateInstance(liveClientMessageType)!;
         object toolResponse = Activator.CreateInstance(liveClientToolResponseType)!;
@@ -148,7 +148,7 @@ public class AotJsonContextTest
     }
 
     private static JsonSerializerContext GetContext() =>
-        (JsonSerializerContext)GetRequiredType("Google.GenAI.LiveJsonContext")
+        (JsonSerializerContext)GetRequiredType("Google.Cloud.VertexAI.Extensions.LiveJsonContext")
             .GetProperty("Default", BindingFlags.Public | BindingFlags.Static)!
             .GetValue(null)!;
 

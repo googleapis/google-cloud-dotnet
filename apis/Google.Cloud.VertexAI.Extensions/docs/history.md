@@ -1,13 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta08, unreleased
-
-### New features
-
-- Add `BuildIRealtimeClient`/`BuildIRealtimeClientAsync` support for Vertex AI live models.
-- Use source-generated JSON metadata for the realtime transport to keep Native AOT compatibility.
-- Avoid JSON round-tripping for chat tool arguments/results to improve Native AOT compatibility across the package.
-
 ## Version 1.0.0-beta07, released 2026-03-23
 
 ### New features

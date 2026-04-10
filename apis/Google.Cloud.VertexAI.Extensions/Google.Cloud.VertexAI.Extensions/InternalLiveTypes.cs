@@ -15,7 +15,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types;
+namespace Google.Cloud.VertexAI.Extensions.Live;
 
 internal sealed class HttpOptions
 {
@@ -266,7 +266,7 @@ internal sealed class Schema
     public Schema? Items { get; set; }
 }
 
-internal static class Type
+internal static class SchemaType
 {
     public const string Object = "OBJECT";
     public const string String = "STRING";

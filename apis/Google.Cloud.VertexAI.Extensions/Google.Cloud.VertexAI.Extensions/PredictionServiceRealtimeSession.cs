@@ -15,8 +15,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.GenAI;
-using Google.GenAI.Types;
+using Google.Cloud.VertexAI.Extensions.Live;
 using Microsoft.Extensions.AI;
 using System.Collections;
 using System;
@@ -895,12 +894,12 @@ internal sealed class PredictionServiceRealtimeSession : IRealtimeClientSession
         {
             schema.Type = typeValue.GetString()?.ToLowerInvariant() switch
             {
-                "object" => Google.GenAI.Types.Type.Object,
-                "string" => Google.GenAI.Types.Type.String,
-                "integer" => Google.GenAI.Types.Type.Integer,
-                "number" => Google.GenAI.Types.Type.Number,
-                "boolean" => Google.GenAI.Types.Type.Boolean,
-                "array" => Google.GenAI.Types.Type.Array,
+                "object" => SchemaType.Object,
+                "string" => SchemaType.String,
+                "integer" => SchemaType.Integer,
+                "number" => SchemaType.Number,
+                "boolean" => SchemaType.Boolean,
+                "array" => SchemaType.Array,
                 _ => null
             };
         }
