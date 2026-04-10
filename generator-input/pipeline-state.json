@@ -4875,7 +4875,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-16T14:55:59.160340048Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "6d621a532f36c03ad2d91c1a4474b6b7f06d3a1a",
             "lastReleasedCommit": "df13ea51961ff225a825beab9ca112188de367a3",
             "apiPaths": [
                 "google/cloud/workloadmanager/v1"
