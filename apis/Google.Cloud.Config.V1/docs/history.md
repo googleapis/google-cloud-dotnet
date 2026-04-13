@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.12.0, released 2026-04-13
+
+### New features
+
+- Adding DeploymentGroups, you can now manage deployment of multiple module root dependencies in a single DAG
+
 ## Version 1.11.0, released 2026-01-13
 
 ### New features

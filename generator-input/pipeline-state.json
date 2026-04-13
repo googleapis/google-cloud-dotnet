@@ -818,12 +818,12 @@
         },
         {
             "id": "Google.Cloud.Bigtable.V2",
-            "currentVersion": "3.26.0",
+            "currentVersion": "3.27.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-10T14:06:32.601430833Z",
+            "releaseTimestamp": "2026-04-13T14:06:06.599872082Z",
             "lastGeneratedCommit": "d6677757c6a800b826e7c3a2b8a66d421dfa1837",
-            "lastReleasedCommit": "1b5f8632487bce889ce05366647addc6ef5ee36d",
+            "lastReleasedCommit": "d6677757c6a800b826e7c3a2b8a66d421dfa1837",
             "apiPaths": [
                 "google/bigtable/v2"
             ],
@@ -1118,12 +1118,12 @@
         },
         {
             "id": "Google.Cloud.Config.V1",
-            "currentVersion": "1.11.0",
+            "currentVersion": "1.12.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-13T09:01:02.988429695Z",
+            "releaseTimestamp": "2026-04-13T15:43:35.609517977Z",
             "lastGeneratedCommit": "f5cb7afc40b63d52f43bc306cb9b64a87b681aea",
-            "lastReleasedCommit": "6145b5ffe99d290c3d840136f310490d732acb04",
+            "lastReleasedCommit": "f5cb7afc40b63d52f43bc306cb9b64a87b681aea",
             "apiPaths": [
                 "google/cloud/config/v1"
             ],
