@@ -28,7 +28,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "ZW50b3JpZXNfY29tbW9uLnByb3RvEidnb29nbGUuc2hvcHBpbmcubWVyY2hh",
             "bnQuaW52ZW50b3JpZXMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aIGdvb2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvGhpnb29n",
-            "bGUvdHlwZS9pbnRlcnZhbC5wcm90byLSCAoYTG9jYWxJbnZlbnRvcnlBdHRy",
+            "bGUvdHlwZS9pbnRlcnZhbC5wcm90byKzCQoYTG9jYWxJbnZlbnRvcnlBdHRy",
             "aWJ1dGVzEi8KBXByaWNlGAEgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUu",
             "UHJpY2VCA+BBARI0CgpzYWxlX3ByaWNlGAIgASgLMhsuZ29vZ2xlLnNob3Bw",
             "aW5nLnR5cGUuUHJpY2VCA+BBARI9ChlzYWxlX3ByaWNlX2VmZmVjdGl2ZV9k",
@@ -41,40 +41,55 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "ZXRob2RCA+BBAUgCiAEBEmkKCnBpY2t1cF9zbGEYByABKA4ySy5nb29nbGUu",
             "c2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuTG9jYWxJbnZlbnRv",
             "cnlBdHRyaWJ1dGVzLlBpY2t1cFNsYUID4EEBSAOIAQESKgoYaW5zdG9yZV9w",
-            "cm9kdWN0X2xvY2F0aW9uGAggASgJQgPgQQFIBIgBASKPAQoMQXZhaWxhYmls",
-            "aXR5EiwKKExPQ0FMX0lOVkVOVE9SWV9BVkFJTEFCSUxJVFlfVU5TUEVDSUZJ",
-            "RUQQABIMCghJTl9TVE9DSxABEhgKFExJTUlURURfQVZBSUxBQklMSVRZEAIS",
-            "FwoTT05fRElTUExBWV9UT19PUkRFUhADEhAKDE9VVF9PRl9TVE9DSxAEImkK",
-            "DFBpY2t1cE1ldGhvZBIdChlQSUNLVVBfTUVUSE9EX1VOU1BFQ0lGSUVEEAAS",
-            "BwoDQlVZEAESCwoHUkVTRVJWRRACEhEKDVNISVBfVE9fU1RPUkUQAxIRCg1O",
-            "T1RfU1VQUE9SVEVEEAQipwEKCVBpY2t1cFNsYRIaChZQSUNLVVBfU0xBX1VO",
-            "U1BFQ0lGSUVEEAASDAoIU0FNRV9EQVkQARIMCghORVhUX0RBWRACEgsKB1RX",
-            "T19EQVkQAxINCglUSFJFRV9EQVkQBBIMCghGT1VSX0RBWRAFEgwKCEZJVkVf",
-            "REFZEAYSCwoHU0lYX0RBWRAHEg0KCVNFVkVOX0RBWRAIEg4KCk1VTFRJX1dF",
-            "RUsQCUIPCg1fYXZhaWxhYmlsaXR5QgsKCV9xdWFudGl0eUIQCg5fcGlja3Vw",
-            "X21ldGhvZEINCgtfcGlja3VwX3NsYUIbChlfaW5zdG9yZV9wcm9kdWN0X2xv",
-            "Y2F0aW9uIqgDChtSZWdpb25hbEludmVudG9yeUF0dHJpYnV0ZXMSLwoFcHJp",
-            "Y2UYASABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUID4EEBEjQK",
-            "CnNhbGVfcHJpY2UYAiABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5Qcmlj",
-            "ZUID4EEBEj0KGXNhbGVfcHJpY2VfZWZmZWN0aXZlX2RhdGUYAyABKAsyFS5n",
-            "b29nbGUudHlwZS5JbnRlcnZhbEID4EEBEnEKDGF2YWlsYWJpbGl0eRgEIAEo",
-            "DjJRLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5S",
-            "ZWdpb25hbEludmVudG9yeUF0dHJpYnV0ZXMuQXZhaWxhYmlsaXR5QgPgQQFI",
-            "AIgBASJfCgxBdmFpbGFiaWxpdHkSLworUkVHSU9OQUxfSU5WRU5UT1JZX0FW",
-            "QUlMQUJJTElUWV9VTlNQRUNJRklFRBAAEgwKCElOX1NUT0NLEAESEAoMT1VU",
-            "X09GX1NUT0NLEAJCDwoNX2F2YWlsYWJpbGl0eUKeAgorY29tLmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MUIWSW52ZW50b3JpZXND",
-            "b21tb25Qcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21l",
-            "cmNoYW50L2ludmVudG9yaWVzL2FwaXYxL2ludmVudG9yaWVzcGI7aW52ZW50",
-            "b3JpZXNwYqoCJ0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5JbnZlbnRvcmll",
-            "cy5WMcoCJ0dvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxJbnZlbnRvcmllc1xW",
-            "MeoCK0dvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpJbnZlbnRvcmllczo6",
-            "VjFiBnByb3RvMw=="));
+            "cm9kdWN0X2xvY2F0aW9uGAggASgJQgPgQQFIBIgBARJfChBsb3lhbHR5X3By",
+            "b2dyYW1zGAogAygLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVu",
+            "dG9yaWVzLnYxLkludmVudG9yeUxveWFsdHlQcm9ncmFtQgPgQQEijwEKDEF2",
+            "YWlsYWJpbGl0eRIsCihMT0NBTF9JTlZFTlRPUllfQVZBSUxBQklMSVRZX1VO",
+            "U1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIYChRMSU1JVEVEX0FWQUlMQUJJ",
+            "TElUWRACEhcKE09OX0RJU1BMQVlfVE9fT1JERVIQAxIQCgxPVVRfT0ZfU1RP",
+            "Q0sQBCJpCgxQaWNrdXBNZXRob2QSHQoZUElDS1VQX01FVEhPRF9VTlNQRUNJ",
+            "RklFRBAAEgcKA0JVWRABEgsKB1JFU0VSVkUQAhIRCg1TSElQX1RPX1NUT1JF",
+            "EAMSEQoNTk9UX1NVUFBPUlRFRBAEIqcBCglQaWNrdXBTbGESGgoWUElDS1VQ",
+            "X1NMQV9VTlNQRUNJRklFRBAAEgwKCFNBTUVfREFZEAESDAoITkVYVF9EQVkQ",
+            "AhILCgdUV09fREFZEAMSDQoJVEhSRUVfREFZEAQSDAoIRk9VUl9EQVkQBRIM",
+            "CghGSVZFX0RBWRAGEgsKB1NJWF9EQVkQBxINCglTRVZFTl9EQVkQCBIOCgpN",
+            "VUxUSV9XRUVLEAlCDwoNX2F2YWlsYWJpbGl0eUILCglfcXVhbnRpdHlCEAoO",
+            "X3BpY2t1cF9tZXRob2RCDQoLX3BpY2t1cF9zbGFCGwoZX2luc3RvcmVfcHJv",
+            "ZHVjdF9sb2NhdGlvbiLSAwoXSW52ZW50b3J5TG95YWx0eVByb2dyYW0SGgoN",
+            "cHJvZ3JhbV9sYWJlbBgBIAEoCUgAiAEBEhcKCnRpZXJfbGFiZWwYAiABKAlI",
+            "AYgBARIvCgVwcmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlBy",
+            "aWNlSAKIAQESQQoXY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2UYBCABKAsyGy5n",
+            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgDiAEBEhsKDmxveWFsdHlfcG9p",
+            "bnRzGAUgASgDSASIAQESQwofbWVtYmVyX3ByaWNlX2VmZmVjdGl2ZV9pbnRl",
+            "cnZhbBgGIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsSAWIAQESGwoOc2hp",
+            "cHBpbmdfbGFiZWwYByABKAlIBogBAUIQCg5fcHJvZ3JhbV9sYWJlbEINCgtf",
+            "dGllcl9sYWJlbEIICgZfcHJpY2VCGgoYX2Nhc2hiYWNrX2Zvcl9mdXR1cmVf",
+            "dXNlQhEKD19sb3lhbHR5X3BvaW50c0IiCiBfbWVtYmVyX3ByaWNlX2VmZmVj",
+            "dGl2ZV9pbnRlcnZhbEIRCg9fc2hpcHBpbmdfbGFiZWwiiQQKG1JlZ2lvbmFs",
+            "SW52ZW50b3J5QXR0cmlidXRlcxIvCgVwcmljZRgBIAEoCzIbLmdvb2dsZS5z",
+            "aG9wcGluZy50eXBlLlByaWNlQgPgQQESNAoKc2FsZV9wcmljZRgCIAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlQgPgQQESPQoZc2FsZV9wcmlj",
+            "ZV9lZmZlY3RpdmVfZGF0ZRgDIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFs",
+            "QgPgQQEScQoMYXZhaWxhYmlsaXR5GAQgASgOMlEuZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LmludmVudG9yaWVzLnYxLlJlZ2lvbmFsSW52ZW50b3J5QXR0",
+            "cmlidXRlcy5BdmFpbGFiaWxpdHlCA+BBAUgAiAEBEl8KEGxveWFsdHlfcHJv",
+            "Z3JhbXMYBSADKAsyQC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50",
+            "b3JpZXMudjEuSW52ZW50b3J5TG95YWx0eVByb2dyYW1CA+BBASJfCgxBdmFp",
+            "bGFiaWxpdHkSLworUkVHSU9OQUxfSU5WRU5UT1JZX0FWQUlMQUJJTElUWV9V",
+            "TlNQRUNJRklFRBAAEgwKCElOX1NUT0NLEAESEAoMT1VUX09GX1NUT0NLEAJC",
+            "DwoNX2F2YWlsYWJpbGl0eUKeAgorY29tLmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5pbnZlbnRvcmllcy52MUIWSW52ZW50b3JpZXNDb21tb25Qcm90b1AB",
+            "WlNjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L2ludmVu",
+            "dG9yaWVzL2FwaXYxL2ludmVudG9yaWVzcGI7aW52ZW50b3JpZXNwYqoCJ0dv",
+            "b2dsZS5TaG9wcGluZy5NZXJjaGFudC5JbnZlbnRvcmllcy5WMcoCJ0dvb2ds",
+            "ZVxTaG9wcGluZ1xNZXJjaGFudFxJbnZlbnRvcmllc1xWMeoCK0dvb2dsZTo6",
+            "U2hvcHBpbmc6Ok1lcmNoYW50OjpJbnZlbnRvcmllczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation" }, new[]{ "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.Availability), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupMethod), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupSla) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability" }, new[]{ "Availability" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Types.Availability) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation", "LoyaltyPrograms" }, new[]{ "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.Availability), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupMethod), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupSla) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram), global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram.Parser, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveInterval", "ShippingLabel" }, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveInterval", "ShippingLabel" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "LoyaltyPrograms" }, new[]{ "Availability" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Types.Availability) }, null, null)
           }));
     }
     #endregion
@@ -129,6 +144,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       pickupMethod_ = other.pickupMethod_;
       pickupSla_ = other.pickupSla_;
       instoreProductLocation_ = other.instoreProductLocation_;
+      loyaltyPrograms_ = other.loyaltyPrograms_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -344,6 +360,34 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       instoreProductLocation_ = null;
     }
 
+    /// <summary>Field number for the "loyalty_programs" field.</summary>
+    public const int LoyaltyProgramsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> _repeated_loyaltyPrograms_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> loyaltyPrograms_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram>();
+    /// <summary>
+    /// Optional. An optional list of loyalty programs containing applicable
+    /// loyalty member prices for this product at this store.
+    ///
+    /// This field is used to show store-specific member prices on Local
+    /// Inventory Ads (LIA).
+    ///
+    /// To use this, the loyalty program must be configured in Google Merchant
+    /// Center. The benefits provided must match the merchant's website and be
+    /// clear to members. This is only applicable for merchants in supported
+    /// countries.
+    ///
+    /// See [Loyalty program](https://support.google.com/merchants/answer/12922446)
+    /// for details on supported countries and loyalty program configuration.
+    /// For local inventory specific details, see the [Local inventory data
+    /// specification](https://support.google.com/merchants/answer/3061342).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> LoyaltyPrograms {
+      get { return loyaltyPrograms_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -367,6 +411,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (PickupMethod != other.PickupMethod) return false;
       if (PickupSla != other.PickupSla) return false;
       if (InstoreProductLocation != other.InstoreProductLocation) return false;
+      if(!loyaltyPrograms_.Equals(other.loyaltyPrograms_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -382,6 +427,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (HasPickupMethod) hash ^= PickupMethod.GetHashCode();
       if (HasPickupSla) hash ^= PickupSla.GetHashCode();
       if (HasInstoreProductLocation) hash ^= InstoreProductLocation.GetHashCode();
+      hash ^= loyaltyPrograms_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -432,6 +478,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(66);
         output.WriteString(InstoreProductLocation);
       }
+      loyaltyPrograms_.WriteTo(output, _repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -474,6 +521,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(66);
         output.WriteString(InstoreProductLocation);
       }
+      loyaltyPrograms_.WriteTo(ref output, _repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -508,6 +556,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (HasInstoreProductLocation) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InstoreProductLocation);
       }
+      size += loyaltyPrograms_.CalculateSize(_repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -553,6 +602,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (other.HasInstoreProductLocation) {
         InstoreProductLocation = other.InstoreProductLocation;
       }
+      loyaltyPrograms_.Add(other.loyaltyPrograms_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -613,6 +663,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             InstoreProductLocation = input.ReadString();
             break;
           }
+          case 82: {
+            loyaltyPrograms_.AddEntriesFrom(input, _repeated_loyaltyPrograms_codec);
+            break;
+          }
         }
       }
     #endif
@@ -671,6 +725,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
           }
           case 66: {
             InstoreProductLocation = input.ReadString();
+            break;
+          }
+          case 82: {
+            loyaltyPrograms_.AddEntriesFrom(ref input, _repeated_loyaltyPrograms_codec);
             break;
           }
         }
@@ -794,6 +852,548 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
   }
 
   /// <summary>
+  /// A message that represents loyalty program.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InventoryLoyaltyProgram : pb::IMessage<InventoryLoyaltyProgram>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InventoryLoyaltyProgram> _parser = new pb::MessageParser<InventoryLoyaltyProgram>(() => new InventoryLoyaltyProgram());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InventoryLoyaltyProgram> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Inventories.V1.InventoriesCommonReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InventoryLoyaltyProgram() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InventoryLoyaltyProgram(InventoryLoyaltyProgram other) : this() {
+      _hasBits0 = other._hasBits0;
+      programLabel_ = other.programLabel_;
+      tierLabel_ = other.tierLabel_;
+      price_ = other.price_ != null ? other.price_.Clone() : null;
+      cashbackForFutureUse_ = other.cashbackForFutureUse_ != null ? other.cashbackForFutureUse_.Clone() : null;
+      loyaltyPoints_ = other.loyaltyPoints_;
+      memberPriceEffectiveInterval_ = other.memberPriceEffectiveInterval_ != null ? other.memberPriceEffectiveInterval_.Clone() : null;
+      shippingLabel_ = other.shippingLabel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InventoryLoyaltyProgram Clone() {
+      return new InventoryLoyaltyProgram(this);
+    }
+
+    /// <summary>Field number for the "program_label" field.</summary>
+    public const int ProgramLabelFieldNumber = 1;
+    private readonly static string ProgramLabelDefaultValue = "";
+
+    private string programLabel_;
+    /// <summary>
+    /// The label of the loyalty program. This is an internal label that uniquely
+    /// identifies the relationship between a business entity and a loyalty
+    /// program entity. The label must be provided if there are multiple loyalty
+    /// programs available for the merchant, so that the system can associate
+    /// the assets below (for example, price and points) with the correct business.
+    /// The corresponding program must be linked to the Merchant Center account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProgramLabel {
+      get { return programLabel_ ?? ProgramLabelDefaultValue; }
+      set {
+        programLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "program_label" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProgramLabel {
+      get { return programLabel_ != null; }
+    }
+    /// <summary>Clears the value of the "program_label" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProgramLabel() {
+      programLabel_ = null;
+    }
+
+    /// <summary>Field number for the "tier_label" field.</summary>
+    public const int TierLabelFieldNumber = 2;
+    private readonly static string TierLabelDefaultValue = "";
+
+    private string tierLabel_;
+    /// <summary>
+    /// The label of the tier within the loyalty program.
+    /// Must match one of the labels within the program.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TierLabel {
+      get { return tierLabel_ ?? TierLabelDefaultValue; }
+      set {
+        tierLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "tier_label" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTierLabel {
+      get { return tierLabel_ != null; }
+    }
+    /// <summary>Clears the value of the "tier_label" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTierLabel() {
+      tierLabel_ = null;
+    }
+
+    /// <summary>Field number for the "price" field.</summary>
+    public const int PriceFieldNumber = 3;
+    private global::Google.Shopping.Type.Price price_;
+    /// <summary>
+    /// The price for members of the given tier, that is, the instant discount
+    /// price. Must be smaller or equal to the regular price.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price Price {
+      get { return price_; }
+      set {
+        price_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cashback_for_future_use" field.</summary>
+    public const int CashbackForFutureUseFieldNumber = 4;
+    private global::Google.Shopping.Type.Price cashbackForFutureUse_;
+    /// <summary>
+    /// The cashback that can be used for future purchases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price CashbackForFutureUse {
+      get { return cashbackForFutureUse_; }
+      set {
+        cashbackForFutureUse_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "loyalty_points" field.</summary>
+    public const int LoyaltyPointsFieldNumber = 5;
+    private readonly static long LoyaltyPointsDefaultValue = 0L;
+
+    private long loyaltyPoints_;
+    /// <summary>
+    /// The amount of loyalty points earned on a purchase.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LoyaltyPoints {
+      get { if ((_hasBits0 & 1) != 0) { return loyaltyPoints_; } else { return LoyaltyPointsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        loyaltyPoints_ = value;
+      }
+    }
+    /// <summary>Gets whether the "loyalty_points" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLoyaltyPoints {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "loyalty_points" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLoyaltyPoints() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "member_price_effective_interval" field.</summary>
+    public const int MemberPriceEffectiveIntervalFieldNumber = 6;
+    private global::Google.Type.Interval memberPriceEffectiveInterval_;
+    /// <summary>
+    /// A date range during which the item is eligible for member price. If not
+    /// specified, the member price is always applicable. The date range is
+    /// represented by a pair of ISO 8601 dates separated by a space,
+    /// comma, or slash.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Interval MemberPriceEffectiveInterval {
+      get { return memberPriceEffectiveInterval_; }
+      set {
+        memberPriceEffectiveInterval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shipping_label" field.</summary>
+    public const int ShippingLabelFieldNumber = 7;
+    private readonly static string ShippingLabelDefaultValue = "";
+
+    private string shippingLabel_;
+    /// <summary>
+    /// The label of the shipping benefit. If the field has value, this offer has
+    /// loyalty shipping benefit. If the field value isn't provided, the item is
+    /// not eligible for loyalty shipping for the given loyalty tier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShippingLabel {
+      get { return shippingLabel_ ?? ShippingLabelDefaultValue; }
+      set {
+        shippingLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "shipping_label" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasShippingLabel {
+      get { return shippingLabel_ != null; }
+    }
+    /// <summary>Clears the value of the "shipping_label" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearShippingLabel() {
+      shippingLabel_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InventoryLoyaltyProgram);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InventoryLoyaltyProgram other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProgramLabel != other.ProgramLabel) return false;
+      if (TierLabel != other.TierLabel) return false;
+      if (!object.Equals(Price, other.Price)) return false;
+      if (!object.Equals(CashbackForFutureUse, other.CashbackForFutureUse)) return false;
+      if (LoyaltyPoints != other.LoyaltyPoints) return false;
+      if (!object.Equals(MemberPriceEffectiveInterval, other.MemberPriceEffectiveInterval)) return false;
+      if (ShippingLabel != other.ShippingLabel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasProgramLabel) hash ^= ProgramLabel.GetHashCode();
+      if (HasTierLabel) hash ^= TierLabel.GetHashCode();
+      if (price_ != null) hash ^= Price.GetHashCode();
+      if (cashbackForFutureUse_ != null) hash ^= CashbackForFutureUse.GetHashCode();
+      if (HasLoyaltyPoints) hash ^= LoyaltyPoints.GetHashCode();
+      if (memberPriceEffectiveInterval_ != null) hash ^= MemberPriceEffectiveInterval.GetHashCode();
+      if (HasShippingLabel) hash ^= ShippingLabel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasProgramLabel) {
+        output.WriteRawTag(10);
+        output.WriteString(ProgramLabel);
+      }
+      if (HasTierLabel) {
+        output.WriteRawTag(18);
+        output.WriteString(TierLabel);
+      }
+      if (price_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Price);
+      }
+      if (cashbackForFutureUse_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CashbackForFutureUse);
+      }
+      if (HasLoyaltyPoints) {
+        output.WriteRawTag(40);
+        output.WriteInt64(LoyaltyPoints);
+      }
+      if (memberPriceEffectiveInterval_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MemberPriceEffectiveInterval);
+      }
+      if (HasShippingLabel) {
+        output.WriteRawTag(58);
+        output.WriteString(ShippingLabel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasProgramLabel) {
+        output.WriteRawTag(10);
+        output.WriteString(ProgramLabel);
+      }
+      if (HasTierLabel) {
+        output.WriteRawTag(18);
+        output.WriteString(TierLabel);
+      }
+      if (price_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Price);
+      }
+      if (cashbackForFutureUse_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CashbackForFutureUse);
+      }
+      if (HasLoyaltyPoints) {
+        output.WriteRawTag(40);
+        output.WriteInt64(LoyaltyPoints);
+      }
+      if (memberPriceEffectiveInterval_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MemberPriceEffectiveInterval);
+      }
+      if (HasShippingLabel) {
+        output.WriteRawTag(58);
+        output.WriteString(ShippingLabel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasProgramLabel) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProgramLabel);
+      }
+      if (HasTierLabel) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TierLabel);
+      }
+      if (price_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Price);
+      }
+      if (cashbackForFutureUse_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CashbackForFutureUse);
+      }
+      if (HasLoyaltyPoints) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LoyaltyPoints);
+      }
+      if (memberPriceEffectiveInterval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemberPriceEffectiveInterval);
+      }
+      if (HasShippingLabel) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShippingLabel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InventoryLoyaltyProgram other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasProgramLabel) {
+        ProgramLabel = other.ProgramLabel;
+      }
+      if (other.HasTierLabel) {
+        TierLabel = other.TierLabel;
+      }
+      if (other.price_ != null) {
+        if (price_ == null) {
+          Price = new global::Google.Shopping.Type.Price();
+        }
+        Price.MergeFrom(other.Price);
+      }
+      if (other.cashbackForFutureUse_ != null) {
+        if (cashbackForFutureUse_ == null) {
+          CashbackForFutureUse = new global::Google.Shopping.Type.Price();
+        }
+        CashbackForFutureUse.MergeFrom(other.CashbackForFutureUse);
+      }
+      if (other.HasLoyaltyPoints) {
+        LoyaltyPoints = other.LoyaltyPoints;
+      }
+      if (other.memberPriceEffectiveInterval_ != null) {
+        if (memberPriceEffectiveInterval_ == null) {
+          MemberPriceEffectiveInterval = new global::Google.Type.Interval();
+        }
+        MemberPriceEffectiveInterval.MergeFrom(other.MemberPriceEffectiveInterval);
+      }
+      if (other.HasShippingLabel) {
+        ShippingLabel = other.ShippingLabel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProgramLabel = input.ReadString();
+            break;
+          }
+          case 18: {
+            TierLabel = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (price_ == null) {
+              Price = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(Price);
+            break;
+          }
+          case 34: {
+            if (cashbackForFutureUse_ == null) {
+              CashbackForFutureUse = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(CashbackForFutureUse);
+            break;
+          }
+          case 40: {
+            LoyaltyPoints = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            if (memberPriceEffectiveInterval_ == null) {
+              MemberPriceEffectiveInterval = new global::Google.Type.Interval();
+            }
+            input.ReadMessage(MemberPriceEffectiveInterval);
+            break;
+          }
+          case 58: {
+            ShippingLabel = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProgramLabel = input.ReadString();
+            break;
+          }
+          case 18: {
+            TierLabel = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (price_ == null) {
+              Price = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(Price);
+            break;
+          }
+          case 34: {
+            if (cashbackForFutureUse_ == null) {
+              CashbackForFutureUse = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(CashbackForFutureUse);
+            break;
+          }
+          case 40: {
+            LoyaltyPoints = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            if (memberPriceEffectiveInterval_ == null) {
+              MemberPriceEffectiveInterval = new global::Google.Type.Interval();
+            }
+            input.ReadMessage(MemberPriceEffectiveInterval);
+            break;
+          }
+          case 58: {
+            ShippingLabel = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Regional inventory attributes.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -812,7 +1412,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Inventories.V1.InventoriesCommonReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Shopping.Merchant.Inventories.V1.InventoriesCommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -837,6 +1437,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       salePrice_ = other.salePrice_ != null ? other.salePrice_.Clone() : null;
       salePriceEffectiveDate_ = other.salePriceEffectiveDate_ != null ? other.salePriceEffectiveDate_.Clone() : null;
       availability_ = other.availability_;
+      loyaltyPrograms_ = other.loyaltyPrograms_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -926,6 +1527,38 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "loyalty_programs" field.</summary>
+    public const int LoyaltyProgramsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> _repeated_loyaltyPrograms_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> loyaltyPrograms_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram>();
+    /// <summary>
+    /// Optional. An optional list of loyalty programs containing applicable
+    /// loyalty member prices for this product in this region.
+    ///
+    /// This field is used to show region-specific member prices on Product
+    /// Listing Ads (PLA).
+    ///
+    /// To use this, the loyalty program must be configured in Google Merchant
+    /// Center, and the merchant must be using the Regional Availability and
+    /// Pricing (RAAP) feature. The benefits provided must match the merchant's
+    /// website and be clear to members. This is only applicable for merchants in
+    /// supported countries.
+    ///
+    /// See [Loyalty program](https://support.google.com/merchants/answer/12922446)
+    /// for details on supported countries and loyalty program configuration.
+    /// Also see [Regional availability and
+    /// pricing](https://support.google.com/merchants/answer/14644124) and [How to
+    /// set up regional member
+    /// pricing](https://support.google.com/merchants/answer/16388178) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> LoyaltyPrograms {
+      get { return loyaltyPrograms_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -945,6 +1578,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (!object.Equals(SalePrice, other.SalePrice)) return false;
       if (!object.Equals(SalePriceEffectiveDate, other.SalePriceEffectiveDate)) return false;
       if (Availability != other.Availability) return false;
+      if(!loyaltyPrograms_.Equals(other.loyaltyPrograms_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -956,6 +1590,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (salePrice_ != null) hash ^= SalePrice.GetHashCode();
       if (salePriceEffectiveDate_ != null) hash ^= SalePriceEffectiveDate.GetHashCode();
       if (HasAvailability) hash ^= Availability.GetHashCode();
+      hash ^= loyaltyPrograms_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -990,6 +1625,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) Availability);
       }
+      loyaltyPrograms_.WriteTo(output, _repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1016,6 +1652,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) Availability);
       }
+      loyaltyPrograms_.WriteTo(ref output, _repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1038,6 +1675,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (HasAvailability) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Availability);
       }
+      size += loyaltyPrograms_.CalculateSize(_repeated_loyaltyPrograms_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1071,6 +1709,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (other.HasAvailability) {
         Availability = other.Availability;
       }
+      loyaltyPrograms_.Add(other.loyaltyPrograms_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1115,6 +1754,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             Availability = (global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Types.Availability) input.ReadEnum();
             break;
           }
+          case 42: {
+            loyaltyPrograms_.AddEntriesFrom(input, _repeated_loyaltyPrograms_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1157,6 +1800,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
           }
           case 32: {
             Availability = (global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Types.Availability) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            loyaltyPrograms_.AddEntriesFrom(ref input, _repeated_loyaltyPrograms_codec);
             break;
           }
         }

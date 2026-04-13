@@ -31,56 +31,57 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aG2dv",
             "b2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxpAZ29vZ2xlL3Nob3BwaW5nL21l",
             "cmNoYW50L2ludmVudG9yaWVzL3YxL2ludmVudG9yaWVzX2NvbW1vbi5wcm90",
-            "byK9AgoRUmVnaW9uYWxJbnZlbnRvcnkSEQoEbmFtZRgBIAEoCUID4EEDEhQK",
-            "B2FjY291bnQYAiABKANCA+BBAxIWCgZyZWdpb24YAyABKAlCBuBBAuBBBRJw",
-            "Ch1yZWdpb25hbF9pbnZlbnRvcnlfYXR0cmlidXRlcxgJIAEoCzJELmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5SZWdpb25hbElu",
-            "dmVudG9yeUF0dHJpYnV0ZXNCA+BBATp16kFyCixtZXJjaGFudGFwaS5nb29n",
-            "bGVhcGlzLmNvbS9SZWdpb25hbEludmVudG9yeRJCYWNjb3VudHMve2FjY291",
-            "bnR9L3Byb2R1Y3RzL3twcm9kdWN0fS9yZWdpb25hbEludmVudG9yaWVzL3ty",
-            "ZWdpb259Io0BCh5MaXN0UmVnaW9uYWxJbnZlbnRvcmllc1JlcXVlc3QSRAoG",
-            "cGFyZW50GAEgASgJQjTgQQL6QS4SLG1lcmNoYW50YXBpLmdvb2dsZWFwaXMu",
-            "Y29tL1JlZ2lvbmFsSW52ZW50b3J5EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAMgASgJIpQBCh9MaXN0UmVnaW9uYWxJbnZlbnRvcmllc1Jl",
-            "c3BvbnNlElgKFHJlZ2lvbmFsX2ludmVudG9yaWVzGAEgAygLMjouZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxLlJlZ2lvbmFsSW52",
-            "ZW50b3J5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLDAQoeSW5zZXJ0UmVn",
-            "aW9uYWxJbnZlbnRvcnlSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI04EEC+kEu",
-            "EixtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9SZWdpb25hbEludmVudG9y",
-            "eRJbChJyZWdpb25hbF9pbnZlbnRvcnkYAiABKAsyOi5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVnaW9uYWxJbnZlbnRvcnlC",
-            "A+BBAiJkCh5EZWxldGVSZWdpb25hbEludmVudG9yeVJlcXVlc3QSQgoEbmFt",
-            "ZRgBIAEoCUI04EEC+kEuCixtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9S",
-            "ZWdpb25hbEludmVudG9yeTK/BgoYUmVnaW9uYWxJbnZlbnRvcnlTZXJ2aWNl",
-            "EoECChdMaXN0UmVnaW9uYWxJbnZlbnRvcmllcxJHLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5MaXN0UmVnaW9uYWxJbnZlbnRv",
-            "cmllc1JlcXVlc3QaSC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50",
-            "b3JpZXMudjEuTGlzdFJlZ2lvbmFsSW52ZW50b3JpZXNSZXNwb25zZSJT2kEG",
-            "cGFyZW50gtPkkwJEEkIvaW52ZW50b3JpZXMvdjEve3BhcmVudD1hY2NvdW50",
-            "cy8qL3Byb2R1Y3RzLyp9L3JlZ2lvbmFsSW52ZW50b3JpZXMShQIKF0luc2Vy",
-            "dFJlZ2lvbmFsSW52ZW50b3J5EkcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LmludmVudG9yaWVzLnYxLkluc2VydFJlZ2lvbmFsSW52ZW50b3J5UmVxdWVz",
-            "dBo6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5S",
-            "ZWdpb25hbEludmVudG9yeSJlgtPkkwJfIkkvaW52ZW50b3JpZXMvdjEve3Bh",
-            "cmVudD1hY2NvdW50cy8qL3Byb2R1Y3RzLyp9L3JlZ2lvbmFsSW52ZW50b3Jp",
-            "ZXM6aW5zZXJ0OhJyZWdpb25hbF9pbnZlbnRvcnkSzQEKF0RlbGV0ZVJlZ2lv",
-            "bmFsSW52ZW50b3J5EkcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVu",
-            "dG9yaWVzLnYxLkRlbGV0ZVJlZ2lvbmFsSW52ZW50b3J5UmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJR2kEEbmFtZYLT5JMCRCpCL2ludmVudG9y",
-            "aWVzL3YxL3tuYW1lPWFjY291bnRzLyovcHJvZHVjdHMvKi9yZWdpb25hbElu",
-            "dmVudG9yaWVzLyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJB",
-            "J2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKeAgor",
-            "Y29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MUIW",
-            "UmVnaW9uYWxJbnZlbnRvcnlQcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dv",
-            "L3Nob3BwaW5nL21lcmNoYW50L2ludmVudG9yaWVzL2FwaXYxL2ludmVudG9y",
-            "aWVzcGI7aW52ZW50b3JpZXNwYqoCJ0dvb2dsZS5TaG9wcGluZy5NZXJjaGFu",
-            "dC5JbnZlbnRvcmllcy5WMcoCJ0dvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxJ",
-            "bnZlbnRvcmllc1xWMeoCK0dvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpJ",
-            "bnZlbnRvcmllczo6VjFiBnByb3RvMw=="));
+            "byLfAgoRUmVnaW9uYWxJbnZlbnRvcnkSEQoEbmFtZRgBIAEoCUID4EEDEiAK",
+            "E2Jhc2U2NF9lbmNvZGVkX25hbWUYCiABKAlCA+BBAxIUCgdhY2NvdW50GAIg",
+            "ASgDQgPgQQMSFgoGcmVnaW9uGAMgASgJQgbgQQLgQQUScAodcmVnaW9uYWxf",
+            "aW52ZW50b3J5X2F0dHJpYnV0ZXMYCSABKAsyRC5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVnaW9uYWxJbnZlbnRvcnlBdHRy",
+            "aWJ1dGVzQgPgQQE6depBcgosbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20v",
+            "UmVnaW9uYWxJbnZlbnRvcnkSQmFjY291bnRzL3thY2NvdW50fS9wcm9kdWN0",
+            "cy97cHJvZHVjdH0vcmVnaW9uYWxJbnZlbnRvcmllcy97cmVnaW9ufSKNAQoe",
+            "TGlzdFJlZ2lvbmFsSW52ZW50b3JpZXNSZXF1ZXN0EkQKBnBhcmVudBgBIAEo",
+            "CUI04EEC+kEuEixtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9SZWdpb25h",
+            "bEludmVudG9yeRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCSKUAQofTGlzdFJlZ2lvbmFsSW52ZW50b3JpZXNSZXNwb25zZRJYChRy",
+            "ZWdpb25hbF9pbnZlbnRvcmllcxgBIAMoCzI6Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5pbnZlbnRvcmllcy52MS5SZWdpb25hbEludmVudG9yeRIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiwwEKHkluc2VydFJlZ2lvbmFsSW52ZW50",
+            "b3J5UmVxdWVzdBJECgZwYXJlbnQYASABKAlCNOBBAvpBLhIsbWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb20vUmVnaW9uYWxJbnZlbnRvcnkSWwoScmVnaW9u",
+            "YWxfaW52ZW50b3J5GAIgASgLMjouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LmludmVudG9yaWVzLnYxLlJlZ2lvbmFsSW52ZW50b3J5QgPgQQIiZAoeRGVs",
+            "ZXRlUmVnaW9uYWxJbnZlbnRvcnlSZXF1ZXN0EkIKBG5hbWUYASABKAlCNOBB",
+            "AvpBLgosbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vUmVnaW9uYWxJbnZl",
+            "bnRvcnkyvwYKGFJlZ2lvbmFsSW52ZW50b3J5U2VydmljZRKBAgoXTGlzdFJl",
+            "Z2lvbmFsSW52ZW50b3JpZXMSRy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "aW52ZW50b3JpZXMudjEuTGlzdFJlZ2lvbmFsSW52ZW50b3JpZXNSZXF1ZXN0",
+            "GkguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxLkxp",
+            "c3RSZWdpb25hbEludmVudG9yaWVzUmVzcG9uc2UiU9pBBnBhcmVudILT5JMC",
+            "RBJCL2ludmVudG9yaWVzL3YxL3twYXJlbnQ9YWNjb3VudHMvKi9wcm9kdWN0",
+            "cy8qfS9yZWdpb25hbEludmVudG9yaWVzEoUCChdJbnNlcnRSZWdpb25hbElu",
+            "dmVudG9yeRJHLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmll",
+            "cy52MS5JbnNlcnRSZWdpb25hbEludmVudG9yeVJlcXVlc3QaOi5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVnaW9uYWxJbnZl",
+            "bnRvcnkiZYLT5JMCXyJJL2ludmVudG9yaWVzL3YxL3twYXJlbnQ9YWNjb3Vu",
+            "dHMvKi9wcm9kdWN0cy8qfS9yZWdpb25hbEludmVudG9yaWVzOmluc2VydDoS",
+            "cmVnaW9uYWxfaW52ZW50b3J5Es0BChdEZWxldGVSZWdpb25hbEludmVudG9y",
+            "eRJHLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5E",
+            "ZWxldGVSZWdpb25hbEludmVudG9yeVJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkiUdpBBG5hbWWC0+STAkQqQi9pbnZlbnRvcmllcy92MS97bmFt",
+            "ZT1hY2NvdW50cy8qL3Byb2R1Y3RzLyovcmVnaW9uYWxJbnZlbnRvcmllcy8q",
+            "fRpHykEabWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb23SQSdodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbnRlbnRCngIKK2NvbS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjFCFlJlZ2lvbmFsSW52",
+            "ZW50b3J5UHJvdG9QAVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9t",
+            "ZXJjaGFudC9pbnZlbnRvcmllcy9hcGl2MS9pbnZlbnRvcmllc3BiO2ludmVu",
+            "dG9yaWVzcGKqAidHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuSW52ZW50b3Jp",
+            "ZXMuVjHKAidHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcSW52ZW50b3JpZXNc",
+            "VjHqAitHb29nbGU6OlNob3BwaW5nOjpNZXJjaGFudDo6SW52ZW50b3JpZXM6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Inventories.V1.InventoriesCommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory.Parser, new[]{ "Name", "Account", "Region", "RegionalInventoryAttributes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory.Parser, new[]{ "Name", "Base64EncodedName", "Account", "Region", "RegionalInventoryAttributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest), global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesResponse), global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesResponse.Parser, new[]{ "RegionalInventories", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest), global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest.Parser, new[]{ "Parent", "RegionalInventory" }, null, null, null, null),
@@ -135,6 +136,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegionalInventory(RegionalInventory other) : this() {
       name_ = other.name_;
+      base64EncodedName_ = other.base64EncodedName_;
       account_ = other.account_;
       region_ = other.region_;
       regionalInventoryAttributes_ = other.regionalInventoryAttributes_ != null ? other.regionalInventoryAttributes_.Clone() : null;
@@ -153,7 +155,39 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     /// <summary>
     /// Output only. The name of the `RegionalInventory` resource.
     /// Format:
-    /// `{regional_inventory.name=accounts/{account}/products/{product}/regionalInventories/{region}`
+    /// `accounts/{account}/products/{product}/regionalInventories/{region}`
+    ///
+    /// The `{product}` segment is a unique identifier for the product.
+    /// This identifier must be unique within a merchant account and generally
+    /// follows the structure: `content_language~feed_label~offer_id`. Example:
+    /// `en~US~sku123` For legacy local products, the structure is:
+    /// `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123`
+    ///
+    /// The format of the `{product}` segment in the URL is automatically detected
+    /// by the server, supporting two options:
+    ///
+    /// 1.  **Encoded Format**: The `{product}` segment is an
+    ///     **unpadded base64url** encoded string (RFC 4648 Section 5). The
+    ///     decoded string
+    ///     must result in the `content_language~feed_label~offer_id` structure.
+    ///     This encoding MUST be used if any part of the product identifier
+    ///     (like `offer_id`) contains characters such as `/`, `%`, or `~`.
+    ///     *   Example: To represent the product ID `en~US~sku/123` for
+    ///         `region` "region123", the `{product}` segment must be the
+    ///         unpadded base64url encoding of this string, which is
+    ///         `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional
+    ///         inventory would be
+    ///         `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`.
+    ///
+    /// 2.  **Plain Format**: The `{product}` segment is the tilde-separated string
+    ///     `content_language~feed_label~offer_id`. This format is suitable only
+    ///     when `content_language`, `feed_label`, and `offer_id` do not contain
+    ///     URL-problematic characters like `/`, `%`, or `~`.
+    ///
+    /// We recommend using the **Encoded Format** for all product IDs to ensure
+    /// correct parsing, especially those containing special characters. The
+    /// presence of tilde (`~`) characters in the `{product}` segment is used to
+    /// differentiate between the two formats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,6 +195,31 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "base64_encoded_name" field.</summary>
+    public const int Base64EncodedNameFieldNumber = 10;
+    private string base64EncodedName_ = "";
+    /// <summary>
+    /// Output only. The unpadded base64url encoded name of the `RegionalInventory`
+    /// resource. Format:
+    /// `accounts/{account}/products/{product}/regionalInventories/{region}`
+    /// where the `{product}` segment is the unpadded base64url encoded value of
+    /// the identifier of the form `content_language~feed_label~offer_id`. Example:
+    /// `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`
+    /// for the decoded product ID `en~US~sku/123` and `region` "region123".
+    /// Can be used directly as input to the API methods that require the product
+    /// identifier within the regional inventory name to be encoded if it contains
+    /// special characters, for example
+    /// [`GetRegionalInventory`](https://developers.google.com/merchant/api/reference/rest/inventories_v1/accounts.products.regionalInventories/get).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Base64EncodedName {
+      get { return base64EncodedName_; }
+      set {
+        base64EncodedName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -229,6 +288,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Base64EncodedName != other.Base64EncodedName) return false;
       if (Account != other.Account) return false;
       if (Region != other.Region) return false;
       if (!object.Equals(RegionalInventoryAttributes, other.RegionalInventoryAttributes)) return false;
@@ -240,6 +300,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Base64EncodedName.Length != 0) hash ^= Base64EncodedName.GetHashCode();
       if (Account != 0L) hash ^= Account.GetHashCode();
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (regionalInventoryAttributes_ != null) hash ^= RegionalInventoryAttributes.GetHashCode();
@@ -277,6 +338,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(RegionalInventoryAttributes);
       }
+      if (Base64EncodedName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Base64EncodedName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -303,6 +368,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(RegionalInventoryAttributes);
       }
+      if (Base64EncodedName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Base64EncodedName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -315,6 +384,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Base64EncodedName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Base64EncodedName);
       }
       if (Account != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Account);
@@ -339,6 +411,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Base64EncodedName.Length != 0) {
+        Base64EncodedName = other.Base64EncodedName;
       }
       if (other.Account != 0L) {
         Account = other.Account;
@@ -390,6 +465,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             input.ReadMessage(RegionalInventoryAttributes);
             break;
           }
+          case 82: {
+            Base64EncodedName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -426,6 +505,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
               RegionalInventoryAttributes = new global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes();
             }
             input.ReadMessage(RegionalInventoryAttributes);
+            break;
+          }
+          case 82: {
+            Base64EncodedName = input.ReadString();
             break;
           }
         }
@@ -491,6 +574,37 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     /// <summary>
     /// Required. The `name` of the parent product to list `RegionalInventory`
     /// resources for. Format: `accounts/{account}/products/{product}`
+    ///
+    /// The `{product}` segment is a unique identifier for the product.
+    /// This identifier must be unique within a merchant account and generally
+    /// follows the structure: `content_language~feed_label~offer_id`. Example:
+    /// `en~US~sku123` For legacy local products, the structure is:
+    /// `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123`
+    ///
+    /// The format of the `{product}` segment in the URL is automatically detected
+    /// by the server, supporting two options:
+    ///
+    /// 1.  **Encoded Format**: The `{product}` segment is an
+    ///     **unpadded base64url** encoded string (RFC 4648 Section 5). The
+    ///     decoded string
+    ///     must result in the `content_language~feed_label~offer_id` structure.
+    ///     This encoding MUST be used if any part of the product identifier (like
+    ///     `offer_id`) contains characters such as `/`, `%`, or `~`.
+    ///     *   Example: To represent the product ID `en~US~sku/123`, the
+    ///         `{product}` segment must be the unpadded base64url encoding of this
+    ///         string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name
+    ///         for the product would be
+    ///         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`.
+    ///
+    /// 2.  **Plain Format**: The `{product}` segment is the tilde-separated string
+    ///     `content_language~feed_label~offer_id`. This format is suitable only
+    ///     when `content_language`, `feed_label`, and `offer_id` do not contain
+    ///     URL-problematic characters like `/`, `%`, or `~`.
+    ///
+    /// We recommend using the **Encoded Format** for all product IDs to ensure
+    /// correct parsing, especially those containing special characters. The
+    /// presence of tilde (`~`) characters in the `{product}` segment is used to
+    /// differentiate between the two formats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1020,6 +1134,37 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     /// <summary>
     /// Required. The account and product where this inventory will be inserted.
     /// Format: `accounts/{account}/products/{product}`
+    ///
+    /// The `{product}` segment is a unique identifier for the product.
+    /// This identifier must be unique within a merchant account and generally
+    /// follows the structure: `content_language~feed_label~offer_id`. Example:
+    /// `en~US~sku123` For legacy local products, the structure is:
+    /// `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123`
+    ///
+    /// The format of the `{product}` segment in the URL is automatically detected
+    /// by the server, supporting two options:
+    ///
+    /// 1.  **Encoded Format**: The `{product}` segment is an
+    ///     **unpadded base64url** encoded string (RFC 4648 Section 5). The
+    ///     decoded string
+    ///     must result in the `content_language~feed_label~offer_id` structure.
+    ///     This encoding MUST be used if any part of the product identifier (like
+    ///     `offer_id`) contains characters such as `/`, `%`, or `~`.
+    ///     *   Example: To represent the product ID `en~US~sku/123`, the
+    ///         `{product}` segment must be the unpadded base64url encoding of this
+    ///         string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name
+    ///         for the product would be
+    ///         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`.
+    ///
+    /// 2.  **Plain Format**: The `{product}` segment is the tilde-separated string
+    ///     `content_language~feed_label~offer_id`. This format is suitable only
+    ///     when `content_language`, `feed_label`, and `offer_id` do not contain
+    ///     URL-problematic characters like `/`, `%`, or `~`.
+    ///
+    /// We recommend using the **Encoded Format** for all product IDs to ensure
+    /// correct parsing, especially those containing special characters. The
+    /// presence of tilde (`~`) characters in the `{product}` segment is used to
+    /// differentiate between the two formats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1276,6 +1421,38 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     /// Required. The name of the `RegionalInventory` resource to delete.
     /// Format:
     /// `accounts/{account}/products/{product}/regionalInventories/{region}`
+    ///
+    /// The `{product}` segment is a unique identifier for the product.
+    /// This identifier must be unique within a merchant account and generally
+    /// follows the structure: `content_language~feed_label~offer_id`. Example:
+    /// `en~US~sku123` For legacy local products, the structure is:
+    /// `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123`
+    ///
+    /// The format of the `{product}` segment in the URL is automatically detected
+    /// by the server, supporting two options:
+    ///
+    /// 1.  **Encoded Format**: The `{product}` segment is an
+    ///     **unpadded base64url** encoded string (RFC 4648 Section 5). The
+    ///     decoded string
+    ///     must result in the `content_language~feed_label~offer_id` structure.
+    ///     This encoding MUST be used if any part of the product identifier (like
+    ///     `offer_id`) contains characters such as `/`, `%`, or `~`.
+    ///     *   Example: To represent the product ID `en~US~sku/123` for
+    ///         `region` "region123", the `{product}` segment must be the
+    ///         unpadded base64url encoding of this string, which is
+    ///         `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional
+    ///         inventory would be
+    ///         `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`.
+    ///
+    /// 2.  **Plain Format**: The `{product}` segment is the tilde-separated string
+    ///     `content_language~feed_label~offer_id`. This format is suitable only
+    ///     when `content_language`, `feed_label`, and `offer_id` do not contain
+    ///     URL-problematic characters like `/`, `%`, or `~`.
+    ///
+    /// We recommend using the **Encoded Format** for all product IDs to ensure
+    /// correct parsing, especially those containing special characters. The
+    /// presence of tilde (`~`) characters in the `{product}` segment is used to
+    /// differentiate between the two formats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
