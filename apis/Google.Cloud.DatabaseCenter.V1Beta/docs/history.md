@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-04-13
+
+### New features
+
+- Add support for BigQuery datasets and reservations
+- Introduce resource affiliation and lineage tracking
+- Enhance maintenance information with state, upcoming maintenance, and failure reasons
+
 ## Version 1.0.0-beta06, released 2026-03-23
 
 ### New features
