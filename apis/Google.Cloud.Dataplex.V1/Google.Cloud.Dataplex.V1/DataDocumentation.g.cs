@@ -32,29 +32,52 @@ namespace Google.Cloud.Dataplex.V1 {
             "bGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uU3BlYy5HZW5lcmF0aW9uU2NvcGVC",
             "A+BBASJwCg9HZW5lcmF0aW9uU2NvcGUSIAocR0VORVJBVElPTl9TQ09QRV9V",
             "TlNQRUNJRklFRBAAEgcKA0FMTBABEiEKHVRBQkxFX0FORF9DT0xVTU5fREVT",
-            "Q1JJUFRJT05TEAISDwoLU1FMX1FVRVJJRVMQAyLpBAoXRGF0YURvY3VtZW50",
-            "YXRpb25SZXN1bHQSWgoMdGFibGVfcmVzdWx0GAggASgLMj0uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVzdWx0LlRhYmxl",
-            "UmVzdWx0QgPgQQNIABrVAQoLVGFibGVSZXN1bHQSEQoEbmFtZRgBIAEoCUID",
-            "4EEDEhUKCG92ZXJ2aWV3GAIgASgJQgPgQQMSTQoGc2NoZW1hGAMgASgLMjgu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVz",
-            "dWx0LlNjaGVtYUID4EEDEk0KB3F1ZXJpZXMYBCADKAsyNy5nb29nbGUuY2xv",
-            "dWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHQuUXVlcnlC",
-            "A+BBAxozCgVRdWVyeRIQCgNzcWwYASABKAlCA+BBAxIYCgtkZXNjcmlwdGlv",
-            "bhgCIAEoCUID4EEDGlYKBlNjaGVtYRJMCgZmaWVsZHMYASADKAsyNy5nb29n",
+            "Q1JJUFRJT05TEAISDwoLU1FMX1FVRVJJRVMQAyKoDAoXRGF0YURvY3VtZW50",
+            "YXRpb25SZXN1bHQSXgoOZGF0YXNldF9yZXN1bHQYByABKAsyPy5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHQuRGF0",
+            "YXNldFJlc3VsdEID4EEDSAASWgoMdGFibGVfcmVzdWx0GAggASgLMj0uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVzdWx0",
+            "LlRhYmxlUmVzdWx0QgPgQQNIABreAQoNRGF0YXNldFJlc3VsdBIVCghvdmVy",
+            "dmlldxgBIAEoCUID4EEDEmcKFHNjaGVtYV9yZWxhdGlvbnNoaXBzGAMgAygL",
+            "MkQuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9u",
+            "UmVzdWx0LlNjaGVtYVJlbGF0aW9uc2hpcEID4EEDEk0KB3F1ZXJpZXMYBCAD",
+            "KAsyNy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRp",
+            "b25SZXN1bHQuUXVlcnlCA+BBAxrVAQoLVGFibGVSZXN1bHQSEQoEbmFtZRgB",
+            "IAEoCUID4EEDEhUKCG92ZXJ2aWV3GAIgASgJQgPgQQMSTQoGc2NoZW1hGAMg",
+            "ASgLMjguZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0",
+            "aW9uUmVzdWx0LlNjaGVtYUID4EEDEk0KB3F1ZXJpZXMYBCADKAsyNy5nb29n",
             "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHQu",
-            "RmllbGRCA+BBAxqCAQoFRmllbGQSEQoEbmFtZRgBIAEoCUID4EEDEhgKC2Rl",
-            "c2NyaXB0aW9uGAIgASgJQgPgQQMSTAoGZmllbGRzGAMgAygLMjcuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9uUmVzdWx0LkZp",
-            "ZWxkQgPgQQNCCAoGcmVzdWx0QnIKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjFCFkRhdGFEb2N1bWVudGF0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBiO2RhdGFwbGV4cGJi",
-            "BnByb3RvMw=="));
+            "UXVlcnlCA+BBAxr7BAoSU2NoZW1hUmVsYXRpb25zaGlwEnAKEWxlZnRfc2No",
+            "ZW1hX3BhdGhzGAEgASgLMlAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRh",
+            "dGFEb2N1bWVudGF0aW9uUmVzdWx0LlNjaGVtYVJlbGF0aW9uc2hpcC5TY2hl",
+            "bWFQYXRoc0ID4EEDEnEKEnJpZ2h0X3NjaGVtYV9wYXRocxgCIAEoCzJQLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhRG9jdW1lbnRhdGlvblJlc3Vs",
+            "dC5TY2hlbWFSZWxhdGlvbnNoaXAuU2NoZW1hUGF0aHNCA+BBAxJhCgdzb3Vy",
+            "Y2VzGAQgAygOMksuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1",
+            "bWVudGF0aW9uUmVzdWx0LlNjaGVtYVJlbGF0aW9uc2hpcC5Tb3VyY2VCA+BB",
+            "AxJcCgR0eXBlGAYgASgOMkkuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRh",
+            "dGFEb2N1bWVudGF0aW9uUmVzdWx0LlNjaGVtYVJlbGF0aW9uc2hpcC5UeXBl",
+            "QgPgQQMaOQoLU2NoZW1hUGF0aHMSFgoJdGFibGVfZnFuGAEgASgJQgPgQQMS",
+            "EgoFcGF0aHMYAiADKAlCA+BBAyJVCgZTb3VyY2USFgoSU09VUkNFX1VOU1BF",
+            "Q0lGSUVEEAASCQoFQUdFTlQQBBIRCg1RVUVSWV9ISVNUT1JZEAUSFQoRVEFC",
+            "TEVfQ09OU1RSQUlOVFMQBiItCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIPCgtTQ0hFTUFfSk9JThABGjMKBVF1ZXJ5EhAKA3NxbBgBIAEoCUID4EED",
+            "EhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQMaVgoGU2NoZW1hEkwKBmZpZWxk",
+            "cxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhRG9jdW1l",
+            "bnRhdGlvblJlc3VsdC5GaWVsZEID4EEDGoIBCgVGaWVsZBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBAxJMCgZmaWVsZHMY",
+            "AyADKAsyNy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50",
+            "YXRpb25SZXN1bHQuRmllbGRCA+BBA0IICgZyZXN1bHRCcgocY29tLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MUIWRGF0YURvY3VtZW50YXRpb25Qcm90b1AB",
+            "WjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4",
+            "cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationSpec), global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Parser, new[]{ "CatalogPublishingEnabled", "GenerationScopes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationSpec.Types.GenerationScope) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Parser, new[]{ "TableResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult.Parser, new[]{ "Name", "Overview", "Schema", "Queries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Parser, new[]{ "DatasetResult", "TableResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult.Parser, new[]{ "Overview", "SchemaRelationships", "Queries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult.Parser, new[]{ "Name", "Overview", "Schema", "Queries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Parser, new[]{ "LeftSchemaPaths", "RightSchemaPaths", "Sources", "Type" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source), typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths.Parser, new[]{ "TableFqn", "Paths" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query.Parser, new[]{ "Sql", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Schema), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Schema.Parser, new[]{ "Fields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Field), global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Field.Parser, new[]{ "Name", "Description", "Fields" }, null, null, null, null)})
@@ -373,6 +396,9 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataDocumentationResult(DataDocumentationResult other) : this() {
       switch (other.ResultCase) {
+        case ResultOneofCase.DatasetResult:
+          DatasetResult = other.DatasetResult.Clone();
+          break;
         case ResultOneofCase.TableResult:
           TableResult = other.TableResult.Clone();
           break;
@@ -387,10 +413,25 @@ namespace Google.Cloud.Dataplex.V1 {
       return new DataDocumentationResult(this);
     }
 
+    /// <summary>Field number for the "dataset_result" field.</summary>
+    public const int DatasetResultFieldNumber = 7;
+    /// <summary>
+    /// Output only. Insights for a Dataset resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult DatasetResult {
+      get { return resultCase_ == ResultOneofCase.DatasetResult ? (global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.DatasetResult;
+      }
+    }
+
     /// <summary>Field number for the "table_result" field.</summary>
     public const int TableResultFieldNumber = 8;
     /// <summary>
-    /// Output only. Table result for insights.
+    /// Output only. Insights for a Table resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -406,6 +447,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Enum of possible cases for the "result" oneof.</summary>
     public enum ResultOneofCase {
       None = 0,
+      DatasetResult = 7,
       TableResult = 8,
     }
     private ResultOneofCase resultCase_ = ResultOneofCase.None;
@@ -437,6 +479,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(DatasetResult, other.DatasetResult)) return false;
       if (!object.Equals(TableResult, other.TableResult)) return false;
       if (ResultCase != other.ResultCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -446,6 +489,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (resultCase_ == ResultOneofCase.DatasetResult) hash ^= DatasetResult.GetHashCode();
       if (resultCase_ == ResultOneofCase.TableResult) hash ^= TableResult.GetHashCode();
       hash ^= (int) resultCase_;
       if (_unknownFields != null) {
@@ -466,6 +510,10 @@ namespace Google.Cloud.Dataplex.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (resultCase_ == ResultOneofCase.DatasetResult) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DatasetResult);
+      }
       if (resultCase_ == ResultOneofCase.TableResult) {
         output.WriteRawTag(66);
         output.WriteMessage(TableResult);
@@ -480,6 +528,10 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (resultCase_ == ResultOneofCase.DatasetResult) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DatasetResult);
+      }
       if (resultCase_ == ResultOneofCase.TableResult) {
         output.WriteRawTag(66);
         output.WriteMessage(TableResult);
@@ -494,6 +546,9 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (resultCase_ == ResultOneofCase.DatasetResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatasetResult);
+      }
       if (resultCase_ == ResultOneofCase.TableResult) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TableResult);
       }
@@ -510,6 +565,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return;
       }
       switch (other.ResultCase) {
+        case ResultOneofCase.DatasetResult:
+          if (DatasetResult == null) {
+            DatasetResult = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult();
+          }
+          DatasetResult.MergeFrom(other.DatasetResult);
+          break;
         case ResultOneofCase.TableResult:
           if (TableResult == null) {
             TableResult = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult();
@@ -537,6 +598,15 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 58: {
+            global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult subBuilder = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult();
+            if (resultCase_ == ResultOneofCase.DatasetResult) {
+              subBuilder.MergeFrom(DatasetResult);
+            }
+            input.ReadMessage(subBuilder);
+            DatasetResult = subBuilder;
+            break;
+          }
           case 66: {
             global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult subBuilder = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult();
             if (resultCase_ == ResultOneofCase.TableResult) {
@@ -565,6 +635,15 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 58: {
+            global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult subBuilder = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.DatasetResult();
+            if (resultCase_ == ResultOneofCase.DatasetResult) {
+              subBuilder.MergeFrom(DatasetResult);
+            }
+            input.ReadMessage(subBuilder);
+            DatasetResult = subBuilder;
+            break;
+          }
           case 66: {
             global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult subBuilder = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.TableResult();
             if (resultCase_ == ResultOneofCase.TableResult) {
@@ -585,7 +664,270 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Generated metadata about the table.
+      /// Insights for a dataset resource.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DatasetResult : pb::IMessage<DatasetResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DatasetResult> _parser = new pb::MessageParser<DatasetResult>(() => new DatasetResult());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DatasetResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DatasetResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DatasetResult(DatasetResult other) : this() {
+          overview_ = other.overview_;
+          schemaRelationships_ = other.schemaRelationships_.Clone();
+          queries_ = other.queries_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DatasetResult Clone() {
+          return new DatasetResult(this);
+        }
+
+        /// <summary>Field number for the "overview" field.</summary>
+        public const int OverviewFieldNumber = 1;
+        private string overview_ = "";
+        /// <summary>
+        /// Output only. Generated Dataset description.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Overview {
+          get { return overview_; }
+          set {
+            overview_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "schema_relationships" field.</summary>
+        public const int SchemaRelationshipsFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship> _repeated_schemaRelationships_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship> schemaRelationships_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship>();
+        /// <summary>
+        /// Output only. Relationships suggesting how tables in the dataset are
+        /// related to each other, based on their schema.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship> SchemaRelationships {
+          get { return schemaRelationships_; }
+        }
+
+        /// <summary>Field number for the "queries" field.</summary>
+        public const int QueriesFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query> _repeated_queries_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query> queries_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query>();
+        /// <summary>
+        /// Output only. Sample SQL queries for the dataset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.Query> Queries {
+          get { return queries_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DatasetResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DatasetResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Overview != other.Overview) return false;
+          if(!schemaRelationships_.Equals(other.schemaRelationships_)) return false;
+          if(!queries_.Equals(other.queries_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Overview.Length != 0) hash ^= Overview.GetHashCode();
+          hash ^= schemaRelationships_.GetHashCode();
+          hash ^= queries_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Overview.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Overview);
+          }
+          schemaRelationships_.WriteTo(output, _repeated_schemaRelationships_codec);
+          queries_.WriteTo(output, _repeated_queries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Overview.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Overview);
+          }
+          schemaRelationships_.WriteTo(ref output, _repeated_schemaRelationships_codec);
+          queries_.WriteTo(ref output, _repeated_queries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Overview.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Overview);
+          }
+          size += schemaRelationships_.CalculateSize(_repeated_schemaRelationships_codec);
+          size += queries_.CalculateSize(_repeated_queries_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DatasetResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Overview.Length != 0) {
+            Overview = other.Overview;
+          }
+          schemaRelationships_.Add(other.schemaRelationships_);
+          queries_.Add(other.queries_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Overview = input.ReadString();
+                break;
+              }
+              case 26: {
+                schemaRelationships_.AddEntriesFrom(input, _repeated_schemaRelationships_codec);
+                break;
+              }
+              case 34: {
+                queries_.AddEntriesFrom(input, _repeated_queries_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Overview = input.ReadString();
+                break;
+              }
+              case 26: {
+                schemaRelationships_.AddEntriesFrom(ref input, _repeated_schemaRelationships_codec);
+                break;
+              }
+              case 34: {
+                queries_.AddEntriesFrom(ref input, _repeated_queries_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Insights for a table resource.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableResult : pb::IMessage<TableResult>
@@ -602,7 +944,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -910,6 +1252,629 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
+      /// Details of the relationship between the schema of two resources.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SchemaRelationship : pb::IMessage<SchemaRelationship>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SchemaRelationship> _parser = new pb::MessageParser<SchemaRelationship>(() => new SchemaRelationship());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SchemaRelationship> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship(SchemaRelationship other) : this() {
+          leftSchemaPaths_ = other.leftSchemaPaths_ != null ? other.leftSchemaPaths_.Clone() : null;
+          rightSchemaPaths_ = other.rightSchemaPaths_ != null ? other.rightSchemaPaths_.Clone() : null;
+          sources_ = other.sources_.Clone();
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship Clone() {
+          return new SchemaRelationship(this);
+        }
+
+        /// <summary>Field number for the "left_schema_paths" field.</summary>
+        public const int LeftSchemaPathsFieldNumber = 1;
+        private global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths leftSchemaPaths_;
+        /// <summary>
+        /// Output only. An ordered list of fields for the join from the first table.
+        /// The size of this list must be the same as `right_schema_paths`.
+        /// Each field at index i in this list must correspond to a field at the same
+        /// index in the `right_schema_paths` list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths LeftSchemaPaths {
+          get { return leftSchemaPaths_; }
+          set {
+            leftSchemaPaths_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "right_schema_paths" field.</summary>
+        public const int RightSchemaPathsFieldNumber = 2;
+        private global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths rightSchemaPaths_;
+        /// <summary>
+        /// Output only. An ordered list of fields for the join from the second
+        /// table. The size of this list must be the same as `left_schema_paths`.
+        /// Each field at index i in this list must correspond to a field at the same
+        /// index in the `left_schema_paths` list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths RightSchemaPaths {
+          get { return rightSchemaPaths_; }
+          set {
+            rightSchemaPaths_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "sources" field.</summary>
+        public const int SourcesFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source> _repeated_sources_codec
+            = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source> sources_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source>();
+        /// <summary>
+        /// Output only. Sources which generated the schema relation edge.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Source> Sources {
+          get { return sources_; }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 6;
+        private global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type type_ = global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified;
+        /// <summary>
+        /// Output only. The type of relationship between the schema paths.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SchemaRelationship);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SchemaRelationship other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(LeftSchemaPaths, other.LeftSchemaPaths)) return false;
+          if (!object.Equals(RightSchemaPaths, other.RightSchemaPaths)) return false;
+          if(!sources_.Equals(other.sources_)) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (leftSchemaPaths_ != null) hash ^= LeftSchemaPaths.GetHashCode();
+          if (rightSchemaPaths_ != null) hash ^= RightSchemaPaths.GetHashCode();
+          hash ^= sources_.GetHashCode();
+          if (Type != global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (leftSchemaPaths_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(RightSchemaPaths);
+          }
+          sources_.WriteTo(output, _repeated_sources_codec);
+          if (Type != global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (leftSchemaPaths_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(RightSchemaPaths);
+          }
+          sources_.WriteTo(ref output, _repeated_sources_codec);
+          if (Type != global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (leftSchemaPaths_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RightSchemaPaths);
+          }
+          size += sources_.CalculateSize(_repeated_sources_codec);
+          if (Type != global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SchemaRelationship other) {
+          if (other == null) {
+            return;
+          }
+          if (other.leftSchemaPaths_ != null) {
+            if (leftSchemaPaths_ == null) {
+              LeftSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+            }
+            LeftSchemaPaths.MergeFrom(other.LeftSchemaPaths);
+          }
+          if (other.rightSchemaPaths_ != null) {
+            if (rightSchemaPaths_ == null) {
+              RightSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+            }
+            RightSchemaPaths.MergeFrom(other.RightSchemaPaths);
+          }
+          sources_.Add(other.sources_);
+          if (other.Type != global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (leftSchemaPaths_ == null) {
+                  LeftSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(LeftSchemaPaths);
+                break;
+              }
+              case 18: {
+                if (rightSchemaPaths_ == null) {
+                  RightSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(RightSchemaPaths);
+                break;
+              }
+              case 34:
+              case 32: {
+                sources_.AddEntriesFrom(input, _repeated_sources_codec);
+                break;
+              }
+              case 48: {
+                Type = (global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (leftSchemaPaths_ == null) {
+                  LeftSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(LeftSchemaPaths);
+                break;
+              }
+              case 18: {
+                if (rightSchemaPaths_ == null) {
+                  RightSchemaPaths = new global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(RightSchemaPaths);
+                break;
+              }
+              case 34:
+              case 32: {
+                sources_.AddEntriesFrom(ref input, _repeated_sources_codec);
+                break;
+              }
+              case 48: {
+                Type = (global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SchemaRelationship message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Source which generated the schema relation edge.
+          /// </summary>
+          public enum Source {
+            /// <summary>
+            /// The source of the schema relationship is unspecified.
+            /// </summary>
+            [pbr::OriginalName("SOURCE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The source of the schema relationship is agent.
+            /// </summary>
+            [pbr::OriginalName("AGENT")] Agent = 4,
+            /// <summary>
+            /// The source of the schema relationship is query history from the source
+            /// system.
+            /// </summary>
+            [pbr::OriginalName("QUERY_HISTORY")] QueryHistory = 5,
+            /// <summary>
+            /// The source of the schema relationship is table constraints added in
+            /// the source system.
+            /// </summary>
+            [pbr::OriginalName("TABLE_CONSTRAINTS")] TableConstraints = 6,
+          }
+
+          /// <summary>
+          /// The type of relationship.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// The type of the schema relationship is unspecified.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Indicates a join relationship between the schema fields.
+            /// </summary>
+            [pbr::OriginalName("SCHEMA_JOIN")] SchemaJoin = 1,
+          }
+
+          /// <summary>
+          /// Represents an ordered set of paths within a table's schema.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SchemaPaths : pb::IMessage<SchemaPaths>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SchemaPaths> _parser = new pb::MessageParser<SchemaPaths>(() => new SchemaPaths());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SchemaPaths> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Types.SchemaRelationship.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths(SchemaPaths other) : this() {
+              tableFqn_ = other.tableFqn_;
+              paths_ = other.paths_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths Clone() {
+              return new SchemaPaths(this);
+            }
+
+            /// <summary>Field number for the "table_fqn" field.</summary>
+            public const int TableFqnFieldNumber = 1;
+            private string tableFqn_ = "";
+            /// <summary>
+            /// Output only. The service-qualified full resource name of the table
+            /// Ex:
+            /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string TableFqn {
+              get { return tableFqn_; }
+              set {
+                tableFqn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "paths" field.</summary>
+            public const int PathsFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_paths_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> paths_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Output only. An ordered set of Paths to fields within the schema of the
+            /// table. For fields nested within a top level field of type record, use
+            /// '.' to separate field names. Examples: Top level field - `top_level`
+            /// Nested field - `top_level.child.sub_field`
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Paths {
+              get { return paths_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SchemaPaths);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SchemaPaths other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (TableFqn != other.TableFqn) return false;
+              if(!paths_.Equals(other.paths_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (TableFqn.Length != 0) hash ^= TableFqn.GetHashCode();
+              hash ^= paths_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (TableFqn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TableFqn);
+              }
+              paths_.WriteTo(output, _repeated_paths_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (TableFqn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TableFqn);
+              }
+              paths_.WriteTo(ref output, _repeated_paths_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (TableFqn.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(TableFqn);
+              }
+              size += paths_.CalculateSize(_repeated_paths_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SchemaPaths other) {
+              if (other == null) {
+                return;
+              }
+              if (other.TableFqn.Length != 0) {
+                TableFqn = other.TableFqn;
+              }
+              paths_.Add(other.paths_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    TableFqn = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    paths_.AddEntriesFrom(input, _repeated_paths_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    TableFqn = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    paths_.AddEntriesFrom(ref input, _repeated_paths_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// A sample SQL query in data documentation.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -927,7 +1892,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1171,7 +2136,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1364,7 +2329,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Cloud.Dataplex.V1.DataDocumentationResult.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
