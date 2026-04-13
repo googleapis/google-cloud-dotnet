@@ -1472,6 +1472,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateIndex</summary>
+        public void UpdateIndexRequestObject()
+        {
+            // Snippet: UpdateIndex(UpdateIndexRequest, CallSettings)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = gcvv::VectorSearchServiceClient.Create();
+            // Initialize request argument(s)
+            gcvv::UpdateIndexRequest request = new gcvv::UpdateIndexRequest
+            {
+                Index = new gcvv::Index(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcvv::Index, gcvv::OperationMetadata> response = vectorSearchServiceClient.UpdateIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::Index, gcvv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcvv::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::Index, gcvv::OperationMetadata> retrievedResponse = vectorSearchServiceClient.PollOnceUpdateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIndexAsync</summary>
+        public async Task UpdateIndexRequestObjectAsync()
+        {
+            // Snippet: UpdateIndexAsync(UpdateIndexRequest, CallSettings)
+            // Additional: UpdateIndexAsync(UpdateIndexRequest, CancellationToken)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = await gcvv::VectorSearchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcvv::UpdateIndexRequest request = new gcvv::UpdateIndexRequest
+            {
+                Index = new gcvv::Index(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcvv::Index, gcvv::OperationMetadata> response = await vectorSearchServiceClient.UpdateIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::Index, gcvv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcvv::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::Index, gcvv::OperationMetadata> retrievedResponse = await vectorSearchServiceClient.PollOnceUpdateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIndex</summary>
+        public void UpdateIndex()
+        {
+            // Snippet: UpdateIndex(Index, FieldMask, CallSettings)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = gcvv::VectorSearchServiceClient.Create();
+            // Initialize request argument(s)
+            gcvv::Index index = new gcvv::Index();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcvv::Index, gcvv::OperationMetadata> response = vectorSearchServiceClient.UpdateIndex(index, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::Index, gcvv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcvv::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::Index, gcvv::OperationMetadata> retrievedResponse = vectorSearchServiceClient.PollOnceUpdateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIndexAsync</summary>
+        public async Task UpdateIndexAsync()
+        {
+            // Snippet: UpdateIndexAsync(Index, FieldMask, CallSettings)
+            // Additional: UpdateIndexAsync(Index, FieldMask, CancellationToken)
+            // Create client
+            gcvv::VectorSearchServiceClient vectorSearchServiceClient = await gcvv::VectorSearchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcvv::Index index = new gcvv::Index();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcvv::Index, gcvv::OperationMetadata> response = await vectorSearchServiceClient.UpdateIndexAsync(index, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcvv::Index, gcvv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcvv::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcvv::Index, gcvv::OperationMetadata> retrievedResponse = await vectorSearchServiceClient.PollOnceUpdateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcvv::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteIndex</summary>
         public void DeleteIndexRequestObject()
         {

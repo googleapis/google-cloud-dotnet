@@ -61,6 +61,8 @@ namespace Google.Cloud.VectorSearch.V1
             GetIndexSettings = existing.GetIndexSettings;
             CreateIndexSettings = existing.CreateIndexSettings;
             CreateIndexOperationsSettings = existing.CreateIndexOperationsSettings.Clone();
+            UpdateIndexSettings = existing.UpdateIndexSettings;
+            UpdateIndexOperationsSettings = existing.UpdateIndexOperationsSettings.Clone();
             DeleteIndexSettings = existing.DeleteIndexSettings;
             DeleteIndexOperationsSettings = existing.DeleteIndexOperationsSettings.Clone();
             ImportDataObjectsSettings = existing.ImportDataObjectsSettings;
@@ -288,6 +290,36 @@ namespace Google.Cloud.VectorSearch.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateIndexOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VectorSearchServiceClient.UpdateIndex</c> and <c>VectorSearchServiceClient.UpdateIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VectorSearchServiceClient.UpdateIndex</c> and
+        /// <c>VectorSearchServiceClient.UpdateIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateIndexOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1755,6 +1787,151 @@ namespace Google.Cloud.VectorSearch.V1
             CreateIndexAsync(parent, index, indexId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Index, OperationMetadata> UpdateIndex(UpdateIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, OperationMetadata>> UpdateIndexAsync(UpdateIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, OperationMetadata>> UpdateIndexAsync(UpdateIndexRequest request, st::CancellationToken cancellationToken) =>
+            UpdateIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateIndex</c>.</summary>
+        public virtual lro::OperationsClient UpdateIndexOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Index, OperationMetadata> PollOnceUpdateIndex(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Index, OperationMetadata>> PollOnceUpdateIndexAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="index">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be overwritten in the Index resource by
+        /// the update. The fields specified in the update_mask are relative to the
+        /// resource, not the full request. A field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all fields present in the
+        /// request with non-empty values will be overwritten.
+        /// 
+        /// The following fields support update:
+        /// * `display_name`
+        /// * `description`
+        /// * `labels`
+        /// * `dedicated_infrastructure.autoscaling_spec.min_replica_count`
+        /// * `dedicated_infrastructure.autoscaling_spec.max_replica_count`
+        /// 
+        /// If `*` is provided in the `update_mask`, full replacement of mutable fields
+        /// will be performed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Index, OperationMetadata> UpdateIndex(Index index, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIndex(new UpdateIndexRequest
+            {
+                Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="index">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be overwritten in the Index resource by
+        /// the update. The fields specified in the update_mask are relative to the
+        /// resource, not the full request. A field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all fields present in the
+        /// request with non-empty values will be overwritten.
+        /// 
+        /// The following fields support update:
+        /// * `display_name`
+        /// * `description`
+        /// * `labels`
+        /// * `dedicated_infrastructure.autoscaling_spec.min_replica_count`
+        /// * `dedicated_infrastructure.autoscaling_spec.max_replica_count`
+        /// 
+        /// If `*` is provided in the `update_mask`, full replacement of mutable fields
+        /// will be performed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, OperationMetadata>> UpdateIndexAsync(Index index, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIndexAsync(new UpdateIndexRequest
+            {
+                Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="index">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be overwritten in the Index resource by
+        /// the update. The fields specified in the update_mask are relative to the
+        /// resource, not the full request. A field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all fields present in the
+        /// request with non-empty values will be overwritten.
+        /// 
+        /// The following fields support update:
+        /// * `display_name`
+        /// * `description`
+        /// * `labels`
+        /// * `dedicated_infrastructure.autoscaling_spec.min_replica_count`
+        /// * `dedicated_infrastructure.autoscaling_spec.max_replica_count`
+        /// 
+        /// If `*` is provided in the `update_mask`, full replacement of mutable fields
+        /// will be performed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, OperationMetadata>> UpdateIndexAsync(Index index, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateIndexAsync(index, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single Index.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2032,6 +2209,8 @@ namespace Google.Cloud.VectorSearch.V1
 
         private readonly gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> _callCreateIndex;
 
+        private readonly gaxgrpc::ApiCall<UpdateIndexRequest, lro::Operation> _callUpdateIndex;
+
         private readonly gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> _callDeleteIndex;
 
         private readonly gaxgrpc::ApiCall<ImportDataObjectsRequest, lro::Operation> _callImportDataObjects;
@@ -2058,6 +2237,7 @@ namespace Google.Cloud.VectorSearch.V1
             UpdateCollectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCollectionOperationsSettings, logger);
             DeleteCollectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCollectionOperationsSettings, logger);
             CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
+            UpdateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateIndexOperationsSettings, logger);
             DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings, logger);
             ImportDataObjectsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataObjectsOperationsSettings, logger);
             ExportDataObjectsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataObjectsOperationsSettings, logger);
@@ -2086,6 +2266,9 @@ namespace Google.Cloud.VectorSearch.V1
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
+            _callUpdateIndex = clientHelper.BuildApiCall<UpdateIndexRequest, lro::Operation>("UpdateIndex", grpcClient.UpdateIndexAsync, grpcClient.UpdateIndex, effectiveSettings.UpdateIndexSettings).WithGoogleRequestParam("index.name", request => request.Index?.Name);
+            Modify_ApiCall(ref _callUpdateIndex);
+            Modify_UpdateIndexApiCall(ref _callUpdateIndex);
             _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>("DeleteIndex", grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIndex);
             Modify_DeleteIndexApiCall(ref _callDeleteIndex);
@@ -2116,6 +2299,8 @@ namespace Google.Cloud.VectorSearch.V1
 
         partial void Modify_CreateIndexApiCall(ref gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> call);
 
+        partial void Modify_UpdateIndexApiCall(ref gaxgrpc::ApiCall<UpdateIndexRequest, lro::Operation> call);
+
         partial void Modify_DeleteIndexApiCall(ref gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> call);
 
         partial void Modify_ImportDataObjectsApiCall(ref gaxgrpc::ApiCall<ImportDataObjectsRequest, lro::Operation> call);
@@ -2145,6 +2330,8 @@ namespace Google.Cloud.VectorSearch.V1
         partial void Modify_GetIndexRequest(ref GetIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateIndexRequest(ref CreateIndexRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateIndexRequest(ref UpdateIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteIndexRequest(ref DeleteIndexRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2354,6 +2541,33 @@ namespace Google.Cloud.VectorSearch.V1
         {
             Modify_CreateIndexRequest(ref request, ref callSettings);
             return new lro::Operation<Index, OperationMetadata>(await _callCreateIndex.Async(request, callSettings).ConfigureAwait(false), CreateIndexOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateIndex</c>.</summary>
+        public override lro::OperationsClient UpdateIndexOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Index, OperationMetadata> UpdateIndex(UpdateIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, OperationMetadata>(_callUpdateIndex.Sync(request, callSettings), UpdateIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single Index.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Index, OperationMetadata>> UpdateIndexAsync(UpdateIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, OperationMetadata>(await _callUpdateIndex.Async(request, callSettings).ConfigureAwait(false), UpdateIndexOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteIndex</c>.</summary>

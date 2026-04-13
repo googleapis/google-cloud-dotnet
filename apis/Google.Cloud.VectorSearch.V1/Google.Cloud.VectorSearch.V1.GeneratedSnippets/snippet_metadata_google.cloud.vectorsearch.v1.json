@@ -4526,6 +4526,206 @@
       ]
     },
     {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateIndex_sync",
+      "title": "UpdateIndexRequestObject",
+      "description": "Snippet for UpdateIndex",
+      "file": "VectorSearchServiceClient.UpdateIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateIndex_async",
+      "title": "UpdateIndexRequestObjectAsync",
+      "description": "Snippet for UpdateIndexAsync",
+      "file": "VectorSearchServiceClient.UpdateIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.UpdateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateIndex_sync_flattened",
+      "title": "UpdateIndex",
+      "description": "Snippet for UpdateIndex",
+      "file": "VectorSearchServiceClient.UpdateIndexSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateIndex",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vectorsearch_v1_generated_VectorSearchService_UpdateIndex_async_flattened",
+      "title": "UpdateIndexAsync",
+      "description": "Snippet for UpdateIndexAsync",
+      "file": "VectorSearchServiceClient.UpdateIndexAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateIndexAsync",
+        "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient.UpdateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VectorSearch.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VectorSearch.V1.Index, Google.Cloud.VectorSearch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VectorSearchServiceClient",
+          "fullName": "Google.Cloud.VectorSearch.V1.VectorSearchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateIndex",
+          "fullName": "google.cloud.vectorsearch.v1.VectorSearchService.UpdateIndex",
+          "service": {
+            "shortName": "VectorSearchService",
+            "fullName": "google.cloud.vectorsearch.v1.VectorSearchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "vectorsearch_v1_generated_VectorSearchService_DeleteIndex_sync",
       "title": "DeleteIndexRequestObject",
       "description": "Snippet for DeleteIndex",

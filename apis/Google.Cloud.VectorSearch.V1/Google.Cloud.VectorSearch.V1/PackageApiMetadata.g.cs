@@ -72,6 +72,7 @@ namespace Google.Cloud.VectorSearch.V1
             yield return DataObjectSearchServiceReflection.Descriptor;
             yield return DataObjectServiceReflection.Descriptor;
             yield return EmbeddingConfigReflection.Descriptor;
+            yield return EncryptionSpecReflection.Descriptor;
             yield return VectorsearchServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

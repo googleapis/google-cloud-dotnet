@@ -94,6 +94,8 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VectorSearch.V1.CreateIndexRequest> __Marshaller_google_cloud_vectorsearch_v1_CreateIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VectorSearch.V1.CreateIndexRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest> __Marshaller_google_cloud_vectorsearch_v1_UpdateIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VectorSearch.V1.DeleteIndexRequest> __Marshaller_google_cloud_vectorsearch_v1_DeleteIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VectorSearch.V1.DeleteIndexRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VectorSearch.V1.ImportDataObjectsRequest> __Marshaller_google_cloud_vectorsearch_v1_ImportDataObjectsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VectorSearch.V1.ImportDataObjectsRequest.Parser));
@@ -162,6 +164,14 @@ namespace Google.Cloud.VectorSearch.V1 {
         __ServiceName,
         "CreateIndex",
         __Marshaller_google_cloud_vectorsearch_v1_CreateIndexRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest, global::Google.LongRunning.Operation> __Method_UpdateIndex = new grpc::Method<global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateIndex",
+        __Marshaller_google_cloud_vectorsearch_v1_UpdateIndexRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -290,6 +300,18 @@ namespace Google.Cloud.VectorSearch.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIndex(global::Google.Cloud.VectorSearch.V1.CreateIndexRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single Index.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateIndex(global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -744,6 +766,54 @@ namespace Google.Cloud.VectorSearch.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateIndex, null, options, request);
       }
       /// <summary>
+      /// Updates the parameters of a single Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIndex(global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIndex(global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateIndex, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIndexAsync(global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Index.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIndexAsync(global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateIndex, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single Index.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -909,6 +979,7 @@ namespace Google.Cloud.VectorSearch.V1 {
           .AddMethod(__Method_ListIndexes, serviceImpl.ListIndexes)
           .AddMethod(__Method_GetIndex, serviceImpl.GetIndex)
           .AddMethod(__Method_CreateIndex, serviceImpl.CreateIndex)
+          .AddMethod(__Method_UpdateIndex, serviceImpl.UpdateIndex)
           .AddMethod(__Method_DeleteIndex, serviceImpl.DeleteIndex)
           .AddMethod(__Method_ImportDataObjects, serviceImpl.ImportDataObjects)
           .AddMethod(__Method_ExportDataObjects, serviceImpl.ExportDataObjects).Build();
@@ -929,6 +1000,7 @@ namespace Google.Cloud.VectorSearch.V1 {
       serviceBinder.AddMethod(__Method_ListIndexes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.ListIndexesRequest, global::Google.Cloud.VectorSearch.V1.ListIndexesResponse>(serviceImpl.ListIndexes));
       serviceBinder.AddMethod(__Method_GetIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.GetIndexRequest, global::Google.Cloud.VectorSearch.V1.Index>(serviceImpl.GetIndex));
       serviceBinder.AddMethod(__Method_CreateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIndex));
+      serviceBinder.AddMethod(__Method_UpdateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.UpdateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateIndex));
       serviceBinder.AddMethod(__Method_DeleteIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.DeleteIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIndex));
       serviceBinder.AddMethod(__Method_ImportDataObjects, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.ImportDataObjectsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDataObjects));
       serviceBinder.AddMethod(__Method_ExportDataObjects, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VectorSearch.V1.ExportDataObjectsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDataObjects));
