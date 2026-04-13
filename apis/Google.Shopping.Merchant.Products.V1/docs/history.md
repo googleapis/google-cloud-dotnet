@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.5.0, released 2026-04-13
+
+### New features
+
+- A new field `base64_encoded_name` is added to the `Product` message
+- New fields - `base64_encoded_name` and `base64_encoded_product` added to the `ProductInput` message
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.shopping.merchant.products.v1.ProductInput` is changed
+- A comment for field `name` in message `.google.shopping.merchant.products.v1.Product` is changed
+
 ## Version 1.4.0, released 2026-03-16
 
 ### New features
