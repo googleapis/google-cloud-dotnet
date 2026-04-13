@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta23, released 2026-04-13
+
+### New features
+
+- Add AUTO condition to SearchAsYouTypeSpec in v1alpha and v1beta
+
 ## Version 1.0.0-beta22, released 2026-03-23
 
 ### New features
