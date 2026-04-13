@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.14.0, released 2026-04-13
+
+### New features
+
+- Allow Data Documentation DataScans to support BigQuery Dataset resources in addition to BigQuery table resources
+
+### Documentation improvements
+
+- A comment for message `DataDocumentationResult` is changed
+- A comment for field `table_result` in message `.google.cloud.dataplex.v1.DataDocumentationResult` is changed
+
 ## Version 3.13.0, released 2026-03-16
 
 ### New features
