@@ -920,6 +920,10 @@ namespace Google.Cloud.Kms.V1 {
     /// justification codes.
     /// https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-codes
     /// By default, this field is absent, and all justification codes are allowed.
+    /// If the
+    /// `key_access_justifications_policy.allowed_access_reasons`
+    /// is empty (zero allowed justification code), all encrypt, decrypt, and sign
+    /// operations will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5709,7 +5713,9 @@ namespace Google.Cloud.Kms.V1 {
   /// [KeyAccessJustificationsPolicy][google.cloud.kms.v1.KeyAccessJustificationsPolicy]
   /// specifies zero or more allowed
   /// [AccessReason][google.cloud.kms.v1.AccessReason] values for encrypt, decrypt,
-  /// and sign operations on a [CryptoKey][google.cloud.kms.v1.CryptoKey].
+  /// and sign operations on a [CryptoKey][google.cloud.kms.v1.CryptoKey] or
+  /// [KeyAccessJustificationsPolicyConfig][google.cloud.kms.v1.KeyAccessJustificationsPolicyConfig]
+  /// (the default Key Access Justifications policy).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KeyAccessJustificationsPolicy : pb::IMessage<KeyAccessJustificationsPolicy>
@@ -5763,10 +5769,12 @@ namespace Google.Cloud.Kms.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Kms.V1.AccessReason> allowedAccessReasons_ = new pbc::RepeatedField<global::Google.Cloud.Kms.V1.AccessReason>();
     /// <summary>
     /// The list of allowed reasons for access to a
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. Zero allowed access reasons
-    /// means all encrypt, decrypt, and sign operations for the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with this policy will
-    /// fail.
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. Note that empty
+    /// allowed_access_reasons has a different meaning depending on where this
+    /// message appears. If this is under
+    /// [KeyAccessJustificationsPolicyConfig][google.cloud.kms.v1.KeyAccessJustificationsPolicyConfig],
+    /// it means allow-all. If this is under
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey], it means deny-all.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
