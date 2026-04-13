@@ -2829,6 +2829,4323 @@
       ]
     },
     {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_sync",
+      "title": "CreateDataTableRequestObject",
+      "description": "Snippet for CreateDataTable",
+      "file": "DataTableServiceClient.CreateDataTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_async",
+      "title": "CreateDataTableRequestObjectAsync",
+      "description": "Snippet for CreateDataTableAsync",
+      "file": "DataTableServiceClient.CreateDataTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_sync_flattened",
+      "title": "CreateDataTable",
+      "description": "Snippet for CreateDataTable",
+      "file": "DataTableServiceClient.CreateDataTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTableId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_async_flattened",
+      "title": "CreateDataTableAsync",
+      "description": "Snippet for CreateDataTableAsync",
+      "file": "DataTableServiceClient.CreateDataTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTableId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_sync_flattened_resourceNames",
+      "title": "CreateDataTableResourceNames",
+      "description": "Snippet for CreateDataTable",
+      "file": "DataTableServiceClient.CreateDataTableResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTableId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTable_async_flattened_resourceNames",
+      "title": "CreateDataTableResourceNamesAsync",
+      "description": "Snippet for CreateDataTableAsync",
+      "file": "DataTableServiceClient.CreateDataTableResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTableId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_sync",
+      "title": "ListDataTablesRequestObject",
+      "description": "Snippet for ListDataTables",
+      "file": "DataTableServiceClient.ListDataTablesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTables",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTables",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListDataTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_async",
+      "title": "ListDataTablesRequestObjectAsync",
+      "description": "Snippet for ListDataTablesAsync",
+      "file": "DataTableServiceClient.ListDataTablesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTablesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTablesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListDataTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_sync_flattened",
+      "title": "ListDataTables",
+      "description": "Snippet for ListDataTables",
+      "file": "DataTableServiceClient.ListDataTablesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTables",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTables",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_async_flattened",
+      "title": "ListDataTablesAsync",
+      "description": "Snippet for ListDataTablesAsync",
+      "file": "DataTableServiceClient.ListDataTablesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTablesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTablesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_sync_flattened_resourceNames",
+      "title": "ListDataTablesResourceNames",
+      "description": "Snippet for ListDataTables",
+      "file": "DataTableServiceClient.ListDataTablesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTables",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTables",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTables_async_flattened_resourceNames",
+      "title": "ListDataTablesResourceNamesAsync",
+      "description": "Snippet for ListDataTablesAsync",
+      "file": "DataTableServiceClient.ListDataTablesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTablesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTablesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTablesResponse, Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTables",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTables",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_sync",
+      "title": "GetDataTableRequestObject",
+      "description": "Snippet for GetDataTable",
+      "file": "DataTableServiceClient.GetDataTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_async",
+      "title": "GetDataTableRequestObjectAsync",
+      "description": "Snippet for GetDataTableAsync",
+      "file": "DataTableServiceClient.GetDataTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_sync_flattened",
+      "title": "GetDataTable",
+      "description": "Snippet for GetDataTable",
+      "file": "DataTableServiceClient.GetDataTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_async_flattened",
+      "title": "GetDataTableAsync",
+      "description": "Snippet for GetDataTableAsync",
+      "file": "DataTableServiceClient.GetDataTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_sync_flattened_resourceNames",
+      "title": "GetDataTableResourceNames",
+      "description": "Snippet for GetDataTable",
+      "file": "DataTableServiceClient.GetDataTableResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTable_async_flattened_resourceNames",
+      "title": "GetDataTableResourceNamesAsync",
+      "description": "Snippet for GetDataTableAsync",
+      "file": "DataTableServiceClient.GetDataTableResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTable_sync",
+      "title": "UpdateDataTableRequestObject",
+      "description": "Snippet for UpdateDataTable",
+      "file": "DataTableServiceClient.UpdateDataTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTable_async",
+      "title": "UpdateDataTableRequestObjectAsync",
+      "description": "Snippet for UpdateDataTableAsync",
+      "file": "DataTableServiceClient.UpdateDataTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTable_sync_flattened",
+      "title": "UpdateDataTable",
+      "description": "Snippet for UpdateDataTable",
+      "file": "DataTableServiceClient.UpdateDataTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTable",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTable_async_flattened",
+      "title": "UpdateDataTableAsync",
+      "description": "Snippet for UpdateDataTableAsync",
+      "file": "DataTableServiceClient.UpdateDataTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTable",
+            "name": "dataTable"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTable>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_sync",
+      "title": "DeleteDataTableRequestObject",
+      "description": "Snippet for DeleteDataTable",
+      "file": "DataTableServiceClient.DeleteDataTableRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_async",
+      "title": "DeleteDataTableRequestObjectAsync",
+      "description": "Snippet for DeleteDataTableAsync",
+      "file": "DataTableServiceClient.DeleteDataTableRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteDataTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_sync_flattened",
+      "title": "DeleteDataTable",
+      "description": "Snippet for DeleteDataTable",
+      "file": "DataTableServiceClient.DeleteDataTableSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_async_flattened",
+      "title": "DeleteDataTableAsync",
+      "description": "Snippet for DeleteDataTableAsync",
+      "file": "DataTableServiceClient.DeleteDataTableAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_sync_flattened_resourceNames",
+      "title": "DeleteDataTableResourceNames",
+      "description": "Snippet for DeleteDataTable",
+      "file": "DataTableServiceClient.DeleteDataTableResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTable",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTable_async_flattened_resourceNames",
+      "title": "DeleteDataTableResourceNamesAsync",
+      "description": "Snippet for DeleteDataTableAsync",
+      "file": "DataTableServiceClient.DeleteDataTableResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTable",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTable",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_sync",
+      "title": "CreateDataTableRowRequestObject",
+      "description": "Snippet for CreateDataTableRow",
+      "file": "DataTableServiceClient.CreateDataTableRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_async",
+      "title": "CreateDataTableRowRequestObjectAsync",
+      "description": "Snippet for CreateDataTableRowAsync",
+      "file": "DataTableServiceClient.CreateDataTableRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_sync_flattened",
+      "title": "CreateDataTableRow",
+      "description": "Snippet for CreateDataTableRow",
+      "file": "DataTableServiceClient.CreateDataTableRowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_async_flattened",
+      "title": "CreateDataTableRowAsync",
+      "description": "Snippet for CreateDataTableRowAsync",
+      "file": "DataTableServiceClient.CreateDataTableRowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_sync_flattened_resourceNames",
+      "title": "CreateDataTableRowResourceNames",
+      "description": "Snippet for CreateDataTableRow",
+      "file": "DataTableServiceClient.CreateDataTableRowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_CreateDataTableRow_async_flattened_resourceNames",
+      "title": "CreateDataTableRowResourceNamesAsync",
+      "description": "Snippet for CreateDataTableRowAsync",
+      "file": "DataTableServiceClient.CreateDataTableRowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.CreateDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.CreateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTableRow_sync",
+      "title": "UpdateDataTableRowRequestObject",
+      "description": "Snippet for UpdateDataTableRow",
+      "file": "DataTableServiceClient.UpdateDataTableRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTableRow_async",
+      "title": "UpdateDataTableRowRequestObjectAsync",
+      "description": "Snippet for UpdateDataTableRowAsync",
+      "file": "DataTableServiceClient.UpdateDataTableRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTableRow_sync_flattened",
+      "title": "UpdateDataTableRow",
+      "description": "Snippet for UpdateDataTableRow",
+      "file": "DataTableServiceClient.UpdateDataTableRowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_UpdateDataTableRow_async_flattened",
+      "title": "UpdateDataTableRowAsync",
+      "description": "Snippet for UpdateDataTableRowAsync",
+      "file": "DataTableServiceClient.UpdateDataTableRowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.UpdateDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRow",
+            "name": "dataTableRow"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.UpdateDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_sync",
+      "title": "ListDataTableRowsRequestObject",
+      "description": "Snippet for ListDataTableRows",
+      "file": "DataTableServiceClient.ListDataTableRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_async",
+      "title": "ListDataTableRowsRequestObjectAsync",
+      "description": "Snippet for ListDataTableRowsAsync",
+      "file": "DataTableServiceClient.ListDataTableRowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_sync_flattened",
+      "title": "ListDataTableRows",
+      "description": "Snippet for ListDataTableRows",
+      "file": "DataTableServiceClient.ListDataTableRowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_async_flattened",
+      "title": "ListDataTableRowsAsync",
+      "description": "Snippet for ListDataTableRowsAsync",
+      "file": "DataTableServiceClient.ListDataTableRowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_sync_flattened_resourceNames",
+      "title": "ListDataTableRowsResourceNames",
+      "description": "Snippet for ListDataTableRows",
+      "file": "DataTableServiceClient.ListDataTableRowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_ListDataTableRows_async_flattened_resourceNames",
+      "title": "ListDataTableRowsResourceNamesAsync",
+      "description": "Snippet for ListDataTableRowsAsync",
+      "file": "DataTableServiceClient.ListDataTableRowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.ListDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListDataTableRowsResponse, Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.ListDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_sync",
+      "title": "GetDataTableRowRequestObject",
+      "description": "Snippet for GetDataTableRow",
+      "file": "DataTableServiceClient.GetDataTableRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_async",
+      "title": "GetDataTableRowRequestObjectAsync",
+      "description": "Snippet for GetDataTableRowAsync",
+      "file": "DataTableServiceClient.GetDataTableRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_sync_flattened",
+      "title": "GetDataTableRow",
+      "description": "Snippet for GetDataTableRow",
+      "file": "DataTableServiceClient.GetDataTableRowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_async_flattened",
+      "title": "GetDataTableRowAsync",
+      "description": "Snippet for GetDataTableRowAsync",
+      "file": "DataTableServiceClient.GetDataTableRowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_sync_flattened_resourceNames",
+      "title": "GetDataTableRowResourceNames",
+      "description": "Snippet for GetDataTableRow",
+      "file": "DataTableServiceClient.GetDataTableRowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableRow",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableRow_async_flattened_resourceNames",
+      "title": "GetDataTableRowResourceNamesAsync",
+      "description": "Snippet for GetDataTableRowAsync",
+      "file": "DataTableServiceClient.GetDataTableRowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableRow>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_sync",
+      "title": "DeleteDataTableRowRequestObject",
+      "description": "Snippet for DeleteDataTableRow",
+      "file": "DataTableServiceClient.DeleteDataTableRowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_async",
+      "title": "DeleteDataTableRowRequestObjectAsync",
+      "description": "Snippet for DeleteDataTableRowAsync",
+      "file": "DataTableServiceClient.DeleteDataTableRowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteDataTableRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_sync_flattened",
+      "title": "DeleteDataTableRow",
+      "description": "Snippet for DeleteDataTableRow",
+      "file": "DataTableServiceClient.DeleteDataTableRowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_async_flattened",
+      "title": "DeleteDataTableRowAsync",
+      "description": "Snippet for DeleteDataTableRowAsync",
+      "file": "DataTableServiceClient.DeleteDataTableRowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_sync_flattened_resourceNames",
+      "title": "DeleteDataTableRowResourceNames",
+      "description": "Snippet for DeleteDataTableRow",
+      "file": "DataTableServiceClient.DeleteDataTableRowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRow",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_DeleteDataTableRow_async_flattened_resourceNames",
+      "title": "DeleteDataTableRowResourceNamesAsync",
+      "description": "Snippet for DeleteDataTableRowAsync",
+      "file": "DataTableServiceClient.DeleteDataTableRowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTableRowAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.DeleteDataTableRowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableRowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTableRow",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.DeleteDataTableRow",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_sync",
+      "title": "BulkCreateDataTableRowsRequestObject",
+      "description": "Snippet for BulkCreateDataTableRows",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_async",
+      "title": "BulkCreateDataTableRowsRequestObjectAsync",
+      "description": "Snippet for BulkCreateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_sync_flattened",
+      "title": "BulkCreateDataTableRows",
+      "description": "Snippet for BulkCreateDataTableRows",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_async_flattened",
+      "title": "BulkCreateDataTableRowsAsync",
+      "description": "Snippet for BulkCreateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_sync_flattened_resourceNames",
+      "title": "BulkCreateDataTableRowsResourceNames",
+      "description": "Snippet for BulkCreateDataTableRows",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkCreateDataTableRows_async_flattened_resourceNames",
+      "title": "BulkCreateDataTableRowsResourceNamesAsync",
+      "description": "Snippet for BulkCreateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkCreateDataTableRowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkCreateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkCreateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkCreateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkCreateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkCreateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_sync",
+      "title": "BulkGetDataTableRowsRequestObject",
+      "description": "Snippet for BulkGetDataTableRows",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkGetDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_async",
+      "title": "BulkGetDataTableRowsRequestObjectAsync",
+      "description": "Snippet for BulkGetDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkGetDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_sync_flattened",
+      "title": "BulkGetDataTableRows",
+      "description": "Snippet for BulkGetDataTableRows",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.GetDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_async_flattened",
+      "title": "BulkGetDataTableRowsAsync",
+      "description": "Snippet for BulkGetDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.GetDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_sync_flattened_resourceNames",
+      "title": "BulkGetDataTableRowsResourceNames",
+      "description": "Snippet for BulkGetDataTableRows",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.GetDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkGetDataTableRows_async_flattened_resourceNames",
+      "title": "BulkGetDataTableRowsResourceNamesAsync",
+      "description": "Snippet for BulkGetDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkGetDataTableRowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkGetDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkGetDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.GetDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkGetDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkGetDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkGetDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_sync",
+      "title": "BulkReplaceDataTableRowsRequestObject",
+      "description": "Snippet for BulkReplaceDataTableRows",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_async",
+      "title": "BulkReplaceDataTableRowsRequestObjectAsync",
+      "description": "Snippet for BulkReplaceDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_sync_flattened",
+      "title": "BulkReplaceDataTableRows",
+      "description": "Snippet for BulkReplaceDataTableRows",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_async_flattened",
+      "title": "BulkReplaceDataTableRowsAsync",
+      "description": "Snippet for BulkReplaceDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_sync_flattened_resourceNames",
+      "title": "BulkReplaceDataTableRowsResourceNames",
+      "description": "Snippet for BulkReplaceDataTableRows",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkReplaceDataTableRows_async_flattened_resourceNames",
+      "title": "BulkReplaceDataTableRowsResourceNamesAsync",
+      "description": "Snippet for BulkReplaceDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkReplaceDataTableRowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkReplaceDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkReplaceDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.CreateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkReplaceDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkReplaceDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkReplaceDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_sync",
+      "title": "BulkUpdateDataTableRowsRequestObject",
+      "description": "Snippet for BulkUpdateDataTableRows",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_async",
+      "title": "BulkUpdateDataTableRowsRequestObjectAsync",
+      "description": "Snippet for BulkUpdateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_sync_flattened",
+      "title": "BulkUpdateDataTableRows",
+      "description": "Snippet for BulkUpdateDataTableRows",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_async_flattened",
+      "title": "BulkUpdateDataTableRowsAsync",
+      "description": "Snippet for BulkUpdateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_sync_flattened_resourceNames",
+      "title": "BulkUpdateDataTableRowsResourceNames",
+      "description": "Snippet for BulkUpdateDataTableRows",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRows",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_BulkUpdateDataTableRows_async_flattened_resourceNames",
+      "title": "BulkUpdateDataTableRowsResourceNamesAsync",
+      "description": "Snippet for BulkUpdateDataTableRowsAsync",
+      "file": "DataTableServiceClient.BulkUpdateDataTableRowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkUpdateDataTableRowsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.BulkUpdateDataTableRowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Chronicle.V1.UpdateDataTableRowRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BulkUpdateDataTableRowsResponse>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "BulkUpdateDataTableRows",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.BulkUpdateDataTableRows",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_sync",
+      "title": "GetDataTableOperationErrorsRequestObject",
+      "description": "Snippet for GetDataTableOperationErrors",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrors",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableOperationErrorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableOperationErrors",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_async",
+      "title": "GetDataTableOperationErrorsRequestObjectAsync",
+      "description": "Snippet for GetDataTableOperationErrorsAsync",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrorsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetDataTableOperationErrorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableOperationErrors>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_sync_flattened",
+      "title": "GetDataTableOperationErrors",
+      "description": "Snippet for GetDataTableOperationErrors",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrors",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableOperationErrors",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_async_flattened",
+      "title": "GetDataTableOperationErrorsAsync",
+      "description": "Snippet for GetDataTableOperationErrorsAsync",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrorsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableOperationErrors>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_sync_flattened_resourceNames",
+      "title": "GetDataTableOperationErrorsResourceNames",
+      "description": "Snippet for GetDataTableOperationErrors",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrors",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableOperationErrorsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.DataTableOperationErrors",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_DataTableService_GetDataTableOperationErrors_async_flattened_resourceNames",
+      "title": "GetDataTableOperationErrorsResourceNamesAsync",
+      "description": "Snippet for GetDataTableOperationErrorsAsync",
+      "file": "DataTableServiceClient.GetDataTableOperationErrorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTableOperationErrorsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient.GetDataTableOperationErrorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DataTableOperationErrorsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.DataTableOperationErrors>",
+        "client": {
+          "shortName": "DataTableServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.DataTableServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTableOperationErrors",
+          "fullName": "google.cloud.chronicle.v1.DataTableService.GetDataTableOperationErrors",
+          "service": {
+            "shortName": "DataTableService",
+            "fullName": "google.cloud.chronicle.v1.DataTableService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chronicle_v1_generated_EntityService_GetWatchlist_sync",
       "title": "GetWatchlistRequestObject",
       "description": "Snippet for GetWatchlist",
