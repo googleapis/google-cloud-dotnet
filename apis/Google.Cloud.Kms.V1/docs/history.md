@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.24.0, released 2026-04-13
+
+### New features
+
+- Add a variable to SingleTenantHsmInstanceCreate to control whether future key portability features will be usable on the instance
+- Support external-μ in the Digest
+
 ## Version 3.23.0, released 2026-02-19
 
 ### New features
