@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.3.0, released 2026-04-13
+
+### New features
+
+- A new field `base64_encoded_name` is added to the `LocalInventory` message
+- New field `base64_encoded_name` is added to the `RegionalInventory` message
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.shopping.merchant.products.v1.LocalInventory` is changed
+- A comment for field `name` in message `.google.shopping.merchant.products.v1.RegionalInventory` is changed
+
 ## Version 1.2.0, released 2025-11-17
 
 ### New features
