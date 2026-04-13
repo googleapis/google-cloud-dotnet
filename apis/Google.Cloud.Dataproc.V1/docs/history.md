@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.24.0, released 2026-04-13
+
+### New features
+
+- Add `Engine` field to support LightningEngine in clusters and add support for stop ttl
+
 ## Version 5.23.0, released 2026-02-16
 
 ### New features
