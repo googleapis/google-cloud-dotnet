@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2026-04-13
+
+### New features
+
+- A new field `mime_type` is added to message `.google.cloud.translation.v3.AdaptiveMtTranslateRequest`
+
 ## Version 3.10.0, released 2025-11-06
 
 ### New features

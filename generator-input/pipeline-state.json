@@ -3390,12 +3390,12 @@
         },
         {
             "id": "Google.Cloud.Translate.V3",
-            "currentVersion": "3.10.0",
+            "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T16:56:16.895920935Z",
+            "releaseTimestamp": "2026-04-13T15:48:19.793793953Z",
             "lastGeneratedCommit": "d6837a5d7ade64ff39489285632a44eccf78a2ce",
-            "lastReleasedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
+            "lastReleasedCommit": "d6837a5d7ade64ff39489285632a44eccf78a2ce",
             "apiPaths": [
                 "google/cloud/translate/v3"
             ],
