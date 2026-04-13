@@ -26,20 +26,23 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
           string.Concat(
             "Cjdnb29nbGUvY2xvdWQvZGF0YWJhc2VjZW50ZXIvdjFiZXRhL21hY2hpbmVf",
             "Y29uZmlnLnByb3RvEiJnb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFi",
-            "ZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIoYBCg1NYWNo",
+            "ZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIpICCg1NYWNo",
             "aW5lQ29uZmlnEhkKEW1lbW9yeV9zaXplX2J5dGVzGAIgASgDEh0KC3NoYXJk",
             "X2NvdW50GAMgASgFQgPgQQFIAIgBARIcCgp2Y3B1X2NvdW50GAQgASgBQgPg",
-            "QQFIAYgBAUIOCgxfc2hhcmRfY291bnRCDQoLX3ZjcHVfY291bnRCgAIKJmNv",
-            "bS5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRhQhJNYWNoaW5l",
-            "Q29uZmlnUHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhYmFzZWNl",
-            "bnRlci9hcGl2MWJldGEvZGF0YWJhc2VjZW50ZXJwYjtkYXRhYmFzZWNlbnRl",
-            "cnBiqgIiR29vZ2xlLkNsb3VkLkRhdGFiYXNlQ2VudGVyLlYxQmV0YcoCIkdv",
-            "b2dsZVxDbG91ZFxEYXRhYmFzZUNlbnRlclxWMWJldGHqAiVHb29nbGU6OkNs",
-            "b3VkOjpEYXRhYmFzZUNlbnRlcjo6VjFiZXRhYgZwcm90bzM="));
+            "QQFIAYgBARIlChNiYXNlbGluZV9zbG90X2NvdW50GAUgASgDQgPgQQFIAogB",
+            "ARIsChptYXhfcmVzZXJ2YXRpb25fc2xvdF9jb3VudBgGIAEoA0ID4EEBSAOI",
+            "AQFCDgoMX3NoYXJkX2NvdW50Qg0KC192Y3B1X2NvdW50QhYKFF9iYXNlbGlu",
+            "ZV9zbG90X2NvdW50Qh0KG19tYXhfcmVzZXJ2YXRpb25fc2xvdF9jb3VudEKA",
+            "AgomY29tLmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGFCEk1h",
+            "Y2hpbmVDb25maWdQcm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dvL2RhdGFi",
+            "YXNlY2VudGVyL2FwaXYxYmV0YS9kYXRhYmFzZWNlbnRlcnBiO2RhdGFiYXNl",
+            "Y2VudGVycGKqAiJHb29nbGUuQ2xvdWQuRGF0YWJhc2VDZW50ZXIuVjFCZXRh",
+            "ygIiR29vZ2xlXENsb3VkXERhdGFiYXNlQ2VudGVyXFYxYmV0YeoCJUdvb2ds",
+            "ZTo6Q2xvdWQ6OkRhdGFiYXNlQ2VudGVyOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.MachineConfig), global::Google.Cloud.DatabaseCenter.V1Beta.MachineConfig.Parser, new[]{ "MemorySizeBytes", "ShardCount", "VcpuCount" }, new[]{ "ShardCount", "VcpuCount" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.MachineConfig), global::Google.Cloud.DatabaseCenter.V1Beta.MachineConfig.Parser, new[]{ "MemorySizeBytes", "ShardCount", "VcpuCount", "BaselineSlotCount", "MaxReservationSlotCount" }, new[]{ "ShardCount", "VcpuCount", "BaselineSlotCount", "MaxReservationSlotCount" }, null, null, null)
           }));
     }
     #endregion
@@ -90,6 +93,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       memorySizeBytes_ = other.memorySizeBytes_;
       shardCount_ = other.shardCount_;
       vcpuCount_ = other.vcpuCount_;
+      baselineSlotCount_ = other.baselineSlotCount_;
+      maxReservationSlotCount_ = other.maxReservationSlotCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -174,6 +179,68 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "baseline_slot_count" field.</summary>
+    public const int BaselineSlotCountFieldNumber = 5;
+    private readonly static long BaselineSlotCountDefaultValue = 0L;
+
+    private long baselineSlotCount_;
+    /// <summary>
+    /// Optional. Baseline slots for BigQuery Reservations. Baseline slots are in
+    /// increments of 50.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BaselineSlotCount {
+      get { if ((_hasBits0 & 4) != 0) { return baselineSlotCount_; } else { return BaselineSlotCountDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        baselineSlotCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "baseline_slot_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBaselineSlotCount {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "baseline_slot_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBaselineSlotCount() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "max_reservation_slot_count" field.</summary>
+    public const int MaxReservationSlotCountFieldNumber = 6;
+    private readonly static long MaxReservationSlotCountDefaultValue = 0L;
+
+    private long maxReservationSlotCount_;
+    /// <summary>
+    /// Optional. Max slots for BigQuery Reservations. Max slots are in increments
+    /// of 50.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxReservationSlotCount {
+      get { if ((_hasBits0 & 8) != 0) { return maxReservationSlotCount_; } else { return MaxReservationSlotCountDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        maxReservationSlotCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_reservation_slot_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxReservationSlotCount {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "max_reservation_slot_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxReservationSlotCount() {
+      _hasBits0 &= ~8;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -192,6 +259,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       if (MemorySizeBytes != other.MemorySizeBytes) return false;
       if (ShardCount != other.ShardCount) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VcpuCount, other.VcpuCount)) return false;
+      if (BaselineSlotCount != other.BaselineSlotCount) return false;
+      if (MaxReservationSlotCount != other.MaxReservationSlotCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -202,6 +271,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       if (MemorySizeBytes != 0L) hash ^= MemorySizeBytes.GetHashCode();
       if (HasShardCount) hash ^= ShardCount.GetHashCode();
       if (HasVcpuCount) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VcpuCount);
+      if (HasBaselineSlotCount) hash ^= BaselineSlotCount.GetHashCode();
+      if (HasMaxReservationSlotCount) hash ^= MaxReservationSlotCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -232,6 +303,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         output.WriteRawTag(33);
         output.WriteDouble(VcpuCount);
       }
+      if (HasBaselineSlotCount) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BaselineSlotCount);
+      }
+      if (HasMaxReservationSlotCount) {
+        output.WriteRawTag(48);
+        output.WriteInt64(MaxReservationSlotCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -254,6 +333,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         output.WriteRawTag(33);
         output.WriteDouble(VcpuCount);
       }
+      if (HasBaselineSlotCount) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BaselineSlotCount);
+      }
+      if (HasMaxReservationSlotCount) {
+        output.WriteRawTag(48);
+        output.WriteInt64(MaxReservationSlotCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -272,6 +359,12 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       }
       if (HasVcpuCount) {
         size += 1 + 8;
+      }
+      if (HasBaselineSlotCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaselineSlotCount);
+      }
+      if (HasMaxReservationSlotCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxReservationSlotCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -293,6 +386,12 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       }
       if (other.HasVcpuCount) {
         VcpuCount = other.VcpuCount;
+      }
+      if (other.HasBaselineSlotCount) {
+        BaselineSlotCount = other.BaselineSlotCount;
+      }
+      if (other.HasMaxReservationSlotCount) {
+        MaxReservationSlotCount = other.MaxReservationSlotCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -325,6 +424,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             VcpuCount = input.ReadDouble();
             break;
           }
+          case 40: {
+            BaselineSlotCount = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            MaxReservationSlotCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -354,6 +461,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
           }
           case 33: {
             VcpuCount = input.ReadDouble();
+            break;
+          }
+          case 40: {
+            BaselineSlotCount = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            MaxReservationSlotCount = input.ReadInt64();
             break;
           }
         }

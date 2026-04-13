@@ -26,37 +26,58 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvZGF0YWJhc2VjZW50ZXIvdjFiZXRhL21haW50ZW5h",
             "bmNlLnByb3RvEiJnb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50ZXIudjFiZXRh",
-            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhZnb29nbGUvdHlw",
-            "ZS9kYXRlLnByb3RvGhtnb29nbGUvdHlwZS9kYXlvZndlZWsucHJvdG8aG2dv",
-            "b2dsZS90eXBlL3RpbWVvZmRheS5wcm90byK3AQobUmVzb3VyY2VNYWludGVu",
-            "YW5jZVNjaGVkdWxlEi8KCnN0YXJ0X3RpbWUYASABKAsyFi5nb29nbGUudHlw",
-            "ZS5UaW1lT2ZEYXlCA+BBARIoCgNkYXkYAiABKA4yFi5nb29nbGUudHlwZS5E",
-            "YXlPZldlZWtCA+BBARI9CgVwaGFzZRgDIAEoDjIpLmdvb2dsZS5jbG91ZC5k",
-            "YXRhYmFzZWNlbnRlci52MWJldGEuUGhhc2VCA+BBASKiAQofUmVzb3VyY2VN",
-            "YWludGVuYW5jZURlbnlTY2hlZHVsZRIqCgpzdGFydF9kYXRlGAEgASgLMhEu",
-            "Z29vZ2xlLnR5cGUuRGF0ZUID4EEBEigKCGVuZF9kYXRlGAIgASgLMhEuZ29v",
-            "Z2xlLnR5cGUuRGF0ZUID4EEBEikKBHRpbWUYAyABKAsyFi5nb29nbGUudHlw",
-            "ZS5UaW1lT2ZEYXlCA+BBASKFAgoPTWFpbnRlbmFuY2VJbmZvEmIKFG1haW50",
-            "ZW5hbmNlX3NjaGVkdWxlGAEgASgLMj8uZ29vZ2xlLmNsb3VkLmRhdGFiYXNl",
-            "Y2VudGVyLnYxYmV0YS5SZXNvdXJjZU1haW50ZW5hbmNlU2NoZWR1bGVCA+BB",
-            "ARJsChpkZW55X21haW50ZW5hbmNlX3NjaGVkdWxlcxgCIAMoCzJDLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuUmVzb3VyY2VNYWludGVu",
-            "YW5jZURlbnlTY2hlZHVsZUID4EEBEiAKE21haW50ZW5hbmNlX3ZlcnNpb24Y",
-            "AyABKAlCA+BBAypgCgVQaGFzZRIVChFQSEFTRV9VTlNQRUNJRklFRBAAEg8K",
-            "C1BIQVNFX1dFRUsxEAESDwoLUEhBU0VfV0VFSzIQAhIPCgtQSEFTRV9XRUVL",
-            "NRADEg0KCVBIQVNFX0FOWRAEQv4BCiZjb20uZ29vZ2xlLmNsb3VkLmRhdGFi",
-            "YXNlY2VudGVyLnYxYmV0YUIQTWFpbnRlbmFuY2VQcm90b1ABWk5jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2RhdGFiYXNlY2VudGVyL2FwaXYxYmV0YS9kYXRhYmFz",
-            "ZWNlbnRlcnBiO2RhdGFiYXNlY2VudGVycGKqAiJHb29nbGUuQ2xvdWQuRGF0",
-            "YWJhc2VDZW50ZXIuVjFCZXRhygIiR29vZ2xlXENsb3VkXERhdGFiYXNlQ2Vu",
-            "dGVyXFYxYmV0YeoCJUdvb2dsZTo6Q2xvdWQ6OkRhdGFiYXNlQ2VudGVyOjpW",
-            "MWJldGFiBnByb3RvMw=="));
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3Rv",
+            "Ghtnb29nbGUvdHlwZS9kYXlvZndlZWsucHJvdG8aG2dvb2dsZS90eXBlL3Rp",
+            "bWVvZmRheS5wcm90byK3AQobUmVzb3VyY2VNYWludGVuYW5jZVNjaGVkdWxl",
+            "Ei8KCnN0YXJ0X3RpbWUYASABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlC",
+            "A+BBARIoCgNkYXkYAiABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BB",
+            "ARI9CgVwaGFzZRgDIAEoDjIpLmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRl",
+            "ci52MWJldGEuUGhhc2VCA+BBASKiAQofUmVzb3VyY2VNYWludGVuYW5jZURl",
+            "bnlTY2hlZHVsZRIqCgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUu",
+            "RGF0ZUID4EEBEigKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
+            "ZUID4EEBEikKBHRpbWUYAyABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlC",
+            "A+BBASJ9ChNVcGNvbWluZ01haW50ZW5hbmNlEjMKCnN0YXJ0X3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMi9gQK",
+            "D01haW50ZW5hbmNlSW5mbxJiChRtYWludGVuYW5jZV9zY2hlZHVsZRgBIAEo",
+            "CzI/Lmdvb2dsZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuUmVzb3Vy",
+            "Y2VNYWludGVuYW5jZVNjaGVkdWxlQgPgQQESbAoaZGVueV9tYWludGVuYW5j",
+            "ZV9zY2hlZHVsZXMYAiADKAsyQy5nb29nbGUuY2xvdWQuZGF0YWJhc2VjZW50",
+            "ZXIudjFiZXRhLlJlc291cmNlTWFpbnRlbmFuY2VEZW55U2NoZWR1bGVCA+BB",
+            "ARIgChNtYWludGVuYW5jZV92ZXJzaW9uGAMgASgJQgPgQQMSPAocY3VycmVu",
+            "dF92ZXJzaW9uX3JlbGVhc2VfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRh",
+            "dGVCA+BBAxJaChR1cGNvbWluZ19tYWludGVuYW5jZRgFIAEoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhYmFzZWNlbnRlci52MWJldGEuVXBjb21pbmdNYWludGVu",
+            "YW5jZUID4EEDEkgKBXN0YXRlGAYgASgOMjQuZ29vZ2xlLmNsb3VkLmRhdGFi",
+            "YXNlY2VudGVyLnYxYmV0YS5NYWludGVuYW5jZVN0YXRlQgPgQQMSYAoYcG9z",
+            "c2libGVfZmFpbHVyZV9yZWFzb25zGAcgAygOMjkuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFiYXNlY2VudGVyLnYxYmV0YS5Qb3NzaWJsZUZhaWx1cmVSZWFzb25CA+BB",
+            "AxIpChxwcmV2aW91c19tYWludGVuYW5jZV92ZXJzaW9uGAggASgJQgPgQQMq",
+            "YAoFUGhhc2USFQoRUEhBU0VfVU5TUEVDSUZJRUQQABIPCgtQSEFTRV9XRUVL",
+            "MRABEg8KC1BIQVNFX1dFRUsyEAISDwoLUEhBU0VfV0VFSzUQAxINCglQSEFT",
+            "RV9BTlkQBCq4AQoQTWFpbnRlbmFuY2VTdGF0ZRIhCh1NQUlOVEVOQU5DRV9T",
+            "VEFURV9VTlNQRUNJRklFRBAAEh8KG01BSU5URU5BTkNFX1NUQVRFX1NDSEVE",
+            "VUxFRBABEiEKHU1BSU5URU5BTkNFX1NUQVRFX0lOX1BST0dSRVNTEAISHwob",
+            "TUFJTlRFTkFOQ0VfU1RBVEVfQ09NUExFVEVEEAMSHAoYTUFJTlRFTkFOQ0Vf",
+            "U1RBVEVfRkFJTEVEEAQqqQEKFVBvc3NpYmxlRmFpbHVyZVJlYXNvbhInCiNQ",
+            "T1NTSUJMRV9GQUlMVVJFX1JFQVNPTl9VTlNQRUNJRklFRBAAEjAKLFBPU1NJ",
+            "QkxFX0ZBSUxVUkVfUkVBU09OX0RFTllfUE9MSUNZX0NPTkZMSUNUEAESNQox",
+            "UE9TU0lCTEVfRkFJTFVSRV9SRUFTT05fSU5TVEFOQ0VfSU5fU1RPUFBFRF9T",
+            "VEFURRACQv4BCiZjb20uZ29vZ2xlLmNsb3VkLmRhdGFiYXNlY2VudGVyLnYx",
+            "YmV0YUIQTWFpbnRlbmFuY2VQcm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RhdGFiYXNlY2VudGVyL2FwaXYxYmV0YS9kYXRhYmFzZWNlbnRlcnBiO2Rh",
+            "dGFiYXNlY2VudGVycGKqAiJHb29nbGUuQ2xvdWQuRGF0YWJhc2VDZW50ZXIu",
+            "VjFCZXRhygIiR29vZ2xlXENsb3VkXERhdGFiYXNlQ2VudGVyXFYxYmV0YeoC",
+            "JUdvb2dsZTo6Q2xvdWQ6OkRhdGFiYXNlQ2VudGVyOjpWMWJldGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DatabaseCenter.V1Beta.Phase), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DatabaseCenter.V1Beta.Phase), typeof(global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState), typeof(global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.ResourceMaintenanceSchedule), global::Google.Cloud.DatabaseCenter.V1Beta.ResourceMaintenanceSchedule.Parser, new[]{ "StartTime", "Day", "Phase" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.ResourceMaintenanceDenySchedule), global::Google.Cloud.DatabaseCenter.V1Beta.ResourceMaintenanceDenySchedule.Parser, new[]{ "StartDate", "EndDate", "Time" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceInfo), global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceInfo.Parser, new[]{ "MaintenanceSchedule", "DenyMaintenanceSchedules", "MaintenanceVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance), global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceInfo), global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceInfo.Parser, new[]{ "MaintenanceSchedule", "DenyMaintenanceSchedules", "MaintenanceVersion", "CurrentVersionReleaseDate", "UpcomingMaintenance", "State", "PossibleFailureReasons", "PreviousMaintenanceVersion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +112,52 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     /// Any phase.
     /// </summary>
     [pbr::OriginalName("PHASE_ANY")] Any = 4,
+  }
+
+  /// <summary>
+  /// Resource maintenance state.
+  /// </summary>
+  public enum MaintenanceState {
+    /// <summary>
+    /// Status is unspecified.
+    /// </summary>
+    [pbr::OriginalName("MAINTENANCE_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Maintenance is scheduled.
+    /// </summary>
+    [pbr::OriginalName("MAINTENANCE_STATE_SCHEDULED")] Scheduled = 1,
+    /// <summary>
+    /// Maintenance is in progress.
+    /// </summary>
+    [pbr::OriginalName("MAINTENANCE_STATE_IN_PROGRESS")] InProgress = 2,
+    /// <summary>
+    /// Maintenance is completed.
+    /// </summary>
+    [pbr::OriginalName("MAINTENANCE_STATE_COMPLETED")] Completed = 3,
+    /// <summary>
+    /// Maintenance has failed.
+    /// </summary>
+    [pbr::OriginalName("MAINTENANCE_STATE_FAILED")] Failed = 4,
+  }
+
+  /// <summary>
+  /// Possible reasons why the maintenance is not completed.
+  /// STATE_FAILED maintenance state may not always have a failure reason.
+  /// </summary>
+  public enum PossibleFailureReason {
+    /// <summary>
+    /// Failure reason is unspecified.
+    /// </summary>
+    [pbr::OriginalName("POSSIBLE_FAILURE_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Maintenance may not be completed because there is a deny policy
+    /// overlapping with upcoming maintenance schedule.
+    /// </summary>
+    [pbr::OriginalName("POSSIBLE_FAILURE_REASON_DENY_POLICY_CONFLICT")] DenyPolicyConflict = 1,
+    /// <summary>
+    /// Maintenance may not be completed because the instance is stopped.
+    /// </summary>
+    [pbr::OriginalName("POSSIBLE_FAILURE_REASON_INSTANCE_IN_STOPPED_STATE")] InstanceInStoppedState = 2,
   }
 
   #endregion
@@ -712,6 +779,271 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
   }
 
   /// <summary>
+  /// Upcoming maintenance window for the database resource.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpcomingMaintenance : pb::IMessage<UpcomingMaintenance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpcomingMaintenance> _parser = new pb::MessageParser<UpcomingMaintenance>(() => new UpcomingMaintenance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpcomingMaintenance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpcomingMaintenance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpcomingMaintenance(UpcomingMaintenance other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpcomingMaintenance Clone() {
+      return new UpcomingMaintenance(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. Start time of the upcoming maintenance.
+    /// Start time is always populated when an upcoming maintenance is
+    /// scheduled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. End time of the upcoming maintenance. This is only populated
+    /// for an engine, if end time is public for the engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpcomingMaintenance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpcomingMaintenance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpcomingMaintenance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// MaintenanceInfo to capture the maintenance details of database resource.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -729,7 +1061,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -752,6 +1084,11 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       maintenanceSchedule_ = other.maintenanceSchedule_ != null ? other.maintenanceSchedule_.Clone() : null;
       denyMaintenanceSchedules_ = other.denyMaintenanceSchedules_.Clone();
       maintenanceVersion_ = other.maintenanceVersion_;
+      currentVersionReleaseDate_ = other.currentVersionReleaseDate_ != null ? other.currentVersionReleaseDate_.Clone() : null;
+      upcomingMaintenance_ = other.upcomingMaintenance_ != null ? other.upcomingMaintenance_.Clone() : null;
+      state_ = other.state_;
+      possibleFailureReasons_ = other.possibleFailureReasons_.Clone();
+      previousMaintenanceVersion_ = other.previousMaintenanceVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -806,6 +1143,91 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "current_version_release_date" field.</summary>
+    public const int CurrentVersionReleaseDateFieldNumber = 4;
+    private global::Google.Type.Date currentVersionReleaseDate_;
+    /// <summary>
+    /// Output only. The date when the maintenance version was released.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Date CurrentVersionReleaseDate {
+      get { return currentVersionReleaseDate_; }
+      set {
+        currentVersionReleaseDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "upcoming_maintenance" field.</summary>
+    public const int UpcomingMaintenanceFieldNumber = 5;
+    private global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance upcomingMaintenance_;
+    /// <summary>
+    /// Output only. Upcoming maintenance window for the database resource. This is
+    /// only populated for an engine, if upcoming maintenance is scheduled for the
+    /// resource. This schedule is generated per engine and engine version, and
+    /// there is only one upcoming maintenance window at any given time. In case of
+    /// upcoming maintenance, the maintenance_state will be set to SCHEDULED first,
+    /// and then IN_PROGRESS when the maintenance window starts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance UpcomingMaintenance {
+      get { return upcomingMaintenance_; }
+      set {
+        upcomingMaintenance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 6;
+    private global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState state_ = global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified;
+    /// <summary>
+    /// Output only. Resource maintenance state. This is to capture the current
+    /// state of the maintenance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "possible_failure_reasons" field.</summary>
+    public const int PossibleFailureReasonsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason> _repeated_possibleFailureReasons_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason> possibleFailureReasons_ = new pbc::RepeatedField<global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason>();
+    /// <summary>
+    /// Output only. List of possible reasons why the maintenance is not completed.
+    /// This is an optional field and is only populated if there are any
+    /// reasons for failures recorded for the maintenance by DB Center.
+    /// FAILURE maintenance status may not always have a failure reason.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DatabaseCenter.V1Beta.PossibleFailureReason> PossibleFailureReasons {
+      get { return possibleFailureReasons_; }
+    }
+
+    /// <summary>Field number for the "previous_maintenance_version" field.</summary>
+    public const int PreviousMaintenanceVersionFieldNumber = 8;
+    private string previousMaintenanceVersion_ = "";
+    /// <summary>
+    /// Output only. Previous maintenance version of the database resource.
+    /// Example: "MYSQL_8_0_41.R20250531.01_15". This is available once a minor
+    /// version maintenance is complete on a database resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PreviousMaintenanceVersion {
+      get { return previousMaintenanceVersion_; }
+      set {
+        previousMaintenanceVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -824,6 +1246,11 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       if (!object.Equals(MaintenanceSchedule, other.MaintenanceSchedule)) return false;
       if(!denyMaintenanceSchedules_.Equals(other.denyMaintenanceSchedules_)) return false;
       if (MaintenanceVersion != other.MaintenanceVersion) return false;
+      if (!object.Equals(CurrentVersionReleaseDate, other.CurrentVersionReleaseDate)) return false;
+      if (!object.Equals(UpcomingMaintenance, other.UpcomingMaintenance)) return false;
+      if (State != other.State) return false;
+      if(!possibleFailureReasons_.Equals(other.possibleFailureReasons_)) return false;
+      if (PreviousMaintenanceVersion != other.PreviousMaintenanceVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -834,6 +1261,11 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       if (maintenanceSchedule_ != null) hash ^= MaintenanceSchedule.GetHashCode();
       hash ^= denyMaintenanceSchedules_.GetHashCode();
       if (MaintenanceVersion.Length != 0) hash ^= MaintenanceVersion.GetHashCode();
+      if (currentVersionReleaseDate_ != null) hash ^= CurrentVersionReleaseDate.GetHashCode();
+      if (upcomingMaintenance_ != null) hash ^= UpcomingMaintenance.GetHashCode();
+      if (State != global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified) hash ^= State.GetHashCode();
+      hash ^= possibleFailureReasons_.GetHashCode();
+      if (PreviousMaintenanceVersion.Length != 0) hash ^= PreviousMaintenanceVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -861,6 +1293,23 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(MaintenanceVersion);
       }
+      if (currentVersionReleaseDate_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CurrentVersionReleaseDate);
+      }
+      if (upcomingMaintenance_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpcomingMaintenance);
+      }
+      if (State != global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      possibleFailureReasons_.WriteTo(output, _repeated_possibleFailureReasons_codec);
+      if (PreviousMaintenanceVersion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(PreviousMaintenanceVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -880,6 +1329,23 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(MaintenanceVersion);
       }
+      if (currentVersionReleaseDate_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CurrentVersionReleaseDate);
+      }
+      if (upcomingMaintenance_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpcomingMaintenance);
+      }
+      if (State != global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      possibleFailureReasons_.WriteTo(ref output, _repeated_possibleFailureReasons_codec);
+      if (PreviousMaintenanceVersion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(PreviousMaintenanceVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -896,6 +1362,19 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       size += denyMaintenanceSchedules_.CalculateSize(_repeated_denyMaintenanceSchedules_codec);
       if (MaintenanceVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MaintenanceVersion);
+      }
+      if (currentVersionReleaseDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentVersionReleaseDate);
+      }
+      if (upcomingMaintenance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpcomingMaintenance);
+      }
+      if (State != global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      size += possibleFailureReasons_.CalculateSize(_repeated_possibleFailureReasons_codec);
+      if (PreviousMaintenanceVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PreviousMaintenanceVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -918,6 +1397,25 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
       denyMaintenanceSchedules_.Add(other.denyMaintenanceSchedules_);
       if (other.MaintenanceVersion.Length != 0) {
         MaintenanceVersion = other.MaintenanceVersion;
+      }
+      if (other.currentVersionReleaseDate_ != null) {
+        if (currentVersionReleaseDate_ == null) {
+          CurrentVersionReleaseDate = new global::Google.Type.Date();
+        }
+        CurrentVersionReleaseDate.MergeFrom(other.CurrentVersionReleaseDate);
+      }
+      if (other.upcomingMaintenance_ != null) {
+        if (upcomingMaintenance_ == null) {
+          UpcomingMaintenance = new global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance();
+        }
+        UpcomingMaintenance.MergeFrom(other.UpcomingMaintenance);
+      }
+      if (other.State != global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState.Unspecified) {
+        State = other.State;
+      }
+      possibleFailureReasons_.Add(other.possibleFailureReasons_);
+      if (other.PreviousMaintenanceVersion.Length != 0) {
+        PreviousMaintenanceVersion = other.PreviousMaintenanceVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -953,6 +1451,33 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
             MaintenanceVersion = input.ReadString();
             break;
           }
+          case 34: {
+            if (currentVersionReleaseDate_ == null) {
+              CurrentVersionReleaseDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(CurrentVersionReleaseDate);
+            break;
+          }
+          case 42: {
+            if (upcomingMaintenance_ == null) {
+              UpcomingMaintenance = new global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance();
+            }
+            input.ReadMessage(UpcomingMaintenance);
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState) input.ReadEnum();
+            break;
+          }
+          case 58:
+          case 56: {
+            possibleFailureReasons_.AddEntriesFrom(input, _repeated_possibleFailureReasons_codec);
+            break;
+          }
+          case 66: {
+            PreviousMaintenanceVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -985,6 +1510,33 @@ namespace Google.Cloud.DatabaseCenter.V1Beta {
           }
           case 26: {
             MaintenanceVersion = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (currentVersionReleaseDate_ == null) {
+              CurrentVersionReleaseDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(CurrentVersionReleaseDate);
+            break;
+          }
+          case 42: {
+            if (upcomingMaintenance_ == null) {
+              UpcomingMaintenance = new global::Google.Cloud.DatabaseCenter.V1Beta.UpcomingMaintenance();
+            }
+            input.ReadMessage(UpcomingMaintenance);
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.DatabaseCenter.V1Beta.MaintenanceState) input.ReadEnum();
+            break;
+          }
+          case 58:
+          case 56: {
+            possibleFailureReasons_.AddEntriesFrom(ref input, _repeated_possibleFailureReasons_codec);
+            break;
+          }
+          case 66: {
+            PreviousMaintenanceVersion = input.ReadString();
             break;
           }
         }
