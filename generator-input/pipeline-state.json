@@ -4974,10 +4974,12 @@
         },
         {
             "id": "Google.Cloud.AppOptimize.V1Beta",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-04-13T15:52:29.171121241Z",
             "lastGeneratedCommit": "9a832ccde3f3ca4d4e1c39593b1cbf9aa62a75b3",
+            "lastReleasedCommit": "9a832ccde3f3ca4d4e1c39593b1cbf9aa62a75b3",
             "apiPaths": [
                 "google/cloud/appoptimize/v1beta"
             ],

@@ -659,7 +659,7 @@
     },
     {
       "id": "Google.Cloud.AppOptimize.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "App Optimize",
       "productUrl": "https://docs.cloud.google.com/app-optimize/overview",
