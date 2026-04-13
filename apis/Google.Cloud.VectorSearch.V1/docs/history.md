@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-04-13
+
+### New features
+
+- Added CMEK support
+- Added UpdateIndex support
+
+### Documentation improvements
+
+- Updated documentation for listing locations
+- Updated documentation for Collection.data_schema
+
 ## Version 1.0.0-beta04, released 2026-03-16
 
 ### New features
