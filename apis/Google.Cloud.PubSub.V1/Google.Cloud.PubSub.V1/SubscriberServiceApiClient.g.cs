@@ -238,8 +238,8 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SubscriberServiceApiClient.StreamingPull</c> and <c>SubscriberServiceApiClient.StreamingPullAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 900 seconds.</remarks>
-        public gaxgrpc::CallSettings StreamingPullSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000)));
+        /// <remarks>Timeout: 1800 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamingPullSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1800000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
