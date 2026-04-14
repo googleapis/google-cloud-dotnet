@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 SourceModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 EncryptionSpec = new EncryptionSpec(),
                 ModelId = "",
+                CustomServiceAccount = "",
             };
             // Make the request
             Operation<CopyModelResponse, CopyModelOperationMetadata> response = await modelServiceClient.CopyModelAsync(request);
