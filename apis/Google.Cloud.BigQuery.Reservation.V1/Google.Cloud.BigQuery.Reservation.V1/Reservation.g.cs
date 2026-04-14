@@ -172,233 +172,234 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             "ASABKAlCOvpBNxI1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNv",
             "bS9DYXBhY2l0eUNvbW1pdG1lbnQSHwoXY2FwYWNpdHlfY29tbWl0bWVudF9p",
             "ZHMYAiADKAkSIwoWY2FwYWNpdHlfY29tbWl0bWVudF9pZBgDIAEoCUID4EEB",
-            "IpkGCgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlCA+BBAxIVCghhc3NpZ25l",
+            "IrEGCgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlCA+BBAxIVCghhc3NpZ25l",
             "ZRgEIAEoCUID4EEBEk8KCGpvYl90eXBlGAMgASgOMjguZ29vZ2xlLmNsb3Vk",
             "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQuSm9iVHlwZUID",
             "4EEBEkoKBXN0YXRlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
             "c2VydmF0aW9uLnYxLkFzc2lnbm1lbnQuU3RhdGVCA+BBAxIoChllbmFibGVf",
             "Z2VtaW5pX2luX2JpZ3F1ZXJ5GAogASgIQgUYAeBBARJWChFzY2hlZHVsaW5n",
             "X3BvbGljeRgLIAEoCzI2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
-            "dGlvbi52MS5TY2hlZHVsaW5nUG9saWN5QgPgQQEi3AEKB0pvYlR5cGUSGAoU",
-            "Sk9CX1RZUEVfVU5TUEVDSUZJRUQQABIMCghQSVBFTElORRABEgkKBVFVRVJZ",
-            "EAISDwoLTUxfRVhURVJOQUwQAxIOCgpCQUNLR1JPVU5EEAQSDgoKQ09OVElO",
-            "VU9VUxAGEiIKHkJBQ0tHUk9VTkRfQ0hBTkdFX0RBVEFfQ0FQVFVSRRAHEiQK",
-            "IEJBQ0tHUk9VTkRfQ09MVU1OX01FVEFEQVRBX0lOREVYEAgSIwofQkFDS0dS",
-            "T1VORF9TRUFSQ0hfSU5ERVhfUkVGUkVTSBAJIjcKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoKBkFDVElWRRACOqkB6kGl",
-            "AQotYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25t",
-            "ZW50Eltwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "cmVzZXJ2YXRpb25zL3tyZXNlcnZhdGlvbn0vYXNzaWdubWVudHMve2Fzc2ln",
-            "bm1lbnR9Kgthc3NpZ25tZW50czIKYXNzaWdubWVudCK9AQoXQ3JlYXRlQXNz",
-            "aWdubWVudFJlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWJpZ3F1",
-            "ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudBJECgph",
-            "c3NpZ25tZW50GAIgASgLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
-            "dmF0aW9uLnYxLkFzc2lnbm1lbnQSFQoNYXNzaWdubWVudF9pZBgEIAEoCSKG",
-            "AQoWTGlzdEFzc2lnbm1lbnRzUmVxdWVzdBJFCgZwYXJlbnQYASABKAlCNeBB",
-            "AvpBLxItYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3Np",
-            "Z25tZW50EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJ",
-            "InkKF0xpc3RBc3NpZ25tZW50c1Jlc3BvbnNlEkUKC2Fzc2lnbm1lbnRzGAEg",
-            "AygLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFz",
-            "c2lnbm1lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl4KF0RlbGV0ZUFz",
-            "c2lnbm1lbnRSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYmlncXVl",
-            "cnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50IosBChhT",
-            "ZWFyY2hBc3NpZ25tZW50c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6",
-            "QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhINCgVxdWVy",
-            "eRgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEo",
-            "CSKOAQobU2VhcmNoQWxsQXNzaWdubWVudHNSZXF1ZXN0EjkKBnBhcmVudBgB",
-            "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SDQoFcXVlcnkYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2Vf",
-            "dG9rZW4YBCABKAkiewoZU2VhcmNoQXNzaWdubWVudHNSZXNwb25zZRJFCgth",
-            "c3NpZ25tZW50cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
-            "cnZhdGlvbi52MS5Bc3NpZ25tZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSJ+ChxTZWFyY2hBbGxBc3NpZ25tZW50c1Jlc3BvbnNlEkUKC2Fzc2lnbm1l",
-            "bnRzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
-            "LnYxLkFzc2lnbm1lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIr8BChVN",
-            "b3ZlQXNzaWdubWVudFJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1i",
-            "aWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0Fzc2lnbm1lbnQS",
-            "SgoOZGVzdGluYXRpb25faWQYAyABKAlCMvpBLxItYmlncXVlcnlyZXNlcnZh",
-            "dGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50EhUKDWFzc2lnbm1lbnRf",
-            "aWQYBSABKAkikAEKF1VwZGF0ZUFzc2lnbm1lbnRSZXF1ZXN0EkQKCmFzc2ln",
-            "bm1lbnQYASABKAsyMC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
-            "b24udjEuQXNzaWdubWVudBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5GaWVsZE1hc2siWQoOVGFibGVSZWZlcmVuY2USFwoKcHJv",
-            "amVjdF9pZBgBIAEoCUID4EEBEhcKCmRhdGFzZXRfaWQYAiABKAlCA+BBARIV",
-            "Cgh0YWJsZV9pZBgDIAEoCUID4EEBIq4CCg1CaVJlc2VydmF0aW9uEhEKBG5h",
-            "bWUYASABKAlCA+BBCBI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRzaXplGAQgASgDQgPgQQESUwoQ",
-            "cHJlZmVycmVkX3RhYmxlcxgFIAMoCzI0Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5yZXNlcnZhdGlvbi52MS5UYWJsZVJlZmVyZW5jZUID4EEBOmzqQWkKMGJp",
-            "Z3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQmlSZXNlcnZhdGlv",
-            "bhI1cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Jp",
-            "UmVzZXJ2YXRpb24iYQoXR2V0QmlSZXNlcnZhdGlvblJlcXVlc3QSRgoEbmFt",
-            "ZRgBIAEoCUI44EEC+kEyCjBiaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL0JpUmVzZXJ2YXRpb24imgEKGlVwZGF0ZUJpUmVzZXJ2YXRpb25S",
-            "ZXF1ZXN0EksKDmJpX3Jlc2VydmF0aW9uGAEgASgLMjMuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkJpUmVzZXJ2YXRpb24SLwoLdXBk",
-            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrKlUK",
-            "B0VkaXRpb24SFwoTRURJVElPTl9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJE",
-            "EAESDgoKRU5URVJQUklTRRACEhMKD0VOVEVSUFJJU0VfUExVUxADKkEKDEZh",
-            "aWxvdmVyTW9kZRIdChlGQUlMT1ZFUl9NT0RFX1VOU1BFQ0lGSUVEEAASCAoE",
-            "U09GVBABEggKBEhBUkQQAjKjNgoSUmVzZXJ2YXRpb25TZXJ2aWNlEvEBChFD",
-            "cmVhdGVSZXNlcnZhdGlvbhI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
-            "cnZhdGlvbi52MS5DcmVhdGVSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iadpB",
-            "IXBhcmVudCxyZXNlcnZhdGlvbixyZXNlcnZhdGlvbl9pZILT5JMCPyIwL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25z",
-            "OgtyZXNlcnZhdGlvbhLUAQoQTGlzdFJlc2VydmF0aW9ucxI9Lmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRpb25z",
-            "UmVxdWVzdBo+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
-            "MS5MaXN0UmVzZXJ2YXRpb25zUmVzcG9uc2UiQdpBBnBhcmVudILT5JMCMhIw",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRp",
-            "b25zEsEBCg5HZXRSZXNlcnZhdGlvbhI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5yZXNlcnZhdGlvbi52MS5HZXRSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24i",
-            "P9pBBG5hbWWC0+STAjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3Jlc2VydmF0aW9ucy8qfRKsAQoRRGVsZXRlUmVzZXJ2YXRpb24SPi5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuRGVsZXRlUmVz",
-            "ZXJ2YXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij/aQQRu",
-            "YW1lgtPkkwIyKjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9y",
-            "ZXNlcnZhdGlvbnMvKn0S8wEKEVVwZGF0ZVJlc2VydmF0aW9uEj4uZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlVwZGF0ZVJlc2VydmF0",
-            "aW9uUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
-            "bi52MS5SZXNlcnZhdGlvbiJr2kEXcmVzZXJ2YXRpb24sdXBkYXRlX21hc2uC",
-            "0+STAksyPC92MS97cmVzZXJ2YXRpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3Jlc2VydmF0aW9ucy8qfToLcmVzZXJ2YXRpb24S2wEKE0ZhaWxv",
-            "dmVyUmVzZXJ2YXRpb24SQC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
-            "YXRpb24udjEuRmFpbG92ZXJSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iT4LT",
-            "5JMCSSJEL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2",
-            "YXRpb25zLyp9OmZhaWxvdmVyUmVzZXJ2YXRpb246ASoSjgIKGENyZWF0ZUNh",
-            "cGFjaXR5Q29tbWl0bWVudBJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
-            "cnZhdGlvbi52MS5DcmVhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0Gjgu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5",
-            "Q29tbWl0bWVudCJx2kEacGFyZW50LGNhcGFjaXR5X2NvbW1pdG1lbnSC0+ST",
-            "Ak4iNy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NhcGFj",
-            "aXR5Q29tbWl0bWVudHM6E2NhcGFjaXR5X2NvbW1pdG1lbnQS8AEKF0xpc3RD",
-            "YXBhY2l0eUNvbW1pdG1lbnRzEkQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
-            "c2VydmF0aW9uLnYxLkxpc3RDYXBhY2l0eUNvbW1pdG1lbnRzUmVxdWVzdBpF",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0Q2Fw",
-            "YWNpdHlDb21taXRtZW50c1Jlc3BvbnNlIkjaQQZwYXJlbnSC0+STAjkSNy92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NhcGFjaXR5Q29t",
-            "bWl0bWVudHMS3QEKFUdldENhcGFjaXR5Q29tbWl0bWVudBJCLmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRDYXBhY2l0eUNvbW1p",
+            "dGlvbi52MS5TY2hlZHVsaW5nUG9saWN5QgPgQQESFgoJcHJpbmNpcGFsGAwg",
+            "ASgJQgPgQQEi3AEKB0pvYlR5cGUSGAoUSk9CX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIMCghQSVBFTElORRABEgkKBVFVRVJZEAISDwoLTUxfRVhURVJOQUwQAxIO",
+            "CgpCQUNLR1JPVU5EEAQSDgoKQ09OVElOVU9VUxAGEiIKHkJBQ0tHUk9VTkRf",
+            "Q0hBTkdFX0RBVEFfQ0FQVFVSRRAHEiQKIEJBQ0tHUk9VTkRfQ09MVU1OX01F",
+            "VEFEQVRBX0lOREVYEAgSIwofQkFDS0dST1VORF9TRUFSQ0hfSU5ERVhfUkVG",
+            "UkVTSBAJIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVO",
+            "RElORxABEgoKBkFDVElWRRACOqkB6kGlAQotYmlncXVlcnlyZXNlcnZhdGlv",
+            "bi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50Eltwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVzZXJ2YXRpb25zL3tyZXNlcnZh",
+            "dGlvbn0vYXNzaWdubWVudHMve2Fzc2lnbm1lbnR9Kgthc3NpZ25tZW50czIK",
+            "YXNzaWdubWVudCK9AQoXQ3JlYXRlQXNzaWdubWVudFJlcXVlc3QSRQoGcGFy",
+            "ZW50GAEgASgJQjXgQQL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vQXNzaWdubWVudBJECgphc3NpZ25tZW50GAIgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQS",
+            "FQoNYXNzaWdubWVudF9pZBgEIAEoCSKGAQoWTGlzdEFzc2lnbm1lbnRzUmVx",
+            "dWVzdBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItYmlncXVlcnlyZXNlcnZh",
+            "dGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50EhEKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInkKF0xpc3RBc3NpZ25tZW50c1Jl",
+            "c3BvbnNlEkUKC2Fzc2lnbm1lbnRzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIl4KF0RlbGV0ZUFzc2lnbm1lbnRSZXF1ZXN0EkMKBG5h",
+            "bWUYASABKAlCNeBBAvpBLwotYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVh",
+            "cGlzLmNvbS9Bc3NpZ25tZW50IosBChhTZWFyY2hBc3NpZ25tZW50c1JlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhINCgVxdWVyeRgCIAEoCRIRCglwYWdlX3NpemUY",
+            "AyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSKOAQobU2VhcmNoQWxsQXNzaWdu",
+            "bWVudHNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlv",
+            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SDQoFcXVlcnkYAiABKAkSEQoJ",
+            "cGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiewoZU2VhcmNo",
+            "QXNzaWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMoCzIwLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ+ChxTZWFyY2hBbGxBc3NpZ25t",
+            "ZW50c1Jlc3BvbnNlEkUKC2Fzc2lnbm1lbnRzGAEgAygLMjAuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJIr8BChVNb3ZlQXNzaWdubWVudFJlcXVlc3QS",
+            "QwoEbmFtZRgBIAEoCUI14EEC+kEvCi1iaWdxdWVyeXJlc2VydmF0aW9uLmdv",
+            "b2dsZWFwaXMuY29tL0Fzc2lnbm1lbnQSSgoOZGVzdGluYXRpb25faWQYAyAB",
+            "KAlCMvpBLxItYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9B",
+            "c3NpZ25tZW50EhUKDWFzc2lnbm1lbnRfaWQYBSABKAkikAEKF1VwZGF0ZUFz",
+            "c2lnbm1lbnRSZXF1ZXN0EkQKCmFzc2lnbm1lbnQYASABKAsyMC5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudBIvCgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
+            "WQoOVGFibGVSZWZlcmVuY2USFwoKcHJvamVjdF9pZBgBIAEoCUID4EEBEhcK",
+            "CmRhdGFzZXRfaWQYAiABKAlCA+BBARIVCgh0YWJsZV9pZBgDIAEoCUID4EEB",
+            "Iq4CCg1CaVJlc2VydmF0aW9uEhEKBG5hbWUYASABKAlCA+BBCBI0Cgt1cGRh",
+            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxIRCgRzaXplGAQgASgDQgPgQQESUwoQcHJlZmVycmVkX3RhYmxlcxgFIAMo",
+            "CzI0Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5UYWJs",
+            "ZVJlZmVyZW5jZUID4EEBOmzqQWkKMGJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vQmlSZXNlcnZhdGlvbhI1cHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2JpUmVzZXJ2YXRpb24iYQoXR2V0QmlS",
+            "ZXNlcnZhdGlvblJlcXVlc3QSRgoEbmFtZRgBIAEoCUI44EEC+kEyCjBiaWdx",
+            "dWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0JpUmVzZXJ2YXRpb24i",
+            "mgEKGlVwZGF0ZUJpUmVzZXJ2YXRpb25SZXF1ZXN0EksKDmJpX3Jlc2VydmF0",
+            "aW9uGAEgASgLMjMuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
+            "LnYxLkJpUmVzZXJ2YXRpb24SLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrKlUKB0VkaXRpb24SFwoTRURJVElPTl9V",
+            "TlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESDgoKRU5URVJQUklTRRACEhMK",
+            "D0VOVEVSUFJJU0VfUExVUxADKkEKDEZhaWxvdmVyTW9kZRIdChlGQUlMT1ZF",
+            "Ul9NT0RFX1VOU1BFQ0lGSUVEEAASCAoEU09GVBABEggKBEhBUkQQAjKjNgoS",
+            "UmVzZXJ2YXRpb25TZXJ2aWNlEvEBChFDcmVhdGVSZXNlcnZhdGlvbhI+Lmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DcmVhdGVSZXNl",
+            "cnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuUmVzZXJ2YXRpb24iadpBIXBhcmVudCxyZXNlcnZhdGlvbixy",
+            "ZXNlcnZhdGlvbl9pZILT5JMCPyIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25zOgtyZXNlcnZhdGlvbhLUAQoQTGlz",
+            "dFJlc2VydmF0aW9ucxI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
+            "dGlvbi52MS5MaXN0UmVzZXJ2YXRpb25zUmVxdWVzdBo+Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRpb25zUmVz",
+            "cG9uc2UiQdpBBnBhcmVudILT5JMCMhIwL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25zEsEBCg5HZXRSZXNlcnZhdGlv",
+            "bhI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRS",
+            "ZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVz",
+            "ZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iP9pBBG5hbWWC0+STAjISMC92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfRKs",
+            "AQoRRGVsZXRlUmVzZXJ2YXRpb24SPi5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuRGVsZXRlUmVzZXJ2YXRpb25SZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5Ij/aQQRuYW1lgtPkkwIyKjAvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn0S8wEKEVVw",
+            "ZGF0ZVJlc2VydmF0aW9uEj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLlVwZGF0ZVJlc2VydmF0aW9uUmVxdWVzdBoxLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5SZXNlcnZhdGlvbiJr2kEX",
+            "cmVzZXJ2YXRpb24sdXBkYXRlX21hc2uC0+STAksyPC92MS97cmVzZXJ2YXRp",
+            "b24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8q",
+            "fToLcmVzZXJ2YXRpb24S2wEKE0ZhaWxvdmVyUmVzZXJ2YXRpb24SQC5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuRmFpbG92ZXJSZXNl",
+            "cnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuUmVzZXJ2YXRpb24iT4LT5JMCSSJEL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyp9OmZhaWxvdmVyUmVz",
+            "ZXJ2YXRpb246ASoSjgIKGENyZWF0ZUNhcGFjaXR5Q29tbWl0bWVudBJFLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DcmVhdGVDYXBh",
+            "Y2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCJx2kEacGFyZW50",
+            "LGNhcGFjaXR5X2NvbW1pdG1lbnSC0+STAk4iNy92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHM6E2NhcGFj",
+            "aXR5X2NvbW1pdG1lbnQS8AEKF0xpc3RDYXBhY2l0eUNvbW1pdG1lbnRzEkQu",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkxpc3RDYXBh",
+            "Y2l0eUNvbW1pdG1lbnRzUmVxdWVzdBpFLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5yZXNlcnZhdGlvbi52MS5MaXN0Q2FwYWNpdHlDb21taXRtZW50c1Jlc3Bv",
+            "bnNlIkjaQQZwYXJlbnSC0+STAjkSNy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHMS3QEKFUdldENhcGFj",
+            "aXR5Q29tbWl0bWVudBJCLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
+            "dGlvbi52MS5HZXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0",
+            "bWVudCJG2kEEbmFtZYLT5JMCORI3L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2FwYWNpdHlDb21taXRtZW50cy8qfRLBAQoYRGVsZXRlQ2Fw",
+            "YWNpdHlDb21taXRtZW50EkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLkRlbGV0ZUNhcGFjaXR5Q29tbWl0bWVudFJlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiRtpBBG5hbWWC0+STAjkqNy92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhcGFjaXR5Q29tbWl0bWVudHMv",
+            "Kn0SqAIKGFVwZGF0ZUNhcGFjaXR5Q29tbWl0bWVudBJFLmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVDYXBhY2l0eUNvbW1p",
             "dG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0",
-            "aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCJG2kEEbmFtZYLT5JMCORI3L3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlDb21taXRt",
-            "ZW50cy8qfRLBAQoYRGVsZXRlQ2FwYWNpdHlDb21taXRtZW50EkUuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkRlbGV0ZUNhcGFjaXR5",
-            "Q29tbWl0bWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRtpB",
-            "BG5hbWWC0+STAjkqNy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2NhcGFjaXR5Q29tbWl0bWVudHMvKn0SqAIKGFVwZGF0ZUNhcGFjaXR5Q29t",
-            "bWl0bWVudBJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
-            "MS5VcGRhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVu",
-            "dCKKAdpBH2NhcGFjaXR5X2NvbW1pdG1lbnQsdXBkYXRlX21hc2uC0+STAmIy",
-            "Sy92MS97Y2FwYWNpdHlfY29tbWl0bWVudC5uYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY2FwYWNpdHlDb21taXRtZW50cy8qfToTY2FwYWNpdHlfY29t",
-            "bWl0bWVudBKCAgoXU3BsaXRDYXBhY2l0eUNvbW1pdG1lbnQSRC5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU3BsaXRDYXBhY2l0eUNv",
-            "bW1pdG1lbnRSZXF1ZXN0GkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
-            "dmF0aW9uLnYxLlNwbGl0Q2FwYWNpdHlDb21taXRtZW50UmVzcG9uc2UiWtpB",
-            "D25hbWUsc2xvdF9jb3VudILT5JMCQiI9L3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovY2FwYWNpdHlDb21taXRtZW50cy8qfTpzcGxpdDoBKhKG",
-            "AgoYTWVyZ2VDYXBhY2l0eUNvbW1pdG1lbnRzEkUuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLk1lcmdlQ2FwYWNpdHlDb21taXRtZW50",
-            "c1JlcXVlc3QaOC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
-            "djEuQ2FwYWNpdHlDb21taXRtZW50ImnaQR5wYXJlbnQsY2FwYWNpdHlfY29t",
-            "bWl0bWVudF9pZHOC0+STAkIiPS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHM6bWVyZ2U6ASoS6wEKEENy",
-            "ZWF0ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
-            "YXRpb24udjEuQ3JlYXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJm2kERcGFy",
-            "ZW50LGFzc2lnbm1lbnSC0+STAkwiPi92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyp9L2Fzc2lnbm1lbnRzOgphc3Np",
-            "Z25tZW50Et8BCg9MaXN0QXNzaWdubWVudHMSPC5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdEFzc2lnbm1lbnRzUmVxdWVzdBo9",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0QXNz",
-            "aWdubWVudHNSZXNwb25zZSJP2kEGcGFyZW50gtPkkwJAEj4vdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfS9hc3Np",
-            "Z25tZW50cxK4AQoQRGVsZXRlQXNzaWdubWVudBI9Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5EZWxldGVBc3NpZ25tZW50UmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJN2kEEbmFtZYLT5JMCQCo+L3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyov",
-            "YXNzaWdubWVudHMvKn0S5QEKEVNlYXJjaEFzc2lnbm1lbnRzEj4uZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNlYXJjaEFzc2lnbm1l",
-            "bnRzUmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
-            "bi52MS5TZWFyY2hBc3NpZ25tZW50c1Jlc3BvbnNlIk+IAgHaQQxwYXJlbnQs",
-            "cXVlcnmC0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9OnNlYXJjaEFzc2lnbm1lbnRzEu4BChRTZWFyY2hBbGxBc3NpZ25tZW50",
-            "cxJBLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFy",
-            "Y2hBbGxBc3NpZ25tZW50c1JlcXVlc3QaQi5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkucmVzZXJ2YXRpb24udjEuU2VhcmNoQWxsQXNzaWdubWVudHNSZXNwb25z",
-            "ZSJP2kEMcGFyZW50LHF1ZXJ5gtPkkwI6EjgvdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qfTpzZWFyY2hBbGxBc3NpZ25tZW50cxLlAQoOTW92",
-            "ZUFzc2lnbm1lbnQSOy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
-            "b24udjEuTW92ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQiZNpBE25hbWUsZGVz",
-            "dGluYXRpb25faWSC0+STAkgiQy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9Om1vdmU6ASoS",
-            "+wEKEFVwZGF0ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "cmVzZXJ2YXRpb24udjEuVXBkYXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJ2",
-            "2kEWYXNzaWdubWVudCx1cGRhdGVfbWFza4LT5JMCVzJJL3YxL3thc3NpZ25t",
-            "ZW50Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMv",
-            "Ki9hc3NpZ25tZW50cy8qfToKYXNzaWdubWVudBLGAQoQR2V0QmlSZXNlcnZh",
-            "dGlvbhI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5H",
-            "ZXRCaVJlc2VydmF0aW9uUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9uIj7aQQRuYW1lgtPkkwIx",
-            "Ei8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9iaVJlc2VydmF0",
-            "aW9ufRKBAgoTVXBkYXRlQmlSZXNlcnZhdGlvbhJALmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVCaVJlc2VydmF0aW9uUmVx",
-            "dWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5C",
-            "aVJlc2VydmF0aW9uInPaQRpiaV9yZXNlcnZhdGlvbix1cGRhdGVfbWFza4LT",
-            "5JMCUDI+L3YxL3tiaV9yZXNlcnZhdGlvbi5uYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovYmlSZXNlcnZhdGlvbn06DmJpX3Jlc2VydmF0aW9uEvQBCgxH",
-            "ZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVl",
-            "c3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKoAdpBCHJlc291cmNlgtPkkwKW",
-            "ARJBL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2Vy",
-            "dmF0aW9ucy8qfTpnZXRJYW1Qb2xpY3laURJPL3YxL3tyZXNvdXJjZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRz",
-            "Lyp9OmdldElhbVBvbGljeRKBAgoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlh",
-            "bS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xp",
-            "Y3kitQHaQQ9yZXNvdXJjZSxwb2xpY3mC0+STApwBIkEvdjEve3Jlc291cmNl",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyp9OnNldElh",
-            "bVBvbGljeToBKlpUIk8vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcmVzZXJ2YXRpb25zLyovYXNzaWdubWVudHMvKn06c2V0SWFtUG9s",
-            "aWN5OgEqEpsCChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYx",
-            "LlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRl",
-            "c3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIq8BgtPkkwKoASJHL3YxL3tyZXNv",
-            "dXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfTp0",
-            "ZXN0SWFtUGVybWlzc2lvbnM6ASpaWiJVL3YxL3tyZXNvdXJjZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9",
-            "OnRlc3RJYW1QZXJtaXNzaW9uczoBKhLnAQoWQ3JlYXRlUmVzZXJ2YXRpb25H",
-            "cm91cBJDLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5D",
-            "cmVhdGVSZXNlcnZhdGlvbkdyb3VwUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5SZXNlcnZhdGlvbkdyb3VwIlCC0+ST",
-            "AkoiNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2Vy",
-            "dmF0aW9uR3JvdXBzOhFyZXNlcnZhdGlvbl9ncm91cBLVAQoTR2V0UmVzZXJ2",
-            "YXRpb25Hcm91cBJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
-            "bi52MS5HZXRSZXNlcnZhdGlvbkdyb3VwUmVxdWVzdBo2Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5SZXNlcnZhdGlvbkdyb3VwIkTa",
-            "QQRuYW1lgtPkkwI3EjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9yZXNlcnZhdGlvbkdyb3Vwcy8qfRK7AQoWRGVsZXRlUmVzZXJ2YXRpb25H",
-            "cm91cBJDLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5E",
-            "ZWxldGVSZXNlcnZhdGlvbkdyb3VwUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSJE2kEEbmFtZYLT5JMCNyo1L3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovcmVzZXJ2YXRpb25Hcm91cHMvKn0S6AEKFUxpc3RSZXNl",
-            "cnZhdGlvbkdyb3VwcxJCLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
-            "dGlvbi52MS5MaXN0UmVzZXJ2YXRpb25Hcm91cHNSZXF1ZXN0GkMuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkxpc3RSZXNlcnZhdGlv",
-            "bkdyb3Vwc1Jlc3BvbnNlIkbaQQZwYXJlbnSC0+STAjcSNS92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9uR3JvdXBzGn/K",
-            "QSJiaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWdxdWVyeSxodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtgBCihjb20u",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxQhBSZXNlcnZh",
-            "dGlvblByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvcmVz",
-            "ZXJ2YXRpb24vYXBpdjEvcmVzZXJ2YXRpb25wYjtyZXNlcnZhdGlvbnBiqgIk",
-            "R29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlJlc2VydmF0aW9uLlYxygIkR29vZ2xl",
-            "XENsb3VkXEJpZ1F1ZXJ5XFJlc2VydmF0aW9uXFYxYgZwcm90bzM="));
+            "aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCKKAdpBH2NhcGFjaXR5X2NvbW1p",
+            "dG1lbnQsdXBkYXRlX21hc2uC0+STAmIySy92MS97Y2FwYWNpdHlfY29tbWl0",
+            "bWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlDb21t",
+            "aXRtZW50cy8qfToTY2FwYWNpdHlfY29tbWl0bWVudBKCAgoXU3BsaXRDYXBh",
+            "Y2l0eUNvbW1pdG1lbnQSRC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuU3BsaXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GkUuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNwbGl0Q2FwYWNp",
+            "dHlDb21taXRtZW50UmVzcG9uc2UiWtpBD25hbWUsc2xvdF9jb3VudILT5JMC",
+            "QiI9L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlD",
+            "b21taXRtZW50cy8qfTpzcGxpdDoBKhKGAgoYTWVyZ2VDYXBhY2l0eUNvbW1p",
+            "dG1lbnRzEkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
+            "Lk1lcmdlQ2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QaOC5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlDb21taXRtZW50",
+            "ImnaQR5wYXJlbnQsY2FwYWNpdHlfY29tbWl0bWVudF9pZHOC0+STAkIiPS92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NhcGFjaXR5Q29t",
+            "bWl0bWVudHM6bWVyZ2U6ASoS6wEKEENyZWF0ZUFzc2lnbm1lbnQSPS5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ3JlYXRlQXNzaWdu",
+            "bWVudFJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
+            "b24udjEuQXNzaWdubWVudCJm2kERcGFyZW50LGFzc2lnbm1lbnSC0+STAkwi",
+            "Pi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRp",
+            "b25zLyp9L2Fzc2lnbm1lbnRzOgphc3NpZ25tZW50Et8BCg9MaXN0QXNzaWdu",
+            "bWVudHMSPC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
+            "TGlzdEFzc2lnbm1lbnRzUmVxdWVzdBo9Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5yZXNlcnZhdGlvbi52MS5MaXN0QXNzaWdubWVudHNSZXNwb25zZSJP2kEG",
+            "cGFyZW50gtPkkwJAEj4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3Jlc2VydmF0aW9ucy8qfS9hc3NpZ25tZW50cxK4AQoQRGVsZXRlQXNz",
+            "aWdubWVudBI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5EZWxldGVBc3NpZ25tZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSJN2kEEbmFtZYLT5JMCQCo+L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovcmVzZXJ2YXRpb25zLyovYXNzaWdubWVudHMvKn0S5QEKEVNl",
+            "YXJjaEFzc2lnbm1lbnRzEj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLlNlYXJjaEFzc2lnbm1lbnRzUmVxdWVzdBo/Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hBc3NpZ25tZW50",
+            "c1Jlc3BvbnNlIk+IAgHaQQxwYXJlbnQscXVlcnmC0+STAjcSNS92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OnNlYXJjaEFzc2lnbm1lbnRz",
+            "Eu4BChRTZWFyY2hBbGxBc3NpZ25tZW50cxJBLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hBbGxBc3NpZ25tZW50c1JlcXVl",
+            "c3QaQi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU2Vh",
+            "cmNoQWxsQXNzaWdubWVudHNSZXNwb25zZSJP2kEMcGFyZW50LHF1ZXJ5gtPk",
+            "kwI6EjgvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpzZWFy",
+            "Y2hBbGxBc3NpZ25tZW50cxLlAQoOTW92ZUFzc2lnbm1lbnQSOy5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTW92ZUFzc2lnbm1lbnRS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
+            "LkFzc2lnbm1lbnQiZNpBE25hbWUsZGVzdGluYXRpb25faWSC0+STAkgiQy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8q",
+            "L2Fzc2lnbm1lbnRzLyp9Om1vdmU6ASoS+wEKEFVwZGF0ZUFzc2lnbm1lbnQS",
+            "PS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuVXBkYXRl",
+            "QXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVz",
+            "ZXJ2YXRpb24udjEuQXNzaWdubWVudCJ22kEWYXNzaWdubWVudCx1cGRhdGVf",
+            "bWFza4LT5JMCVzJJL3YxL3thc3NpZ25tZW50Lm5hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8qfToKYXNz",
+            "aWdubWVudBLGAQoQR2V0QmlSZXNlcnZhdGlvbhI9Lmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRCaVJlc2VydmF0aW9uUmVxdWVz",
+            "dBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJl",
+            "c2VydmF0aW9uIj7aQQRuYW1lgtPkkwIxEi8vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9iaVJlc2VydmF0aW9ufRKBAgoTVXBkYXRlQmlSZXNl",
+            "cnZhdGlvbhJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5VcGRhdGVCaVJlc2VydmF0aW9uUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9uInPaQRpiaV9y",
+            "ZXNlcnZhdGlvbix1cGRhdGVfbWFza4LT5JMCUDI+L3YxL3tiaV9yZXNlcnZh",
+            "dGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYmlSZXNlcnZhdGlv",
+            "bn06DmJpX3Jlc2VydmF0aW9uEvQBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUu",
+            "aWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBv",
+            "bGljeSKoAdpBCHJlc291cmNlgtPkkwKWARJBL3YxL3tyZXNvdXJjZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfTpnZXRJYW1Qb2xp",
+            "Y3laURJPL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jl",
+            "c2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9OmdldElhbVBvbGljeRKBAgoM",
+            "U2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1",
+            "ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kitQHaQQ9yZXNvdXJjZSxwb2xp",
+            "Y3mC0+STApwBIkEvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovcmVzZXJ2YXRpb25zLyp9OnNldElhbVBvbGljeToBKlpUIk8vdjEve3Jl",
+            "c291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyov",
+            "YXNzaWdubWVudHMvKn06c2V0SWFtUG9saWN5OgEqEpsCChJUZXN0SWFtUGVy",
+            "bWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jl",
+            "cXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3Bv",
+            "bnNlIq8BgtPkkwKoASJHL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3Jlc2VydmF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpa",
+            "WiJVL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2Vy",
+            "dmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
+            "KhLnAQoWQ3JlYXRlUmVzZXJ2YXRpb25Hcm91cBJDLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DcmVhdGVSZXNlcnZhdGlvbkdyb3Vw",
+            "UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5SZXNlcnZhdGlvbkdyb3VwIlCC0+STAkoiNS92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9uR3JvdXBzOhFyZXNlcnZh",
+            "dGlvbl9ncm91cBLVAQoTR2V0UmVzZXJ2YXRpb25Hcm91cBJALmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRSZXNlcnZhdGlvbkdy",
+            "b3VwUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
+            "bi52MS5SZXNlcnZhdGlvbkdyb3VwIkTaQQRuYW1lgtPkkwI3EjUvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbkdyb3Vwcy8q",
+            "fRK7AQoWRGVsZXRlUmVzZXJ2YXRpb25Hcm91cBJDLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5EZWxldGVSZXNlcnZhdGlvbkdyb3Vw",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJE2kEEbmFtZYLT5JMC",
+            "Nyo1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRp",
+            "b25Hcm91cHMvKn0S6AEKFUxpc3RSZXNlcnZhdGlvbkdyb3VwcxJCLmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRp",
+            "b25Hcm91cHNSZXF1ZXN0GkMuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLkxpc3RSZXNlcnZhdGlvbkdyb3Vwc1Jlc3BvbnNlIkbaQQZw",
+            "YXJlbnSC0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3Jlc2VydmF0aW9uR3JvdXBzGn/KQSJiaWdxdWVyeXJlc2VydmF0aW9u",
+            "Lmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLXBsYXRmb3JtQtgBCihjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnJlc2VydmF0aW9uLnYxQhBSZXNlcnZhdGlvblByb3RvUAFaSmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYmlncXVlcnkvcmVzZXJ2YXRpb24vYXBpdjEvcmVzZXJ2",
+            "YXRpb25wYjtyZXNlcnZhdGlvbnBiqgIkR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5",
+            "LlJlc2VydmF0aW9uLlYxygIkR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFJlc2Vy",
+            "dmF0aW9uXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Reservation.V1.Edition), typeof(global::Google.Cloud.BigQuery.Reservation.V1.FailoverMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -429,7 +430,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest.Parser, new[]{ "Name", "SlotCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse), global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse.Parser, new[]{ "First", "Second" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest.Parser, new[]{ "Parent", "CapacityCommitmentIds", "CapacityCommitmentId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment), global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Parser, new[]{ "Name", "Assignee", "JobType", "State", "EnableGeminiInBigquery", "SchedulingPolicy" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType), typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment), global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Parser, new[]{ "Name", "Assignee", "JobType", "State", "EnableGeminiInBigquery", "SchedulingPolicy", "Principal" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType), typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest.Parser, new[]{ "Parent", "Assignment", "AssignmentId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse), global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse.Parser, new[]{ "Assignments", "NextPageToken" }, null, null, null, null),
@@ -1579,7 +1580,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// reservation will scale up to 1000 slots with 200 baseline and 800 idle
         /// slots.
         /// 2. if there are 500 idle slots available in other reservations, the
-        /// reservation will scale up to 700 slots with 200 baseline and 300 idle
+        /// reservation will scale up to 700 slots with 200 baseline and 500 idle
         /// slots.
         /// Please note, in this mode, the reservation might not be able to scale up
         /// to max_slots.
@@ -8877,6 +8878,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       state_ = other.state_;
       enableGeminiInBigquery_ = other.enableGeminiInBigquery_;
       schedulingPolicy_ = other.schedulingPolicy_ != null ? other.schedulingPolicy_.Clone() : null;
+      principal_ = other.principal_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8990,6 +8992,35 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "principal" field.</summary>
+    public const int PrincipalFieldNumber = 12;
+    private string principal_ = "";
+    /// <summary>
+    /// Optional. Represents the principal for this assignment. If not empty, jobs
+    /// run by this principal will utilize the associated reservation. Otherwise,
+    /// jobs will fall back to using the reservation assigned to the project,
+    /// folder, or organization (in that order). If no reservation is assigned at
+    /// any of these levels, on-demand capacity will be used.
+    ///
+    /// The supported formats are:
+    ///
+    /// * `principal://goog/subject/USER_EMAIL_ADDRESS` for users,
+    /// * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS`
+    ///   for service accounts,
+    /// * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/POOL_ID/subject/SUBJECT_ID`
+    ///   for workload identity pool identities.
+    /// * The special value `unknown_or_deleted_user` represents principals which
+    ///   cannot be read from the user info service, for example deleted users.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Principal {
+      get { return principal_; }
+      set {
+        principal_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9011,6 +9042,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (State != other.State) return false;
       if (EnableGeminiInBigquery != other.EnableGeminiInBigquery) return false;
       if (!object.Equals(SchedulingPolicy, other.SchedulingPolicy)) return false;
+      if (Principal != other.Principal) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9024,6 +9056,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (State != global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (EnableGeminiInBigquery != false) hash ^= EnableGeminiInBigquery.GetHashCode();
       if (schedulingPolicy_ != null) hash ^= SchedulingPolicy.GetHashCode();
+      if (Principal.Length != 0) hash ^= Principal.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9066,6 +9099,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(SchedulingPolicy);
       }
+      if (Principal.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Principal);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9100,6 +9137,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(SchedulingPolicy);
       }
+      if (Principal.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Principal);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9127,6 +9168,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (schedulingPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SchedulingPolicy);
+      }
+      if (Principal.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Principal);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9160,6 +9204,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
         }
         SchedulingPolicy.MergeFrom(other.SchedulingPolicy);
+      }
+      if (other.Principal.Length != 0) {
+        Principal = other.Principal;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9207,6 +9254,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             input.ReadMessage(SchedulingPolicy);
             break;
           }
+          case 98: {
+            Principal = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9251,6 +9302,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
               SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
             }
             input.ReadMessage(SchedulingPolicy);
+            break;
+          }
+          case 98: {
+            Principal = input.ReadString();
             break;
           }
         }
