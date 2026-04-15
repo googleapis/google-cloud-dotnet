@@ -1052,9 +1052,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     /// Optional. Immutable. A reference to the consumer resource this SaaS Tenant
     /// is representing.
     ///
-    /// The relationship with a consumer resource can be used by SaaS Runtime for
-    /// retrieving consumer-defined settings and policies such as maintenance
-    /// policies (using Unified Maintenance Policy API).
+    /// The relationship with a consumer resource can be used by App Lifecycle
+    /// Manager for retrieving consumer-defined settings and policies such as
+    /// maintenance policies (using Unified Maintenance Policy API).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1070,8 +1070,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     private string saas_ = "";
     /// <summary>
     /// Required. Immutable. A reference to the Saas that defines the product
-    /// (managed service) that the producer wants to manage with SaaS Runtime. Part
-    /// of the SaaS Runtime common data model.
+    /// (managed service) that the producer wants to manage with App Lifecycle
+    /// Manager. Part of the App Lifecycle Manager common data model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1665,8 +1665,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     private string saas_ = "";
     /// <summary>
     /// Required. Immutable. A reference to the Saas that defines the product
-    /// (managed service) that the producer wants to manage with SaaS Runtime. Part
-    /// of the SaaS Runtime common data model. Immutable once set.
+    /// (managed service) that the producer wants to manage with App Lifecycle
+    /// Manager. Part of the App Lifecycle Manager common data model. Immutable
+    /// once set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7219,8 +7220,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public const int IgnoreForLookupFieldNumber = 3;
     private bool ignoreForLookup_;
     /// <summary>
-    /// Optional. Tells SaaS Runtime if this mapping should be used during lookup
-    /// or not
+    /// Optional. Tells App Lifecycle Manager if this mapping should be used during
+    /// lookup or not
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
