@@ -1984,6 +1984,7 @@
         {
             "id": "Google.Cloud.Logging.Log4Net",
             "currentVersion": "4.4.0",
+            "nextVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2024-09-26T08:16:29Z",
