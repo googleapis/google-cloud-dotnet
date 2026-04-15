@@ -115,5 +115,12 @@ public sealed partial class SubscriberClientImpl
             value = default(T);
             return false;
         }
+
+        internal void Clear()
+        {
+            _qs.Clear();
+            _q.Clear();
+            _requeueCount = 0;
+        }
     }
 }
