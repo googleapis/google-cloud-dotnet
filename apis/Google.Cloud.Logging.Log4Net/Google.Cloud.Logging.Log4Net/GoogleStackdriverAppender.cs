@@ -510,6 +510,12 @@ namespace Google.Cloud.Logging.Log4Net
         /// <inheritdoc/>
         protected override void Append(LoggingEvent[] loggingEvents)
         {
+            Append((IEnumerable<LoggingEvent>)loggingEvents);
+        }
+
+        /// <inheritdoc/>
+        protected override void Append(IEnumerable<LoggingEvent> loggingEvents)
+        {
             if (!_isActivated)
             {
                 throw new InvalidOperationException($"{nameof(ActivateOptions)}() must be called before using this appender.");
