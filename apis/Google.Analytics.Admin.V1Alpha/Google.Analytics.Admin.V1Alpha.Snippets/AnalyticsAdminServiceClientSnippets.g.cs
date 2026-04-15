@@ -17235,5 +17235,92 @@ namespace GoogleCSharpSnippets
             ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetUserProvidedDataSettings</summary>
+        public void GetUserProvidedDataSettingsRequestObject()
+        {
+            // Snippet: GetUserProvidedDataSettings(GetUserProvidedDataSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetUserProvidedDataSettingsRequest request = new GetUserProvidedDataSettingsRequest
+            {
+                UserProvidedDataSettingsName = UserProvidedDataSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            UserProvidedDataSettings response = analyticsAdminServiceClient.GetUserProvidedDataSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserProvidedDataSettingsAsync</summary>
+        public async Task GetUserProvidedDataSettingsRequestObjectAsync()
+        {
+            // Snippet: GetUserProvidedDataSettingsAsync(GetUserProvidedDataSettingsRequest, CallSettings)
+            // Additional: GetUserProvidedDataSettingsAsync(GetUserProvidedDataSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetUserProvidedDataSettingsRequest request = new GetUserProvidedDataSettingsRequest
+            {
+                UserProvidedDataSettingsName = UserProvidedDataSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            UserProvidedDataSettings response = await analyticsAdminServiceClient.GetUserProvidedDataSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserProvidedDataSettings</summary>
+        public void GetUserProvidedDataSettings()
+        {
+            // Snippet: GetUserProvidedDataSettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/userProvidedDataSettings";
+            // Make the request
+            UserProvidedDataSettings response = analyticsAdminServiceClient.GetUserProvidedDataSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserProvidedDataSettingsAsync</summary>
+        public async Task GetUserProvidedDataSettingsAsync()
+        {
+            // Snippet: GetUserProvidedDataSettingsAsync(string, CallSettings)
+            // Additional: GetUserProvidedDataSettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/userProvidedDataSettings";
+            // Make the request
+            UserProvidedDataSettings response = await analyticsAdminServiceClient.GetUserProvidedDataSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserProvidedDataSettings</summary>
+        public void GetUserProvidedDataSettingsResourceNames()
+        {
+            // Snippet: GetUserProvidedDataSettings(UserProvidedDataSettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UserProvidedDataSettingsName name = UserProvidedDataSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            UserProvidedDataSettings response = analyticsAdminServiceClient.GetUserProvidedDataSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserProvidedDataSettingsAsync</summary>
+        public async Task GetUserProvidedDataSettingsResourceNamesAsync()
+        {
+            // Snippet: GetUserProvidedDataSettingsAsync(UserProvidedDataSettingsName, CallSettings)
+            // Additional: GetUserProvidedDataSettingsAsync(UserProvidedDataSettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserProvidedDataSettingsName name = UserProvidedDataSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            UserProvidedDataSettings response = await analyticsAdminServiceClient.GetUserProvidedDataSettingsAsync(name);
+            // End snippet
+        }
     }
 }

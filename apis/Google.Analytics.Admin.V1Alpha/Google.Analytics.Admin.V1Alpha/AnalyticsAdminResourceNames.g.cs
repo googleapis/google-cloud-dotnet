@@ -1668,4 +1668,17 @@ namespace Google.Analytics.Admin.V1Alpha
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetUserProvidedDataSettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::UserProvidedDataSettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::UserProvidedDataSettingsName UserProvidedDataSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::UserProvidedDataSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

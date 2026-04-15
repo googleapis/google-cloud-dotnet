@@ -3,7 +3,7 @@
 //     source: google/analytics/admin/v1alpha/analytics_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -521,6 +521,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetReportingIdentitySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings> __Marshaller_google_analytics_admin_v1alpha_ReportingIdentitySettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetUserProvidedDataSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings> __Marshaller_google_analytics_admin_v1alpha_UserProvidedDataSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1753,6 +1757,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         "GetReportingIdentitySettings",
         __Marshaller_google_analytics_admin_v1alpha_GetReportingIdentitySettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_ReportingIdentitySettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest, global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings> __Method_GetUserProvidedDataSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest, global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserProvidedDataSettings",
+        __Marshaller_google_analytics_admin_v1alpha_GetUserProvidedDataSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_UserProvidedDataSettings);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -3710,13 +3722,25 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Returns the singleton data retention settings for this property.
+      /// Returns the reporting identity settings for this property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings> GetReportingIdentitySettings(global::Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up settings related to user-provided data for a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings> GetUserProvidedDataSettings(global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -11531,7 +11555,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetSubpropertySyncConfig, null, options, request);
       }
       /// <summary>
-      /// Returns the singleton data retention settings for this property.
+      /// Returns the reporting identity settings for this property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -11544,7 +11568,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetReportingIdentitySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the singleton data retention settings for this property.
+      /// Returns the reporting identity settings for this property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -11555,7 +11579,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetReportingIdentitySettings, null, options, request);
       }
       /// <summary>
-      /// Returns the singleton data retention settings for this property.
+      /// Returns the reporting identity settings for this property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -11568,7 +11592,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetReportingIdentitySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the singleton data retention settings for this property.
+      /// Returns the reporting identity settings for this property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -11577,6 +11601,54 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings> GetReportingIdentitySettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReportingIdentitySettings, null, options, request);
+      }
+      /// <summary>
+      /// Looks up settings related to user-provided data for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings GetUserProvidedDataSettings(global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserProvidedDataSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up settings related to user-provided data for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings GetUserProvidedDataSettings(global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserProvidedDataSettings, null, options, request);
+      }
+      /// <summary>
+      /// Looks up settings related to user-provided data for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserProvidedDataSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up settings related to user-provided data for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserProvidedDataSettings, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -11745,7 +11817,8 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_ListSubpropertySyncConfigs, serviceImpl.ListSubpropertySyncConfigs)
           .AddMethod(__Method_UpdateSubpropertySyncConfig, serviceImpl.UpdateSubpropertySyncConfig)
           .AddMethod(__Method_GetSubpropertySyncConfig, serviceImpl.GetSubpropertySyncConfig)
-          .AddMethod(__Method_GetReportingIdentitySettings, serviceImpl.GetReportingIdentitySettings).Build();
+          .AddMethod(__Method_GetReportingIdentitySettings, serviceImpl.GetReportingIdentitySettings)
+          .AddMethod(__Method_GetUserProvidedDataSettings, serviceImpl.GetUserProvidedDataSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -11909,6 +11982,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_UpdateSubpropertySyncConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(serviceImpl.UpdateSubpropertySyncConfig));
       serviceBinder.AddMethod(__Method_GetSubpropertySyncConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(serviceImpl.GetSubpropertySyncConfig));
       serviceBinder.AddMethod(__Method_GetReportingIdentitySettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest, global::Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings>(serviceImpl.GetReportingIdentitySettings));
+      serviceBinder.AddMethod(__Method_GetUserProvidedDataSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetUserProvidedDataSettingsRequest, global::Google.Analytics.Admin.V1Alpha.UserProvidedDataSettings>(serviceImpl.GetUserProvidedDataSettings));
     }
 
   }

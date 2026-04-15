@@ -202,6 +202,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateSubpropertySyncConfigSettings = existing.UpdateSubpropertySyncConfigSettings;
             GetSubpropertySyncConfigSettings = existing.GetSubpropertySyncConfigSettings;
             GetReportingIdentitySettingsSettings = existing.GetReportingIdentitySettingsSettings;
+            GetUserProvidedDataSettingsSettings = existing.GetUserProvidedDataSettingsSettings;
             OnCopy(existing);
         }
 
@@ -3404,6 +3405,28 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetReportingIdentitySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetUserProvidedDataSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.GetUserProvidedDataSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserProvidedDataSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -20980,7 +21003,7 @@ namespace Google.Analytics.Admin.V1Alpha
             GetSubpropertySyncConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -20989,7 +21012,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -20998,7 +21021,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -21007,7 +21030,7 @@ namespace Google.Analytics.Admin.V1Alpha
             GetReportingIdentitySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21024,7 +21047,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21041,7 +21064,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21055,7 +21078,7 @@ namespace Google.Analytics.Admin.V1Alpha
             GetReportingIdentitySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21072,7 +21095,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21089,7 +21112,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the settings to lookup.
@@ -21101,6 +21124,117 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName name, st::CancellationToken cancellationToken) =>
             GetReportingIdentitySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserProvidedDataSettings GetUserProvidedDataSettings(GetUserProvidedDataSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(GetUserProvidedDataSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(GetUserProvidedDataSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetUserProvidedDataSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserProvidedDataSettings GetUserProvidedDataSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserProvidedDataSettings(new GetUserProvidedDataSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserProvidedDataSettingsAsync(new GetUserProvidedDataSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserProvidedDataSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserProvidedDataSettings GetUserProvidedDataSettings(UserProvidedDataSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserProvidedDataSettings(new GetUserProvidedDataSettingsRequest
+            {
+                UserProvidedDataSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(UserProvidedDataSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserProvidedDataSettingsAsync(new GetUserProvidedDataSettingsRequest
+            {
+                UserProvidedDataSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user provided data settings to retrieve.
+        /// Format: properties/{property}/userProvidedDataSettings
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(UserProvidedDataSettingsName name, st::CancellationToken cancellationToken) =>
+            GetUserProvidedDataSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -21416,6 +21550,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> _callGetSubpropertySyncConfig;
 
         private readonly gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> _callGetReportingIdentitySettings;
+
+        private readonly gaxgrpc::ApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings> _callGetUserProvidedDataSettings;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -21905,6 +22041,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetReportingIdentitySettings = clientHelper.BuildApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings>("GetReportingIdentitySettings", grpcClient.GetReportingIdentitySettingsAsync, grpcClient.GetReportingIdentitySettings, effectiveSettings.GetReportingIdentitySettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReportingIdentitySettings);
             Modify_GetReportingIdentitySettingsApiCall(ref _callGetReportingIdentitySettings);
+            _callGetUserProvidedDataSettings = clientHelper.BuildApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings>("GetUserProvidedDataSettings", grpcClient.GetUserProvidedDataSettingsAsync, grpcClient.GetUserProvidedDataSettings, effectiveSettings.GetUserProvidedDataSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserProvidedDataSettings);
+            Modify_GetUserProvidedDataSettingsApiCall(ref _callGetUserProvidedDataSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -22218,6 +22357,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_GetReportingIdentitySettingsApiCall(ref gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> call);
 
+        partial void Modify_GetUserProvidedDataSettingsApiCall(ref gaxgrpc::ApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -22530,6 +22671,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetSubpropertySyncConfigRequest(ref GetSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetReportingIdentitySettingsRequest(ref GetReportingIdentitySettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetUserProvidedDataSettingsRequest(ref GetUserProvidedDataSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -26428,7 +26571,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26440,7 +26583,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Returns the singleton data retention settings for this property.
+        /// Returns the reporting identity settings for this property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26449,6 +26592,30 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_GetReportingIdentitySettingsRequest(ref request, ref callSettings);
             return _callGetReportingIdentitySettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserProvidedDataSettings GetUserProvidedDataSettings(GetUserProvidedDataSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserProvidedDataSettingsRequest(ref request, ref callSettings);
+            return _callGetUserProvidedDataSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up settings related to user-provided data for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserProvidedDataSettings> GetUserProvidedDataSettingsAsync(GetUserProvidedDataSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserProvidedDataSettingsRequest(ref request, ref callSettings);
+            return _callGetUserProvidedDataSettings.Async(request, callSettings);
         }
     }
 
