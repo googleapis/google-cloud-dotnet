@@ -94,6 +94,7 @@ namespace Google.Cloud.Ces.V1Beta
             yield return GuardrailReflection.Descriptor;
             yield return McpToolReflection.Descriptor;
             yield return McpToolsetReflection.Descriptor;
+            yield return MocksReflection.Descriptor;
             yield return OmnichannelReflection.Descriptor;
             yield return OmnichannelServiceReflection.Descriptor;
             yield return OpenApiToolReflection.Descriptor;

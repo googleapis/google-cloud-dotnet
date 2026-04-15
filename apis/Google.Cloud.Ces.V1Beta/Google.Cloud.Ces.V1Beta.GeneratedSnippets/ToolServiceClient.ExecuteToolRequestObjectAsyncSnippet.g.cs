@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 Args = new Struct(),
                 ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
                 Variables = new Struct(),
+                MockConfig = new MockConfig(),
             };
             // Make the request
             ExecuteToolResponse response = await toolServiceClient.ExecuteToolAsync(request);

@@ -29,111 +29,119 @@ namespace Google.Cloud.Ces.V1Beta {
             "YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxokZ29vZ2xlL2Nsb3VkL2Nlcy92MWJldGEvY29tbW9uLnByb3Rv",
-            "GiVnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9leGFtcGxlLnByb3RvGjBnb29n",
-            "bGUvY2xvdWQvY2VzL3YxYmV0YS9zZWFyY2hfc3VnZ2VzdGlvbnMucHJvdG8a",
-            "HGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8inQEKEElucHV0QXVkaW9D",
-            "b25maWcSQwoOYXVkaW9fZW5jb2RpbmcYASABKA4yJi5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YS5BdWRpb0VuY29kaW5nQgPgQQISHgoRc2FtcGxlX3JhdGVf",
-            "aGVydHoYAiABKAVCA+BBAhIkChdub2lzZV9zdXBwcmVzc2lvbl9sZXZlbBgG",
-            "IAEoCUID4EEBIngKEU91dHB1dEF1ZGlvQ29uZmlnEkMKDmF1ZGlvX2VuY29k",
-            "aW5nGAEgASgOMiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXVkaW9FbmNv",
-            "ZGluZ0ID4EECEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFQgPgQQIigQcK",
-            "DVNlc3Npb25Db25maWcSMwoHc2Vzc2lvbhgBIAEoCUIi4EEC+kEcChpjZXMu",
-            "Z29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJKChJpbnB1dF9hdWRpb19jb25maWcY",
-            "AiABKAsyKS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5JbnB1dEF1ZGlvQ29u",
-            "ZmlnQgPgQQESTAoTb3V0cHV0X2F1ZGlvX2NvbmZpZxgDIAEoCzIqLmdvb2ds",
-            "ZS5jbG91ZC5jZXMudjFiZXRhLk91dHB1dEF1ZGlvQ29uZmlnQgPgQQESQgoT",
-            "aGlzdG9yaWNhbF9jb250ZXh0cxgFIAMoCzIgLmdvb2dsZS5jbG91ZC5jZXMu",
-            "djFiZXRhLk1lc3NhZ2VCA+BBARI1CgtlbnRyeV9hZ2VudBgMIAEoCUIg4EEB",
-            "+kEaChhjZXMuZ29vZ2xlYXBpcy5jb20vQWdlbnQSFwoKZGVwbG95bWVudBgI",
-            "IAEoCUID4EEBEhYKCXRpbWVfem9uZRgLIAEoCUID4EEBEhsKDnVzZV90b29s",
-            "X2Zha2VzGA4gASgIQgPgQQESdwoicmVtb3RlX2RpYWxvZ2Zsb3dfcXVlcnlf",
-            "cGFyYW1ldGVycxgPIAEoCzJGLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlNl",
-            "c3Npb25Db25maWcuUmVtb3RlRGlhbG9nZmxvd1F1ZXJ5UGFyYW1ldGVyc0ID",
-            "4EEBEiIKFWVuYWJsZV90ZXh0X3N0cmVhbWluZxgSIAEoCEID4EEBGroCCh9S",
-            "ZW1vdGVEaWFsb2dmbG93UXVlcnlQYXJhbWV0ZXJzEngKD3dlYmhvb2tfaGVh",
-            "ZGVycxgBIAMoCzJaLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlNlc3Npb25D",
-            "b25maWcuUmVtb3RlRGlhbG9nZmxvd1F1ZXJ5UGFyYW1ldGVycy5XZWJob29r",
-            "SGVhZGVyc0VudHJ5QgPgQQESLQoHcGF5bG9hZBgCIAEoCzIXLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJ1Y3RCA+BBARI3ChFlbmRfdXNlcl9tZXRhZGF0YRgDIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARo1ChNXZWJob29rSGVh",
-            "ZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRwoJ",
-            "VG9vbENhbGxzEjoKCnRvb2xfY2FsbHMYASADKAsyIS5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YS5Ub29sQ2FsbEID4EEBIlMKDVRvb2xSZXNwb25zZXMSQgoO",
-            "dG9vbF9yZXNwb25zZXMYASADKAsyJS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0",
-            "YS5Ub29sUmVzcG9uc2VCA+BBASKIAQoJQ2l0YXRpb25zEkMKDGNpdGVkX2No",
-            "dW5rcxgBIAMoCzItLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkNpdGF0aW9u",
-            "cy5DaXRlZENodW5rGjYKCkNpdGVkQ2h1bmsSCwoDdXJpGAEgASgJEg0KBXRp",
-            "dGxlGAIgASgJEgwKBHRleHQYAyABKAkiGwoFRXZlbnQSEgoFZXZlbnQYASAB",
-            "KAlCA+BBAiKSAwoMU2Vzc2lvbklucHV0EhMKBHRleHQYASABKAlCA+BBAUgA",
-            "EhMKBGR0bWYYBiABKAlCA+BBAUgAEhQKBWF1ZGlvGAIgASgMQgPgQQFIABJF",
-            "Cg50b29sX3Jlc3BvbnNlcxgDIAEoCzImLmdvb2dsZS5jbG91ZC5jZXMudjFi",
-            "ZXRhLlRvb2xSZXNwb25zZXNCA+BBAUgAEjQKBWltYWdlGAQgASgLMh4uZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MWJldGEuSW1hZ2VCA+BBAUgAEjIKBGJsb2IYByAB",
-            "KAsyHS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5CbG9iQgPgQQFIABIxCgl2",
-            "YXJpYWJsZXMYBSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQFI",
-            "ABI0CgVldmVudBgJIAEoCzIeLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkV2",
-            "ZW50QgPgQQFIABIaCg13aWxsX2NvbnRpbnVlGAggASgIQgPgQQFCDAoKaW5w",
-            "dXRfdHlwZSLqBAoNU2Vzc2lvbk91dHB1dBIOCgR0ZXh0GAEgASgJSAASDwoF",
-            "YXVkaW8YAiABKAxIABI4Cgp0b29sX2NhbGxzGAMgASgLMiIuZ29vZ2xlLmNs",
-            "b3VkLmNlcy52MWJldGEuVG9vbENhbGxzSAASNwoJY2l0YXRpb25zGAggASgL",
-            "MiIuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2l0YXRpb25zSAASVQoZZ29v",
-            "Z2xlX3NlYXJjaF9zdWdnZXN0aW9ucxgKIAEoCzIwLmdvb2dsZS5jbG91ZC5j",
-            "ZXMudjFiZXRhLkdvb2dsZVNlYXJjaFN1Z2dlc3Rpb25zSAASOgoLZW5kX3Nl",
-            "c3Npb24YCSABKAsyIy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5FbmRTZXNz",
-            "aW9uSAASKgoHcGF5bG9hZBgLIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
-            "Y3RIABISCgp0dXJuX2luZGV4GAYgASgFEhYKDnR1cm5fY29tcGxldGVkGAQg",
-            "ASgIElMKD2RpYWdub3N0aWNfaW5mbxgHIAEoCzI1Lmdvb2dsZS5jbG91ZC5j",
-            "ZXMudjFiZXRhLlNlc3Npb25PdXRwdXQuRGlhZ25vc3RpY0luZm9CA+BBARp2",
-            "Cg5EaWFnbm9zdGljSW5mbxIyCghtZXNzYWdlcxgBIAMoCzIgLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjFiZXRhLk1lc3NhZ2USMAoJcm9vdF9zcGFuGAMgASgLMh0u",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU3BhbkINCgtvdXRwdXRfdHlwZSIs",
-            "ChFSZWNvZ25pdGlvblJlc3VsdBIXCgp0cmFuc2NyaXB0GAEgASgJQgPgQQEi",
-            "JgoSSW50ZXJydXB0aW9uU2lnbmFsEhAKCGJhcmdlX2luGAEgASgIIjwKCkVu",
-            "ZFNlc3Npb24SLgoIbWV0YWRhdGEYASABKAsyFy5nb29nbGUucHJvdG9idWYu",
-            "U3RydWN0QgPgQQEiCAoGR29Bd2F5IowBChFSdW5TZXNzaW9uUmVxdWVzdBI7",
-            "CgZjb25maWcYASABKAsyJi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5TZXNz",
-            "aW9uQ29uZmlnQgPgQQISOgoGaW5wdXRzGAMgAygLMiUuZ29vZ2xlLmNsb3Vk",
-            "LmNlcy52MWJldGEuU2Vzc2lvbklucHV0QgPgQQIiTQoSUnVuU2Vzc2lvblJl",
-            "c3BvbnNlEjcKB291dHB1dHMYASADKAsyJi5nb29nbGUuY2xvdWQuY2VzLnYx",
-            "YmV0YS5TZXNzaW9uT3V0cHV0Iq8BChhCaWRpU2Vzc2lvbkNsaWVudE1lc3Nh",
-            "Z2USPQoGY29uZmlnGAEgASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
-            "U2Vzc2lvbkNvbmZpZ0ID4EEBSAASRAoOcmVhbHRpbWVfaW5wdXQYAiABKAsy",
-            "JS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5TZXNzaW9uSW5wdXRCA+BBAUgA",
-            "Qg4KDG1lc3NhZ2VfdHlwZSKLAwoYQmlkaVNlc3Npb25TZXJ2ZXJNZXNzYWdl",
-            "EkUKDnNlc3Npb25fb3V0cHV0GAEgASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52",
-            "MWJldGEuU2Vzc2lvbk91dHB1dEID4EEBSAASTQoScmVjb2duaXRpb25fcmVz",
-            "dWx0GAIgASgLMiouZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuUmVjb2duaXRp",
-            "b25SZXN1bHRCA+BBAUgAEk8KE2ludGVycnVwdGlvbl9zaWduYWwYAyABKAsy",
-            "Ky5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5JbnRlcnJ1cHRpb25TaWduYWxC",
-            "A+BBAUgAEj8KC2VuZF9zZXNzaW9uGAUgASgLMiMuZ29vZ2xlLmNsb3VkLmNl",
-            "cy52MWJldGEuRW5kU2Vzc2lvbkID4EEBSAASNwoHZ29fYXdheRgGIAEoCzIf",
-            "Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkdvQXdheUID4EEBSABCDgoMbWVz",
-            "c2FnZV90eXBlKlIKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdf",
-            "VU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEgkKBU1VTEFXEAISCAoEQUxB",
-            "VxADMooFCg5TZXNzaW9uU2VydmljZRK+AQoKUnVuU2Vzc2lvbhIqLmdvb2ds",
-            "ZS5jbG91ZC5jZXMudjFiZXRhLlJ1blNlc3Npb25SZXF1ZXN0GisuZ29vZ2xl",
-            "LmNsb3VkLmNlcy52MWJldGEuUnVuU2Vzc2lvblJlc3BvbnNlIleC0+STAlEi",
-            "TC92MWJldGEve2NvbmZpZy5zZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYXBwcy8qL3Nlc3Npb25zLyp9OnJ1blNlc3Npb246ASoSzAEKEFN0cmVh",
-            "bVJ1blNlc3Npb24SKi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5SdW5TZXNz",
+            "GiVnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9leGFtcGxlLnByb3RvGiNnb29n",
+            "bGUvY2xvdWQvY2VzL3YxYmV0YS9tb2Nrcy5wcm90bxowZ29vZ2xlL2Nsb3Vk",
+            "L2Nlcy92MWJldGEvc2VhcmNoX3N1Z2dlc3Rpb25zLnByb3RvGhxnb29nbGUv",
+            "cHJvdG9idWYvc3RydWN0LnByb3RvIqYCCgpNb2NrQ29uZmlnEkcKEW1vY2tl",
+            "ZF90b29sX2NhbGxzGAEgAygLMicuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "TW9ja2VkVG9vbENhbGxCA+BBARJoChx1bm1hdGNoZWRfdG9vbF9jYWxsX2Jl",
+            "aGF2aW9yGAIgASgOMj0uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuTW9ja0Nv",
+            "bmZpZy5Vbm1hdGNoZWRUb29sQ2FsbEJlaGF2aW9yQgPgQQIiZQoZVW5tYXRj",
+            "aGVkVG9vbENhbGxCZWhhdmlvchIsCihVTk1BVENIRURfVE9PTF9DQUxMX0JF",
+            "SEFWSU9SX1VOU1BFQ0lGSUVEEAASCAoERkFJTBABEhAKDFBBU1NfVEhST1VH",
+            "SBACIp0BChBJbnB1dEF1ZGlvQ29uZmlnEkMKDmF1ZGlvX2VuY29kaW5nGAEg",
+            "ASgOMiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXVkaW9FbmNvZGluZ0ID",
+            "4EECEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFQgPgQQISJAoXbm9pc2Vf",
+            "c3VwcHJlc3Npb25fbGV2ZWwYBiABKAlCA+BBASJ4ChFPdXRwdXRBdWRpb0Nv",
+            "bmZpZxJDCg5hdWRpb19lbmNvZGluZxgBIAEoDjImLmdvb2dsZS5jbG91ZC5j",
+            "ZXMudjFiZXRhLkF1ZGlvRW5jb2RpbmdCA+BBAhIeChFzYW1wbGVfcmF0ZV9o",
+            "ZXJ0ehgCIAEoBUID4EECIoEHCg1TZXNzaW9uQ29uZmlnEjMKB3Nlc3Npb24Y",
+            "ASABKAlCIuBBAvpBHAoaY2VzLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SSgoS",
+            "aW5wdXRfYXVkaW9fY29uZmlnGAIgASgLMikuZ29vZ2xlLmNsb3VkLmNlcy52",
+            "MWJldGEuSW5wdXRBdWRpb0NvbmZpZ0ID4EEBEkwKE291dHB1dF9hdWRpb19j",
+            "b25maWcYAyABKAsyKi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5PdXRwdXRB",
+            "dWRpb0NvbmZpZ0ID4EEBEkIKE2hpc3RvcmljYWxfY29udGV4dHMYBSADKAsy",
+            "IC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5NZXNzYWdlQgPgQQESNQoLZW50",
+            "cnlfYWdlbnQYDCABKAlCIOBBAfpBGgoYY2VzLmdvb2dsZWFwaXMuY29tL0Fn",
+            "ZW50EhcKCmRlcGxveW1lbnQYCCABKAlCA+BBARIWCgl0aW1lX3pvbmUYCyAB",
+            "KAlCA+BBARIbCg51c2VfdG9vbF9mYWtlcxgOIAEoCEID4EEBEncKInJlbW90",
+            "ZV9kaWFsb2dmbG93X3F1ZXJ5X3BhcmFtZXRlcnMYDyABKAsyRi5nb29nbGUu",
+            "Y2xvdWQuY2VzLnYxYmV0YS5TZXNzaW9uQ29uZmlnLlJlbW90ZURpYWxvZ2Zs",
+            "b3dRdWVyeVBhcmFtZXRlcnNCA+BBARIiChVlbmFibGVfdGV4dF9zdHJlYW1p",
+            "bmcYEiABKAhCA+BBARq6AgofUmVtb3RlRGlhbG9nZmxvd1F1ZXJ5UGFyYW1l",
+            "dGVycxJ4Cg93ZWJob29rX2hlYWRlcnMYASADKAsyWi5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxYmV0YS5TZXNzaW9uQ29uZmlnLlJlbW90ZURpYWxvZ2Zsb3dRdWVy",
+            "eVBhcmFtZXRlcnMuV2ViaG9va0hlYWRlcnNFbnRyeUID4EEBEi0KB3BheWxv",
+            "YWQYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQESNwoRZW5k",
+            "X3VzZXJfbWV0YWRhdGEYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
+            "QgPgQQEaNQoTV2ViaG9va0hlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIkcKCVRvb2xDYWxscxI6Cgp0b29sX2NhbGxzGAEg",
+            "AygLMiEuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuVG9vbENhbGxCA+BBASJT",
+            "Cg1Ub29sUmVzcG9uc2VzEkIKDnRvb2xfcmVzcG9uc2VzGAEgAygLMiUuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MWJldGEuVG9vbFJlc3BvbnNlQgPgQQEiiAEKCUNp",
+            "dGF0aW9ucxJDCgxjaXRlZF9jaHVua3MYASADKAsyLS5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxYmV0YS5DaXRhdGlvbnMuQ2l0ZWRDaHVuaxo2CgpDaXRlZENodW5r",
+            "EgsKA3VyaRgBIAEoCRINCgV0aXRsZRgCIAEoCRIMCgR0ZXh0GAMgASgJIhsK",
+            "BUV2ZW50EhIKBWV2ZW50GAEgASgJQgPgQQIikgMKDFNlc3Npb25JbnB1dBIT",
+            "CgR0ZXh0GAEgASgJQgPgQQFIABITCgRkdG1mGAYgASgJQgPgQQFIABIUCgVh",
+            "dWRpbxgCIAEoDEID4EEBSAASRQoOdG9vbF9yZXNwb25zZXMYAyABKAsyJi5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Ub29sUmVzcG9uc2VzQgPgQQFIABI0",
+            "CgVpbWFnZRgEIAEoCzIeLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkltYWdl",
+            "QgPgQQFIABIyCgRibG9iGAcgASgLMh0uZ29vZ2xlLmNsb3VkLmNlcy52MWJl",
+            "dGEuQmxvYkID4EEBSAASMQoJdmFyaWFibGVzGAUgASgLMhcuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cnVjdEID4EEBSAASNAoFZXZlbnQYCSABKAsyHi5nb29nbGUu",
+            "Y2xvdWQuY2VzLnYxYmV0YS5FdmVudEID4EEBSAASGgoNd2lsbF9jb250aW51",
+            "ZRgIIAEoCEID4EEBQgwKCmlucHV0X3R5cGUi6gQKDVNlc3Npb25PdXRwdXQS",
+            "DgoEdGV4dBgBIAEoCUgAEg8KBWF1ZGlvGAIgASgMSAASOAoKdG9vbF9jYWxs",
+            "cxgDIAEoCzIiLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlRvb2xDYWxsc0gA",
+            "EjcKCWNpdGF0aW9ucxgIIAEoCzIiLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
+            "LkNpdGF0aW9uc0gAElUKGWdvb2dsZV9zZWFyY2hfc3VnZ2VzdGlvbnMYCiAB",
+            "KAsyMC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Hb29nbGVTZWFyY2hTdWdn",
+            "ZXN0aW9uc0gAEjoKC2VuZF9zZXNzaW9uGAkgASgLMiMuZ29vZ2xlLmNsb3Vk",
+            "LmNlcy52MWJldGEuRW5kU2Vzc2lvbkgAEioKB3BheWxvYWQYCyABKAsyFy5n",
+            "b29nbGUucHJvdG9idWYuU3RydWN0SAASEgoKdHVybl9pbmRleBgGIAEoBRIW",
+            "Cg50dXJuX2NvbXBsZXRlZBgEIAEoCBJTCg9kaWFnbm9zdGljX2luZm8YByAB",
+            "KAsyNS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5TZXNzaW9uT3V0cHV0LkRp",
+            "YWdub3N0aWNJbmZvQgPgQQEadgoORGlhZ25vc3RpY0luZm8SMgoIbWVzc2Fn",
+            "ZXMYASADKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5NZXNzYWdlEjAK",
+            "CXJvb3Rfc3BhbhgDIAEoCzIdLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlNw",
+            "YW5CDQoLb3V0cHV0X3R5cGUiLAoRUmVjb2duaXRpb25SZXN1bHQSFwoKdHJh",
+            "bnNjcmlwdBgBIAEoCUID4EEBIiYKEkludGVycnVwdGlvblNpZ25hbBIQCghi",
+            "YXJnZV9pbhgBIAEoCCI8CgpFbmRTZXNzaW9uEi4KCG1ldGFkYXRhGAEgASgL",
+            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBIggKBkdvQXdheSKMAQoR",
+            "UnVuU2Vzc2lvblJlcXVlc3QSOwoGY29uZmlnGAEgASgLMiYuZ29vZ2xlLmNs",
+            "b3VkLmNlcy52MWJldGEuU2Vzc2lvbkNvbmZpZ0ID4EECEjoKBmlucHV0cxgD",
+            "IAMoCzIlLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlNlc3Npb25JbnB1dEID",
+            "4EECIk0KElJ1blNlc3Npb25SZXNwb25zZRI3CgdvdXRwdXRzGAEgAygLMiYu",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU2Vzc2lvbk91dHB1dCKvAQoYQmlk",
+            "aVNlc3Npb25DbGllbnRNZXNzYWdlEj0KBmNvbmZpZxgBIAEoCzImLmdvb2ds",
+            "ZS5jbG91ZC5jZXMudjFiZXRhLlNlc3Npb25Db25maWdCA+BBAUgAEkQKDnJl",
+            "YWx0aW1lX2lucHV0GAIgASgLMiUuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "U2Vzc2lvbklucHV0QgPgQQFIAEIOCgxtZXNzYWdlX3R5cGUiiwMKGEJpZGlT",
+            "ZXNzaW9uU2VydmVyTWVzc2FnZRJFCg5zZXNzaW9uX291dHB1dBgBIAEoCzIm",
+            "Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlNlc3Npb25PdXRwdXRCA+BBAUgA",
+            "Ek0KEnJlY29nbml0aW9uX3Jlc3VsdBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5j",
+            "ZXMudjFiZXRhLlJlY29nbml0aW9uUmVzdWx0QgPgQQFIABJPChNpbnRlcnJ1",
+            "cHRpb25fc2lnbmFsGAMgASgLMisuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "SW50ZXJydXB0aW9uU2lnbmFsQgPgQQFIABI/CgtlbmRfc2Vzc2lvbhgFIAEo",
+            "CzIjLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkVuZFNlc3Npb25CA+BBAUgA",
+            "EjcKB2dvX2F3YXkYBiABKAsyHy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5H",
+            "b0F3YXlCA+BBAUgAQg4KDG1lc3NhZ2VfdHlwZSpSCg1BdWRpb0VuY29kaW5n",
+            "Eh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQ",
+            "ARIJCgVNVUxBVxACEggKBEFMQVcQAzKKBQoOU2Vzc2lvblNlcnZpY2USvgEK",
+            "ClJ1blNlc3Npb24SKi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5SdW5TZXNz",
             "aW9uUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlJ1blNlc3Np",
-            "b25SZXNwb25zZSJdgtPkkwJXIlIvdjFiZXRhL3tjb25maWcuc2Vzc2lvbj1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcHMvKi9zZXNzaW9ucy8qfTpzdHJl",
-            "YW1SdW5TZXNzaW9uOgEqMAESfAoOQmlkaVJ1blNlc3Npb24SMS5nb29nbGUu",
-            "Y2xvdWQuY2VzLnYxYmV0YS5CaWRpU2Vzc2lvbkNsaWVudE1lc3NhZ2UaMS5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5CaWRpU2Vzc2lvblNlcnZlck1lc3Nh",
-            "Z2UiACgBMAEaaspBEmNlcy5nb29nbGVhcGlzLmNvbdJBUmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2VzLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CyQEKG2NvbS5nb29nbGUuY2xv",
-            "dWQuY2VzLnYxYmV0YUITU2Vzc2lvblNlcnZpY2VQcm90b1ABWi1jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2VzcGLqQWMKGmNl",
-            "cy5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEkVwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwcy97YXBwfS9zZXNzaW9ucy97c2Vz",
-            "c2lvbn1iBnByb3RvMw=="));
+            "b25SZXNwb25zZSJXgtPkkwJRIkwvdjFiZXRhL3tjb25maWcuc2Vzc2lvbj1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcHMvKi9zZXNzaW9ucy8qfTpydW5T",
+            "ZXNzaW9uOgEqEswBChBTdHJlYW1SdW5TZXNzaW9uEiouZ29vZ2xlLmNsb3Vk",
+            "LmNlcy52MWJldGEuUnVuU2Vzc2lvblJlcXVlc3QaKy5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxYmV0YS5SdW5TZXNzaW9uUmVzcG9uc2UiXYLT5JMCVyJSL3YxYmV0",
+            "YS97Y29uZmlnLnNlc3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBz",
+            "Lyovc2Vzc2lvbnMvKn06c3RyZWFtUnVuU2Vzc2lvbjoBKjABEnwKDkJpZGlS",
+            "dW5TZXNzaW9uEjEuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQmlkaVNlc3Np",
+            "b25DbGllbnRNZXNzYWdlGjEuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQmlk",
+            "aVNlc3Npb25TZXJ2ZXJNZXNzYWdlIgAoATABGmrKQRJjZXMuZ29vZ2xlYXBp",
+            "cy5jb23SQVJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nlcyxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "QskBChtjb20uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGFCE1Nlc3Npb25TZXJ2",
+            "aWNlUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRh",
+            "L2Nlc3BiO2Nlc3Bi6kFjChpjZXMuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJF",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FwcHMv",
+            "e2FwcH0vc2Vzc2lvbnMve3Nlc3Npb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ExampleReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SearchSuggestionsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ExampleReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.MocksReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SearchSuggestionsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Ces.V1Beta.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.MockConfig), global::Google.Cloud.Ces.V1Beta.MockConfig.Parser, new[]{ "MockedToolCalls", "UnmatchedToolCallBehavior" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.InputAudioConfig), global::Google.Cloud.Ces.V1Beta.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "NoiseSuppressionLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.OutputAudioConfig), global::Google.Cloud.Ces.V1Beta.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.SessionConfig), global::Google.Cloud.Ces.V1Beta.SessionConfig.Parser, new[]{ "Session", "InputAudioConfig", "OutputAudioConfig", "HistoricalContexts", "EntryAgent", "Deployment", "TimeZone", "UseToolFakes", "RemoteDialogflowQueryParameters", "EnableTextStreaming" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.SessionConfig.Types.RemoteDialogflowQueryParameters), global::Google.Cloud.Ces.V1Beta.SessionConfig.Types.RemoteDialogflowQueryParameters.Parser, new[]{ "WebhookHeaders", "Payload", "EndUserMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
@@ -183,6 +191,267 @@ namespace Google.Cloud.Ces.V1Beta {
 
   #region Messages
   /// <summary>
+  /// Mock tool calls configuration for the session.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MockConfig : pb::IMessage<MockConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MockConfig> _parser = new pb::MessageParser<MockConfig>(() => new MockConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MockConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MockConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MockConfig(MockConfig other) : this() {
+      mockedToolCalls_ = other.mockedToolCalls_.Clone();
+      unmatchedToolCallBehavior_ = other.unmatchedToolCallBehavior_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MockConfig Clone() {
+      return new MockConfig(this);
+    }
+
+    /// <summary>Field number for the "mocked_tool_calls" field.</summary>
+    public const int MockedToolCallsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Ces.V1Beta.MockedToolCall> _repeated_mockedToolCalls_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Ces.V1Beta.MockedToolCall.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.MockedToolCall> mockedToolCalls_ = new pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.MockedToolCall>();
+    /// <summary>
+    /// Optional. All tool calls to mock for the duration of the session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.MockedToolCall> MockedToolCalls {
+      get { return mockedToolCalls_; }
+    }
+
+    /// <summary>Field number for the "unmatched_tool_call_behavior" field.</summary>
+    public const int UnmatchedToolCallBehaviorFieldNumber = 2;
+    private global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior unmatchedToolCallBehavior_ = global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified;
+    /// <summary>
+    /// Required. Beavhior for tool calls that don't match any args patterns in
+    /// mocked_tool_calls.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior UnmatchedToolCallBehavior {
+      get { return unmatchedToolCallBehavior_; }
+      set {
+        unmatchedToolCallBehavior_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MockConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MockConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!mockedToolCalls_.Equals(other.mockedToolCalls_)) return false;
+      if (UnmatchedToolCallBehavior != other.UnmatchedToolCallBehavior) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= mockedToolCalls_.GetHashCode();
+      if (UnmatchedToolCallBehavior != global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified) hash ^= UnmatchedToolCallBehavior.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      mockedToolCalls_.WriteTo(output, _repeated_mockedToolCalls_codec);
+      if (UnmatchedToolCallBehavior != global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UnmatchedToolCallBehavior);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      mockedToolCalls_.WriteTo(ref output, _repeated_mockedToolCalls_codec);
+      if (UnmatchedToolCallBehavior != global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UnmatchedToolCallBehavior);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += mockedToolCalls_.CalculateSize(_repeated_mockedToolCalls_codec);
+      if (UnmatchedToolCallBehavior != global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UnmatchedToolCallBehavior);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MockConfig other) {
+      if (other == null) {
+        return;
+      }
+      mockedToolCalls_.Add(other.mockedToolCalls_);
+      if (other.UnmatchedToolCallBehavior != global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior.Unspecified) {
+        UnmatchedToolCallBehavior = other.UnmatchedToolCallBehavior;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            mockedToolCalls_.AddEntriesFrom(input, _repeated_mockedToolCalls_codec);
+            break;
+          }
+          case 16: {
+            UnmatchedToolCallBehavior = (global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            mockedToolCalls_.AddEntriesFrom(ref input, _repeated_mockedToolCalls_codec);
+            break;
+          }
+          case 16: {
+            UnmatchedToolCallBehavior = (global::Google.Cloud.Ces.V1Beta.MockConfig.Types.UnmatchedToolCallBehavior) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MockConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// What to do when a tool call doesn't match any mocked tool calls.
+      /// </summary>
+      public enum UnmatchedToolCallBehavior {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("UNMATCHED_TOOL_CALL_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Throw an error for any tool calls that don't match a mock expected input
+        /// pattern.
+        /// </summary>
+        [pbr::OriginalName("FAIL")] Fail = 1,
+        /// <summary>
+        /// For unmatched tool calls, pass the tool call through to real tool.
+        /// </summary>
+        [pbr::OriginalName("PASS_THROUGH")] PassThrough = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// InputAudioConfig configures how the CES agent should interpret the incoming
   /// audio data.
   /// </summary>
@@ -201,7 +470,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -487,7 +756,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -731,7 +1000,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1644,7 +1913,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1837,7 +2106,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2030,7 +2299,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2515,7 +2784,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2719,7 +2988,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3413,7 +3682,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4384,7 +4653,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4591,7 +4860,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4800,7 +5069,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5015,7 +5284,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5180,7 +5449,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5423,7 +5692,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5618,7 +5887,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5923,7 +6192,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

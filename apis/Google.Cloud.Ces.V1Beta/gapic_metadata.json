@@ -385,6 +385,12 @@
                 "DeleteScheduledEvaluationRunAsync"
               ]
             },
+            "ExportEvaluations": {
+              "methods": [
+                "ExportEvaluations",
+                "ExportEvaluationsAsync"
+              ]
+            },
             "GenerateEvaluation": {
               "methods": [
                 "GenerateEvaluation",

@@ -83,6 +83,8 @@ namespace Google.Cloud.Ces.V1Beta
             UpdateScheduledEvaluationRunSettings = existing.UpdateScheduledEvaluationRunSettings;
             DeleteScheduledEvaluationRunSettings = existing.DeleteScheduledEvaluationRunSettings;
             TestPersonaVoiceSettings = existing.TestPersonaVoiceSettings;
+            ExportEvaluationsSettings = existing.ExportEvaluationsSettings;
+            ExportEvaluationsOperationsSettings = existing.ExportEvaluationsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -833,6 +835,45 @@ namespace Google.Cloud.Ces.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestPersonaVoiceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EvaluationServiceClient.ExportEvaluations</c> and <c>EvaluationServiceClient.ExportEvaluationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportEvaluationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EvaluationServiceClient.ExportEvaluations</c> and
+        /// <c>EvaluationServiceClient.ExportEvaluationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportEvaluationsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -5383,6 +5424,144 @@ namespace Google.Cloud.Ces.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<TestPersonaVoiceResponse> TestPersonaVoiceAsync(AppName app, st::CancellationToken cancellationToken) =>
             TestPersonaVoiceAsync(app, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportEvaluationsResponse, OperationMetadata> ExportEvaluations(ExportEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(ExportEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(ExportEvaluationsRequest request, st::CancellationToken cancellationToken) =>
+            ExportEvaluationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportEvaluations</c>.</summary>
+        public virtual lro::OperationsClient ExportEvaluationsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportEvaluations</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportEvaluationsResponse, OperationMetadata> PollOnceExportEvaluations(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportEvaluationsResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportEvaluationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportEvaluations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> PollOnceExportEvaluationsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportEvaluationsResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportEvaluationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportEvaluationsResponse, OperationMetadata> ExportEvaluations(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ExportEvaluations(new ExportEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ExportEvaluationsAsync(new ExportEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(string parent, st::CancellationToken cancellationToken) =>
+            ExportEvaluationsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportEvaluationsResponse, OperationMetadata> ExportEvaluations(AppName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ExportEvaluations(new ExportEvaluationsRequest
+            {
+                ParentAsAppName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(AppName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ExportEvaluationsAsync(new ExportEvaluationsRequest
+            {
+                ParentAsAppName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the app to export evaluations from.
+        /// Format: `projects/{project}/locations/{location}/apps/{app}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(AppName parent, st::CancellationToken cancellationToken) =>
+            ExportEvaluationsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EvaluationService client wrapper implementation, for convenient use.</summary>
@@ -5453,6 +5632,8 @@ namespace Google.Cloud.Ces.V1Beta
 
         private readonly gaxgrpc::ApiCall<TestPersonaVoiceRequest, TestPersonaVoiceResponse> _callTestPersonaVoice;
 
+        private readonly gaxgrpc::ApiCall<ExportEvaluationsRequest, lro::Operation> _callExportEvaluations;
+
         /// <summary>
         /// Constructs a client wrapper for the EvaluationService service, with the specified gRPC client and settings.
         /// </summary>
@@ -5472,6 +5653,7 @@ namespace Google.Cloud.Ces.V1Beta
             GenerateEvaluationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.GenerateEvaluationOperationsSettings, logger);
             ImportEvaluationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEvaluationsOperationsSettings, logger);
             DeleteEvaluationRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEvaluationRunOperationsSettings, logger);
+            ExportEvaluationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportEvaluationsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callRunEvaluation = clientHelper.BuildApiCall<RunEvaluationRequest, lro::Operation>("RunEvaluation", grpcClient.RunEvaluationAsync, grpcClient.RunEvaluation, effectiveSettings.RunEvaluationSettings).WithGoogleRequestParam("app", request => request.App);
             Modify_ApiCall(ref _callRunEvaluation);
@@ -5566,6 +5748,9 @@ namespace Google.Cloud.Ces.V1Beta
             _callTestPersonaVoice = clientHelper.BuildApiCall<TestPersonaVoiceRequest, TestPersonaVoiceResponse>("TestPersonaVoice", grpcClient.TestPersonaVoiceAsync, grpcClient.TestPersonaVoice, effectiveSettings.TestPersonaVoiceSettings).WithGoogleRequestParam("app", request => request.App);
             Modify_ApiCall(ref _callTestPersonaVoice);
             Modify_TestPersonaVoiceApiCall(ref _callTestPersonaVoice);
+            _callExportEvaluations = clientHelper.BuildApiCall<ExportEvaluationsRequest, lro::Operation>("ExportEvaluations", grpcClient.ExportEvaluationsAsync, grpcClient.ExportEvaluations, effectiveSettings.ExportEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callExportEvaluations);
+            Modify_ExportEvaluationsApiCall(ref _callExportEvaluations);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5632,6 +5817,8 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_DeleteScheduledEvaluationRunApiCall(ref gaxgrpc::ApiCall<DeleteScheduledEvaluationRunRequest, wkt::Empty> call);
 
         partial void Modify_TestPersonaVoiceApiCall(ref gaxgrpc::ApiCall<TestPersonaVoiceRequest, TestPersonaVoiceResponse> call);
+
+        partial void Modify_ExportEvaluationsApiCall(ref gaxgrpc::ApiCall<ExportEvaluationsRequest, lro::Operation> call);
 
         partial void OnConstruction(EvaluationService.EvaluationServiceClient grpcClient, EvaluationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5702,6 +5889,8 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_DeleteScheduledEvaluationRunRequest(ref DeleteScheduledEvaluationRunRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestPersonaVoiceRequest(ref TestPersonaVoiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportEvaluationsRequest(ref ExportEvaluationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>RunEvaluation</c>.</summary>
         public override lro::OperationsClient RunEvaluationOperationsClient { get; }
@@ -6463,6 +6652,33 @@ namespace Google.Cloud.Ces.V1Beta
         {
             Modify_TestPersonaVoiceRequest(ref request, ref callSettings);
             return _callTestPersonaVoice.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportEvaluations</c>.</summary>
+        public override lro::OperationsClient ExportEvaluationsOperationsClient { get; }
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportEvaluationsResponse, OperationMetadata> ExportEvaluations(ExportEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportEvaluationsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportEvaluationsResponse, OperationMetadata>(_callExportEvaluations.Sync(request, callSettings), ExportEvaluationsOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportEvaluationsResponse, OperationMetadata>> ExportEvaluationsAsync(ExportEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportEvaluationsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportEvaluationsResponse, OperationMetadata>(await _callExportEvaluations.Async(request, callSettings).ConfigureAwait(false), ExportEvaluationsOperationsClient);
         }
     }
 

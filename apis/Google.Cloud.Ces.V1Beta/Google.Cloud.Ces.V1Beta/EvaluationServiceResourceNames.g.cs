@@ -343,4 +343,22 @@ namespace Google.Cloud.Ces.V1Beta
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExportEvaluationsRequest
+    {
+        /// <summary><see cref="AppName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AppName ParentAsAppName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AppName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EvaluationName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EvaluationName> EvaluationNames
+        {
+            get => new gax::ResourceNameList<EvaluationName>(Names, s => string.IsNullOrEmpty(s) ? null : EvaluationName.Parse(s, allowUnparsed: true));
+        }
+    }
 }
