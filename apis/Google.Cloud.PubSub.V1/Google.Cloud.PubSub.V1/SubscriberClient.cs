@@ -217,7 +217,9 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort handlers and acknowledgement.</param>
     /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="hardStopToken"/> is cancelled.</returns>
-    public virtual Task StopAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
+    [Obsolete("Use StopAsync(ShutdownOptions, CancellationToken) instead.")]
+    public virtual Task StopAsync(CancellationToken hardStopToken) =>
+        StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing }, hardStopToken);
 
     /// <summary>
     /// Stop this <see cref="SubscriberClient"/>. If <paramref name="timeout"/> expires, the
@@ -229,7 +231,21 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// <param name="timeout">After this period, abort handling and acknowledging messages.</param>
     /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="timeout"/> expires.</returns>
-    public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
+    [Obsolete("Use StopAsync(ShutdownOptions, CancellationToken) instead.")]
+    public virtual Task StopAsync(TimeSpan timeout) =>
+        StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing, Timeout = timeout });
+
+    /// <summary>
+    /// Stops this <see cref="SubscriberClient"/>.
+    /// The returned <see cref="Task"/> completes when the shutdown is finished according to the
+    /// <paramref name="shutdownOptions"/> or when the <paramref name="cancellationToken"/> is cancelled.
+    /// The returned <see cref="Task"/> faults if an unrecoverable error occurs in the underlying service.
+    /// The returned <see cref="Task"/> cancels if <paramref name="cancellationToken"/> is cancelled.
+    /// </summary>
+    /// <param name="shutdownOptions">The <see cref="ShutdownOptions"/> to use for shutdown.</param>
+    /// <param name="cancellationToken">Cancel this <see cref="CancellationToken"/> to immediately abort handlers and acknowledgement.</param>
+    /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
+    public virtual Task StopAsync(ShutdownOptions shutdownOptions, CancellationToken cancellationToken = default) => throw new NotImplementedException();
 
     /// <summary>
     /// Disposes this <see cref="SubscriberClient"/> asynchronously.

@@ -142,8 +142,11 @@ namespace Google.Cloud.PubSub.V1.Snippets
                     return Task.FromResult(SubscriberClient.Reply.Ack);
                 });
 
-        public override async Task StopAsync(CancellationToken stoppingToken) =>
-            await _subscriberClient.StopAsync(stoppingToken);
+        public override async Task StopAsync(CancellationToken stoppingToken)
+        {
+            var shutdownOptions = new SubscriberClient.ShutdownOptions {Mode = SubscriberClient.ShutdownMode.NackImmediately};
+            await _subscriberClient.StopAsync(shutdownOptions, cancellationToken: stoppingToken);
+        }
     }
     // End sample
 }
