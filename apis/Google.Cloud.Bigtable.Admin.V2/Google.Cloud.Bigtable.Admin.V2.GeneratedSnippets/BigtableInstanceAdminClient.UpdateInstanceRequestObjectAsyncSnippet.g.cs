@@ -48,6 +48,7 @@ namespace GoogleCSharpSnippets
                 SatisfiesPzs = false,
                 SatisfiesPzi = false,
                 Tags = { { "", "" }, },
+                Edition = Instance.Types.Edition.Unspecified,
             };
             // Make the request
             Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
