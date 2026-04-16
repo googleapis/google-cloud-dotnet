@@ -64,6 +64,7 @@ namespace Google.Apps.Chat.V1
             DeleteSpaceSettings = existing.DeleteSpaceSettings;
             CompleteImportSpaceSettings = existing.CompleteImportSpaceSettings;
             FindDirectMessageSettings = existing.FindDirectMessageSettings;
+            FindGroupChatsSettings = existing.FindGroupChatsSettings;
             CreateMembershipSettings = existing.CreateMembershipSettings;
             UpdateMembershipSettings = existing.UpdateMembershipSettings;
             DeleteMembershipSettings = existing.DeleteMembershipSettings;
@@ -416,6 +417,24 @@ namespace Google.Apps.Chat.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FindDirectMessageSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.FindGroupChats</c> and <c>ChatServiceClient.FindGroupChatsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FindGroupChatsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -6216,6 +6235,62 @@ namespace Google.Apps.Chat.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Space> FindDirectMessageAsync(FindDirectMessageRequest request, st::CancellationToken cancellationToken) =>
             FindDirectMessageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+        /// human memberships contain exactly the calling user, and the users specified
+        /// in `FindGroupChatsRequest.users`. Only members that have joined the
+        /// conversation are supported. For an example, see [Find group
+        /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+        /// 
+        /// If the calling user blocks, or is blocked by, some users, and no spaces
+        /// with the entire specified set of users are found, this method returns
+        /// spaces that don't include the blocked or blocking users.
+        /// 
+        /// The specified set of users must contain only human (non-app) memberships.
+        /// A request that contains non-human users doesn't return any spaces.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FindGroupChatsResponse, Space> FindGroupChats(FindGroupChatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+        /// human memberships contain exactly the calling user, and the users specified
+        /// in `FindGroupChatsRequest.users`. Only members that have joined the
+        /// conversation are supported. For an example, see [Find group
+        /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+        /// 
+        /// If the calling user blocks, or is blocked by, some users, and no spaces
+        /// with the entire specified set of users are found, this method returns
+        /// spaces that don't include the blocked or blocking users.
+        /// 
+        /// The specified set of users must contain only human (non-app) memberships.
+        /// A request that contains non-human users doesn't return any spaces.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FindGroupChatsResponse, Space> FindGroupChatsAsync(FindGroupChatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a membership for the calling Chat app, a user, or a Google Group.
@@ -13008,6 +13083,8 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<FindDirectMessageRequest, Space> _callFindDirectMessage;
 
+        private readonly gaxgrpc::ApiCall<FindGroupChatsRequest, FindGroupChatsResponse> _callFindGroupChats;
+
         private readonly gaxgrpc::ApiCall<CreateMembershipRequest, Membership> _callCreateMembership;
 
         private readonly gaxgrpc::ApiCall<UpdateMembershipRequest, Membership> _callUpdateMembership;
@@ -13125,6 +13202,9 @@ namespace Google.Apps.Chat.V1
             _callFindDirectMessage = clientHelper.BuildApiCall<FindDirectMessageRequest, Space>("FindDirectMessage", grpcClient.FindDirectMessageAsync, grpcClient.FindDirectMessage, effectiveSettings.FindDirectMessageSettings);
             Modify_ApiCall(ref _callFindDirectMessage);
             Modify_FindDirectMessageApiCall(ref _callFindDirectMessage);
+            _callFindGroupChats = clientHelper.BuildApiCall<FindGroupChatsRequest, FindGroupChatsResponse>("FindGroupChats", grpcClient.FindGroupChatsAsync, grpcClient.FindGroupChats, effectiveSettings.FindGroupChatsSettings);
+            Modify_ApiCall(ref _callFindGroupChats);
+            Modify_FindGroupChatsApiCall(ref _callFindGroupChats);
             _callCreateMembership = clientHelper.BuildApiCall<CreateMembershipRequest, Membership>("CreateMembership", grpcClient.CreateMembershipAsync, grpcClient.CreateMembership, effectiveSettings.CreateMembershipSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMembership);
             Modify_CreateMembershipApiCall(ref _callCreateMembership);
@@ -13238,6 +13318,8 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_FindDirectMessageApiCall(ref gaxgrpc::ApiCall<FindDirectMessageRequest, Space> call);
 
+        partial void Modify_FindGroupChatsApiCall(ref gaxgrpc::ApiCall<FindGroupChatsRequest, FindGroupChatsResponse> call);
+
         partial void Modify_CreateMembershipApiCall(ref gaxgrpc::ApiCall<CreateMembershipRequest, Membership> call);
 
         partial void Modify_UpdateMembershipApiCall(ref gaxgrpc::ApiCall<UpdateMembershipRequest, Membership> call);
@@ -13326,6 +13408,8 @@ namespace Google.Apps.Chat.V1
         partial void Modify_CompleteImportSpaceRequest(ref CompleteImportSpaceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FindDirectMessageRequest(ref FindDirectMessageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FindGroupChatsRequest(ref FindGroupChatsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateMembershipRequest(ref CreateMembershipRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -14774,6 +14858,68 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
+        /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+        /// human memberships contain exactly the calling user, and the users specified
+        /// in `FindGroupChatsRequest.users`. Only members that have joined the
+        /// conversation are supported. For an example, see [Find group
+        /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+        /// 
+        /// If the calling user blocks, or is blocked by, some users, and no spaces
+        /// with the entire specified set of users are found, this method returns
+        /// spaces that don't include the blocked or blocking users.
+        /// 
+        /// The specified set of users must contain only human (non-app) memberships.
+        /// A request that contains non-human users doesn't return any spaces.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
+        public override gax::PagedEnumerable<FindGroupChatsResponse, Space> FindGroupChats(FindGroupChatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FindGroupChatsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FindGroupChatsRequest, FindGroupChatsResponse, Space>(_callFindGroupChats, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+        /// human memberships contain exactly the calling user, and the users specified
+        /// in `FindGroupChatsRequest.users`. Only members that have joined the
+        /// conversation are supported. For an example, see [Find group
+        /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+        /// 
+        /// If the calling user blocks, or is blocked by, some users, and no spaces
+        /// with the entire specified set of users are found, this method returns
+        /// spaces that don't include the blocked or blocking users.
+        /// 
+        /// The specified set of users must contain only human (non-app) memberships.
+        /// A request that contains non-human users doesn't return any spaces.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FindGroupChatsResponse, Space> FindGroupChatsAsync(FindGroupChatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FindGroupChatsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FindGroupChatsRequest, FindGroupChatsResponse, Space>(_callFindGroupChats, request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a membership for the calling Chat app, a user, or a Google Group.
         /// Creating memberships for other Chat apps isn't supported.
         /// When creating a membership, if the specified member has their auto-accept
@@ -16174,6 +16320,10 @@ namespace Google.Apps.Chat.V1
     {
     }
 
+    public partial class FindGroupChatsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListReactionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -16219,6 +16369,14 @@ namespace Google.Apps.Chat.V1
     }
 
     public partial class SearchSpacesResponse : gaxgrpc::IPageResponse<Space>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Space> GetEnumerator() => Spaces.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FindGroupChatsResponse : gaxgrpc::IPageResponse<Space>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Space> GetEnumerator() => Spaces.GetEnumerator();

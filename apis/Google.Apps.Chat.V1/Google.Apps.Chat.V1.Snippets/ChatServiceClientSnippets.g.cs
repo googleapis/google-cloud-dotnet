@@ -1912,6 +1912,104 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for FindGroupChats</summary>
+        public void FindGroupChatsRequestObject()
+        {
+            // Snippet: FindGroupChats(FindGroupChatsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            FindGroupChatsRequest request = new FindGroupChatsRequest
+            {
+                SpaceView = SpaceView.Unspecified,
+                Users = { "", },
+            };
+            // Make the request
+            PagedEnumerable<FindGroupChatsResponse, Space> response = chatServiceClient.FindGroupChats(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Space item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FindGroupChatsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FindGroupChatsAsync</summary>
+        public async Task FindGroupChatsRequestObjectAsync()
+        {
+            // Snippet: FindGroupChatsAsync(FindGroupChatsRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FindGroupChatsRequest request = new FindGroupChatsRequest
+            {
+                SpaceView = SpaceView.Unspecified,
+                Users = { "", },
+            };
+            // Make the request
+            PagedAsyncEnumerable<FindGroupChatsResponse, Space> response = chatServiceClient.FindGroupChatsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Space item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FindGroupChatsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateMembership</summary>
         public void CreateMembershipRequestObject()
         {

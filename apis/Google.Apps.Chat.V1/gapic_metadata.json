@@ -94,6 +94,12 @@
                 "FindDirectMessageAsync"
               ]
             },
+            "FindGroupChats": {
+              "methods": [
+                "FindGroupChats",
+                "FindGroupChatsAsync"
+              ]
+            },
             "GetAttachment": {
               "methods": [
                 "GetAttachment",

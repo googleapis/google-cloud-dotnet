@@ -123,6 +123,10 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.FindDirectMessageRequest> __Marshaller_google_chat_v1_FindDirectMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.FindDirectMessageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.FindGroupChatsRequest> __Marshaller_google_chat_v1_FindGroupChatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.FindGroupChatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.FindGroupChatsResponse> __Marshaller_google_chat_v1_FindGroupChatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.FindGroupChatsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.CreateMembershipRequest> __Marshaller_google_chat_v1_CreateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.UpdateMembershipRequest> __Marshaller_google_chat_v1_UpdateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser));
@@ -342,6 +346,14 @@ namespace Google.Apps.Chat.V1 {
         "FindDirectMessage",
         __Marshaller_google_chat_v1_FindDirectMessageRequest,
         __Marshaller_google_chat_v1_Space);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.FindGroupChatsRequest, global::Google.Apps.Chat.V1.FindGroupChatsResponse> __Method_FindGroupChats = new grpc::Method<global::Google.Apps.Chat.V1.FindGroupChatsRequest, global::Google.Apps.Chat.V1.FindGroupChatsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FindGroupChats",
+        __Marshaller_google_chat_v1_FindGroupChatsRequest,
+        __Marshaller_google_chat_v1_FindGroupChatsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.CreateMembershipRequest, global::Google.Apps.Chat.V1.Membership> __Method_CreateMembership = new grpc::Method<global::Google.Apps.Chat.V1.CreateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(
@@ -1240,6 +1252,37 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Space> FindDirectMessage(global::Google.Apps.Chat.V1.FindDirectMessageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+      /// human memberships contain exactly the calling user, and the users specified
+      /// in `FindGroupChatsRequest.users`. Only members that have joined the
+      /// conversation are supported. For an example, see [Find group
+      /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+      ///
+      /// If the calling user blocks, or is blocked by, some users, and no spaces
+      /// with the entire specified set of users are found, this method returns
+      /// spaces that don't include the blocked or blocking users.
+      ///
+      /// The specified set of users must contain only human (non-app) memberships.
+      /// A request that contains non-human users doesn't return any spaces.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.memberships.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.memberships`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.FindGroupChatsResponse> FindGroupChats(global::Google.Apps.Chat.V1.FindGroupChatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4762,6 +4805,130 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_FindDirectMessage, null, options, request);
       }
       /// <summary>
+      /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+      /// human memberships contain exactly the calling user, and the users specified
+      /// in `FindGroupChatsRequest.users`. Only members that have joined the
+      /// conversation are supported. For an example, see [Find group
+      /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+      ///
+      /// If the calling user blocks, or is blocked by, some users, and no spaces
+      /// with the entire specified set of users are found, this method returns
+      /// spaces that don't include the blocked or blocking users.
+      ///
+      /// The specified set of users must contain only human (non-app) memberships.
+      /// A request that contains non-human users doesn't return any spaces.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.memberships.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.memberships`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.FindGroupChatsResponse FindGroupChats(global::Google.Apps.Chat.V1.FindGroupChatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FindGroupChats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+      /// human memberships contain exactly the calling user, and the users specified
+      /// in `FindGroupChatsRequest.users`. Only members that have joined the
+      /// conversation are supported. For an example, see [Find group
+      /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+      ///
+      /// If the calling user blocks, or is blocked by, some users, and no spaces
+      /// with the entire specified set of users are found, this method returns
+      /// spaces that don't include the blocked or blocking users.
+      ///
+      /// The specified set of users must contain only human (non-app) memberships.
+      /// A request that contains non-human users doesn't return any spaces.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.memberships.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.memberships`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.FindGroupChatsResponse FindGroupChats(global::Google.Apps.Chat.V1.FindGroupChatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FindGroupChats, null, options, request);
+      }
+      /// <summary>
+      /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+      /// human memberships contain exactly the calling user, and the users specified
+      /// in `FindGroupChatsRequest.users`. Only members that have joined the
+      /// conversation are supported. For an example, see [Find group
+      /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+      ///
+      /// If the calling user blocks, or is blocked by, some users, and no spaces
+      /// with the entire specified set of users are found, this method returns
+      /// spaces that don't include the blocked or blocking users.
+      ///
+      /// The specified set of users must contain only human (non-app) memberships.
+      /// A request that contains non-human users doesn't return any spaces.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.memberships.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.memberships`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.FindGroupChatsResponse> FindGroupChatsAsync(global::Google.Apps.Chat.V1.FindGroupChatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FindGroupChatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns all spaces with `spaceType == GROUP_CHAT`, whose
+      /// human memberships contain exactly the calling user, and the users specified
+      /// in `FindGroupChatsRequest.users`. Only members that have joined the
+      /// conversation are supported. For an example, see [Find group
+      /// chats](https://developers.google.com/workspace/chat/find-group-chats).
+      ///
+      /// If the calling user blocks, or is blocked by, some users, and no spaces
+      /// with the entire specified set of users are found, this method returns
+      /// spaces that don't include the blocked or blocking users.
+      ///
+      /// The specified set of users must contain only human (non-app) memberships.
+      /// A request that contains non-human users doesn't return any spaces.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.memberships.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.memberships`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.FindGroupChatsResponse> FindGroupChatsAsync(global::Google.Apps.Chat.V1.FindGroupChatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FindGroupChats, null, options, request);
+      }
+      /// <summary>
       /// Creates a membership for the calling Chat app, a user, or a Google Group.
       /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
@@ -7561,6 +7728,7 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_DeleteSpace, serviceImpl.DeleteSpace)
           .AddMethod(__Method_CompleteImportSpace, serviceImpl.CompleteImportSpace)
           .AddMethod(__Method_FindDirectMessage, serviceImpl.FindDirectMessage)
+          .AddMethod(__Method_FindGroupChats, serviceImpl.FindGroupChats)
           .AddMethod(__Method_CreateMembership, serviceImpl.CreateMembership)
           .AddMethod(__Method_UpdateMembership, serviceImpl.UpdateMembership)
           .AddMethod(__Method_DeleteMembership, serviceImpl.DeleteMembership)
@@ -7612,6 +7780,7 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_DeleteSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteSpaceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSpace));
       serviceBinder.AddMethod(__Method_CompleteImportSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CompleteImportSpaceRequest, global::Google.Apps.Chat.V1.CompleteImportSpaceResponse>(serviceImpl.CompleteImportSpace));
       serviceBinder.AddMethod(__Method_FindDirectMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.FindDirectMessageRequest, global::Google.Apps.Chat.V1.Space>(serviceImpl.FindDirectMessage));
+      serviceBinder.AddMethod(__Method_FindGroupChats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.FindGroupChatsRequest, global::Google.Apps.Chat.V1.FindGroupChatsResponse>(serviceImpl.FindGroupChats));
       serviceBinder.AddMethod(__Method_CreateMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.CreateMembership));
       serviceBinder.AddMethod(__Method_UpdateMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.UpdateMembership));
       serviceBinder.AddMethod(__Method_DeleteMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.DeleteMembership));

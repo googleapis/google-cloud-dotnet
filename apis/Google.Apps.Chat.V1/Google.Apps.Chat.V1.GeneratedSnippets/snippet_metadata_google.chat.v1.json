@@ -4064,6 +4064,103 @@
       ]
     },
     {
+      "regionTag": "chat_v1_generated_ChatService_FindGroupChats_sync",
+      "title": "FindGroupChatsRequestObject",
+      "description": "Snippet for FindGroupChats",
+      "file": "ChatServiceClient.FindGroupChatsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindGroupChats",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.FindGroupChats",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.FindGroupChatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.FindGroupChatsResponse, Google.Apps.Chat.V1.Space>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "FindGroupChats",
+          "fullName": "google.chat.v1.ChatService.FindGroupChats",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_FindGroupChats_async",
+      "title": "FindGroupChatsRequestObjectAsync",
+      "description": "Snippet for FindGroupChatsAsync",
+      "file": "ChatServiceClient.FindGroupChatsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindGroupChatsAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.FindGroupChatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.FindGroupChatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.FindGroupChatsResponse, Google.Apps.Chat.V1.Space>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "FindGroupChats",
+          "fullName": "google.chat.v1.ChatService.FindGroupChats",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chat_v1_generated_ChatService_CreateMembership_sync",
       "title": "CreateMembershipRequestObject",
       "description": "Snippet for CreateMembership",
