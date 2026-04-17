@@ -6922,6 +6922,23 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Maps.MapManagement.V2Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Map Management",
+      "productUrl": "https://developers.google.com/maps/documentation/mapmanagement/overview",
+      "description": "The Map Management API is a RESTful service that accepts HTTP requests for map styling data through a variety of methods. It returns formatted configuration data about map styling resources so that you can programmatically manage your Cloud-based map styles.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/mapmanagement/v2beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "mapmanagement",
+      "serviceConfigFile": "mapmanagement_v2beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.MapsPlatformDatasets.V1",
       "version": "1.1.0",
       "type": "grpc",
