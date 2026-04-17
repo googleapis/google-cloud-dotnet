@@ -4987,6 +4987,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Appoptimize.V1Beta/Google.Cloud.Appoptimize.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Developers.Knowledge.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/developers/knowledge/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Developers.Knowledge.V1/Google.Developers.Knowledge.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
