@@ -1765,6 +1765,12 @@
         "grpc": {
           "libraryClient": "ReasoningEngineExecutionServiceClient",
           "rpcs": {
+            "AsyncQueryReasoningEngine": {
+              "methods": [
+                "AsyncQueryReasoningEngine",
+                "AsyncQueryReasoningEngineAsync"
+              ]
+            },
             "QueryReasoningEngine": {
               "methods": [
                 "QueryReasoningEngine",

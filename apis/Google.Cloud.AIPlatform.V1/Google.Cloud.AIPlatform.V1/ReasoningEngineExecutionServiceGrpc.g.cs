@@ -3,7 +3,7 @@
 //     source: google/cloud/aiplatform/v1/reasoning_engine_execution_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,6 +71,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StreamQueryReasoningEngineRequest> __Marshaller_google_cloud_aiplatform_v1_StreamQueryReasoningEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StreamQueryReasoningEngineRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest> __Marshaller_google_cloud_aiplatform_v1_AsyncQueryReasoningEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineResponse> __Method_QueryReasoningEngine = new grpc::Method<global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineResponse>(
@@ -87,6 +91,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "StreamQueryReasoningEngine",
         __Marshaller_google_cloud_aiplatform_v1_StreamQueryReasoningEngineRequest,
         __Marshaller_google_api_HttpBody);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest, global::Google.LongRunning.Operation> __Method_AsyncQueryReasoningEngine = new grpc::Method<global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AsyncQueryReasoningEngine",
+        __Marshaller_google_cloud_aiplatform_v1_AsyncQueryReasoningEngineRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -119,6 +131,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1.StreamQueryReasoningEngineRequest request, grpc::IServerStreamWriter<global::Google.Api.HttpBody> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Async query using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AsyncQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -224,6 +248,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamQueryReasoningEngine, null, options, request);
       }
+      /// <summary>
+      /// Async query using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AsyncQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsyncQueryReasoningEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Async query using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AsyncQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AsyncQueryReasoningEngine, null, options, request);
+      }
+      /// <summary>
+      /// Async query using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncQueryReasoningEngineAsync(global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsyncQueryReasoningEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Async query using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncQueryReasoningEngineAsync(global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AsyncQueryReasoningEngine, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReasoningEngineExecutionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -239,7 +311,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_QueryReasoningEngine, serviceImpl.QueryReasoningEngine)
-          .AddMethod(__Method_StreamQueryReasoningEngine, serviceImpl.StreamQueryReasoningEngine).Build();
+          .AddMethod(__Method_StreamQueryReasoningEngine, serviceImpl.StreamQueryReasoningEngine)
+          .AddMethod(__Method_AsyncQueryReasoningEngine, serviceImpl.AsyncQueryReasoningEngine).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -251,6 +324,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       serviceBinder.AddMethod(__Method_QueryReasoningEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1.QueryReasoningEngineResponse>(serviceImpl.QueryReasoningEngine));
       serviceBinder.AddMethod(__Method_StreamQueryReasoningEngine, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1.StreamQueryReasoningEngineRequest, global::Google.Api.HttpBody>(serviceImpl.StreamQueryReasoningEngine));
+      serviceBinder.AddMethod(__Method_AsyncQueryReasoningEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.AsyncQueryReasoningEngineRequest, global::Google.LongRunning.Operation>(serviceImpl.AsyncQueryReasoningEngine));
     }
 
   }
