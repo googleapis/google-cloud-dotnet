@@ -4993,6 +4993,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "15cb2f9cbc7334350c11574776c459d2a4c76495",
             "apiPaths": [
                 "google/developers/knowledge/v1"
             ],

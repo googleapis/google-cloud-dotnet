@@ -1,0 +1,495 @@
+{
+  "clientLibrary": {
+    "name": "Google.Developers.Knowledge.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.developers.knowledge.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_SearchDocumentChunks_sync",
+      "title": "SearchDocumentChunksRequestObject",
+      "description": "Snippet for SearchDocumentChunks",
+      "file": "DeveloperKnowledgeClient.SearchDocumentChunksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDocumentChunks",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunks",
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.SearchDocumentChunksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Developers.Knowledge.V1.SearchDocumentChunksResponse, Google.Developers.Knowledge.V1.DocumentChunk>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "SearchDocumentChunks",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.SearchDocumentChunks",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_SearchDocumentChunks_async",
+      "title": "SearchDocumentChunksRequestObjectAsync",
+      "description": "Snippet for SearchDocumentChunksAsync",
+      "file": "DeveloperKnowledgeClient.SearchDocumentChunksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchDocumentChunksAsync",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.SearchDocumentChunksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Developers.Knowledge.V1.SearchDocumentChunksResponse, Google.Developers.Knowledge.V1.DocumentChunk>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "SearchDocumentChunks",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.SearchDocumentChunks",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync",
+      "title": "GetDocumentRequestObject",
+      "description": "Snippet for GetDocument",
+      "file": "DeveloperKnowledgeClient.GetDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async",
+      "title": "GetDocumentRequestObjectAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DeveloperKnowledgeClient.GetDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened",
+      "title": "GetDocument",
+      "description": "Snippet for GetDocument",
+      "file": "DeveloperKnowledgeClient.GetDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened",
+      "title": "GetDocumentAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DeveloperKnowledgeClient.GetDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened_resourceNames",
+      "title": "GetDocumentResourceNames",
+      "description": "Snippet for GetDocument",
+      "file": "DeveloperKnowledgeClient.GetDocumentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened_resourceNames",
+      "title": "GetDocumentResourceNamesAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DeveloperKnowledgeClient.GetDocumentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.GetDocument",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_sync",
+      "title": "BatchGetDocumentsRequestObject",
+      "description": "Snippet for BatchGetDocuments",
+      "file": "DeveloperKnowledgeClient.BatchGetDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocuments",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.BatchGetDocuments",
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.BatchGetDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Developers.Knowledge.V1.BatchGetDocumentsResponse",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocuments",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.BatchGetDocuments",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_async",
+      "title": "BatchGetDocumentsRequestObjectAsync",
+      "description": "Snippet for BatchGetDocumentsAsync",
+      "file": "DeveloperKnowledgeClient.BatchGetDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsAsync",
+        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.BatchGetDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Developers.Knowledge.V1.BatchGetDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.BatchGetDocumentsResponse>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocuments",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.BatchGetDocuments",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
