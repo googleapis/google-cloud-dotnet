@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-alpha29, released 2026-04-20
+
+### New features
+
+- Add UserProvidedDataSettings resource and GetUserProvidedDataSettings RPC to Google Analytics
+
+### Documentation improvements
+
+- Update documentation for GetReportingIdentitySettings to correctly describe it as returning reporting identity settings in Google Analytics
+- Update copyright year to 2026 in Google Analytics proto files
+
 ## Version 2.0.0-alpha28, released 2025-11-03
 
 ### New features
