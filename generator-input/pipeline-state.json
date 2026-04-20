@@ -2659,12 +2659,12 @@
         },
         {
             "id": "Google.Cloud.PubSub.V1",
-            "currentVersion": "3.33.0",
+            "currentVersion": "3.34.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-09T14:09:25.316329326Z",
+            "releaseTimestamp": "2026-04-20T14:14:00.162979064Z",
             "lastGeneratedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
-            "lastReleasedCommit": "23ec7b6ee94a2fe364cdb5a212949f1cf37f85ad",
+            "lastReleasedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
             "apiPaths": [
                 "google/pubsub/v1"
             ],
@@ -4161,12 +4161,12 @@
         },
         {
             "id": "Google.Cloud.Iam.V3Beta",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T22:14:29.384867892Z",
+            "releaseTimestamp": "2026-04-20T19:34:36.024630019Z",
             "lastGeneratedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
-            "lastReleasedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
+            "lastReleasedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
             "apiPaths": [
                 "google/iam/v3beta"
             ],
