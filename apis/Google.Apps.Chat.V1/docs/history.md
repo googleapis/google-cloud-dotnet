@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta23, released 2026-04-20
+
+### New features
+
+- Addition of ChatService.FindGroupChats
+
 ## Version 1.0.0-beta22, released 2026-04-06
 
 ### New features
