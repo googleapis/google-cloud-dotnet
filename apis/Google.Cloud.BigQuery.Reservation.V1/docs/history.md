@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.12.0, released 2026-04-20
+
+### New features
+
+- Add principal field to BigQuery Reservation Assignment
+
+### Documentation improvements
+
+- Update the scaling mode documentation to correct an example math error
+- Change comment indicating `enable_gemini_in_bigquery` field for BigQuery Reservation Assignments is deprecated
+
 ## Version 2.11.0, released 2025-11-05
 
 ### New features
