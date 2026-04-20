@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-04-20
+
+### New features
+
+- Add ability to specify mocked tool responses in ExecuteTool
+- Add ExportEvaluation RPC
+- Add support for app level fallback config
+- Add evaluation run and result information to ImportEvaluationsResponse
+
 ## Version 1.0.0-beta04, released 2026-04-06
 
 ### New features
