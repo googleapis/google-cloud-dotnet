@@ -3,7 +3,7 @@
 //     source: google/cloud/modelarmor/v1beta/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -166,6 +166,22 @@ namespace Google.Cloud.ModelArmor.V1Beta {
         __Marshaller_google_cloud_modelarmor_v1beta_SanitizeModelResponseRequest,
         __Marshaller_google_cloud_modelarmor_v1beta_SanitizeModelResponseResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse> __Method_StreamSanitizeUserPrompt = new grpc::Method<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamSanitizeUserPrompt",
+        __Marshaller_google_cloud_modelarmor_v1beta_SanitizeUserPromptRequest,
+        __Marshaller_google_cloud_modelarmor_v1beta_SanitizeUserPromptResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse> __Method_StreamSanitizeModelResponse = new grpc::Method<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamSanitizeModelResponse",
+        __Marshaller_google_cloud_modelarmor_v1beta_SanitizeModelResponseRequest,
+        __Marshaller_google_cloud_modelarmor_v1beta_SanitizeModelResponseResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -280,6 +296,32 @@ namespace Google.Cloud.ModelArmor.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse> SanitizeModelResponse(global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Streaming version of Sanitize User Prompt.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamSanitizeUserPrompt(grpc::IAsyncStreamReader<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Streaming version of Sanitizes Model Response.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamSanitizeModelResponse(grpc::IAsyncStreamReader<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -745,6 +787,50 @@ namespace Google.Cloud.ModelArmor.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SanitizeModelResponse, null, options, request);
       }
+      /// <summary>
+      /// Streaming version of Sanitize User Prompt.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse> StreamSanitizeUserPrompt(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamSanitizeUserPrompt(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Streaming version of Sanitize User Prompt.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse> StreamSanitizeUserPrompt(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamSanitizeUserPrompt, null, options);
+      }
+      /// <summary>
+      /// Streaming version of Sanitizes Model Response.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse> StreamSanitizeModelResponse(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamSanitizeModelResponse(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Streaming version of Sanitizes Model Response.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse> StreamSanitizeModelResponse(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamSanitizeModelResponse, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ModelArmorClient NewInstance(ClientBaseConfiguration configuration)
@@ -767,7 +853,9 @@ namespace Google.Cloud.ModelArmor.V1Beta {
           .AddMethod(__Method_GetFloorSetting, serviceImpl.GetFloorSetting)
           .AddMethod(__Method_UpdateFloorSetting, serviceImpl.UpdateFloorSetting)
           .AddMethod(__Method_SanitizeUserPrompt, serviceImpl.SanitizeUserPrompt)
-          .AddMethod(__Method_SanitizeModelResponse, serviceImpl.SanitizeModelResponse).Build();
+          .AddMethod(__Method_SanitizeModelResponse, serviceImpl.SanitizeModelResponse)
+          .AddMethod(__Method_StreamSanitizeUserPrompt, serviceImpl.StreamSanitizeUserPrompt)
+          .AddMethod(__Method_StreamSanitizeModelResponse, serviceImpl.StreamSanitizeModelResponse).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -786,6 +874,8 @@ namespace Google.Cloud.ModelArmor.V1Beta {
       serviceBinder.AddMethod(__Method_UpdateFloorSetting, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ModelArmor.V1Beta.UpdateFloorSettingRequest, global::Google.Cloud.ModelArmor.V1Beta.FloorSetting>(serviceImpl.UpdateFloorSetting));
       serviceBinder.AddMethod(__Method_SanitizeUserPrompt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse>(serviceImpl.SanitizeUserPrompt));
       serviceBinder.AddMethod(__Method_SanitizeModelResponse, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse>(serviceImpl.SanitizeModelResponse));
+      serviceBinder.AddMethod(__Method_StreamSanitizeUserPrompt, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeUserPromptResponse>(serviceImpl.StreamSanitizeUserPrompt));
+      serviceBinder.AddMethod(__Method_StreamSanitizeModelResponse, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseRequest, global::Google.Cloud.ModelArmor.V1Beta.SanitizeModelResponseResponse>(serviceImpl.StreamSanitizeModelResponse));
     }
 
   }

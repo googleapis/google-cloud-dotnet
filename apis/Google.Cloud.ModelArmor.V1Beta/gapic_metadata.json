@@ -52,6 +52,18 @@
                 "SanitizeUserPromptAsync"
               ]
             },
+            "StreamSanitizeModelResponse": {
+              "methods": [
+                "StreamSanitizeModelResponse",
+                "StreamSanitizeModelResponseAsync"
+              ]
+            },
+            "StreamSanitizeUserPrompt": {
+              "methods": [
+                "StreamSanitizeUserPrompt",
+                "StreamSanitizeUserPromptAsync"
+              ]
+            },
             "UpdateFloorSetting": {
               "methods": [
                 "UpdateFloorSetting",

@@ -57,6 +57,10 @@ namespace Google.Cloud.ModelArmor.V1Beta
             UpdateFloorSettingSettings = existing.UpdateFloorSettingSettings;
             SanitizeUserPromptSettings = existing.SanitizeUserPromptSettings;
             SanitizeModelResponseSettings = existing.SanitizeModelResponseSettings;
+            StreamSanitizeUserPromptSettings = existing.StreamSanitizeUserPromptSettings;
+            StreamSanitizeUserPromptStreamingSettings = existing.StreamSanitizeUserPromptStreamingSettings;
+            StreamSanitizeModelResponseSettings = existing.StreamSanitizeModelResponseSettings;
+            StreamSanitizeModelResponseStreamingSettings = existing.StreamSanitizeModelResponseStreamingSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -200,6 +204,46 @@ namespace Google.Cloud.ModelArmor.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SanitizeModelResponseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelArmorClient.StreamSanitizeUserPrompt</c> and <c>ModelArmorClient.StreamSanitizeUserPromptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamSanitizeUserPromptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>ModelArmorClient.StreamSanitizeUserPrompt</c> and <c>ModelArmorClient.StreamSanitizeUserPromptAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamSanitizeUserPromptStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelArmorClient.StreamSanitizeModelResponse</c> and <c>ModelArmorClient.StreamSanitizeModelResponseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamSanitizeModelResponseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>ModelArmorClient.StreamSanitizeModelResponse</c> and <c>ModelArmorClient.StreamSanitizeModelResponseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamSanitizeModelResponseStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1212,6 +1256,40 @@ namespace Google.Cloud.ModelArmor.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SanitizeModelResponseResponse> SanitizeModelResponseAsync(SanitizeModelResponseRequest request, st::CancellationToken cancellationToken) =>
             SanitizeModelResponseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamSanitizeUserPrompt(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamSanitizeUserPromptStream : gaxgrpc::BidirectionalStreamingBase<SanitizeUserPromptRequest, SanitizeUserPromptResponse>
+        {
+        }
+
+        /// <summary>
+        /// Streaming version of Sanitize User Prompt.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamSanitizeUserPromptStream StreamSanitizeUserPrompt(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamSanitizeModelResponse(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamSanitizeModelResponseStream : gaxgrpc::BidirectionalStreamingBase<SanitizeModelResponseRequest, SanitizeModelResponseResponse>
+        {
+        }
+
+        /// <summary>
+        /// Streaming version of Sanitizes Model Response.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamSanitizeModelResponseStream StreamSanitizeModelResponse(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>ModelArmor client wrapper implementation, for convenient use.</summary>
@@ -1237,6 +1315,10 @@ namespace Google.Cloud.ModelArmor.V1Beta
         private readonly gaxgrpc::ApiCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> _callSanitizeUserPrompt;
 
         private readonly gaxgrpc::ApiCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> _callSanitizeModelResponse;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> _callStreamSanitizeUserPrompt;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> _callStreamSanitizeModelResponse;
 
         /// <summary>
         /// Constructs a client wrapper for the ModelArmor service, with the specified gRPC client and settings.
@@ -1281,10 +1363,18 @@ namespace Google.Cloud.ModelArmor.V1Beta
             _callSanitizeModelResponse = clientHelper.BuildApiCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse>("SanitizeModelResponse", grpcClient.SanitizeModelResponseAsync, grpcClient.SanitizeModelResponse, effectiveSettings.SanitizeModelResponseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSanitizeModelResponse);
             Modify_SanitizeModelResponseApiCall(ref _callSanitizeModelResponse);
+            _callStreamSanitizeUserPrompt = clientHelper.BuildApiCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse>("StreamSanitizeUserPrompt", grpcClient.StreamSanitizeUserPrompt, effectiveSettings.StreamSanitizeUserPromptSettings, effectiveSettings.StreamSanitizeUserPromptStreamingSettings);
+            Modify_ApiCall(ref _callStreamSanitizeUserPrompt);
+            Modify_StreamSanitizeUserPromptApiCall(ref _callStreamSanitizeUserPrompt);
+            _callStreamSanitizeModelResponse = clientHelper.BuildApiCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse>("StreamSanitizeModelResponse", grpcClient.StreamSanitizeModelResponse, effectiveSettings.StreamSanitizeModelResponseSettings, effectiveSettings.StreamSanitizeModelResponseStreamingSettings);
+            Modify_ApiCall(ref _callStreamSanitizeModelResponse);
+            Modify_StreamSanitizeModelResponseApiCall(ref _callStreamSanitizeModelResponse);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_ListTemplatesApiCall(ref gaxgrpc::ApiCall<ListTemplatesRequest, ListTemplatesResponse> call);
 
@@ -1303,6 +1393,10 @@ namespace Google.Cloud.ModelArmor.V1Beta
         partial void Modify_SanitizeUserPromptApiCall(ref gaxgrpc::ApiCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> call);
 
         partial void Modify_SanitizeModelResponseApiCall(ref gaxgrpc::ApiCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> call);
+
+        partial void Modify_StreamSanitizeUserPromptApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> call);
+
+        partial void Modify_StreamSanitizeModelResponseApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> call);
 
         partial void OnConstruction(ModelArmor.ModelArmorClient grpcClient, ModelArmorSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1329,6 +1423,14 @@ namespace Google.Cloud.ModelArmor.V1Beta
         partial void Modify_SanitizeUserPromptRequest(ref SanitizeUserPromptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SanitizeModelResponseRequest(ref SanitizeModelResponseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SanitizeUserPromptRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SanitizeUserPromptRequestRequest(ref SanitizeUserPromptRequest request);
+
+        partial void Modify_SanitizeModelResponseRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SanitizeModelResponseRequestRequest(ref SanitizeModelResponseRequest request);
 
         /// <summary>
         /// Lists Templates in a given project and location.
@@ -1544,6 +1646,126 @@ namespace Google.Cloud.ModelArmor.V1Beta
         {
             Modify_SanitizeModelResponseRequest(ref request, ref callSettings);
             return _callSanitizeModelResponse.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamSanitizeUserPromptStreamImpl : StreamSanitizeUserPromptStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamSanitizeUserPrompt</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{SanitizeUserPromptRequest}"/> instance associated
+            /// with this streaming call.
+            /// </param>
+            public StreamSanitizeUserPromptStreamImpl(ModelArmorClientImpl service, grpccore::AsyncDuplexStreamingCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> call, gaxgrpc::BufferedClientStreamWriter<SanitizeUserPromptRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private ModelArmorClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<SanitizeUserPromptRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> GrpcCall { get; }
+
+            private SanitizeUserPromptRequest ModifyRequest(SanitizeUserPromptRequest request)
+            {
+                _service.Modify_SanitizeUserPromptRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(SanitizeUserPromptRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(SanitizeUserPromptRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(SanitizeUserPromptRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(SanitizeUserPromptRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Streaming version of Sanitize User Prompt.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override ModelArmorClient.StreamSanitizeUserPromptStream StreamSanitizeUserPrompt(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_SanitizeUserPromptRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamSanitizeUserPrompt.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<SanitizeUserPromptRequest, SanitizeUserPromptResponse> call = _callStreamSanitizeUserPrompt.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<SanitizeUserPromptRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<SanitizeUserPromptRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamSanitizeUserPromptStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class StreamSanitizeModelResponseStreamImpl : StreamSanitizeModelResponseStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamSanitizeModelResponse</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{SanitizeModelResponseRequest}"/> instance associated
+            /// with this streaming call.
+            /// </param>
+            public StreamSanitizeModelResponseStreamImpl(ModelArmorClientImpl service, grpccore::AsyncDuplexStreamingCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> call, gaxgrpc::BufferedClientStreamWriter<SanitizeModelResponseRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private ModelArmorClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<SanitizeModelResponseRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> GrpcCall { get; }
+
+            private SanitizeModelResponseRequest ModifyRequest(SanitizeModelResponseRequest request)
+            {
+                _service.Modify_SanitizeModelResponseRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(SanitizeModelResponseRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(SanitizeModelResponseRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(SanitizeModelResponseRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(SanitizeModelResponseRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Streaming version of Sanitizes Model Response.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override ModelArmorClient.StreamSanitizeModelResponseStream StreamSanitizeModelResponse(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_SanitizeModelResponseRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamSanitizeModelResponse.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<SanitizeModelResponseRequest, SanitizeModelResponseResponse> call = _callStreamSanitizeModelResponse.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<SanitizeModelResponseRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<SanitizeModelResponseRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamSanitizeModelResponseStreamImpl(this, call, writeBuffer);
         }
     }
 

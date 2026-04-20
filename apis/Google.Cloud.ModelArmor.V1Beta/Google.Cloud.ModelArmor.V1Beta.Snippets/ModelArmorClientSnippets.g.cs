@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.ModelArmor.V1Beta;
     using Google.Protobuf.WellKnownTypes;
@@ -812,6 +813,7 @@ namespace GoogleCSharpSnippets
                 TemplateName = TemplateName.FromProjectLocationTemplate("[PROJECT]", "[LOCATION]", "[TEMPLATE]"),
                 UserPromptData = new DataItem(),
                 MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                StreamingMode = StreamingMode.Unspecified,
             };
             // Make the request
             SanitizeUserPromptResponse response = modelArmorClient.SanitizeUserPrompt(request);
@@ -831,6 +833,7 @@ namespace GoogleCSharpSnippets
                 TemplateName = TemplateName.FromProjectLocationTemplate("[PROJECT]", "[LOCATION]", "[TEMPLATE]"),
                 UserPromptData = new DataItem(),
                 MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                StreamingMode = StreamingMode.Unspecified,
             };
             // Make the request
             SanitizeUserPromptResponse response = await modelArmorClient.SanitizeUserPromptAsync(request);
@@ -850,6 +853,7 @@ namespace GoogleCSharpSnippets
                 ModelResponseData = new DataItem(),
                 UserPrompt = "",
                 MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                StreamingMode = StreamingMode.Unspecified,
             };
             // Make the request
             SanitizeModelResponseResponse response = modelArmorClient.SanitizeModelResponse(request);
@@ -870,9 +874,111 @@ namespace GoogleCSharpSnippets
                 ModelResponseData = new DataItem(),
                 UserPrompt = "",
                 MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                StreamingMode = StreamingMode.Unspecified,
             };
             // Make the request
             SanitizeModelResponseResponse response = await modelArmorClient.SanitizeModelResponseAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamSanitizeUserPrompt</summary>
+        public async Task StreamSanitizeUserPrompt()
+        {
+            // Snippet: StreamSanitizeUserPrompt(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            ModelArmorClient modelArmorClient = ModelArmorClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using ModelArmorClient.StreamSanitizeUserPromptStream response = modelArmorClient.StreamSanitizeUserPrompt();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<SanitizeUserPromptResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    SanitizeUserPromptResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                SanitizeUserPromptRequest request = new SanitizeUserPromptRequest
+                {
+                    TemplateName = TemplateName.FromProjectLocationTemplate("[PROJECT]", "[LOCATION]", "[TEMPLATE]"),
+                    UserPromptData = new DataItem(),
+                    MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                    StreamingMode = StreamingMode.Unspecified,
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamSanitizeModelResponse</summary>
+        public async Task StreamSanitizeModelResponse()
+        {
+            // Snippet: StreamSanitizeModelResponse(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            ModelArmorClient modelArmorClient = ModelArmorClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using ModelArmorClient.StreamSanitizeModelResponseStream response = modelArmorClient.StreamSanitizeModelResponse();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<SanitizeModelResponseResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    SanitizeModelResponseResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                SanitizeModelResponseRequest request = new SanitizeModelResponseRequest
+                {
+                    TemplateName = TemplateName.FromProjectLocationTemplate("[PROJECT]", "[LOCATION]", "[TEMPLATE]"),
+                    ModelResponseData = new DataItem(),
+                    UserPrompt = "",
+                    MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                    StreamingMode = StreamingMode.Unspecified,
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
             // End snippet
         }
     }

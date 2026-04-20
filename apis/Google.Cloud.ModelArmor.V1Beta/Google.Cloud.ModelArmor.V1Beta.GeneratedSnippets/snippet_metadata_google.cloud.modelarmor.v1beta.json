@@ -1944,12 +1944,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -1993,12 +1993,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -2041,12 +2041,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -2090,12 +2090,108 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 46,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1beta_generated_ModelArmor_StreamSanitizeUserPrompt_sync",
+      "title": "StreamSanitizeUserPrompt",
+      "description": "Snippet for StreamSanitizeUserPrompt",
+      "file": "ModelArmorClient.StreamSanitizeUserPromptSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamSanitizeUserPrompt",
+        "fullName": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient.StreamSanitizeUserPrompt",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient+StreamSanitizeUserPromptStream",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "StreamSanitizeUserPrompt",
+          "fullName": "google.cloud.modelarmor.v1beta.ModelArmor.StreamSanitizeUserPrompt",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1beta.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1beta_generated_ModelArmor_StreamSanitizeModelResponse_sync",
+      "title": "StreamSanitizeModelResponse",
+      "description": "Snippet for StreamSanitizeModelResponse",
+      "file": "ModelArmorClient.StreamSanitizeModelResponseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamSanitizeModelResponse",
+        "fullName": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient.StreamSanitizeModelResponse",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient+StreamSanitizeModelResponseStream",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1Beta.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "StreamSanitizeModelResponse",
+          "fullName": "google.cloud.modelarmor.v1beta.ModelArmor.StreamSanitizeModelResponse",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1beta.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
           "type": "SHORT"
         }
       ]
