@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync]
+    // [START iam_v3beta_generated_AccessPolicies_ListAccessPolicies_async_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V3Beta;
     using System;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedPolicyBindingsClientSnippets
+    public sealed partial class GeneratedAccessPoliciesClientSnippets
     {
-        /// <summary>Snippet for SearchTargetPolicyBindings</summary>
+        /// <summary>Snippet for ListAccessPoliciesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,33 +32,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void SearchTargetPolicyBindingsRequestObject()
+        public async Task ListAccessPoliciesResourceNames2Async()
         {
             // Create client
-            PolicyBindingsClient policyBindingsClient = PolicyBindingsClient.Create();
+            AccessPoliciesClient accessPoliciesClient = await AccessPoliciesClient.CreateAsync();
             // Initialize request argument(s)
-            SearchTargetPolicyBindingsRequest request = new SearchTargetPolicyBindingsRequest
-            {
-                Target = "",
-                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
-                Filter = "",
-            };
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<SearchTargetPolicyBindingsResponse, PolicyBinding> response = policyBindingsClient.SearchTargetPolicyBindings(request);
+            PagedAsyncEnumerable<ListAccessPoliciesResponse, AccessPolicy> response = accessPoliciesClient.ListAccessPoliciesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (PolicyBinding item in response)
+            await foreach (AccessPolicy item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchTargetPolicyBindingsResponse page in response.AsRawResponses())
+            await foreach (ListAccessPoliciesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PolicyBinding item in page)
+                foreach (AccessPolicy item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -66,10 +62,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PolicyBinding> singlePage = response.ReadPage(pageSize);
+            Page<AccessPolicy> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PolicyBinding item in singlePage)
+            foreach (AccessPolicy item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -78,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync]
+    // [END iam_v3beta_generated_AccessPolicies_ListAccessPolicies_async_flattened_resourceNames2]
 }

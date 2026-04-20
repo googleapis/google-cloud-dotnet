@@ -41,6 +41,8 @@ namespace Google.Cloud.Iam.V3Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AccessPoliciesServiceReflection.Descriptor;
+            yield return AccessPolicyResourcesReflection.Descriptor;
             yield return OperationMetadataReflection.Descriptor;
             yield return PolicyBindingResourcesReflection.Descriptor;
             yield return PolicyBindingsServiceReflection.Descriptor;

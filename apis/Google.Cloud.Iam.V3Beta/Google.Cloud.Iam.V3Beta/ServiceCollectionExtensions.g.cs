@@ -29,6 +29,38 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>Static class to provide extension methods to configure API clients.</summary>
     public static partial class ServiceCollectionExtensions
     {
+        /// <summary>Adds a singleton <see cref="gciv::AccessPoliciesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAccessPoliciesClient(this IServiceCollection services, sys::Action<gciv::AccessPoliciesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gciv::AccessPoliciesClientBuilder builder = new gciv::AccessPoliciesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gciv::AccessPoliciesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAccessPoliciesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gciv::AccessPoliciesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gciv::AccessPoliciesClientBuilder builder = new gciv::AccessPoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gciv::PolicyBindingsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.

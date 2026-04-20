@@ -28,7 +28,7 @@ namespace Google.Cloud.Iam.V3Beta {
             "cHJvdG8SEWdvb2dsZS5pYW0udjNiZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdv",
             "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2V4cHIucHJvdG8i4gcKDVBvbGlj",
+            "c3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2V4cHIucHJvdG8ihwgKDVBvbGlj",
             "eUJpbmRpbmcSEQoEbmFtZRgBIAEoCUID4EEIEhgKA3VpZBgCIAEoCUIL4EED",
             "4ozP1wgCCAESEQoEZXRhZxgDIAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgE",
             "IAEoCUID4EEBEksKC2Fubm90YXRpb25zGAUgAygLMjEuZ29vZ2xlLmlhbS52",
@@ -40,25 +40,26 @@ namespace Google.Cloud.Iam.V3Beta {
             "AxIpCgljb25kaXRpb24YCCABKAsyES5nb29nbGUudHlwZS5FeHByQgPgQQES",
             "NAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMaMAoGVGFyZ2V0EhwKDXByaW5jaXBhbF9zZXQY",
-            "ASABKAlCA+BBBUgAQggKBnRhcmdldBoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiSAoKUG9saWN5S2luZBIb",
-            "ChdQT0xJQ1lfS0lORF9VTlNQRUNJRklFRBAAEh0KGVBSSU5DSVBBTF9BQ0NF",
-            "U1NfQk9VTkRBUlkQATqoAupBpAIKIGlhbS5nb29nbGVhcGlzLmNvbS9Qb2xp",
-            "Y3lCaW5kaW5nElFvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3BvbGljeUJpbmRpbmdzL3twb2xpY3lfYmluZGlu",
-            "Z30SRWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcG9s",
-            "aWN5QmluZGluZ3Mve3BvbGljeV9iaW5kaW5nfRJHcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BvbGljeUJpbmRpbmdzL3twb2xp",
-            "Y3lfYmluZGluZ30qDnBvbGljeUJpbmRpbmdzMg1wb2xpY3lCaW5kaW5nQpkB",
-            "ChVjb20uZ29vZ2xlLmlhbS52M2JldGFCG1BvbGljeUJpbmRpbmdSZXNvdXJj",
-            "ZXNQcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2lhbS9hcGl2M2JldGEv",
-            "aWFtcGI7aWFtcGKqAhdHb29nbGUuQ2xvdWQuSWFtLlYzQmV0YcoCF0dvb2ds",
-            "ZVxDbG91ZFxJYW1cVjNiZXRhYgZwcm90bzM="));
+            "dWYuVGltZXN0YW1wQgPgQQMaSQoGVGFyZ2V0EhwKDXByaW5jaXBhbF9zZXQY",
+            "ASABKAlCA+BBBUgAEhcKCHJlc291cmNlGAIgASgJQgPgQQVIAEIICgZ0YXJn",
+            "ZXQaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIlQKClBvbGljeUtpbmQSGwoXUE9MSUNZX0tJTkRfVU5TUEVD",
+            "SUZJRUQQABIdChlQUklOQ0lQQUxfQUNDRVNTX0JPVU5EQVJZEAESCgoGQUND",
+            "RVNTEAI6qALqQaQCCiBpYW0uZ29vZ2xlYXBpcy5jb20vUG9saWN5QmluZGlu",
+            "ZxJRb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9wb2xpY3lCaW5kaW5ncy97cG9saWN5X2JpbmRpbmd9EkVmb2xk",
+            "ZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L3BvbGljeUJpbmRp",
+            "bmdzL3twb2xpY3lfYmluZGluZ30SR3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9wb2xpY3lCaW5kaW5ncy97cG9saWN5X2JpbmRp",
+            "bmd9Kg5wb2xpY3lCaW5kaW5nczINcG9saWN5QmluZGluZ0KZAQoVY29tLmdv",
+            "b2dsZS5pYW0udjNiZXRhQhtQb2xpY3lCaW5kaW5nUmVzb3VyY2VzUHJvdG9Q",
+            "AVotY2xvdWQuZ29vZ2xlLmNvbS9nby9pYW0vYXBpdjNiZXRhL2lhbXBiO2lh",
+            "bXBiqgIXR29vZ2xlLkNsb3VkLklhbS5WM0JldGHKAhdHb29nbGVcQ2xvdWRc",
+            "SWFtXFYzYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding), global::Google.Cloud.Iam.V3Beta.PolicyBinding.Parser, new[]{ "Name", "Uid", "Etag", "DisplayName", "Annotations", "Target", "PolicyKind", "Policy", "PolicyUid", "Condition", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.PolicyKind) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.Target), global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.Target.Parser, new[]{ "PrincipalSet" }, new[]{ "Target" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding), global::Google.Cloud.Iam.V3Beta.PolicyBinding.Parser, new[]{ "Name", "Uid", "Etag", "DisplayName", "Annotations", "Target", "PolicyKind", "Policy", "PolicyUid", "Condition", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.PolicyKind) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.Target), global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.Target.Parser, new[]{ "PrincipalSet", "Resource" }, new[]{ "Target" }, null, null, null),
             null, })
           }));
     }
@@ -218,8 +219,8 @@ namespace Google.Cloud.Iam.V3Beta {
     public const int TargetFieldNumber = 6;
     private global::Google.Cloud.Iam.V3Beta.PolicyBinding.Types.Target target_;
     /// <summary>
-    /// Required. Immutable. Target is the full resource name of the resource to
-    /// which the policy will be bound. Immutable once set.
+    /// Required. Immutable. The full resource name of the resource to which the
+    /// policy will be bound. Immutable once set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -313,13 +314,14 @@ namespace Google.Cloud.Iam.V3Beta {
     /// - `principal.type != &lt;principal type string>`
     /// - `principal.type in [&lt;list of principal types>]`
     ///
-    /// Supported principal types are Workspace, Workforce Pool, Workload Pool and
-    /// Service Account. Allowed string must be one of:
+    /// Supported principal types are workspace, workforce pool, workload pool,
+    /// service account, and Agent Identity. Allowed string must be one of:
     ///
-    /// - iam.googleapis.com/WorkspaceIdentity
-    /// - iam.googleapis.com/WorkforcePoolIdentity
-    /// - iam.googleapis.com/WorkloadPoolIdentity
-    /// - iam.googleapis.com/ServiceAccount
+    /// - `iam.googleapis.com/WorkspaceIdentity`
+    /// - `iam.googleapis.com/WorkforcePoolIdentity`
+    /// - `iam.googleapis.com/WorkloadPoolIdentity`
+    /// - `iam.googleapis.com/ServiceAccount`
+    /// - `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -795,7 +797,7 @@ namespace Google.Cloud.Iam.V3Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Different policy kinds supported in this binding.
+      /// The different policy kinds supported in this binding.
       /// </summary>
       public enum PolicyKind {
         /// <summary>
@@ -806,10 +808,14 @@ namespace Google.Cloud.Iam.V3Beta {
         /// Principal access boundary policy kind
         /// </summary>
         [pbr::OriginalName("PRINCIPAL_ACCESS_BOUNDARY")] PrincipalAccessBoundary = 1,
+        /// <summary>
+        /// Access policy kind.
+        /// </summary>
+        [pbr::OriginalName("ACCESS")] Access = 2,
       }
 
       /// <summary>
-      /// Target is the full resource name of the resource to which the policy will
+      /// The full resource name of the resource to which the policy will
       /// be bound. Immutable once set.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -851,6 +857,9 @@ namespace Google.Cloud.Iam.V3Beta {
             case TargetOneofCase.PrincipalSet:
               PrincipalSet = other.PrincipalSet;
               break;
+            case TargetOneofCase.Resource:
+              Resource = other.Resource;
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -865,28 +874,29 @@ namespace Google.Cloud.Iam.V3Beta {
         /// <summary>Field number for the "principal_set" field.</summary>
         public const int PrincipalSetFieldNumber = 1;
         /// <summary>
-        /// Immutable. Full Resource Name used for principal access boundary policy
-        /// bindings. The principal set must be directly parented by the policy
-        /// binding's parent or same as the parent if the target is a
-        /// project/folder/organization.
+        /// Immutable. The full resource name that's used for principal access
+        /// boundary policy bindings. The principal set must be directly parented
+        /// by the policy binding's parent or same as the parent if the target is a
+        /// project, folder, or organization.
         ///
         /// Examples:
-        /// * For binding's parented by an organization:
-        ///   * Organization:
-        ///   `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID`
-        ///   * Workforce Identity:
-        ///   `//iam.googleapis.com/locations/global/workforcePools/WORKFORCE_POOL_ID`
-        ///   * Workspace Identity:
-        ///   `//iam.googleapis.com/locations/global/workspace/WORKSPACE_ID`
-        /// * For binding's parented by a folder:
-        ///   * Folder:
-        ///   `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID`
-        /// * For binding's parented by a project:
-        ///   * Project:
-        ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER`
-        ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_ID`
-        ///   * Workload Identity Pool:
-        ///   `//iam.googleapis.com/projects/PROJECT_NUMBER/locations/LOCATION/workloadIdentityPools/WORKLOAD_POOL_ID`
+        ///
+        /// * For bindings parented by an organization:
+        ///     * Organization:
+        ///     `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID`
+        ///     * Workforce Identity:
+        ///     `//iam.googleapis.com/locations/global/workforcePools/WORKFORCE_POOL_ID`
+        ///     * Workspace Identity:
+        ///     `//iam.googleapis.com/locations/global/workspace/WORKSPACE_ID`
+        /// * For bindings parented by a folder:
+        ///     * Folder:
+        ///       `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID`
+        /// * For bindings parented by a project:
+        ///     * Project:
+        ///         * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER`
+        ///         * `//cloudresourcemanager.googleapis.com/projects/PROJECT_ID`
+        ///     * Workload Identity Pool:
+        ///     `//iam.googleapis.com/projects/PROJECT_NUMBER/locations/LOCATION/workloadIdentityPools/WORKLOAD_POOL_ID`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -912,11 +922,51 @@ namespace Google.Cloud.Iam.V3Beta {
           }
         }
 
+        /// <summary>Field number for the "resource" field.</summary>
+        public const int ResourceFieldNumber = 2;
+        /// <summary>
+        /// Immutable. The full resource name that's used for access policy
+        /// bindings.
+        ///
+        /// Examples:
+        ///
+        /// * Organization:
+        /// `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID`
+        /// * Folder: `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID`
+        /// * Project:
+        ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER`
+        ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_ID`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Resource {
+          get { return HasResource ? (string) target_ : ""; }
+          set {
+            target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            targetCase_ = TargetOneofCase.Resource;
+          }
+        }
+        /// <summary>Gets whether the "resource" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResource {
+          get { return targetCase_ == TargetOneofCase.Resource; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "resource" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResource() {
+          if (HasResource) {
+            ClearTarget();
+          }
+        }
+
         private object target_;
         /// <summary>Enum of possible cases for the "target" oneof.</summary>
         public enum TargetOneofCase {
           None = 0,
           PrincipalSet = 1,
+          Resource = 2,
         }
         private TargetOneofCase targetCase_ = TargetOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -948,6 +998,7 @@ namespace Google.Cloud.Iam.V3Beta {
             return true;
           }
           if (PrincipalSet != other.PrincipalSet) return false;
+          if (Resource != other.Resource) return false;
           if (TargetCase != other.TargetCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -957,6 +1008,7 @@ namespace Google.Cloud.Iam.V3Beta {
         public override int GetHashCode() {
           int hash = 1;
           if (HasPrincipalSet) hash ^= PrincipalSet.GetHashCode();
+          if (HasResource) hash ^= Resource.GetHashCode();
           hash ^= (int) targetCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -980,6 +1032,10 @@ namespace Google.Cloud.Iam.V3Beta {
             output.WriteRawTag(10);
             output.WriteString(PrincipalSet);
           }
+          if (HasResource) {
+            output.WriteRawTag(18);
+            output.WriteString(Resource);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -994,6 +1050,10 @@ namespace Google.Cloud.Iam.V3Beta {
             output.WriteRawTag(10);
             output.WriteString(PrincipalSet);
           }
+          if (HasResource) {
+            output.WriteRawTag(18);
+            output.WriteString(Resource);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1006,6 +1066,9 @@ namespace Google.Cloud.Iam.V3Beta {
           int size = 0;
           if (HasPrincipalSet) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PrincipalSet);
+          }
+          if (HasResource) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1022,6 +1085,9 @@ namespace Google.Cloud.Iam.V3Beta {
           switch (other.TargetCase) {
             case TargetOneofCase.PrincipalSet:
               PrincipalSet = other.PrincipalSet;
+              break;
+            case TargetOneofCase.Resource:
+              Resource = other.Resource;
               break;
           }
 
@@ -1048,6 +1114,10 @@ namespace Google.Cloud.Iam.V3Beta {
                 PrincipalSet = input.ReadString();
                 break;
               }
+              case 18: {
+                Resource = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1069,6 +1139,10 @@ namespace Google.Cloud.Iam.V3Beta {
                 break;
               case 10: {
                 PrincipalSet = input.ReadString();
+                break;
+              }
+              case 18: {
+                Resource = input.ReadString();
                 break;
               }
             }

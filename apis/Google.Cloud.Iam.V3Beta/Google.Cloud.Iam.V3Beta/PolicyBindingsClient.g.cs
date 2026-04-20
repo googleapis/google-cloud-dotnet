@@ -362,7 +362,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -373,7 +373,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,7 +384,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -422,7 +422,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -460,7 +460,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -498,7 +498,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -531,7 +531,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -569,7 +569,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -607,7 +607,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -640,7 +640,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -678,7 +678,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -716,7 +716,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -749,7 +749,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -787,7 +787,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -825,7 +825,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this policy binding will be created.
@@ -1005,9 +1005,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1018,9 +1016,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1031,9 +1027,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1071,9 +1065,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="policyBinding">
         /// Required. The policy binding to update.
@@ -1096,9 +1088,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="policyBinding">
         /// Required. The policy binding to update.
@@ -1121,9 +1111,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="policyBinding">
         /// Required. The policy binding to update.
@@ -1142,7 +1130,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1153,7 +1141,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1164,7 +1152,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1202,7 +1190,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -1225,7 +1213,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -1248,7 +1236,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -1268,7 +1256,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -1291,7 +1279,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -1314,7 +1302,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the policy binding to delete.
@@ -2245,7 +2233,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2259,7 +2247,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Creates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is created, the policy is applied to the target.
+        /// After the binding is created, the policy is applied to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2300,9 +2288,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2316,9 +2302,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Updates a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on the policy and target in the
-        /// binding to update, and the IAM permission to remove the existing policy
-        /// from the binding. Target is immutable and cannot be updated. Once the
-        /// binding is updated, the new policy is applied to the target.
+        /// binding to update. Target and policy are immutable and cannot be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2335,7 +2319,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2349,7 +2333,7 @@ namespace Google.Cloud.Iam.V3Beta
         /// <summary>
         /// Deletes a policy binding and returns a long-running operation.
         /// Callers will need the IAM permissions on both the policy and target.
-        /// Once the binding is deleted, the policy no longer applies to the target.
+        /// After the binding is deleted, the policy no longer applies to the target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

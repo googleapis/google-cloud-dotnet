@@ -5,6 +5,51 @@
   "protoPackage": "google.iam.v3beta",
   "libraryPackage": "Google.Cloud.Iam.V3Beta",
   "services": {
+    "AccessPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AccessPoliciesClient",
+          "rpcs": {
+            "CreateAccessPolicy": {
+              "methods": [
+                "CreateAccessPolicy",
+                "CreateAccessPolicyAsync"
+              ]
+            },
+            "DeleteAccessPolicy": {
+              "methods": [
+                "DeleteAccessPolicy",
+                "DeleteAccessPolicyAsync"
+              ]
+            },
+            "GetAccessPolicy": {
+              "methods": [
+                "GetAccessPolicy",
+                "GetAccessPolicyAsync"
+              ]
+            },
+            "ListAccessPolicies": {
+              "methods": [
+                "ListAccessPolicies",
+                "ListAccessPoliciesAsync"
+              ]
+            },
+            "SearchAccessPolicyBindings": {
+              "methods": [
+                "SearchAccessPolicyBindings",
+                "SearchAccessPolicyBindingsAsync"
+              ]
+            },
+            "UpdateAccessPolicy": {
+              "methods": [
+                "UpdateAccessPolicy",
+                "UpdateAccessPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "PolicyBindings": {
       "clients": {
         "grpc": {
