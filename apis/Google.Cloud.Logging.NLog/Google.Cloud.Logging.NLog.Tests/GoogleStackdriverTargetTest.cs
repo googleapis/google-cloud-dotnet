@@ -770,7 +770,7 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("gae_project_id", uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
 
-        [Fact]
+        [Fact(Timeout = 2000)]
         public async Task Flush_AwaitsAllTasks()
         {
             var pendingUpload = new TaskCompletionSource<WriteLogEntriesResponse>();
@@ -795,8 +795,7 @@ namespace Google.Cloud.Logging.NLog.Tests
 
                     // Complete Msg 2; Flush should now finish.
                     pendingUpload.SetResult(new WriteLogEntriesResponse());
-                    await flushFinished.Task.WaitAsync(TimeSpan.FromSeconds(2));
-
+                    await flushFinished.Task;
                     Assert.Equal(2, uploadCount);
                 });
         }
