@@ -5006,6 +5006,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "d23047f4bae1f796aff726e6e3399292d29804ef",
             "apiPaths": [
                 "google/maps/mapmanagement/v2beta"
             ],

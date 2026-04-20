@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Maps.MapManagement.V2Beta",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.MapManagement.V2Beta/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "mapmanagement"
+}

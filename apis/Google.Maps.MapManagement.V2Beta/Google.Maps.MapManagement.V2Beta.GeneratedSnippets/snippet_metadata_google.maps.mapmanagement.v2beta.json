@@ -1,0 +1,4209 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.MapManagement.V2Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.mapmanagement.v2beta",
+        "version": "v2beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_sync",
+      "title": "CreateMapConfigRequestObject",
+      "description": "Snippet for CreateMapConfig",
+      "file": "MapManagementClient.CreateMapConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_async",
+      "title": "CreateMapConfigRequestObjectAsync",
+      "description": "Snippet for CreateMapConfigAsync",
+      "file": "MapManagementClient.CreateMapConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_sync_flattened",
+      "title": "CreateMapConfig",
+      "description": "Snippet for CreateMapConfig",
+      "file": "MapManagementClient.CreateMapConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_async_flattened",
+      "title": "CreateMapConfigAsync",
+      "description": "Snippet for CreateMapConfigAsync",
+      "file": "MapManagementClient.CreateMapConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_sync_flattened_resourceNames",
+      "title": "CreateMapConfigResourceNames",
+      "description": "Snippet for CreateMapConfig",
+      "file": "MapManagementClient.CreateMapConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapConfig_async_flattened_resourceNames",
+      "title": "CreateMapConfigResourceNamesAsync",
+      "description": "Snippet for CreateMapConfigAsync",
+      "file": "MapManagementClient.CreateMapConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_sync",
+      "title": "GetMapConfigRequestObject",
+      "description": "Snippet for GetMapConfig",
+      "file": "MapManagementClient.GetMapConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_async",
+      "title": "GetMapConfigRequestObjectAsync",
+      "description": "Snippet for GetMapConfigAsync",
+      "file": "MapManagementClient.GetMapConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_sync_flattened",
+      "title": "GetMapConfig",
+      "description": "Snippet for GetMapConfig",
+      "file": "MapManagementClient.GetMapConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_async_flattened",
+      "title": "GetMapConfigAsync",
+      "description": "Snippet for GetMapConfigAsync",
+      "file": "MapManagementClient.GetMapConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_sync_flattened_resourceNames",
+      "title": "GetMapConfigResourceNames",
+      "description": "Snippet for GetMapConfig",
+      "file": "MapManagementClient.GetMapConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapConfig_async_flattened_resourceNames",
+      "title": "GetMapConfigResourceNamesAsync",
+      "description": "Snippet for GetMapConfigAsync",
+      "file": "MapManagementClient.GetMapConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_sync",
+      "title": "ListMapConfigsRequestObject",
+      "description": "Snippet for ListMapConfigs",
+      "file": "MapManagementClient.ListMapConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigs",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListMapConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_async",
+      "title": "ListMapConfigsRequestObjectAsync",
+      "description": "Snippet for ListMapConfigsAsync",
+      "file": "MapManagementClient.ListMapConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListMapConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_sync_flattened",
+      "title": "ListMapConfigs",
+      "description": "Snippet for ListMapConfigs",
+      "file": "MapManagementClient.ListMapConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_async_flattened",
+      "title": "ListMapConfigsAsync",
+      "description": "Snippet for ListMapConfigsAsync",
+      "file": "MapManagementClient.ListMapConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_sync_flattened_resourceNames",
+      "title": "ListMapConfigsResourceNames",
+      "description": "Snippet for ListMapConfigs",
+      "file": "MapManagementClient.ListMapConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapConfigs_async_flattened_resourceNames",
+      "title": "ListMapConfigsResourceNamesAsync",
+      "description": "Snippet for ListMapConfigsAsync",
+      "file": "MapManagementClient.ListMapConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapConfigsResponse, Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapConfig_sync",
+      "title": "UpdateMapConfigRequestObject",
+      "description": "Snippet for UpdateMapConfig",
+      "file": "MapManagementClient.UpdateMapConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapConfig_async",
+      "title": "UpdateMapConfigRequestObjectAsync",
+      "description": "Snippet for UpdateMapConfigAsync",
+      "file": "MapManagementClient.UpdateMapConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapConfig_sync_flattened",
+      "title": "UpdateMapConfig",
+      "description": "Snippet for UpdateMapConfig",
+      "file": "MapManagementClient.UpdateMapConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapConfig_async_flattened",
+      "title": "UpdateMapConfigAsync",
+      "description": "Snippet for UpdateMapConfigAsync",
+      "file": "MapManagementClient.UpdateMapConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfig",
+            "name": "mapConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_sync",
+      "title": "DeleteMapConfigRequestObject",
+      "description": "Snippet for DeleteMapConfig",
+      "file": "MapManagementClient.DeleteMapConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_async",
+      "title": "DeleteMapConfigRequestObjectAsync",
+      "description": "Snippet for DeleteMapConfigAsync",
+      "file": "MapManagementClient.DeleteMapConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteMapConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_sync_flattened",
+      "title": "DeleteMapConfig",
+      "description": "Snippet for DeleteMapConfig",
+      "file": "MapManagementClient.DeleteMapConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_async_flattened",
+      "title": "DeleteMapConfigAsync",
+      "description": "Snippet for DeleteMapConfigAsync",
+      "file": "MapManagementClient.DeleteMapConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_sync_flattened_resourceNames",
+      "title": "DeleteMapConfigResourceNames",
+      "description": "Snippet for DeleteMapConfig",
+      "file": "MapManagementClient.DeleteMapConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapConfig_async_flattened_resourceNames",
+      "title": "DeleteMapConfigResourceNamesAsync",
+      "description": "Snippet for DeleteMapConfigAsync",
+      "file": "MapManagementClient.DeleteMapConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_sync",
+      "title": "CreateStyleConfigRequestObject",
+      "description": "Snippet for CreateStyleConfig",
+      "file": "MapManagementClient.CreateStyleConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_async",
+      "title": "CreateStyleConfigRequestObjectAsync",
+      "description": "Snippet for CreateStyleConfigAsync",
+      "file": "MapManagementClient.CreateStyleConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_sync_flattened",
+      "title": "CreateStyleConfig",
+      "description": "Snippet for CreateStyleConfig",
+      "file": "MapManagementClient.CreateStyleConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_async_flattened",
+      "title": "CreateStyleConfigAsync",
+      "description": "Snippet for CreateStyleConfigAsync",
+      "file": "MapManagementClient.CreateStyleConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_sync_flattened_resourceNames",
+      "title": "CreateStyleConfigResourceNames",
+      "description": "Snippet for CreateStyleConfig",
+      "file": "MapManagementClient.CreateStyleConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateStyleConfig_async_flattened_resourceNames",
+      "title": "CreateStyleConfigResourceNamesAsync",
+      "description": "Snippet for CreateStyleConfigAsync",
+      "file": "MapManagementClient.CreateStyleConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_sync",
+      "title": "GetStyleConfigRequestObject",
+      "description": "Snippet for GetStyleConfig",
+      "file": "MapManagementClient.GetStyleConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_async",
+      "title": "GetStyleConfigRequestObjectAsync",
+      "description": "Snippet for GetStyleConfigAsync",
+      "file": "MapManagementClient.GetStyleConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_sync_flattened",
+      "title": "GetStyleConfig",
+      "description": "Snippet for GetStyleConfig",
+      "file": "MapManagementClient.GetStyleConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_async_flattened",
+      "title": "GetStyleConfigAsync",
+      "description": "Snippet for GetStyleConfigAsync",
+      "file": "MapManagementClient.GetStyleConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_sync_flattened_resourceNames",
+      "title": "GetStyleConfigResourceNames",
+      "description": "Snippet for GetStyleConfig",
+      "file": "MapManagementClient.GetStyleConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetStyleConfig_async_flattened_resourceNames",
+      "title": "GetStyleConfigResourceNamesAsync",
+      "description": "Snippet for GetStyleConfigAsync",
+      "file": "MapManagementClient.GetStyleConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_sync",
+      "title": "ListStyleConfigsRequestObject",
+      "description": "Snippet for ListStyleConfigs",
+      "file": "MapManagementClient.ListStyleConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigs",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListStyleConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_async",
+      "title": "ListStyleConfigsRequestObjectAsync",
+      "description": "Snippet for ListStyleConfigsAsync",
+      "file": "MapManagementClient.ListStyleConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListStyleConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_sync_flattened",
+      "title": "ListStyleConfigs",
+      "description": "Snippet for ListStyleConfigs",
+      "file": "MapManagementClient.ListStyleConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_async_flattened",
+      "title": "ListStyleConfigsAsync",
+      "description": "Snippet for ListStyleConfigsAsync",
+      "file": "MapManagementClient.ListStyleConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_sync_flattened_resourceNames",
+      "title": "ListStyleConfigsResourceNames",
+      "description": "Snippet for ListStyleConfigs",
+      "file": "MapManagementClient.ListStyleConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListStyleConfigs_async_flattened_resourceNames",
+      "title": "ListStyleConfigsResourceNamesAsync",
+      "description": "Snippet for ListStyleConfigsAsync",
+      "file": "MapManagementClient.ListStyleConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListStyleConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListStyleConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListStyleConfigsResponse, Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListStyleConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListStyleConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateStyleConfig_sync",
+      "title": "UpdateStyleConfigRequestObject",
+      "description": "Snippet for UpdateStyleConfig",
+      "file": "MapManagementClient.UpdateStyleConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateStyleConfig_async",
+      "title": "UpdateStyleConfigRequestObjectAsync",
+      "description": "Snippet for UpdateStyleConfigAsync",
+      "file": "MapManagementClient.UpdateStyleConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateStyleConfig_sync_flattened",
+      "title": "UpdateStyleConfig",
+      "description": "Snippet for UpdateStyleConfig",
+      "file": "MapManagementClient.UpdateStyleConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateStyleConfig_async_flattened",
+      "title": "UpdateStyleConfigAsync",
+      "description": "Snippet for UpdateStyleConfigAsync",
+      "file": "MapManagementClient.UpdateStyleConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfig",
+            "name": "styleConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.StyleConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_sync",
+      "title": "DeleteStyleConfigRequestObject",
+      "description": "Snippet for DeleteStyleConfig",
+      "file": "MapManagementClient.DeleteStyleConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_async",
+      "title": "DeleteStyleConfigRequestObjectAsync",
+      "description": "Snippet for DeleteStyleConfigAsync",
+      "file": "MapManagementClient.DeleteStyleConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteStyleConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_sync_flattened",
+      "title": "DeleteStyleConfig",
+      "description": "Snippet for DeleteStyleConfig",
+      "file": "MapManagementClient.DeleteStyleConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_async_flattened",
+      "title": "DeleteStyleConfigAsync",
+      "description": "Snippet for DeleteStyleConfigAsync",
+      "file": "MapManagementClient.DeleteStyleConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_sync_flattened_resourceNames",
+      "title": "DeleteStyleConfigResourceNames",
+      "description": "Snippet for DeleteStyleConfig",
+      "file": "MapManagementClient.DeleteStyleConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteStyleConfig_async_flattened_resourceNames",
+      "title": "DeleteStyleConfigResourceNamesAsync",
+      "description": "Snippet for DeleteStyleConfigAsync",
+      "file": "MapManagementClient.DeleteStyleConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteStyleConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteStyleConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.StyleConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteStyleConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteStyleConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_sync",
+      "title": "CreateMapContextConfigRequestObject",
+      "description": "Snippet for CreateMapContextConfig",
+      "file": "MapManagementClient.CreateMapContextConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_async",
+      "title": "CreateMapContextConfigRequestObjectAsync",
+      "description": "Snippet for CreateMapContextConfigAsync",
+      "file": "MapManagementClient.CreateMapContextConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.CreateMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_sync_flattened",
+      "title": "CreateMapContextConfig",
+      "description": "Snippet for CreateMapContextConfig",
+      "file": "MapManagementClient.CreateMapContextConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_async_flattened",
+      "title": "CreateMapContextConfigAsync",
+      "description": "Snippet for CreateMapContextConfigAsync",
+      "file": "MapManagementClient.CreateMapContextConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_sync_flattened_resourceNames",
+      "title": "CreateMapContextConfigResourceNames",
+      "description": "Snippet for CreateMapContextConfig",
+      "file": "MapManagementClient.CreateMapContextConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_CreateMapContextConfig_async_flattened_resourceNames",
+      "title": "CreateMapContextConfigResourceNamesAsync",
+      "description": "Snippet for CreateMapContextConfigAsync",
+      "file": "MapManagementClient.CreateMapContextConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.CreateMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "CreateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.CreateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_sync",
+      "title": "GetMapContextConfigRequestObject",
+      "description": "Snippet for GetMapContextConfig",
+      "file": "MapManagementClient.GetMapContextConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_async",
+      "title": "GetMapContextConfigRequestObjectAsync",
+      "description": "Snippet for GetMapContextConfigAsync",
+      "file": "MapManagementClient.GetMapContextConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.GetMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_sync_flattened",
+      "title": "GetMapContextConfig",
+      "description": "Snippet for GetMapContextConfig",
+      "file": "MapManagementClient.GetMapContextConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_async_flattened",
+      "title": "GetMapContextConfigAsync",
+      "description": "Snippet for GetMapContextConfigAsync",
+      "file": "MapManagementClient.GetMapContextConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_sync_flattened_resourceNames",
+      "title": "GetMapContextConfigResourceNames",
+      "description": "Snippet for GetMapContextConfig",
+      "file": "MapManagementClient.GetMapContextConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_GetMapContextConfig_async_flattened_resourceNames",
+      "title": "GetMapContextConfigResourceNamesAsync",
+      "description": "Snippet for GetMapContextConfigAsync",
+      "file": "MapManagementClient.GetMapContextConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.GetMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "GetMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.GetMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_sync",
+      "title": "ListMapContextConfigsRequestObject",
+      "description": "Snippet for ListMapContextConfigs",
+      "file": "MapManagementClient.ListMapContextConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigs",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListMapContextConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_async",
+      "title": "ListMapContextConfigsRequestObjectAsync",
+      "description": "Snippet for ListMapContextConfigsAsync",
+      "file": "MapManagementClient.ListMapContextConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.ListMapContextConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_sync_flattened",
+      "title": "ListMapContextConfigs",
+      "description": "Snippet for ListMapContextConfigs",
+      "file": "MapManagementClient.ListMapContextConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_async_flattened",
+      "title": "ListMapContextConfigsAsync",
+      "description": "Snippet for ListMapContextConfigsAsync",
+      "file": "MapManagementClient.ListMapContextConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_sync_flattened_resourceNames",
+      "title": "ListMapContextConfigsResourceNames",
+      "description": "Snippet for ListMapContextConfigs",
+      "file": "MapManagementClient.ListMapContextConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigs",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigs",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_ListMapContextConfigs_async_flattened_resourceNames",
+      "title": "ListMapContextConfigsResourceNamesAsync",
+      "description": "Snippet for ListMapContextConfigsAsync",
+      "file": "MapManagementClient.ListMapContextConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMapContextConfigsAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.ListMapContextConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapManagement.V2Beta.ListMapContextConfigsResponse, Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "ListMapContextConfigs",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.ListMapContextConfigs",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapContextConfig_sync",
+      "title": "UpdateMapContextConfigRequestObject",
+      "description": "Snippet for UpdateMapContextConfig",
+      "file": "MapManagementClient.UpdateMapContextConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapContextConfig_async",
+      "title": "UpdateMapContextConfigRequestObjectAsync",
+      "description": "Snippet for UpdateMapContextConfigAsync",
+      "file": "MapManagementClient.UpdateMapContextConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.UpdateMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapContextConfig_sync_flattened",
+      "title": "UpdateMapContextConfig",
+      "description": "Snippet for UpdateMapContextConfig",
+      "file": "MapManagementClient.UpdateMapContextConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_UpdateMapContextConfig_async_flattened",
+      "title": "UpdateMapContextConfigAsync",
+      "description": "Snippet for UpdateMapContextConfigAsync",
+      "file": "MapManagementClient.UpdateMapContextConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.UpdateMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfig",
+            "name": "mapContextConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapManagement.V2Beta.MapContextConfig>",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "UpdateMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.UpdateMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_sync",
+      "title": "DeleteMapContextConfigRequestObject",
+      "description": "Snippet for DeleteMapContextConfig",
+      "file": "MapManagementClient.DeleteMapContextConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_async",
+      "title": "DeleteMapContextConfigRequestObjectAsync",
+      "description": "Snippet for DeleteMapContextConfigAsync",
+      "file": "MapManagementClient.DeleteMapContextConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.DeleteMapContextConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_sync_flattened",
+      "title": "DeleteMapContextConfig",
+      "description": "Snippet for DeleteMapContextConfig",
+      "file": "MapManagementClient.DeleteMapContextConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_async_flattened",
+      "title": "DeleteMapContextConfigAsync",
+      "description": "Snippet for DeleteMapContextConfigAsync",
+      "file": "MapManagementClient.DeleteMapContextConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_sync_flattened_resourceNames",
+      "title": "DeleteMapContextConfigResourceNames",
+      "description": "Snippet for DeleteMapContextConfig",
+      "file": "MapManagementClient.DeleteMapContextConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfig",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfig",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapmanagement_v2beta_generated_MapManagement_DeleteMapContextConfig_async_flattened_resourceNames",
+      "title": "DeleteMapContextConfigResourceNamesAsync",
+      "description": "Snippet for DeleteMapContextConfigAsync",
+      "file": "MapManagementClient.DeleteMapContextConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMapContextConfigAsync",
+        "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient.DeleteMapContextConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapManagement.V2Beta.MapContextConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapManagementClient",
+          "fullName": "Google.Maps.MapManagement.V2Beta.MapManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteMapContextConfig",
+          "fullName": "google.maps.mapmanagement.v2beta.MapManagement.DeleteMapContextConfig",
+          "service": {
+            "shortName": "MapManagement",
+            "fullName": "google.maps.mapmanagement.v2beta.MapManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

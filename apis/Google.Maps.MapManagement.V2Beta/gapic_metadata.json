@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.maps.mapmanagement.v2beta",
+  "libraryPackage": "Google.Maps.MapManagement.V2Beta",
+  "services": {
+    "MapManagement": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MapManagementClient",
+          "rpcs": {
+            "CreateMapConfig": {
+              "methods": [
+                "CreateMapConfig",
+                "CreateMapConfigAsync"
+              ]
+            },
+            "CreateMapContextConfig": {
+              "methods": [
+                "CreateMapContextConfig",
+                "CreateMapContextConfigAsync"
+              ]
+            },
+            "CreateStyleConfig": {
+              "methods": [
+                "CreateStyleConfig",
+                "CreateStyleConfigAsync"
+              ]
+            },
+            "DeleteMapConfig": {
+              "methods": [
+                "DeleteMapConfig",
+                "DeleteMapConfigAsync"
+              ]
+            },
+            "DeleteMapContextConfig": {
+              "methods": [
+                "DeleteMapContextConfig",
+                "DeleteMapContextConfigAsync"
+              ]
+            },
+            "DeleteStyleConfig": {
+              "methods": [
+                "DeleteStyleConfig",
+                "DeleteStyleConfigAsync"
+              ]
+            },
+            "GetMapConfig": {
+              "methods": [
+                "GetMapConfig",
+                "GetMapConfigAsync"
+              ]
+            },
+            "GetMapContextConfig": {
+              "methods": [
+                "GetMapContextConfig",
+                "GetMapContextConfigAsync"
+              ]
+            },
+            "GetStyleConfig": {
+              "methods": [
+                "GetStyleConfig",
+                "GetStyleConfigAsync"
+              ]
+            },
+            "ListMapConfigs": {
+              "methods": [
+                "ListMapConfigs",
+                "ListMapConfigsAsync"
+              ]
+            },
+            "ListMapContextConfigs": {
+              "methods": [
+                "ListMapContextConfigs",
+                "ListMapContextConfigsAsync"
+              ]
+            },
+            "ListStyleConfigs": {
+              "methods": [
+                "ListStyleConfigs",
+                "ListStyleConfigsAsync"
+              ]
+            },
+            "UpdateMapConfig": {
+              "methods": [
+                "UpdateMapConfig",
+                "UpdateMapConfigAsync"
+              ]
+            },
+            "UpdateMapContextConfig": {
+              "methods": [
+                "UpdateMapContextConfig",
+                "UpdateMapContextConfigAsync"
+              ]
+            },
+            "UpdateStyleConfig": {
+              "methods": [
+                "UpdateStyleConfig",
+                "UpdateStyleConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
