@@ -6715,6 +6715,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.DevicesAndServices.Health.V4",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Health",
+      "productUrl": "https://developers.google.com/health/api",
+      "description": "The Google Health API lets you view and manage health and fitness metrics and measurement data.",
+      "tags": [],
+      "dependencies": {
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/devicesandservices/health/v4",
+      "includeCommonResourcesProto": true,
+      "shortName": "health",
+      "serviceConfigFile": "health_v4.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Geo.Type",
       "version": "1.3.0",
       "type": "other",

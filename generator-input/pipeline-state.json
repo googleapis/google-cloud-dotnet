@@ -5013,6 +5013,18 @@
             "sourcePaths": [
                 "apis/Google.Maps.MapManagement.V2Beta/Google.Maps.MapManagement.V2Beta"
             ]
+        },
+        {
+            "id": "Google.DevicesAndServices.Health.V4",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/devicesandservices/health/v4"
+            ],
+            "sourcePaths": [
+                "apis/Google.DevicesAndServices.Health.V4/Google.DevicesAndServices.Health.V4"
+            ]
         }
     ],
     "ignoredApiPaths": [
