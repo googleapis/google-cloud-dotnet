@@ -42,7 +42,9 @@ namespace Google.Cloud.NetApp.V1 {
             "ZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklDRV9UWVBFX1VOU1BFQ0lG",
             "SUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKksKD1N0b3JhZ2VQb29sVHlw",
             "ZRIhCh1TVE9SQUdFX1BPT0xfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZJTEUQ",
-            "ARILCgdVTklGSUVEEAIqdQoZSHlicmlkUmVwbGljYXRpb25TY2hlZHVsZRIr",
+            "ARILCgdVTklGSUVEEAIqWAoJU2NhbGVUeXBlEhoKFlNDQUxFX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIWChJTQ0FMRV9UWVBFX0RFRkFVTFQQARIXChNTQ0FMRV9U",
+            "WVBFX1NDQUxFT1VUEAIqdQoZSHlicmlkUmVwbGljYXRpb25TY2hlZHVsZRIr",
             "CidIWUJSSURfUkVQTElDQVRJT05fU0NIRURVTEVfVU5TUEVDSUZJRUQQABIU",
             "ChBFVkVSWV8xMF9NSU5VVEVTEAESCgoGSE9VUkxZEAISCQoFREFJTFkQAyo5",
             "CgdRb3NUeXBlEhgKFFFPU19UWVBFX1VOU1BFQ0lGSUVEEAASCAoEQVVUTxAB",
@@ -54,7 +56,7 @@ namespace Google.Cloud.NetApp.V1 {
             "cFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.StoragePoolType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), typeof(global::Google.Cloud.NetApp.V1.OsType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.StoragePoolType), typeof(global::Google.Cloud.NetApp.V1.ScaleType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), typeof(global::Google.Cloud.NetApp.V1.OsType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp", "HasOntapProxy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UserCommands), global::Google.Cloud.NetApp.V1.UserCommands.Parser, new[]{ "Commands" }, null, null, null, null)
           }));
@@ -155,6 +157,26 @@ namespace Google.Cloud.NetApp.V1 {
     /// Storage pool type is unified.
     /// </summary>
     [pbr::OriginalName("UNIFIED")] Unified = 2,
+  }
+
+  /// <summary>
+  /// Defines the scale-type of a UNIFIED Storage Pool.
+  /// </summary>
+  public enum ScaleType {
+    /// <summary>
+    /// Unspecified scale type.
+    /// </summary>
+    [pbr::OriginalName("SCALE_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Represents standard capacity and performance scale-type.
+    /// Suitable for general purpose workloads.
+    /// </summary>
+    [pbr::OriginalName("SCALE_TYPE_DEFAULT")] Default = 1,
+    /// <summary>
+    /// Represents higher capacity and performance scale-type.
+    /// Suitable for more demanding workloads.
+    /// </summary>
+    [pbr::OriginalName("SCALE_TYPE_SCALEOUT")] Scaleout = 2,
   }
 
   /// <summary>

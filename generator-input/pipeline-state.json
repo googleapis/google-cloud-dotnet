@@ -2228,7 +2228,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-30T14:19:37.634844764Z",
-            "lastGeneratedCommit": "a90dc55a699b916cbff59aa8112e067f6bab5bd4",
+            "lastGeneratedCommit": "4ad1b6750926701f94ae8a88525395fd17b42cfe",
             "lastReleasedCommit": "a90dc55a699b916cbff59aa8112e067f6bab5bd4",
             "apiPaths": [
                 "google/cloud/netapp/v1"
