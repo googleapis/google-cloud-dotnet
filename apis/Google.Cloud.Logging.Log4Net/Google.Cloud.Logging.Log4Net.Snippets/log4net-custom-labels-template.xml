@@ -6,6 +6,7 @@
     </layout>
     <projectId value="PROJECT_ID" />
     <logId value="LOG_ID" />
+    <disableResourceTypeDetection value="true" />
     <usePatternWithinCustomLabels value="true"/>
     <customLabel>
       <key value="label_from_property" />

@@ -6,6 +6,7 @@
     </layout>
     <projectId value="PROJECT_ID" />
     <logId value="LOG_ID" />
+    <disableResourceTypeDetection value="true" />
   </appender>
   <root>
     <level value="ALL" />
