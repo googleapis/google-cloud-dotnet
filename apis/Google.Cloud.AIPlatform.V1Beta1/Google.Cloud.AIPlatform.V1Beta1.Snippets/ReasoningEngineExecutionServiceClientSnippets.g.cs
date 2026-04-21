@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api;
     using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1Beta1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -87,6 +88,75 @@ namespace GoogleCSharpSnippets
                 // Do something with streamed response
             }
             // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncQueryReasoningEngine</summary>
+        public void AsyncQueryReasoningEngineRequestObject()
+        {
+            // Snippet: AsyncQueryReasoningEngine(AsyncQueryReasoningEngineRequest, CallSettings)
+            // Create client
+            ReasoningEngineExecutionServiceClient reasoningEngineExecutionServiceClient = ReasoningEngineExecutionServiceClient.Create();
+            // Initialize request argument(s)
+            AsyncQueryReasoningEngineRequest request = new AsyncQueryReasoningEngineRequest
+            {
+                ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                InputGcsUri = "",
+                OutputGcsUri = "",
+            };
+            // Make the request
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> response = reasoningEngineExecutionServiceClient.AsyncQueryReasoningEngine(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncQueryReasoningEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> retrievedResponse = reasoningEngineExecutionServiceClient.PollOnceAsyncQueryReasoningEngine(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncQueryReasoningEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsyncQueryReasoningEngineAsync</summary>
+        public async Task AsyncQueryReasoningEngineRequestObjectAsync()
+        {
+            // Snippet: AsyncQueryReasoningEngineAsync(AsyncQueryReasoningEngineRequest, CallSettings)
+            // Additional: AsyncQueryReasoningEngineAsync(AsyncQueryReasoningEngineRequest, CancellationToken)
+            // Create client
+            ReasoningEngineExecutionServiceClient reasoningEngineExecutionServiceClient = await ReasoningEngineExecutionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AsyncQueryReasoningEngineRequest request = new AsyncQueryReasoningEngineRequest
+            {
+                ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                InputGcsUri = "",
+                OutputGcsUri = "",
+            };
+            // Make the request
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> response = await reasoningEngineExecutionServiceClient.AsyncQueryReasoningEngineAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncQueryReasoningEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata> retrievedResponse = await reasoningEngineExecutionServiceClient.PollOnceAsyncQueryReasoningEngineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncQueryReasoningEngineResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

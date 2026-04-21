@@ -85746,6 +85746,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineExecutionService_AsyncQueryReasoningEngine_sync",
+      "title": "AsyncQueryReasoningEngineRequestObject",
+      "description": "Snippet for AsyncQueryReasoningEngine",
+      "file": "ReasoningEngineExecutionServiceClient.AsyncQueryReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncQueryReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient.AsyncQueryReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService.AsyncQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineExecutionService_AsyncQueryReasoningEngine_async",
+      "title": "AsyncQueryReasoningEngineRequestObjectAsync",
+      "description": "Snippet for AsyncQueryReasoningEngineAsync",
+      "file": "ReasoningEngineExecutionServiceClient.AsyncQueryReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AsyncQueryReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient.AsyncQueryReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineResponse, Google.Cloud.AIPlatform.V1Beta1.AsyncQueryReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "AsyncQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService.AsyncQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineService_CreateReasoningEngine_sync",
       "title": "CreateReasoningEngineRequestObject",
       "description": "Snippet for CreateReasoningEngine",
