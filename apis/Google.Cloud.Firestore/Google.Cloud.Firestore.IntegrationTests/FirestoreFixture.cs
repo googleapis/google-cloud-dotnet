@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         // We don't want to wait *forever* (which would be the behavior of default poll settings)
         // but we need to have a timeout of more than a minute.
         private static readonly PollSettings AdminOperationPollSettings =
-            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(5)), delay: TimeSpan.FromSeconds(5));
+            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(10)), delay: TimeSpan.FromSeconds(5));
 
         // How long we should wait after creating an index, before returning to the caller
         // (who is expecting to be able to use the index immediately). Sometimes the CreateIndex operation
