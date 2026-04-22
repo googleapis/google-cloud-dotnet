@@ -49,7 +49,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         // We don't want to wait *forever* (which would be the behavior of default poll settings)
         // but we need to have a timeout of more than a minute.
         private static readonly PollSettings AdminOperationPollSettings =
-            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(5)), delay: TimeSpan.FromSeconds(5));
+            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(10)), delay: TimeSpan.FromSeconds(5));
 
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
