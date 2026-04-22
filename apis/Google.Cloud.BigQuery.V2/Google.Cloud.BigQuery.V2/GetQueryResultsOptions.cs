@@ -95,7 +95,8 @@ namespace Google.Cloud.BigQuery.V2
             PageSize = PageSize,
             PageToken = PageToken,
             StartIndex = StartIndex,
-            Timeout = Timeout
+            Timeout = Timeout,
+            UseInt64Timestamp = UseInt64Timestamp
         };
 
     }

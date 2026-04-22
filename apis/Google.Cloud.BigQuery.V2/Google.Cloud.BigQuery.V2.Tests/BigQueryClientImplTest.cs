@@ -328,7 +328,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl("project", service);
             var sql = "SELECT * FROM dataset.table";
-            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us" };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us", FormatOptions = new DataFormatOptions { UseInt64Timestamp = true } };
             service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
 
             var results = client.ExecuteStatelessQuery(sql, parameters: null, queryOptions: new StatelessQueryOptions { MaxResults = 10, Location = "us" });
@@ -341,7 +341,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl("project", service);
             var sql = "SELECT * FROM dataset.table";
-            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us" };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, MaxResults = 10, Location = "us", FormatOptions = new DataFormatOptions { UseInt64Timestamp = true } };
             service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
 
             var results = await client.ExecuteStatelessQueryAsync(sql, parameters: null, queryOptions: new StatelessQueryOptions { MaxResults = 10, Location = "us" });
@@ -355,7 +355,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var client = new BigQueryClientImpl("project", service);
             var sql = "SELECT * FROM dataset.table WHERE col = @val";
             var parameters = new[] { new BigQueryParameter("val", BigQueryDbType.String, "foo") };
-            var request = new QueryRequest { Query = sql, UseLegacySql = false, ParameterMode = "named", QueryParameters = new[] { parameters[0].ToQueryParameter() } };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, ParameterMode = "named", QueryParameters = new[] { parameters[0].ToQueryParameter() }, FormatOptions = new DataFormatOptions { UseInt64Timestamp = true } };
             service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("foo"));
 
             var results = client.ExecuteStatelessQuery(sql, parameters);
@@ -394,7 +394,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var queryOptions = new QueryOptions { UseQueryCache = true };
             var resultsOptions = new GetQueryResultsOptions { PageSize = 10 };
             
-            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10 };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10, FormatOptions = new DataFormatOptions { UseInt64Timestamp = true } };
             service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
 
             var results = client.ExecuteQuery(sql, parameters: null, queryOptions: queryOptions, resultsOptions: resultsOptions);
@@ -412,7 +412,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var queryOptions = new QueryOptions { UseQueryCache = true };
             var resultsOptions = new GetQueryResultsOptions { PageSize = 10 };
             
-            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10 };
+            var request = new QueryRequest { Query = sql, UseLegacySql = false, UseQueryCache = true, MaxResults = 10, FormatOptions = new DataFormatOptions { UseInt64Timestamp = true } };
             service.ExpectRequest(service.Jobs.Query(request, "project"), CreateStatelessResponse("value"));
 
             var results = await client.ExecuteQueryAsync(sql, parameters: null, queryOptions: queryOptions, resultsOptions: resultsOptions);

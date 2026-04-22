@@ -61,7 +61,7 @@ internal sealed class StatelessQueryOptions
     /// <summary>
     /// Optional output format adjustments.
     /// </summary>
-    internal DataFormatOptions FormatOptions { get; set; }
+    internal DataFormatOptions FormatOptions { get; set; } = new DataFormatOptions {UseInt64Timestamp = true};
 
     /// <summary>
     /// Specifies whether a job is required to be created.

@@ -240,7 +240,8 @@ namespace Google.Cloud.BigQuery.V2
                 ParameterMode = "named",
                 QueryParameters = parameters?.Select(p => p.ToQueryParameter()).ToList(),
             };
-            options?.ModifyRequest(request);
+            // If no options are provided, we create an empty query options and propagate any defaults to the request
+            (options ?? new StatelessQueryOptions()).ModifyRequest(request);
             request.Location ??= DefaultLocation;
             // If there aren't any parameters, set ParameterMode to null - otherwise legacy SQL queries fail,
             // even if haven't set any parameters.
