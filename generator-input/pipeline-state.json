@@ -5019,6 +5019,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "a787482b8b9653f5307f959ddb57c51870dda07f",
             "apiPaths": [
                 "google/devicesandservices/health/v4"
             ],

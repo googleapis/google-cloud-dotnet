@@ -1,0 +1,105 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devicesandservices.health.v4",
+  "libraryPackage": "Google.DevicesAndServices.Health.V4",
+  "services": {
+    "DataPointsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataPointsServiceClient",
+          "rpcs": {
+            "BatchDeleteDataPoints": {
+              "methods": [
+                "BatchDeleteDataPoints",
+                "BatchDeleteDataPointsAsync"
+              ]
+            },
+            "CreateDataPoint": {
+              "methods": [
+                "CreateDataPoint",
+                "CreateDataPointAsync"
+              ]
+            },
+            "DailyRollUpDataPoints": {
+              "methods": [
+                "DailyRollUpDataPoints",
+                "DailyRollUpDataPointsAsync"
+              ]
+            },
+            "ExportExerciseTcx": {
+              "methods": [
+                "ExportExerciseTcx",
+                "ExportExerciseTcxAsync"
+              ]
+            },
+            "ListDataPoints": {
+              "methods": [
+                "ListDataPoints",
+                "ListDataPointsAsync"
+              ]
+            },
+            "ReconcileDataPoints": {
+              "methods": [
+                "ReconcileDataPoints",
+                "ReconcileDataPointsAsync"
+              ]
+            },
+            "RollUpDataPoints": {
+              "methods": [
+                "RollUpDataPoints",
+                "RollUpDataPointsAsync"
+              ]
+            },
+            "UpdateDataPoint": {
+              "methods": [
+                "UpdateDataPoint",
+                "UpdateDataPointAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "HealthProfileService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "HealthProfileServiceClient",
+          "rpcs": {
+            "GetIdentity": {
+              "methods": [
+                "GetIdentity",
+                "GetIdentityAsync"
+              ]
+            },
+            "GetProfile": {
+              "methods": [
+                "GetProfile",
+                "GetProfileAsync"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
+            "UpdateProfile": {
+              "methods": [
+                "UpdateProfile",
+                "UpdateProfileAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
