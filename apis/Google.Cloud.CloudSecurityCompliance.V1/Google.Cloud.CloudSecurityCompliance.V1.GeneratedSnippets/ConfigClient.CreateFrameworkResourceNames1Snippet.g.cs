@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened_resourceNames]
+    // [START cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened_resourceNames1]
     using Google.Cloud.CloudSecurityCompliance.V1;
 
     public sealed partial class GeneratedConfigClientSnippets
@@ -29,7 +29,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateFrameworkResourceNames()
+        public void CreateFrameworkResourceNames1()
         {
             // Create client
             ConfigClient configClient = ConfigClient.Create();
@@ -41,5 +41,5 @@ namespace GoogleCSharpSnippets
             Framework response = configClient.CreateFramework(parent, framework, frameworkId);
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened_resourceNames]
+    // [END cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened_resourceNames1]
 }

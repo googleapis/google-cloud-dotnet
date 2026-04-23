@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                View = FrameworkComplianceSummaryView.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListFrameworkComplianceSummariesResponse, FrameworkComplianceSummary> response = monitoringClient.ListFrameworkComplianceSummaries(request);
@@ -87,6 +88,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                View = FrameworkComplianceSummaryView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListFrameworkComplianceSummariesResponse, FrameworkComplianceSummary> response = monitoringClient.ListFrameworkComplianceSummariesAsync(request);
@@ -954,6 +956,7 @@ namespace GoogleCSharpSnippets
             {
                 FrameworkComplianceReportName = FrameworkComplianceReportName.FromProjectLocationFrameworkComplianceReport("[PROJECT]", "[LOCATION]", "[FRAMEWORK_COMPLIANCE_REPORT]"),
                 EndTime = new Timestamp(),
+                Filter = "",
             };
             // Make the request
             FrameworkComplianceReport response = monitoringClient.FetchFrameworkComplianceReport(request);
@@ -972,6 +975,7 @@ namespace GoogleCSharpSnippets
             {
                 FrameworkComplianceReportName = FrameworkComplianceReportName.FromProjectLocationFrameworkComplianceReport("[PROJECT]", "[LOCATION]", "[FRAMEWORK_COMPLIANCE_REPORT]"),
                 EndTime = new Timestamp(),
+                Filter = "",
             };
             // Make the request
             FrameworkComplianceReport response = await monitoringClient.FetchFrameworkComplianceReportAsync(request);

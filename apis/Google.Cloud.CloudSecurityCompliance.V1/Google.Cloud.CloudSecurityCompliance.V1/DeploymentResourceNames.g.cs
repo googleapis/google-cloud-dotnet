@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gccv = Google.Cloud.CloudSecurityCompliance.V1;
 using sys = System;
@@ -35,9 +36,17 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             /// <c>organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}</c>.
             /// </summary>
             OrganizationLocationFrameworkDeployment = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>.
+            /// </summary>
+            ProjectLocationFrameworkDeployment = 2,
         }
 
         private static gax::PathTemplate s_organizationLocationFrameworkDeployment = new gax::PathTemplate("organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}");
+
+        private static gax::PathTemplate s_projectLocationFrameworkDeployment = new gax::PathTemplate("projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}");
 
         /// <summary>Creates a <see cref="FrameworkDeploymentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -62,6 +71,21 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </returns>
         public static FrameworkDeploymentName FromOrganizationLocationFrameworkDeployment(string organizationId, string locationId, string frameworkDeploymentId) =>
             new FrameworkDeploymentName(ResourceNameType.OrganizationLocationFrameworkDeployment, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), frameworkDeploymentId: gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkDeploymentId, nameof(frameworkDeploymentId)));
+
+        /// <summary>
+        /// Creates a <see cref="FrameworkDeploymentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="frameworkDeploymentId">
+        /// The <c>FrameworkDeployment</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="FrameworkDeploymentName"/> constructed from the provided ids.
+        /// </returns>
+        public static FrameworkDeploymentName FromProjectLocationFrameworkDeployment(string projectId, string locationId, string frameworkDeploymentId) =>
+            new FrameworkDeploymentName(ResourceNameType.ProjectLocationFrameworkDeployment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), frameworkDeploymentId: gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkDeploymentId, nameof(frameworkDeploymentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="FrameworkDeploymentName"/> with pattern
@@ -96,6 +120,22 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             s_organizationLocationFrameworkDeployment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkDeploymentId, nameof(frameworkDeploymentId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FrameworkDeploymentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="frameworkDeploymentId">
+        /// The <c>FrameworkDeployment</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="FrameworkDeploymentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>.
+        /// </returns>
+        public static string FormatProjectLocationFrameworkDeployment(string projectId, string locationId, string frameworkDeploymentId) =>
+            s_projectLocationFrameworkDeployment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkDeploymentId, nameof(frameworkDeploymentId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="FrameworkDeploymentName"/> instance.
         /// </summary>
         /// <remarks>
@@ -104,6 +144,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -122,6 +167,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -148,6 +198,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <c>organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="frameworkDeploymentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -169,6 +224,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -194,6 +254,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
                 result = FromOrganizationLocationFrameworkDeployment(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationFrameworkDeployment.TryParseName(frameworkDeploymentName, out resourceName))
+            {
+                result = FromProjectLocationFrameworkDeployment(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(frameworkDeploymentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -206,13 +271,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             return false;
         }
 
-        private FrameworkDeploymentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string frameworkDeploymentId = null, string locationId = null, string organizationId = null)
+        private FrameworkDeploymentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string frameworkDeploymentId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             FrameworkDeploymentId = frameworkDeploymentId;
             LocationId = locationId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -238,21 +304,26 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>FrameworkDeployment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
+        /// The <c>FrameworkDeployment</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string FrameworkDeploymentId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -265,6 +336,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationLocationFrameworkDeployment: return s_organizationLocationFrameworkDeployment.Expand(OrganizationId, LocationId, FrameworkDeploymentId);
+                case ResourceNameType.ProjectLocationFrameworkDeployment: return s_projectLocationFrameworkDeployment.Expand(ProjectId, LocationId, FrameworkDeploymentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -312,9 +384,17 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             /// .
             /// </summary>
             OrganizationLocationCloudControlDeployment = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>.
+            /// </summary>
+            ProjectLocationCloudControlDeployment = 2,
         }
 
         private static gax::PathTemplate s_organizationLocationCloudControlDeployment = new gax::PathTemplate("organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}");
+
+        private static gax::PathTemplate s_projectLocationCloudControlDeployment = new gax::PathTemplate("projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}");
 
         /// <summary>Creates a <see cref="CloudControlDeploymentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -339,6 +419,21 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </returns>
         public static CloudControlDeploymentName FromOrganizationLocationCloudControlDeployment(string organizationId, string locationId, string cloudControlDeploymentId) =>
             new CloudControlDeploymentName(ResourceNameType.OrganizationLocationCloudControlDeployment, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), cloudControlDeploymentId: gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlDeploymentId, nameof(cloudControlDeploymentId)));
+
+        /// <summary>
+        /// Creates a <see cref="CloudControlDeploymentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudControlDeploymentId">
+        /// The <c>CloudControlDeployment</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="CloudControlDeploymentName"/> constructed from the provided ids.
+        /// </returns>
+        public static CloudControlDeploymentName FromProjectLocationCloudControlDeployment(string projectId, string locationId, string cloudControlDeploymentId) =>
+            new CloudControlDeploymentName(ResourceNameType.ProjectLocationCloudControlDeployment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), cloudControlDeploymentId: gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlDeploymentId, nameof(cloudControlDeploymentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CloudControlDeploymentName"/> with pattern
@@ -373,6 +468,22 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             s_organizationLocationCloudControlDeployment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlDeploymentId, nameof(cloudControlDeploymentId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CloudControlDeploymentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cloudControlDeploymentId">
+        /// The <c>CloudControlDeployment</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="CloudControlDeploymentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>.
+        /// </returns>
+        public static string FormatProjectLocationCloudControlDeployment(string projectId, string locationId, string cloudControlDeploymentId) =>
+            s_projectLocationCloudControlDeployment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlDeploymentId, nameof(cloudControlDeploymentId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="CloudControlDeploymentName"/> instance.
         /// </summary>
         /// <remarks>
@@ -381,6 +492,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -400,6 +516,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -426,6 +547,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <c>organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="cloudControlDeploymentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -447,6 +573,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -472,6 +603,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
                 result = FromOrganizationLocationCloudControlDeployment(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationCloudControlDeployment.TryParseName(cloudControlDeploymentName, out resourceName))
+            {
+                result = FromProjectLocationCloudControlDeployment(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(cloudControlDeploymentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -484,13 +620,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             return false;
         }
 
-        private CloudControlDeploymentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cloudControlDeploymentId = null, string locationId = null, string organizationId = null)
+        private CloudControlDeploymentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cloudControlDeploymentId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             CloudControlDeploymentId = cloudControlDeploymentId;
             LocationId = locationId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -517,21 +654,26 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>CloudControlDeployment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
+        /// The <c>CloudControlDeployment</c> ID. May be <c>null</c>, depending on which resource name is contained by
+        /// this instance.
         /// </summary>
         public string CloudControlDeploymentId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -544,6 +686,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationLocationCloudControlDeployment: return s_organizationLocationCloudControlDeployment.Expand(OrganizationId, LocationId, CloudControlDeploymentId);
+                case ResourceNameType.ProjectLocationCloudControlDeployment: return s_projectLocationCloudControlDeployment.Expand(ProjectId, LocationId, CloudControlDeploymentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -611,6 +754,39 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class DeleteFrameworkDeploymentRequest
@@ -647,6 +823,39 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetCloudControlDeploymentRequest
@@ -670,6 +879,39 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         public OrganizationLocationName ParentAsOrganizationLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

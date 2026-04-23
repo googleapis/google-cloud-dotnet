@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -212,7 +213,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListFrameworks</summary>
-        public void ListFrameworksResourceNames()
+        public void ListFrameworksResourceNames1()
         {
             // Snippet: ListFrameworks(OrganizationLocationName, string, int?, CallSettings)
             // Create client
@@ -257,13 +258,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListFrameworksAsync</summary>
-        public async Task ListFrameworksResourceNamesAsync()
+        public async Task ListFrameworksResourceNames1Async()
         {
             // Snippet: ListFrameworksAsync(OrganizationLocationName, string, int?, CallSettings)
             // Create client
             ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFrameworksResponse, Framework> response = configClient.ListFrameworksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Framework item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListFrameworksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Framework item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Framework> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Framework item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFrameworks</summary>
+        public void ListFrameworksResourceNames2()
+        {
+            // Snippet: ListFrameworks(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFrameworksResponse, Framework> response = configClient.ListFrameworks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Framework item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFrameworksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Framework item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Framework> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Framework item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFrameworksAsync</summary>
+        public async Task ListFrameworksResourceNames2Async()
+        {
+            // Snippet: ListFrameworksAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListFrameworksResponse, Framework> response = configClient.ListFrameworksAsync(parent);
 
@@ -459,7 +550,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateFramework</summary>
-        public void CreateFrameworkResourceNames()
+        public void CreateFrameworkResourceNames1()
         {
             // Snippet: CreateFramework(OrganizationLocationName, Framework, string, CallSettings)
             // Create client
@@ -474,7 +565,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateFrameworkAsync</summary>
-        public async Task CreateFrameworkResourceNamesAsync()
+        public async Task CreateFrameworkResourceNames1Async()
         {
             // Snippet: CreateFrameworkAsync(OrganizationLocationName, Framework, string, CallSettings)
             // Additional: CreateFrameworkAsync(OrganizationLocationName, Framework, string, CancellationToken)
@@ -482,6 +573,37 @@ namespace GoogleCSharpSnippets
             ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            Framework framework = new Framework();
+            string frameworkId = "";
+            // Make the request
+            Framework response = await configClient.CreateFrameworkAsync(parent, framework, frameworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFramework</summary>
+        public void CreateFrameworkResourceNames2()
+        {
+            // Snippet: CreateFramework(LocationName, Framework, string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Framework framework = new Framework();
+            string frameworkId = "";
+            // Make the request
+            Framework response = configClient.CreateFramework(parent, framework, frameworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFrameworkAsync</summary>
+        public async Task CreateFrameworkResourceNames2Async()
+        {
+            // Snippet: CreateFrameworkAsync(LocationName, Framework, string, CallSettings)
+            // Additional: CreateFrameworkAsync(LocationName, Framework, string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Framework framework = new Framework();
             string frameworkId = "";
             // Make the request
@@ -829,7 +951,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListCloudControls</summary>
-        public void ListCloudControlsResourceNames()
+        public void ListCloudControlsResourceNames1()
         {
             // Snippet: ListCloudControls(OrganizationLocationName, string, int?, CallSettings)
             // Create client
@@ -874,13 +996,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListCloudControlsAsync</summary>
-        public async Task ListCloudControlsResourceNamesAsync()
+        public async Task ListCloudControlsResourceNames1Async()
         {
             // Snippet: ListCloudControlsAsync(OrganizationLocationName, string, int?, CallSettings)
             // Create client
             ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListCloudControlsResponse, CloudControl> response = configClient.ListCloudControlsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (CloudControl item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListCloudControlsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CloudControl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CloudControl> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CloudControl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCloudControls</summary>
+        public void ListCloudControlsResourceNames2()
+        {
+            // Snippet: ListCloudControls(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListCloudControlsResponse, CloudControl> response = configClient.ListCloudControls(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CloudControl item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCloudControlsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CloudControl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CloudControl> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CloudControl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCloudControlsAsync</summary>
+        public async Task ListCloudControlsResourceNames2Async()
+        {
+            // Snippet: ListCloudControlsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListCloudControlsResponse, CloudControl> response = configClient.ListCloudControlsAsync(parent);
 
@@ -1076,7 +1288,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateCloudControl</summary>
-        public void CreateCloudControlResourceNames()
+        public void CreateCloudControlResourceNames1()
         {
             // Snippet: CreateCloudControl(OrganizationLocationName, CloudControl, string, CallSettings)
             // Create client
@@ -1091,7 +1303,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateCloudControlAsync</summary>
-        public async Task CreateCloudControlResourceNamesAsync()
+        public async Task CreateCloudControlResourceNames1Async()
         {
             // Snippet: CreateCloudControlAsync(OrganizationLocationName, CloudControl, string, CallSettings)
             // Additional: CreateCloudControlAsync(OrganizationLocationName, CloudControl, string, CancellationToken)
@@ -1099,6 +1311,37 @@ namespace GoogleCSharpSnippets
             ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            CloudControl cloudControl = new CloudControl();
+            string cloudControlId = "";
+            // Make the request
+            CloudControl response = await configClient.CreateCloudControlAsync(parent, cloudControl, cloudControlId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCloudControl</summary>
+        public void CreateCloudControlResourceNames2()
+        {
+            // Snippet: CreateCloudControl(LocationName, CloudControl, string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CloudControl cloudControl = new CloudControl();
+            string cloudControlId = "";
+            // Make the request
+            CloudControl response = configClient.CreateCloudControl(parent, cloudControl, cloudControlId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCloudControlAsync</summary>
+        public async Task CreateCloudControlResourceNames2Async()
+        {
+            // Snippet: CreateCloudControlAsync(LocationName, CloudControl, string, CallSettings)
+            // Additional: CreateCloudControlAsync(LocationName, CloudControl, string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             CloudControl cloudControl = new CloudControl();
             string cloudControlId = "";
             // Make the request

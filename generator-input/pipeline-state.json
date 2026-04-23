@@ -4686,7 +4686,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T09:36:34.096141348Z",
-            "lastGeneratedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
+            "lastGeneratedCommit": "e9975a386360bc96d03ef289c7fc2cc20b7b5f8b",
             "lastReleasedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
             "apiPaths": [
                 "google/cloud/cloudsecuritycompliance/v1"

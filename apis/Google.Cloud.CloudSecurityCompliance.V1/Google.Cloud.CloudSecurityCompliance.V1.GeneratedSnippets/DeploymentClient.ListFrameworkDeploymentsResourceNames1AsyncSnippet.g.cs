@@ -16,15 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Config_ListCloudControls_async_flattened_resourceNames]
+    // [START cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using System;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConfigClientSnippets
+    public sealed partial class GeneratedDeploymentClientSnippets
     {
-        /// <summary>Snippet for ListCloudControlsAsync</summary>
+        /// <summary>Snippet for ListFrameworkDeploymentsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,28 +32,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListCloudControlsResourceNamesAsync()
+        public async Task ListFrameworkDeploymentsResourceNames1Async()
         {
             // Create client
-            ConfigClient configClient = await ConfigClient.CreateAsync();
+            DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListCloudControlsResponse, CloudControl> response = configClient.ListCloudControlsAsync(parent);
+            PagedAsyncEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> response = deploymentClient.ListFrameworkDeploymentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (CloudControl item in response)
+            await foreach (FrameworkDeployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListCloudControlsResponse page in response.AsRawResponses())
+            await foreach (ListFrameworkDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CloudControl item in page)
+                foreach (FrameworkDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -62,10 +62,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CloudControl> singlePage = await response.ReadPageAsync(pageSize);
+            Page<FrameworkDeployment> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CloudControl item in singlePage)
+            foreach (FrameworkDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -74,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Config_ListCloudControls_async_flattened_resourceNames]
+    // [END cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened_resourceNames1]
 }

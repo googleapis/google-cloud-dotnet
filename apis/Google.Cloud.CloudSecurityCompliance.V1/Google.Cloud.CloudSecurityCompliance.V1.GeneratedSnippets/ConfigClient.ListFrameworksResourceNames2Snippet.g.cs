@@ -16,15 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened_resourceNames]
+    // [START cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync_flattened_resourceNames2]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using System;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedDeploymentClientSnippets
+    public sealed partial class GeneratedConfigClientSnippets
     {
-        /// <summary>Snippet for ListFrameworkDeploymentsAsync</summary>
+        /// <summary>Snippet for ListFrameworks</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,28 +32,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListFrameworkDeploymentsResourceNamesAsync()
+        public void ListFrameworksResourceNames2()
         {
             // Create client
-            DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
+            ConfigClient configClient = ConfigClient.Create();
             // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> response = deploymentClient.ListFrameworkDeploymentsAsync(parent);
+            PagedEnumerable<ListFrameworksResponse, Framework> response = configClient.ListFrameworks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (FrameworkDeployment item in response)
+            foreach (Framework item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListFrameworkDeploymentsResponse page in response.AsRawResponses())
+            foreach (ListFrameworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (FrameworkDeployment item in page)
+                foreach (Framework item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -62,10 +62,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<FrameworkDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            Page<Framework> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (FrameworkDeployment item in singlePage)
+            foreach (Framework item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -74,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened_resourceNames]
+    // [END cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync_flattened_resourceNames2]
 }

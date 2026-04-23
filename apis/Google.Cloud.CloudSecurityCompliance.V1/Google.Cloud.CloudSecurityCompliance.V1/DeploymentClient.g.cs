@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
@@ -418,7 +419,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -447,7 +450,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -476,7 +481,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -500,7 +507,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -529,7 +538,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -558,7 +569,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// Only the global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
@@ -572,6 +585,94 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<FrameworkDeployment, OperationMetadata>> CreateFrameworkDeploymentAsync(OrganizationLocationName parent, FrameworkDeployment frameworkDeployment, string frameworkDeploymentId, st::CancellationToken cancellationToken) =>
+            CreateFrameworkDeploymentAsync(parent, frameworkDeployment, frameworkDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a framework deployment in a given parent resource. A
+        /// framework deployment lets you assign a particular framework version to an
+        /// organization, folder, or project so that you can control and monitor
+        /// those resources using the framework's cloud controls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the framework deployment in the format
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
+        /// Only the global location is supported.
+        /// </param>
+        /// <param name="frameworkDeployment">
+        /// Required. The framework deployment that you're creating.
+        /// </param>
+        /// <param name="frameworkDeploymentId">
+        /// Optional. An identifier for the framework deployment that's unique in scope
+        /// of the parent. If you don't specify a value, then a random UUID is
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FrameworkDeployment, OperationMetadata> CreateFrameworkDeployment(gagr::LocationName parent, FrameworkDeployment frameworkDeployment, string frameworkDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFrameworkDeployment(new CreateFrameworkDeploymentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FrameworkDeploymentId = frameworkDeploymentId ?? "",
+                FrameworkDeployment = gax::GaxPreconditions.CheckNotNull(frameworkDeployment, nameof(frameworkDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a framework deployment in a given parent resource. A
+        /// framework deployment lets you assign a particular framework version to an
+        /// organization, folder, or project so that you can control and monitor
+        /// those resources using the framework's cloud controls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the framework deployment in the format
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
+        /// Only the global location is supported.
+        /// </param>
+        /// <param name="frameworkDeployment">
+        /// Required. The framework deployment that you're creating.
+        /// </param>
+        /// <param name="frameworkDeploymentId">
+        /// Optional. An identifier for the framework deployment that's unique in scope
+        /// of the parent. If you don't specify a value, then a random UUID is
+        /// generated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FrameworkDeployment, OperationMetadata>> CreateFrameworkDeploymentAsync(gagr::LocationName parent, FrameworkDeployment frameworkDeployment, string frameworkDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFrameworkDeploymentAsync(new CreateFrameworkDeploymentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FrameworkDeploymentId = frameworkDeploymentId ?? "",
+                FrameworkDeployment = gax::GaxPreconditions.CheckNotNull(frameworkDeployment, nameof(frameworkDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a framework deployment in a given parent resource. A
+        /// framework deployment lets you assign a particular framework version to an
+        /// organization, folder, or project so that you can control and monitor
+        /// those resources using the framework's cloud controls.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the framework deployment in the format
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
+        /// Only the global location is supported.
+        /// </param>
+        /// <param name="frameworkDeployment">
+        /// Required. The framework deployment that you're creating.
+        /// </param>
+        /// <param name="frameworkDeploymentId">
+        /// Optional. An identifier for the framework deployment that's unique in scope
+        /// of the parent. If you don't specify a value, then a random UUID is
+        /// generated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FrameworkDeployment, OperationMetadata>> CreateFrameworkDeploymentAsync(gagr::LocationName parent, FrameworkDeployment frameworkDeployment, string frameworkDeploymentId, st::CancellationToken cancellationToken) =>
             CreateFrameworkDeploymentAsync(parent, frameworkDeployment, frameworkDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -634,7 +735,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -651,7 +754,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -668,7 +773,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -682,7 +789,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -699,7 +808,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -716,7 +827,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="name">
         /// Required. The name of the framework deployment that you want to delete,
         /// in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -756,7 +869,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -772,7 +887,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -788,7 +905,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -801,7 +920,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -817,7 +938,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -833,7 +956,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworkDeployments/{framework_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -864,7 +989,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -899,7 +1026,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -934,7 +1063,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -969,7 +1100,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the framework deployment, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -987,6 +1120,80 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             ListFrameworkDeploymentsRequest request = new ListFrameworkDeploymentsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFrameworkDeploymentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the framework deployments in a given parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the framework deployment, in the format
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FrameworkDeployment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> ListFrameworkDeployments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFrameworkDeploymentsRequest request = new ListFrameworkDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFrameworkDeployments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the framework deployments in a given parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the framework deployment, in the format
+        /// `organizations/{organization}/locations/{location}`
+        /// or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FrameworkDeployment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> ListFrameworkDeploymentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFrameworkDeploymentsRequest request = new ListFrameworkDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -1031,7 +1238,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1047,7 +1256,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1063,7 +1274,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1076,7 +1289,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1092,7 +1307,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1108,7 +1325,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name for the cloud control deployment, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+        /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}`.
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1139,8 +1358,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the cloud control deployment, in the
-        /// format `organizations/{organization}/locations/{location}`. The only
-        /// supported location is `global`.
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1174,8 +1394,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the cloud control deployment, in the
-        /// format `organizations/{organization}/locations/{location}`. The only
-        /// supported location is `global`.
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1209,8 +1430,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the cloud control deployment, in the
-        /// format `organizations/{organization}/locations/{location}`. The only
-        /// supported location is `global`.
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1244,8 +1466,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the cloud control deployment, in the
-        /// format `organizations/{organization}/locations/{location}`. The only
-        /// supported location is `global`.
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1262,6 +1485,78 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             ListCloudControlDeploymentsRequest request = new ListCloudControlDeploymentsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCloudControlDeploymentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the cloud conrol deployments in a given parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the cloud control deployment, in the
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CloudControlDeployment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCloudControlDeploymentsResponse, CloudControlDeployment> ListCloudControlDeployments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCloudControlDeploymentsRequest request = new ListCloudControlDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCloudControlDeployments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the cloud conrol deployments in a given parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the cloud control deployment, in the
+        /// format `organizations/{organization}/locations/{location}` or
+        /// `projects/{project}/locations/{location}`.
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CloudControlDeployment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCloudControlDeploymentsResponse, CloudControlDeployment> ListCloudControlDeploymentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCloudControlDeploymentsRequest request = new ListCloudControlDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {

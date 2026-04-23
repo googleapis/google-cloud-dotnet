@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Config_CreateFramework_async_flattened_resourceNames]
+    // [START cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened_resourceNames2]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedConfigClientSnippets
     {
-        /// <summary>Snippet for CreateFrameworkAsync</summary>
+        /// <summary>Snippet for CreateCloudControlAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,17 +31,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateFrameworkResourceNamesAsync()
+        public async Task CreateCloudControlResourceNames2Async()
         {
             // Create client
             ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            Framework framework = new Framework();
-            string frameworkId = "";
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CloudControl cloudControl = new CloudControl();
+            string cloudControlId = "";
             // Make the request
-            Framework response = await configClient.CreateFrameworkAsync(parent, framework, frameworkId);
+            CloudControl response = await configClient.CreateCloudControlAsync(parent, cloudControl, cloudControlId);
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Config_CreateFramework_async_flattened_resourceNames]
+    // [END cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened_resourceNames2]
 }

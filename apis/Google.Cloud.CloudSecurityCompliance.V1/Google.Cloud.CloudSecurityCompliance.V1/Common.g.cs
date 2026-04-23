@@ -28,7 +28,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "bW9uLnByb3RvEidnb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFu",
             "Y2UudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8ilAcKCUZyYW1ld29yaxIUCgRuYW1lGAEgASgJQgbgQQLgQQgS",
+            "bXAucHJvdG8i1AcKCUZyYW1ld29yaxIUCgRuYW1lGAEgASgJQgbgQQLgQQgS",
             "HgoRbWFqb3JfcmV2aXNpb25faWQYAiABKANCA+BBAxIZCgxkaXNwbGF5X25h",
             "bWUYBCABKAlCA+BBARIYCgtkZXNjcmlwdGlvbhgFIAEoCUID4EEBElMKBHR5",
             "cGUYBiABKA4yQC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFu",
@@ -45,141 +45,173 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "DSADKA4yOC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
             "djEuRW5mb3JjZW1lbnRNb2RlQgPgQQMiSQoNRnJhbWV3b3JrVHlwZRIeChpG",
             "UkFNRVdPUktfVFlQRV9VTlNQRUNJRklFRBAAEgwKCEJVSUxUX0lOEAESCgoG",
-            "Q1VTVE9NEAI6lwHqQZMBCjBjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29n",
+            "Q1VTVE9NEAI61wHqQdMBCjBjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29n",
             "bGVhcGlzLmNvbS9GcmFtZXdvcmsSSG9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
             "dGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZnJhbWV3b3Jrcy97ZnJhbWV3",
-            "b3JrfSoKZnJhbWV3b3JrczIJZnJhbWV3b3JrIpUBChNDbG91ZENvbnRyb2xE",
-            "ZXRhaWxzEhEKBG5hbWUYASABKAlCA+BBAhIeChFtYWpvcl9yZXZpc2lvbl9p",
-            "ZBgCIAEoA0ID4EECEksKCnBhcmFtZXRlcnMYBCADKAsyMi5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyQgPgQQEi",
-            "ZwoSRnJhbWV3b3JrUmVmZXJlbmNlEhYKCWZyYW1ld29yaxgBIAEoCUID4EEC",
-            "EiMKEW1ham9yX3JldmlzaW9uX2lkGAIgASgDQgPgQQFIAIgBAUIUChJfbWFq",
-            "b3JfcmV2aXNpb25faWQicQoJUGFyYW1ldGVyEhEKBG5hbWUYASABKAlCA+BB",
-            "AhJRCg9wYXJhbWV0ZXJfdmFsdWUYAiABKAsyMy5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1WYWx1ZUID4EECItoICgxD",
-            "bG91ZENvbnRyb2wSFAoEbmFtZRgBIAEoCUIG4EEC4EEIEh4KEW1ham9yX3Jl",
-            "dmlzaW9uX2lkGAIgASgDQgPgQQMSGAoLZGVzY3JpcHRpb24YBCABKAlCA+BB",
-            "ARIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBARJiChtzdXBwb3J0ZWRfZW5m",
-            "b3JjZW1lbnRfbW9kZXMYByADKA4yOC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1",
-            "cml0eWNvbXBsaWFuY2UudjEuRW5mb3JjZW1lbnRNb2RlQgPgQQMSUwoOcGFy",
-            "YW1ldGVyX3NwZWMYCCADKAsyNi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0",
-            "eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyU3BlY0ID4EEBEkEKBXJ1bGVzGAkg",
-            "AygLMi0uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
-            "LlJ1bGVCA+BBARJICghzZXZlcml0eRgLIAEoDjIxLmdvb2dsZS5jbG91ZC5j",
-            "bG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5TZXZlcml0eUID4EEBEh0KEGZp",
-            "bmRpbmdfY2F0ZWdvcnkYDCABKAlCA+BBARJeChlzdXBwb3J0ZWRfY2xvdWRf",
-            "cHJvdmlkZXJzGA0gAygOMjYuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
-            "b21wbGlhbmNlLnYxLkNsb3VkUHJvdmlkZXJCA+BBARIfChJyZWxhdGVkX2Zy",
-            "YW1ld29ya3MYDiADKAlCA+BBAxIeChFyZW1lZGlhdGlvbl9zdGVwcxgPIAEo",
-            "CUID4EEBElYKCmNhdGVnb3JpZXMYECADKA4yPS5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sQ2F0ZWdvcnlC",
-            "A+BBARI0CgtjcmVhdGVfdGltZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxJpCh9zdXBwb3J0ZWRfdGFyZ2V0X3Jlc291cmNlX3R5",
-            "cGVzGBIgAygOMjsuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
-            "bmNlLnYxLlRhcmdldFJlc291cmNlVHlwZUID4EEBIjYKBFR5cGUSFAoQVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgoKBkNVU1RPTRABEgwKCEJVSUxUX0lOEAI6pwHq",
-            "QaMBCjNjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbS9D",
-            "bG91ZENvbnRyb2wST29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vY2xvdWRDb250cm9scy97Y2xvdWRfY29udHJv",
-            "bH0qDWNsb3VkQ29udHJvbHMyDGNsb3VkQ29udHJvbCKOBQoNUGFyYW1ldGVy",
-            "U3BlYxIRCgRuYW1lGAEgASgJQgPgQQISGQoMZGlzcGxheV9uYW1lGAIgASgJ",
-            "QgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIYCgtpc19yZXF1aXJl",
-            "ZBgEIAEoCEID4EECElkKCnZhbHVlX3R5cGUYBSABKA4yQC5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyU3BlYy5W",
-            "YWx1ZVR5cGVCA+BBAhJPCg1kZWZhdWx0X3ZhbHVlGAYgASgLMjMuZ29vZ2xl",
-            "LmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtVmFsdWVC",
-            "A+BBARJjChJzdWJzdGl0dXRpb25fcnVsZXMYByADKAsyQi5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyU3Vic3Rp",
-            "dHV0aW9uUnVsZUID4EEBElMKDnN1Yl9wYXJhbWV0ZXJzGAggAygLMjYuZ29v",
-            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtZXRl",
-            "clNwZWNCA+BBARJMCgp2YWxpZGF0aW9uGAkgASgLMjMuZ29vZ2xlLmNsb3Vk",
-            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlZhbGlkYXRpb25CA+BBASJn",
-            "CglWYWx1ZVR5cGUSGgoWVkFMVUVfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNU",
-            "UklORxADEgsKB0JPT0xFQU4QBBIOCgpTVFJJTkdMSVNUEAUSCgoGTlVNQkVS",
-            "EAYSCQoFT05FT0YQByKGAgoKVmFsaWRhdGlvbhJQCg5hbGxvd2VkX3ZhbHVl",
-            "cxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
-            "ZS52MS5BbGxvd2VkVmFsdWVzSAASRgoJaW50X3JhbmdlGAIgASgLMjEuZ29v",
-            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkludFJhbmdl",
-            "SAASUAoOcmVnZXhwX3BhdHRlcm4YAyABKAsyNi5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUmVnZXhwUGF0dGVybkgAQgwKCmNv",
-            "bnN0cmFpbnQiWQoNQWxsb3dlZFZhbHVlcxJICgZ2YWx1ZXMYASADKAsyMy5n",
-            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1W",
-            "YWx1ZUID4EECIiUKDVJlZ2V4cFBhdHRlcm4SFAoHcGF0dGVybhgBIAEoCUID",
-            "4EECIi4KCEludFJhbmdlEhAKA21pbhgBIAEoA0ID4EECEhAKA21heBgCIAEo",
-            "A0ID4EECIiEKClN0cmluZ0xpc3QSEwoGdmFsdWVzGAEgAygJQgPgQQIi9wEK",
-            "ClBhcmFtVmFsdWUSFgoMc3RyaW5nX3ZhbHVlGAMgASgJSAASFAoKYm9vbF92",
-            "YWx1ZRgEIAEoCEgAElAKEXN0cmluZ19saXN0X3ZhbHVlGAUgASgLMjMuZ29v",
-            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlN0cmluZ0xp",
-            "c3RIABIWCgxudW1iZXJfdmFsdWUYBiABKAFIABJJCgtvbmVvZl92YWx1ZRgH",
-            "IAEoCzIyLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52",
-            "MS5QYXJhbWV0ZXJIAEIGCgRraW5kIooCChlQYXJhbWV0ZXJTdWJzdGl0dXRp",
-            "b25SdWxlEm0KHXBsYWNlaG9sZGVyX3N1YnN0aXR1dGlvbl9ydWxlGAEgASgL",
-            "MkQuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBs",
-            "YWNlaG9sZGVyU3Vic3RpdHV0aW9uUnVsZUgAEmkKG2F0dHJpYnV0ZV9zdWJz",
-            "dGl0dXRpb25fcnVsZRgCIAEoCzJCLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3Vy",
-            "aXR5Y29tcGxpYW5jZS52MS5BdHRyaWJ1dGVTdWJzdGl0dXRpb25SdWxlSABC",
-            "EwoRc3Vic3RpdHV0aW9uX3R5cGUiLgoZQXR0cmlidXRlU3Vic3RpdHV0aW9u",
-            "UnVsZRIRCglhdHRyaWJ1dGUYASABKAkiMAobUGxhY2Vob2xkZXJTdWJzdGl0",
-            "dXRpb25SdWxlEhEKCWF0dHJpYnV0ZRgBIAEoCSLdAQoEUnVsZRJQCg5jZWxf",
-            "ZXhwcmVzc2lvbhgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5",
-            "Y29tcGxpYW5jZS52MS5DRUxFeHByZXNzaW9uSAASGAoLZGVzY3JpcHRpb24Y",
-            "CiABKAlCA+BBARJXChFydWxlX2FjdGlvbl90eXBlcxgQIAMoDjI3Lmdvb2ds",
-            "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5SdWxlQWN0aW9u",
-            "VHlwZUID4EECQhAKDmltcGxlbWVudGF0aW9uIooBCg1DRUxFeHByZXNzaW9u",
-            "ElQKFXJlc291cmNlX3R5cGVzX3ZhbHVlcxgDIAEoCzIzLmdvb2dsZS5jbG91",
-            "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5TdHJpbmdMaXN0SAASFwoK",
-            "ZXhwcmVzc2lvbhgBIAEoCUID4EECQgoKCGNyaXRlcmlhIoACChFPcGVyYXRp",
-            "b25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BB",
-            "AxIRCgR2ZXJiGAQgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlC",
-            "A+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoL",
-            "YXBpX3ZlcnNpb24YByABKAlCA+BBAyI4Cg1Db250cm9sRmFtaWx5EhEKCWZh",
-            "bWlseV9pZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkqgwEKI1JlZ3Vs",
-            "YXRvcnlDb250cm9sUmVzcG9uc2liaWxpdHlUeXBlEjYKMlJFR1VMQVRPUllf",
-            "Q09OVFJPTF9SRVNQT05TSUJJTElUWV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
-            "R09PR0xFEAESDAoIQ1VTVE9NRVIQAhIKCgZTSEFSRUQQAypdCg9FbmZvcmNl",
-            "bWVudE1vZGUSIAocRU5GT1JDRU1FTlRfTU9ERV9VTlNQRUNJRklFRBAAEg4K",
-            "ClBSRVZFTlRJVkUQARINCglERVRFQ1RJVkUQAhIJCgVBVURJVBADKrEBChFG",
-            "cmFtZXdvcmtDYXRlZ29yeRIiCh5GUkFNRVdPUktfQ0FURUdPUllfVU5TUEVD",
-            "SUZJRUQQABIdChlJTkRVU1RSWV9ERUZJTkVEX1NUQU5EQVJEEAESFQoRQVNT",
-            "VVJFRF9XT1JLTE9BRFMQAhIRCg1EQVRBX1NFQ1VSSVRZEAMSGQoVR09PR0xF",
-            "X0JFU1RfUFJBQ1RJQ0VTEAQSFAoQQ1VTVE9NX0ZSQU1FV09SSxAFKvIEChRD",
-            "bG91ZENvbnRyb2xDYXRlZ29yeRImCiJDTE9VRF9DT05UUk9MX0NBVEVHT1JZ",
-            "X1VOU1BFQ0lGSUVEEAASHgoaQ0NfQ0FURUdPUllfSU5GUkFTVFJVQ1RVUkUQ",
-            "ARInCiNDQ19DQVRFR09SWV9BUlRJRklDSUFMX0lOVEVMTElHRU5DRRACEiEK",
-            "HUNDX0NBVEVHT1JZX1BIWVNJQ0FMX1NFQ1VSSVRZEAMSHQoZQ0NfQ0FURUdP",
-            "UllfREFUQV9TRUNVUklUWRAEEiAKHENDX0NBVEVHT1JZX05FVFdPUktfU0VD",
-            "VVJJVFkQBRIjCh9DQ19DQVRFR09SWV9JTkNJREVOVF9NQU5BR0VNRU5UEAYS",
-            "LgoqQ0NfQ0FURUdPUllfSURFTlRJVFlfQU5EX0FDQ0VTU19NQU5BR0VNRU5U",
-            "EAcSGgoWQ0NfQ0FURUdPUllfRU5DUllQVElPThAIEjIKLkNDX0NBVEVHT1JZ",
-            "X0xPR1NfTUFOQUdFTUVOVF9BTkRfSU5GUkFTVFJVQ1RVUkUQCRImCiJDQ19D",
-            "QVRFR09SWV9IUl9BRE1JTl9BTkRfUFJPQ0VTU0VTEAoSOAo0Q0NfQ0FURUdP",
-            "UllfVEhJUkRfUEFSVFlfQU5EX1NVQl9QUk9DRVNTT1JfTUFOQUdFTUVOVBAL",
-            "EiUKIUNDX0NBVEVHT1JZX0xFR0FMX0FORF9ESVNDTE9TVVJFUxAMEigKJEND",
-            "X0NBVEVHT1JZX1ZVTE5FUkFCSUxJVFlfTUFOQUdFTUVOVBANEhcKE0NDX0NB",
-            "VEVHT1JZX1BSSVZBQ1kQDhIUChBDQ19DQVRFR09SWV9CQ0RSEA8qTAoNQ2xv",
-            "dWRQcm92aWRlchIeChpDTE9VRF9QUk9WSURFUl9VTlNQRUNJRklFRBAAEgcK",
-            "A0FXUxABEgkKBUFaVVJFEAISBwoDR0NQEAMqUQoIU2V2ZXJpdHkSGAoUU0VW",
-            "RVJJVFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIK",
-            "CgZNRURJVU0QAxIHCgNMT1cQBCqPAQoOUnVsZUFjdGlvblR5cGUSIAocUlVM",
-            "RV9BQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEh8KG1JVTEVfQUNUSU9OX1RZ",
-            "UEVfUFJFVkVOVElWRRABEh4KGlJVTEVfQUNUSU9OX1RZUEVfREVURUNUSVZF",
-            "EAISGgoWUlVMRV9BQ1RJT05fVFlQRV9BVURJVBADKs0BChJUYXJnZXRSZXNv",
-            "dXJjZVR5cGUSJAogVEFSR0VUX1JFU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABIgChxUQVJHRVRfUkVTT1VSQ0VfQ1JNX1RZUEVfT1JHEAESIwofVEFSR0VU",
-            "X1JFU09VUkNFX0NSTV9UWVBFX0ZPTERFUhACEiQKIFRBUkdFVF9SRVNPVVJD",
-            "RV9DUk1fVFlQRV9QUk9KRUNUEAMSJAogVEFSR0VUX1JFU09VUkNFX1RZUEVf",
-            "QVBQTElDQVRJT04QBEKXAworY29tLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3Vy",
-            "aXR5Y29tcGxpYW5jZS52MUILQ29tbW9uUHJvdG9QAVplY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS9hcGl2MS9jbG91ZHNl",
-            "Y3VyaXR5Y29tcGxpYW5jZXBiO2Nsb3Vkc2VjdXJpdHljb21wbGlhbmNlcGKq",
-            "AidHb29nbGUuQ2xvdWQuQ2xvdWRTZWN1cml0eUNvbXBsaWFuY2UuVjHKAidH",
-            "b29nbGVcQ2xvdWRcQ2xvdWRTZWN1cml0eUNvbXBsaWFuY2VcVjHqAipHb29n",
-            "bGU6OkNsb3VkOjpDbG91ZFNlY3VyaXR5Q29tcGxpYW5jZTo6VjHqQXAKO2Ns",
-            "b3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL09yZ2FuaXph",
-            "dGlvbkxvY2F0aW9uEjFvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259YgZwcm90bzM="));
+            "b3JrfRI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2ZyYW1ld29ya3Mve2ZyYW1ld29ya30qCmZyYW1ld29ya3MyCWZyYW1ld29y",
+            "ayKVAQoTQ2xvdWRDb250cm9sRGV0YWlscxIRCgRuYW1lGAEgASgJQgPgQQIS",
+            "HgoRbWFqb3JfcmV2aXNpb25faWQYAiABKANCA+BBAhJLCgpwYXJhbWV0ZXJz",
+            "GAQgAygLMjIuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNl",
+            "LnYxLlBhcmFtZXRlckID4EEBIpwBChJGcmFtZXdvcmtSZWZlcmVuY2USSwoJ",
+            "ZnJhbWV3b3JrGAEgASgJQjjgQQL6QTIKMGNsb3Vkc2VjdXJpdHljb21wbGlh",
+            "bmNlLmdvb2dsZWFwaXMuY29tL0ZyYW1ld29yaxIjChFtYWpvcl9yZXZpc2lv",
+            "bl9pZBgCIAEoA0ID4EEBSACIAQFCFAoSX21ham9yX3JldmlzaW9uX2lkInEK",
+            "CVBhcmFtZXRlchIRCgRuYW1lGAEgASgJQgPgQQISUQoPcGFyYW1ldGVyX3Zh",
+            "bHVlGAIgASgLMjMuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
+            "bmNlLnYxLlBhcmFtVmFsdWVCA+BBAiKhCQoMQ2xvdWRDb250cm9sEhQKBG5h",
+            "bWUYASABKAlCBuBBAuBBCBIeChFtYWpvcl9yZXZpc2lvbl9pZBgCIAEoA0ID",
+            "4EEDEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQESGQoMZGlzcGxheV9uYW1l",
+            "GAUgASgJQgPgQQESYgobc3VwcG9ydGVkX2VuZm9yY2VtZW50X21vZGVzGAcg",
+            "AygOMjguZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
+            "LkVuZm9yY2VtZW50TW9kZUID4EEDElMKDnBhcmFtZXRlcl9zcGVjGAggAygL",
+            "MjYuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBh",
+            "cmFtZXRlclNwZWNCA+BBARJBCgVydWxlcxgJIAMoCzItLmdvb2dsZS5jbG91",
+            "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5SdWxlQgPgQQESSAoIc2V2",
+            "ZXJpdHkYCyABKA4yMS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UudjEuU2V2ZXJpdHlCA+BBARIdChBmaW5kaW5nX2NhdGVnb3J5GAwg",
+            "ASgJQgPgQQESXgoZc3VwcG9ydGVkX2Nsb3VkX3Byb3ZpZGVycxgNIAMoDjI2",
+            "Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DbG91",
+            "ZFByb3ZpZGVyQgPgQQESHwoScmVsYXRlZF9mcmFtZXdvcmtzGA4gAygJQgPg",
+            "QQMSHgoRcmVtZWRpYXRpb25fc3RlcHMYDyABKAlCA+BBARJWCgpjYXRlZ29y",
+            "aWVzGBAgAygOMj0uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
+            "bmNlLnYxLkNsb3VkQ29udHJvbENhdGVnb3J5QgPgQQESNAoLY3JlYXRlX3Rp",
+            "bWUYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSaQof",
+            "c3VwcG9ydGVkX3RhcmdldF9yZXNvdXJjZV90eXBlcxgSIAMoDjI7Lmdvb2ds",
+            "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5UYXJnZXRSZXNv",
+            "dXJjZVR5cGVCA+BBASI2CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIK",
+            "CgZDVVNUT00QARIMCghCVUlMVF9JThACOu4B6kHqAQozY2xvdWRzZWN1cml0",
+            "eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20vQ2xvdWRDb250cm9sEk9vcmdh",
+            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2Nsb3VkQ29udHJvbHMve2Nsb3VkX2NvbnRyb2x9EkVwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2xvdWRDb250cm9scy97Y2xv",
+            "dWRfY29udHJvbH0qDWNsb3VkQ29udHJvbHMyDGNsb3VkQ29udHJvbCKOBQoN",
+            "UGFyYW1ldGVyU3BlYxIRCgRuYW1lGAEgASgJQgPgQQISGQoMZGlzcGxheV9u",
+            "YW1lGAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIYCgtp",
+            "c19yZXF1aXJlZBgEIAEoCEID4EECElkKCnZhbHVlX3R5cGUYBSABKA4yQC5n",
+            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1l",
+            "dGVyU3BlYy5WYWx1ZVR5cGVCA+BBAhJPCg1kZWZhdWx0X3ZhbHVlGAYgASgL",
+            "MjMuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBh",
+            "cmFtVmFsdWVCA+BBARJjChJzdWJzdGl0dXRpb25fcnVsZXMYByADKAsyQi5n",
+            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1l",
+            "dGVyU3Vic3RpdHV0aW9uUnVsZUID4EEBElMKDnN1Yl9wYXJhbWV0ZXJzGAgg",
+            "AygLMjYuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
+            "LlBhcmFtZXRlclNwZWNCA+BBARJMCgp2YWxpZGF0aW9uGAkgASgLMjMuZ29v",
+            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlZhbGlkYXRp",
+            "b25CA+BBASJnCglWYWx1ZVR5cGUSGgoWVkFMVUVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgoKBlNUUklORxADEgsKB0JPT0xFQU4QBBIOCgpTVFJJTkdMSVNUEAUS",
+            "CgoGTlVNQkVSEAYSCQoFT05FT0YQByKGAgoKVmFsaWRhdGlvbhJQCg5hbGxv",
+            "d2VkX3ZhbHVlcxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5",
+            "Y29tcGxpYW5jZS52MS5BbGxvd2VkVmFsdWVzSAASRgoJaW50X3JhbmdlGAIg",
+            "ASgLMjEuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
+            "LkludFJhbmdlSAASUAoOcmVnZXhwX3BhdHRlcm4YAyABKAsyNi5nb29nbGUu",
+            "Y2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUmVnZXhwUGF0dGVy",
+            "bkgAQgwKCmNvbnN0cmFpbnQiWQoNQWxsb3dlZFZhbHVlcxJICgZ2YWx1ZXMY",
+            "ASADKAsyMy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
+            "djEuUGFyYW1WYWx1ZUID4EECIiUKDVJlZ2V4cFBhdHRlcm4SFAoHcGF0dGVy",
+            "bhgBIAEoCUID4EECIi4KCEludFJhbmdlEhAKA21pbhgBIAEoA0ID4EECEhAK",
+            "A21heBgCIAEoA0ID4EECIiEKClN0cmluZ0xpc3QSEwoGdmFsdWVzGAEgAygJ",
+            "QgPgQQIikAIKClBhcmFtVmFsdWUSGwoMc3RyaW5nX3ZhbHVlGAMgASgJQgPg",
+            "QQFIABIZCgpib29sX3ZhbHVlGAQgASgIQgPgQQFIABJVChFzdHJpbmdfbGlz",
+            "dF92YWx1ZRgFIAEoCzIzLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29t",
+            "cGxpYW5jZS52MS5TdHJpbmdMaXN0QgPgQQFIABIbCgxudW1iZXJfdmFsdWUY",
+            "BiABKAFCA+BBAUgAEk4KC29uZW9mX3ZhbHVlGAcgASgLMjIuZ29vZ2xlLmNs",
+            "b3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtZXRlckID4EEB",
+            "SABCBgoEa2luZCKKAgoZUGFyYW1ldGVyU3Vic3RpdHV0aW9uUnVsZRJtCh1w",
+            "bGFjZWhvbGRlcl9zdWJzdGl0dXRpb25fcnVsZRgBIAEoCzJELmdvb2dsZS5j",
+            "bG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5QbGFjZWhvbGRlclN1",
+            "YnN0aXR1dGlvblJ1bGVIABJpChthdHRyaWJ1dGVfc3Vic3RpdHV0aW9uX3J1",
+            "bGUYAiABKAsyQi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFu",
+            "Y2UudjEuQXR0cmlidXRlU3Vic3RpdHV0aW9uUnVsZUgAQhMKEXN1YnN0aXR1",
+            "dGlvbl90eXBlIi4KGUF0dHJpYnV0ZVN1YnN0aXR1dGlvblJ1bGUSEQoJYXR0",
+            "cmlidXRlGAEgASgJIjAKG1BsYWNlaG9sZGVyU3Vic3RpdHV0aW9uUnVsZRIR",
+            "CglhdHRyaWJ1dGUYASABKAki3QEKBFJ1bGUSUAoOY2VsX2V4cHJlc3Npb24Y",
+            "ASABKAsyNi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
+            "djEuQ0VMRXhwcmVzc2lvbkgAEhgKC2Rlc2NyaXB0aW9uGAogASgJQgPgQQES",
+            "VwoRcnVsZV9hY3Rpb25fdHlwZXMYECADKA4yNy5nb29nbGUuY2xvdWQuY2xv",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUnVsZUFjdGlvblR5cGVCA+BBAkIQ",
+            "Cg5pbXBsZW1lbnRhdGlvbiKKAQoNQ0VMRXhwcmVzc2lvbhJUChVyZXNvdXJj",
+            "ZV90eXBlc192YWx1ZXMYAyABKAsyMy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1",
+            "cml0eWNvbXBsaWFuY2UudjEuU3RyaW5nTGlzdEgAEhcKCmV4cHJlc3Npb24Y",
+            "ASABKAlCA+BBAkIKCghjcml0ZXJpYSKAAgoRT3BlcmF0aW9uTWV0YWRhdGES",
+            "NAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVyYhgE",
+            "IAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVx",
+            "dWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9u",
+            "GAcgASgJQgPgQQMiowgKB0NvbnRyb2wSEQoEbmFtZRgBIAEoCUID4EEDEhkK",
+            "DGRpc3BsYXlfbmFtZRgDIAEoCUID4EEDEhgKC2Rlc2NyaXB0aW9uGAQgASgJ",
+            "QgPgQQMSTAoGZmFtaWx5GAUgASgOMjcuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
+            "dXJpdHljb21wbGlhbmNlLnYxLkNvbnRyb2wuRmFtaWx5QgPgQQMSUwoOY29u",
+            "dHJvbF9mYW1pbHkYBiABKAsyNi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0",
+            "eWNvbXBsaWFuY2UudjEuQ29udHJvbEZhbWlseUID4EEDEm4KE3Jlc3BvbnNp",
+            "YmlsaXR5X3R5cGUYByABKA4yTC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0",
+            "eWNvbXBsaWFuY2UudjEuUmVndWxhdG9yeUNvbnRyb2xSZXNwb25zaWJpbGl0",
+            "eVR5cGVCA+BBAxIuCiFnb29nbGVfcmVzcG9uc2liaWxpdHlfZGVzY3JpcHRp",
+            "b24YCCABKAlCA+BBAxIxCiRnb29nbGVfcmVzcG9uc2liaWxpdHlfaW1wbGVt",
+            "ZW50YXRpb24YCSABKAlCA+BBAxIwCiNjdXN0b21lcl9yZXNwb25zaWJpbGl0",
+            "eV9kZXNjcmlwdGlvbhgKIAEoCUID4EEDEjMKJmN1c3RvbWVyX3Jlc3BvbnNp",
+            "YmlsaXR5X2ltcGxlbWVudGF0aW9uGAsgASgJQgPgQQMSLgohc2hhcmVkX3Jl",
+            "c3BvbnNpYmlsaXR5X2Rlc2NyaXB0aW9uGAwgASgJQgPgQQMSIwoWYWRkaXRp",
+            "b25hbF9jb250ZW50X3VyaRgNIAEoCUID4EEDEh8KEnJlbGF0ZWRfZnJhbWV3",
+            "b3JrcxgOIAMoCUID4EEDIrABCgZGYW1pbHkSFgoSRkFNSUxZX1VOU1BFQ0lG",
+            "SUVEEAASBgoCQUMQARIGCgJBVBACEgYKAkFVEAMSBgoCQ0EQBBIGCgJDTRAF",
+            "EgYKAkNQEAYSBgoCSUEQBxIGCgJJUhAIEgYKAk1BEAkSBgoCTVAQChIGCgJQ",
+            "RRALEgYKAlBMEAwSBgoCUFMQDRIGCgJSQRAOEgYKAlNBEA8SBgoCU0MQEBIG",
+            "CgJTSRAREgYKAlNSEBI6yQHqQcUBCi5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
+            "ZS5nb29nbGVhcGlzLmNvbS9Db250cm9sEkRvcmdhbml6YXRpb25zL3tvcmdh",
+            "bml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbnRyb2xzL3tjb250",
+            "cm9sfRI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2NvbnRyb2xzL3tjb250cm9sfSoIY29udHJvbHMyB2NvbnRyb2wiOAoNQ29u",
+            "dHJvbEZhbWlseRIRCglmYW1pbHlfaWQYASABKAkSFAoMZGlzcGxheV9uYW1l",
+            "GAIgASgJKoMBCiNSZWd1bGF0b3J5Q29udHJvbFJlc3BvbnNpYmlsaXR5VHlw",
+            "ZRI2CjJSRUdVTEFUT1JZX0NPTlRST0xfUkVTUE9OU0lCSUxJVFlfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgoKBkdPT0dMRRABEgwKCENVU1RPTUVSEAISCgoGU0hB",
+            "UkVEEAMqXQoPRW5mb3JjZW1lbnRNb2RlEiAKHEVORk9SQ0VNRU5UX01PREVf",
+            "VU5TUEVDSUZJRUQQABIOCgpQUkVWRU5USVZFEAESDQoJREVURUNUSVZFEAIS",
+            "CQoFQVVESVQQAyqxAQoRRnJhbWV3b3JrQ2F0ZWdvcnkSIgoeRlJBTUVXT1JL",
+            "X0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASHQoZSU5EVVNUUllfREVGSU5FRF9T",
+            "VEFOREFSRBABEhUKEUFTU1VSRURfV09SS0xPQURTEAISEQoNREFUQV9TRUNV",
+            "UklUWRADEhkKFUdPT0dMRV9CRVNUX1BSQUNUSUNFUxAEEhQKEENVU1RPTV9G",
+            "UkFNRVdPUksQBSr+BQoUQ2xvdWRDb250cm9sQ2F0ZWdvcnkSJgoiQ0xPVURf",
+            "Q09OVFJPTF9DQVRFR09SWV9VTlNQRUNJRklFRBAAEh4KGkNDX0NBVEVHT1JZ",
+            "X0lORlJBU1RSVUNUVVJFEAESJwojQ0NfQ0FURUdPUllfQVJUSUZJQ0lBTF9J",
+            "TlRFTExJR0VOQ0UQAhIhCh1DQ19DQVRFR09SWV9QSFlTSUNBTF9TRUNVUklU",
+            "WRADEh0KGUNDX0NBVEVHT1JZX0RBVEFfU0VDVVJJVFkQBBIgChxDQ19DQVRF",
+            "R09SWV9ORVRXT1JLX1NFQ1VSSVRZEAUSIwofQ0NfQ0FURUdPUllfSU5DSURF",
+            "TlRfTUFOQUdFTUVOVBAGEi4KKkNDX0NBVEVHT1JZX0lERU5USVRZX0FORF9B",
+            "Q0NFU1NfTUFOQUdFTUVOVBAHEhoKFkNDX0NBVEVHT1JZX0VOQ1JZUFRJT04Q",
+            "CBIyCi5DQ19DQVRFR09SWV9MT0dTX01BTkFHRU1FTlRfQU5EX0lORlJBU1RS",
+            "VUNUVVJFEAkSJgoiQ0NfQ0FURUdPUllfSFJfQURNSU5fQU5EX1BST0NFU1NF",
+            "UxAKEjgKNENDX0NBVEVHT1JZX1RISVJEX1BBUlRZX0FORF9TVUJfUFJPQ0VT",
+            "U09SX01BTkFHRU1FTlQQCxIlCiFDQ19DQVRFR09SWV9MRUdBTF9BTkRfRElT",
+            "Q0xPU1VSRVMQDBIoCiRDQ19DQVRFR09SWV9WVUxORVJBQklMSVRZX01BTkFH",
+            "RU1FTlQQDRIXChNDQ19DQVRFR09SWV9QUklWQUNZEA4SFAoQQ0NfQ0FURUdP",
+            "UllfQkNEUhAPEhwKGENDX0NBVEVHT1JZX0FETUlOX0FDQ0VTUxAQEh4KGkND",
+            "X0NBVEVHT1JZX0RBVEFfUkVTSURFTkNZEBESKgomQ0NfQ0FURUdPUllfUkVT",
+            "T1VSQ0VfVVNBR0VfUkVTVFJJQ1RJT04QEhIgChxDQ19DQVRFR09SWV9TRVJW",
+            "SUNFX1NQRUNJRklDEBMqTAoNQ2xvdWRQcm92aWRlchIeChpDTE9VRF9QUk9W",
+            "SURFUl9VTlNQRUNJRklFRBAAEgcKA0FXUxABEgkKBUFaVVJFEAISBwoDR0NQ",
+            "EAMqUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIMCghD",
+            "UklUSUNBTBABEggKBEhJR0gQAhIKCgZNRURJVU0QAxIHCgNMT1cQBCqPAQoO",
+            "UnVsZUFjdGlvblR5cGUSIAocUlVMRV9BQ1RJT05fVFlQRV9VTlNQRUNJRklF",
+            "RBAAEh8KG1JVTEVfQUNUSU9OX1RZUEVfUFJFVkVOVElWRRABEh4KGlJVTEVf",
+            "QUNUSU9OX1RZUEVfREVURUNUSVZFEAISGgoWUlVMRV9BQ1RJT05fVFlQRV9B",
+            "VURJVBADKs0BChJUYXJnZXRSZXNvdXJjZVR5cGUSJAogVEFSR0VUX1JFU09V",
+            "UkNFX1RZUEVfVU5TUEVDSUZJRUQQABIgChxUQVJHRVRfUkVTT1VSQ0VfQ1JN",
+            "X1RZUEVfT1JHEAESIwofVEFSR0VUX1JFU09VUkNFX0NSTV9UWVBFX0ZPTERF",
+            "UhACEiQKIFRBUkdFVF9SRVNPVVJDRV9DUk1fVFlQRV9QUk9KRUNUEAMSJAog",
+            "VEFSR0VUX1JFU09VUkNFX1RZUEVfQVBQTElDQVRJT04QBEKXAworY29tLmdv",
+            "b2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MUILQ29tbW9u",
+            "UHJvdG9QAVplY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHNlY3VyaXR5Y29t",
+            "cGxpYW5jZS9hcGl2MS9jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZXBiO2Nsb3Vk",
+            "c2VjdXJpdHljb21wbGlhbmNlcGKqAidHb29nbGUuQ2xvdWQuQ2xvdWRTZWN1",
+            "cml0eUNvbXBsaWFuY2UuVjHKAidHb29nbGVcQ2xvdWRcQ2xvdWRTZWN1cml0",
+            "eUNvbXBsaWFuY2VcVjHqAipHb29nbGU6OkNsb3VkOjpDbG91ZFNlY3VyaXR5",
+            "Q29tcGxpYW5jZTo6VjHqQXAKO2Nsb3Vkc2VjdXJpdHljb21wbGlhbmNlLmdv",
+            "b2dsZWFwaXMuY29tL09yZ2FuaXphdGlvbkxvY2F0aW9uEjFvcmdhbml6YXRp",
+            "b25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259YgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Severity), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -201,6 +233,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Rule), global::Google.Cloud.CloudSecurityCompliance.V1.Rule.Parser, new[]{ "CelExpression", "Description", "RuleActionTypes" }, new[]{ "Implementation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CELExpression), global::Google.Cloud.CloudSecurityCompliance.V1.CELExpression.Parser, new[]{ "ResourceTypesValues", "Expression" }, new[]{ "Criteria" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata), global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Control), global::Google.Cloud.CloudSecurityCompliance.V1.Control.Parser, new[]{ "Name", "DisplayName", "Description", "Family", "ControlFamily", "ResponsibilityType", "GoogleResponsibilityDescription", "GoogleResponsibilityImplementation", "CustomerResponsibilityDescription", "CustomerResponsibilityImplementation", "SharedResponsibilityDescription", "AdditionalContentUri", "RelatedFrameworks" }, null, new[]{ typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily), global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily.Parser, new[]{ "FamilyId", "DisplayName" }, null, null, null, null)
           }));
     }
@@ -350,6 +383,22 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// The business continuity and disaster recovery (BCDR) category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_BCDR")] CcCategoryBcdr = 15,
+    /// <summary>
+    /// The admin access category.
+    /// </summary>
+    [pbr::OriginalName("CC_CATEGORY_ADMIN_ACCESS")] CcCategoryAdminAccess = 16,
+    /// <summary>
+    /// DRZ (Data Residency).
+    /// </summary>
+    [pbr::OriginalName("CC_CATEGORY_DATA_RESIDENCY")] CcCategoryDataResidency = 17,
+    /// <summary>
+    /// RUR (Resource Usage Restriction).
+    /// </summary>
+    [pbr::OriginalName("CC_CATEGORY_RESOURCE_USAGE_RESTRICTION")] CcCategoryResourceUsageRestriction = 18,
+    /// <summary>
+    /// SERVICE SPECIFIC
+    /// </summary>
+    [pbr::OriginalName("CC_CATEGORY_SERVICE_SPECIFIC")] CcCategoryServiceSpecific = 19,
   }
 
   /// <summary>
@@ -547,8 +596,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The name of the framework, in the format
-    /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`.
+    /// Required. Identifier. The name of the framework, in one of the following
+    /// formats:
+    /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+    /// or
+    /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+    ///
     /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1089,8 +1142,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the cloud control, in the format
-    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud-control}`.
+    /// Required. The name of the cloud control, in one of the following formats:
+    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+    /// or
+    /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+    ///
     /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1314,8 +1370,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// The reference of a framework, in the format
-  /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+  /// The reference of a framework, in one of the following formats:
+  /// - `organizations/{organization}/locations/{location}/frameworks/{framework}`
+  /// - `projects/{project}/locations/{location}/frameworks/{framework}`.
+  ///
   /// The only supported location is `global`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1900,8 +1958,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The name of the cloud control, in the format
-    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control_id}`.
+    /// Required. Identifier. The name of the cloud control, in either of the
+    /// formats:
+    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+    /// or
+    /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+    ///
     /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4399,7 +4461,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "string_value" field.</summary>
     public const int StringValueFieldNumber = 3;
     /// <summary>
-    /// A string value.
+    /// Optional. A string value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4428,7 +4490,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "bool_value" field.</summary>
     public const int BoolValueFieldNumber = 4;
     /// <summary>
-    /// A boolean value.
+    /// Optional. A boolean value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4457,7 +4519,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "string_list_value" field.</summary>
     public const int StringListValueFieldNumber = 5;
     /// <summary>
-    /// A repeated string.
+    /// Optional. A repeated string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4472,7 +4534,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "number_value" field.</summary>
     public const int NumberValueFieldNumber = 6;
     /// <summary>
-    /// A double value.
+    /// Optional. A double value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4501,7 +4563,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "oneof_value" field.</summary>
     public const int OneofValueFieldNumber = 7;
     /// <summary>
-    /// Sub-parameter values.
+    /// Optional. Sub-parameter values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6593,6 +6655,789 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
+  /// The regulatory control.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Control : pb::IMessage<Control>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Control> _parser = new pb::MessageParser<Control>(() => new Control());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Control> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Control() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Control(Control other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      family_ = other.family_;
+      controlFamily_ = other.controlFamily_ != null ? other.controlFamily_.Clone() : null;
+      responsibilityType_ = other.responsibilityType_;
+      googleResponsibilityDescription_ = other.googleResponsibilityDescription_;
+      googleResponsibilityImplementation_ = other.googleResponsibilityImplementation_;
+      customerResponsibilityDescription_ = other.customerResponsibilityDescription_;
+      customerResponsibilityImplementation_ = other.customerResponsibilityImplementation_;
+      sharedResponsibilityDescription_ = other.sharedResponsibilityDescription_;
+      additionalContentUri_ = other.additionalContentUri_;
+      relatedFrameworks_ = other.relatedFrameworks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Control Clone() {
+      return new Control(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The name of a regulatory control, in one of the following
+    /// formats:
+    /// - `organizations/{organization}/locations/{location}/controls/{control}`
+    /// - `projects/{project}/locations/{location}/controls/{control}`.
+    ///
+    /// The only supported location is `global`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// Output only. The friendly name for the regulatory control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 4;
+    private string description_ = "";
+    /// <summary>
+    /// Output only. The description of the regulatory control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "family" field.</summary>
+    public const int FamilyFieldNumber = 5;
+    private global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family family_ = global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified;
+    /// <summary>
+    /// Output only. The regulatory group that the control belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family Family {
+      get { return family_; }
+      set {
+        family_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "control_family" field.</summary>
+    public const int ControlFamilyFieldNumber = 6;
+    private global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily controlFamily_;
+    /// <summary>
+    /// Output only. The regulatory family that the control belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily ControlFamily {
+      get { return controlFamily_; }
+      set {
+        controlFamily_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "responsibility_type" field.</summary>
+    public const int ResponsibilityTypeFieldNumber = 7;
+    private global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType responsibilityType_ = global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified;
+    /// <summary>
+    /// Output only. The entity that's responsible for the control, whether Google,
+    /// you as the customer, or both.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType ResponsibilityType {
+      get { return responsibilityType_; }
+      set {
+        responsibilityType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "google_responsibility_description" field.</summary>
+    public const int GoogleResponsibilityDescriptionFieldNumber = 8;
+    private string googleResponsibilityDescription_ = "";
+    /// <summary>
+    /// Output only. A description of Google's responsibility for the regulatory
+    /// control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GoogleResponsibilityDescription {
+      get { return googleResponsibilityDescription_; }
+      set {
+        googleResponsibilityDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "google_responsibility_implementation" field.</summary>
+    public const int GoogleResponsibilityImplementationFieldNumber = 9;
+    private string googleResponsibilityImplementation_ = "";
+    /// <summary>
+    /// Output only. A description of Google's responsibility for implementing the
+    /// regulatory control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GoogleResponsibilityImplementation {
+      get { return googleResponsibilityImplementation_; }
+      set {
+        googleResponsibilityImplementation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "customer_responsibility_description" field.</summary>
+    public const int CustomerResponsibilityDescriptionFieldNumber = 10;
+    private string customerResponsibilityDescription_ = "";
+    /// <summary>
+    /// Output only. A description of your responsibility for the regulatory
+    /// control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomerResponsibilityDescription {
+      get { return customerResponsibilityDescription_; }
+      set {
+        customerResponsibilityDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "customer_responsibility_implementation" field.</summary>
+    public const int CustomerResponsibilityImplementationFieldNumber = 11;
+    private string customerResponsibilityImplementation_ = "";
+    /// <summary>
+    /// Output only. A description of the your responsibility for implementing the
+    /// regulatory control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomerResponsibilityImplementation {
+      get { return customerResponsibilityImplementation_; }
+      set {
+        customerResponsibilityImplementation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shared_responsibility_description" field.</summary>
+    public const int SharedResponsibilityDescriptionFieldNumber = 12;
+    private string sharedResponsibilityDescription_ = "";
+    /// <summary>
+    /// Output only. A description of the responsibility that's shared between
+    /// Google and you in implementing this control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SharedResponsibilityDescription {
+      get { return sharedResponsibilityDescription_; }
+      set {
+        sharedResponsibilityDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "additional_content_uri" field.</summary>
+    public const int AdditionalContentUriFieldNumber = 13;
+    private string additionalContentUri_ = "";
+    /// <summary>
+    /// Output only. A link to the documentation that's related to this control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdditionalContentUri {
+      get { return additionalContentUri_; }
+      set {
+        additionalContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "related_frameworks" field.</summary>
+    public const int RelatedFrameworksFieldNumber = 14;
+    private static readonly pb::FieldCodec<string> _repeated_relatedFrameworks_codec
+        = pb::FieldCodec.ForString(114);
+    private readonly pbc::RepeatedField<string> relatedFrameworks_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The frameworks that include this control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RelatedFrameworks {
+      get { return relatedFrameworks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Control);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Control other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      if (Family != other.Family) return false;
+      if (!object.Equals(ControlFamily, other.ControlFamily)) return false;
+      if (ResponsibilityType != other.ResponsibilityType) return false;
+      if (GoogleResponsibilityDescription != other.GoogleResponsibilityDescription) return false;
+      if (GoogleResponsibilityImplementation != other.GoogleResponsibilityImplementation) return false;
+      if (CustomerResponsibilityDescription != other.CustomerResponsibilityDescription) return false;
+      if (CustomerResponsibilityImplementation != other.CustomerResponsibilityImplementation) return false;
+      if (SharedResponsibilityDescription != other.SharedResponsibilityDescription) return false;
+      if (AdditionalContentUri != other.AdditionalContentUri) return false;
+      if(!relatedFrameworks_.Equals(other.relatedFrameworks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Family != global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified) hash ^= Family.GetHashCode();
+      if (controlFamily_ != null) hash ^= ControlFamily.GetHashCode();
+      if (ResponsibilityType != global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified) hash ^= ResponsibilityType.GetHashCode();
+      if (GoogleResponsibilityDescription.Length != 0) hash ^= GoogleResponsibilityDescription.GetHashCode();
+      if (GoogleResponsibilityImplementation.Length != 0) hash ^= GoogleResponsibilityImplementation.GetHashCode();
+      if (CustomerResponsibilityDescription.Length != 0) hash ^= CustomerResponsibilityDescription.GetHashCode();
+      if (CustomerResponsibilityImplementation.Length != 0) hash ^= CustomerResponsibilityImplementation.GetHashCode();
+      if (SharedResponsibilityDescription.Length != 0) hash ^= SharedResponsibilityDescription.GetHashCode();
+      if (AdditionalContentUri.Length != 0) hash ^= AdditionalContentUri.GetHashCode();
+      hash ^= relatedFrameworks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (Family != global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Family);
+      }
+      if (controlFamily_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ControlFamily);
+      }
+      if (ResponsibilityType != global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ResponsibilityType);
+      }
+      if (GoogleResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(GoogleResponsibilityDescription);
+      }
+      if (GoogleResponsibilityImplementation.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(GoogleResponsibilityImplementation);
+      }
+      if (CustomerResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomerResponsibilityDescription);
+      }
+      if (CustomerResponsibilityImplementation.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CustomerResponsibilityImplementation);
+      }
+      if (SharedResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(SharedResponsibilityDescription);
+      }
+      if (AdditionalContentUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(AdditionalContentUri);
+      }
+      relatedFrameworks_.WriteTo(output, _repeated_relatedFrameworks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (Family != global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Family);
+      }
+      if (controlFamily_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ControlFamily);
+      }
+      if (ResponsibilityType != global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ResponsibilityType);
+      }
+      if (GoogleResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(GoogleResponsibilityDescription);
+      }
+      if (GoogleResponsibilityImplementation.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(GoogleResponsibilityImplementation);
+      }
+      if (CustomerResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomerResponsibilityDescription);
+      }
+      if (CustomerResponsibilityImplementation.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CustomerResponsibilityImplementation);
+      }
+      if (SharedResponsibilityDescription.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(SharedResponsibilityDescription);
+      }
+      if (AdditionalContentUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(AdditionalContentUri);
+      }
+      relatedFrameworks_.WriteTo(ref output, _repeated_relatedFrameworks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Family != global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Family);
+      }
+      if (controlFamily_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ControlFamily);
+      }
+      if (ResponsibilityType != global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponsibilityType);
+      }
+      if (GoogleResponsibilityDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleResponsibilityDescription);
+      }
+      if (GoogleResponsibilityImplementation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleResponsibilityImplementation);
+      }
+      if (CustomerResponsibilityDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerResponsibilityDescription);
+      }
+      if (CustomerResponsibilityImplementation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerResponsibilityImplementation);
+      }
+      if (SharedResponsibilityDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SharedResponsibilityDescription);
+      }
+      if (AdditionalContentUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdditionalContentUri);
+      }
+      size += relatedFrameworks_.CalculateSize(_repeated_relatedFrameworks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Control other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Family != global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family.Unspecified) {
+        Family = other.Family;
+      }
+      if (other.controlFamily_ != null) {
+        if (controlFamily_ == null) {
+          ControlFamily = new global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily();
+        }
+        ControlFamily.MergeFrom(other.ControlFamily);
+      }
+      if (other.ResponsibilityType != global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType.Unspecified) {
+        ResponsibilityType = other.ResponsibilityType;
+      }
+      if (other.GoogleResponsibilityDescription.Length != 0) {
+        GoogleResponsibilityDescription = other.GoogleResponsibilityDescription;
+      }
+      if (other.GoogleResponsibilityImplementation.Length != 0) {
+        GoogleResponsibilityImplementation = other.GoogleResponsibilityImplementation;
+      }
+      if (other.CustomerResponsibilityDescription.Length != 0) {
+        CustomerResponsibilityDescription = other.CustomerResponsibilityDescription;
+      }
+      if (other.CustomerResponsibilityImplementation.Length != 0) {
+        CustomerResponsibilityImplementation = other.CustomerResponsibilityImplementation;
+      }
+      if (other.SharedResponsibilityDescription.Length != 0) {
+        SharedResponsibilityDescription = other.SharedResponsibilityDescription;
+      }
+      if (other.AdditionalContentUri.Length != 0) {
+        AdditionalContentUri = other.AdditionalContentUri;
+      }
+      relatedFrameworks_.Add(other.relatedFrameworks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Family = (global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (controlFamily_ == null) {
+              ControlFamily = new global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily();
+            }
+            input.ReadMessage(ControlFamily);
+            break;
+          }
+          case 56: {
+            ResponsibilityType = (global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            GoogleResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 74: {
+            GoogleResponsibilityImplementation = input.ReadString();
+            break;
+          }
+          case 82: {
+            CustomerResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 90: {
+            CustomerResponsibilityImplementation = input.ReadString();
+            break;
+          }
+          case 98: {
+            SharedResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 106: {
+            AdditionalContentUri = input.ReadString();
+            break;
+          }
+          case 114: {
+            relatedFrameworks_.AddEntriesFrom(input, _repeated_relatedFrameworks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Family = (global::Google.Cloud.CloudSecurityCompliance.V1.Control.Types.Family) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (controlFamily_ == null) {
+              ControlFamily = new global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily();
+            }
+            input.ReadMessage(ControlFamily);
+            break;
+          }
+          case 56: {
+            ResponsibilityType = (global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            GoogleResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 74: {
+            GoogleResponsibilityImplementation = input.ReadString();
+            break;
+          }
+          case 82: {
+            CustomerResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 90: {
+            CustomerResponsibilityImplementation = input.ReadString();
+            break;
+          }
+          case 98: {
+            SharedResponsibilityDescription = input.ReadString();
+            break;
+          }
+          case 106: {
+            AdditionalContentUri = input.ReadString();
+            break;
+          }
+          case 114: {
+            relatedFrameworks_.AddEntriesFrom(ref input, _repeated_relatedFrameworks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Control message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The regulatory control family.
+      /// </summary>
+      public enum Family {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("FAMILY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Access control
+        /// </summary>
+        [pbr::OriginalName("AC")] Ac = 1,
+        /// <summary>
+        /// Awareness and araining
+        /// </summary>
+        [pbr::OriginalName("AT")] At = 2,
+        /// <summary>
+        /// Audit and accountability
+        /// </summary>
+        [pbr::OriginalName("AU")] Au = 3,
+        /// <summary>
+        /// Certification, accreditation, and security assessments
+        /// </summary>
+        [pbr::OriginalName("CA")] Ca = 4,
+        /// <summary>
+        /// Configuration management
+        /// </summary>
+        [pbr::OriginalName("CM")] Cm = 5,
+        /// <summary>
+        /// Contingency planning
+        /// </summary>
+        [pbr::OriginalName("CP")] Cp = 6,
+        /// <summary>
+        /// Identification and authentication
+        /// </summary>
+        [pbr::OriginalName("IA")] Ia = 7,
+        /// <summary>
+        /// Incident response
+        /// </summary>
+        [pbr::OriginalName("IR")] Ir = 8,
+        /// <summary>
+        /// Maintenance
+        /// </summary>
+        [pbr::OriginalName("MA")] Ma = 9,
+        /// <summary>
+        /// Media protection
+        /// </summary>
+        [pbr::OriginalName("MP")] Mp = 10,
+        /// <summary>
+        /// Physical and environmental protection
+        /// </summary>
+        [pbr::OriginalName("PE")] Pe = 11,
+        /// <summary>
+        /// Security planning
+        /// </summary>
+        [pbr::OriginalName("PL")] Pl = 12,
+        /// <summary>
+        /// Personnel aecurity
+        /// </summary>
+        [pbr::OriginalName("PS")] Ps = 13,
+        /// <summary>
+        /// Risk assessment
+        /// </summary>
+        [pbr::OriginalName("RA")] Ra = 14,
+        /// <summary>
+        /// System services and acquisition
+        /// </summary>
+        [pbr::OriginalName("SA")] Sa = 15,
+        /// <summary>
+        /// System and communications protection
+        /// </summary>
+        [pbr::OriginalName("SC")] Sc = 16,
+        /// <summary>
+        /// System and information integrity
+        /// </summary>
+        [pbr::OriginalName("SI")] Si = 17,
+        /// <summary>
+        /// Supply chain risk management
+        /// </summary>
+        [pbr::OriginalName("SR")] Sr = 18,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The regulatory family of the control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6610,7 +7455,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

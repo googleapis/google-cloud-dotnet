@@ -16,7 +16,8 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened_resourceNames]
+    // [START cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened_resourceNames2]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -31,12 +32,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateFrameworkDeploymentResourceNamesAsync()
+        public async Task CreateFrameworkDeploymentResourceNames2Async()
         {
             // Create client
             DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             FrameworkDeployment frameworkDeployment = new FrameworkDeployment();
             string frameworkDeploymentId = "";
             // Make the request
@@ -59,5 +60,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened_resourceNames]
+    // [END cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened_resourceNames2]
 }

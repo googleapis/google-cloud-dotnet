@@ -16,15 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync]
+    // [START cloudsecuritycompliance_v1_generated_Config_ListFrameworks_async_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using System;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedMonitoringClientSnippets
+    public sealed partial class GeneratedConfigClientSnippets
     {
-        /// <summary>Snippet for ListFrameworkComplianceSummaries</summary>
+        /// <summary>Snippet for ListFrameworksAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,33 +33,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListFrameworkComplianceSummariesRequestObject()
+        public async Task ListFrameworksResourceNames2Async()
         {
             // Create client
-            MonitoringClient monitoringClient = MonitoringClient.Create();
+            ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
-            ListFrameworkComplianceSummariesRequest request = new ListFrameworkComplianceSummariesRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                View = FrameworkComplianceSummaryView.Unspecified,
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListFrameworkComplianceSummariesResponse, FrameworkComplianceSummary> response = monitoringClient.ListFrameworkComplianceSummaries(request);
+            PagedAsyncEnumerable<ListFrameworksResponse, Framework> response = configClient.ListFrameworksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (FrameworkComplianceSummary item in response)
+            await foreach (Framework item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFrameworkComplianceSummariesResponse page in response.AsRawResponses())
+            await foreach (ListFrameworksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (FrameworkComplianceSummary item in page)
+                foreach (Framework item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -67,10 +63,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<FrameworkComplianceSummary> singlePage = response.ReadPage(pageSize);
+            Page<Framework> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (FrameworkComplianceSummary item in singlePage)
+            foreach (Framework item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -79,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync]
+    // [END cloudsecuritycompliance_v1_generated_Config_ListFrameworks_async_flattened_resourceNames2]
 }

@@ -34,33 +34,33 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             {
                 {
                     "google.cloud.location.Locations.GetLocation",
-                    // { "get": "/v1/{name=organizations/*/locations/*}" }
-                    proto::ByteString.FromBase64("EiYvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfQ==")
+                    // { "get": "/v1/{name=organizations/*/locations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*}" } ] }
+                    proto::ByteString.FromBase64("EiYvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfVojEiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
                 },
                 {
                     "google.cloud.location.Locations.ListLocations",
-                    // { "get": "/v1/{name=organizations/*}/locations" }
-                    proto::ByteString.FromBase64("EiQvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qfS9sb2NhdGlvbnM=")
+                    // { "get": "/v1/{name=organizations/*}/locations", "additionalBindings": [ { "get": "/v1/{name=projects/*}/locations" } ] }
+                    proto::ByteString.FromBase64("EiQvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qfS9sb2NhdGlvbnNaIRIfL3YxL3tuYW1lPXByb2plY3RzLyp9L2xvY2F0aW9ucw==")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1/{name=organizations/*/locations/*/operations/*}:cancel", "body": "*" }
-                    proto::ByteString.FromBase64("IjovdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                    // { "post": "/v1/{name=organizations/*/locations/*/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IjovdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWjoiNS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
-                    // { "delete": "/v1/{name=organizations/*/locations/*/operations/*}" }
-                    proto::ByteString.FromBase64("KjMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                    // { "delete": "/v1/{name=organizations/*/locations/*/operations/*}", "additionalBindings": [ { "delete": "/v1/{name=projects/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("KjMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aMCouL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=organizations/*/locations/*/operations/*}" }
-                    proto::ByteString.FromBase64("EjMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                    // { "get": "/v1/{name=organizations/*/locations/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EjMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
-                    // { "get": "/v1/{name=organizations/*/locations/*}/operations" }
-                    proto::ByteString.FromBase64("EjEvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9vcGVyYXRpb25z")
+                    // { "get": "/v1/{name=organizations/*/locations/*}/operations", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*}/operations" } ] }
+                    proto::ByteString.FromBase64("EjEvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9vcGVyYXRpb25zWi4SLC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9vcGVyYXRpb25z")
                 },
             });
 

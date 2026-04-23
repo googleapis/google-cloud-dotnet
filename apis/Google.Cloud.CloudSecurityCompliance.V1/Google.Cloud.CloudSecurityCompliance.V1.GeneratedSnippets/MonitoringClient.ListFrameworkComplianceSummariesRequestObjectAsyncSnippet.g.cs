@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                View = FrameworkComplianceSummaryView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListFrameworkComplianceSummariesResponse, FrameworkComplianceSummary> response = monitoringClient.ListFrameworkComplianceSummariesAsync(request);

@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_sync]
+    // [START cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened_resourceNames1]
     using Google.Cloud.CloudSecurityCompliance.V1;
-    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedMonitoringClientSnippets
+    public sealed partial class GeneratedConfigClientSnippets
     {
-        /// <summary>Snippet for FetchFrameworkComplianceReport</summary>
+        /// <summary>Snippet for CreateCloudControlAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void FetchFrameworkComplianceReportRequestObject()
+        public async Task CreateCloudControlResourceNames1Async()
         {
             // Create client
-            MonitoringClient monitoringClient = MonitoringClient.Create();
+            ConfigClient configClient = await ConfigClient.CreateAsync();
             // Initialize request argument(s)
-            FetchFrameworkComplianceReportRequest request = new FetchFrameworkComplianceReportRequest
-            {
-                FrameworkComplianceReportName = FrameworkComplianceReportName.FromProjectLocationFrameworkComplianceReport("[PROJECT]", "[LOCATION]", "[FRAMEWORK_COMPLIANCE_REPORT]"),
-                EndTime = new Timestamp(),
-                Filter = "",
-            };
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            CloudControl cloudControl = new CloudControl();
+            string cloudControlId = "";
             // Make the request
-            FrameworkComplianceReport response = monitoringClient.FetchFrameworkComplianceReport(request);
+            CloudControl response = await configClient.CreateCloudControlAsync(parent, cloudControl, cloudControlId);
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_sync]
+    // [END cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened_resourceNames1]
 }

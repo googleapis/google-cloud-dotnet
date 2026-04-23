@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
@@ -387,8 +388,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -425,8 +428,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -463,8 +468,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -501,8 +508,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -520,6 +529,86 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             ListFrameworksRequest request = new ListFrameworksRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFrameworksAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the frameworks (both built-in and custom) that are available within
+        /// the parent resource. The latest major version of each framework is
+        /// returned.
+        /// This method supports pagination.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Framework"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFrameworksResponse, Framework> ListFrameworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFrameworksRequest request = new ListFrameworksRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFrameworks(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the frameworks (both built-in and custom) that are available within
+        /// the parent resource. The latest major version of each framework is
+        /// returned.
+        /// This method supports pagination.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Framework"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFrameworksResponse, Framework> ListFrameworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFrameworksRequest request = new ListFrameworksRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -579,8 +668,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -599,8 +692,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -619,8 +716,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -636,8 +737,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -656,8 +761,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -676,8 +785,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the framework to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+        /// Required. The name of the framework to retrieve, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -724,8 +837,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -751,8 +866,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -778,8 +895,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -800,8 +919,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -827,8 +948,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -854,8 +977,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="framework">
@@ -868,6 +993,88 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Framework> CreateFrameworkAsync(OrganizationLocationName parent, Framework framework, string frameworkId, st::CancellationToken cancellationToken) =>
+            CreateFrameworkAsync(parent, framework, frameworkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom framework in a given parent resource.
+        /// You can't create built-in frameworks because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="framework">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="frameworkId">
+        /// Required. The identifier (ID) of the framework. The ID is not the full name
+        /// of the framework; it's the last part of the full name of the framework.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Framework CreateFramework(gagr::LocationName parent, Framework framework, string frameworkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFramework(new CreateFrameworkRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FrameworkId = gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkId, nameof(frameworkId)),
+                Framework = gax::GaxPreconditions.CheckNotNull(framework, nameof(framework)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom framework in a given parent resource.
+        /// You can't create built-in frameworks because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="framework">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="frameworkId">
+        /// Required. The identifier (ID) of the framework. The ID is not the full name
+        /// of the framework; it's the last part of the full name of the framework.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Framework> CreateFrameworkAsync(gagr::LocationName parent, Framework framework, string frameworkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFrameworkAsync(new CreateFrameworkRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FrameworkId = gax::GaxPreconditions.CheckNotNullOrEmpty(frameworkId, nameof(frameworkId)),
+                Framework = gax::GaxPreconditions.CheckNotNull(framework, nameof(framework)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom framework in a given parent resource.
+        /// You can't create built-in frameworks because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="framework">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="frameworkId">
+        /// Required. The identifier (ID) of the framework. The ID is not the full name
+        /// of the framework; it's the last part of the full name of the framework.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Framework> CreateFrameworkAsync(gagr::LocationName parent, Framework framework, string frameworkId, st::CancellationToken cancellationToken) =>
             CreateFrameworkAsync(parent, framework, frameworkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1080,8 +1287,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1102,8 +1312,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1124,8 +1337,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1143,8 +1359,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1165,8 +1384,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1187,8 +1409,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted framework. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the resource, in the format
-        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+        /// Required. The name of the resource, in one of the following formats:
+        /// `organizations/{organization}/locations/{location}/frameworks/{framework}`
+        /// or
+        /// `projects/{project}/locations/{location}/frameworks/{framework}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1227,8 +1452,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -1265,8 +1492,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -1303,8 +1532,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -1341,8 +1572,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// This method supports pagination.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="pageToken">
@@ -1360,6 +1593,86 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             ListCloudControlsRequest request = new ListCloudControlsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCloudControlsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the cloud controls (both built-in and custom) that are available
+        /// in a given parent resource. The latest major version of each cloud control
+        /// is returned.
+        /// This method supports pagination.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CloudControl"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCloudControlsResponse, CloudControl> ListCloudControls(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCloudControlsRequest request = new ListCloudControlsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCloudControls(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the cloud controls (both built-in and custom) that are available
+        /// in a given parent resource. The latest major version of each cloud control
+        /// is returned.
+        /// This method supports pagination.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CloudControl"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCloudControlsResponse, CloudControl> ListCloudControlsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCloudControlsRequest request = new ListCloudControlsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -1427,8 +1740,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1449,8 +1766,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1471,8 +1792,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1490,8 +1815,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1512,8 +1841,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1534,8 +1867,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to retrieve, in the format
-        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+        /// Required. The name of the cloud control to retrieve, in one of the
+        /// following formats:
+        /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`
+        /// or
+        /// `projects/{project}/locations/{location}/cloudControls/{cloud_control}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1586,8 +1923,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1615,8 +1954,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1644,8 +1985,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1668,8 +2011,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1697,8 +2042,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1726,8 +2073,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Google.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, in the format
-        /// `organizations/{organization}/locations/{location}`.
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cloudControl">
@@ -1741,6 +2090,94 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CloudControl> CreateCloudControlAsync(OrganizationLocationName parent, CloudControl cloudControl, string cloudControlId, st::CancellationToken cancellationToken) =>
+            CreateCloudControlAsync(parent, cloudControl, cloudControlId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom cloud control in a given parent
+        /// resource.
+        /// You can't create built-in cloud controls because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="cloudControl">
+        /// Required. The cloud control that's being created.
+        /// </param>
+        /// <param name="cloudControlId">
+        /// Required. The identifier for the cloud control, which is the last segment
+        /// of the cloud control name. The format is
+        /// `^[a-zA-Z][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CloudControl CreateCloudControl(gagr::LocationName parent, CloudControl cloudControl, string cloudControlId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCloudControl(new CreateCloudControlRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CloudControlId = gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlId, nameof(cloudControlId)),
+                CloudControl = gax::GaxPreconditions.CheckNotNull(cloudControl, nameof(cloudControl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom cloud control in a given parent
+        /// resource.
+        /// You can't create built-in cloud controls because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="cloudControl">
+        /// Required. The cloud control that's being created.
+        /// </param>
+        /// <param name="cloudControlId">
+        /// Required. The identifier for the cloud control, which is the last segment
+        /// of the cloud control name. The format is
+        /// `^[a-zA-Z][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CloudControl> CreateCloudControlAsync(gagr::LocationName parent, CloudControl cloudControl, string cloudControlId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCloudControlAsync(new CreateCloudControlRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CloudControlId = gax::GaxPreconditions.CheckNotNullOrEmpty(cloudControlId, nameof(cloudControlId)),
+                CloudControl = gax::GaxPreconditions.CheckNotNull(cloudControl, nameof(cloudControl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom cloud control in a given parent
+        /// resource.
+        /// You can't create built-in cloud controls because those are managed by
+        /// Google.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in one of the following formats:
+        /// - `organizations/{organization}/locations/{location}`.
+        /// - `projects/{project}/locations/{location}`.
+        /// 
+        /// The only supported location is `global`.
+        /// </param>
+        /// <param name="cloudControl">
+        /// Required. The cloud control that's being created.
+        /// </param>
+        /// <param name="cloudControlId">
+        /// Required. The identifier for the cloud control, which is the last segment
+        /// of the cloud control name. The format is
+        /// `^[a-zA-Z][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CloudControl> CreateCloudControlAsync(gagr::LocationName parent, CloudControl cloudControl, string cloudControlId, st::CancellationToken cancellationToken) =>
             CreateCloudControlAsync(parent, cloudControl, cloudControlId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1984,8 +2421,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2007,8 +2448,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2030,8 +2475,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2050,8 +2499,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2073,8 +2526,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2096,8 +2553,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// - You can't restore a deleted cloud control. This action is permanent.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the cloud control to delete, in the format
-        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+        /// Required. The name of the cloud control to delete, in one of the following
+        /// formats:
+        /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`
+        /// or
+        /// `projects/{project}/locations/{location}/CloudControls/{CloudControl}`.
+        /// 
         /// The only supported location is `global`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

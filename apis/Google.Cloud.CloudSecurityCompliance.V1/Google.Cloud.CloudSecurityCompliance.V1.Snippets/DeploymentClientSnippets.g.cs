@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudSecurityCompliance.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -159,7 +160,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateFrameworkDeployment</summary>
-        public void CreateFrameworkDeploymentResourceNames()
+        public void CreateFrameworkDeploymentResourceNames1()
         {
             // Snippet: CreateFrameworkDeployment(OrganizationLocationName, FrameworkDeployment, string, CallSettings)
             // Create client
@@ -190,7 +191,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateFrameworkDeploymentAsync</summary>
-        public async Task CreateFrameworkDeploymentResourceNamesAsync()
+        public async Task CreateFrameworkDeploymentResourceNames1Async()
         {
             // Snippet: CreateFrameworkDeploymentAsync(OrganizationLocationName, FrameworkDeployment, string, CallSettings)
             // Additional: CreateFrameworkDeploymentAsync(OrganizationLocationName, FrameworkDeployment, string, CancellationToken)
@@ -198,6 +199,69 @@ namespace GoogleCSharpSnippets
             DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            FrameworkDeployment frameworkDeployment = new FrameworkDeployment();
+            string frameworkDeploymentId = "";
+            // Make the request
+            Operation<FrameworkDeployment, OperationMetadata> response = await deploymentClient.CreateFrameworkDeploymentAsync(parent, frameworkDeployment, frameworkDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FrameworkDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FrameworkDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FrameworkDeployment, OperationMetadata> retrievedResponse = await deploymentClient.PollOnceCreateFrameworkDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FrameworkDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFrameworkDeployment</summary>
+        public void CreateFrameworkDeploymentResourceNames2()
+        {
+            // Snippet: CreateFrameworkDeployment(LocationName, FrameworkDeployment, string, CallSettings)
+            // Create client
+            DeploymentClient deploymentClient = DeploymentClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            FrameworkDeployment frameworkDeployment = new FrameworkDeployment();
+            string frameworkDeploymentId = "";
+            // Make the request
+            Operation<FrameworkDeployment, OperationMetadata> response = deploymentClient.CreateFrameworkDeployment(parent, frameworkDeployment, frameworkDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FrameworkDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FrameworkDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FrameworkDeployment, OperationMetadata> retrievedResponse = deploymentClient.PollOnceCreateFrameworkDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FrameworkDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFrameworkDeploymentAsync</summary>
+        public async Task CreateFrameworkDeploymentResourceNames2Async()
+        {
+            // Snippet: CreateFrameworkDeploymentAsync(LocationName, FrameworkDeployment, string, CallSettings)
+            // Additional: CreateFrameworkDeploymentAsync(LocationName, FrameworkDeployment, string, CancellationToken)
+            // Create client
+            DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             FrameworkDeployment frameworkDeployment = new FrameworkDeployment();
             string frameworkDeploymentId = "";
             // Make the request
@@ -684,7 +748,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListFrameworkDeployments</summary>
-        public void ListFrameworkDeploymentsResourceNames()
+        public void ListFrameworkDeploymentsResourceNames1()
         {
             // Snippet: ListFrameworkDeployments(OrganizationLocationName, string, int?, CallSettings)
             // Create client
@@ -729,13 +793,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListFrameworkDeploymentsAsync</summary>
-        public async Task ListFrameworkDeploymentsResourceNamesAsync()
+        public async Task ListFrameworkDeploymentsResourceNames1Async()
         {
             // Snippet: ListFrameworkDeploymentsAsync(OrganizationLocationName, string, int?, CallSettings)
             // Create client
             DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> response = deploymentClient.ListFrameworkDeploymentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (FrameworkDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListFrameworkDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FrameworkDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FrameworkDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FrameworkDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFrameworkDeployments</summary>
+        public void ListFrameworkDeploymentsResourceNames2()
+        {
+            // Snippet: ListFrameworkDeployments(LocationName, string, int?, CallSettings)
+            // Create client
+            DeploymentClient deploymentClient = DeploymentClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> response = deploymentClient.ListFrameworkDeployments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FrameworkDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFrameworkDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FrameworkDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FrameworkDeployment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FrameworkDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFrameworkDeploymentsAsync</summary>
+        public async Task ListFrameworkDeploymentsResourceNames2Async()
+        {
+            // Snippet: ListFrameworkDeploymentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListFrameworkDeploymentsResponse, FrameworkDeployment> response = deploymentClient.ListFrameworkDeploymentsAsync(parent);
 
@@ -1051,7 +1205,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListCloudControlDeployments</summary>
-        public void ListCloudControlDeploymentsResourceNames()
+        public void ListCloudControlDeploymentsResourceNames1()
         {
             // Snippet: ListCloudControlDeployments(OrganizationLocationName, string, int?, CallSettings)
             // Create client
@@ -1096,13 +1250,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListCloudControlDeploymentsAsync</summary>
-        public async Task ListCloudControlDeploymentsResourceNamesAsync()
+        public async Task ListCloudControlDeploymentsResourceNames1Async()
         {
             // Snippet: ListCloudControlDeploymentsAsync(OrganizationLocationName, string, int?, CallSettings)
             // Create client
             DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListCloudControlDeploymentsResponse, CloudControlDeployment> response = deploymentClient.ListCloudControlDeploymentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (CloudControlDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListCloudControlDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CloudControlDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CloudControlDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CloudControlDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCloudControlDeployments</summary>
+        public void ListCloudControlDeploymentsResourceNames2()
+        {
+            // Snippet: ListCloudControlDeployments(LocationName, string, int?, CallSettings)
+            // Create client
+            DeploymentClient deploymentClient = DeploymentClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListCloudControlDeploymentsResponse, CloudControlDeployment> response = deploymentClient.ListCloudControlDeployments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CloudControlDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCloudControlDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CloudControlDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CloudControlDeployment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CloudControlDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCloudControlDeploymentsAsync</summary>
+        public async Task ListCloudControlDeploymentsResourceNames2Async()
+        {
+            // Snippet: ListCloudControlDeploymentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DeploymentClient deploymentClient = await DeploymentClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListCloudControlDeploymentsResponse, CloudControlDeployment> response = deploymentClient.ListCloudControlDeploymentsAsync(parent);
 
