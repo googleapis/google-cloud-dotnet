@@ -121,6 +121,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// Output only. The unique resource name of the Backup.
     ///
     /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+    ///
+    /// The location in the name will be the Standard Managed Multi-Region (SMMR)
+    /// location (e.g. `us`) if the backup was created with an SMMR location, or
+    /// the Google Managed Multi-Region (GMMR) location (e.g. `nam5`) if the backup
+    /// was created with a GMMR location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

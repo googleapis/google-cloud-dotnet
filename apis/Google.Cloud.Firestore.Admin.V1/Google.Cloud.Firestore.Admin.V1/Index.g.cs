@@ -26,7 +26,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           string.Concat(
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvEhlnb29n",
             "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIoILCgVJbmRl",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIvUSCgVJbmRl",
             "eBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2xl",
             "LmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNjb3BlEjwKCWFwaV9z",
             "Y29wZRgFIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgu",
@@ -35,39 +35,65 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZRI+CgdkZW5zaXR5",
             "GAYgASgOMiguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5EZW5z",
             "aXR5QgPgQQUSFQoIbXVsdGlrZXkYByABKAhCA+BBARIYCgtzaGFyZF9jb3Vu",
-            "dBgIIAEoBUID4EEBEhMKBnVuaXF1ZRgKIAEoCEID4EEBGqIECgpJbmRleEZp",
-            "ZWxkEhIKCmZpZWxkX3BhdGgYASABKAkSQgoFb3JkZXIYAiABKA4yMS5nb29n",
-            "bGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4LkluZGV4RmllbGQuT3JkZXJI",
-            "ABJPCgxhcnJheV9jb25maWcYAyABKA4yNy5nb29nbGUuZmlyZXN0b3JlLmFk",
-            "bWluLnYxLkluZGV4LkluZGV4RmllbGQuQXJyYXlDb25maWdIABJRCg12ZWN0",
-            "b3JfY29uZmlnGAQgASgLMjguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5J",
-            "bmRleC5JbmRleEZpZWxkLlZlY3RvckNvbmZpZ0gAGo8BCgxWZWN0b3JDb25m",
-            "aWcSFgoJZGltZW5zaW9uGAEgASgFQgPgQQISUgoEZmxhdBgCIAEoCzJCLmdv",
-            "b2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5WZWN0",
-            "b3JDb25maWcuRmxhdEluZGV4SAAaCwoJRmxhdEluZGV4QgYKBHR5cGUiPQoF",
-            "T3JkZXISFQoRT1JERVJfVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIO",
-            "CgpERVNDRU5ESU5HEAIiOQoLQXJyYXlDb25maWcSHAoYQVJSQVlfQ09ORklH",
-            "X1VOU1BFQ0lGSUVEEAASDAoIQ09OVEFJTlMQAUIMCgp2YWx1ZV9tb2RlImkK",
-            "ClF1ZXJ5U2NvcGUSGwoXUVVFUllfU0NPUEVfVU5TUEVDSUZJRUQQABIOCgpD",
-            "T0xMRUNUSU9OEAESFAoQQ09MTEVDVElPTl9HUk9VUBACEhgKFENPTExFQ1RJ",
-            "T05fUkVDVVJTSVZFEAMiSwoIQXBpU2NvcGUSCwoHQU5ZX0FQSRAAEhYKEkRB",
-            "VEFTVE9SRV9NT0RFX0FQSRABEhoKFk1PTkdPREJfQ09NUEFUSUJMRV9BUEkQ",
-            "AiJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
-            "EAESCQoFUkVBRFkQAhIQCgxORUVEU19SRVBBSVIQAyJNCgdEZW5zaXR5EhcK",
-            "E0RFTlNJVFlfVU5TUEVDSUZJRUQQABIOCgpTUEFSU0VfQUxMEAESDgoKU1BB",
-            "UlNFX0FOWRACEgkKBURFTlNFEAM6eupBdwoeZmlyZXN0b3JlLmdvb2dsZWFw",
-            "aXMuY29tL0luZGV4ElVwcm9qZWN0cy97cHJvamVjdH0vZGF0YWJhc2VzL3tk",
-            "YXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vwcy97Y29sbGVjdGlvbn0vaW5kZXhl",
-            "cy97aW5kZXh9QtkBCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIK",
-            "SW5kZXhQcm90b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9h",
-            "cGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNs",
-            "b3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3Rv",
-            "cmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWlu",
-            "OjpWMWIGcHJvdG8z"));
+            "dBgIIAEoBUID4EEBEhMKBnVuaXF1ZRgKIAEoCEID4EEBElYKFHNlYXJjaF9p",
+            "bmRleF9vcHRpb25zGAkgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
+            "MS5JbmRleC5TZWFyY2hJbmRleE9wdGlvbnNCA+BBARrbCgoKSW5kZXhGaWVs",
+            "ZBISCgpmaWVsZF9wYXRoGAEgASgJEkIKBW9yZGVyGAIgASgOMjEuZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLk9yZGVySAAS",
+            "TwoMYXJyYXlfY29uZmlnGAMgASgOMjcuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MS5JbmRleC5JbmRleEZpZWxkLkFycmF5Q29uZmlnSAASUQoNdmVjdG9y",
+            "X2NvbmZpZxgEIAEoCzI4Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5k",
+            "ZXguSW5kZXhGaWVsZC5WZWN0b3JDb25maWdIABJRCg1zZWFyY2hfY29uZmln",
+            "GAUgASgLMjguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRl",
+            "eEZpZWxkLlNlYXJjaENvbmZpZ0gAGo8BCgxWZWN0b3JDb25maWcSFgoJZGlt",
+            "ZW5zaW9uGAEgASgFQgPgQQISUgoEZmxhdBgCIAEoCzJCLmdvb2dsZS5maXJl",
+            "c3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5WZWN0b3JDb25maWcu",
+            "RmxhdEluZGV4SAAaCwoJRmxhdEluZGV4QgYKBHR5cGUa4wUKDFNlYXJjaENv",
+            "bmZpZxJfCgl0ZXh0X3NwZWMYASABKAsyRy5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLkluZGV4LkluZGV4RmllbGQuU2VhcmNoQ29uZmlnLlNlYXJjaFRl",
+            "eHRTcGVjQgPgQQESXQoIZ2VvX3NwZWMYAiABKAsyRi5nb29nbGUuZmlyZXN0",
+            "b3JlLmFkbWluLnYxLkluZGV4LkluZGV4RmllbGQuU2VhcmNoQ29uZmlnLlNl",
+            "YXJjaEdlb1NwZWNCA+BBARrXAQoTU2VhcmNoVGV4dEluZGV4U3BlYxJfCgpp",
+            "bmRleF90eXBlGAEgASgOMkYuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5J",
+            "bmRleC5JbmRleEZpZWxkLlNlYXJjaENvbmZpZy5UZXh0SW5kZXhUeXBlQgPg",
+            "QQISXwoKbWF0Y2hfdHlwZRgCIAEoDjJGLmdvb2dsZS5maXJlc3RvcmUuYWRt",
+            "aW4udjEuSW5kZXguSW5kZXhGaWVsZC5TZWFyY2hDb25maWcuVGV4dE1hdGNo",
+            "VHlwZUID4EECGngKDlNlYXJjaFRleHRTcGVjEmYKC2luZGV4X3NwZWNzGAEg",
+            "AygLMkwuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZp",
+            "ZWxkLlNlYXJjaENvbmZpZy5TZWFyY2hUZXh0SW5kZXhTcGVjQgPgQQIaOAoN",
+            "U2VhcmNoR2VvU3BlYxInChpnZW9fanNvbl9pbmRleGluZ19kaXNhYmxlZBgB",
+            "IAEoCEID4EEBIj8KDVRleHRJbmRleFR5cGUSHwobVEVYVF9JTkRFWF9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASDQoJVE9LRU5JWkVEEAEiRAoNVGV4dE1hdGNoVHlw",
+            "ZRIfChtURVhUX01BVENIX1RZUEVfVU5TUEVDSUZJRUQQABISCg5NQVRDSF9H",
+            "TE9CQUxMWRABIj0KBU9yZGVyEhUKEU9SREVSX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "QVNDRU5ESU5HEAESDgoKREVTQ0VORElORxACIjkKC0FycmF5Q29uZmlnEhwK",
+            "GEFSUkFZX0NPTkZJR19VTlNQRUNJRklFRBAAEgwKCENPTlRBSU5TEAFCDAoK",
+            "dmFsdWVfbW9kZRpgChJTZWFyY2hJbmRleE9wdGlvbnMSGgoNdGV4dF9sYW5n",
+            "dWFnZRgBIAEoCUID4EEBEi4KIXRleHRfbGFuZ3VhZ2Vfb3ZlcnJpZGVfZmll",
+            "bGRfcGF0aBgCIAEoCUID4EEBImkKClF1ZXJ5U2NvcGUSGwoXUVVFUllfU0NP",
+            "UEVfVU5TUEVDSUZJRUQQABIOCgpDT0xMRUNUSU9OEAESFAoQQ09MTEVDVElP",
+            "Tl9HUk9VUBACEhgKFENPTExFQ1RJT05fUkVDVVJTSVZFEAMiSwoIQXBpU2Nv",
+            "cGUSCwoHQU5ZX0FQSRAAEhYKEkRBVEFTVE9SRV9NT0RFX0FQSRABEhoKFk1P",
+            "TkdPREJfQ09NUEFUSUJMRV9BUEkQAiJJCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxORUVEU19S",
+            "RVBBSVIQAyJNCgdEZW5zaXR5EhcKE0RFTlNJVFlfVU5TUEVDSUZJRUQQABIO",
+            "CgpTUEFSU0VfQUxMEAESDgoKU1BBUlNFX0FOWRACEgkKBURFTlNFEAM6eupB",
+            "dwoeZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0luZGV4ElVwcm9qZWN0cy97",
+            "cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vw",
+            "cy97Y29sbGVjdGlvbn0vaW5kZXhlcy97aW5kZXh9QtkBCh1jb20uZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MUIKSW5kZXhQcm90b1ABWjljbG91ZC5nb29n",
+            "bGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlu",
+            "cGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoC",
+            "H0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNs",
+            "b3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "ApiScope", "Fields", "State", "Density", "Multikey", "ShardCount", "Unique" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.Density) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig", "VectorConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Parser, new[]{ "Dimension", "Flat" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex.Parser, null, null, null, null, null)})})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "ApiScope", "Fields", "State", "Density", "Multikey", "ShardCount", "Unique", "SearchIndexOptions" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.Density) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig", "VectorConfig", "SearchConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Parser, new[]{ "Dimension", "Flat" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Parser, new[]{ "TextSpec", "GeoSpec" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec.Parser, new[]{ "IndexType", "MatchType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec.Parser, new[]{ "IndexSpecs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec.Parser, new[]{ "GeoJsonIndexingDisabled" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions), global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions.Parser, new[]{ "TextLanguage", "TextLanguageOverrideFieldPath" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -122,6 +148,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       multikey_ = other.multikey_;
       shardCount_ = other.shardCount_;
       unique_ = other.unique_;
+      searchIndexOptions_ = other.searchIndexOptions_ != null ? other.searchIndexOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -292,6 +319,23 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "search_index_options" field.</summary>
+    public const int SearchIndexOptionsFieldNumber = 9;
+    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions searchIndexOptions_;
+    /// <summary>
+    /// Optional. Options for search indexes that are at the index definition
+    /// level. This field is only currently supported for indexes with
+    /// MONGODB_COMPATIBLE_API ApiScope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions SearchIndexOptions {
+      get { return searchIndexOptions_; }
+      set {
+        searchIndexOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -316,6 +360,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Multikey != other.Multikey) return false;
       if (ShardCount != other.ShardCount) return false;
       if (Unique != other.Unique) return false;
+      if (!object.Equals(SearchIndexOptions, other.SearchIndexOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -332,6 +377,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Multikey != false) hash ^= Multikey.GetHashCode();
       if (ShardCount != 0) hash ^= ShardCount.GetHashCode();
       if (Unique != false) hash ^= Unique.GetHashCode();
+      if (searchIndexOptions_ != null) hash ^= SearchIndexOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -379,6 +425,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ShardCount);
       }
+      if (searchIndexOptions_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SearchIndexOptions);
+      }
       if (Unique != false) {
         output.WriteRawTag(80);
         output.WriteBool(Unique);
@@ -422,6 +472,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ShardCount);
       }
+      if (searchIndexOptions_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SearchIndexOptions);
+      }
       if (Unique != false) {
         output.WriteRawTag(80);
         output.WriteBool(Unique);
@@ -461,6 +515,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (Unique != false) {
         size += 1 + 1;
       }
+      if (searchIndexOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SearchIndexOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -497,6 +554,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.Unique != false) {
         Unique = other.Unique;
+      }
+      if (other.searchIndexOptions_ != null) {
+        if (searchIndexOptions_ == null) {
+          SearchIndexOptions = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions();
+        }
+        SearchIndexOptions.MergeFrom(other.SearchIndexOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -547,6 +610,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 64: {
             ShardCount = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            if (searchIndexOptions_ == null) {
+              SearchIndexOptions = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions();
+            }
+            input.ReadMessage(SearchIndexOptions);
             break;
           }
           case 80: {
@@ -602,6 +672,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 64: {
             ShardCount = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            if (searchIndexOptions_ == null) {
+              SearchIndexOptions = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.SearchIndexOptions();
+            }
+            input.ReadMessage(SearchIndexOptions);
             break;
           }
           case 80: {
@@ -829,6 +906,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             case ValueModeOneofCase.VectorConfig:
               VectorConfig = other.VectorConfig.Clone();
               break;
+            case ValueModeOneofCase.SearchConfig:
+              SearchConfig = other.SearchConfig.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -932,6 +1012,23 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
         }
 
+        /// <summary>Field number for the "search_config" field.</summary>
+        public const int SearchConfigFieldNumber = 5;
+        /// <summary>
+        /// Indicates that this field supports search operations. This field
+        /// is only currently supported for indexes with MONGODB_COMPATIBLE_API
+        /// ApiScope.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig SearchConfig {
+          get { return valueModeCase_ == ValueModeOneofCase.SearchConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig) valueMode_ : null; }
+          set {
+            valueMode_ = value;
+            valueModeCase_ = value == null ? ValueModeOneofCase.None : ValueModeOneofCase.SearchConfig;
+          }
+        }
+
         private object valueMode_;
         /// <summary>Enum of possible cases for the "value_mode" oneof.</summary>
         public enum ValueModeOneofCase {
@@ -939,6 +1036,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           Order = 2,
           ArrayConfig = 3,
           VectorConfig = 4,
+          SearchConfig = 5,
         }
         private ValueModeOneofCase valueModeCase_ = ValueModeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -973,6 +1071,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (Order != other.Order) return false;
           if (ArrayConfig != other.ArrayConfig) return false;
           if (!object.Equals(VectorConfig, other.VectorConfig)) return false;
+          if (!object.Equals(SearchConfig, other.SearchConfig)) return false;
           if (ValueModeCase != other.ValueModeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -985,6 +1084,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (HasOrder) hash ^= Order.GetHashCode();
           if (HasArrayConfig) hash ^= ArrayConfig.GetHashCode();
           if (valueModeCase_ == ValueModeOneofCase.VectorConfig) hash ^= VectorConfig.GetHashCode();
+          if (valueModeCase_ == ValueModeOneofCase.SearchConfig) hash ^= SearchConfig.GetHashCode();
           hash ^= (int) valueModeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1020,6 +1120,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(VectorConfig);
           }
+          if (valueModeCase_ == ValueModeOneofCase.SearchConfig) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SearchConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1046,6 +1150,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(VectorConfig);
           }
+          if (valueModeCase_ == ValueModeOneofCase.SearchConfig) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SearchConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1067,6 +1175,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(VectorConfig);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.SearchConfig) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SearchConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1095,6 +1206,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 VectorConfig = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig();
               }
               VectorConfig.MergeFrom(other.VectorConfig);
+              break;
+            case ValueModeOneofCase.SearchConfig:
+              if (SearchConfig == null) {
+                SearchConfig = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig();
+              }
+              SearchConfig.MergeFrom(other.SearchConfig);
               break;
           }
 
@@ -1140,6 +1257,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 VectorConfig = subBuilder;
                 break;
               }
+              case 42: {
+                global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig();
+                if (valueModeCase_ == ValueModeOneofCase.SearchConfig) {
+                  subBuilder.MergeFrom(SearchConfig);
+                }
+                input.ReadMessage(subBuilder);
+                SearchConfig = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1180,6 +1306,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 VectorConfig = subBuilder;
+                break;
+              }
+              case 42: {
+                global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig();
+                if (valueModeCase_ == ValueModeOneofCase.SearchConfig) {
+                  subBuilder.MergeFrom(SearchConfig);
+                }
+                input.ReadMessage(subBuilder);
+                SearchConfig = subBuilder;
                 break;
               }
             }
@@ -1687,8 +1822,1209 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
           }
 
+          /// <summary>
+          /// The configuration for how to index a field for search.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SearchConfig : pb::IMessage<SearchConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SearchConfig> _parser = new pb::MessageParser<SearchConfig>(() => new SearchConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SearchConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SearchConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SearchConfig(SearchConfig other) : this() {
+              textSpec_ = other.textSpec_ != null ? other.textSpec_.Clone() : null;
+              geoSpec_ = other.geoSpec_ != null ? other.geoSpec_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SearchConfig Clone() {
+              return new SearchConfig(this);
+            }
+
+            /// <summary>Field number for the "text_spec" field.</summary>
+            public const int TextSpecFieldNumber = 1;
+            private global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec textSpec_;
+            /// <summary>
+            /// Optional. The specification for building a text search index for a
+            /// field.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec TextSpec {
+              get { return textSpec_; }
+              set {
+                textSpec_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "geo_spec" field.</summary>
+            public const int GeoSpecFieldNumber = 2;
+            private global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec geoSpec_;
+            /// <summary>
+            /// Optional. The specification for building a geo search index for a
+            /// field.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec GeoSpec {
+              get { return geoSpec_; }
+              set {
+                geoSpec_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SearchConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SearchConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(TextSpec, other.TextSpec)) return false;
+              if (!object.Equals(GeoSpec, other.GeoSpec)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (textSpec_ != null) hash ^= TextSpec.GetHashCode();
+              if (geoSpec_ != null) hash ^= GeoSpec.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (textSpec_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(TextSpec);
+              }
+              if (geoSpec_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GeoSpec);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (textSpec_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(TextSpec);
+              }
+              if (geoSpec_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GeoSpec);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (textSpec_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextSpec);
+              }
+              if (geoSpec_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(GeoSpec);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SearchConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.textSpec_ != null) {
+                if (textSpec_ == null) {
+                  TextSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec();
+                }
+                TextSpec.MergeFrom(other.TextSpec);
+              }
+              if (other.geoSpec_ != null) {
+                if (geoSpec_ == null) {
+                  GeoSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec();
+                }
+                GeoSpec.MergeFrom(other.GeoSpec);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (textSpec_ == null) {
+                      TextSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec();
+                    }
+                    input.ReadMessage(TextSpec);
+                    break;
+                  }
+                  case 18: {
+                    if (geoSpec_ == null) {
+                      GeoSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec();
+                    }
+                    input.ReadMessage(GeoSpec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (textSpec_ == null) {
+                      TextSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextSpec();
+                    }
+                    input.ReadMessage(TextSpec);
+                    break;
+                  }
+                  case 18: {
+                    if (geoSpec_ == null) {
+                      GeoSpec = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchGeoSpec();
+                    }
+                    input.ReadMessage(GeoSpec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the SearchConfig message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Ways to index the text field value.
+              /// </summary>
+              public enum TextIndexType {
+                /// <summary>
+                /// The index type is unspecified. Not a valid option.
+                /// </summary>
+                [pbr::OriginalName("TEXT_INDEX_TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// Field values are tokenized. This is the only way currently supported
+                /// for MONGODB_COMPATIBLE_API.
+                /// </summary>
+                [pbr::OriginalName("TOKENIZED")] Tokenized = 1,
+              }
+
+              /// <summary>
+              /// Types of text matches that are supported for the
+              /// field.
+              /// </summary>
+              public enum TextMatchType {
+                /// <summary>
+                /// The match type is unspecified. Not a valid option.
+                /// </summary>
+                [pbr::OriginalName("TEXT_MATCH_TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// Match on any indexed field. This is the only way currently supported
+                /// for MONGODB_COMPATIBLE_API.
+                /// </summary>
+                [pbr::OriginalName("MATCH_GLOBALLY")] MatchGlobally = 1,
+              }
+
+              /// <summary>
+              /// Specification of how the field should be indexed for search text
+              /// indexes.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class SearchTextIndexSpec : pb::IMessage<SearchTextIndexSpec>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<SearchTextIndexSpec> _parser = new pb::MessageParser<SearchTextIndexSpec>(() => new SearchTextIndexSpec());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<SearchTextIndexSpec> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextIndexSpec() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextIndexSpec(SearchTextIndexSpec other) : this() {
+                  indexType_ = other.indexType_;
+                  matchType_ = other.matchType_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextIndexSpec Clone() {
+                  return new SearchTextIndexSpec(this);
+                }
+
+                /// <summary>Field number for the "index_type" field.</summary>
+                public const int IndexTypeFieldNumber = 1;
+                private global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType indexType_ = global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified;
+                /// <summary>
+                /// Required. How to index the text field value.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType IndexType {
+                  get { return indexType_; }
+                  set {
+                    indexType_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "match_type" field.</summary>
+                public const int MatchTypeFieldNumber = 2;
+                private global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType matchType_ = global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified;
+                /// <summary>
+                /// Required. How to match the text field value.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType MatchType {
+                  get { return matchType_; }
+                  set {
+                    matchType_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as SearchTextIndexSpec);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(SearchTextIndexSpec other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (IndexType != other.IndexType) return false;
+                  if (MatchType != other.MatchType) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (IndexType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified) hash ^= IndexType.GetHashCode();
+                  if (MatchType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified) hash ^= MatchType.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (IndexType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified) {
+                    output.WriteRawTag(8);
+                    output.WriteEnum((int) IndexType);
+                  }
+                  if (MatchType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified) {
+                    output.WriteRawTag(16);
+                    output.WriteEnum((int) MatchType);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (IndexType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified) {
+                    output.WriteRawTag(8);
+                    output.WriteEnum((int) IndexType);
+                  }
+                  if (MatchType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified) {
+                    output.WriteRawTag(16);
+                    output.WriteEnum((int) MatchType);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (IndexType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified) {
+                    size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IndexType);
+                  }
+                  if (MatchType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified) {
+                    size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MatchType);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(SearchTextIndexSpec other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.IndexType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType.Unspecified) {
+                    IndexType = other.IndexType;
+                  }
+                  if (other.MatchType != global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType.Unspecified) {
+                    MatchType = other.MatchType;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        IndexType = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType) input.ReadEnum();
+                        break;
+                      }
+                      case 16: {
+                        MatchType = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType) input.ReadEnum();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        IndexType = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextIndexType) input.ReadEnum();
+                        break;
+                      }
+                      case 16: {
+                        MatchType = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.TextMatchType) input.ReadEnum();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// The specification for how to build a text search index for a field.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class SearchTextSpec : pb::IMessage<SearchTextSpec>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<SearchTextSpec> _parser = new pb::MessageParser<SearchTextSpec>(() => new SearchTextSpec());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<SearchTextSpec> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextSpec() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextSpec(SearchTextSpec other) : this() {
+                  indexSpecs_ = other.indexSpecs_.Clone();
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchTextSpec Clone() {
+                  return new SearchTextSpec(this);
+                }
+
+                /// <summary>Field number for the "index_specs" field.</summary>
+                public const int IndexSpecsFieldNumber = 1;
+                private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec> _repeated_indexSpecs_codec
+                    = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec.Parser);
+                private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec> indexSpecs_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec>();
+                /// <summary>
+                /// Required. Specifications for how the field should be indexed.
+                /// Repeated so that the field can be indexed in multiple ways.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public pbc::RepeatedField<global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Types.SearchTextIndexSpec> IndexSpecs {
+                  get { return indexSpecs_; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as SearchTextSpec);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(SearchTextSpec other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if(!indexSpecs_.Equals(other.indexSpecs_)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  hash ^= indexSpecs_.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  indexSpecs_.WriteTo(output, _repeated_indexSpecs_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  indexSpecs_.WriteTo(ref output, _repeated_indexSpecs_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  size += indexSpecs_.CalculateSize(_repeated_indexSpecs_codec);
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(SearchTextSpec other) {
+                  if (other == null) {
+                    return;
+                  }
+                  indexSpecs_.Add(other.indexSpecs_);
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        indexSpecs_.AddEntriesFrom(input, _repeated_indexSpecs_codec);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        indexSpecs_.AddEntriesFrom(ref input, _repeated_indexSpecs_codec);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// The specification for how to build a geo search index for a field.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class SearchGeoSpec : pb::IMessage<SearchGeoSpec>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<SearchGeoSpec> _parser = new pb::MessageParser<SearchGeoSpec>(() => new SearchGeoSpec());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<SearchGeoSpec> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.SearchConfig.Descriptor.NestedTypes[2]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchGeoSpec() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchGeoSpec(SearchGeoSpec other) : this() {
+                  geoJsonIndexingDisabled_ = other.geoJsonIndexingDisabled_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SearchGeoSpec Clone() {
+                  return new SearchGeoSpec(this);
+                }
+
+                /// <summary>Field number for the "geo_json_indexing_disabled" field.</summary>
+                public const int GeoJsonIndexingDisabledFieldNumber = 1;
+                private bool geoJsonIndexingDisabled_;
+                /// <summary>
+                /// Optional. Disables geoJSON indexing for the field. By default,
+                /// geoJSON points are indexed.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool GeoJsonIndexingDisabled {
+                  get { return geoJsonIndexingDisabled_; }
+                  set {
+                    geoJsonIndexingDisabled_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as SearchGeoSpec);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(SearchGeoSpec other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (GeoJsonIndexingDisabled != other.GeoJsonIndexingDisabled) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (GeoJsonIndexingDisabled != false) hash ^= GeoJsonIndexingDisabled.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (GeoJsonIndexingDisabled != false) {
+                    output.WriteRawTag(8);
+                    output.WriteBool(GeoJsonIndexingDisabled);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (GeoJsonIndexingDisabled != false) {
+                    output.WriteRawTag(8);
+                    output.WriteBool(GeoJsonIndexingDisabled);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (GeoJsonIndexingDisabled != false) {
+                    size += 1 + 1;
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(SearchGeoSpec other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.GeoJsonIndexingDisabled != false) {
+                    GeoJsonIndexingDisabled = other.GeoJsonIndexingDisabled;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        GeoJsonIndexingDisabled = input.ReadBool();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        GeoJsonIndexingDisabled = input.ReadBool();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Options for search indexes at the definition level.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SearchIndexOptions : pb::IMessage<SearchIndexOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SearchIndexOptions> _parser = new pb::MessageParser<SearchIndexOptions>(() => new SearchIndexOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SearchIndexOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.Admin.V1.Index.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchIndexOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchIndexOptions(SearchIndexOptions other) : this() {
+          textLanguage_ = other.textLanguage_;
+          textLanguageOverrideFieldPath_ = other.textLanguageOverrideFieldPath_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchIndexOptions Clone() {
+          return new SearchIndexOptions(this);
+        }
+
+        /// <summary>Field number for the "text_language" field.</summary>
+        public const int TextLanguageFieldNumber = 1;
+        private string textLanguage_ = "";
+        /// <summary>
+        /// Optional. The language to use for text search indexes. Used as the
+        /// default language if not overridden at the document level by specifying
+        /// the `text_language_override_field`. The language is specified as a BCP 47
+        /// language code.
+        /// For indexes with MONGODB_COMPATIBLE_API ApiScope: If unspecified, the
+        /// default language is English.
+        /// For indexes with `ANY_API` ApiScope: If unspecified, the default behavior
+        /// is autodetect.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TextLanguage {
+          get { return textLanguage_; }
+          set {
+            textLanguage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "text_language_override_field_path" field.</summary>
+        public const int TextLanguageOverrideFieldPathFieldNumber = 2;
+        private string textLanguageOverrideFieldPath_ = "";
+        /// <summary>
+        /// Optional. The field in the document that specifies which language to use
+        /// for that specific document. For indexes with MONGODB_COMPATIBLE_API
+        /// ApiScope: if unspecified, the language is taken from the "language" field
+        /// if it exists or from `text_language` if it does not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TextLanguageOverrideFieldPath {
+          get { return textLanguageOverrideFieldPath_; }
+          set {
+            textLanguageOverrideFieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SearchIndexOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SearchIndexOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TextLanguage != other.TextLanguage) return false;
+          if (TextLanguageOverrideFieldPath != other.TextLanguageOverrideFieldPath) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TextLanguage.Length != 0) hash ^= TextLanguage.GetHashCode();
+          if (TextLanguageOverrideFieldPath.Length != 0) hash ^= TextLanguageOverrideFieldPath.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TextLanguage.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TextLanguage);
+          }
+          if (TextLanguageOverrideFieldPath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TextLanguageOverrideFieldPath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TextLanguage.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TextLanguage);
+          }
+          if (TextLanguageOverrideFieldPath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TextLanguageOverrideFieldPath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TextLanguage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TextLanguage);
+          }
+          if (TextLanguageOverrideFieldPath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TextLanguageOverrideFieldPath);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SearchIndexOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TextLanguage.Length != 0) {
+            TextLanguage = other.TextLanguage;
+          }
+          if (other.TextLanguageOverrideFieldPath.Length != 0) {
+            TextLanguageOverrideFieldPath = other.TextLanguageOverrideFieldPath;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                TextLanguage = input.ReadString();
+                break;
+              }
+              case 18: {
+                TextLanguageOverrideFieldPath = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                TextLanguage = input.ReadString();
+                break;
+              }
+              case 18: {
+                TextLanguageOverrideFieldPath = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
