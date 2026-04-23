@@ -276,6 +276,12 @@
                 "EvaluateInstances",
                 "EvaluateInstancesAsync"
               ]
+            },
+            "GenerateInstanceRubrics": {
+              "methods": [
+                "GenerateInstanceRubrics",
+                "GenerateInstanceRubricsAsync"
+              ]
             }
           }
         }
@@ -1889,6 +1895,57 @@
               "methods": [
                 "UpgradeNotebookRuntime",
                 "UpgradeNotebookRuntimeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "OnlineEvaluatorService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OnlineEvaluatorServiceClient",
+          "rpcs": {
+            "ActivateOnlineEvaluator": {
+              "methods": [
+                "ActivateOnlineEvaluator",
+                "ActivateOnlineEvaluatorAsync"
+              ]
+            },
+            "CreateOnlineEvaluator": {
+              "methods": [
+                "CreateOnlineEvaluator",
+                "CreateOnlineEvaluatorAsync"
+              ]
+            },
+            "DeleteOnlineEvaluator": {
+              "methods": [
+                "DeleteOnlineEvaluator",
+                "DeleteOnlineEvaluatorAsync"
+              ]
+            },
+            "GetOnlineEvaluator": {
+              "methods": [
+                "GetOnlineEvaluator",
+                "GetOnlineEvaluatorAsync"
+              ]
+            },
+            "ListOnlineEvaluators": {
+              "methods": [
+                "ListOnlineEvaluators",
+                "ListOnlineEvaluatorsAsync"
+              ]
+            },
+            "SuspendOnlineEvaluator": {
+              "methods": [
+                "SuspendOnlineEvaluator",
+                "SuspendOnlineEvaluatorAsync"
+              ]
+            },
+            "UpdateOnlineEvaluator": {
+              "methods": [
+                "UpdateOnlineEvaluator",
+                "UpdateOnlineEvaluatorAsync"
               ]
             }
           }

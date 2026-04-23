@@ -40,6 +40,9 @@ namespace GoogleCSharpSnippets
                 LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ExactMatchInput = new ExactMatchInput(),
                 AutoraterConfig = new AutoraterConfig(),
+                Metrics = { new Metric(), },
+                Instance = new EvaluationInstance(),
+                MetricSources = { new MetricSource(), },
             };
             // Make the request
             EvaluateInstancesResponse response = evaluationServiceClient.EvaluateInstances(request);

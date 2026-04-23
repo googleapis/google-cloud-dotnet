@@ -71,6 +71,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest> __Marshaller_google_cloud_aiplatform_v1beta1_EvaluateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GenerateInstanceRubricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse> __Marshaller_google_cloud_aiplatform_v1beta1_GenerateInstanceRubricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesRequest, global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesResponse> __Method_EvaluateInstances = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesRequest, global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesResponse>(
@@ -87,6 +91,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "EvaluateDataset",
         __Marshaller_google_cloud_aiplatform_v1beta1_EvaluateDatasetRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse> __Method_GenerateInstanceRubrics = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateInstanceRubrics",
+        __Marshaller_google_cloud_aiplatform_v1beta1_GenerateInstanceRubricsRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_GenerateInstanceRubricsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +130,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EvaluateDataset(global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates rubrics for a given prompt.
+      /// A rubric represents a single testable criterion for evaluation.
+      /// One input prompt could have multiple rubrics
+      /// This RPC allows users to get suggested rubrics based on provided prompt,
+      /// which can then be reviewed and used for subsequent evaluations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse> GenerateInstanceRubrics(global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +275,70 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_EvaluateDataset, null, options, request);
       }
+      /// <summary>
+      /// Generates rubrics for a given prompt.
+      /// A rubric represents a single testable criterion for evaluation.
+      /// One input prompt could have multiple rubrics
+      /// This RPC allows users to get suggested rubrics based on provided prompt,
+      /// which can then be reviewed and used for subsequent evaluations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse GenerateInstanceRubrics(global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateInstanceRubrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates rubrics for a given prompt.
+      /// A rubric represents a single testable criterion for evaluation.
+      /// One input prompt could have multiple rubrics
+      /// This RPC allows users to get suggested rubrics based on provided prompt,
+      /// which can then be reviewed and used for subsequent evaluations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse GenerateInstanceRubrics(global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateInstanceRubrics, null, options, request);
+      }
+      /// <summary>
+      /// Generates rubrics for a given prompt.
+      /// A rubric represents a single testable criterion for evaluation.
+      /// One input prompt could have multiple rubrics
+      /// This RPC allows users to get suggested rubrics based on provided prompt,
+      /// which can then be reviewed and used for subsequent evaluations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse> GenerateInstanceRubricsAsync(global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateInstanceRubricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates rubrics for a given prompt.
+      /// A rubric represents a single testable criterion for evaluation.
+      /// One input prompt could have multiple rubrics
+      /// This RPC allows users to get suggested rubrics based on provided prompt,
+      /// which can then be reviewed and used for subsequent evaluations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse> GenerateInstanceRubricsAsync(global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateInstanceRubrics, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EvaluationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +354,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_EvaluateInstances, serviceImpl.EvaluateInstances)
-          .AddMethod(__Method_EvaluateDataset, serviceImpl.EvaluateDataset).Build();
+          .AddMethod(__Method_EvaluateDataset, serviceImpl.EvaluateDataset)
+          .AddMethod(__Method_GenerateInstanceRubrics, serviceImpl.GenerateInstanceRubrics).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +367,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     {
       serviceBinder.AddMethod(__Method_EvaluateInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesRequest, global::Google.Cloud.AIPlatform.V1Beta1.EvaluateInstancesResponse>(serviceImpl.EvaluateInstances));
       serviceBinder.AddMethod(__Method_EvaluateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.EvaluateDataset));
+      serviceBinder.AddMethod(__Method_GenerateInstanceRubrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse>(serviceImpl.GenerateInstanceRubrics));
     }
 
   }

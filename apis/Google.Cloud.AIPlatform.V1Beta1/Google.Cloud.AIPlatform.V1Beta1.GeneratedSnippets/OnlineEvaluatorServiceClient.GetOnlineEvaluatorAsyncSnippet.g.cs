@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_EvaluationService_EvaluateInstances_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_async_flattened]
     using Google.Cloud.AIPlatform.V1Beta1;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedEvaluationServiceClientSnippets
+    public sealed partial class GeneratedOnlineEvaluatorServiceClientSnippets
     {
-        /// <summary>Snippet for EvaluateInstancesAsync</summary>
+        /// <summary>Snippet for GetOnlineEvaluatorAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,23 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task EvaluateInstancesRequestObjectAsync()
+        public async Task GetOnlineEvaluatorAsync()
         {
             // Create client
-            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            OnlineEvaluatorServiceClient onlineEvaluatorServiceClient = await OnlineEvaluatorServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EvaluateInstancesRequest request = new EvaluateInstancesRequest
-            {
-                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ExactMatchInput = new ExactMatchInput(),
-                AutoraterConfig = new AutoraterConfig(),
-                Metrics = { new Metric(), },
-                Instance = new EvaluationInstance(),
-                MetricSources = { new MetricSource(), },
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/onlineEvaluators/[ONLINE_EVALUATOR]";
             // Make the request
-            EvaluateInstancesResponse response = await evaluationServiceClient.EvaluateInstancesAsync(request);
+            OnlineEvaluator response = await onlineEvaluatorServiceClient.GetOnlineEvaluatorAsync(name);
         }
     }
-    // [END aiplatform_v1beta1_generated_EvaluationService_EvaluateInstances_async]
+    // [END aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_async_flattened]
 }

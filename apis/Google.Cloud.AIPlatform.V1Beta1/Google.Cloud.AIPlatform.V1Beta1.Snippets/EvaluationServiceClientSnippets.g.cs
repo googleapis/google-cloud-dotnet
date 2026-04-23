@@ -36,6 +36,9 @@ namespace GoogleCSharpSnippets
                 LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ExactMatchInput = new ExactMatchInput(),
                 AutoraterConfig = new AutoraterConfig(),
+                Metrics = { new Metric(), },
+                Instance = new EvaluationInstance(),
+                MetricSources = { new MetricSource(), },
             };
             // Make the request
             EvaluateInstancesResponse response = evaluationServiceClient.EvaluateInstances(request);
@@ -55,6 +58,9 @@ namespace GoogleCSharpSnippets
                 LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ExactMatchInput = new ExactMatchInput(),
                 AutoraterConfig = new AutoraterConfig(),
+                Metrics = { new Metric(), },
+                Instance = new EvaluationInstance(),
+                MetricSources = { new MetricSource(), },
             };
             // Make the request
             EvaluateInstancesResponse response = await evaluationServiceClient.EvaluateInstancesAsync(request);
@@ -131,6 +137,51 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 EvaluateDatasetResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInstanceRubrics</summary>
+        public void GenerateInstanceRubricsRequestObject()
+        {
+            // Snippet: GenerateInstanceRubrics(GenerateInstanceRubricsRequest, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateInstanceRubricsRequest request = new GenerateInstanceRubricsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Contents = { new Content(), },
+                RubricGenerationSpec = new RubricGenerationSpec(),
+                PredefinedRubricGenerationSpec = new PredefinedMetricSpec(),
+#pragma warning disable CS0612
+                AgentConfig = new EvaluationInstance.Types.DeprecatedAgentConfig(),
+#pragma warning restore CS0612
+            };
+            // Make the request
+            GenerateInstanceRubricsResponse response = evaluationServiceClient.GenerateInstanceRubrics(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInstanceRubricsAsync</summary>
+        public async Task GenerateInstanceRubricsRequestObjectAsync()
+        {
+            // Snippet: GenerateInstanceRubricsAsync(GenerateInstanceRubricsRequest, CallSettings)
+            // Additional: GenerateInstanceRubricsAsync(GenerateInstanceRubricsRequest, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateInstanceRubricsRequest request = new GenerateInstanceRubricsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Contents = { new Content(), },
+                RubricGenerationSpec = new RubricGenerationSpec(),
+                PredefinedRubricGenerationSpec = new PredefinedMetricSpec(),
+#pragma warning disable CS0612
+                AgentConfig = new EvaluationInstance.Types.DeprecatedAgentConfig(),
+#pragma warning restore CS0612
+            };
+            // Make the request
+            GenerateInstanceRubricsResponse response = await evaluationServiceClient.GenerateInstanceRubricsAsync(request);
             // End snippet
         }
     }

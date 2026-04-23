@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             EvaluateInstancesSettings = existing.EvaluateInstancesSettings;
             EvaluateDatasetSettings = existing.EvaluateDatasetSettings;
             EvaluateDatasetOperationsSettings = existing.EvaluateDatasetOperationsSettings.Clone();
+            GenerateInstanceRubricsSettings = existing.GenerateInstanceRubricsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -98,6 +99,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EvaluationServiceClient.GenerateInstanceRubrics</c> and
+        /// <c>EvaluationServiceClient.GenerateInstanceRubricsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateInstanceRubricsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -335,6 +349,45 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>> PollOnceEvaluateDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EvaluateDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Generates rubrics for a given prompt.
+        /// A rubric represents a single testable criterion for evaluation.
+        /// One input prompt could have multiple rubrics
+        /// This RPC allows users to get suggested rubrics based on provided prompt,
+        /// which can then be reviewed and used for subsequent evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateInstanceRubricsResponse GenerateInstanceRubrics(GenerateInstanceRubricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates rubrics for a given prompt.
+        /// A rubric represents a single testable criterion for evaluation.
+        /// One input prompt could have multiple rubrics
+        /// This RPC allows users to get suggested rubrics based on provided prompt,
+        /// which can then be reviewed and used for subsequent evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateInstanceRubricsResponse> GenerateInstanceRubricsAsync(GenerateInstanceRubricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates rubrics for a given prompt.
+        /// A rubric represents a single testable criterion for evaluation.
+        /// One input prompt could have multiple rubrics
+        /// This RPC allows users to get suggested rubrics based on provided prompt,
+        /// which can then be reviewed and used for subsequent evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateInstanceRubricsResponse> GenerateInstanceRubricsAsync(GenerateInstanceRubricsRequest request, st::CancellationToken cancellationToken) =>
+            GenerateInstanceRubricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EvaluationService client wrapper implementation, for convenient use.</summary>
@@ -346,6 +399,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<EvaluateInstancesRequest, EvaluateInstancesResponse> _callEvaluateInstances;
 
         private readonly gaxgrpc::ApiCall<EvaluateDatasetRequest, lro::Operation> _callEvaluateDataset;
+
+        private readonly gaxgrpc::ApiCall<GenerateInstanceRubricsRequest, GenerateInstanceRubricsResponse> _callGenerateInstanceRubrics;
 
         /// <summary>
         /// Constructs a client wrapper for the EvaluationService service, with the specified gRPC client and settings.
@@ -371,6 +426,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callEvaluateDataset = clientHelper.BuildApiCall<EvaluateDatasetRequest, lro::Operation>("EvaluateDataset", grpcClient.EvaluateDatasetAsync, grpcClient.EvaluateDataset, effectiveSettings.EvaluateDatasetSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callEvaluateDataset);
             Modify_EvaluateDatasetApiCall(ref _callEvaluateDataset);
+            _callGenerateInstanceRubrics = clientHelper.BuildApiCall<GenerateInstanceRubricsRequest, GenerateInstanceRubricsResponse>("GenerateInstanceRubrics", grpcClient.GenerateInstanceRubricsAsync, grpcClient.GenerateInstanceRubrics, effectiveSettings.GenerateInstanceRubricsSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callGenerateInstanceRubrics);
+            Modify_GenerateInstanceRubricsApiCall(ref _callGenerateInstanceRubrics);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -379,6 +437,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_EvaluateInstancesApiCall(ref gaxgrpc::ApiCall<EvaluateInstancesRequest, EvaluateInstancesResponse> call);
 
         partial void Modify_EvaluateDatasetApiCall(ref gaxgrpc::ApiCall<EvaluateDatasetRequest, lro::Operation> call);
+
+        partial void Modify_GenerateInstanceRubricsApiCall(ref gaxgrpc::ApiCall<GenerateInstanceRubricsRequest, GenerateInstanceRubricsResponse> call);
 
         partial void OnConstruction(EvaluationService.EvaluationServiceClient grpcClient, EvaluationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -394,6 +454,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_EvaluateInstancesRequest(ref EvaluateInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EvaluateDatasetRequest(ref EvaluateDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateInstanceRubricsRequest(ref GenerateInstanceRubricsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Evaluates instances based on a given metric.
@@ -444,6 +506,38 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_EvaluateDatasetRequest(ref request, ref callSettings);
             return new lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>(await _callEvaluateDataset.Async(request, callSettings).ConfigureAwait(false), EvaluateDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Generates rubrics for a given prompt.
+        /// A rubric represents a single testable criterion for evaluation.
+        /// One input prompt could have multiple rubrics
+        /// This RPC allows users to get suggested rubrics based on provided prompt,
+        /// which can then be reviewed and used for subsequent evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateInstanceRubricsResponse GenerateInstanceRubrics(GenerateInstanceRubricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateInstanceRubricsRequest(ref request, ref callSettings);
+            return _callGenerateInstanceRubrics.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates rubrics for a given prompt.
+        /// A rubric represents a single testable criterion for evaluation.
+        /// One input prompt could have multiple rubrics
+        /// This RPC allows users to get suggested rubrics based on provided prompt,
+        /// which can then be reviewed and used for subsequent evaluations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateInstanceRubricsResponse> GenerateInstanceRubricsAsync(GenerateInstanceRubricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateInstanceRubricsRequest(ref request, ref callSettings);
+            return _callGenerateInstanceRubrics.Async(request, callSettings);
         }
     }
 

@@ -10532,12 +10532,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -10581,12 +10581,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -10684,6 +10684,103 @@
         {
           "start": 37,
           "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EvaluationService_GenerateInstanceRubrics_sync",
+      "title": "GenerateInstanceRubricsRequestObject",
+      "description": "Snippet for GenerateInstanceRubrics",
+      "file": "EvaluationServiceClient.GenerateInstanceRubricsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInstanceRubrics",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient.GenerateInstanceRubrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateInstanceRubrics",
+          "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService.GenerateInstanceRubrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EvaluationService_GenerateInstanceRubrics_async",
+      "title": "GenerateInstanceRubricsRequestObjectAsync",
+      "description": "Snippet for GenerateInstanceRubricsAsync",
+      "file": "EvaluationServiceClient.GenerateInstanceRubricsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInstanceRubricsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient.GenerateInstanceRubricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.GenerateInstanceRubricsResponse>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateInstanceRubrics",
+          "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService.GenerateInstanceRubrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -77719,6 +77816,1976 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_sync",
+      "title": "CreateOnlineEvaluatorRequestObject",
+      "description": "Snippet for CreateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_async",
+      "title": "CreateOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for CreateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_sync_flattened",
+      "title": "CreateOnlineEvaluator",
+      "description": "Snippet for CreateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_async_flattened",
+      "title": "CreateOnlineEvaluatorAsync",
+      "description": "Snippet for CreateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_sync_flattened_resourceNames",
+      "title": "CreateOnlineEvaluatorResourceNames",
+      "description": "Snippet for CreateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_CreateOnlineEvaluator_async_flattened_resourceNames",
+      "title": "CreateOnlineEvaluatorResourceNamesAsync",
+      "description": "Snippet for CreateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.CreateOnlineEvaluatorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.CreateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.CreateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.CreateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_sync",
+      "title": "GetOnlineEvaluatorRequestObject",
+      "description": "Snippet for GetOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_async",
+      "title": "GetOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for GetOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_sync_flattened",
+      "title": "GetOnlineEvaluator",
+      "description": "Snippet for GetOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_async_flattened",
+      "title": "GetOnlineEvaluatorAsync",
+      "description": "Snippet for GetOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_sync_flattened_resourceNames",
+      "title": "GetOnlineEvaluatorResourceNames",
+      "description": "Snippet for GetOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_GetOnlineEvaluator_async_flattened_resourceNames",
+      "title": "GetOnlineEvaluatorResourceNamesAsync",
+      "description": "Snippet for GetOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.GetOnlineEvaluatorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.GetOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "GetOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.GetOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_UpdateOnlineEvaluator_sync",
+      "title": "UpdateOnlineEvaluatorRequestObject",
+      "description": "Snippet for UpdateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.UpdateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.UpdateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_UpdateOnlineEvaluator_async",
+      "title": "UpdateOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for UpdateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.UpdateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_UpdateOnlineEvaluator_sync_flattened",
+      "title": "UpdateOnlineEvaluator",
+      "description": "Snippet for UpdateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.UpdateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.UpdateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_UpdateOnlineEvaluator_async_flattened",
+      "title": "UpdateOnlineEvaluatorAsync",
+      "description": "Snippet for UpdateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.UpdateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator",
+            "name": "onlineEvaluator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.UpdateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.UpdateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_sync",
+      "title": "DeleteOnlineEvaluatorRequestObject",
+      "description": "Snippet for DeleteOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_async",
+      "title": "DeleteOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for DeleteOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_sync_flattened",
+      "title": "DeleteOnlineEvaluator",
+      "description": "Snippet for DeleteOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_async_flattened",
+      "title": "DeleteOnlineEvaluatorAsync",
+      "description": "Snippet for DeleteOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_sync_flattened_resourceNames",
+      "title": "DeleteOnlineEvaluatorResourceNames",
+      "description": "Snippet for DeleteOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_DeleteOnlineEvaluator_async_flattened_resourceNames",
+      "title": "DeleteOnlineEvaluatorResourceNamesAsync",
+      "description": "Snippet for DeleteOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.DeleteOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.DeleteOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_sync",
+      "title": "ListOnlineEvaluatorsRequestObject",
+      "description": "Snippet for ListOnlineEvaluators",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluators",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluators",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_async",
+      "title": "ListOnlineEvaluatorsRequestObjectAsync",
+      "description": "Snippet for ListOnlineEvaluatorsAsync",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluatorsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluatorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_sync_flattened",
+      "title": "ListOnlineEvaluators",
+      "description": "Snippet for ListOnlineEvaluators",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluators",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluators",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_async_flattened",
+      "title": "ListOnlineEvaluatorsAsync",
+      "description": "Snippet for ListOnlineEvaluatorsAsync",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluatorsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluatorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_sync_flattened_resourceNames",
+      "title": "ListOnlineEvaluatorsResourceNames",
+      "description": "Snippet for ListOnlineEvaluators",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluators",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluators",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ListOnlineEvaluators_async_flattened_resourceNames",
+      "title": "ListOnlineEvaluatorsResourceNamesAsync",
+      "description": "Snippet for ListOnlineEvaluatorsAsync",
+      "file": "OnlineEvaluatorServiceClient.ListOnlineEvaluatorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOnlineEvaluatorsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ListOnlineEvaluatorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListOnlineEvaluatorsResponse, Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ListOnlineEvaluators",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ListOnlineEvaluators",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_sync",
+      "title": "ActivateOnlineEvaluatorRequestObject",
+      "description": "Snippet for ActivateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_async",
+      "title": "ActivateOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for ActivateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_sync_flattened",
+      "title": "ActivateOnlineEvaluator",
+      "description": "Snippet for ActivateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_async_flattened",
+      "title": "ActivateOnlineEvaluatorAsync",
+      "description": "Snippet for ActivateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_sync_flattened_resourceNames",
+      "title": "ActivateOnlineEvaluatorResourceNames",
+      "description": "Snippet for ActivateOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_ActivateOnlineEvaluator_async_flattened_resourceNames",
+      "title": "ActivateOnlineEvaluatorResourceNamesAsync",
+      "description": "Snippet for ActivateOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ActivateOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.ActivateOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.ActivateOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "ActivateOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.ActivateOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_sync",
+      "title": "SuspendOnlineEvaluatorRequestObject",
+      "description": "Snippet for SuspendOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_async",
+      "title": "SuspendOnlineEvaluatorRequestObjectAsync",
+      "description": "Snippet for SuspendOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_sync_flattened",
+      "title": "SuspendOnlineEvaluator",
+      "description": "Snippet for SuspendOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_async_flattened",
+      "title": "SuspendOnlineEvaluatorAsync",
+      "description": "Snippet for SuspendOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_sync_flattened_resourceNames",
+      "title": "SuspendOnlineEvaluatorResourceNames",
+      "description": "Snippet for SuspendOnlineEvaluator",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluator",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_OnlineEvaluatorService_SuspendOnlineEvaluator_async_flattened_resourceNames",
+      "title": "SuspendOnlineEvaluatorResourceNamesAsync",
+      "description": "Snippet for SuspendOnlineEvaluatorAsync",
+      "file": "OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuspendOnlineEvaluatorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient.SuspendOnlineEvaluatorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluator, Google.Cloud.AIPlatform.V1Beta1.SuspendOnlineEvaluatorOperationMetadata>>",
+        "client": {
+          "shortName": "OnlineEvaluatorServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.OnlineEvaluatorServiceClient"
+        },
+        "method": {
+          "shortName": "SuspendOnlineEvaluator",
+          "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService.SuspendOnlineEvaluator",
+          "service": {
+            "shortName": "OnlineEvaluatorService",
+            "fullName": "google.cloud.aiplatform.v1beta1.OnlineEvaluatorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
