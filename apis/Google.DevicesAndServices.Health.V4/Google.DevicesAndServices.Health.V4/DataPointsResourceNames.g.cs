@@ -503,6 +503,18 @@ namespace Google.DevicesAndServices.Health.V4
         }
     }
 
+    public partial class GetDataPointRequest
+    {
+        /// <summary>
+        /// <see cref="gdhv::DataPointName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gdhv::DataPointName DataPointName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gdhv::DataPointName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListDataPointsRequest
     {
         /// <summary>

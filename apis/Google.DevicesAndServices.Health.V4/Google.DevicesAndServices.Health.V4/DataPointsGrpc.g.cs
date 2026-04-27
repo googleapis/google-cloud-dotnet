@@ -65,6 +65,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.GetDataPointRequest> __Marshaller_google_devicesandservices_health_v4_GetDataPointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.GetDataPointRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.DataPoint> __Marshaller_google_devicesandservices_health_v4_DataPoint = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.DataPoint.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest> __Marshaller_google_devicesandservices_health_v4_ListDataPointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse> __Marshaller_google_devicesandservices_health_v4_ListDataPointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse.Parser));
@@ -92,6 +96,14 @@ namespace Google.DevicesAndServices.Health.V4 {
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxRequest> __Marshaller_google_devicesandservices_health_v4_ExportExerciseTcxRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxResponse> __Marshaller_google_devicesandservices_health_v4_ExportExerciseTcxResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxResponse.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.GetDataPointRequest, global::Google.DevicesAndServices.Health.V4.DataPoint> __Method_GetDataPoint = new grpc::Method<global::Google.DevicesAndServices.Health.V4.GetDataPointRequest, global::Google.DevicesAndServices.Health.V4.DataPoint>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataPoint",
+        __Marshaller_google_devicesandservices_health_v4_GetDataPointRequest,
+        __Marshaller_google_devicesandservices_health_v4_DataPoint);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest, global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse> __Method_ListDataPoints = new grpc::Method<global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest, global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse>(
@@ -167,6 +179,18 @@ namespace Google.DevicesAndServices.Health.V4 {
     [grpc::BindServiceMethod(typeof(DataPointsService), "BindService")]
     public abstract partial class DataPointsServiceBase
     {
+      /// <summary>
+      /// Get a single identifyable data point.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.DataPoint> GetDataPoint(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Query user health and fitness data points.
       /// </summary>
@@ -299,6 +323,54 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
       }
 
+      /// <summary>
+      /// Get a single identifyable data point.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.DataPoint GetDataPoint(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataPoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single identifyable data point.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.DataPoint GetDataPoint(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataPoint, null, options, request);
+      }
+      /// <summary>
+      /// Get a single identifyable data point.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.DataPoint> GetDataPointAsync(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataPointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single identifyable data point.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.DataPoint> GetDataPointAsync(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataPoint, null, options, request);
+      }
       /// <summary>
       /// Query user health and fitness data points.
       /// </summary>
@@ -725,6 +797,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public static grpc::ServerServiceDefinition BindService(DataPointsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_GetDataPoint, serviceImpl.GetDataPoint)
           .AddMethod(__Method_ListDataPoints, serviceImpl.ListDataPoints)
           .AddMethod(__Method_CreateDataPoint, serviceImpl.CreateDataPoint)
           .AddMethod(__Method_UpdateDataPoint, serviceImpl.UpdateDataPoint)
@@ -742,6 +815,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataPointsServiceBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_GetDataPoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.GetDataPointRequest, global::Google.DevicesAndServices.Health.V4.DataPoint>(serviceImpl.GetDataPoint));
       serviceBinder.AddMethod(__Method_ListDataPoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest, global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse>(serviceImpl.ListDataPoints));
       serviceBinder.AddMethod(__Method_CreateDataPoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.CreateDataPointRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDataPoint));
       serviceBinder.AddMethod(__Method_UpdateDataPoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.UpdateDataPointRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataPoint));

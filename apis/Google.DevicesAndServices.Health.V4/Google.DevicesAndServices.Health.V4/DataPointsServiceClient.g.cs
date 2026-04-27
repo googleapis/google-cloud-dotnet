@@ -46,6 +46,7 @@ namespace Google.DevicesAndServices.Health.V4
         private DataPointsServiceSettings(DataPointsServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            GetDataPointSettings = existing.GetDataPointSettings;
             ListDataPointsSettings = existing.ListDataPointsSettings;
             CreateDataPointSettings = existing.CreateDataPointSettings;
             CreateDataPointOperationsSettings = existing.CreateDataPointOperationsSettings.Clone();
@@ -61,6 +62,18 @@ namespace Google.DevicesAndServices.Health.V4
         }
 
         partial void OnCopy(DataPointsServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataPointsServiceClient.GetDataPoint</c> and <c>DataPointsServiceClient.GetDataPointAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDataPointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -322,8 +335,28 @@ namespace Google.DevicesAndServices.Health.V4
         public static string DefaultEndpoint { get; } = "health.googleapis.com:443";
 
         /// <summary>The default DataPointsService scopes.</summary>
-        /// <remarks>The default DataPointsService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default DataPointsService scopes are:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly</description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly
+        /// </description>
+        /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.location.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.readonly</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly",
+            "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly",
+            "https://www.googleapis.com/auth/googlehealth.location.readonly",
+            "https://www.googleapis.com/auth/googlehealth.sleep.readonly",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(DataPointsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
@@ -384,6 +417,147 @@ namespace Google.DevicesAndServices.Health.V4
 
         /// <summary>The underlying gRPC DataPointsService client</summary>
         public virtual DataPointsService.DataPointsServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataPoint GetDataPoint(GetDataPointRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(GetDataPointRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(GetDataPointRequest request, st::CancellationToken cancellationToken) =>
+            GetDataPointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataPoint GetDataPoint(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataPoint(new GetDataPointRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataPointAsync(new GetDataPointRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDataPointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataPoint GetDataPoint(DataPointName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataPoint(new GetDataPointRequest
+            {
+                DataPointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(DataPointName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataPointAsync(new GetDataPointRequest
+            {
+                DataPointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the data point to retrieve.
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// See
+        /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
+        /// for examples and possible values.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataPoint> GetDataPointAsync(DataPointName name, st::CancellationToken cancellationToken) =>
+            GetDataPointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Query user health and fitness data points.
@@ -1175,6 +1349,8 @@ namespace Google.DevicesAndServices.Health.V4
     /// </remarks>
     public sealed partial class DataPointsServiceClientImpl : DataPointsServiceClient
     {
+        private readonly gaxgrpc::ApiCall<GetDataPointRequest, DataPoint> _callGetDataPoint;
+
         private readonly gaxgrpc::ApiCall<ListDataPointsRequest, ListDataPointsResponse> _callListDataPoints;
 
         private readonly gaxgrpc::ApiCall<CreateDataPointRequest, lro::Operation> _callCreateDataPoint;
@@ -1209,6 +1385,9 @@ namespace Google.DevicesAndServices.Health.V4
             CreateDataPointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDataPointOperationsSettings, logger);
             UpdateDataPointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDataPointOperationsSettings, logger);
             BatchDeleteDataPointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteDataPointsOperationsSettings, logger);
+            _callGetDataPoint = clientHelper.BuildApiCall<GetDataPointRequest, DataPoint>("GetDataPoint", grpcClient.GetDataPointAsync, grpcClient.GetDataPoint, effectiveSettings.GetDataPointSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDataPoint);
+            Modify_GetDataPointApiCall(ref _callGetDataPoint);
             _callListDataPoints = clientHelper.BuildApiCall<ListDataPointsRequest, ListDataPointsResponse>("ListDataPoints", grpcClient.ListDataPointsAsync, grpcClient.ListDataPoints, effectiveSettings.ListDataPointsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataPoints);
             Modify_ListDataPointsApiCall(ref _callListDataPoints);
@@ -1238,6 +1417,8 @@ namespace Google.DevicesAndServices.Health.V4
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_GetDataPointApiCall(ref gaxgrpc::ApiCall<GetDataPointRequest, DataPoint> call);
+
         partial void Modify_ListDataPointsApiCall(ref gaxgrpc::ApiCall<ListDataPointsRequest, ListDataPointsResponse> call);
 
         partial void Modify_CreateDataPointApiCall(ref gaxgrpc::ApiCall<CreateDataPointRequest, lro::Operation> call);
@@ -1259,6 +1440,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// <summary>The underlying gRPC DataPointsService client</summary>
         public override DataPointsService.DataPointsServiceClient GrpcClient { get; }
 
+        partial void Modify_GetDataPointRequest(ref GetDataPointRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListDataPointsRequest(ref ListDataPointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDataPointRequest(ref CreateDataPointRequest request, ref gaxgrpc::CallSettings settings);
@@ -1274,6 +1457,30 @@ namespace Google.DevicesAndServices.Health.V4
         partial void Modify_DailyRollUpDataPointsRequest(ref DailyRollUpDataPointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportExerciseTcxRequest(ref ExportExerciseTcxRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataPoint GetDataPoint(GetDataPointRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataPointRequest(ref request, ref callSettings);
+            return _callGetDataPoint.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single identifyable data point.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataPoint> GetDataPointAsync(GetDataPointRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataPointRequest(ref request, ref callSettings);
+            return _callGetDataPoint.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Query user health and fitness data points.

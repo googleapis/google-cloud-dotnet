@@ -11,6 +11,293 @@
   },
   "snippets": [
     {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_sync",
+      "title": "GetDataPointRequestObject",
+      "description": "Snippet for GetDataPoint",
+      "file": "DataPointsServiceClient.GetDataPointRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPoint",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPoint",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetDataPointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.DataPoint",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_async",
+      "title": "GetDataPointRequestObjectAsync",
+      "description": "Snippet for GetDataPointAsync",
+      "file": "DataPointsServiceClient.GetDataPointRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPointAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetDataPointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.DataPoint>",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_sync_flattened",
+      "title": "GetDataPoint",
+      "description": "Snippet for GetDataPoint",
+      "file": "DataPointsServiceClient.GetDataPointSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPoint",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.DataPoint",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_async_flattened",
+      "title": "GetDataPointAsync",
+      "description": "Snippet for GetDataPointAsync",
+      "file": "DataPointsServiceClient.GetDataPointAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPointAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.DataPoint>",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_sync_flattened_resourceNames",
+      "title": "GetDataPointResourceNames",
+      "description": "Snippet for GetDataPoint",
+      "file": "DataPointsServiceClient.GetDataPointResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPoint",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPoint",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DataPointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.DataPoint",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataPointsService_GetDataPoint_async_flattened_resourceNames",
+      "title": "GetDataPointResourceNamesAsync",
+      "description": "Snippet for GetDataPointAsync",
+      "file": "DataPointsServiceClient.GetDataPointResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataPointAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient.GetDataPointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DataPointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.DataPoint>",
+        "client": {
+          "shortName": "DataPointsServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataPointsServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataPoint",
+          "fullName": "google.devicesandservices.health.v4.DataPointsService.GetDataPoint",
+          "service": {
+            "shortName": "DataPointsService",
+            "fullName": "google.devicesandservices.health.v4.DataPointsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "health_v4_generated_DataPointsService_ListDataPoints_sync",
       "title": "ListDataPointsRequestObject",
       "description": "Snippet for ListDataPoints",

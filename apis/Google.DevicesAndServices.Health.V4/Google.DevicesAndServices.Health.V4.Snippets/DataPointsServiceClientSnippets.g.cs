@@ -27,6 +27,93 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedDataPointsServiceClientSnippets
     {
+        /// <summary>Snippet for GetDataPoint</summary>
+        public void GetDataPointRequestObject()
+        {
+            // Snippet: GetDataPoint(GetDataPointRequest, CallSettings)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = DataPointsServiceClient.Create();
+            // Initialize request argument(s)
+            GetDataPointRequest request = new GetDataPointRequest
+            {
+                DataPointName = DataPointName.FromUserDataTypeDataPoint("[USER]", "[DATA_TYPE]", "[DATA_POINT]"),
+            };
+            // Make the request
+            DataPoint response = dataPointsServiceClient.GetDataPoint(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataPointAsync</summary>
+        public async Task GetDataPointRequestObjectAsync()
+        {
+            // Snippet: GetDataPointAsync(GetDataPointRequest, CallSettings)
+            // Additional: GetDataPointAsync(GetDataPointRequest, CancellationToken)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = await DataPointsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDataPointRequest request = new GetDataPointRequest
+            {
+                DataPointName = DataPointName.FromUserDataTypeDataPoint("[USER]", "[DATA_TYPE]", "[DATA_POINT]"),
+            };
+            // Make the request
+            DataPoint response = await dataPointsServiceClient.GetDataPointAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataPoint</summary>
+        public void GetDataPoint()
+        {
+            // Snippet: GetDataPoint(string, CallSettings)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = DataPointsServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/dataTypes/[DATA_TYPE]/dataPoints/[DATA_POINT]";
+            // Make the request
+            DataPoint response = dataPointsServiceClient.GetDataPoint(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataPointAsync</summary>
+        public async Task GetDataPointAsync()
+        {
+            // Snippet: GetDataPointAsync(string, CallSettings)
+            // Additional: GetDataPointAsync(string, CancellationToken)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = await DataPointsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/dataTypes/[DATA_TYPE]/dataPoints/[DATA_POINT]";
+            // Make the request
+            DataPoint response = await dataPointsServiceClient.GetDataPointAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataPoint</summary>
+        public void GetDataPointResourceNames()
+        {
+            // Snippet: GetDataPoint(DataPointName, CallSettings)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = DataPointsServiceClient.Create();
+            // Initialize request argument(s)
+            DataPointName name = DataPointName.FromUserDataTypeDataPoint("[USER]", "[DATA_TYPE]", "[DATA_POINT]");
+            // Make the request
+            DataPoint response = dataPointsServiceClient.GetDataPoint(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataPointAsync</summary>
+        public async Task GetDataPointResourceNamesAsync()
+        {
+            // Snippet: GetDataPointAsync(DataPointName, CallSettings)
+            // Additional: GetDataPointAsync(DataPointName, CancellationToken)
+            // Create client
+            DataPointsServiceClient dataPointsServiceClient = await DataPointsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataPointName name = DataPointName.FromUserDataTypeDataPoint("[USER]", "[DATA_TYPE]", "[DATA_POINT]");
+            // Make the request
+            DataPoint response = await dataPointsServiceClient.GetDataPointAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListDataPoints</summary>
         public void ListDataPointsRequestObject()
         {

@@ -197,8 +197,30 @@ namespace Google.DevicesAndServices.Health.V4
         public static string DefaultEndpoint { get; } = "health.googleapis.com:443";
 
         /// <summary>The default HealthProfileService scopes.</summary>
-        /// <remarks>The default HealthProfileService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default HealthProfileService scopes are:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly</description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly
+        /// </description>
+        /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.profile.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.settings.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.readonly</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly",
+            "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly",
+            "https://www.googleapis.com/auth/googlehealth.profile.readonly",
+            "https://www.googleapis.com/auth/googlehealth.settings.readonly",
+            "https://www.googleapis.com/auth/googlehealth.sleep.readonly",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(HealthProfileService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);

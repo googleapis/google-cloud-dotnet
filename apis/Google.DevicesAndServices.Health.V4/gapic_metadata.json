@@ -34,6 +34,12 @@
                 "ExportExerciseTcxAsync"
               ]
             },
+            "GetDataPoint": {
+              "methods": [
+                "GetDataPoint",
+                "GetDataPointAsync"
+              ]
+            },
             "ListDataPoints": {
               "methods": [
                 "ListDataPoints",
